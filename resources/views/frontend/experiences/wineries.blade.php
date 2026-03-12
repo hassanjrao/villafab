@@ -1,0 +1,1912 @@
+@extends('layouts.frontend')
+
+@section('title', 'Nearby Wineries — Villa Fabulosa')
+
+@section('content')
+
+    <style>
+        .seo_txt {
+            color: black;
+            font-weight: 600;
+            font-size: 16px;
+        }
+
+        .seo_para {
+            color: black;
+        }
+
+        @media (max-width: 575px) {
+            .site_wineries_thumb {
+                height: 150px !important;
+            }
+        }
+    </style>
+
+    <!-- Sub Header start -->
+    <div class="site_subheader">
+        <div class="container-fluid">
+            <div class="col-lg-12">
+                <div class="site_subheader_inner">
+                    <a href="{{ url('/floorplan') }}" class="site_arrow_link site_arrow_left"><i
+                            class="fa fa-arrow-circle-left fa-4x"></i></a>
+                    <a href="{{ url('/temecula') }}" class="site_arrow_link site_arrow_right"><i
+                            class="fa fa-arrow-circle-right fa-4x"></i></a>
+                    <h2 class="mb-0">Nearby Wineries</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Sub Header end -->
+
+    <!-- Section 1 start -->
+    <section id="site_scroll_down" class="py-5">
+        <div class="container">
+
+            <div class="row mb-4">
+                <div class="col-lg-12">
+                    <ul class="site_title_btn_list list-inline mb-0">
+                        <li class="list-inline-item">
+                            <h1 class="site_section_title pt-2 mb-0" style="position: relative; top: 5px;">Best Location in
+                                Wine Country</h1>
+                        </li>
+                    </ul>
+                    <hr>
+                </div>
+            </div>
+
+            <div class="row mb-4">
+                <div class="col-lg-12">
+                    <p>Location, Location, Location! Villa Fabulosa is located in the best location of Wine
+                        Country, right in the middle of Temecula's Winery Loop. Villa Fabulosa features
+                        over 55 great wineries within just a few miles from the Villa</p>
+                </div>
+            </div>
+
+            <div class="clearfix"></div>
+
+            <!-- Wineries listing start -->
+            <div class="container">
+                <div class="site_wineries_listing row mb-5">
+                    <div class="col-lg-12 text-center mb-4"></div>
+
+                    <div class="col-lg-6">
+                        <div class="site_wineries_media_list list-unstyled">
+                            <div class="card" style="width: 100%;">
+                                <img class="card-img-top" src="{{ asset('frontend/imgs/wineriesnear/Wineries_newww.jpg') }}"
+                                    alt="Card image cap">
+                                <a href="https://www.youtube.com/watch?v=uyQRRCBf_9o" target="_blank"
+                                    style="position: absolute; top: 40%; left: 50%; transform: translate(-50%, -50%);">
+                                    <img src="{{ asset('frontend/imgs/youtube.png') }}" style="height: 40px;">
+                                </a>
+                                <div class="card-body">
+                                    <h5 class="card-title">Wineries Nearby</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="site_wineries_media_list list-unstyled">
+                            <div class="card" style="width: 100%;">
+                                <img class="card-img-top"
+                                    src="{{ asset('frontend/imgs/wineriesnear/Wineries_neww_second.jpg') }}"
+                                    alt="Card image cap">
+                                <a href="https://www.youtube.com/watch?v=_GeV-6rEgnI" target="_blank"
+                                    style="position: absolute; top: 40%; left: 50%; transform: translate(-50%, -50%);">
+                                    <img src="{{ asset('frontend/imgs/youtube.png') }}" style="height: 40px;">
+                                </a>
+                                <div class="card-body">
+                                    <h5 class="card-title">Other Things to Do</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="clearfix"></div>
+
+                    <div class="col-lg-12">
+                        <p class="site_section_title" style="font-size: 22px !important;font-weight: 600;">Villa Fabulosa is
+                            located right in the center of Wine Country with over 55 wineries nearby!</p>
+                        <div class="site_wineries_media_list list-unstyled">
+                            <div class="card" style="width: 100%;">
+                                <img class="card-img-top"
+                                    src="{{ asset('frontend/imgs/wineriesnear/ImportedPhoto_1711951037555.jpg') }}"
+                                    alt="Card image cap">
+                                <div class="card-body"></div>
+                            </div>
+                            <h5 class="card-title site_section_title mt-4">Nearby Wineries</h5>
+                        </div>
+                    </div>
+
+                    <div class="clearfix"></div>
+
+                    <!-- South Coast Winery Resort & Spa -->
+                    <div class="col-lg-6">
+                        <div class="site_wineries_media_list list-unstyled">
+                            <div class="media">
+                                <div class="media-body">
+                                    <h5 class="mt-0 mb-2">South Coast Winery Resort &amp; Spa</h5>
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <div class="site_rating_start"> 4.5 <i class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> (1,039) Google reviews </div>
+                                        </li>
+                                        <li><i class="fa fa-globe mr-2"></i> <a
+                                                href="https://www.southcoastwinery.com/?chebs=gl-southcoastwinery"
+                                                target="_blank">https://www.southcoastwinery.com</a></li>
+                                        <li><i class="fa fa-map-marker mr-2"></i> <a
+                                                href="https://www.google.com/maps/dir/39575+Camino+Del+Vino,+Temecula,+CA+92592,+USA/34843+Rancho+California+Rd,+Temecula,+CA+92591,+USA/@33.5434913,-117.0488094,15z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x80db79c1dcd9f19f:0x2a6b5d1fb1e3d527!2m2!1d-117.026276!2d33.5477843!1m5!1m1!1s0x80db791fa5ee651d:0x46cbc32e512e943e!2m2!1d-117.0537373!2d33.5335566!3e0"
+                                                target="_blank">34843 Rancho California Rd, Temecula, CA 92591, USA</a></li>
+                                        <li><i class="fa fa-phone mr-2"></i> +1 951-566-4622</li>
+                                        <li>
+                                            <h5><i class="fa fa-location-arrow mr-2"></i> 1.8 miles, 4 min. drive</h5>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <a href="https://www.southcoastwinery.com/?chebs=gl-southcoastwinery" target="_blank"><img
+                                        src="{{ asset('frontend/imgs/wineriesnear/2.jpg') }}" class="site_wineries_thumb"
+                                        alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Bella Vista Winery -->
+                    <div class="col-lg-6">
+                        <div class="site_wineries_media_list list-unstyled">
+                            <div class="media">
+                                <div class="media-body">
+                                    <h5 class="mt-0 mb-2">Bella Vista Winery</h5>
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <div class="site_rating_start"> 4.1 <i class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> <i class="fa fa-star"></i> (38)
+                                                Google reviews </div>
+                                        </li>
+                                        <li><i class="fa fa-globe mr-2"></i> <a href="http://www.bellavistawinery.com/"
+                                                target="_blank">http://www.bellavistawinery.com/</a></li>
+                                        <li><i class="fa fa-map-marker mr-2"></i> <a
+                                                href="https://www.google.com/maps/dir/39575+Camino+Del+Vino,+Temecula,+CA+92592,+USA/41220+Calle+Contento,+Temecula,+CA+92592,+USA/@33.5338589,-117.0644926,14z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x80db79c1dcd9f19f:0x2a6b5d1fb1e3d527!2m2!1d-117.026276!2d33.5477843!1m5!1m1!1s0x80db78d90700688b:0xb29743e1c90ac4b1!2m2!1d-117.0640067!2d33.5255305!3e0"
+                                                target="_blank">41220 Calle Contento, Temecula, CA 92592, USA</a></li>
+                                        <li><i class="fa fa-phone mr-2"></i>+1 951-676-5250</li>
+                                        <li>
+                                            <h5><i class="fa fa-location-arrow mr-2"></i> 1.9 miles, 4 min. drive</h5>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <a href="http://www.bellavistawinery.com/" target="_blank"><img
+                                        src="{{ asset('frontend/imgs/wineriesnear/48.jpg') }}" class="site_wineries_thumb"
+                                        alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Maurice Car'rie Vineyard -->
+                    <div class="col-lg-6">
+                        <div class="site_wineries_media_list list-unstyled">
+                            <div class="media">
+                                <div class="media-body">
+                                    <h5 class="mt-0 mb-2">Maurice Car'rie Vineyard</h5>
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <div class="site_rating_start"> 4.5 <i class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> (142) Google reviews </div>
+                                        </li>
+                                        <li><i class="fa fa-globe mr-2"></i> <a href="http://www.mauricecarriewinery.com/"
+                                                target="_blank">http://www.mauricecarriewinery.com/</a></li>
+                                        <li><i class="fa fa-map-marker mr-2"></i> <a
+                                                href="https://www.google.com/maps/dir/39575+Camino+Del+Vino,+Temecula,+CA+92592,+USA/34225+Rancho+California+Rd,+Temecula,+CA+92591,+USA/@33.5377204,-117.0545462,15z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x80db79c1dcd9f19f:0x2a6b5d1fb1e3d527!2m2!1d-117.026276!2d33.5477843!1m5!1m1!1s0x80db78d86f1f1ec3:0x53610261ab750c77!2m2!1d-117.0655251!2d33.5276571!3e0"
+                                                target="_blank">34225 Rancho California Rd, Temecula, CA 92592, USA</a>
+                                        </li>
+                                        <li><i class="fa fa-phone mr-2"></i>+1 951-676-1711</li>
+                                        <li>
+                                            <h5><i class="fa fa-location-arrow mr-2"></i> 2.2 miles, 5 min. drive</h5>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <a href="http://www.mauricecarriewinery.com/" target="_blank"><img
+                                        src="{{ asset('frontend/imgs/wineriesnear/25.jpg') }}" class="site_wineries_thumb"
+                                        alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Ponte Vineyard Inn -->
+                    <div class="col-lg-6">
+                        <div class="site_wineries_media_list list-unstyled">
+                            <div class="media">
+                                <div class="media-body">
+                                    <h5 class="mt-0 mb-2">Ponte Vineyard Inn</h5>
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <div class="site_rating_start"> 4.7 <i class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i>(184) Google reviews</div>
+                                        </li>
+                                        <li><i class="fa fa-globe mr-2"></i> <a href="http://www.pontevineyardinn.com/"
+                                                target="_blank">http://www.pontevineyardinn.com/</a></li>
+                                        <li><i class="fa fa-map-marker mr-2"></i> <a
+                                                href="https://www.google.com/maps/dir/39575+Camino+Del+Vino,+Temecula,+CA+92592,+USA/39750+De+Portola+Rd,+Temecula,+CA+92592,+USA/@33.5422471,-117.0233084,16z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x80db79c1dcd9f19f:0x2a6b5d1fb1e3d527!2m2!1d-117.026276!2d33.5477843!1m5!1m1!1s0x80db79b5486a0f9b:0xad8e438fef19f3f9!2m2!1d-117.00977!2d33.5413023!3e2">35001
+                                                Rancho California Rd, Temecula, CA 92591, USA</a></li>
+                                        <li><i class="fa fa-phone mr-2"></i>+1 951-587-6688</li>
+                                        <li>
+                                            <h5><i class="fa fa-location-arrow mr-2"></i> 2.2miles, 4 minutes drive</h5>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <a href="http://www.pontevineyardinn.com/" target="_blank"><img
+                                        src="{{ asset('frontend/imgs/wineriesnear/55.jpg') }}"
+                                        class="site_wineries_thumb" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Carter Estate Winery and Resort -->
+                    <div class="col-lg-6">
+                        <div class="site_wineries_media_list list-unstyled">
+                            <div class="media">
+                                <div class="media-body">
+                                    <h5 class="mt-0 mb-2">Carter Estate Winery and Resort</h5>
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <div class="site_rating_start"> 4.6 <i class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> (143) Google reviews </div>
+                                        </li>
+                                        <li><i class="fa fa-globe mr-2"></i> <a href="http://www.carterestatewinery.com/"
+                                                target="_blank">http://www.carterestatewinery.com/</a></li>
+                                        <li><i class="fa fa-map-marker mr-2"></i> <a
+                                                href="https://www.google.com/maps/dir/39575+Camino+Del+Vino,+Temecula,+CA+92592,+USA/34450+Rancho+California+Rd,+Temecula,+CA+92591,+USA/@33.5429104,-117.0509888,15z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x80db79c1dcd9f19f:0x2a6b5d1fb1e3d527!2m2!1d-117.026276!2d33.5477843!1m5!1m1!1s0x80db7921a9eba529:0xa39a272f809db478!2m2!1d-117.0587671!2d33.533178!3e0"
+                                                target="_blank">34450 Rancho California Rd, Temecula, CA 92591, USA</a>
+                                        </li>
+                                        <li><i class="fa fa-phone mr-2"></i>+1 844-851-2138</li>
+                                        <li>
+                                            <h5><i class="fa fa-location-arrow mr-2"></i> 2.2 miles, 5 min. drive</h5>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <a href="http://www.carterestatewinery.com/" target="_blank"><img
+                                        src="{{ asset('frontend/imgs/wineriesnear/51.jpg') }}"
+                                        class="site_wineries_thumb" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Avensole Winery -->
+                    <div class="col-lg-6">
+                        <div class="site_wineries_media_list list-unstyled">
+                            <div class="media">
+                                <div class="media-body">
+                                    <h5 class="mt-0 mb-2">Avensole Winery</h5>
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <div class="site_rating_start"> 4.4 <i class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> (236) Google reviews </div>
+                                        </li>
+                                        <li><i class="fa fa-globe mr-2"></i> <a href="http://www.avensolewinery.com/"
+                                                target="_blank">http://www.avensolewinery.com/</a></li>
+                                        <li><i class="fa fa-map-marker mr-2"></i> <a
+                                                href="https://www.google.com/maps/dir/39575+Camino+Del+Vino,+Temecula,+CA+92592,+USA/34567+Rancho+California+Rd,+Temecula,+CA+92592,+USA/@33.5420591,-117.0515604,15z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x80db79c1dcd9f19f:0x2a6b5d1fb1e3d527!2m2!1d-117.026276!2d33.5477843!1m5!1m1!1s0x80db792090441453:0x29b3c209e74260fd!2m2!1d-117.0596865!2d33.5306922!3e0"
+                                                target="_blank">34567 Rancho California Rd, Temecula, CA 92592, USA</a>
+                                        </li>
+                                        <li><i class="fa fa-phone mr-2"></i>+1 951-252-2003</li>
+                                        <li>
+                                            <h5><i class="fa fa-location-arrow mr-2"></i> 2.3 miles, 5 min. drive</h5>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <a href="http://www.avensolewinery.com/" target="_blank"><img
+                                        src="{{ asset('frontend/imgs/wineriesnear/10.jpg') }}"
+                                        class="site_wineries_thumb" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Wiens Family Cellars -->
+                    <div class="col-lg-6">
+                        <div class="site_wineries_media_list list-unstyled">
+                            <div class="media">
+                                <div class="media-body">
+                                    <h5 class="mt-0 mb-2">Wiens Family Cellars</h5>
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <div class="site_rating_start"> 4.8 <i class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i>(276) Google reviews</div>
+                                        </li>
+                                        <li><i class="fa fa-globe mr-2"></i> <a href="http://www.wienscellars.com/"
+                                                target="_blank">http://www.wienscellars.com/</a></li>
+                                        <li><i class="fa fa-map-marker mr-2"></i> <a
+                                                href="https://www.google.com/maps/dir/39575+Camino+Del+Vino,+Temecula,+CA+92592,+USA/39750+De+Portola+Rd,+Temecula,+CA+92592,+USA/@33.5422471,-117.0233084,16z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x80db79c1dcd9f19f:0x2a6b5d1fb1e3d527!2m2!1d-117.026276!2d33.5477843!1m5!1m1!1s0x80db79b5486a0f9b:0xad8e438fef19f3f9!2m2!1d-117.00977!2d33.5413023!3e2">35055
+                                                Via Del Ponte, Temecula, CA 92592, USA</a></li>
+                                        <li><i class="fa fa-phone mr-2"></i>+1 951-694-9892</li>
+                                        <li>
+                                            <h5><i class="fa fa-location-arrow mr-2"></i> 2.4miles, 5 minutes drive</h5>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <a href="http://www.wienscellars.com/" target="_blank"><img
+                                        src="{{ asset('frontend/imgs/wineriesnear/16.jpg') }}"
+                                        class="site_wineries_thumb" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Lorimar Vineyards and Winery -->
+                    <div class="col-lg-6">
+                        <div class="site_wineries_media_list list-unstyled">
+                            <div class="media">
+                                <div class="media-body">
+                                    <h5 class="mt-0 mb-2">Lorimar Vineyards and Winery</h5>
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <div class="site_rating_start"> 4.5 <i class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> (208) Google reviews </div>
+                                        </li>
+                                        <li><i class="fa fa-globe mr-2"></i> <a href="https://www.lorimarwinery.com/"
+                                                target="_blank">https://www.lorimarwinery.com/</a></li>
+                                        <li><i class="fa fa-map-marker mr-2"></i> <a
+                                                href="https://www.google.com/maps/dir/39575+Camino+Del+Vino,+Temecula,+CA+92592,+USA/39990+Anza+Rd,+Temecula,+CA+92591,+USA/@33.5437896,-117.0513146,15z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x80db79c1dcd9f19f:0x2a6b5d1fb1e3d527!2m2!1d-117.026276!2d33.5477843!1m5!1m1!1s0x80db792327c7c257:0x5f1930590f1f5f40!2m2!1d-117.057673!2d33.5409913!3e0"
+                                                target="_blank">39990 Anza Rd, Temecula, CA 92591, USA</a></li>
+                                        <li><i class="fa fa-phone mr-2"></i>+1 951-694-6699</li>
+                                        <li>
+                                            <h5><i class="fa fa-location-arrow mr-2"></i> 2.5 miles, 5 min. drive</h5>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <a href="https://www.lorimarwinery.com/" target="_blank"><img
+                                        src="{{ asset('frontend/imgs/wineriesnear/12.jpg') }}"
+                                        class="site_wineries_thumb" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SC Cellars Vineyard & Winery -->
+                    <div class="col-lg-6">
+                        <div class="site_wineries_media_list list-unstyled">
+                            <div class="media">
+                                <div class="media-body">
+                                    <h5 class="mt-0 mb-2">SC Cellars Vineyard &amp; Winery</h5>
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <div class="site_rating_start"> 4.5 <i class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> (285) Google reviews </div>
+                                        </li>
+                                        <li><i class="fa fa-globe mr-2"></i> <a href="http://www.sccellars.com/"
+                                                target="_blank">http://www.sccellars.com/</a></li>
+                                        <li><i class="fa fa-map-marker mr-2"></i> <a
+                                                href="https://www.google.com/maps/dir/39575+Camino+Del+Vino,+Temecula,+CA+92592,+USA/40895+Bucharest+Ln,+Temecula,+CA+92591,+USA/@33.5413631,-117.0539454,15z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x80db79c1dcd9f19f:0x2a6b5d1fb1e3d527!2m2!1d-117.026276!2d33.5477843!1m5!1m1!1s0x80db7927a780cabf:0x6d715fcec694b87b!2m2!1d-117.0646803!2d33.5305508!3e0"
+                                                target="_blank">40895 Bucharest Ln, Temecula, CA 92591, USA</a></li>
+                                        <li><i class="fa fa-phone mr-2"></i>-</li>
+                                        <li>
+                                            <h5><i class="fa fa-location-arrow mr-2"></i> 2.5 miles, 5 min. drive</h5>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <a href="http://www.sccellars.com/" target="_blank"><img
+                                        src="{{ asset('frontend/imgs/wineriesnear/61.jpg') }}"
+                                        class="site_wineries_thumb" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Peltzer Winery -->
+                    <div class="col-lg-6">
+                        <div class="site_wineries_media_list list-unstyled">
+                            <div class="media">
+                                <div class="media-body">
+                                    <h5 class="mt-0 mb-2">Peltzer Winery</h5>
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <div class="site_rating_start"> 4.8 <i class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> (115) Google reviews </div>
+                                        </li>
+                                        <li><i class="fa fa-globe mr-2"></i> <a href="http://www.peltzerwinery.com/"
+                                                target="_blank">http://www.peltzerwinery.com/</a></li>
+                                        <li><i class="fa fa-map-marker mr-2"></i> <a
+                                                href="https://www.google.com/maps/dir/39575+Camino+Del+Vino,+Temecula,+CA+92592,+USA/40275+Calle+Contento,+Temecula,+CA+92591,+USA/@33.5377045,-117.0667707,14z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x80db79c1dcd9f19f:0x2a6b5d1fb1e3d527!2m2!1d-117.026276!2d33.5477843!1m5!1m1!1s0x80db792eb2c9da31:0xc3554eb3cfa57f2c!2m2!1d-117.072695!2d33.532076!3e0"
+                                                target="_blank"> 40275 Calle Contento, Temecula, CA 92591, USA</a></li>
+                                        <li><i class="fa fa-phone mr-2"></i>+1 951-888-2008</li>
+                                        <li>
+                                            <h5><i class="fa fa-location-arrow mr-2"></i> 2.6 miles, 6 min. drive</h5>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <a href="http://www.peltzerwinery.com/" target="_blank"><img
+                                        src="{{ asset('frontend/imgs/wineriesnear/8.jpg') }}" class="site_wineries_thumb"
+                                        alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Mount Palomar Winery -->
+                    <div class="col-lg-6">
+                        <div class="site_wineries_media_list list-unstyled">
+                            <div class="media">
+                                <div class="media-body">
+                                    <h5 class="mt-0 mb-2">Mount Palomar Winery</h5>
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <div class="site_rating_start"> 4.5 <i class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> (171) Google reviews </div>
+                                        </li>
+                                        <li><i class="fa fa-globe mr-2"></i> <a href="https://www.mountpalomarwinery.com/"
+                                                target="_blank">https://www.mountpalomarwinery.com/</a></li>
+                                        <li><i class="fa fa-map-marker mr-2"></i> <a
+                                                href="33820 Rancho California Rd, Temecula, CA 92591, USA"
+                                                target="_blank">33820 Rancho California Rd, Temecula, CA 92591, USA</a>
+                                        </li>
+                                        <li><i class="fa fa-phone mr-2"></i>+1 951-676-5047</li>
+                                        <li>
+                                            <h5><i class="fa fa-location-arrow mr-2"></i> 2.6 miles, 6 min. drive</h5>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <a href="https://www.mountpalomarwinery.com/" target="_blank"><img
+                                        src="{{ asset('frontend/imgs/wineriesnear/4.jpg') }}" class="site_wineries_thumb"
+                                        alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Bel Vino Winery -->
+                    <div class="col-lg-6">
+                        <div class="site_wineries_media_list list-unstyled">
+                            <div class="media">
+                                <div class="media-body">
+                                    <h5 class="mt-0 mb-2">Bel Vino Winery</h5>
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <div class="site_rating_start"> 4.6 <i class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> (36) Google reviews </div>
+                                        </li>
+                                        <li><i class="fa fa-globe mr-2"></i> <a href="https://www.belvinowinery.com/"
+                                                target="_blank">https://www.belvinowinery.com/</a></li>
+                                        <li><i class="fa fa-map-marker mr-2"></i> <a
+                                                href="https://www.google.com/maps/dir/39575+Camino+Del+Vino,+Temecula,+CA+92592,+USA/33515+Rancho+California+Rd,+Temecula,+CA+92591,+USA/@33.5358617,-117.0670108,14z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x80db79c1dcd9f19f:0x2a6b5d1fb1e3d527!2m2!1d-117.026276!2d33.5477843!1m5!1m1!1s0x80db78d693898d63:0x3035e2b4837dc485!2m2!1d-117.0731784!2d33.5239415!3e0"
+                                                target="_blank">33515 Rancho California Rd, Temecula, CA 92591, USA</a>
+                                        </li>
+                                        <li><i class="fa fa-phone mr-2"></i>+1 951-676-6414</li>
+                                        <li>
+                                            <h5><i class="fa fa-location-arrow mr-2"></i> 2.6 miles, 6 min. drive</h5>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <a href="https://www.belvinowinery.com/" target="_blank"><img
+                                        src="{{ asset('frontend/imgs/wineriesnear/18.jpg') }}"
+                                        class="site_wineries_thumb" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Alex's Red Barn Winery -->
+                    <div class="col-lg-6">
+                        <div class="site_wineries_media_list list-unstyled">
+                            <div class="media">
+                                <div class="media-body">
+                                    <h5 class="mt-0 mb-2">Alex's Red Barn Winery</h5>
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <div class="site_rating_start"> 5.0 <i class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> (2) Google reviews </div>
+                                        </li>
+                                        <li><i class="fa fa-globe mr-2"></i> <a href="http://www.redbarnwine.com/"
+                                                target="_blank">http://www.redbarnwine.com/</a></li>
+                                        <li><i class="fa fa-map-marker mr-2"></i> <a
+                                                href="https://www.google.com/maps/dir/39575+Camino+Del+Vino,+Temecula,+CA+92592,+USA/39820+Calle+Contento,+Temecula,+CA+92591,+USA/@33.5377045,-117.067038,14z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x80db79c1dcd9f19f:0x2a6b5d1fb1e3d527!2m2!1d-117.026276!2d33.5477843!1m5!1m1!1s0x80db792e83c3cc0d:0x7cf9a0761a5bb2bf!2m2!1d-117.0732609!2d33.5341277!3e0"
+                                                target="_blank">39820 Calle Contento, Temecula, CA 92591, USA</a></li>
+                                        <li><i class="fa fa-phone mr-2"></i>+1 951-693-3201</li>
+                                        <li>
+                                            <h5><i class="fa fa-location-arrow mr-2"></i> 2.6 miles, 6 min. drive</h5>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <a href="http://www.redbarnwine.com/" target="_blank"><img
+                                        src="{{ asset('frontend/imgs/wineriesnear/47.jpg') }}"
+                                        class="site_wineries_thumb" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Falkner Winery -->
+                    <div class="col-lg-6">
+                        <div class="site_wineries_media_list list-unstyled">
+                            <div class="media">
+                                <div class="media-body">
+                                    <h5 class="mt-0 mb-2">Falkner Winery</h5>
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <div class="site_rating_start"> 4.5 <i class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> (272) Google reviews </div>
+                                        </li>
+                                        <li><i class="fa fa-globe mr-2"></i> <a
+                                                href="http://www.falknerwinery.com/index.php"
+                                                target="_blank">http://www.falknerwinery.com/index.php</a></li>
+                                        <li><i class="fa fa-map-marker mr-2"></i> <a
+                                                href="https://www.google.com/maps/dir/39575+Camino+Del+Vino,+Temecula,+CA+92592,+USA/40620+Calle+Contento,+Temecula,+CA+92591,+USA/@33.5377054,-117.0564869,15z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x80db79c1dcd9f19f:0x2a6b5d1fb1e3d527!2m2!1d-117.026276!2d33.5477843!1m5!1m1!1s0x80db792606680beb:0xc193387880589775!2m2!1d-117.0661994!2d33.5339566!3e0"
+                                                target="_blank">40620 Calle Contento, Temecula, CA 92591, USA</a></li>
+                                        <li><i class="fa fa-phone mr-2"></i>+1 951-676-8231</li>
+                                        <li>
+                                            <h5><i class="fa fa-location-arrow mr-2"></i> 2.7 miles, 6 min. drive</h5>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <a href="http://www.falknerwinery.com/index.php" target="_blank"><img
+                                        src="{{ asset('frontend/imgs/wineriesnear/20.jpg') }}"
+                                        class="site_wineries_thumb" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Miramonte Winery -->
+                    <div class="col-lg-6">
+                        <div class="site_wineries_media_list list-unstyled">
+                            <div class="media">
+                                <div class="media-body">
+                                    <h5 class="mt-0 mb-2">Miramonte Winery</h5>
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <div class="site_rating_start"> 4.3 <i class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> (338) Google reviews </div>
+                                        </li>
+                                        <li><i class="fa fa-globe mr-2"></i> <a href="https://www.miramontewinery.com/"
+                                                target="_blank">https://www.miramontewinery.com/</a></li>
+                                        <li><i class="fa fa-map-marker mr-2"></i> <a
+                                                href="https://www.google.com/maps/dir/39575+Camino+Del+Vino,+Temecula,+CA+92592,+USA/33410+Rancho+California+Rd,+Temecula,+CA+92591,+USA/@33.5363818,-117.0694034,14z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x80db79c1dcd9f19f:0x2a6b5d1fb1e3d527!2m2!1d-117.026276!2d33.5477843!1m5!1m1!1s0x80db792aa0f78cb7:0x2fb6ffd66426a239!2m2!1d-117.0780616!2d33.5257532!3e0"
+                                                target="_blank">33410 Rancho California Rd, Temecula, CA 92591, USA</a>
+                                        </li>
+                                        <li><i class="fa fa-phone mr-2"></i> +1 951-506-5500</li>
+                                        <li>
+                                            <h5><i class="fa fa-location-arrow mr-2"></i> 2.7 miles, 6 min. drive</h5>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <a href="https://www.miramontewinery.com/" target="_blank"><img
+                                        src="{{ asset('frontend/imgs/wineriesnear/3.jpg') }}" class="site_wineries_thumb"
+                                        alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Longshadow Ranch Winery -->
+                    <div class="col-lg-6">
+                        <div class="site_wineries_media_list list-unstyled">
+                            <div class="media">
+                                <div class="media-body">
+                                    <h5 class="mt-0 mb-2">Longshadow Ranch Winery</h5>
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <div class="site_rating_start"> 4.4 <i class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> (119) Google reviews </div>
+                                        </li>
+                                        <li><i class="fa fa-globe mr-2"></i> <a
+                                                href="http://www.longshadowranchwinery.com/"
+                                                target="_blank">http://www.longshadowranchwinery.com/</a></li>
+                                        <li><i class="fa fa-map-marker mr-2"></i> <a
+                                                href="https://www.google.com/maps/dir/39575+Camino+Del+Vino,+Temecula,+CA+92592,+USA/39847+Calle+Contento,+Temecula,+CA+92591,+USA/@33.5377045,-117.0684016,14z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x80db79c1dcd9f19f:0x2a6b5d1fb1e3d527!2m2!1d-117.026276!2d33.5477843!1m5!1m1!1s0x80db792c5379c089:0xf82e9188f6d554e8!2m2!1d-117.076058!2d33.533703!3e0"
+                                                target="_blank">39847 Calle Contento, Temecula, CA 92591, USA</a></li>
+                                        <li><i class="fa fa-phone mr-2"></i>+1 951-587-6221</li>
+                                        <li>
+                                            <h5><i class="fa fa-location-arrow mr-2"></i>2.7 miles, 6 min. drive</h5>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <a href="http://www.longshadowranchwinery.com/" target="_blank"><img
+                                        src="{{ asset('frontend/imgs/wineriesnear/22.jpg') }}"
+                                        class="site_wineries_thumb" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Somerset Winery -->
+                    <div class="col-lg-6">
+                        <div class="site_wineries_media_list list-unstyled">
+                            <div class="media">
+                                <div class="media-body">
+                                    <h5 class="mt-0 mb-2">Somerset Winery</h5>
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <div class="site_rating_start"> 4.6 <i class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> (497) Google reviews </div>
+                                        </li>
+                                        <li><i class="fa fa-globe mr-2"></i> <a href="https://www.somersetvineyard.com/"
+                                                target="_blank">https://www.somersetvineyard.com/</a></li>
+                                        <li><i class="fa fa-map-marker mr-2"></i> <a
+                                                href="https://www.google.com/maps/dir/39575+Camino+Del+Vino,+Temecula,+CA,+USA/36083+Summitville+St,+Temecula,+CA+92592,+USA/@33.5557464,-117.0371438,15z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x80db79c1dcd9f19f:0x2a6b5d1fb1e3d527!2m2!1d-117.026276!2d33.5477843!1m5!1m1!1s0x80db799dd7a34627:0x47042265d6fe8427!2m2!1d-117.0299855!2d33.5629626!3e2"
+                                                target="_blank">37338 De Portola Rd, Temecula, CA 92592</a></li>
+                                        <li><i class="fa fa-phone mr-2"></i>+1 951-365-5522</li>
+                                        <li>
+                                            <h5><i class="fa fa-location-arrow mr-2"></i> 2.8 miles, 5 minutes drive</h5>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <a href="https://www.somersetvineyard.com/" target="_blank"><img
+                                        src="{{ asset('frontend/imgs/wineriesnear/11.jpg') }}"
+                                        class="site_wineries_thumb" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Frazeli Cellars Winery -->
+                    <div class="col-lg-6">
+                        <div class="site_wineries_media_list list-unstyled">
+                            <div class="media">
+                                <div class="media-body">
+                                    <h5 class="mt-0 mb-2">Frazeli Cellars Winery</h5>
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <div class="site_rating_start"> 4.6 <i class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> (731) Google reviews </div>
+                                        </li>
+                                        <li><i class="fa fa-globe mr-2"></i> <a href="https://www.fazelicellars.com/"
+                                                target="_blank">https://www.fazelicellars.com/</a></li>
+                                        <li><i class="fa fa-map-marker mr-2"></i> <a
+                                                href="https://www.google.com/maps/dir/39575+Camino+Del+Vino,+Temecula,+CA+92592,+USA/36084+Summitville+St,+Temecula,+CA+92592,+USA/@33.5558448,-117.0371438,15z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x80db79c1dcd9f19f:0x2a6b5d1fb1e3d527!2m2!1d-117.026276!2d33.5477843!1m5!1m1!1s0x80db799dc7a2b479:0x309a5bcf4ce597a9!2m2!1d-117.0302614!2d33.5639513!3e2"
+                                                target="_blank">37320 De Portola Rd, Temecula, CA 92592</a></li>
+                                        <li><i class="fa fa-phone mr-2"></i>+1 951- 303-3366</li>
+                                        <li>
+                                            <h5><i class="fa fa-location-arrow mr-2"></i> 2.8 miles, 5 minutes drive</h5>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <a href="https://www.fazelicellars.com/" target="_blank"><img
+                                        src="{{ asset('frontend/imgs/wineriesnear/36.jpg') }}"
+                                        class="site_wineries_thumb" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Fazeli Cellars Winery -->
+                    <div class="col-lg-6">
+                        <div class="site_wineries_media_list list-unstyled">
+                            <div class="media">
+                                <div class="media-body">
+                                    <h5 class="mt-0 mb-2">Fazeli Cellars Winery</h5>
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <div class="site_rating_start"> 4.7 <i class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> (376) Google reviews </div>
+                                        </li>
+                                        <li><i class="fa fa-globe mr-2"></i> <a href="http://www.fazelicellars.com/"
+                                                target="_blank">http://www.fazelicellars.com/</a></li>
+                                        <li><i class="fa fa-map-marker mr-2"></i> <a
+                                                href="https://www.google.com/maps/dir/39575+Camino+Del+Vino,+Temecula,+CA+92592,+USA/37320+De+Portola+Rd,+Temecula,+CA+92592,+USA/@33.5326994,-117.0308363,14z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x80db79c1dcd9f19f:0x2a6b5d1fb1e3d527!2m2!1d-117.026276!2d33.5477843!1m5!1m1!1s0x80db786fc71fa9ab:0xc3b239df8ebaeb92!2m2!1d-117.0186188!2d33.5095847!3e0"
+                                                target="_blank">37320 De Portola Rd, Temecula, CA 92592, USA</a></li>
+                                        <li><i class="fa fa-phone mr-2"></i>+1 951-303-3366</li>
+                                        <li>
+                                            <h5><i class="fa fa-location-arrow mr-2"></i> 2.8 miles, 5 min. drive</h5>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <a href="http://www.fazelicellars.com/" target="_blank"><img
+                                        src="{{ asset('frontend/imgs/wineriesnear/21.jpg') }}"
+                                        class="site_wineries_thumb" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Briar Rose Winery -->
+                    <div class="col-lg-6">
+                        <div class="site_wineries_media_list list-unstyled">
+                            <div class="media">
+                                <div class="media-body">
+                                    <h5 class="mt-0 mb-2">Briar Rose Winery</h5>
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <div class="site_rating_start"> 4.3 <i class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> (62) Google reviews </div>
+                                        </li>
+                                        <li>Reservations-required winery known for its Cabernet Sauvignons &amp; replica of
+                                            Snow White's cottage.</li>
+                                        <li><i class="fa fa-globe mr-2"></i> <a href="http://www.briarrosewinery.com/"
+                                                target="_blank">http://www.briarrosewinery.com/</a></li>
+                                        <li><i class="fa fa-map-marker mr-2"></i> <a
+                                                href="https://www.google.com/maps/dir/39575+Camino+Del+Vino,+Temecula,+CA+92592,+USA/41720+Calle+Cabrillo,+Temecula,+CA+92592,+USA/@33.5355394,-117.0714374,14z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x80db79c1dcd9f19f:0x2a6b5d1fb1e3d527!2m2!1d-117.026276!2d33.5477843!1m5!1m1!1s0x80db7f2d26df191d:0xb27e2d29c86d401a!2m2!1d-117.0813619!2d33.5165745!3e0"
+                                                target="_blank"> 41720 Calle Cabrillo, Temecula, CA 92592, USA</a></li>
+                                        <li><i class="fa fa-phone mr-2"></i>+1 951-308-1098</li>
+                                        <li>
+                                            <h5><i class="fa fa-location-arrow mr-2"></i> 2.8 miles, 6 min. drive</h5>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <a href="http://www.briarrosewinery.com/" target="_blank"><img
+                                        src="{{ asset('frontend/imgs/wineriesnear/28.jpg') }}"
+                                        class="site_wineries_thumb" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 1968 Cellars Winery & Distillery -->
+                    <div class="col-lg-6">
+                        <div class="site_wineries_media_list list-unstyled">
+                            <div class="media">
+                                <div class="media-body">
+                                    <h5 class="mt-0 mb-2">1968 Cellars Winery &amp; Distillery</h5>
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <div class="site_rating_start"> 0.0 <i class="fa fa-star"></i> <i
+                                                    class="fa fa-star"></i> <i class="fa fa-star"></i> <i
+                                                    class="fa fa-star"></i> <i class="fa fa-star"></i> (0) Google reviews
+                                            </div>
+                                        </li>
+                                        <li><i class="fa fa-globe mr-2"></i> <a href="http://www.1968cellars.com/"
+                                                target="_blank">http://www.1968cellars.com/</a></li>
+                                        <li><i class="fa fa-map-marker mr-2"></i> <a
+                                                href="https://www.google.com/maps/dir/39575+Camino+Del+Vino,+Temecula,+CA+92592,+USA/40134+Calle+Cabernet,+Temecula,+CA+92591,+USA/@33.5443895,-117.0556874,15z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x80db79c1dcd9f19f:0x2a6b5d1fb1e3d527!2m2!1d-117.026276!2d33.5477843!1m5!1m1!1s0x80db793a9725febf:0xe5a89c586cacb4d1!2m2!1d-117.0667445!2d33.5402153!3e0"
+                                                target="_blank">40134 Calle Cabernet, Temecula, CA 92591, USA</a></li>
+                                        <li><i class="fa fa-phone mr-2"></i>+1 909-573-5045</li>
+                                        <li>
+                                            <h5><i class="fa fa-location-arrow mr-2"></i> 2.9 miles, 6 min. drive</h5>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <a href="http://www.1968cellars.com/" target="_blank"><img
+                                        src="{{ asset('frontend/imgs/wineriesnear/56.png') }}"
+                                        class="site_wineries_thumb" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Gershon Bachus Vinters -->
+                    <div class="col-lg-6">
+                        <div class="site_wineries_media_list list-unstyled">
+                            <div class="media">
+                                <div class="media-body">
+                                    <h5 class="mt-0 mb-2">Gershon Bachus Vinters:</h5>
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <div class="site_rating_start"> 4.6 <i class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> (126) Google reviews </div>
+                                        </li>
+                                        <li><i class="fa fa-globe mr-2"></i> <a href="https://www.gershonbachus.com/"
+                                                target="_blank">https://www.gershonbachus.com/</a></li>
+                                        <li><i class="fa fa-map-marker mr-2"></i> <a
+                                                href="https://www.google.com/maps/dir/39575+Camino+Del+Vino,+Temecula,+CA+92592,+USA/39050+De+Portola+Rd,+Temecula,+CA+92592,+USA/@33.5397117,-117.0298289,15z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x80db79c1dcd9f19f:0x2a6b5d1fb1e3d527!2m2!1d-117.026276!2d33.5477843!1m5!1m1!1s0x80db784f235e4051:0xeb084dc5af954771!2m2!1d-117.0157939!2d33.5318817!3e2"
+                                                target="_blank">37750 De Portola Rd, Temecula, CA 92592</a></li>
+                                        <li><i class="fa fa-phone mr-2"></i>+1 (877) 458-8428</li>
+                                        <li>
+                                            <h5><i class="fa fa-location-arrow mr-2"></i> 3.0 miles, 6 minutes drive</h5>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <a href="https://www.gershonbachus.com/" target="_blank"><img
+                                        src="{{ asset('frontend/imgs/wineriesnear/15.jpg') }}"
+                                        class="site_wineries_thumb" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Robert Renzoni Vineyards -->
+                    <div class="col-lg-6">
+                        <div class="site_wineries_media_list list-unstyled">
+                            <div class="media">
+                                <div class="media-body">
+                                    <h5 class="mt-0 mb-2">Robert Renzoni Vineyards</h5>
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <div class="site_rating_start"> 4.6 <i class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> (213) Google reviews </div>
+                                        </li>
+                                        <li><i class="fa fa-globe mr-2"></i> <a href="http://robertrenzonivineyards.com/"
+                                                target="_blank">http://robertrenzonivineyards.com/</a></li>
+                                        <li><i class="fa fa-map-marker mr-2"></i> <a
+                                                href="https://www.google.com/maps/dir/39575+Camino+Del+Vino,+Temecula,+CA+92592,+USA/37350+De+Portola+Rd,+Temecula,+CA+92592,+USA/@33.5332604,-117.0308363,14z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x80db79c1dcd9f19f:0x2a6b5d1fb1e3d527!2m2!1d-117.026276!2d33.5477843!1m5!1m1!1s0x80db786f733af8d5:0x9aac43bb4dc00a43!2m2!1d-117.0193376!2d33.5117581!3e0"
+                                                target="_blank"> 37350 De Portola Rd, Temecula, CA 92592, USA</a></li>
+                                        <li><i class="fa fa-phone mr-2"></i>+1 951-302-8466</li>
+                                        <li>
+                                            <h5><i class="fa fa-location-arrow mr-2"></i> 3.0 miles, 6 min. drive</h5>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <a href="http://robertrenzonivineyards.com/" target="_blank"><img
+                                        src="{{ asset('frontend/imgs/wineriesnear/33.jpg') }}"
+                                        class="site_wineries_thumb" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Lumiere Winery -->
+                    <div class="col-lg-6">
+                        <div class="site_wineries_media_list list-unstyled">
+                            <div class="media">
+                                <div class="media-body">
+                                    <h5 class="mt-0 mb-2">Lumiere Winery</h5>
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <div class="site_rating_start"> 4.5 <i class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> (285) Google reviews </div>
+                                        </li>
+                                        <li><i class="fa fa-globe mr-2"></i> <a href="https://lumierewinery.com/"
+                                                target="_blank">https://lumierewinery.com/</a></li>
+                                        <li><i class="fa fa-map-marker mr-2"></i> <a
+                                                href="https://www.google.com/maps/dir/39575+Camino+Del+Vino,+Temecula,+CA+92592,+USA/39555+Calle+Contento,+Temecula,+CA+92591,+USA/@33.5377045,-117.0686626,14z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x80db79c1dcd9f19f:0x2a6b5d1fb1e3d527!2m2!1d-117.026276!2d33.5477843!1m5!1m1!1s0x80db79328acb59e7:0xaca5d150e3763b04!2m2!1d-117.07658!2d33.537615!3e0"
+                                                target="_blank">39555 Calle Contento, Temecula, CA 92591, USA</a></li>
+                                        <li><i class="fa fa-phone mr-2"></i>+1 951-972-0585</li>
+                                        <li>
+                                            <h5><i class="fa fa-location-arrow mr-2"></i> 3.0 miles, 7 min. drive</h5>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <a href="https://lumierewinery.com/" target="_blank"><img
+                                        src="{{ asset('frontend/imgs/wineriesnear/27.jpg') }}"
+                                        class="site_wineries_thumb" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Altisima Winery -->
+                    <div class="col-lg-6">
+                        <div class="site_wineries_media_list list-unstyled">
+                            <div class="media">
+                                <div class="media-body">
+                                    <h5 class="mt-0 mb-2">Altisima Winery</h5>
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <div class="site_rating_start"> 4.4 <i class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> (209) Google reviews </div>
+                                        </li>
+                                        <li><i class="fa fa-globe mr-2"></i> <a href="https://altisimawinery.com/"
+                                                target="_blank">https://altisimawinery.com/</a></li>
+                                        <li><i class="fa fa-map-marker mr-2"></i> <a
+                                                href="https://www.google.com/maps/dir/39575+Camino+Del+Vino,+Temecula,+CA,+USA/Vitagliano+Winery,+36101+Glen+Oaks+Rd+D,+Temecula,+CA+92592,+USA/@33.5483846,-117.0285404,18z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x80db79c1dcd9f19f:0x2a6b5d1fb1e3d527!2m2!1d-117.026276!2d33.5477843!1m5!1m1!1s0x80db79a620a8c643:0x11c0be84a116c72a!2m2!1d-117.0291911!2d33.5481267!3e2"
+                                                target="_blank">37440 De Portola Rd, Temecula, CA 92592</a></li>
+                                        <li><i class="fa fa-phone mr-2"></i> +1 951-422-2525</li>
+                                        <li>
+                                            <h5><i class="fa fa-location-arrow mr-2"></i> 3.1 miles, 6 minutes drive</h5>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <a href="https://altisimawinery.com/" target="_blank"><img
+                                        src="{{ asset('frontend/imgs/wineriesnear/31.png') }}"
+                                        class="site_wineries_thumb" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Monte De Oro -->
+                    <div class="col-lg-6">
+                        <div class="site_wineries_media_list list-unstyled">
+                            <div class="media">
+                                <div class="media-body">
+                                    <h5 class="mt-0 mb-2">Monte De Oro</h5>
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <div class="site_rating_start"> 4.6 <i class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i>(153) Google reviews</div>
+                                        </li>
+                                        <li>Winery with private tours, tastings &amp; light fare, specializing in reds aged
+                                            in French-oak barrels.</li>
+                                        <li><i class="fa fa-globe mr-2"></i> <a href="http://www.montedeoro.com/"
+                                                target="_blank">http://www.montedeoro.com/</a></li>
+                                        <li><i class="fa fa-map-marker mr-2"></i> <a
+                                                href="https://www.google.com/maps/dir/39575+Camino+Del+Vino,+Temecula,+CA+92592,+USA/39750+De+Portola+Rd,+Temecula,+CA+92592,+USA/@33.5422471,-117.0233084,16z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x80db79c1dcd9f19f:0x2a6b5d1fb1e3d527!2m2!1d-117.026276!2d33.5477843!1m5!1m1!1s0x80db79b5486a0f9b:0xad8e438fef19f3f9!2m2!1d-117.00977!2d33.5413023!3e2">35820
+                                                Rancho California Rd, Temecula, CA 92591, USA</a></li>
+                                        <li><i class="fa fa-phone mr-2"></i>+1 951-491-6551</li>
+                                        <li>
+                                            <h5><i class="fa fa-location-arrow mr-2"></i> 3.1 miles, 6 minutes drive</h5>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <a href="http://www.montedeoro.com/" target="_blank"><img
+                                        src="{{ asset('frontend/imgs/wineriesnear/38.jpg') }}"
+                                        class="site_wineries_thumb" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Europa Village -->
+                    <div class="col-lg-6">
+                        <div class="site_wineries_media_list list-unstyled">
+                            <div class="media">
+                                <div class="media-body">
+                                    <h5 class="mt-0 mb-2">Europa Village</h5>
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <div class="site_rating_start"> 4.6 <i class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> (165) Google reviews </div>
+                                        </li>
+                                        <li><i class="fa fa-globe mr-2"></i> <a href="https://www.europavillage.com/"
+                                                target="_blank">https://www.europavillage.com/</a></li>
+                                        <li><i class="fa fa-map-marker mr-2"></i> <a
+                                                href="https://www.google.com/maps/dir/39575+Camino+Del+Vino,+Temecula,+CA+92592,+USA/33475+La+Serena+Way,+Temecula,+CA+92591,+USA/@33.5352429,-117.0726434,14z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x80db79c1dcd9f19f:0x2a6b5d1fb1e3d527!2m2!1d-117.026276!2d33.5477843!1m5!1m1!1s0x80db7ec2b44c3d15:0xa680e77f4349e722!2m2!1d-117.0845416!2d33.5235311!3e0"
+                                                target="_blank">33475 La Serena Way, Temecula, CA 92591, USA</a></li>
+                                        <li><i class="fa fa-phone mr-2"></i>+1 951-506-1818</li>
+                                        <li>
+                                            <h5><i class="fa fa-location-arrow mr-2"></i> 3.1 miles, 6 min. drive</h5>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <a href="https://www.europavillage.com/" target="_blank"><img
+                                        src="{{ asset('frontend/imgs/wineriesnear/5.jpg') }}" class="site_wineries_thumb"
+                                        alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Churon Winery -->
+                    <div class="col-lg-6">
+                        <div class="site_wineries_media_list list-unstyled">
+                            <div class="media">
+                                <div class="media-body">
+                                    <h5 class="mt-0 mb-2">Churon Winery</h5>
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <div class="site_rating_start"> 4.4 <i class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> (181) Google reviews </div>
+                                        </li>
+                                        <li><i class="fa fa-globe mr-2"></i> <a href="http://www.innatchuronwinery.com/"
+                                                target="_blank">http://www.innatchuronwinery.com/</a></li>
+                                        <li><i class="fa fa-map-marker mr-2"></i> <a
+                                                href="https://www.google.com/maps/dir/39575+Camino+Del+Vino,+Temecula,+CA+92592,+USA/33233+Rancho+California+Rd,+Temecula,+CA+92591,+USA/@33.5377226,-117.0706225,14z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x80db79c1dcd9f19f:0x2a6b5d1fb1e3d527!2m2!1d-117.026276!2d33.5477843!1m5!1m1!1s0x80db78d4cca03621:0x5916ebe3f812cdbb!2m2!1d-117.0790753!2d33.521088!3e0"
+                                                target="_blank">33233 Rancho California Rd, Temecula, CA 92591, USA</a>
+                                        </li>
+                                        <li><i class="fa fa-phone mr-2"></i>+1 951-694-9070</li>
+                                        <li>
+                                            <h5><i class="fa fa-location-arrow mr-2"></i> 3.1 miles, 7 min. drive</h5>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <a href="http://www.innatchuronwinery.com/" target="_blank"><img
+                                        src="{{ asset('frontend/imgs/wineriesnear/40.jpg') }}"
+                                        class="site_wineries_thumb" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Baily Vineyard -->
+                    <div class="col-lg-6">
+                        <div class="site_wineries_media_list list-unstyled">
+                            <div class="media">
+                                <div class="media-body">
+                                    <h5 class="mt-0 mb-2">Baily Vineyard</h5>
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <div class="site_rating_start"> 4.5 <i class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> (67) Google reviews </div>
+                                        </li>
+                                        <li><i class="fa fa-globe mr-2"></i> <a href="http://bailywinery.com/"
+                                                target="_blank">http://bailywinery.com/</a></li>
+                                        <li><i class="fa fa-map-marker mr-2"></i> <a
+                                                href="https://www.google.com/maps/dir/39575+Camino+Del+Vino,+Temecula,+CA+92592,+USA/33440+La+Serena+Way,+Temecula,+CA+92591,+USA/@33.5386639,-117.0720972,14z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x80db79c1dcd9f19f:0x2a6b5d1fb1e3d527!2m2!1d-117.026276!2d33.5477843!1m5!1m1!1s0x80db7f2af5554a49:0x85adffd513d37423!2m2!1d-117.0823043!2d33.5232624!3e0"
+                                                target="_blank">33440 La Serena Way, Temecula, CA 92591, USA</a></li>
+                                        <li><i class="fa fa-phone mr-2"></i>+1 951-676-9463</li>
+                                        <li>
+                                            <h5><i class="fa fa-location-arrow mr-2"></i> 3.1 miles, 6 min. drive</h5>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <a href="http://bailywinery.com/" target="_blank"><img
+                                        src="{{ asset('frontend/imgs/wineriesnear/23.jpg') }}"
+                                        class="site_wineries_thumb" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Akash Winery & Vineyard -->
+                    <div class="col-lg-6">
+                        <div class="site_wineries_media_list list-unstyled">
+                            <div class="media">
+                                <div class="media-body">
+                                    <h5 class="mt-0 mb-2">Akash Winery &amp; Vineyard</h5>
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <div class="site_rating_start"> 4.7 <i class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> (37) Google reviews </div>
+                                        </li>
+                                        <li><i class="fa fa-globe mr-2"></i> <a href="http://www.akashwinery.com/"
+                                                target="_blank">http://www.akashwinery.com/</a></li>
+                                        <li><i class="fa fa-map-marker mr-2"></i> <a
+                                                href="https://www.google.com/maps/dir/39575+Camino+Del+Vino,+Temecula,+CA+92592,+USA/39730+Calle+Contento,+Temecula,+CA+92591,+USA/@33.5411255,-117.0687785,14z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x80db79c1dcd9f19f:0x2a6b5d1fb1e3d527!2m2!1d-117.026276!2d33.5477843!1m5!1m1!1s0x80db793211384d2f:0x70b945c00a8aa439!2m2!1d-117.0733044!2d33.5382206!3e0"
+                                                target="_blank">39730 Calle Contento, Temecula, CA 92591, USA</a></li>
+                                        <li><i class="fa fa-phone mr-2"></i>+1 951-888-1393</li>
+                                        <li>
+                                            <h5><i class="fa fa-location-arrow mr-2"></i> 3.1 miles, 7 min. drive</h5>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <a href="http://www.akashwinery.com/" target="_blank"><img
+                                        src="{{ asset('frontend/imgs/wineriesnear/32.png') }}"
+                                        class="site_wineries_thumb" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Europa Village Winery -->
+                    <div class="col-lg-6">
+                        <div class="site_wineries_media_list list-unstyled">
+                            <div class="media">
+                                <div class="media-body">
+                                    <h5 class="mt-0 mb-2">Europa Village Winery</h5>
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <div class="site_rating_start"> 4.6 <i class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> <i class="fa fa-star"></i> (644)
+                                                Google reviews </div>
+                                        </li>
+                                        <li><i class="fa fa-globe mr-2"></i> <a href="https://www.europavillage.com/"
+                                                target="_blank">https://www.europavillage.com/</a></li>
+                                        <li><i class="fa fa-map-marker mr-2"></i> <a
+                                                href="https://www.google.com/maps/dir/39575+Camino+Del+Vino,+Temecula,+CA,+USA/36095+Monte+De+Oro+Rd,+Temecula,+CA+92592,+USA/@33.5444006,-117.0321422,16z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x80db79c1dcd9f19f:0x2a6b5d1fb1e3d527!2m2!1d-117.026276!2d33.5477843!1m5!1m1!1s0x80db79abd0cf2113:0x6fa2262ccf92a3a9!2m2!1d-117.0289183!2d33.5410171!3e2"
+                                                target="_blank">41150 Via Europa, Temecula, CA 92591</a></li>
+                                        <li><i class="fa fa-phone mr-2"></i> +1 951-506-1818</li>
+                                        <li>
+                                            <h5><i class="fa fa-location-arrow mr-2"></i> 3.2 miles, 6 minutes drive</h5>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <a href="https://www.europavillage.com/" target="_blank"><img
+                                        src="{{ asset('frontend/imgs/wineriesnear/46.jpg') }}"
+                                        class="site_wineries_thumb" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Vindemia Vineyard & Winery -->
+                    <div class="col-lg-6">
+                        <div class="site_wineries_media_list list-unstyled">
+                            <div class="media">
+                                <div class="media-body">
+                                    <h5 class="mt-0 mb-2">Vindemia Vineyard &amp; Winery</h5>
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <div class="site_rating_start"> 4.8 <i class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> (41) Google reviews </div>
+                                        </li>
+                                        <li><i class="fa fa-globe mr-2"></i> <a href="http://www.vindemia.com/"
+                                                target="_blank">http://www.vindemia.com/</a></li>
+                                        <li><i class="fa fa-map-marker mr-2"></i> <a
+                                                href="https://www.google.com/maps/dir/39575+Camino+Del+Vino,+Temecula,+CA+92592,+USA/33133+Vista+Del+Monte+Rd,+Temecula,+CA+92591,+USA/@33.5377045,-117.0700192,14z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x80db79c1dcd9f19f:0x2a6b5d1fb1e3d527!2m2!1d-117.026276!2d33.5477843!1m5!1m1!1s0x80db7932b952d273:0xddfe95442636baf7!2m2!1d-117.0792933!2d33.5364319!3e0"
+                                                target="_blank"> 33133 Vista Del Monte Rd, Temecula, CA 92591, USA</a></li>
+                                        <li><i class="fa fa-phone mr-2"></i>+1 951-760-9334</li>
+                                        <li>
+                                            <h5><i class="fa fa-location-arrow mr-2"></i> 3.4 miles, 7 min. drive</h5>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <a href="http://www.vindemia.com/" target="_blank"><img
+                                        src="{{ asset('frontend/imgs/wineriesnear/7.jpg') }}" class="site_wineries_thumb"
+                                        alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Wilson Creek Winery -->
+                    <div class="col-lg-6">
+                        <div class="site_wineries_media_list list-unstyled">
+                            <div class="media">
+                                <div class="media-body">
+                                    <h5 class="mt-0 mb-2">Wilson Creek Winery</h5>
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <div class="site_rating_start"> 4.6 <i class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i>(565) Google reviews</div>
+                                        </li>
+                                        <li><i class="fa fa-globe mr-2"></i> <a href="http://www.wilsoncreekwinery.com/"
+                                                target="_blank">http://www.wilsoncreekwinery.com/</a></li>
+                                        <li><i class="fa fa-map-marker mr-2"></i> <a
+                                                href="https://www.google.com/maps/dir/39575+Camino+Del+Vino,+Temecula,+CA+92592,+USA/39750+De+Portola+Rd,+Temecula,+CA+92592,+USA/@33.5422471,-117.0233084,16z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x80db79c1dcd9f19f:0x2a6b5d1fb1e3d527!2m2!1d-117.026276!2d33.5477843!1m5!1m1!1s0x80db79b5486a0f9b:0xad8e438fef19f3f9!2m2!1d-117.00977!2d33.5413023!3e2">35960
+                                                Rancho California Rd, Temecula, CA 92591, USA</a></li>
+                                        <li><i class="fa fa-phone mr-2"></i>+1 951-699-9463</li>
+                                        <li>
+                                            <h5><i class="fa fa-location-arrow mr-2"></i> 3.5 miles, 9 minutes drive</h5>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <a href="http://www.wilsoncreekwinery.com/" target="_blank"><img
+                                        src="{{ asset('frontend/imgs/wineriesnear/9.jpg') }}" class="site_wineries_thumb"
+                                        alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Callaway Winery -->
+                    <div class="col-lg-6">
+                        <div class="site_wineries_media_list list-unstyled">
+                            <div class="media">
+                                <div class="media-body">
+                                    <h5 class="mt-0 mb-2">Callaway Winery</h5>
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <div class="site_rating_start"> 4.4 <i class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> <i class="fa fa-star"></i> 4.4
+                                                (651) Google reviews </div>
+                                        </li>
+                                        <li><i class="fa fa-globe mr-2"></i> <a href="https://www.callawaywinery.com/"
+                                                target="_blank">https://www.callawaywinery.com/</a></li>
+                                        <li><i class="fa fa-map-marker mr-2"></i> <a
+                                                href="https://www.google.com/maps/dir/39575+Camino+Del+Vino,+Temecula,+CA,+USA/36650+Glen+Oaks+Rd,+Temecula,+CA+92592,+USA/@33.5496797,-117.0252362,17z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x80db79c1dcd9f19f:0x2a6b5d1fb1e3d527!2m2!1d-117.026276!2d33.5477843!1m5!1m1!1s0x80db79bad65f3315:0x27b65934b12dc8a2!2m2!1d-117.02024!2d33.5516206!3e2"
+                                                target="_blank"> 32720 Rancho California Rd, Temecula, CA 92591</a></li>
+                                        <li><i class="fa fa-phone mr-2"></i> +1 951-676-4001</li>
+                                        <li>
+                                            <h5><i class="fa fa-location-arrow mr-2"></i> 3.6 miles, 7 minutes drive</h5>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <a href="https://www.callawaywinery.com/" target="_blank"><img
+                                        src="{{ asset('frontend/imgs/wineriesnear/35.jpg') }}"
+                                        class="site_wineries_thumb" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Oak Winery -->
+                    <div class="col-lg-6">
+                        <div class="site_wineries_media_list list-unstyled">
+                            <div class="media">
+                                <div class="media-body">
+                                    <h5 class="mt-0 mb-2">Oak Winery</h5>
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <div class="site_rating_start"> 4.5 <i class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> (611) Google reviews </div>
+                                        </li>
+                                        <li><i class="fa fa-globe mr-2"></i> <a href="https://oakmountainwinery.com/"
+                                                target="_blank">https://oakmountainwinery.com/</a></li>
+                                        <li><i class="fa fa-map-marker mr-2"></i> <a
+                                                href="https://www.google.com/maps/dir/39575+Camino+Del+Vino,+Temecula,+CA,+USA/40150+Barksdale+Cir,+Temecula,+CA+92592,+USA/@33.5447996,-117.0326213,17z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x80db79c1dcd9f19f:0x2a6b5d1fb1e3d527!2m2!1d-117.026276!2d33.5477843!1m5!1m1!1s0x80db79072450d571:0xc67ac7ae01ef5d42!2m2!1d-117.034745!2d33.541815!3e2"
+                                                target="_blank">36522 Vía Verde, Temecula, CA 92592</a></li>
+                                        <li><i class="fa fa-phone mr-2"></i>+1 951-699-9102</li>
+                                        <li>
+                                            <h5><i class="fa fa-location-arrow mr-2"></i> 3.6 miles, 7 minutes drive</h5>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <a href="https://oakmountainwinery.com/" target="_blank"><img
+                                        src="{{ asset('frontend/imgs/wineriesnear/26.jpg') }}"
+                                        class="site_wineries_thumb" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Palumbo Family Vineyard -->
+                    <div class="col-lg-6">
+                        <div class="site_wineries_media_list list-unstyled">
+                            <div class="media">
+                                <div class="media-body">
+                                    <h5 class="mt-0 mb-2">Palumbo Family Vineyard</h5>
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <div class="site_rating_start"> 4.9 <i class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> (36) Google reviews</div>
+                                        </li>
+                                        <li><i class="fa fa-globe mr-2"></i> <a
+                                                href="http://www.palumbofamilyvineyards.com/"
+                                                target="_blank">http://www.palumbofamilyvineyards.com/</a></li>
+                                        <li><i class="fa fa-map-marker mr-2"></i> <a
+                                                href="https://www.google.com/maps/dir/39575+Camino+Del+Vino,+Temecula,+CA+92592,+USA/39750+De+Portola+Rd,+Temecula,+CA+92592,+USA/@33.5422471,-117.0233084,16z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x80db79c1dcd9f19f:0x2a6b5d1fb1e3d527!2m2!1d-117.026276!2d33.5477843!1m5!1m1!1s0x80db79b5486a0f9b:0xad8e438fef19f3f9!2m2!1d-117.00977!2d33.5413023!3e2">40150
+                                                Barksdale Cir, Temecula, CA 92592, USA</a></li>
+                                        <li><i class="fa fa-phone mr-2"></i>+1 951-676-7900</li>
+                                        <li>
+                                            <h5><i class="fa fa-location-arrow mr-2"></i> 3.6 miles, 7 minutes drive</h5>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <a href="http://www.palumbofamilyvineyards.com/" target="_blank"><img
+                                        src="{{ asset('frontend/imgs/wineriesnear/26.jpg') }}"
+                                        class="site_wineries_thumb" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Oak Mountain Winery -->
+                    <div class="col-lg-6">
+                        <div class="site_wineries_media_list list-unstyled">
+                            <div class="media">
+                                <div class="media-body">
+                                    <h5 class="mt-0 mb-2">Oak Mountain Winery</h5>
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <div class="site_rating_start"> 4.5 <i class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> (285) Google reviews </div>
+                                        </li>
+                                        <li><i class="fa fa-globe mr-2"></i> <a href="http://www.oakmountainwinery.com/"
+                                                target="_blank">http://www.oakmountainwinery.com/</a></li>
+                                        <li><i class="fa fa-map-marker mr-2"></i> <a
+                                                href="https://www.google.com/maps/dir/39575+Camino+Del+Vino,+Temecula,+CA+92592,+USA/36522+V%C3%ADa+Verde,+Temecula,+CA+92592,+USA/@33.5366921,-117.0308363,14z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x80db79c1dcd9f19f:0x2a6b5d1fb1e3d527!2m2!1d-117.026276!2d33.5477843!1m5!1m1!1s0x80db785d6e6e72f9:0x2660ebfda4910476!2m2!1d-117.0226493!2d33.5187996!3e0"
+                                                target="_blank">36522 Vía Verde, Temecula, CA 92592, USA</a></li>
+                                        <li><i class="fa fa-phone mr-2"></i>+1 951-699-9102</li>
+                                        <li>
+                                            <h5><i class="fa fa-location-arrow mr-2"></i> 3.6 miles, 7 min. drive</h5>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <a href="http://www.oakmountainwinery.com/" target="_blank"><img
+                                        src="{{ asset('frontend/imgs/wineriesnear/17.jpg') }}"
+                                        class="site_wineries_thumb" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Thornton Winery -->
+                    <div class="col-lg-6">
+                        <div class="site_wineries_media_list list-unstyled">
+                            <div class="media">
+                                <div class="media-body">
+                                    <h5 class="mt-0 mb-2">Thornton Winery</h5>
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <div class="site_rating_start"> 4.3 <i class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> (236) Google reviews </div>
+                                        </li>
+                                        <li><i class="fa fa-globe mr-2"></i> <a href="http://www.thorntonwine.com/"
+                                                target="_blank">https://www.thorntonwine.com/</a></li>
+                                        <li><i class="fa fa-map-marker mr-2"></i> <a
+                                                href="https://www.google.com/maps/dir/39575+Camino+Del+Vino,+Temecula,+CA+92592,+USA/32575+Rancho+California+Rd,+Temecula,+CA+92591,+USA/@33.5377226,-117.0706225,14z/data=!4m14!4m13!1m5!1m1!1s0x80db79c1dcd9f19f:0x2a6b5d1fb1e3d527!2m2!1d-117.026276!2d33.5477843!1m5!1m1!1s0x80db7f28eff8a493:0x64e4051212e83ed0!2m2!1d-117.0891437!2d33.5193241!3e0"
+                                                target="_blank">32575 Rancho California Rd, Temecula, CA 92591, USA</a>
+                                        </li>
+                                        <li><i class="fa fa-phone mr-2"></i>+1 951-699-0099</li>
+                                        <li>
+                                            <h5><i class="fa fa-location-arrow mr-2"></i> 3.6 miles, 8 min. drive</h5>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <a href="http://www.thorntonwine.com/" target="_blank"><img
+                                        src="{{ asset('frontend/imgs/wineriesnear/60.jpg') }}"
+                                        class="site_wineries_thumb" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Callaway Vineyard & Winery -->
+                    <div class="col-lg-6">
+                        <div class="site_wineries_media_list list-unstyled">
+                            <div class="media">
+                                <div class="media-body">
+                                    <h5 class="mt-0 mb-2">Callaway Vineyard &amp; Winery</h5>
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <div class="site_rating_start"> 4.4 <i class="text-warning fa fa-star"></i>
+                                                <i class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> (238) Google reviews </div>
+                                        </li>
+                                        <li><i class="fa fa-globe mr-2"></i> <a href="http://www.callawaywinery.com/"
+                                                target="_blank">http://www.callawaywinery.com/</a></li>
+                                        <li><i class="fa fa-map-marker mr-2"></i> <a
+                                                href="https://www.google.com/maps/dir/39575+Camino+Del+Vino,+Temecula,+CA+92592,+USA/32720+Rancho+California+Rd,+Temecula,+CA+92591,+USA/@33.5386639,-117.0720972,14z/data=!4m14!4m13!1m5!1m1!1s0x80db79c1dcd9f19f:0x2a6b5d1fb1e3d527!2m2!1d-117.026276!2d33.5477843!1m5!1m1!1s0x80db7ed7967cbb23:0x5a39053d824053a5!2m2!1d-117.089797!2d33.5245374!3e0"
+                                                target="_blank">32720 Rancho California Rd, Temecula, CA 92591, USA</a>
+                                        </li>
+                                        <li><i class="fa fa-phone mr-2"></i> +1 951-676-4001</li>
+                                        <li>
+                                            <h5><i class="fa fa-location-arrow mr-2"></i> 3.6 miles, 7 min. drive</h5>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <a href="http://www.callawaywinery.com/" target="_blank"><img
+                                        src="{{ asset('frontend/imgs/wineriesnear/1.jpg') }}"
+                                        class="site_wineries_thumb" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Hart Winery -->
+                    <div class="col-lg-6">
+                        <div class="site_wineries_media_list list-unstyled">
+                            <div class="media">
+                                <div class="media-body">
+                                    <h5 class="mt-0 mb-2">Hart Winery</h5>
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <div class="site_rating_start"> 4.6 <i class="text-warning fa fa-star"></i>
+                                                <i class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> (93) Google reviews </div>
+                                        </li>
+                                        <li><i class="fa fa-globe mr-2"></i> <a href="http://vinhart.com/"
+                                                target="_blank">http://vinhart.com/</a></li>
+                                        <li><i class="fa fa-map-marker mr-2"></i> <a
+                                                href="https://www.google.com/maps/dir/39575+Camino+Del+Vino,+Temecula,+CA+92592,+USA/41300+Ave+Biona,+Temecula,+CA+92591,+USA/@33.5411255,-117.0687785,14z/data=!4m14!4m13!1m5!1m1!1s0x80db79c1dcd9f19f:0x2a6b5d1fb1e3d527!2m2!1d-117.026276!2d33.5477843!1m5!1m1!1s0x80db7f27fb8bf8e1:0xd1177122e52eafcb!2m2!1d-117.0922617!2d33.5225817!3e0"
+                                                target="_blank">41300 Ave Biona, Temecula, CA 92591, USA</a></li>
+                                        <li><i class="fa fa-phone mr-2"></i>+1 951-676-6300</li>
+                                        <li>
+                                            <h5><i class="fa fa-location-arrow mr-2"></i> 3.7 miles, 7 min. drive</h5>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <a href="http://vinhart.com/" target="_blank"><img
+                                        src="{{ asset('frontend/imgs/wineriesnear/19.jpg') }}"
+                                        class="site_wineries_thumb" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Lorenzi Estate Vineyards -->
+                    <div class="col-lg-6">
+                        <div class="site_wineries_media_list list-unstyled">
+                            <div class="media">
+                                <div class="media-body">
+                                    <h5 class="mt-0 mb-2">Lorenzi Estate Vineyards</h5>
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <div class="site_rating_start"> 4.6 <i class="text-warning fa fa-star"></i>
+                                                <i class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> (60) Google reviews</div>
+                                        </li>
+                                        <li><i class="fa fa-globe mr-2"></i> <a href="http://lorenziestatewines.com/"
+                                                target="_blank">http://lorenziestatewines.com/</a></li>
+                                        <li><i class="fa fa-map-marker mr-2"></i> <a
+                                                href="https://www.google.com/maps/dir/39575+Camino+Del+Vino,+Temecula,+CA+92592,+USA/39750+De+Portola+Rd,+Temecula,+CA+92592,+USA/@33.5422471,-117.0233084,16z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x80db79c1dcd9f19f:0x2a6b5d1fb1e3d527!2m2!1d-117.026276!2d33.5477843!1m5!1m1!1s0x80db79b5486a0f9b:0xad8e438fef19f3f9!2m2!1d-117.00977!2d33.5413023!3e2">36095
+                                                Monte De Oro Rd, Temecula, CA 92592</a></li>
+                                        <li><i class="fa fa-phone mr-2"></i>+1 951-506-1300</li>
+                                        <li>
+                                            <h5><i class="fa fa-location-arrow mr-2"></i> 3.8 miles, 7 minutes drive</h5>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <a href="http://lorenziestatewines.com/" target="_blank"><img
+                                        src="{{ asset('frontend/imgs/wineriesnear/46.jpg') }}"
+                                        class="site_wineries_thumb" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Leoness Cellars -->
+                    <div class="col-lg-6">
+                        <div class="site_wineries_media_list list-unstyled">
+                            <div class="media">
+                                <div class="media-body">
+                                    <h5 class="mt-0 mb-2">Leoness Cellars</h5>
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <div class="site_rating_start"> 4.6 <i class="text-warning fa fa-star"></i>
+                                                <i class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> (314) Google reviews </div>
+                                        </li>
+                                        <li>Sprawling estate vineyard featuring wine tasting &amp; tours, an alfresco
+                                            restaurant &amp; panoramic views.</li>
+                                        <li><i class="fa fa-globe mr-2"></i> <a href="http://www.leonesscellars.com/"
+                                                target="_blank">http://www.leonesscellars.com/</a></li>
+                                        <li><i class="fa fa-map-marker mr-2"></i> <a
+                                                href="https://www.google.com/maps/dir/39575+Camino+Del+Vino,+Temecula,+CA+92592,+USA/38311+De+Portola+Rd,+Temecula,+CA+92592,+USA/@33.5382898,-117.0308363,14z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x80db79c1dcd9f19f:0x2a6b5d1fb1e3d527!2m2!1d-117.026276!2d33.5477843!1m5!1m1!1s0x80db784309fab7cf:0xee636c7a7e45ba3d!2m2!1d-117.018887!2d33.5220671!3e0"
+                                                target="_blank">38311 De Portola Rd, Temecula, CA 92592, USA</a></li>
+                                        <li><i class="fa fa-phone mr-2"></i>+1 951-302-7601</li>
+                                        <li>
+                                            <h5><i class="fa fa-location-arrow mr-2"></i> 3.8 miles, 6 min. drive</h5>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <a href="http://www.leonesscellars.com/" target="_blank"><img
+                                        src="{{ asset('frontend/imgs/wineriesnear/6.jpg') }}"
+                                        class="site_wineries_thumb" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Dansa del Sol Winery -->
+                    <div class="col-lg-6">
+                        <div class="site_wineries_media_list list-unstyled">
+                            <div class="media">
+                                <div class="media-body">
+                                    <h5 class="mt-0 mb-2">Dansa del Sol Winery</h5>
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <div class="site_rating_start"> 4.8 <i class="text-warning fa fa-star"></i>
+                                                <i class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> (349) Google reviews </div>
+                                        </li>
+                                        <li><i class="fa fa-globe mr-2"></i> <a
+                                                href="https://www.danzadelsolwinery.com/"
+                                                target="_blank">https://www.danzadelsolwinery.com/</a></li>
+                                        <li><i class="fa fa-map-marker mr-2"></i> <a
+                                                href="https://www.google.com/maps/dir/39575+Camino+Del+Vino,+Temecula,+CA+92592,+USA/35055+Via+Del+Ponte,+Temecula,+CA+92592,+USA/@33.546034,-117.0458801,15z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x80db79c1dcd9f19f:0x2a6b5d1fb1e3d527!2m2!1d-117.026276!2d33.5477843!1m5!1m1!1s0x80db791b9ad81c4f:0x2d19a750a0e8954a!2m2!1d-117.047599!2d33.538642!3e2"
+                                                target="_blank">39050 De Portola Rd, Temecula, CA 92592</a></li>
+                                        <li><i class="fa fa-phone mr-2"></i>+1 951-302-6363</li>
+                                        <li>
+                                            <h5><i class="fa fa-location-arrow mr-2"></i> 4.5 miles, 7 minutes drive</h5>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <a href="https://www.danzadelsolwinery.com/" target="_blank"><img
+                                        src="{{ asset('frontend/imgs/wineriesnear/16.jpg') }}"
+                                        class="site_wineries_thumb" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Danza del Sol Winery -->
+                    <div class="col-lg-6">
+                        <div class="site_wineries_media_list list-unstyled">
+                            <div class="media">
+                                <div class="media-body">
+                                    <h5 class="mt-0 mb-2">Danza del Sol Winery</h5>
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <div class="site_rating_start"> 4.7 <i class="text-warning fa fa-star"></i>
+                                                <i class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i>(165) Google reviews</div>
+                                        </li>
+                                        <li><i class="fa fa-globe mr-2"></i> <a
+                                                href="https://www.danzadelsolwinery.com/"
+                                                target="_blank">https://www.danzadelsolwinery.com/</a></li>
+                                        <li><i class="fa fa-map-marker mr-2"></i> <a
+                                                href="https://www.google.com/maps/dir/39575+Camino+Del+Vino,+Temecula,+CA+92592,+USA/39750+De+Portola+Rd,+Temecula,+CA+92592,+USA/@33.5422471,-117.0233084,16z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x80db79c1dcd9f19f:0x2a6b5d1fb1e3d527!2m2!1d-117.026276!2d33.5477843!1m5!1m1!1s0x80db79b5486a0f9b:0xad8e438fef19f3f9!2m2!1d-117.00977!2d33.5413023!3e2">39050
+                                                De Portola Rd, Temecula, CA 92592, USA</a></li>
+                                        <li><i class="fa fa-phone mr-2"></i>+1 951-302-6363</li>
+                                        <li>
+                                            <h5><i class="fa fa-location-arrow mr-2"></i> 4.5 miles, 7 minutes drive</h5>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <a href="https://www.danzadelsolwinery.com/" target="_blank"><img
+                                        src="{{ asset('frontend/imgs/wineriesnear/15.jpg') }}"
+                                        class="site_wineries_thumb" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Doffo Winery -->
+                    <div class="col-lg-6">
+                        <div class="site_wineries_media_list list-unstyled">
+                            <div class="media">
+                                <div class="media-body">
+                                    <h5 class="mt-0 mb-2">Doffo Winery</h5>
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <div class="site_rating_start"> 4.6 <i class="text-warning fa fa-star"></i>
+                                                <i class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i>(159) Google reviews</div>
+                                        </li>
+                                        <li><i class="fa fa-globe mr-2"></i> <a href="https://www.doffowines.com/"
+                                                target="_blank">https://www.doffowines.com/</a></li>
+                                        <li><i class="fa fa-map-marker mr-2"></i> <a
+                                                href="https://www.google.com/maps/dir/39575+Camino+Del+Vino,+Temecula,+CA+92592,+USA/39750+De+Portola+Rd,+Temecula,+CA+92592,+USA/@33.5422471,-117.0233084,16z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x80db79c1dcd9f19f:0x2a6b5d1fb1e3d527!2m2!1d-117.026276!2d33.5477843!1m5!1m1!1s0x80db79b5486a0f9b:0xad8e438fef19f3f9!2m2!1d-117.00977!2d33.5413023!3e2">36083
+                                                Summitville St, Temecula, CA 92592, USA</a></li>
+                                        <li><i class="fa fa-phone mr-2"></i>+1 951-676-6989</li>
+                                        <li>
+                                            <h5><i class="fa fa-location-arrow mr-2"></i> 4.6 miles, 8 minutes drive</h5>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <a href="https://www.doffowines.com/" target="_blank"><img
+                                        src="{{ asset('frontend/imgs/wineriesnear/11.jpg') }}"
+                                        class="site_wineries_thumb" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Chapin Family Vineyards -->
+                    <div class="col-lg-6">
+                        <div class="site_wineries_media_list list-unstyled">
+                            <div class="media">
+                                <div class="media-body">
+                                    <h5 class="mt-0 mb-2">Chapin Family Vineyards</h5>
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <div class="site_rating_start"> 4.7 <i class="text-warning fa fa-star"></i>
+                                                <i class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i>(74) Google reviews</div>
+                                        </li>
+                                        <li><i class="fa fa-globe mr-2"></i> <a
+                                                href="https://www.chapinfamilyvineyards.com/"
+                                                target="_blank">https://www.chapinfamilyvineyards.com/</a></li>
+                                        <li><i class="fa fa-map-marker mr-2"></i> <a
+                                                href="https://www.google.com/maps/dir/39575+Camino+Del+Vino,+Temecula,+CA+92592,+USA/39750+De+Portola+Rd,+Temecula,+CA+92592,+USA/@33.5422471,-117.0233084,16z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x80db79c1dcd9f19f:0x2a6b5d1fb1e3d527!2m2!1d-117.026276!2d33.5477843!1m5!1m1!1s0x80db79b5486a0f9b:0xad8e438fef19f3f9!2m2!1d-117.00977!2d33.5413023!3e2">36084
+                                                Summitville St, Temecula, CA 92592, USA</a></li>
+                                        <li><i class="fa fa-phone mr-2"></i>+1 951-506-2935</li>
+                                        <li>
+                                            <h5><i class="fa fa-location-arrow mr-2"></i> 4.6 miles, 8 minutes drive</h5>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <a href="https://www.chapinfamilyvineyards.com/" target="_blank"><img
+                                        src="{{ asset('frontend/imgs/wineriesnear/36.jpg') }}"
+                                        class="site_wineries_thumb" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Vitagliano Winery -->
+                    <div class="col-lg-6">
+                        <div class="site_wineries_media_list list-unstyled">
+                            <div class="media">
+                                <div class="media-body">
+                                    <h5 class="mt-0 mb-2">Vitagliano Winery</h5>
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <div class="site_rating_start"> 4.5 <i class="text-warning fa fa-star"></i>
+                                                <i class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> (43) Google reviews </div>
+                                        </li>
+                                        <li><i class="fa fa-globe mr-2"></i> <a href="https://vitaglianowines.com/"
+                                                target="_blank">https://vitaglianowines.com/</a></li>
+                                        <li><i class="fa fa-map-marker mr-2"></i> <a
+                                                href="https://www.google.com/maps/dir/39575+Camino+Del+Vino,+Temecula,+CA+92592,+USA/39750+De+Portola+Rd,+Temecula,+CA+92592,+USA/@33.5422471,-117.0233084,16z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x80db79c1dcd9f19f:0x2a6b5d1fb1e3d527!2m2!1d-117.026276!2d33.5477843!1m5!1m1!1s0x80db79b5486a0f9b:0xad8e438fef19f3f9!2m2!1d-117.00977!2d33.5413023!3e2">36101
+                                                Glen Oaks Rd D, Temecula, CA 92592, USA</a></li>
+                                        <li><i class="fa fa-phone mr-2"></i>+1 951-265-9951</li>
+                                        <li>
+                                            <h5><i class="fa fa-location-arrow mr-2"></i> 4.8 miles, 8 minutes drive</h5>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <a href="https://vitaglianowines.com/" target="_blank"><img
+                                        src="{{ asset('frontend/imgs/wineriesnear/31.png') }}"
+                                        class="site_wineries_thumb" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Foot Path Winery -->
+                    <div class="col-lg-6">
+                        <div class="site_wineries_media_list list-unstyled">
+                            <div class="media">
+                                <div class="media-body">
+                                    <h5 class="mt-0 mb-2">Foot Path Winery</h5>
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <div class="site_rating_start"> 3.8 <i class="text-warning fa fa-star"></i>
+                                                <i class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> (16) Google reviews</div>
+                                        </li>
+                                        <li><i class="fa fa-globe mr-2"></i> <a href="https://www.footpathwinery.com/"
+                                                target="_blank">https://www.footpathwinery.com/</a></li>
+                                        <li><i class="fa fa-map-marker mr-2"></i> <a
+                                                href="https://www.google.com/maps/dir/39575+Camino+Del+Vino,+Temecula,+CA+92592,+USA/39750+De+Portola+Rd,+Temecula,+CA+92592,+USA/@33.5422471,-117.0233084,16z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x80db79c1dcd9f19f:0x2a6b5d1fb1e3d527!2m2!1d-117.026276!2d33.5477843!1m5!1m1!1s0x80db79b5486a0f9b:0xad8e438fef19f3f9!2m2!1d-117.00977!2d33.5413023!3e2">36650
+                                                Glen Oaks Rd, Temecula, CA 92592, USA</a></li>
+                                        <li><i class="fa fa-phone mr-2"></i>+1 951-265-9951</li>
+                                        <li>
+                                            <h5><i class="fa fa-location-arrow mr-2"></i> 4.8 miles, 8 minutes drive</h5>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <a href="https://www.footpathwinery.com/" target="_blank"><img
+                                        src="{{ asset('frontend/imgs/wineriesnear/35.jpg') }}"
+                                        class="site_wineries_thumb" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Frangipani Estate Winery (first listing) -->
+                    <div class="col-lg-6">
+                        <div class="site_wineries_media_list list-unstyled">
+                            <div class="media">
+                                <div class="media-body">
+                                    <h5 class="mt-0 mb-2">Frangipani Estate Winery</h5>
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <div class="site_rating_start"> 4.7 <i class="text-warning fa fa-star"></i>
+                                                <i class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> (107) Google reviews </div>
+                                        </li>
+                                        <li><i class="fa fa-globe mr-2"></i> <a href="http://frangipaniwinery.com/"
+                                                target="_blank">http://frangipaniwinery.com/</a></li>
+                                        <li><i class="fa fa-map-marker mr-2"></i> <a
+                                                href="https://www.google.com/maps/dir/39575+Camino+Del+Vino,+Temecula,+CA+92592,+USA/35960+Rancho+California+Rd,+Temecula,+CA+92591,+USA/@33.5502969,-117.0439833,15z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x80db79c1dcd9f19f:0x2a6b5d1fb1e3d527!2m2!1d-117.026276!2d33.5477843!1m5!1m1!1s0x80db7911dadd0271:0x4d15d4deb65f6d25!2m2!1d-117.044756!2d33.54718!3e2"
+                                                target="_blank">39750 De Portola Rd, Temecula, CA 92592</a></li>
+                                        <li><i class="fa fa-phone mr-2"></i>+1 951-699-8845</li>
+                                        <li>
+                                            <h5><i class="fa fa-location-arrow mr-2"></i> 5.4 miles, 9 minutes drive</h5>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <a href="http://frangipaniwinery.com/" target="_blank"><img
+                                        src="{{ asset('frontend/imgs/wineriesnear/9.jpg') }}"
+                                        class="site_wineries_thumb" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Cougar Vineyard and Winery (first listing) -->
+                    <div class="col-lg-6">
+                        <div class="site_wineries_media_list list-unstyled">
+                            <div class="media">
+                                <div class="media-body">
+                                    <h5 class="mt-0 mb-2">Cougar Vineyard and Winery</h5>
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <div class="site_rating_start"> 4.4 <i class="text-warning fa fa-star"></i>
+                                                <i class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> (218) Google reviews </div>
+                                        </li>
+                                        <li><i class="fa fa-globe mr-2"></i> <a href="https://cougarwinery.com/"
+                                                target="_blank">https://cougarwinery.com/</a></li>
+                                        <li><i class="fa fa-map-marker mr-2"></i> <a
+                                                href="https://www.google.com/maps/dir/39575+Camino+Del+Vino,+Temecula,+CA+92592,+USA/Ponte+Vineyard+Inn,+35001+Rancho+California+Rd,+Temecula,+CA+92591,+USA/@33.5441869,-117.0482554,15z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x80db79c1dcd9f19f:0x2a6b5d1fb1e3d527!2m2!1d-117.026276!2d33.5477843!1m5!1m1!1s0x80db791ece464191:0xf28eecbe564af385!2m2!1d-117.0512813!2d33.5355994!3e2"
+                                                target="_blank"> 39870 De Portola Rd, Temecula, CA 92592</a></li>
+                                        <li><i class="fa fa-phone mr-2"></i>+1 951-491-0825</li>
+                                        <li>
+                                            <h5><i class="fa fa-location-arrow mr-2"></i> 5.4 miles, 9 minutes drive</h5>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <a href="https://cougarwinery.com/" target="_blank"><img
+                                        src="{{ asset('frontend/imgs/wineriesnear/55.jpg') }}"
+                                        class="site_wineries_thumb" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Frangipani Estate Winery (second listing) -->
+                    <div class="col-lg-6">
+                        <div class="site_wineries_media_list list-unstyled">
+                            <div class="media">
+                                <div class="media-body">
+                                    <h5 class="mt-0 mb-2">Frangipani Estate Winery</h5>
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <div class="site_rating_start"> 4.4 <i class="text-warning fa fa-star"></i>
+                                                <i class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i>(50) Google reviews</div>
+                                        </li>
+                                        <li><i class="fa fa-globe mr-2"></i> <a href="http://frangipaniwinery.com/"
+                                                target="_blank">http://frangipaniwinery.com/</a></li>
+                                        <li><i class="fa fa-map-marker mr-2"></i> <a
+                                                href="https://www.google.com/maps/dir/39575+Camino+Del+Vino,+Temecula,+CA+92592,+USA/39750+De+Portola+Rd,+Temecula,+CA+92592,+USA/@33.5422471,-117.0233084,16z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x80db79c1dcd9f19f:0x2a6b5d1fb1e3d527!2m2!1d-117.026276!2d33.5477843!1m5!1m1!1s0x80db79b5486a0f9b:0xad8e438fef19f3f9!2m2!1d-117.00977!2d33.5413023!3e2">39750
+                                                De Portola Rd, Temecula, CA 92592, USA</a></li>
+                                        <li><i class="fa fa-phone mr-2"></i>+1 951-699-8845</li>
+                                        <li>
+                                            <h5><i class="fa fa-location-arrow mr-2"></i> 5.4 miles, 9 minutes drive</h5>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <a href="http://frangipaniwinery.com/" target="_blank"><img
+                                        src="{{ asset('frontend/imgs/wineriesnear/39.jpg') }}"
+                                        class="site_wineries_thumb" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Cougar Vineyard and Winery (second listing) -->
+                    <div class="col-lg-6">
+                        <div class="site_wineries_media_list list-unstyled">
+                            <div class="media">
+                                <div class="media-body">
+                                    <h5 class="mt-0 mb-2">Cougar Vineyard and Winery</h5>
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <div class="site_rating_start"> 4.5 <i class="text-warning fa fa-star"></i>
+                                                <i class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i>(91) Google reviews</div>
+                                        </li>
+                                        <li><i class="fa fa-globe mr-2"></i> <a href="https://www.cougarvineyards.com/"
+                                                target="_blank">https://www.cougarvineyards.com/</a></li>
+                                        <li><i class="fa fa-map-marker mr-2"></i> <a
+                                                href="https://www.google.com/maps/dir/39575+Camino+Del+Vino,+Temecula,+CA+92592,+USA/39870+De+Portola+Rd,+Temecula,+CA+92592,+USA/@33.5382898,-117.0308363,14z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x80db79c1dcd9f19f:0x2a6b5d1fb1e3d527!2m2!1d-117.026276!2d33.5477843!1m5!1m1!1s0x80db79b55b98a2b1:0x18ba875154a6158e!2m2!1d-117.0092937!2d33.5426151!3e0"
+                                                target="_blank"> 39870 De Portola Rd, Temecula, CA 92592, USA</a></li>
+                                        <li><i class="fa fa-phone mr-2"></i>+1 951-491-0825</li>
+                                        <li>
+                                            <h5><i class="fa fa-location-arrow mr-2"></i> 5.4 miles, 9 min. drive</h5>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <a href="https://www.cougarvineyards.com/" target="_blank"><img
+                                        src="{{ asset('frontend/imgs/wineriesnear/13.jpg') }}"
+                                        class="site_wineries_thumb" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Masia de la Vinya Winery (first listing) -->
+                    <div class="col-lg-6">
+                        <div class="site_wineries_media_list list-unstyled">
+                            <div class="media">
+                                <div class="media-body">
+                                    <h5 class="mt-0 mb-2">Masia de la Vinya Winery</h5>
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <div class="site_rating_start"> 4.6 <i class="text-warning fa fa-star"></i>
+                                                <i class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> (143) Google reviews </div>
+                                        </li>
+                                        <li><i class="fa fa-globe mr-2"></i> <a href="http://www.masiadelavinya.com/"
+                                                target="_blank">http://www.masiadelavinya.com/</a></li>
+                                        <li><i class="fa fa-map-marker mr-2"></i> <a
+                                                href="https://www.google.com/maps/dir/39575+Camino+Del+Vino,+Temecula,+CA+92592,+USA/40230+De+Portola+Rd,+Temecula,+CA+92592,+USA/@33.5464255,-117.0203759,15z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x80db79c1dcd9f19f:0x2a6b5d1fb1e3d527!2m2!1d-117.026276!2d33.5477843!1m5!1m1!1s0x80db79cb7de1e7e1:0x44576a9eafc89cf0!2m2!1d-117.002976!2d33.545514!3e0"
+                                                target="_blank">40230 De Portola Rd, Temecula, CA 92592</a></li>
+                                        <li><i class="fa fa-phone mr-2"></i>(951) 303-3860</li>
+                                        <li>
+                                            <h5><i class="fa fa-location-arrow mr-2"></i> 5.6 miles, 8 min. drive</h5>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <a href="http://www.masiadelavinya.com/" target="_blank"><img
+                                        src="{{ asset('frontend/imgs/wineriesnear/51.jpg') }}"
+                                        class="site_wineries_thumb" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Masia de la Vinya Winery (second listing) -->
+                    <div class="col-lg-6">
+                        <div class="site_wineries_media_list list-unstyled">
+                            <div class="media">
+                                <div class="media-body">
+                                    <h5 class="mt-0 mb-2">Masia de la Vinya Winery</h5>
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <div class="site_rating_start"> 4.8 <i class="text-warning fa fa-star"></i>
+                                                <i class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> (158) Google reviews </div>
+                                        </li>
+                                        <li><i class="fa fa-globe mr-2"></i> <a href="https://www.masiadelavinya.com/"
+                                                target="_blank">https://www.masiadelavinya.com/</a></li>
+                                        <li><i class="fa fa-map-marker mr-2"></i> <a
+                                                href="https://www.google.com/maps/dir/39575+Camino+Del+Vino,+Temecula,+CA+92592,+USA/35820+Rancho+California+Rd,+Temecula,+CA+92591,+USA/@33.5481617,-117.0403128,16z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x80db79c1dcd9f19f:0x2a6b5d1fb1e3d527!2m2!1d-117.026276!2d33.5477843!1m5!1m1!1s0x80db7910459bdb37:0x446cbe7d1ea668cc!2m2!1d-117.0461699!2d33.5453803!3e2"
+                                                target="_blank">40230 De Portola Rd, Temecula, CA 92592</a></li>
+                                        <li><i class="fa fa-phone mr-2"></i>+1 951-303-3860</li>
+                                        <li>
+                                            <h5><i class="fa fa-location-arrow mr-2"></i> 5.7 miles, 9 minutes drive</h5>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <a href="https://www.masiadelavinya.com/" target="_blank"><img
+                                        src="{{ asset('frontend/imgs/wineriesnear/38.jpg') }}"
+                                        class="site_wineries_thumb" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Windy Ridge Cellars -->
+                    <div class="col-lg-6">
+                        <div class="site_wineries_media_list list-unstyled">
+                            <div class="media">
+                                <div class="media-body">
+                                    <h5 class="mt-0 mb-2">Windy Ridge Cellars</h5>
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <div class="site_rating_start"> 5 <i class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> <i
+                                                    class="text-warning fa fa-star"></i> (1) Google reviews </div>
+                                        </li>
+                                        <li><i class="fa fa-globe mr-2"></i> <a href="https://windyridgecellars.com/"
+                                                target="_blank">https://windyridgecellars.com/</a></li>
+                                        <li><i class="fa fa-map-marker mr-2"></i> <a
+                                                href="https://www.google.com/maps/dir/39575+Camino+Del+Vino,+Temecula,+CA+92592,+USA/39750+De+Portola+Rd,+Temecula,+CA+92592,+USA/@33.5422471,-117.0233084,16z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x80db79c1dcd9f19f:0x2a6b5d1fb1e3d527!2m2!1d-117.026276!2d33.5477843!1m5!1m1!1s0x80db79b5486a0f9b:0xad8e438fef19f3f9!2m2!1d-117.00977!2d33.5413023!3e2">47200
+                                                De Portola Rd, Temecula, CA 92592</a></li>
+                                        <li><i class="fa fa-phone mr-2"></i>+1 951- 767-2116</li>
+                                        <li>
+                                            <h5><i class="fa fa-location-arrow mr-2"></i> 13.8 miles, 23 minutes drive
+                                            </h5>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <a href="https://windyridgecellars.com/" target="_blank"><img
+                                        src="{{ asset('frontend/imgs/wineriesnear/39.jpg') }}"
+                                        class="site_wineries_thumb" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!-- Wineries listing end -->
+
+        </div>
+    </section>
+
+@endsection
