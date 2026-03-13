@@ -23,6 +23,20 @@
 <title>@yield('title', 'Villa Fabulosa')</title>
 <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700" rel="stylesheet">
 
+<style>
+    /* Offset main content for fixed-top navbar so subheaders and sections
+       are not hidden underneath the header. Adjusted for desktop and mobile. */
+    body {
+        padding-top: 72px;
+    }
+
+    @media (max-width: 767.98px) {
+        body {
+            padding-top: 64px;
+        }
+    }
+</style>
+
 <!-- Bootstrap CSS -->
 <link rel="stylesheet" href="{{ asset('frontend/css/bootstrap.min.css') }}">
 <link rel="stylesheet" href="{{ asset('frontend/font-awesome/css/font-awesome.min.css') }}">
