@@ -25,6 +25,14 @@
             }
         }
 
+        /* On small screens, show one image per row */
+        @media (max-width: 575.98px) {
+            .gallery-grid .gallery-grid-item {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+        }
+
         .gallery-video-wrapper {
             position: relative;
         }

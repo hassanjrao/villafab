@@ -35,6 +35,80 @@
             padding-top: 64px;
         }
     }
+
+    /* Shared gallery lightbox styles (used on home + all gallery pages) */
+    #gallery-lightbox {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.92);
+        z-index: 1050;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #gallery-lightbox.active {
+        display: flex;
+    }
+
+    #gallery-lightbox img {
+        max-width: 90vw;
+        max-height: 90vh;
+        object-fit: contain;
+        border-radius: 4px;
+    }
+
+    #gallery-lightbox .glb-close,
+    #gallery-lightbox .glb-prev,
+    #gallery-lightbox .glb-next {
+        position: fixed;
+        background: rgba(255, 255, 255, 0.15);
+        border: none;
+        color: #fff;
+        cursor: pointer;
+        z-index: 1051;
+        transition: background 0.2s;
+        font-size: 2rem;
+    }
+
+    /* Close button (top-right) */
+    #gallery-lightbox .glb-close {
+        top: 20px;
+        right: 24px;
+        padding: 4px 10px;
+    }
+
+    /* Arrows (centered left/right) */
+    #gallery-lightbox .glb-prev,
+    #gallery-lightbox .glb-next {
+        top: 50%;
+        transform: translateY(-50%);
+        padding: 10px 16px;
+    }
+
+    #gallery-lightbox .glb-prev {
+        left: 16px;
+    }
+
+    #gallery-lightbox .glb-next {
+        right: 16px;
+    }
+
+    #gallery-lightbox .glb-prev:hover,
+    #gallery-lightbox .glb-next:hover,
+    #gallery-lightbox .glb-close:hover {
+        background: rgba(255, 255, 255, 0.3);
+    }
+
+    /* Counter at bottom center */
+    #gallery-lightbox .glb-counter {
+        position: fixed;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        color: rgba(255, 255, 255, 0.8);
+        font-size: 0.9rem;
+    }
 </style>
 
 <!-- Bootstrap CSS -->
