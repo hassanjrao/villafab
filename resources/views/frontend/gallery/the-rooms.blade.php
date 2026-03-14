@@ -37,6 +37,78 @@
             width: 80px;
             height: auto;
         }
+
+        /* Lightbox for gallery images */
+        #gallery-lightbox {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.92);
+            z-index: 1050;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #gallery-lightbox.active {
+            display: flex;
+        }
+
+        #gallery-lightbox img {
+            max-width: 90vw;
+            max-height: 90vh;
+            object-fit: contain;
+            border-radius: 4px;
+        }
+
+        #gallery-lightbox .glb-close,
+        #gallery-lightbox .glb-prev,
+        #gallery-lightbox .glb-next {
+            position: fixed;
+            background: rgba(255, 255, 255, 0.15);
+            border: none;
+            color: #fff;
+            cursor: pointer;
+            z-index: 1051;
+            transition: background 0.2s;
+        }
+
+        #gallery-lightbox .glb-close {
+            top: 20px;
+            right: 24px;
+            font-size: 2rem;
+            padding: 4px 10px;
+        }
+
+        #gallery-lightbox .glb-prev,
+        #gallery-lightbox .glb-next {
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 2rem;
+            padding: 10px 16px;
+        }
+
+        #gallery-lightbox .glb-prev {
+            left: 16px;
+        }
+
+        #gallery-lightbox .glb-next {
+            right: 16px;
+        }
+
+        #gallery-lightbox .glb-prev:hover,
+        #gallery-lightbox .glb-next:hover,
+        #gallery-lightbox .glb-close:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        #gallery-lightbox .glb-counter {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.9rem;
+        }
     </style>
 @endsection
 
@@ -369,4 +441,75 @@
         </div>
     </section>
 
+    {{-- Gallery lightbox overlay --}}
+    <div id="gallery-lightbox">
+        <button class="glb-close" type="button" aria-label="Close">&times;</button>
+        <button class="glb-prev" type="button" aria-label="Previous"><i class="fa fa-angle-left"></i></button>
+        <img id="glb-img" src="" alt="">
+        <button class="glb-next" type="button" aria-label="Next"><i class="fa fa-angle-right"></i></button>
+        <div class="glb-counter" id="glb-counter"></div>
+    </div>
+
+@endsection
+
+@section('scripts_extra')
+    <script>
+        (function() {
+            var lightbox = document.getElementById('gallery-lightbox');
+            if (!lightbox) return;
+
+            var imgEl = document.getElementById('glb-img');
+            var counterEl = document.getElementById('glb-counter');
+            var images = Array.prototype.slice.call(document.querySelectorAll('.gallery-grid-image'));
+            if (!images.length) return;
+
+            var currentIndex = 0;
+
+            function openAt(index) {
+                currentIndex = index;
+                imgEl.src = images[index].src;
+                counterEl.textContent = (index + 1) + ' / ' + images.length;
+                lightbox.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+
+            function closeLb() {
+                lightbox.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+
+            function navigate(delta) {
+                currentIndex = (currentIndex + delta + images.length) % images.length;
+                imgEl.src = images[currentIndex].src;
+                counterEl.textContent = (currentIndex + 1) + ' / ' + images.length;
+            }
+
+            images.forEach(function(img, idx) {
+                img.style.cursor = 'pointer';
+                img.addEventListener('click', function(e) {
+                    // Skip images that are inside a video link
+                    if (img.closest('.gallery-video-wrapper')) return;
+                    e.preventDefault();
+                    openAt(idx);
+                });
+            });
+
+            lightbox.querySelector('.glb-close').addEventListener('click', closeLb);
+            lightbox.querySelector('.glb-prev').addEventListener('click', function() { navigate(-1); });
+            lightbox.querySelector('.glb-next').addEventListener('click', function() { navigate(1); });
+
+            lightbox.addEventListener('click', function(e) {
+                if (e.target === lightbox) {
+                    closeLb();
+                }
+            });
+
+            document.addEventListener('keydown', function(e) {
+                if (!lightbox.classList.contains('active')) return;
+                if (e.key === 'Escape') closeLb();
+                if (e.key === 'ArrowLeft') navigate(-1);
+                if (e.key === 'ArrowRight') navigate(1);
+            });
+        })();
+    </script>
 @endsection
