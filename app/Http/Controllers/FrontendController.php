@@ -29,9 +29,13 @@ class FrontendController extends Controller
         return view('frontend.your-hosts');
     }
 
-    public function bookNow()
+    public function bookNow(Request $request)
     {
-        return view('frontend.book-now');
+        return view('frontend.book-now', [
+            'checkin'  => $request->query('checkin', ''),
+            'checkout' => $request->query('checkout', ''),
+            'guests'   => max(1, (int) $request->query('guests', 1)),
+        ]);
     }
 
     public function kitchen()

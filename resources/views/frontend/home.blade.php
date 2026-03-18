@@ -1122,7 +1122,7 @@
                             </div>
                         </div>
 
-                        <form action="{{ route('book-now') }}" method="GET" id="bookingPreviewForm">
+                        <div id="bookingPreviewForm">
 
                             {{-- Date row --}}
                             <div class="booking-date-row">
@@ -1194,35 +1194,22 @@
                                 </div>
                             </div>
 
-                            {{-- Guarantee box --}}
-                            <div style="border:1.5px solid #333;border-radius:8px;padding:12px 14px;margin-bottom:10px;">
-                                <div style="font-size:0.95rem;font-weight:700;margin-bottom:6px;">Villa Fabulosa Guarantee</div>
-                                <div style="font-size:0.8rem;color:#444;line-height:1.7;">
-                                    Lowest price by booking directly<br>
-                                    24 hour free cancellation after booking<br>
-                                    24/7 support throughout your stay
-                                </div>
-                            </div>
+                            {{-- Book Now button --}}
+                            <a id="booking-book-now-btn" href="#" class="booking-reserve-btn"
+                               style="display:block;text-align:center;text-decoration:none;">
+                                Book Now
+                            </a>
 
-                            {{-- Terms agreement box --}}
-                            <div style="border:1px solid #ccc;border-radius:8px;padding:10px 14px;margin-bottom:12px;font-size:0.78rem;color:#555;line-height:1.6;">
-                                By clicking the button below, I agree to Villa Fabulosa's
-                                <a href="{{ route('book-now') }}" style="color:#1da3dd;">terms &amp; conditions</a>
-                                and cancellation policy.&nbsp;
-                                <a href="{{ route('contact') }}" style="color:#1da3dd;">Contact us</a>
-                                if you have any questions!
-                            </div>
-
-                            {{-- Reserve button --}}
-                            <button type="submit" class="booking-reserve-btn">
-                                Agree and continue
-                            </button>
+                            <p id="booking-no-dates-msg" style="display:none;color:#e74c3c;
+                               font-size:0.82rem;text-align:center;margin-top:6px;">
+                                Please select check-in and check-out dates first.
+                            </p>
 
                             <p class="booking-no-charge-note">You won't be charged yet</p>
 
                             <a href="#" class="booking-clear-dates" id="booking-clear-dates">Clear dates</a>
 
-                        </form>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1520,11 +1507,30 @@
                 document.getElementById('booking-price-breakdown').style.display = 'block';
             }
 
+            function updateBookNowBtn(checkin, checkout, guests) {
+                var btn     = document.getElementById('booking-book-now-btn');
+                var noMsg   = document.getElementById('booking-no-dates-msg');
+                if (checkin && checkout) {
+                    var url = '{{ route("book-now") }}?checkin=' + checkin +
+                              '&checkout=' + checkout + '&guests=' + guests;
+                    btn.href = url;
+                    btn.onclick = null;
+                    if (noMsg) { noMsg.style.display = 'none'; }
+                } else {
+                    btn.href = '#';
+                    btn.onclick = function (e) {
+                        e.preventDefault();
+                        if (noMsg) { noMsg.style.display = 'block'; }
+                    };
+                }
+            }
+
             function hideAll() {
                 document.getElementById('booking-minstay-error').style.display  = 'none';
                 document.getElementById('booking-price-breakdown').style.display = 'none';
                 document.getElementById('booking-nights-bar').style.display      = 'none';
                 document.getElementById('booking-quote-loading').style.display   = 'none';
+                updateBookNowBtn('', '', 1);
             }
 
             function showLoading() {
@@ -1551,6 +1557,7 @@
                     .then(function (q) {
                         hideLoading();
                         if (!q.valid) {
+                            updateBookNowBtn('', '', guests);
                             if (q.min_stay) {
                                 showError(
                                     'Minimum stay for a ' + q.checkin_day + ' check-in is ' +
@@ -1566,6 +1573,7 @@
                             document.getElementById('booking-nights-bar').style.display = 'flex';
 
                             showBreakdown(q);
+                            updateBookNowBtn(checkin, checkout, guests);
                         }
                     })
                     .catch(function () {
@@ -1631,6 +1639,9 @@
 
             /* ── Guests change → re-fetch quote ───────────────────────── */
             document.getElementById('guests').addEventListener('change', debouncedFetch);
+
+            /* ── Initialise Book Now button as disabled ────────────────── */
+            updateBookNowBtn('', '', 1);
 
             /* ── Clear dates ──────────────────────────────────────────── */
             document.getElementById('booking-clear-dates').addEventListener('click', function (e) {
