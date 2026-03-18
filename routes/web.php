@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AdminDashboardController;
+use App\Http\Controllers\AdminPricingController;
 use App\Http\Controllers\AvailabilityController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FrontendController;
@@ -29,6 +30,9 @@ Route::post('/contact', [FrontendController::class, 'contact'])->name('contact')
 
 // Availability calendar
 Route::get('/api/booked-dates', [AvailabilityController::class, 'bookedDates'])->name('api.booked-dates');
+
+// Price quote API
+Route::get('/api/price-quote', [AvailabilityController::class, 'priceQuote'])->name('api.price-quote');
 
 // Gallery sub-pages
 Route::get('/the-rooms', [FrontendController::class, 'theRooms'])->name('the-rooms');
@@ -93,5 +97,8 @@ Auth::routes([
 Route::prefix('admin')->name('admin.')->middleware(['auth'])->group(function () {
 
     Route::get('', [AdminDashboardController::class, 'index'])->name('dashboard.index');
+
+    Route::get('pricing',  [AdminPricingController::class, 'index'])->name('pricing.index');
+    Route::post('pricing', [AdminPricingController::class, 'update'])->name('pricing.update');
 
 });

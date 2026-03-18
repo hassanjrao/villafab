@@ -496,46 +496,232 @@
             color: #fff;
         }
 
-        /* ── Litepicker overrides ── */
+        /* ── Booking widget card ── */
+        .booking-widget-card {
+            border-radius: 14px;
+            border: 1px solid #e0e0e0;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+            background: #fff;
+            padding: 22px 20px 18px;
+        }
+
+        .booking-widget-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 16px;
+        }
+
+        .booking-widget-title {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: #222;
+            line-height: 1.2;
+        }
+
+        .booking-widget-subtitle {
+            font-size: 0.8rem;
+            color: #888;
+            margin-top: 2px;
+        }
+
+        .booking-widget-rating {
+            font-size: 0.82rem;
+            color: #444;
+            display: flex;
+            align-items: center;
+            gap: 3px;
+        }
+
+        /* Date row - Airbnb segmented style */
+        .booking-date-row {
+            display: flex;
+            border: 1.5px solid #b0b0b0;
+            border-radius: 10px 10px 0 0;
+            overflow: hidden;
+            cursor: pointer;
+            transition: border-color 0.2s;
+        }
+
+        .booking-date-row:hover {
+            border-color: #1da3dd;
+        }
+
+        .booking-date-cell {
+            flex: 1;
+            padding: 10px 14px 8px;
+            position: relative;
+            transition: background 0.15s;
+        }
+
+        .booking-date-cell:hover {
+            background: #f0f8ff;
+        }
+
+        .booking-date-cell + .booking-date-cell {
+            border-left: 1.5px solid #b0b0b0;
+        }
+
+        .booking-field-label {
+            font-size: 0.62rem;
+            font-weight: 800;
+            letter-spacing: 0.09em;
+            text-transform: uppercase;
+            color: #333;
+            display: block;
+            margin-bottom: 3px;
+        }
+
+        .booking-date-input {
+            border: none !important;
+            padding: 0 !important;
+            margin: 0 !important;
+            font-size: 0.92rem;
+            color: #222;
+            background: transparent !important;
+            font-weight: 500;
+            box-shadow: none !important;
+            cursor: pointer;
+            width: 100%;
+            height: auto !important;
+            line-height: 1.3;
+        }
+
+        .booking-date-input::placeholder {
+            color: #aaa;
+            font-weight: 400;
+        }
+
+        /* Guests box */
+        .booking-guests-box {
+            border: 1.5px solid #b0b0b0;
+            border-top: none;
+            border-radius: 0 0 10px 10px;
+            padding: 10px 14px 8px;
+            margin-bottom: 14px;
+            cursor: pointer;
+            transition: border-color 0.2s;
+        }
+
+        .booking-guests-box:hover {
+            border-color: #1da3dd;
+        }
+
+        .booking-guests-select {
+            border: none !important;
+            padding: 0 !important;
+            margin: 0 !important;
+            font-size: 0.92rem;
+            color: #222;
+            background: transparent !important;
+            font-weight: 500;
+            box-shadow: none !important;
+            width: 100%;
+            height: auto !important;
+            cursor: pointer;
+            outline: none;
+        }
+
+        /* Nights counter bar */
+        .booking-nights-bar {
+            background: #f0f9ff;
+            border: 1px solid #bee3f8;
+            border-radius: 8px;
+            padding: 7px 14px;
+            font-size: 0.85rem;
+            color: #1a7aad;
+            font-weight: 500;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        /* Reserve button */
+        .booking-reserve-btn {
+            display: block;
+            width: 100%;
+            background: linear-gradient(135deg, #1da3dd 0%, #1485b8 100%);
+            color: #fff !important;
+            border: none;
+            border-radius: 9px;
+            padding: 13px;
+            font-size: 1rem;
+            font-weight: 700;
+            letter-spacing: 0.03em;
+            text-align: center;
+            cursor: pointer;
+            transition: opacity 0.18s, transform 0.12s;
+            margin-bottom: 8px;
+            text-decoration: none;
+        }
+
+        .booking-reserve-btn:hover {
+            opacity: 0.9;
+            transform: translateY(-1px);
+            color: #fff !important;
+        }
+
+        .booking-no-charge-note {
+            text-align: center;
+            font-size: 0.76rem;
+            color: #888;
+            margin-bottom: 6px;
+        }
+
+        .booking-clear-dates {
+            display: block;
+            text-align: center;
+            font-size: 0.76rem;
+            color: #aaa;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        .booking-clear-dates:hover {
+            color: #e74c3c;
+        }
+
+        @keyframes bk-spin {
+            to { transform: rotate(360deg); }
+        }
+
+        /* ── Litepicker theme overrides ── */
         .litepicker .container__days .day-item.is-locked {
             text-decoration: line-through;
-            color: #bbb;
+            color: #ccc;
             pointer-events: none;
         }
 
         .litepicker .container__days .day-item.is-start-date,
         .litepicker .container__days .day-item.is-end-date {
-            background-color: #1da3dd;
-            color: #fff;
+            background-color: #1da3dd !important;
+            color: #fff !important;
+            border-radius: 50%;
         }
 
         .litepicker .container__days .day-item.is-in-range {
-            background-color: rgba(29,163,221,0.12);
-            color: #1da3dd;
+            background-color: rgba(29,163,221,0.13) !important;
+            color: #1a7aad;
         }
 
-        .litepicker .month-item-header .button-next-month,
-        .litepicker .month-item-header .button-previous-month {
-            color: #1da3dd;
+        .litepicker .container__days .day-item.is-start-date:hover,
+        .litepicker .container__days .day-item.is-end-date:hover {
+            background-color: #1690c4 !important;
         }
 
-        #checkin_date, #checkout_date {
-            background-color: #fff !important;
-            cursor: pointer;
+        .litepicker .month-item-header .button-next-month svg,
+        .litepicker .month-item-header .button-previous-month svg {
+            fill: #1da3dd;
         }
 
-        .booking-clear-dates {
-            font-size: 0.78rem;
-            color: #888;
-            cursor: pointer;
-            text-align: right;
-            display: block;
-            margin-top: -6px;
-            margin-bottom: 6px;
+        .litepicker .container__tooltip {
+            background: #1da3dd;
+            color: #fff;
         }
 
-        .booking-clear-dates:hover {
-            color: #e74c3c;
+        .litepicker .container__tooltip::before {
+            border-top-color: #1da3dd;
         }
     </style>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/litepicker/dist/css/litepicker.css">
@@ -921,49 +1107,122 @@
                         </div>
                     </div>
 
-                    <div class="card shadow-sm">
-                        <div class="card-body">
-                            <form action="{{ route('book-now') }}" method="GET" id="bookingPreviewForm">
-                                <div class="form-row">
-                                    <div class="form-group col-6">
-                                        <label class="small text-muted mb-1" for="checkin_date">Check-in</label>
-                                        <input
-                                            type="text"
-                                            id="checkin_date"
-                                            name="checkin_date"
-                                            class="form-control"
-                                            placeholder="Add date"
-                                            readonly
-                                        >
-                                    </div>
-                                    <div class="form-group col-6">
-                                        <label class="small text-muted mb-1" for="checkout_date">Check-out</label>
-                                        <input
-                                            type="text"
-                                            id="checkout_date"
-                                            name="checkout_date"
-                                            class="form-control"
-                                            placeholder="Add date"
-                                            readonly
-                                        >
-                                    </div>
-                                </div>
-                                <a href="#" class="booking-clear-dates" id="booking-clear-dates">Clear dates</a>
-                                <div class="form-group">
-                                    <label class="small text-muted mb-1" for="guests">Guests</label>
-                                    <select id="guests" name="guests" class="form-control">
-                                        @for($i = 1; $i <= 24; $i++)
-                                            <option value="{{ $i }}">{{ $i }} guest{{ $i > 1 ? 's' : '' }}</option>
-                                        @endfor
-                                    </select>
-                                </div>
-                                <button type="submit"
-                                        class="btn btn-primary btn-block"
-                                        style="font-weight:600;">
-                                    Reserve
-                                </button>
-                            </form>
+                    <div class="booking-widget-card">
+
+                        {{-- Header --}}
+                        <div class="booking-widget-header">
+                            <div>
+                                <div class="booking-widget-title">Book Your Stay</div>
+                                <div class="booking-widget-subtitle">Select dates to check availability</div>
+                            </div>
+                            <div class="booking-widget-rating">
+                                <i class="fa fa-star" style="color:#f5a623;font-size:0.78rem;"></i>
+                                <strong>5.0</strong>
+                                <span class="text-muted">&nbsp;· 31 reviews</span>
+                            </div>
                         </div>
+
+                        <form action="{{ route('book-now') }}" method="GET" id="bookingPreviewForm">
+
+                            {{-- Date row --}}
+                            <div class="booking-date-row">
+                                <div class="booking-date-cell">
+                                    <span class="booking-field-label">Check-in</span>
+                                    <input type="text"
+                                           id="checkin_date"
+                                           name="checkin_date"
+                                           class="booking-date-input"
+                                           placeholder="Add date"
+                                           readonly>
+                                </div>
+                                <div class="booking-date-cell">
+                                    <span class="booking-field-label">Check-out</span>
+                                    <input type="text"
+                                           id="checkout_date"
+                                           name="checkout_date"
+                                           class="booking-date-input"
+                                           placeholder="Add date"
+                                           readonly>
+                                </div>
+                            </div>
+
+                            {{-- Guests row (continues the segmented border) --}}
+                            <div class="booking-guests-box">
+                                <span class="booking-field-label">Guests</span>
+                                <select id="guests" name="guests" class="booking-guests-select">
+                                    @for($i = 1; $i <= 24; $i++)
+                                        <option value="{{ $i }}">{{ $i }} guest{{ $i > 1 ? 's' : '' }}</option>
+                                    @endfor
+                                </select>
+                            </div>
+
+                            {{-- Nights counter (shown when both dates are picked) --}}
+                            <div class="booking-nights-bar" id="booking-nights-bar" style="display:none;">
+                                <i class="fa fa-moon-o"></i>
+                                <span id="booking-nights-text"></span>
+                            </div>
+
+                            {{-- Loading indicator --}}
+                            <div id="booking-quote-loading" style="display:none;
+                                 text-align:center;padding:12px 0;margin-bottom:12px;
+                                 color:#1da3dd;font-size:0.88rem;">
+                                <span style="display:inline-block;width:16px;height:16px;
+                                             border:2px solid #c8e8f4;border-top-color:#1da3dd;
+                                             border-radius:50%;animation:bk-spin .7s linear infinite;
+                                             vertical-align:middle;margin-right:6px;"></span>
+                                Calculating price&hellip;
+                            </div>
+
+                            {{-- Min-stay error --}}
+                            <div id="booking-minstay-error" style="display:none;
+                                 background:#fff3cd;border:1px solid #ffc107;border-radius:8px;
+                                 padding:10px 14px;margin-bottom:12px;font-size:0.85rem;color:#856404;">
+                                <i class="fa fa-exclamation-triangle me-1"></i>
+                                <span id="booking-minstay-text"></span>
+                            </div>
+
+                            {{-- Price breakdown (shown when quote is valid) --}}
+                            <div id="booking-price-breakdown" style="display:none;
+                                 background:#f8fffe;border:1px solid #c8e8f4;border-radius:10px;
+                                 padding:14px 16px;margin-bottom:14px;font-size:0.88rem;">
+                                <div id="breakdown-rows"></div>
+                                <div style="border-top:1px solid #c8e8f4;margin-top:10px;padding-top:10px;
+                                            display:flex;justify-content:space-between;align-items:center;">
+                                    <strong style="font-size:1rem;">Total</strong>
+                                    <strong id="breakdown-total"
+                                            style="font-size:1.15rem;color:#1da3dd;"></strong>
+                                </div>
+                            </div>
+
+                            {{-- Guarantee box --}}
+                            <div style="border:1.5px solid #333;border-radius:8px;padding:12px 14px;margin-bottom:10px;">
+                                <div style="font-size:0.95rem;font-weight:700;margin-bottom:6px;">Villa Fabulosa Guarantee</div>
+                                <div style="font-size:0.8rem;color:#444;line-height:1.7;">
+                                    Lowest price by booking directly<br>
+                                    24 hour free cancellation after booking<br>
+                                    24/7 support throughout your stay
+                                </div>
+                            </div>
+
+                            {{-- Terms agreement box --}}
+                            <div style="border:1px solid #ccc;border-radius:8px;padding:10px 14px;margin-bottom:12px;font-size:0.78rem;color:#555;line-height:1.6;">
+                                By clicking the button below, I agree to Villa Fabulosa's
+                                <a href="{{ route('book-now') }}" style="color:#1da3dd;">terms &amp; conditions</a>
+                                and cancellation policy.&nbsp;
+                                <a href="{{ route('contact') }}" style="color:#1da3dd;">Contact us</a>
+                                if you have any questions!
+                            </div>
+
+                            {{-- Reserve button --}}
+                            <button type="submit" class="booking-reserve-btn">
+                                Agree and continue
+                            </button>
+
+                            <p class="booking-no-charge-note">You won't be charged yet</p>
+
+                            <a href="#" class="booking-clear-dates" id="booking-clear-dates">Clear dates</a>
+
+                        </form>
                     </div>
                 </div>
             </div>
@@ -1201,34 +1460,164 @@
     <script src="https://cdn.jsdelivr.net/npm/litepicker/dist/litepicker.js"></script>
     <script>
         (function () {
-            var picker = null;
+            var picker      = null;
+            var quoteTimer  = null;
 
+            /* ── Helpers ──────────────────────────────────────────────── */
+            function fmt(n) {
+                return '$' + parseFloat(n).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+            }
+
+            /* Parse "MMM D, YYYY" (Litepicker display format) → "YYYY-MM-DD"
+               without relying on new Date() which misparses non-ISO strings. */
+            function parseDisplayDate(val) {
+                if (!val) { return ''; }
+                var months = {Jan:'01',Feb:'02',Mar:'03',Apr:'04',May:'05',Jun:'06',
+                              Jul:'07',Aug:'08',Sep:'09',Oct:'10',Nov:'11',Dec:'12'};
+                var m = val.match(/^([A-Za-z]{3})\s+(\d{1,2}),\s*(\d{4})$/);
+                if (!m) { return ''; }
+                var mm = months[m[1]];
+                if (!mm) { return ''; }
+                var dd = m[2].length === 1 ? '0' + m[2] : m[2];
+                return m[3] + '-' + mm + '-' + dd;
+            }
+
+            function showError(msg) {
+                document.getElementById('booking-minstay-text').textContent = msg;
+                document.getElementById('booking-minstay-error').style.display = 'block';
+                document.getElementById('booking-price-breakdown').style.display = 'none';
+            }
+
+            function showBreakdown(q) {
+                document.getElementById('booking-minstay-error').style.display = 'none';
+
+                var rows = '';
+
+                /* Base nightly cost */
+                if (q.base_total > 0) {
+                    rows += '<div style="display:flex;justify-content:space-between;margin-bottom:5px;">' +
+                        '<span>Nightly rates × ' + q.nights + ' night' + (q.nights !== 1 ? 's' : '') + '</span>' +
+                        '<span>' + fmt(q.base_total) + '</span></div>';
+                }
+
+                /* Extra guest fee */
+                if (q.extra_guest_fee > 0) {
+                    rows += '<div style="display:flex;justify-content:space-between;margin-bottom:5px;">' +
+                        '<span>Extra guests (' + q.extra_guests + ' × ' + q.nights + ' nights)</span>' +
+                        '<span>' + fmt(q.extra_guest_fee) + '</span></div>';
+                }
+
+                /* Cleaning fee */
+                rows += '<div style="display:flex;justify-content:space-between;margin-bottom:5px;">' +
+                    '<span>Cleaning fee</span><span>' + fmt(q.cleaning_fee) + '</span></div>';
+
+                /* Tax */
+                rows += '<div style="display:flex;justify-content:space-between;margin-bottom:0;">' +
+                    '<span>Taxes (' + q.tax_rate + '%)</span><span>' + fmt(q.tax_amount) + '</span></div>';
+
+                document.getElementById('breakdown-rows').innerHTML = rows;
+                document.getElementById('breakdown-total').textContent = fmt(q.total);
+                document.getElementById('booking-price-breakdown').style.display = 'block';
+            }
+
+            function hideAll() {
+                document.getElementById('booking-minstay-error').style.display  = 'none';
+                document.getElementById('booking-price-breakdown').style.display = 'none';
+                document.getElementById('booking-nights-bar').style.display      = 'none';
+                document.getElementById('booking-quote-loading').style.display   = 'none';
+            }
+
+            function showLoading() {
+                document.getElementById('booking-minstay-error').style.display  = 'none';
+                document.getElementById('booking-price-breakdown').style.display = 'none';
+                document.getElementById('booking-quote-loading').style.display   = 'block';
+            }
+
+            function hideLoading() {
+                document.getElementById('booking-quote-loading').style.display = 'none';
+            }
+
+            function fetchQuote() {
+                var checkin  = parseDisplayDate(document.getElementById('checkin_date').value);
+                var checkout = parseDisplayDate(document.getElementById('checkout_date').value);
+                var guests   = document.getElementById('guests').value;
+
+                if (!checkin || !checkout) { return; }
+
+                showLoading();
+
+                fetch('{{ route("api.price-quote") }}?checkin=' + checkin + '&checkout=' + checkout + '&guests=' + guests)
+                    .then(function (r) { return r.json(); })
+                    .then(function (q) {
+                        hideLoading();
+                        if (!q.valid) {
+                            if (q.min_stay) {
+                                showError(
+                                    'Minimum stay for a ' + q.checkin_day + ' check-in is ' +
+                                    q.min_stay + ' night' + (q.min_stay !== 1 ? 's' : '') + '.'
+                                );
+                            } else {
+                                showError(q.error || 'Invalid dates selected.');
+                            }
+                        } else {
+                            /* Update nights bar */
+                            document.getElementById('booking-nights-text').textContent =
+                                q.nights + ' night' + (q.nights !== 1 ? 's' : '') + ' selected';
+                            document.getElementById('booking-nights-bar').style.display = 'flex';
+
+                            showBreakdown(q);
+                        }
+                    })
+                    .catch(function () {
+                        hideLoading();
+                    });
+            }
+
+            function debouncedFetch() {
+                clearTimeout(quoteTimer);
+                quoteTimer = setTimeout(fetchQuote, 60);
+            }
+
+            /* ── Litepicker init ──────────────────────────────────────── */
             function initPicker(lockDays) {
                 picker = new Litepicker({
-                    element:       document.getElementById('checkin_date'),
-                    elementEnd:    document.getElementById('checkout_date'),
-                    singleMode:    false,
+                    element:        document.getElementById('checkin_date'),
+                    elementEnd:     document.getElementById('checkout_date'),
+                    singleMode:     false,
                     numberOfMonths: 2,
                     numberOfColumns: 2,
-                    minDate:       new Date(),
-                    format:        'MMM D, YYYY',
-                    lockDays:      lockDays,
+                    minDate:        new Date(),
+                    format:         'MMM D, YYYY',
+                    lockDays:       lockDays,
                     lockDaysFormat: 'YYYY-MM-DD',
                     disallowLockDaysInRange: true,
-                    tooltipText:   { one: 'night', other: 'nights' },
-                    showTooltip:   true,
-                    autoApply:     true,
-                    resetButton:   false,
+                    tooltipText:    { one: 'night', other: 'nights' },
+                    showTooltip:    true,
+                    autoApply:      true,
+                    resetButton:    false,
+                });
+
+                /* 'selected' is Litepicker's EventEmitter event — fires after both
+                   input values have been written, unlike the onSelect option which
+                   does not fire reliably in range mode. */
+                picker.on('selected', function (date1, date2) {
+                    if (date1 && date2) {
+                        debouncedFetch();
+                    }
+                });
+
+                /* Clear breakdown when selection is cleared */
+                picker.on('clear:selection', function () {
+                    hideAll();
                 });
             }
 
-            /* Fetch booked date ranges and expand them into individual locked dates */
+            /* ── Fetch booked dates → init picker ─────────────────────── */
             fetch('{{ route("api.booked-dates") }}')
                 .then(function (r) { return r.json(); })
                 .then(function (events) {
                     var lockDays = [];
                     events.forEach(function (e) {
-                        /* API end is exclusive (iCal DTEND), so stop before it */
                         var cur = new Date(e.start + 'T12:00:00');
                         var end = new Date(e.end   + 'T12:00:00');
                         while (cur < end) {
@@ -1238,17 +1627,18 @@
                     });
                     initPicker(lockDays);
                 })
-                .catch(function () {
-                    /* Fall back to picker with no locked dates */
-                    initPicker([]);
-                });
+                .catch(function () { initPicker([]); });
 
-            /* Clear dates link */
+            /* ── Guests change → re-fetch quote ───────────────────────── */
+            document.getElementById('guests').addEventListener('change', debouncedFetch);
+
+            /* ── Clear dates ──────────────────────────────────────────── */
             document.getElementById('booking-clear-dates').addEventListener('click', function (e) {
                 e.preventDefault();
                 if (picker) { picker.clearSelection(); }
                 document.getElementById('checkin_date').value  = '';
                 document.getElementById('checkout_date').value = '';
+                hideAll();
             });
         })();
     </script>
