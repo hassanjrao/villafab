@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AdminDashboardController;
+use App\Http\Controllers\AvailabilityController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FrontendController;
 use Illuminate\Support\Facades\Auth;
@@ -25,6 +26,9 @@ Route::get('/gallery', [FrontendController::class, 'gallery'])->name('gallery');
 
 // Contact form submission
 Route::post('/contact', [FrontendController::class, 'contact'])->name('contact');
+
+// Availability calendar
+Route::get('/api/booked-dates', [AvailabilityController::class, 'bookedDates'])->name('api.booked-dates');
 
 // Gallery sub-pages
 Route::get('/the-rooms', [FrontendController::class, 'theRooms'])->name('the-rooms');

@@ -495,7 +495,50 @@
             background-color: #a8893e;
             color: #fff;
         }
+
+        /* ── Litepicker overrides ── */
+        .litepicker .container__days .day-item.is-locked {
+            text-decoration: line-through;
+            color: #bbb;
+            pointer-events: none;
+        }
+
+        .litepicker .container__days .day-item.is-start-date,
+        .litepicker .container__days .day-item.is-end-date {
+            background-color: #1da3dd;
+            color: #fff;
+        }
+
+        .litepicker .container__days .day-item.is-in-range {
+            background-color: rgba(29,163,221,0.12);
+            color: #1da3dd;
+        }
+
+        .litepicker .month-item-header .button-next-month,
+        .litepicker .month-item-header .button-previous-month {
+            color: #1da3dd;
+        }
+
+        #checkin_date, #checkout_date {
+            background-color: #fff !important;
+            cursor: pointer;
+        }
+
+        .booking-clear-dates {
+            font-size: 0.78rem;
+            color: #888;
+            cursor: pointer;
+            text-align: right;
+            display: block;
+            margin-top: -6px;
+            margin-bottom: 6px;
+        }
+
+        .booking-clear-dates:hover {
+            color: #e74c3c;
+        }
     </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/litepicker/dist/css/litepicker.css">
 @endsection
 
 @section('content')
@@ -880,27 +923,32 @@
 
                     <div class="card shadow-sm">
                         <div class="card-body">
-                            <form action="#" method="GET" id="bookingPreviewForm" novalidate>
+                            <form action="{{ route('book-now') }}" method="GET" id="bookingPreviewForm">
                                 <div class="form-row">
                                     <div class="form-group col-6">
                                         <label class="small text-muted mb-1" for="checkin_date">Check-in</label>
                                         <input
-                                            type="date"
+                                            type="text"
                                             id="checkin_date"
                                             name="checkin_date"
                                             class="form-control"
+                                            placeholder="Add date"
+                                            readonly
                                         >
                                     </div>
                                     <div class="form-group col-6">
                                         <label class="small text-muted mb-1" for="checkout_date">Check-out</label>
                                         <input
-                                            type="date"
+                                            type="text"
                                             id="checkout_date"
                                             name="checkout_date"
                                             class="form-control"
+                                            placeholder="Add date"
+                                            readonly
                                         >
                                     </div>
                                 </div>
+                                <a href="#" class="booking-clear-dates" id="booking-clear-dates">Clear dates</a>
                                 <div class="form-group">
                                     <label class="small text-muted mb-1" for="guests">Guests</label>
                                     <select id="guests" name="guests" class="form-control">
@@ -912,7 +960,7 @@
                                 <button type="submit"
                                         class="btn btn-primary btn-block"
                                         style="font-weight:600;">
-                                    Check Availability
+                                    Reserve
                                 </button>
                             </form>
                         </div>
@@ -1131,9 +1179,12 @@
         });
 
         /* Restore body scroll when modal closes */
-        $('#photoTourModal').on('hidden.bs.modal', function() {
-            document.body.style.overflow = '';
-        });
+        var photoTourModalEl = document.getElementById('photoTourModal');
+        if (photoTourModalEl) {
+            photoTourModalEl.addEventListener('hidden.bs.modal', function() {
+                document.body.style.overflow = '';
+            });
+        }
 
         /* Toggle villa description button text */
         function toggleVillaDescription(button) {
@@ -1144,4 +1195,61 @@
         }
     </script>
 
+@endsection
+
+@section('scripts_extra')
+    <script src="https://cdn.jsdelivr.net/npm/litepicker/dist/litepicker.js"></script>
+    <script>
+        (function () {
+            var picker = null;
+
+            function initPicker(lockDays) {
+                picker = new Litepicker({
+                    element:       document.getElementById('checkin_date'),
+                    elementEnd:    document.getElementById('checkout_date'),
+                    singleMode:    false,
+                    numberOfMonths: 2,
+                    numberOfColumns: 2,
+                    minDate:       new Date(),
+                    format:        'MMM D, YYYY',
+                    lockDays:      lockDays,
+                    lockDaysFormat: 'YYYY-MM-DD',
+                    disallowLockDaysInRange: true,
+                    tooltipText:   { one: 'night', other: 'nights' },
+                    showTooltip:   true,
+                    autoApply:     true,
+                    resetButton:   false,
+                });
+            }
+
+            /* Fetch booked date ranges and expand them into individual locked dates */
+            fetch('{{ route("api.booked-dates") }}')
+                .then(function (r) { return r.json(); })
+                .then(function (events) {
+                    var lockDays = [];
+                    events.forEach(function (e) {
+                        /* API end is exclusive (iCal DTEND), so stop before it */
+                        var cur = new Date(e.start + 'T12:00:00');
+                        var end = new Date(e.end   + 'T12:00:00');
+                        while (cur < end) {
+                            lockDays.push(cur.toISOString().split('T')[0]);
+                            cur.setDate(cur.getDate() + 1);
+                        }
+                    });
+                    initPicker(lockDays);
+                })
+                .catch(function () {
+                    /* Fall back to picker with no locked dates */
+                    initPicker([]);
+                });
+
+            /* Clear dates link */
+            document.getElementById('booking-clear-dates').addEventListener('click', function (e) {
+                e.preventDefault();
+                if (picker) { picker.clearSelection(); }
+                document.getElementById('checkin_date').value  = '';
+                document.getElementById('checkout_date').value = '';
+            });
+        })();
+    </script>
 @endsection
