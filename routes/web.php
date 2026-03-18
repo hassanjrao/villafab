@@ -1,7 +1,9 @@
 <?php
 
+use App\Http\Controllers\AdminDashboardController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FrontendController;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -75,11 +77,17 @@ Route::get('/weight-loss-retreats', [FrontendController::class, 'weightLossRetre
 Route::get('/detox-retreats', [FrontendController::class, 'detoxRetreats'])->name('detox-retreats');
 Route::get('/spa-retreats', [FrontendController::class, 'spaRetreats'])->name('spa-retreats');
 
-// ─── Admin / Backend Routes ───────────────────────────────────────────────────
 
-Route::match(['get', 'post'], '/dashboard', function () {
-    return view('dashboard');
+Auth::routes([
+    'register' => false,
+    'reset' => false,
+    'verify' => false,
+]);
+
+
+
+Route::prefix('admin')->name('admin.')->middleware(['auth'])->group(function () {
+
+    Route::get('', [AdminDashboardController::class, 'index'])->name('dashboard.index');
+
 });
-Route::view('/pages/slick', 'pages.slick');
-Route::view('/pages/datatables', 'pages.datatables');
-Route::view('/pages/blank', 'pages.blank');
