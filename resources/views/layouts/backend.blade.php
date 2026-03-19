@@ -149,7 +149,7 @@
                             </a>
                         </li>
                         <li class="nav-main-item">
-                            <a class="nav-main-link{{ request()->is('admin/pricing') ? ' active' : '' }}"
+                        <a class="nav-main-link{{ request()->is('admin/pricing') ? ' active' : '' }}"
                                 href="{{ route('admin.pricing.index') }}">
                                 <i class="nav-main-link-icon fa fa-table"></i>
                                 <span class="nav-main-link-name">Pricing</span>
