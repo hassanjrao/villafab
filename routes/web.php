@@ -1,8 +1,10 @@
 <?php
 
+use App\Http\Controllers\AdminBookingController;
 use App\Http\Controllers\AdminDashboardController;
 use App\Http\Controllers\AdminPricingController;
 use App\Http\Controllers\AvailabilityController;
+use App\Http\Controllers\BookingController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FrontendController;
 use Illuminate\Support\Facades\Auth;
@@ -33,6 +35,10 @@ Route::get('/api/booked-dates', [AvailabilityController::class, 'bookedDates'])-
 
 // Price quote API
 Route::get('/api/price-quote', [AvailabilityController::class, 'priceQuote'])->name('api.price-quote');
+
+// Stripe booking
+Route::post('/booking/payment-intent', [BookingController::class, 'createPaymentIntent'])->name('booking.payment-intent');
+Route::get('/booking/success',         [BookingController::class, 'success'])->name('booking.success');
 
 // Gallery sub-pages
 Route::get('/the-rooms', [FrontendController::class, 'theRooms'])->name('the-rooms');
@@ -100,5 +106,8 @@ Route::prefix('admin')->name('admin.')->middleware(['auth'])->group(function () 
 
     Route::get('pricing',  [AdminPricingController::class, 'index'])->name('pricing.index');
     Route::post('pricing', [AdminPricingController::class, 'update'])->name('pricing.update');
+
+    Route::get('bookings',           [AdminBookingController::class, 'index'])->name('bookings.index');
+    Route::get('bookings/{booking}', [AdminBookingController::class, 'show'])->name('bookings.show');
 
 });

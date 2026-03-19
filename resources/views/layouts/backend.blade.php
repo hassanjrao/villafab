@@ -151,8 +151,15 @@
                         <li class="nav-main-item">
                             <a class="nav-main-link{{ request()->is('admin/pricing') ? ' active' : '' }}"
                                 href="{{ route('admin.pricing.index') }}">
-                                <i class="nav-main-link-icon fa fa-usd"></i>
+                                <i class="nav-main-link-icon fa fa-table"></i>
                                 <span class="nav-main-link-name">Pricing</span>
+                            </a>
+                        </li>
+                        <li class="nav-main-item">
+                            <a class="nav-main-link{{ request()->is('admin/bookings*') ? ' active' : '' }}"
+                                href="{{ route('admin.bookings.index') }}">
+                                <i class="nav-main-link-icon fa fa-calendar"></i>
+                                <span class="nav-main-link-name">Bookings</span>
                             </a>
                         </li>
                     </ul>
