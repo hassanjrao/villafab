@@ -52,7 +52,7 @@
         </a>
 
         <p style="margin-top:18px;font-size:0.8rem;color:#aaa;">
-            Questions? <a href="{{ route('contact') }}" style="color:#1da3dd;">Contact us</a>
+            Questions? <a href="{{ route('home') }}#contact" style="color:#1da3dd;">Contact us</a>
         </p>
     </div>
 </div>
