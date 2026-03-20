@@ -6,6 +6,7 @@ use App\Mail\ContactFormMail;
 use App\Models\ContactMessage;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Mail;
 
 class FrontendController extends Controller
@@ -297,24 +298,22 @@ class FrontendController extends Controller
                 'user_agent'   => $request->userAgent(),
             ]);
         } catch (\Exception $e) {
-            // non-fatal
+            Log::error('Error saving contact message: ',[
+                'error' => $e->getMessage(),
+                'line' => $e->getLine(),
+                'trace' => $e->getTraceAsString(),
+            ]);
         }
 
         // Send email notification to the property owner
         try {
             Mail::to('AlexLluch3@gmail.com')->send(new ContactFormMail($validated));
         } catch (\Exception $e) {
-            // Silently fail so the user still sees the success message
-        }
-
-        // Forward to the external tracking endpoint (preserving original behavior)
-        try {
-            Http::post('https://alexadmin.devproedge.com/admin/save-contact.php', [
-                'command' => 'send-data',
-                'newData' => json_encode($validated),
+            Log::error('Error sending contact email: ',[
+                'error' => $e->getMessage(),
+                'line' => $e->getLine(),
+                'trace' => $e->getTraceAsString(),
             ]);
-        } catch (\Exception $e) {
-            // Silently fail on external API error
         }
 
         return back()->with('success', 'Thank you! Your message has been sent.');
