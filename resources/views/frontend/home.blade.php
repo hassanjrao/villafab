@@ -1280,97 +1280,196 @@
     </section>
 
     <!-- Contact Form Start -->
-    <section id="contact" class="pt-5 pb-5">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="container">
-                    <div class="text-center mb-5">
-                        <h1 class="site_section_title">Contact Us</h1>
-                        <hr>
-                        <p>We would love to hear from you. Please send us a note and let us know if you have any questions
-                            or what you think about Villa Fabulosa.</p>
+    <section id="contact" class="pt-5 pb-5" style="background:#f8f9fb;">
+        <style>
+            .cf-wrap {
+                max-width: 760px;
+                margin: 0 auto;
+                background: #fff;
+                border-radius: 18px;
+                box-shadow: 0 4px 32px rgba(0,0,0,.08);
+                padding: 48px 52px 44px;
+            }
+            @media (max-width: 600px) {
+                .cf-wrap { padding: 28px 20px 24px; }
+            }
+            .cf-title {
+                font-size: 2rem;
+                font-weight: 800;
+                color: #111;
+                margin-bottom: 6px;
+                text-align: center;
+            }
+            .cf-sub {
+                text-align: center;
+                color: #777;
+                font-size: 0.95rem;
+                margin-bottom: 36px;
+                line-height: 1.6;
+            }
+            .cf-row {
+                display: flex;
+                gap: 16px;
+                margin-bottom: 0;
+            }
+            @media (max-width: 600px) { .cf-row { flex-direction: column; gap: 0; } }
+            .cf-field {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 18px;
+            }
+            .cf-label {
+                font-size: 0.78rem;
+                font-weight: 700;
+                color: #555;
+                text-transform: uppercase;
+                letter-spacing: .05em;
+                margin-bottom: 6px;
+            }
+            .cf-label span { color: #e74c3c; margin-left: 2px; }
+            .cf-input, .cf-textarea {
+                border: 1.5px solid #dde0e6;
+                border-radius: 9px;
+                padding: 11px 14px;
+                font-size: 0.93rem;
+                color: #111;
+                background: #fff;
+                outline: none;
+                transition: border-color .2s, box-shadow .2s;
+                font-family: inherit;
+                width: 100%;
+            }
+            .cf-input:focus, .cf-textarea:focus {
+                border-color: #1da3dd;
+                box-shadow: 0 0 0 3px rgba(29,163,221,.1);
+            }
+            .cf-input.is-invalid, .cf-textarea.is-invalid { border-color: #e74c3c; }
+            .cf-error { font-size: 0.8rem; color: #e74c3c; margin-top: 4px; }
+            .cf-hint  { font-size: 0.77rem; color: #aaa; margin-top: 4px; }
+            .cf-textarea { resize: vertical; min-height: 120px; }
+            .cf-submit {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 8px;
+                width: 100%;
+                background: #1da3dd;
+                color: #fff;
+                border: none;
+                border-radius: 10px;
+                padding: 14px 0;
+                font-size: 1rem;
+                font-weight: 700;
+                letter-spacing: .03em;
+                cursor: pointer;
+                transition: background .2s, transform .15s;
+                margin-top: 6px;
+            }
+            .cf-submit:hover { background: #178fc0; transform: translateY(-1px); }
+            /* Sister property card */
+            .cf-sister {
+                margin-top: 48px;
+                border-radius: 14px;
+                overflow: hidden;
+                box-shadow: 0 2px 16px rgba(0,0,0,.07);
+                display: flex;
+                text-decoration: none !important;
+                color: inherit;
+                transition: transform .2s, box-shadow .2s;
+                max-width: 760px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .cf-sister:hover { transform: translateY(-3px); box-shadow: 0 6px 24px rgba(0,0,0,.12); }
+            .cf-sister img { width: 260px; min-height: 200px; object-fit: cover; flex-shrink: 0; }
+            @media (max-width: 600px) { .cf-sister { flex-direction: column; } .cf-sister img { width: 100%; height: 180px; } }
+            .cf-sister-body {
+                padding: 28px 28px;
+                background: #fff;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+            .cf-sister-eyebrow { font-size: 0.75rem; text-transform: uppercase; letter-spacing: .08em; color: #1da3dd; font-weight: 700; margin-bottom: 8px; }
+            .cf-sister-name { font-size: 1.4rem; font-weight: 800; color: #111; margin-bottom: 8px; }
+            .cf-sister-desc { font-size: 0.88rem; color: #666; line-height: 1.6; }
+        </style>
+
+        <div class="container">
+
+            <div class="cf-wrap">
+                <div class="cf-title">Contact Us</div>
+                <div class="cf-sub">We'd love to hear from you. Send us a note with any questions about Villa Fabulosa.</div>
+
+                <form id="requestform" action="{{ route('contact') }}" method="POST" novalidate>
+                    @csrf
+
+                    <div class="cf-row">
+                        <div class="cf-field">
+                            <label class="cf-label" for="cf-fname">First Name <span>*</span></label>
+                            <input type="text" id="cf-fname" name="fname"
+                                   class="cf-input @error('fname') is-invalid @enderror"
+                                   value="{{ old('fname') }}" placeholder="First name" autocomplete="given-name">
+                            @error('fname')<div class="cf-error">{{ $message }}</div>@enderror
+                        </div>
+                        <div class="cf-field">
+                            <label class="cf-label" for="cf-lname">Last Name <span>*</span></label>
+                            <input type="text" id="cf-lname" name="lname"
+                                   class="cf-input @error('lname') is-invalid @enderror"
+                                   value="{{ old('lname') }}" placeholder="Last name" autocomplete="family-name">
+                            @error('lname')<div class="cf-error">{{ $message }}</div>@enderror
+                        </div>
                     </div>
 
-                    @if (session('success'))
-                        <div class="alert alert-success">{{ session('success') }}</div>
-                    @endif
+                    <div class="cf-row">
+                        <div class="cf-field">
+                            <label class="cf-label" for="cf-email">Email Address <span>*</span></label>
+                            <input type="email" id="cf-email" name="email"
+                                   class="cf-input @error('email') is-invalid @enderror"
+                                   value="{{ old('email') }}" placeholder="you@example.com" autocomplete="email">
+                            @error('email')<div class="cf-error">{{ $message }}</div>@enderror
+                        </div>
+                        <div class="cf-field">
+                            <label class="cf-label" for="cf-phone">Phone Number <span>*</span></label>
+                            <input type="tel" id="cf-phone" name="phone_number"
+                                   class="cf-input @error('phone_number') is-invalid @enderror"
+                                   value="{{ old('phone_number') }}" placeholder="+1 (555) 000-0000" autocomplete="tel">
+                            @error('phone_number')<div class="cf-error">{{ $message }}</div>@enderror
+                        </div>
+                    </div>
 
-                    <form id="requestform" action="{{ route('contact') }}" method="POST">
-                        @csrf
-                        <div class="form-row">
-                            <div class="form-group col-md-4">
-                                <label>Name<span class="text-danger">*</span></label>
-                                <input type="text" class="form-control @error('fname') is-invalid @enderror"
-                                    name="fname" value="{{ old('fname') }}">
-                                <small class="form-text text-muted">First Name</small>
-                                @error('fname')
-                                    <div class="invalid-feedback">{{ $message }}</div>
-                                @enderror
-                            </div>
-                            <div class="form-group col-md-4">
-                                <label>&nbsp;</label>
-                                <input type="text" class="form-control @error('lname') is-invalid @enderror"
-                                    name="lname" value="{{ old('lname') }}">
-                                <small class="form-text text-muted">Last Name</small>
-                                @error('lname')
-                                    <div class="invalid-feedback">{{ $message }}</div>
-                                @enderror
-                            </div>
-                            <div class="form-group col-md-4">
-                                <label>&nbsp;</label>
-                                <textarea name="reason" class="form-control" cols="30" rows="1">{{ old('reason') }}</textarea>
-                                <small class="form-text text-muted">How Did You Hear About Villa Fabulosa</small>
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="form-group col-md-6">
-                                <label>Email Address<span class="text-danger">*</span></label>
-                                <input type="email" class="form-control @error('email') is-invalid @enderror"
-                                    name="email" value="{{ old('email') }}">
-                                @error('email')
-                                    <div class="invalid-feedback">{{ $message }}</div>
-                                @enderror
-                            </div>
-                            <div class="form-group col-md-6">
-                                <label>Phone Number<span class="text-danger">*</span></label>
-                                <input type="text" class="form-control @error('phone_number') is-invalid @enderror"
-                                    name="phone_number" value="{{ old('phone_number') }}">
-                                @error('phone_number')
-                                    <div class="invalid-feedback">{{ $message }}</div>
-                                @enderror
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label>Message<span class="text-danger">*</span></label>
-                            <textarea name="message" class="form-control @error('message') is-invalid @enderror" rows="4">{{ old('message') }}</textarea>
-                            @error('message')
-                                <div class="invalid-feedback">{{ $message }}</div>
-                            @enderror
-                        </div>
-                        <div class="form-group text-center">
-                            <button type="submit" class="btn btn-primary">Send</button>
-                        </div>
-                    </form>
+                    <div class="cf-field">
+                        <label class="cf-label" for="cf-reason">How Did You Hear About Us?</label>
+                        <input type="text" id="cf-reason" name="reason"
+                               class="cf-input" value="{{ old('reason') }}"
+                               placeholder="Google, referral, social media…">
+                    </div>
 
-                    <div class="clearfix"></div>
-                    <a href="https://www.villamagnifica.com/" target="_blank" class="pluslink">
-                        <div class="card mb-3" style="max-width: 100%; height: 235px;">
-                            <div class="row no-gutters">
-                                <div class="col-md-6">
-                                    <img src="{{ asset('frontend/imgs/processed-1985b06c-1830-4ea5-a2e8-f9f52acfcf49_9jhkqIFL.jpeg') }}"
-                                        class="card-img" alt="Villa Magnifica" style="height: 230px; object-fit: cover;">
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="card-body">
-                                        <p class="card-text">Visit our sister Short-Term Rental:</p>
-                                        <h5 class="card-title">Villa Magnifica</h5>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
+                    <div class="cf-field">
+                        <label class="cf-label" for="cf-message">Message <span>*</span></label>
+                        <textarea id="cf-message" name="message" rows="5"
+                                  class="cf-textarea @error('message') is-invalid @enderror"
+                                  placeholder="Tell us how we can help…">{{ old('message') }}</textarea>
+                        @error('message')<div class="cf-error">{{ $message }}</div>@enderror
+                    </div>
+
+                    <button type="submit" class="cf-submit">
+                        <i class="fa fa-paper-plane"></i> Send Message
+                    </button>
+                </form>
             </div>
+
+            <a href="https://www.villamagnifica.com/" target="_blank" class="cf-sister">
+                <img src="{{ asset('frontend/imgs/processed-1985b06c-1830-4ea5-a2e8-f9f52acfcf49_9jhkqIFL.jpeg') }}"
+                     alt="Villa Magnifica">
+                <div class="cf-sister-body">
+                    <div class="cf-sister-eyebrow">Sister Property</div>
+                    <div class="cf-sister-name">Villa Magnifica</div>
+                    <div class="cf-sister-desc">Visit our other Short-Term Rental in Temecula Wine Country — equally stunning and available to book.</div>
+                </div>
+            </a>
+
         </div>
     </section>
     <!-- Contact Form End -->

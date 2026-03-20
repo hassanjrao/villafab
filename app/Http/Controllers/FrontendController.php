@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\ContactFormMail;
+use App\Models\ContactMessage;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Facades\Mail;
 
 class FrontendController extends Controller
 {
@@ -280,6 +283,29 @@ class FrontendController extends Controller
             'message'      => 'required|string|max:2000',
             'reason'       => 'nullable|string|max:500',
         ]);
+
+        // Save message for admin panel.
+        try {
+            ContactMessage::create([
+                'fname'        => $validated['fname'],
+                'lname'        => $validated['lname'],
+                'email'        => $validated['email'],
+                'phone_number' => $validated['phone_number'],
+                'reason'       => $validated['reason'] ?? null,
+                'message'      => $validated['message'],
+                'ip_address'   => $request->ip(),
+                'user_agent'   => $request->userAgent(),
+            ]);
+        } catch (\Exception $e) {
+            // non-fatal
+        }
+
+        // Send email notification to the property owner
+        try {
+            Mail::to('AlexLluch3@gmail.com')->send(new ContactFormMail($validated));
+        } catch (\Exception $e) {
+            // Silently fail so the user still sees the success message
+        }
 
         // Forward to the external tracking endpoint (preserving original behavior)
         try {

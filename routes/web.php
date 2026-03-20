@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AdminBookingController;
 use App\Http\Controllers\AdminDashboardController;
+use App\Http\Controllers\AdminContactMessageController;
 use App\Http\Controllers\AdminPricingController;
 use App\Http\Controllers\AvailabilityController;
 use App\Http\Controllers\BookingController;
@@ -109,5 +110,8 @@ Route::prefix('admin')->name('admin.')->middleware(['auth'])->group(function () 
 
     Route::get('bookings',           [AdminBookingController::class, 'index'])->name('bookings.index');
     Route::get('bookings/{booking}', [AdminBookingController::class, 'show'])->name('bookings.show');
+
+    Route::get('messages',                      [AdminContactMessageController::class, 'index'])->name('messages.index');
+    Route::get('messages/{message}',          [AdminContactMessageController::class, 'show'])->name('messages.show');
 
 });

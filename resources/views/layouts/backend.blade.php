@@ -162,6 +162,13 @@
                                 <span class="nav-main-link-name">Bookings</span>
                             </a>
                         </li>
+                        <li class="nav-main-item">
+                            <a class="nav-main-link{{ request()->is('admin/messages*') ? ' active' : '' }}"
+                                href="{{ route('admin.messages.index') }}">
+                                <i class="nav-main-link-icon fa fa-envelope"></i>
+                                <span class="nav-main-link-name">Messages</span>
+                            </a>
+                        </li>
                     </ul>
                 </div>
                 <!-- END Side Navigation -->

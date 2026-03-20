@@ -14,6 +14,22 @@
 
     @include('layouts.partials.scripts')
 
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    @if (session('success'))
+    <script>
+        Swal.fire({
+            toast:            true,
+            position:         'top-end',
+            icon:             'success',
+            title:            @json(session('success')),
+            showConfirmButton: false,
+            timer:            4500,
+            timerProgressBar: true,
+        });
+    </script>
+    @endif
+
     @yield('scripts_extra')
 
 </body>

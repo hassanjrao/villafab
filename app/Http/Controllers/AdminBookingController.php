@@ -8,7 +8,8 @@ class AdminBookingController extends Controller
 {
     public function index()
     {
-        $bookings = Booking::latest()->paginate(20);
+        // Fetch all bookings so DataTables handles pagination/search on the frontend.
+        $bookings = Booking::latest()->get();
 
         return view('admin.bookings.index', compact('bookings'));
     }

@@ -299,11 +299,95 @@
     .bn-rules-body p { margin-bottom: 4px; }
     .bn-rules-body strong { color: #222; }
 
+    /* ── Inline edit panels ── */
+    .bn-edit-panel {
+        background: #f8f9fb;
+        border: 1.5px solid #dde0e6;
+        border-radius: 10px;
+        padding: 14px 14px 10px;
+        margin-bottom: 6px;
+    }
+
+    .bn-edit-panel-actions {
+        display: flex;
+        justify-content: flex-end;
+        gap: 8px;
+        margin-top: 12px;
+    }
+
+    .bn-panel-btn {
+        border: none;
+        border-radius: 7px;
+        padding: 7px 16px;
+        font-size: 0.82rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background .15s;
+    }
+    .bn-panel-btn-cancel {
+        background: #eee;
+        color: #555;
+    }
+    .bn-panel-btn-cancel:hover { background: #ddd; }
+    .bn-panel-btn-apply {
+        background: #1da3dd;
+        color: #fff;
+    }
+    .bn-panel-btn-apply:hover:not(:disabled) { background: #178fc0; }
+    .bn-panel-btn-apply:disabled { opacity: .5; cursor: not-allowed; }
+
+    /* Guest counter */
+    .bn-guest-counter {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        font-size: 1rem;
+    }
+    .bn-guest-counter-btn {
+        width: 34px; height: 34px;
+        border: 1.5px solid #1da3dd;
+        border-radius: 50%;
+        background: #fff;
+        color: #1da3dd;
+        font-size: 1.2rem;
+        line-height: 1;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background .15s, color .15s;
+    }
+    .bn-guest-counter-btn:hover { background: #1da3dd; color: #fff; }
+    .bn-guest-counter-btn:disabled { opacity: .3; cursor: not-allowed; }
+    .bn-guest-counter-val { font-weight: 700; font-size: 1.1rem; min-width: 28px; text-align: center; }
+
+    /* Litepicker overrides inside the panel */
+    #bn-litepicker-container .litepicker { width: 100% !important; box-shadow: none !important; border: none !important; }
+    #bn-litepicker-container .litepicker .container__months { width: 100% !important; }
+    #bn-litepicker-container .litepicker .month-item { width: 100% !important; }
+
+    #bn-litepicker-container .litepicker .container__days .day-item.is-locked {
+        color: #ccc;
+        text-decoration: line-through;
+        pointer-events: none;
+    }
+    #bn-litepicker-container .litepicker .container__days .day-item.is-start-date,
+    #bn-litepicker-container .litepicker .container__days .day-item.is-end-date {
+        background-color: #1da3dd !important;
+        color: #fff !important;
+        border-radius: 6px;
+    }
+    #bn-litepicker-container .litepicker .container__days .day-item.is-in-range {
+        background-color: #d6f0fb;
+        color: #111;
+    }
+
     @media (max-width: 767px) {
         .bn-page { padding: 24px 0 48px; }
         .bn-field-row, .stripe-row { flex-direction: column; gap: 0; }
     }
 </style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/litepicker/dist/css/litepicker.css">
 @endsection
 
 @section('content')
@@ -412,17 +496,39 @@
                             <i class="fa fa-calendar" style="color:#1da3dd;margin-right:5px;"></i>
                             <span id="bn-date-display" style="font-weight:600;">Loading…</span>
                         </span>
-                        <a href="{{ route('home') }}?checkin={{ urlencode($checkin) }}&checkout={{ urlencode($checkout) }}&guests={{ $guests }}"
-                           class="bn-edit-link">Edit</a>
+                        <a href="#" id="bn-edit-dates-btn" class="bn-edit-link">Edit</a>
+                    </div>
+
+                    {{-- Inline date edit panel --}}
+                    <div id="bn-date-edit-panel" style="display:none;" class="bn-edit-panel">
+                        <input id="bn-litepicker-input" type="text" readonly style="display:none;">
+                        <div id="bn-litepicker-container"></div>
+                        <div class="bn-edit-panel-actions">
+                            <button type="button" id="bn-dates-cancel-btn" class="bn-panel-btn bn-panel-btn-cancel">Cancel</button>
+                            <button type="button" id="bn-dates-apply-btn" class="bn-panel-btn bn-panel-btn-apply" disabled>Apply Dates</button>
+                        </div>
                     </div>
 
                     <div class="bn-summary-row">
                         <span>
                             <i class="fa fa-users" style="color:#1da3dd;margin-right:5px;"></i>
-                            <span style="font-weight:600;">{{ $guests }} guest{{ $guests > 1 ? 's' : '' }}</span>
+                            <span id="bn-guests-display" style="font-weight:600;">{{ $guests }} guest{{ $guests > 1 ? 's' : '' }}</span>
                         </span>
-                        <a href="{{ route('home') }}?checkin={{ urlencode($checkin) }}&checkout={{ urlencode($checkout) }}&guests={{ $guests }}"
-                           class="bn-edit-link">Edit</a>
+                        <a href="#" id="bn-edit-guests-btn" class="bn-edit-link">Edit</a>
+                    </div>
+
+                    {{-- Inline guests edit panel --}}
+                    <div id="bn-guests-edit-panel" style="display:none;" class="bn-edit-panel">
+                        <div class="bn-guest-counter">
+                            <button type="button" id="bn-g-dec" class="bn-guest-counter-btn" disabled>&minus;</button>
+                            <span class="bn-guest-counter-val" id="bn-g-val">{{ $guests }}</span>
+                            <button type="button" id="bn-g-inc" class="bn-guest-counter-btn">+</button>
+                            <span style="font-size:0.85rem;color:#777;margin-left:4px;">guests (max 24)</span>
+                        </div>
+                        <div class="bn-edit-panel-actions">
+                            <button type="button" id="bn-guests-cancel-btn" class="bn-panel-btn bn-panel-btn-cancel">Cancel</button>
+                            <button type="button" id="bn-guests-apply-btn" class="bn-panel-btn bn-panel-btn-apply">Apply</button>
+                        </div>
                     </div>
                 </div>
 
@@ -456,7 +562,7 @@
                     By completing your booking, I agree to Villa Fabulosa's
                     <a href="#" data-toggle="modal" data-target="#tnc-modal">Terms &amp; Conditions</a>
                     and cancellation policy.
-                    <a href="{{ route('contact') }}">Contact us</a> with any questions.
+                    <a href="{{ route('home') }}#contact">Contact us</a> with any questions.
                 </div>
 
                 {{-- House Rules collapsible --}}
@@ -503,6 +609,7 @@
 
 @section('scripts_extra')
 <script src="https://js.stripe.com/v3/"></script>
+<script src="https://cdn.jsdelivr.net/npm/litepicker/dist/litepicker.js"></script>
 <script>
 (function () {
     var checkin  = '{{ addslashes($checkin) }}';
@@ -510,6 +617,15 @@
     var guests   = {{ (int) $guests }};
 
     if (!checkin || !checkout) { return; }
+
+    var stripe         = Stripe('{{ config('services.stripe.key') }}');
+    var stripeElements = null;
+    var paymentElement = null;
+    var litepicker     = null;
+    var lockedDays     = [];   /* booked dates from Google Calendar */
+    var pendingCheckin  = checkin;
+    var pendingCheckout = checkout;
+    var pendingGuests   = guests;
 
     /* ── Helpers ── */
     function friendlyDate(iso) {
@@ -551,120 +667,271 @@
         btnText.textContent   = on ? 'Processing…' : 'Complete Booking →';
     }
 
-    /* ── Populate date display ── */
-    var nights = nightsBetween(checkin, checkout);
-    document.getElementById('bn-date-display').textContent =
-        friendlyDate(checkin) + ' – ' + friendlyDate(checkout) +
-        ' · ' + nights + ' night' + (nights !== 1 ? 's' : '');
+    function updateDateDisplay() {
+        var nights = nightsBetween(checkin, checkout);
+        document.getElementById('bn-date-display').textContent =
+            friendlyDate(checkin) + ' – ' + friendlyDate(checkout) +
+            ' · ' + nights + ' night' + (nights !== 1 ? 's' : '');
+    }
 
-    /* ── Stripe (initialised after PaymentIntent is created) ── */
-    var stripe          = Stripe('{{ config('services.stripe.key') }}');
-    var stripeElements  = null;
-    var paymentElement  = null;
+    function updateGuestsDisplay() {
+        document.getElementById('bn-guests-display').textContent =
+            guests + ' guest' + (guests !== 1 ? 's' : '');
+    }
 
-    /* ── Step 1: fetch price quote ── */
-    fetch('{{ route("api.price-quote") }}?checkin=' + checkin + '&checkout=' + checkout + '&guests=' + guests)
-        .then(function (r) { return r.json(); })
-        .then(function (q) {
-            document.getElementById('bn-loading').style.display = 'none';
+    /* ── Main load / reload function ── */
+    function loadQuoteAndStripe() {
+        /* Reset price breakdown UI */
+        document.getElementById('bn-loading').style.display = 'block';
+        document.getElementById('bn-breakdown').style.display = 'none';
+        document.getElementById('bn-quote-error').style.display = 'none';
 
-            if (!q.valid) {
+        /* Unmount old Stripe element if re-loading */
+        if (paymentElement) {
+            paymentElement.unmount();
+            paymentElement = null;
+        }
+        stripeElements = null;
+        document.getElementById('payment-element').innerHTML = '';
+        document.getElementById('bn-payment-loading').style.display = 'block';
+        document.getElementById('bn-pay-btn').disabled = true;
+        hideStripeError();
+
+        fetch('{{ route("api.price-quote") }}?checkin=' + checkin + '&checkout=' + checkout + '&guests=' + guests)
+            .then(function (r) { return r.json(); })
+            .then(function (q) {
+                document.getElementById('bn-loading').style.display = 'none';
+
+                if (!q.valid) {
+                    var errDiv = document.getElementById('bn-quote-error');
+                    var msg = q.min_stay
+                        ? 'Minimum stay for a ' + q.checkin_day + ' check-in is ' +
+                          q.min_stay + ' night' + (q.min_stay !== 1 ? 's' : '') + '. Please select different dates.'
+                        : (q.error || 'Invalid dates.');
+                    errDiv.innerHTML = '<i class="fa fa-exclamation-triangle" style="margin-right:6px;"></i>' + msg;
+                    errDiv.style.display = 'block';
+                    document.getElementById('bn-payment-loading').style.display = 'none';
+                    return;
+                }
+
+                /* Populate price breakdown */
+                var rows = '';
+                if (q.base_total > 0) {
+                    rows += '<div class="bn-breakdown-row"><span>Nightly rates &times; ' + q.nights +
+                        ' night' + (q.nights !== 1 ? 's' : '') + '</span><span>' + fmt(q.base_total) + '</span></div>';
+                }
+                if (q.extra_guest_fee > 0) {
+                    rows += '<div class="bn-breakdown-row"><span>Extra guests (' + q.extra_guests +
+                        ' &times; ' + q.nights + ' nights)</span><span>' + fmt(q.extra_guest_fee) + '</span></div>';
+                }
+                rows += '<div class="bn-breakdown-row"><span>Cleaning fee</span><span>' + fmt(q.cleaning_fee) + '</span></div>';
+                rows += '<div class="bn-breakdown-row"><span>Taxes (' + q.tax_rate + '%)</span><span>' + fmt(q.tax_amount) + '</span></div>';
+                document.getElementById('bn-breakdown-rows').innerHTML = rows;
+                document.getElementById('bn-total').textContent = fmt(q.total);
+                document.getElementById('bn-breakdown').style.display = 'block';
+
+                return fetch('{{ route("booking.payment-intent") }}', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute('content'),
+                    },
+                    body: JSON.stringify({ checkin: checkin, checkout: checkout, guests: guests }),
+                });
+            })
+            .then(function (r) { return r ? r.json() : null; })
+            .then(function (data) {
+                if (!data) { return; }
+                if (data.error) {
+                    document.getElementById('bn-payment-loading').style.display = 'none';
+                    showStripeError(data.error);
+                    return;
+                }
+
+                stripeElements = stripe.elements({
+                    clientSecret: data.client_secret,
+                    appearance: {
+                        theme: 'stripe',
+                        variables: {
+                            colorPrimary:    '#1da3dd',
+                            colorBackground: '#ffffff',
+                            colorText:       '#111111',
+                            colorDanger:     '#e74c3c',
+                            fontFamily:      'Inter, system-ui, sans-serif',
+                            fontSizeBase:    '15px',
+                            borderRadius:    '8px',
+                            spacingUnit:     '4px',
+                        },
+                        rules: {
+                            '.Input': { border: '1.5px solid #dde0e6', boxShadow: 'none' },
+                            '.Input:focus': { border: '1.5px solid #1da3dd', boxShadow: 'none' },
+                            '.Tab': { border: '1.5px solid #dde0e6' },
+                            '.Tab--selected': { border: '1.5px solid #1da3dd', boxShadow: '0 0 0 1px #1da3dd' },
+                        },
+                    },
+                });
+
+                paymentElement = stripeElements.create('payment', {
+                    layout: { type: 'tabs', defaultCollapsed: false },
+                });
+                paymentElement.mount('#payment-element');
+                paymentElement.on('ready', function () {
+                    document.getElementById('bn-payment-loading').style.display = 'none';
+                    document.getElementById('bn-pay-btn').disabled = false;
+                });
+                paymentElement.on('change', function (e) {
+                    if (e.complete) { hideStripeError(); }
+                });
+            })
+            .catch(function () {
+                document.getElementById('bn-loading').style.display    = 'none';
+                document.getElementById('bn-payment-loading').style.display = 'none';
                 var errDiv = document.getElementById('bn-quote-error');
-                var msg = q.min_stay
-                    ? 'Minimum stay for a ' + q.checkin_day + ' check-in is ' +
-                      q.min_stay + ' night' + (q.min_stay !== 1 ? 's' : '') + '. Please go back and select valid dates.'
-                    : (q.error || 'Invalid dates.');
-                errDiv.innerHTML = '<i class="fa fa-exclamation-triangle" style="margin-right:6px;"></i>' +
-                    msg + ' <a href="{{ route("home") }}">Go back</a>';
+                errDiv.innerHTML = '<i class="fa fa-exclamation-triangle" style="margin-right:6px;"></i>Could not load pricing. Please try again.';
                 errDiv.style.display = 'block';
-                /* Hide payment form when quote invalid */
-                document.getElementById('bn-payment-loading').style.display = 'none';
-                return;
-            }
-
-            /* Populate price breakdown */
-            var rows = '';
-            if (q.base_total > 0) {
-                rows += '<div class="bn-breakdown-row"><span>Nightly rates &times; ' + q.nights +
-                    ' night' + (q.nights !== 1 ? 's' : '') + '</span><span>' + fmt(q.base_total) + '</span></div>';
-            }
-            if (q.extra_guest_fee > 0) {
-                rows += '<div class="bn-breakdown-row"><span>Extra guests (' + q.extra_guests +
-                    ' &times; ' + q.nights + ' nights)</span><span>' + fmt(q.extra_guest_fee) + '</span></div>';
-            }
-            rows += '<div class="bn-breakdown-row"><span>Cleaning fee</span><span>' + fmt(q.cleaning_fee) + '</span></div>';
-            rows += '<div class="bn-breakdown-row"><span>Taxes (' + q.tax_rate + '%)</span><span>' + fmt(q.tax_amount) + '</span></div>';
-            document.getElementById('bn-breakdown-rows').innerHTML = rows;
-            document.getElementById('bn-total').textContent = fmt(q.total);
-            document.getElementById('bn-breakdown').style.display = 'block';
-
-            /* ── Step 2: create PaymentIntent with the computed total ── */
-            return fetch('{{ route("booking.payment-intent") }}', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute('content'),
-                },
-                body: JSON.stringify({ checkin: checkin, checkout: checkout, guests: guests }),
             });
+    }
+
+    /* ── Initial render ── */
+    updateDateDisplay();
+    updateGuestsDisplay();
+    loadQuoteAndStripe();
+
+    /* ── Pre-fetch booked dates for the calendar ── */
+    fetch('{{ route("api.booked-dates") }}')
+        .then(function (r) { return r.json(); })
+        .then(function (events) {
+            var days = [];
+            events.forEach(function (e) {
+                var cur = new Date(e.start + 'T12:00:00');
+                var end = new Date(e.end   + 'T12:00:00');
+                while (cur < end) {
+                    days.push(cur.toISOString().split('T')[0]);
+                    cur.setDate(cur.getDate() + 1);
+                }
+            });
+            lockedDays = days;
         })
-        .then(function (r) { return r ? r.json() : null; })
-        .then(function (data) {
-            if (!data) { return; }
-            if (data.error) {
-                document.getElementById('bn-payment-loading').style.display = 'none';
-                showStripeError(data.error);
-                return;
-            }
+        .catch(function () { lockedDays = []; });
 
-            /* ── Step 3: initialise Stripe Payment Element ── */
-            stripeElements = stripe.elements({
-                clientSecret: data.client_secret,
-                appearance: {
-                    theme: 'stripe',
-                    variables: {
-                        colorPrimary:       '#1da3dd',
-                        colorBackground:    '#ffffff',
-                        colorText:          '#111111',
-                        colorDanger:        '#e74c3c',
-                        fontFamily:         'Inter, system-ui, sans-serif',
-                        fontSizeBase:       '15px',
-                        borderRadius:       '8px',
-                        spacingUnit:        '4px',
-                    },
-                    rules: {
-                        '.Input': { border: '1.5px solid #dde0e6', boxShadow: 'none' },
-                        '.Input:focus': { border: '1.5px solid #1da3dd', boxShadow: 'none' },
-                        '.Tab': { border: '1.5px solid #dde0e6' },
-                        '.Tab--selected': { border: '1.5px solid #1da3dd', boxShadow: '0 0 0 1px #1da3dd' },
-                    },
-                },
-            });
+    /* ════════════════════════════════════════
+       Inline Date Edit Panel
+    ════════════════════════════════════════ */
+    document.getElementById('bn-edit-dates-btn').addEventListener('click', function (e) {
+        e.preventDefault();
+        var panel      = document.getElementById('bn-date-edit-panel');
+        var guestPanel = document.getElementById('bn-guests-edit-panel');
+        guestPanel.style.display = 'none';
 
-            paymentElement = stripeElements.create('payment', {
-                layout: { type: 'tabs', defaultCollapsed: false },
-            });
+        if (panel.style.display !== 'none') {
+            panel.style.display = 'none';
+            return;
+        }
+        panel.style.display = 'block';
 
-            paymentElement.mount('#payment-element');
+        /* Reset pending */
+        pendingCheckin  = checkin;
+        pendingCheckout = checkout;
+        document.getElementById('bn-dates-apply-btn').disabled = true;
 
-            paymentElement.on('ready', function () {
-                document.getElementById('bn-payment-loading').style.display = 'none';
-                document.getElementById('bn-pay-btn').disabled = false;
-            });
+        /* Destroy previous picker if any */
+        if (litepicker) { litepicker.destroy(); litepicker = null; }
 
-            paymentElement.on('change', function (e) {
-                if (e.complete) { hideStripeError(); }
-            });
-        })
-        .catch(function () {
-            document.getElementById('bn-loading').style.display    = 'none';
-            document.getElementById('bn-payment-loading').style.display = 'none';
-            var errDiv = document.getElementById('bn-quote-error');
-            errDiv.innerHTML = 'Could not load pricing. <a href="{{ route("home") }}">Go back</a>.';
-            errDiv.style.display = 'block';
+        /* Clear container so Litepicker re-renders fresh */
+        document.getElementById('bn-litepicker-container').innerHTML = '';
+
+        litepicker = new Litepicker({
+            element:                 document.getElementById('bn-litepicker-input'),
+            parentEl:                document.getElementById('bn-litepicker-container'),
+            inlineMode:              true,
+            singleMode:              false,
+            numberOfMonths:          1,
+            numberOfColumns:         1,
+            startDate:               checkin,
+            endDate:                 checkout,
+            minDate:                 new Date(),
+            format:                  'YYYY-MM-DD',
+            lockDays:                lockedDays,
+            lockDaysFormat:          'YYYY-MM-DD',
+            disallowLockDaysInRange: true,
+            tooltipText:             { one: 'night', other: 'nights' },
+            showTooltip:             true,
+            autoApply:               true,
         });
 
-    /* ── Step 4: submit ── */
+        litepicker.on('selected', function (d1, d2) {
+            pendingCheckin  = d1.format('YYYY-MM-DD');
+            pendingCheckout = d2.format('YYYY-MM-DD');
+            document.getElementById('bn-dates-apply-btn').disabled = false;
+        });
+    });
+
+    document.getElementById('bn-dates-apply-btn').addEventListener('click', function () {
+        checkin  = pendingCheckin;
+        checkout = pendingCheckout;
+        updateDateDisplay();
+        document.getElementById('bn-date-edit-panel').style.display = 'none';
+        document.getElementById('bn-dates-apply-btn').disabled = true;
+        loadQuoteAndStripe();
+    });
+
+    document.getElementById('bn-dates-cancel-btn').addEventListener('click', function () {
+        document.getElementById('bn-date-edit-panel').style.display = 'none';
+    });
+
+    /* ════════════════════════════════════════
+       Inline Guests Edit Panel
+    ════════════════════════════════════════ */
+    document.getElementById('bn-edit-guests-btn').addEventListener('click', function (e) {
+        e.preventDefault();
+        var panel     = document.getElementById('bn-guests-edit-panel');
+        var datePanel = document.getElementById('bn-date-edit-panel');
+        datePanel.style.display = 'none';
+
+        if (panel.style.display !== 'none') {
+            panel.style.display = 'none';
+            return;
+        }
+
+        pendingGuests = guests;
+        document.getElementById('bn-g-val').textContent = pendingGuests;
+        document.getElementById('bn-g-dec').disabled = (pendingGuests <= 1);
+        document.getElementById('bn-g-inc').disabled = (pendingGuests >= 24);
+        panel.style.display = 'block';
+    });
+
+    document.getElementById('bn-g-dec').addEventListener('click', function () {
+        if (pendingGuests > 1) {
+            pendingGuests--;
+            document.getElementById('bn-g-val').textContent = pendingGuests;
+            document.getElementById('bn-g-dec').disabled = (pendingGuests <= 1);
+            document.getElementById('bn-g-inc').disabled = false;
+        }
+    });
+
+    document.getElementById('bn-g-inc').addEventListener('click', function () {
+        if (pendingGuests < 24) {
+            pendingGuests++;
+            document.getElementById('bn-g-val').textContent = pendingGuests;
+            document.getElementById('bn-g-inc').disabled = (pendingGuests >= 24);
+            document.getElementById('bn-g-dec').disabled = false;
+        }
+    });
+
+    document.getElementById('bn-guests-apply-btn').addEventListener('click', function () {
+        guests = pendingGuests;
+        updateGuestsDisplay();
+        document.getElementById('bn-guests-edit-panel').style.display = 'none';
+        loadQuoteAndStripe();
+    });
+
+    document.getElementById('bn-guests-cancel-btn').addEventListener('click', function () {
+        document.getElementById('bn-guests-edit-panel').style.display = 'none';
+    });
+
+    /* ════════════════════════════════════════
+       Submit Payment
+    ════════════════════════════════════════ */
     document.getElementById('bn-pay-btn').addEventListener('click', function () {
         var firstName = document.getElementById('bn-first-name').value.trim();
         var lastName  = document.getElementById('bn-last-name').value.trim();
@@ -689,7 +956,6 @@
         hideStripeError();
         setLoading(true);
 
-        /* Build return_url — Stripe appends its own params to it */
         var returnUrl = '{{ route("booking.success") }}' +
             '?name='     + encodeURIComponent(firstName + ' ' + lastName) +
             '&checkin='  + encodeURIComponent(checkin) +
@@ -709,7 +975,6 @@
                 },
             },
         }).then(function (result) {
-            /* Only reached if redirect did NOT happen (e.g. card error) */
             if (result.error) {
                 showStripeError(result.error.message);
                 setLoading(false);

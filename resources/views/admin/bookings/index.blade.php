@@ -32,7 +32,7 @@
                 </div>
             @else
                 <div class="table-responsive">
-                    <table class="table table-hover table-vcenter">
+                    <table class="table table-hover table-vcenter js-dataTable-full">
                         <thead>
                             <tr>
                                 <th>#</th>
@@ -78,10 +78,6 @@
                             @endforeach
                         </tbody>
                     </table>
-                </div>
-
-                <div class="d-flex justify-content-end mt-3">
-                    {{ $bookings->links() }}
                 </div>
             @endif
         </div>
