@@ -1554,7 +1554,7 @@
                 return '$' + parseFloat(n).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
             }
 
-            /* Parse "MMM D, YYYY" (Litepicker display format) → "YYYY-MM-DD"
+            /* Parse "MMM D, YYYY" (Litepicker display format) -> "YYYY-MM-DD"
                without relying on new Date() which misparses non-ISO strings. */
             function parseDisplayDate(val) {
                 if (!val) { return ''; }
@@ -1728,7 +1728,8 @@
                         var cur = new Date(e.start + 'T12:00:00');
                         var end = new Date(e.end   + 'T12:00:00');
                         while (cur < end) {
-                            lockDays.push(cur.toISOString().split('T')[0]);
+                            // Keep lock dates in local calendar date to avoid timezone shifts.
+                            lockDays.push(window.VillaDateUtils.toIsoDateLocal(cur));
                             cur.setDate(cur.getDate() + 1);
                         }
                     });

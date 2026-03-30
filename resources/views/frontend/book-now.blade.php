@@ -628,14 +628,6 @@
     var pendingGuests   = guests;
 
     /* ── Helpers ── */
-    function friendlyDate(iso) {
-        var days   = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
-        var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
-        var p = iso.split('-');
-        var d = new Date(parseInt(p[0]), parseInt(p[1]) - 1, parseInt(p[2]));
-        return days[d.getDay()] + ', ' + months[d.getMonth()] + ' ' + d.getDate() + ', ' + d.getFullYear();
-    }
-
     function nightsBetween(c1, c2) {
         var p1 = c1.split('-'), p2 = c2.split('-');
         var d1 = new Date(parseInt(p1[0]), parseInt(p1[1])-1, parseInt(p1[2]));
@@ -670,7 +662,7 @@
     function updateDateDisplay() {
         var nights = nightsBetween(checkin, checkout);
         document.getElementById('bn-date-display').textContent =
-            friendlyDate(checkin) + ' – ' + friendlyDate(checkout) +
+            window.VillaDateUtils.friendlyDate(checkin) + ' – ' + window.VillaDateUtils.friendlyDate(checkout) +
             ' · ' + nights + ' night' + (nights !== 1 ? 's' : '');
     }
 
@@ -806,7 +798,8 @@
                 var cur = new Date(e.start + 'T12:00:00');
                 var end = new Date(e.end   + 'T12:00:00');
                 while (cur < end) {
-                    days.push(cur.toISOString().split('T')[0]);
+                    // Keep lock dates in local calendar date to avoid timezone shifts.
+                    days.push(window.VillaDateUtils.toIsoDateLocal(cur));
                     cur.setDate(cur.getDate() + 1);
                 }
             });
