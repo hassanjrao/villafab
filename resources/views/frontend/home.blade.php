@@ -688,9 +688,23 @@
 
         /* ── Litepicker theme overrides ── */
         .litepicker .container__days .day-item.is-locked {
-            text-decoration: line-through;
-            color: #ccc;
             pointer-events: none;
+            text-decoration: line-through;
+            color: #b23b3b;
+            background-color: #fde2e2;
+            border-radius: 50%;
+            position: relative;
+        }
+
+        .litepicker .container__days .day-item.is-locked::after {
+            content: '';
+            position: absolute;
+            left: 12%;
+            right: 12%;
+            top: 50%;
+            height: 2px;
+            background-color: rgba(178, 59, 59, 0.85);
+            transform: translateY(-50%) rotate(-15deg);
         }
 
         .litepicker .container__days .day-item.is-start-date,

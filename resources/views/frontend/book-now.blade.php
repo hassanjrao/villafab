@@ -367,9 +367,22 @@
     #bn-litepicker-container .litepicker .month-item { width: 100% !important; }
 
     #bn-litepicker-container .litepicker .container__days .day-item.is-locked {
-        color: #ccc;
-        text-decoration: line-through;
         pointer-events: none;
+        text-decoration: line-through;
+        color: #b23b3b;
+        background-color: #fde2e2;
+        border-radius: 6px;
+        position: relative;
+    }
+    #bn-litepicker-container .litepicker .container__days .day-item.is-locked::after {
+        content: '';
+        position: absolute;
+        left: 12%;
+        right: 12%;
+        top: 50%;
+        height: 2px;
+        background-color: rgba(178, 59, 59, 0.85);
+        transform: translateY(-50%) rotate(-15deg);
     }
     #bn-litepicker-container .litepicker .container__days .day-item.is-start-date,
     #bn-litepicker-container .litepicker .container__days .day-item.is-end-date {
@@ -380,6 +393,33 @@
     #bn-litepicker-container .litepicker .container__days .day-item.is-in-range {
         background-color: #d6f0fb;
         color: #111;
+    }
+
+    .bn-minstay-tooltip {
+        position: fixed;
+        z-index: 12000;
+        background: #002b53;
+        color: #fff;
+        font-size: 0.82rem;
+        font-weight: 700;
+        border-radius: 4px;
+        padding: 6px 10px;
+        pointer-events: none;
+        white-space: nowrap;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.22);
+        transform: translate(-50%, -120%);
+    }
+    .bn-minstay-tooltip::after {
+        content: '';
+        position: absolute;
+        left: 50%;
+        bottom: -6px;
+        transform: translateX(-50%);
+        width: 0;
+        height: 0;
+        border-left: 6px solid transparent;
+        border-right: 6px solid transparent;
+        border-top: 6px solid #002b53;
     }
 
     @media (max-width: 767px) {
@@ -623,6 +663,7 @@
     var paymentElement = null;
     var litepicker     = null;
     var lockedDays     = [];   /* booked dates from Google Calendar */
+    var minStayByDow   = { 0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1 };
     var pendingCheckin  = checkin;
     var pendingCheckout = checkout;
     var pendingGuests   = guests;
@@ -637,6 +678,63 @@
 
     function fmt(n) {
         return '$' + parseFloat(n).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+    }
+
+    function getMinStayTextForIso(iso) {
+        if (!iso) { return ''; }
+        var dow = window.VillaDateUtils.dayOfWeekFromIso(iso);
+        var min = parseInt(minStayByDow[dow] || 1, 10);
+        return 'Min stay \u2022 ' + min + ' night' + (min !== 1 ? 's' : '');
+    }
+
+    function bindMinStayHoverTooltip() {
+        var pickerRoot = document.querySelector('#bn-litepicker-container .litepicker');
+        if (!pickerRoot || pickerRoot.dataset.minStayHoverBound === '1') {
+            return;
+        }
+        pickerRoot.dataset.minStayHoverBound = '1';
+
+        var oldTip = document.getElementById('bn-minstay-tooltip');
+        if (oldTip) { oldTip.remove(); }
+
+        var tip = document.createElement('div');
+        tip.id = 'bn-minstay-tooltip';
+        tip.className = 'bn-minstay-tooltip';
+        tip.style.display = 'none';
+        document.body.appendChild(tip);
+
+        function hideTip() {
+            tip.style.display = 'none';
+        }
+
+        pickerRoot.addEventListener('mousemove', function (e) {
+            var cell = e.target.closest('.day-item');
+            if (!cell || cell.classList.contains('is-locked')) {
+                hideTip();
+                return;
+            }
+
+            var ts = parseInt(cell.getAttribute('data-time') || '', 10);
+            if (!ts) {
+                hideTip();
+                return;
+            }
+
+            var iso = window.VillaDateUtils.toIsoDateLocal(new Date(ts));
+            var text = getMinStayTextForIso(iso);
+            if (!text) {
+                hideTip();
+                return;
+            }
+
+            tip.textContent = text;
+            tip.style.left = e.clientX + 'px';
+            tip.style.top = (e.clientY - 6) + 'px';
+            tip.style.display = 'block';
+        });
+
+        pickerRoot.addEventListener('mouseleave', hideTip);
+        pickerRoot.addEventListener('mousedown', hideTip);
     }
 
     function showStripeError(msg) {
@@ -789,10 +887,16 @@
     updateGuestsDisplay();
     loadQuoteAndStripe();
 
-    /* ── Pre-fetch booked dates for the calendar ── */
-    fetch('{{ route("api.booked-dates") }}')
-        .then(function (r) { return r.json(); })
-        .then(function (events) {
+    /* ── Pre-fetch booked dates + minimum stays for the calendar ── */
+    Promise.all([
+        fetch('{{ route("api.booked-dates") }}').then(function (r) { return r.json(); }),
+        fetch('{{ route("api.minimum-stays") }}').then(function (r) { return r.json(); }).catch(function () { return { by_dow: {} }; })
+    ])
+        .then(function (res) {
+            var events = res[0] || [];
+            var stays  = res[1] || { by_dow: {} };
+            minStayByDow = Object.assign(minStayByDow, stays.by_dow || {});
+
             var days = [];
             events.forEach(function (e) {
                 var cur = new Date(e.start + 'T12:00:00');
@@ -805,7 +909,9 @@
             });
             lockedDays = days;
         })
-        .catch(function () { lockedDays = []; });
+        .catch(function () {
+            lockedDays = [];
+        });
 
     /* ════════════════════════════════════════
        Inline Date Edit Panel
@@ -856,6 +962,8 @@
             pendingCheckout = d2.format('YYYY-MM-DD');
             document.getElementById('bn-dates-apply-btn').disabled = false;
         });
+
+        bindMinStayHoverTooltip();
     });
 
     document.getElementById('bn-dates-apply-btn').addEventListener('click', function () {
