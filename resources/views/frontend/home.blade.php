@@ -723,6 +723,34 @@
         .litepicker .container__tooltip::before {
             border-top-color: #1da3dd;
         }
+
+        .booking-minstay-tooltip {
+            position: fixed;
+            z-index: 12000;
+            background: #002b53;
+            color: #fff;
+            font-size: 0.82rem;
+            font-weight: 700;
+            border-radius: 4px;
+            padding: 6px 10px;
+            pointer-events: none;
+            white-space: nowrap;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.22);
+            transform: translate(-50%, -120%);
+        }
+
+        .booking-minstay-tooltip::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: -6px;
+            transform: translateX(-50%);
+            width: 0;
+            height: 0;
+            border-left: 6px solid transparent;
+            border-right: 6px solid transparent;
+            border-top: 6px solid #002b53;
+        }
     </style>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/litepicker/dist/css/litepicker.css">
 @endsection
@@ -1156,7 +1184,7 @@
                                 </select>
                             </div>
 
-                            {{-- Nights counter (shown when both dates are picked) --}}
+                            {{-- Minimum stay hint (shown once check-in is picked) --}}
                             <div class="booking-nights-bar" id="booking-nights-bar" style="display:none;">
                                 <i class="fa fa-moon-o"></i>
                                 <span id="booking-nights-text"></span>
@@ -1548,6 +1576,7 @@
         (function () {
             var picker      = null;
             var quoteTimer  = null;
+            var minStayByDow = { 0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1 };
 
             /* ── Helpers ──────────────────────────────────────────────── */
             function fmt(n) {
@@ -1572,6 +1601,71 @@
                 document.getElementById('booking-minstay-text').textContent = msg;
                 document.getElementById('booking-minstay-error').style.display = 'block';
                 document.getElementById('booking-price-breakdown').style.display = 'none';
+            }
+
+            function showMinStayHint(checkinIso) {
+                if (!checkinIso) {
+                    document.getElementById('booking-nights-bar').style.display = 'none';
+                    return;
+                }
+                var dow = window.VillaDateUtils.dayOfWeekFromIso(checkinIso);
+                var min = parseInt(minStayByDow[dow] || 1, 10);
+                document.getElementById('booking-nights-text').textContent =
+                    'Min stay \u2022 ' + min + ' night' + (min !== 1 ? 's' : '');
+                document.getElementById('booking-nights-bar').style.display = 'flex';
+            }
+
+            function getMinStayTextForIso(iso) {
+                if (!iso) { return ''; }
+                var dow = window.VillaDateUtils.dayOfWeekFromIso(iso);
+                var min = parseInt(minStayByDow[dow] || 1, 10);
+                return 'Min stay \u2022 ' + min + ' night' + (min !== 1 ? 's' : '');
+            }
+
+            function bindMinStayHoverTooltip() {
+                var pickerRoot = document.querySelector('.litepicker');
+                if (!pickerRoot || pickerRoot.dataset.minStayHoverBound === '1') {
+                    return;
+                }
+                pickerRoot.dataset.minStayHoverBound = '1';
+
+                var tip = document.createElement('div');
+                tip.className = 'booking-minstay-tooltip';
+                tip.style.display = 'none';
+                document.body.appendChild(tip);
+
+                function hideTip() {
+                    tip.style.display = 'none';
+                }
+
+                pickerRoot.addEventListener('mousemove', function (e) {
+                    var cell = e.target.closest('.day-item');
+                    if (!cell || cell.classList.contains('is-locked')) {
+                        hideTip();
+                        return;
+                    }
+
+                    var ts = parseInt(cell.getAttribute('data-time') || '', 10);
+                    if (!ts) {
+                        hideTip();
+                        return;
+                    }
+
+                    var iso = window.VillaDateUtils.toIsoDateLocal(new Date(ts));
+                    var text = getMinStayTextForIso(iso);
+                    if (!text) {
+                        hideTip();
+                        return;
+                    }
+
+                    tip.textContent = text;
+                    tip.style.left = e.clientX + 'px';
+                    tip.style.top = (e.clientY - 6) + 'px';
+                    tip.style.display = 'block';
+                });
+
+                pickerRoot.addEventListener('mouseleave', hideTip);
+                pickerRoot.addEventListener('mousedown', hideTip);
             }
 
             function showBreakdown(q) {
@@ -1666,11 +1760,6 @@
                                 showError(q.error || 'Invalid dates selected.');
                             }
                         } else {
-                            /* Update nights bar */
-                            document.getElementById('booking-nights-text').textContent =
-                                q.nights + ' night' + (q.nights !== 1 ? 's' : '') + ' selected';
-                            document.getElementById('booking-nights-bar').style.display = 'flex';
-
                             showBreakdown(q);
                             updateBookNowBtn(checkin, checkout, guests);
                         }
@@ -1698,8 +1787,7 @@
                     lockDays:       lockDays,
                     lockDaysFormat: 'YYYY-MM-DD',
                     disallowLockDaysInRange: true,
-                    tooltipText:    { one: 'night', other: 'nights' },
-                    showTooltip:    true,
+                    showTooltip:    false,
                     autoApply:      true,
                     resetButton:    false,
                 });
@@ -1708,6 +1796,9 @@
                    input values have been written, unlike the onSelect option which
                    does not fire reliably in range mode. */
                 picker.on('selected', function (date1, date2) {
+                    if (date1) {
+                        showMinStayHint(date1.format('YYYY-MM-DD'));
+                    }
                     if (date1 && date2) {
                         debouncedFetch();
                     }
@@ -1717,12 +1808,20 @@
                 picker.on('clear:selection', function () {
                     hideAll();
                 });
+
+                bindMinStayHoverTooltip();
             }
 
-            /* ── Fetch booked dates → init picker ─────────────────────── */
-            fetch('{{ route("api.booked-dates") }}')
-                .then(function (r) { return r.json(); })
-                .then(function (events) {
+            /* ── Fetch calendar locks + minimum stays → init picker ───── */
+            Promise.all([
+                fetch('{{ route("api.booked-dates") }}').then(function (r) { return r.json(); }),
+                fetch('{{ route("api.minimum-stays") }}').then(function (r) { return r.json(); }).catch(function () { return { by_dow: {} }; })
+            ])
+                .then(function (res) {
+                    var events = res[0] || [];
+                    var stays  = res[1] || { by_dow: {} };
+                    minStayByDow = Object.assign(minStayByDow, stays.by_dow || {});
+
                     var lockDays = [];
                     events.forEach(function (e) {
                         var cur = new Date(e.start + 'T12:00:00');

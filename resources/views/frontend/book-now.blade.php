@@ -847,8 +847,7 @@
             lockDays:                lockedDays,
             lockDaysFormat:          'YYYY-MM-DD',
             disallowLockDaysInRange: true,
-            tooltipText:             { one: 'night', other: 'nights' },
-            showTooltip:             true,
+            showTooltip:             false,
             autoApply:               true,
         });
 

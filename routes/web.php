@@ -33,6 +33,7 @@ Route::post('/contact', [FrontendController::class, 'contact'])->name('contact')
 
 // Availability calendar
 Route::get('/api/booked-dates', [AvailabilityController::class, 'bookedDates'])->name('api.booked-dates');
+Route::get('/api/minimum-stays', [AvailabilityController::class, 'minimumStays'])->name('api.minimum-stays');
 
 // Price quote API
 Route::get('/api/price-quote', [AvailabilityController::class, 'priceQuote'])->name('api.price-quote');

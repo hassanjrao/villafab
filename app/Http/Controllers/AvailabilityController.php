@@ -12,6 +12,22 @@ use Illuminate\Http\Request;
 
 class AvailabilityController extends Controller
 {
+    public function minimumStays(): JsonResponse
+    {
+        $rows = MinimumStay::orderBy('day_of_week')
+            ->get(['day_of_week', 'day_name', 'minimum_nights']);
+
+        $byDow = [];
+        foreach ($rows as $row) {
+            $byDow[(int) $row->day_of_week] = (int) $row->minimum_nights;
+        }
+
+        return response()->json([
+            'by_dow' => $byDow,
+            'days'   => $rows,
+        ]);
+    }
+
     public function bookedDates(): JsonResponse
     {
         try {
