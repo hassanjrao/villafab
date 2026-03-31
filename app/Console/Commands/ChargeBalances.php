@@ -23,6 +23,7 @@ class ChargeBalances extends Command
 
     public function handle(): void
     {
+        Log::info('Starting balance charge process.');
         $bookings = Booking::pendingBalance()
             ->balanceDueOn(Carbon::today())
             ->get();

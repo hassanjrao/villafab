@@ -5,6 +5,7 @@ namespace App\Console\Commands;
 use App\Models\Booking;
 use Carbon\Carbon;
 use Illuminate\Console\Command;
+use Illuminate\Support\Facades\Log;
 
 class CancelFailedBookings extends Command
 {
@@ -13,6 +14,7 @@ class CancelFailedBookings extends Command
 
     public function handle(): void
     {
+        Log::info('Starting cancellation of failed bookings.');
         $deadline = Carbon::now()->subDays(2);
 
         $bookings = Booking::failedBalance()

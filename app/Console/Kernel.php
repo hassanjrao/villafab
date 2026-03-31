@@ -29,7 +29,7 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-        $schedule->command(SendBalanceReminders::class)->dailyAt('08:00');
+        $schedule->command(SendBalanceReminders::class)->everyMinute(); // For testing, change to dailyAt('08:00') in production
         $schedule->command(ChargeBalances::class)->dailyAt('09:00');
         $schedule->command(CancelFailedBookings::class)->dailyAt('10:00');
     }

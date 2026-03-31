@@ -7,6 +7,7 @@ use App\Mail\BalanceReminderMail;
 use App\Models\Booking;
 use Carbon\Carbon;
 use Illuminate\Console\Command;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Mail;
 
 class SendBalanceReminders extends Command
@@ -16,6 +17,7 @@ class SendBalanceReminders extends Command
 
     public function handle(): void
     {
+        Log::info('Starting balance reminder process.');
         $reminderDays = (int) env('BALANCE_REMINDER_DAYS_BEFORE', 7);
         $targetDate   = Carbon::today()->addDays($reminderDays)->toDateString();
 
