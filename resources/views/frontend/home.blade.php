@@ -1521,7 +1521,7 @@
                 <div class="cf-sub">We'd love to hear from you. Send us a note with any questions about Villa Fabulosa.
                 </div>
 
-                <form id="requestform" action="{{ route('contact') }}" method="POST" novalidate>
+                <form id="requestform" action="{{ route('contact') }}" method="POST">
                     @csrf
 
                     <div class="cf-row">
@@ -1529,7 +1529,7 @@
                             <label class="cf-label" for="cf-fname">First Name <span>*</span></label>
                             <input type="text" id="cf-fname" name="fname"
                                 class="cf-input @error('fname') is-invalid @enderror" value="{{ old('fname') }}"
-                                placeholder="First name" autocomplete="given-name">
+                                placeholder="First name" autocomplete="given-name" required>
                             @error('fname')
                                 <div class="cf-error">{{ $message }}</div>
                             @enderror
@@ -1538,7 +1538,7 @@
                             <label class="cf-label" for="cf-lname">Last Name <span>*</span></label>
                             <input type="text" id="cf-lname" name="lname"
                                 class="cf-input @error('lname') is-invalid @enderror" value="{{ old('lname') }}"
-                                placeholder="Last name" autocomplete="family-name">
+                                placeholder="Last name" autocomplete="family-name" required>
                             @error('lname')
                                 <div class="cf-error">{{ $message }}</div>
                             @enderror
@@ -1550,7 +1550,7 @@
                             <label class="cf-label" for="cf-email">Email Address <span>*</span></label>
                             <input type="email" id="cf-email" name="email"
                                 class="cf-input @error('email') is-invalid @enderror" value="{{ old('email') }}"
-                                placeholder="you@example.com" autocomplete="email">
+                                placeholder="you@example.com" autocomplete="email" required>
                             @error('email')
                                 <div class="cf-error">{{ $message }}</div>
                             @enderror
@@ -1559,7 +1559,8 @@
                             <label class="cf-label" for="cf-phone">Phone Number <span>*</span></label>
                             <input type="tel" id="cf-phone" name="phone_number"
                                 class="cf-input @error('phone_number') is-invalid @enderror"
-                                value="{{ old('phone_number') }}" placeholder="+1 (555) 000-0000" autocomplete="tel">
+                                value="{{ old('phone_number') }}" placeholder="+1 (555) 000-0000" autocomplete="tel"
+                                required>
                             @error('phone_number')
                                 <div class="cf-error">{{ $message }}</div>
                             @enderror
@@ -1575,7 +1576,7 @@
                     <div class="cf-field">
                         <label class="cf-label" for="cf-message">Message <span>*</span></label>
                         <textarea id="cf-message" name="message" rows="5" class="cf-textarea @error('message') is-invalid @enderror"
-                            placeholder="Tell us how we can help…">{{ old('message') }}</textarea>
+                            placeholder="Tell us how we can help…" required>{{ old('message') }}</textarea>
                         @error('message')
                             <div class="cf-error">{{ $message }}</div>
                         @enderror
