@@ -276,6 +276,8 @@ class FrontendController extends Controller
 
     public function contact(Request $request)
     {
+        $recaptchaEnabled = (bool) config('services.recaptcha.enabled');
+
         $validated = $request->validate([
             'fname'        => 'required|string|max:100',
             'lname'        => 'required|string|max:100',
@@ -283,7 +285,46 @@ class FrontendController extends Controller
             'phone_number' => 'required|string|max:20',
             'message'      => 'required|string|max:2000',
             'reason'       => 'nullable|string|max:500',
+            'g-recaptcha-response' => $recaptchaEnabled ? 'required|string' : 'nullable|string',
         ]);
+
+        if ($recaptchaEnabled) {
+            $recaptchaSecret = config('services.recaptcha.secret');
+
+            if (empty($recaptchaSecret)) {
+                Log::warning('reCAPTCHA is enabled but RECAPTCHA_SECRET_KEY is missing.');
+
+                return back()
+                    ->withErrors(['captcha' => 'Captcha configuration is incomplete. Please try again later.'])
+                    ->withInput();
+            }
+
+            try {
+                $captchaResponse = Http::asForm()->post('https://www.google.com/recaptcha/api/siteverify', [
+                    'secret'   => $recaptchaSecret,
+                    'response' => $request->input('g-recaptcha-response'),
+                    'remoteip' => $request->ip(),
+                ]);
+
+                $captchaBody = $captchaResponse->json();
+                $captchaOk   = (bool) ($captchaBody['success'] ?? false);
+
+                if (!$captchaOk) {
+                    return back()
+                        ->withErrors(['captcha' => 'Captcha verification failed. Please try again.'])
+                        ->withInput();
+                }
+            } catch (\Exception $e) {
+                Log::error('Error verifying reCAPTCHA: ', [
+                    'error' => $e->getMessage(),
+                    'line'  => $e->getLine(),
+                ]);
+
+                return back()
+                    ->withErrors(['captcha' => 'Unable to verify captcha at the moment. Please try again.'])
+                    ->withInput();
+            }
+        }
 
         // Save message for admin panel.
         try {
@@ -298,7 +339,7 @@ class FrontendController extends Controller
                 'user_agent'   => $request->userAgent(),
             ]);
         } catch (\Exception $e) {
-            Log::error('Error saving contact message: ',[
+            Log::error('Error saving contact message: ', [
                 'error' => $e->getMessage(),
                 'line' => $e->getLine(),
                 'trace' => $e->getTraceAsString(),
@@ -309,7 +350,7 @@ class FrontendController extends Controller
         try {
             Mail::to('AlexLluch3@gmail.com')->send(new ContactFormMail($validated));
         } catch (\Exception $e) {
-            Log::error('Error sending contact email: ',[
+            Log::error('Error sending contact email: ', [
                 'error' => $e->getMessage(),
                 'line' => $e->getLine(),
                 'trace' => $e->getTraceAsString(),

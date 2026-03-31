@@ -16,6 +16,7 @@
         .villinfo-link .villinfo-ktla-text {
             text-decoration: none;
         }
+
         .villinfo-link:hover .villinfo-ktla-text {
             text-decoration: underline;
         }
@@ -500,7 +501,7 @@
         .booking-widget-card {
             border-radius: 14px;
             border: 1px solid #e0e0e0;
-            box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.10);
             background: #fff;
             padding: 22px 20px 18px;
         }
@@ -558,7 +559,7 @@
             background: #f0f8ff;
         }
 
-        .booking-date-cell + .booking-date-cell {
+        .booking-date-cell+.booking-date-cell {
             border-left: 1.5px solid #b0b0b0;
         }
 
@@ -683,7 +684,9 @@
         }
 
         @keyframes bk-spin {
-            to { transform: rotate(360deg); }
+            to {
+                transform: rotate(360deg);
+            }
         }
 
         /* ── Litepicker theme overrides ── */
@@ -715,7 +718,7 @@
         }
 
         .litepicker .container__days .day-item.is-in-range {
-            background-color: rgba(29,163,221,0.13) !important;
+            background-color: rgba(29, 163, 221, 0.13) !important;
             color: #1a7aad;
         }
 
@@ -915,11 +918,8 @@
 
 
     <!-- Villa Info Start - entire section links to KTLA announcement -->
-    <a href="http://www.youtube.com/watch?v=xwmYm-XCr_o&t=206s"
-       target="_blank"
-       rel="noopener"
-       class="d-block text-decoration-none villinfo-link"
-       style="color: inherit; cursor: pointer; text-decoration: none;">
+    <a href="http://www.youtube.com/watch?v=xwmYm-XCr_o&t=206s" target="_blank" rel="noopener"
+        class="d-block text-decoration-none villinfo-link" style="color: inherit; cursor: pointer; text-decoration: none;">
         <div id="villinfo" class="site_villa_info_wrapper mb-4 mt-4">
             <div class="container">
                 <div class="row mb-3">
@@ -930,7 +930,7 @@
                         <h3 class="site_title_letter_space"><i>Voted by Expedia Group and VRBO as the Top vacation rental in
                                 California and one of the top Ten Vacation Rentals in the entire country, out of over two
                                 million homes!
-                        </i>
+                            </i>
                         </h3>
                         <h3 class="text-center text-white villinfo-ktla-text">
                             See the official announcement on KTLA
@@ -966,15 +966,9 @@
                                     that is hard to beat.
                                 </p>
                             </div>
-                            <button
-                                class="btn btn-primary btn-sm mt-2"
-                                type="button"
-                                data-toggle="collapse"
-                                data-target="#villaDescriptionMore"
-                                aria-expanded="false"
-                                aria-controls="villaDescriptionMore"
-                                onclick="toggleVillaDescription(this)"
-                            >
+                            <button class="btn btn-primary btn-sm mt-2" type="button" data-toggle="collapse"
+                                data-target="#villaDescriptionMore" aria-expanded="false"
+                                aria-controls="villaDescriptionMore" onclick="toggleVillaDescription(this)">
                                 Show More
                             </button>
                         </div>
@@ -984,15 +978,11 @@
                 {{-- Video --}}
                 <div class="col-lg-6 mb-4">
                     <div class="embed-responsive embed-responsive-16by9 h-100">
-                        <iframe
-                            class="embed-responsive-item"
+                        <iframe class="embed-responsive-item"
                             src="https://www.youtube.com/embed/u5zfhEQfkpk?si=vdTOesRahNdQ_Zmy"
-                            title="YouTube video player"
-                            frameborder="0"
+                            title="YouTube video player" frameborder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            referrerpolicy="strict-origin-when-cross-origin"
-                            allowfullscreen
-                        ></iframe>
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                     </div>
                 </div>
             </div>
@@ -1170,21 +1160,13 @@
                             <div class="booking-date-row">
                                 <div class="booking-date-cell">
                                     <span class="booking-field-label">Check-in</span>
-                                    <input type="text"
-                                           id="checkin_date"
-                                           name="checkin_date"
-                                           class="booking-date-input"
-                                           placeholder="Add date"
-                                           readonly>
+                                    <input type="text" id="checkin_date" name="checkin_date"
+                                        class="booking-date-input" placeholder="Add date" readonly>
                                 </div>
                                 <div class="booking-date-cell">
                                     <span class="booking-field-label">Check-out</span>
-                                    <input type="text"
-                                           id="checkout_date"
-                                           name="checkout_date"
-                                           class="booking-date-input"
-                                           placeholder="Add date"
-                                           readonly>
+                                    <input type="text" id="checkout_date" name="checkout_date"
+                                        class="booking-date-input" placeholder="Add date" readonly>
                                 </div>
                             </div>
 
@@ -1192,8 +1174,9 @@
                             <div class="booking-guests-box">
                                 <span class="booking-field-label">Guests</span>
                                 <select id="guests" name="guests" class="booking-guests-select">
-                                    @for($i = 1; $i <= 24; $i++)
-                                        <option value="{{ $i }}">{{ $i }} guest{{ $i > 1 ? 's' : '' }}</option>
+                                    @for ($i = 1; $i <= 24; $i++)
+                                        <option value="{{ $i }}">{{ $i }}
+                                            guest{{ $i > 1 ? 's' : '' }}</option>
                                     @endfor
                                 </select>
                             </div>
@@ -1205,10 +1188,12 @@
                             </div>
 
                             {{-- Loading indicator --}}
-                            <div id="booking-quote-loading" style="display:none;
+                            <div id="booking-quote-loading"
+                                style="display:none;
                                  text-align:center;padding:12px 0;margin-bottom:12px;
                                  color:#1da3dd;font-size:0.88rem;">
-                                <span style="display:inline-block;width:16px;height:16px;
+                                <span
+                                    style="display:inline-block;width:16px;height:16px;
                                              border:2px solid #c8e8f4;border-top-color:#1da3dd;
                                              border-radius:50%;animation:bk-spin .7s linear infinite;
                                              vertical-align:middle;margin-right:6px;"></span>
@@ -1216,7 +1201,8 @@
                             </div>
 
                             {{-- Min-stay error --}}
-                            <div id="booking-minstay-error" style="display:none;
+                            <div id="booking-minstay-error"
+                                style="display:none;
                                  background:#fff3cd;border:1px solid #ffc107;border-radius:8px;
                                  padding:10px 14px;margin-bottom:12px;font-size:0.85rem;color:#856404;">
                                 <i class="fa fa-exclamation-triangle me-1"></i>
@@ -1224,25 +1210,27 @@
                             </div>
 
                             {{-- Price breakdown (shown when quote is valid) --}}
-                            <div id="booking-price-breakdown" style="display:none;
+                            <div id="booking-price-breakdown"
+                                style="display:none;
                                  background:#f8fffe;border:1px solid #c8e8f4;border-radius:10px;
                                  padding:14px 16px;margin-bottom:14px;font-size:0.88rem;">
                                 <div id="breakdown-rows"></div>
-                                <div style="border-top:1px solid #c8e8f4;margin-top:10px;padding-top:10px;
+                                <div
+                                    style="border-top:1px solid #c8e8f4;margin-top:10px;padding-top:10px;
                                             display:flex;justify-content:space-between;align-items:center;">
                                     <strong style="font-size:1rem;">Total</strong>
-                                    <strong id="breakdown-total"
-                                            style="font-size:1.15rem;color:#1da3dd;"></strong>
+                                    <strong id="breakdown-total" style="font-size:1.15rem;color:#1da3dd;"></strong>
                                 </div>
                             </div>
 
                             {{-- Book Now button --}}
                             <a id="booking-book-now-btn" href="#" class="booking-reserve-btn"
-                               style="display:block;text-align:center;text-decoration:none;">
+                                style="display:block;text-align:center;text-decoration:none;">
                                 Book Now
                             </a>
 
-                            <p id="booking-no-dates-msg" style="display:none;color:#e74c3c;
+                            <p id="booking-no-dates-msg"
+                                style="display:none;color:#e74c3c;
                                font-size:0.82rem;text-align:center;margin-top:6px;">
                                 Please select check-in and check-out dates first.
                             </p>
@@ -1267,11 +1255,10 @@
             <div class="card border-0 shadow-sm mb-4">
                 <div class="card-body d-flex flex-wrap align-items-center justify-content-between">
                     {{-- Airbnb badge (left) --}}
-                    <a href="https://www.airbnb.com/h/villa-fabulosa"
-                       target="_blank"
-                       class="d-flex align-items-center text-decoration-none mb-3 mb-md-0">
+                    <a href="https://www.airbnb.com/h/villa-fabulosa" target="_blank"
+                        class="d-flex align-items-center text-decoration-none mb-3 mb-md-0">
                         <img src="{{ asset('frontend/imgs/airbnb.png') }}" alt="Airbnb"
-                             style="height:74px;width:auto;" class="mr-3">
+                            style="height:74px;width:auto;" class="mr-3">
                         <div class="d-flex flex-column">
                             <span style="font-size:1rem;">
                                 <strong>5.0</strong>
@@ -1290,11 +1277,10 @@
                     </a>
 
                     {{-- Vrbo badge (right) --}}
-                    <a href="https://www.vrbo.com/3610312"
-                       target="_blank"
-                       class="d-flex align-items-center text-decoration-none ml-md-auto">
-                        <img src="{{ asset('frontend/imgs/verbo.png') }}" alt="Vrbo"
-                             style="height:34px;width:auto;" class="mr-3">
+                    <a href="https://www.vrbo.com/3610312" target="_blank"
+                        class="d-flex align-items-center text-decoration-none ml-md-auto">
+                        <img src="{{ asset('frontend/imgs/verbo.png') }}" alt="Vrbo" style="height:34px;width:auto;"
+                            class="mr-3">
                         <div class="d-flex flex-column text-md-right">
                             <span class="text-muted" style="font-size:0.85rem;">
                                 10/10 Loved by Guests
@@ -1314,9 +1300,8 @@
             </div>
             <div class="text-center">
                 <img src="{{ asset('frontend/imgs/temecula-wine-country-villa-fabulosa.png') }}"
-                     alt="Temecula Wine Country map showing Villa Fabulosa"
-                     class="img-fluid"
-                     style="max-width:100%;height:auto;">
+                    alt="Temecula Wine Country map showing Villa Fabulosa" class="img-fluid"
+                    style="max-width:100%;height:auto;">
             </div>
         </div>
     </section>
@@ -1329,12 +1314,16 @@
                 margin: 0 auto;
                 background: #fff;
                 border-radius: 18px;
-                box-shadow: 0 4px 32px rgba(0,0,0,.08);
+                box-shadow: 0 4px 32px rgba(0, 0, 0, .08);
                 padding: 48px 52px 44px;
             }
+
             @media (max-width: 600px) {
-                .cf-wrap { padding: 28px 20px 24px; }
+                .cf-wrap {
+                    padding: 28px 20px 24px;
+                }
             }
+
             .cf-title {
                 font-size: 2rem;
                 font-weight: 800;
@@ -1342,6 +1331,7 @@
                 margin-bottom: 6px;
                 text-align: center;
             }
+
             .cf-sub {
                 text-align: center;
                 color: #777;
@@ -1349,18 +1339,27 @@
                 margin-bottom: 36px;
                 line-height: 1.6;
             }
+
             .cf-row {
                 display: flex;
                 gap: 16px;
                 margin-bottom: 0;
             }
-            @media (max-width: 600px) { .cf-row { flex-direction: column; gap: 0; } }
+
+            @media (max-width: 600px) {
+                .cf-row {
+                    flex-direction: column;
+                    gap: 0;
+                }
+            }
+
             .cf-field {
                 flex: 1;
                 display: flex;
                 flex-direction: column;
                 margin-bottom: 18px;
             }
+
             .cf-label {
                 font-size: 0.78rem;
                 font-weight: 700;
@@ -1369,8 +1368,14 @@
                 letter-spacing: .05em;
                 margin-bottom: 6px;
             }
-            .cf-label span { color: #e74c3c; margin-left: 2px; }
-            .cf-input, .cf-textarea {
+
+            .cf-label span {
+                color: #e74c3c;
+                margin-left: 2px;
+            }
+
+            .cf-input,
+            .cf-textarea {
                 border: 1.5px solid #dde0e6;
                 border-radius: 9px;
                 padding: 11px 14px;
@@ -1382,14 +1387,35 @@
                 font-family: inherit;
                 width: 100%;
             }
-            .cf-input:focus, .cf-textarea:focus {
+
+            .cf-input:focus,
+            .cf-textarea:focus {
                 border-color: #1da3dd;
-                box-shadow: 0 0 0 3px rgba(29,163,221,.1);
+                box-shadow: 0 0 0 3px rgba(29, 163, 221, .1);
             }
-            .cf-input.is-invalid, .cf-textarea.is-invalid { border-color: #e74c3c; }
-            .cf-error { font-size: 0.8rem; color: #e74c3c; margin-top: 4px; }
-            .cf-hint  { font-size: 0.77rem; color: #aaa; margin-top: 4px; }
-            .cf-textarea { resize: vertical; min-height: 120px; }
+
+            .cf-input.is-invalid,
+            .cf-textarea.is-invalid {
+                border-color: #e74c3c;
+            }
+
+            .cf-error {
+                font-size: 0.8rem;
+                color: #e74c3c;
+                margin-top: 4px;
+            }
+
+            .cf-hint {
+                font-size: 0.77rem;
+                color: #aaa;
+                margin-top: 4px;
+            }
+
+            .cf-textarea {
+                resize: vertical;
+                min-height: 120px;
+            }
+
             .cf-submit {
                 display: flex;
                 align-items: center;
@@ -1408,13 +1434,23 @@
                 transition: background .2s, transform .15s;
                 margin-top: 6px;
             }
-            .cf-submit:hover { background: #178fc0; transform: translateY(-1px); }
+
+            .cf-submit:hover {
+                background: #178fc0;
+                transform: translateY(-1px);
+            }
+
+            .cf-captcha-wrap {
+                margin-top: 2px;
+                margin-bottom: 14px;
+            }
+
             /* Sister property card */
             .cf-sister {
                 margin-top: 48px;
                 border-radius: 14px;
                 overflow: hidden;
-                box-shadow: 0 2px 16px rgba(0,0,0,.07);
+                box-shadow: 0 2px 16px rgba(0, 0, 0, .07);
                 display: flex;
                 text-decoration: none !important;
                 color: inherit;
@@ -1423,9 +1459,30 @@
                 margin-left: auto;
                 margin-right: auto;
             }
-            .cf-sister:hover { transform: translateY(-3px); box-shadow: 0 6px 24px rgba(0,0,0,.12); }
-            .cf-sister img { width: 260px; min-height: 200px; object-fit: cover; flex-shrink: 0; }
-            @media (max-width: 600px) { .cf-sister { flex-direction: column; } .cf-sister img { width: 100%; height: 180px; } }
+
+            .cf-sister:hover {
+                transform: translateY(-3px);
+                box-shadow: 0 6px 24px rgba(0, 0, 0, .12);
+            }
+
+            .cf-sister img {
+                width: 260px;
+                min-height: 200px;
+                object-fit: cover;
+                flex-shrink: 0;
+            }
+
+            @media (max-width: 600px) {
+                .cf-sister {
+                    flex-direction: column;
+                }
+
+                .cf-sister img {
+                    width: 100%;
+                    height: 180px;
+                }
+            }
+
             .cf-sister-body {
                 padding: 28px 28px;
                 background: #fff;
@@ -1433,16 +1490,36 @@
                 flex-direction: column;
                 justify-content: center;
             }
-            .cf-sister-eyebrow { font-size: 0.75rem; text-transform: uppercase; letter-spacing: .08em; color: #1da3dd; font-weight: 700; margin-bottom: 8px; }
-            .cf-sister-name { font-size: 1.4rem; font-weight: 800; color: #111; margin-bottom: 8px; }
-            .cf-sister-desc { font-size: 0.88rem; color: #666; line-height: 1.6; }
+
+            .cf-sister-eyebrow {
+                font-size: 0.75rem;
+                text-transform: uppercase;
+                letter-spacing: .08em;
+                color: #1da3dd;
+                font-weight: 700;
+                margin-bottom: 8px;
+            }
+
+            .cf-sister-name {
+                font-size: 1.4rem;
+                font-weight: 800;
+                color: #111;
+                margin-bottom: 8px;
+            }
+
+            .cf-sister-desc {
+                font-size: 0.88rem;
+                color: #666;
+                line-height: 1.6;
+            }
         </style>
 
         <div class="container">
 
             <div class="cf-wrap">
                 <div class="cf-title">Contact Us</div>
-                <div class="cf-sub">We'd love to hear from you. Send us a note with any questions about Villa Fabulosa.</div>
+                <div class="cf-sub">We'd love to hear from you. Send us a note with any questions about Villa Fabulosa.
+                </div>
 
                 <form id="requestform" action="{{ route('contact') }}" method="POST" novalidate>
                     @csrf
@@ -1451,16 +1528,20 @@
                         <div class="cf-field">
                             <label class="cf-label" for="cf-fname">First Name <span>*</span></label>
                             <input type="text" id="cf-fname" name="fname"
-                                   class="cf-input @error('fname') is-invalid @enderror"
-                                   value="{{ old('fname') }}" placeholder="First name" autocomplete="given-name">
-                            @error('fname')<div class="cf-error">{{ $message }}</div>@enderror
+                                class="cf-input @error('fname') is-invalid @enderror" value="{{ old('fname') }}"
+                                placeholder="First name" autocomplete="given-name">
+                            @error('fname')
+                                <div class="cf-error">{{ $message }}</div>
+                            @enderror
                         </div>
                         <div class="cf-field">
                             <label class="cf-label" for="cf-lname">Last Name <span>*</span></label>
                             <input type="text" id="cf-lname" name="lname"
-                                   class="cf-input @error('lname') is-invalid @enderror"
-                                   value="{{ old('lname') }}" placeholder="Last name" autocomplete="family-name">
-                            @error('lname')<div class="cf-error">{{ $message }}</div>@enderror
+                                class="cf-input @error('lname') is-invalid @enderror" value="{{ old('lname') }}"
+                                placeholder="Last name" autocomplete="family-name">
+                            @error('lname')
+                                <div class="cf-error">{{ $message }}</div>
+                            @enderror
                         </div>
                     </div>
 
@@ -1468,33 +1549,49 @@
                         <div class="cf-field">
                             <label class="cf-label" for="cf-email">Email Address <span>*</span></label>
                             <input type="email" id="cf-email" name="email"
-                                   class="cf-input @error('email') is-invalid @enderror"
-                                   value="{{ old('email') }}" placeholder="you@example.com" autocomplete="email">
-                            @error('email')<div class="cf-error">{{ $message }}</div>@enderror
+                                class="cf-input @error('email') is-invalid @enderror" value="{{ old('email') }}"
+                                placeholder="you@example.com" autocomplete="email">
+                            @error('email')
+                                <div class="cf-error">{{ $message }}</div>
+                            @enderror
                         </div>
                         <div class="cf-field">
                             <label class="cf-label" for="cf-phone">Phone Number <span>*</span></label>
                             <input type="tel" id="cf-phone" name="phone_number"
-                                   class="cf-input @error('phone_number') is-invalid @enderror"
-                                   value="{{ old('phone_number') }}" placeholder="+1 (555) 000-0000" autocomplete="tel">
-                            @error('phone_number')<div class="cf-error">{{ $message }}</div>@enderror
+                                class="cf-input @error('phone_number') is-invalid @enderror"
+                                value="{{ old('phone_number') }}" placeholder="+1 (555) 000-0000" autocomplete="tel">
+                            @error('phone_number')
+                                <div class="cf-error">{{ $message }}</div>
+                            @enderror
                         </div>
                     </div>
 
                     <div class="cf-field">
                         <label class="cf-label" for="cf-reason">How Did You Hear About Us?</label>
-                        <input type="text" id="cf-reason" name="reason"
-                               class="cf-input" value="{{ old('reason') }}"
-                               placeholder="Google, referral, social media…">
+                        <input type="text" id="cf-reason" name="reason" class="cf-input"
+                            value="{{ old('reason') }}" placeholder="Google, referral, social media…">
                     </div>
 
                     <div class="cf-field">
                         <label class="cf-label" for="cf-message">Message <span>*</span></label>
-                        <textarea id="cf-message" name="message" rows="5"
-                                  class="cf-textarea @error('message') is-invalid @enderror"
-                                  placeholder="Tell us how we can help…">{{ old('message') }}</textarea>
-                        @error('message')<div class="cf-error">{{ $message }}</div>@enderror
+                        <textarea id="cf-message" name="message" rows="5" class="cf-textarea @error('message') is-invalid @enderror"
+                            placeholder="Tell us how we can help…">{{ old('message') }}</textarea>
+                        @error('message')
+                            <div class="cf-error">{{ $message }}</div>
+                        @enderror
                     </div>
+
+                    @if (config('services.recaptcha.enabled') && config('services.recaptcha.site_key'))
+                        <div class="cf-captcha-wrap">
+                            <div class="g-recaptcha" data-sitekey="{{ config('services.recaptcha.site_key') }}"></div>
+                            @error('g-recaptcha-response')
+                                <div class="cf-error">{{ $message }}</div>
+                            @enderror
+                            @error('captcha')
+                                <div class="cf-error">{{ $message }}</div>
+                            @enderror
+                        </div>
+                    @endif
 
                     <button type="submit" class="cf-submit">
                         <i class="fa fa-paper-plane"></i> Send Message
@@ -1504,11 +1601,12 @@
 
             <a href="https://www.villamagnifica.com/" target="_blank" class="cf-sister">
                 <img src="{{ asset('frontend/imgs/processed-1985b06c-1830-4ea5-a2e8-f9f52acfcf49_9jhkqIFL.jpeg') }}"
-                     alt="Villa Magnifica">
+                    alt="Villa Magnifica">
                 <div class="cf-sister-body">
                     <div class="cf-sister-eyebrow">Sister Property</div>
                     <div class="cf-sister-name">Villa Magnifica</div>
-                    <div class="cf-sister-desc">Visit our other Short-Term Rental in Temecula Wine Country — equally stunning and available to book.</div>
+                    <div class="cf-sister-desc">Visit our other Short-Term Rental in Temecula Wine Country — equally
+                        stunning and available to book.</div>
                 </div>
             </a>
 
@@ -1585,28 +1683,60 @@
 @endsection
 
 @section('scripts_extra')
+    @if (config('services.recaptcha.enabled') && config('services.recaptcha.site_key'))
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    @endif
     <script src="https://cdn.jsdelivr.net/npm/litepicker/dist/litepicker.js"></script>
     <script>
-        (function () {
-            var picker      = null;
-            var quoteTimer  = null;
-            var minStayByDow = { 0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1 };
+        (function() {
+            var picker = null;
+            var quoteTimer = null;
+            var minStayByDow = {
+                0: 1,
+                1: 1,
+                2: 1,
+                3: 1,
+                4: 1,
+                5: 1,
+                6: 1
+            };
 
             /* ── Helpers ──────────────────────────────────────────────── */
             function fmt(n) {
-                return '$' + parseFloat(n).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+                return '$' + parseFloat(n).toLocaleString('en-US', {
+                    minimumFractionDigits: 2,
+                    maximumFractionDigits: 2
+                });
             }
 
             /* Parse "MMM D, YYYY" (Litepicker display format) -> "YYYY-MM-DD"
                without relying on new Date() which misparses non-ISO strings. */
             function parseDisplayDate(val) {
-                if (!val) { return ''; }
-                var months = {Jan:'01',Feb:'02',Mar:'03',Apr:'04',May:'05',Jun:'06',
-                              Jul:'07',Aug:'08',Sep:'09',Oct:'10',Nov:'11',Dec:'12'};
+                if (!val) {
+                    return '';
+                }
+                var months = {
+                    Jan: '01',
+                    Feb: '02',
+                    Mar: '03',
+                    Apr: '04',
+                    May: '05',
+                    Jun: '06',
+                    Jul: '07',
+                    Aug: '08',
+                    Sep: '09',
+                    Oct: '10',
+                    Nov: '11',
+                    Dec: '12'
+                };
                 var m = val.match(/^([A-Za-z]{3})\s+(\d{1,2}),\s*(\d{4})$/);
-                if (!m) { return ''; }
+                if (!m) {
+                    return '';
+                }
                 var mm = months[m[1]];
-                if (!mm) { return ''; }
+                if (!mm) {
+                    return '';
+                }
                 var dd = m[2].length === 1 ? '0' + m[2] : m[2];
                 return m[3] + '-' + mm + '-' + dd;
             }
@@ -1630,7 +1760,9 @@
             }
 
             function getMinStayTextForIso(iso) {
-                if (!iso) { return ''; }
+                if (!iso) {
+                    return '';
+                }
                 var dow = window.VillaDateUtils.dayOfWeekFromIso(iso);
                 var min = parseInt(minStayByDow[dow] || 1, 10);
                 return 'Min stay \u2022 ' + min + ' night' + (min !== 1 ? 's' : '');
@@ -1652,7 +1784,7 @@
                     tip.style.display = 'none';
                 }
 
-                pickerRoot.addEventListener('mousemove', function (e) {
+                pickerRoot.addEventListener('mousemove', function(e) {
                     var cell = e.target.closest('.day-item');
                     if (!cell || cell.classList.contains('is-locked')) {
                         hideTip();
@@ -1715,35 +1847,39 @@
             }
 
             function updateBookNowBtn(checkin, checkout, guests) {
-                var btn     = document.getElementById('booking-book-now-btn');
-                var noMsg   = document.getElementById('booking-no-dates-msg');
+                var btn = document.getElementById('booking-book-now-btn');
+                var noMsg = document.getElementById('booking-no-dates-msg');
                 if (checkin && checkout) {
-                    var url = '{{ route("book-now") }}?checkin=' + checkin +
-                              '&checkout=' + checkout + '&guests=' + guests;
+                    var url = '{{ route('book-now') }}?checkin=' + checkin +
+                        '&checkout=' + checkout + '&guests=' + guests;
                     btn.href = url;
                     btn.onclick = null;
-                    if (noMsg) { noMsg.style.display = 'none'; }
+                    if (noMsg) {
+                        noMsg.style.display = 'none';
+                    }
                 } else {
                     btn.href = '#';
-                    btn.onclick = function (e) {
+                    btn.onclick = function(e) {
                         e.preventDefault();
-                        if (noMsg) { noMsg.style.display = 'block'; }
+                        if (noMsg) {
+                            noMsg.style.display = 'block';
+                        }
                     };
                 }
             }
 
             function hideAll() {
-                document.getElementById('booking-minstay-error').style.display  = 'none';
+                document.getElementById('booking-minstay-error').style.display = 'none';
                 document.getElementById('booking-price-breakdown').style.display = 'none';
-                document.getElementById('booking-nights-bar').style.display      = 'none';
-                document.getElementById('booking-quote-loading').style.display   = 'none';
+                document.getElementById('booking-nights-bar').style.display = 'none';
+                document.getElementById('booking-quote-loading').style.display = 'none';
                 updateBookNowBtn('', '', 1);
             }
 
             function showLoading() {
-                document.getElementById('booking-minstay-error').style.display  = 'none';
+                document.getElementById('booking-minstay-error').style.display = 'none';
                 document.getElementById('booking-price-breakdown').style.display = 'none';
-                document.getElementById('booking-quote-loading').style.display   = 'block';
+                document.getElementById('booking-quote-loading').style.display = 'block';
             }
 
             function hideLoading() {
@@ -1751,17 +1887,22 @@
             }
 
             function fetchQuote() {
-                var checkin  = parseDisplayDate(document.getElementById('checkin_date').value);
+                var checkin = parseDisplayDate(document.getElementById('checkin_date').value);
                 var checkout = parseDisplayDate(document.getElementById('checkout_date').value);
-                var guests   = document.getElementById('guests').value;
+                var guests = document.getElementById('guests').value;
 
-                if (!checkin || !checkout) { return; }
+                if (!checkin || !checkout) {
+                    return;
+                }
 
                 showLoading();
 
-                fetch('{{ route("api.price-quote") }}?checkin=' + checkin + '&checkout=' + checkout + '&guests=' + guests)
-                    .then(function (r) { return r.json(); })
-                    .then(function (q) {
+                fetch('{{ route('api.price-quote') }}?checkin=' + checkin + '&checkout=' + checkout + '&guests=' +
+                        guests)
+                    .then(function(r) {
+                        return r.json();
+                    })
+                    .then(function(q) {
                         hideLoading();
                         if (!q.valid) {
                             updateBookNowBtn('', '', guests);
@@ -1778,7 +1919,7 @@
                             updateBookNowBtn(checkin, checkout, guests);
                         }
                     })
-                    .catch(function () {
+                    .catch(function() {
                         hideLoading();
                     });
             }
@@ -1791,25 +1932,25 @@
             /* ── Litepicker init ──────────────────────────────────────── */
             function initPicker(lockDays) {
                 picker = new Litepicker({
-                    element:        document.getElementById('checkin_date'),
-                    elementEnd:     document.getElementById('checkout_date'),
-                    singleMode:     false,
+                    element: document.getElementById('checkin_date'),
+                    elementEnd: document.getElementById('checkout_date'),
+                    singleMode: false,
                     numberOfMonths: 2,
                     numberOfColumns: 2,
-                    minDate:        new Date(),
-                    format:         'MMM D, YYYY',
-                    lockDays:       lockDays,
+                    minDate: new Date(),
+                    format: 'MMM D, YYYY',
+                    lockDays: lockDays,
                     lockDaysFormat: 'YYYY-MM-DD',
                     disallowLockDaysInRange: true,
-                    showTooltip:    false,
-                    autoApply:      true,
-                    resetButton:    false,
+                    showTooltip: false,
+                    autoApply: true,
+                    resetButton: false,
                 });
 
                 /* 'selected' is Litepicker's EventEmitter event — fires after both
                    input values have been written, unlike the onSelect option which
                    does not fire reliably in range mode. */
-                picker.on('selected', function (date1, date2) {
+                picker.on('selected', function(date1, date2) {
                     if (date1) {
                         showMinStayHint(date1.format('YYYY-MM-DD'));
                     }
@@ -1819,7 +1960,7 @@
                 });
 
                 /* Clear breakdown when selection is cleared */
-                picker.on('clear:selection', function () {
+                picker.on('clear:selection', function() {
                     hideAll();
                 });
 
@@ -1828,18 +1969,28 @@
 
             /* ── Fetch calendar locks + minimum stays → init picker ───── */
             Promise.all([
-                fetch('{{ route("api.booked-dates") }}').then(function (r) { return r.json(); }),
-                fetch('{{ route("api.minimum-stays") }}').then(function (r) { return r.json(); }).catch(function () { return { by_dow: {} }; })
-            ])
-                .then(function (res) {
+                    fetch('{{ route('api.booked-dates') }}').then(function(r) {
+                        return r.json();
+                    }),
+                    fetch('{{ route('api.minimum-stays') }}').then(function(r) {
+                        return r.json();
+                    }).catch(function() {
+                        return {
+                            by_dow: {}
+                        };
+                    })
+                ])
+                .then(function(res) {
                     var events = res[0] || [];
-                    var stays  = res[1] || { by_dow: {} };
+                    var stays = res[1] || {
+                        by_dow: {}
+                    };
                     minStayByDow = Object.assign(minStayByDow, stays.by_dow || {});
 
                     var lockDays = [];
-                    events.forEach(function (e) {
+                    events.forEach(function(e) {
                         var cur = new Date(e.start + 'T12:00:00');
-                        var end = new Date(e.end   + 'T12:00:00');
+                        var end = new Date(e.end + 'T12:00:00');
                         while (cur < end) {
                             // Keep lock dates in local calendar date to avoid timezone shifts.
                             lockDays.push(window.VillaDateUtils.toIsoDateLocal(cur));
@@ -1848,7 +1999,9 @@
                     });
                     initPicker(lockDays);
                 })
-                .catch(function () { initPicker([]); });
+                .catch(function() {
+                    initPicker([]);
+                });
 
             /* ── Guests change → re-fetch quote ───────────────────────── */
             document.getElementById('guests').addEventListener('change', debouncedFetch);
@@ -1857,10 +2010,12 @@
             updateBookNowBtn('', '', 1);
 
             /* ── Clear dates ──────────────────────────────────────────── */
-            document.getElementById('booking-clear-dates').addEventListener('click', function (e) {
+            document.getElementById('booking-clear-dates').addEventListener('click', function(e) {
                 e.preventDefault();
-                if (picker) { picker.clearSelection(); }
-                document.getElementById('checkin_date').value  = '';
+                if (picker) {
+                    picker.clearSelection();
+                }
+                document.getElementById('checkin_date').value = '';
                 document.getElementById('checkout_date').value = '';
                 hideAll();
             });
