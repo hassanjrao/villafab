@@ -1584,6 +1584,9 @@
                     @if (config('services.recaptcha.enabled') && config('services.recaptcha.site_key'))
                         <div class="cf-captcha-wrap">
                             <div class="g-recaptcha" data-sitekey="{{ config('services.recaptcha.site_key') }}"></div>
+                            <div class="cf-error" id="cf-captcha-required" style="display:none;">
+                                Please complete the captcha before submitting.
+                            </div>
                             @error('g-recaptcha-response')
                                 <div class="cf-error">{{ $message }}</div>
                             @enderror
@@ -1685,6 +1688,33 @@
 @section('scripts_extra')
     @if (config('services.recaptcha.enabled') && config('services.recaptcha.site_key'))
         <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+        <script>
+            (function() {
+                var form = document.getElementById('requestform');
+                var captchaError = document.getElementById('cf-captcha-required');
+
+                if (!form) {
+                    return;
+                }
+
+                form.addEventListener('submit', function(e) {
+                    var isSolved = false;
+
+                    if (typeof grecaptcha !== 'undefined' && typeof grecaptcha.getResponse === 'function') {
+                        isSolved = !!grecaptcha.getResponse();
+                    }
+
+                    if (!isSolved) {
+                        e.preventDefault();
+                        if (captchaError) {
+                            captchaError.style.display = 'block';
+                        }
+                    } else if (captchaError) {
+                        captchaError.style.display = 'none';
+                    }
+                });
+            })();
+        </script>
     @endif
     <script src="https://cdn.jsdelivr.net/npm/litepicker/dist/litepicker.js"></script>
     <script>
