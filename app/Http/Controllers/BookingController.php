@@ -9,6 +9,7 @@ use App\Models\RatePeriod;
 use Carbon\Carbon;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
+use Stripe\Customer;
 use Stripe\Stripe;
 use Stripe\PaymentIntent;
 
@@ -34,7 +35,7 @@ class BookingController extends Controller
         if ($nights < $minNights) {
             return response()->json([
                 'error' => 'Minimum stay for a ' . $checkin->format('l') .
-                           ' check-in is ' . $minNights . ' night' . ($minNights !== 1 ? 's' : '') . '.',
+                    ' check-in is ' . $minNights . ' night' . ($minNights !== 1 ? 's' : '') . '.',
             ], 422);
         }
 
@@ -60,14 +61,61 @@ class BookingController extends Controller
         $taxAmount   = round($taxBase * ($settings->tax_rate / 100), 2);
         $total       = round($taxBase + $taxAmount, 2);
 
-        // ── Create Stripe PaymentIntent ───────────────────────────────
+        // ── Determine payment type ────────────────────────────────────
+        $chargesBefore = (int) env('BALANCE_CHARGE_DAYS_BEFORE', 60);
+        $daysToCheckin = (int) Carbon::today()->diffInDays($checkin);
+        $isDeferred    = $daysToCheckin > $chargesBefore;
+
         Stripe::setApiKey(config('services.stripe.secret'));
 
+        if ($isDeferred) {
+            // ── Deferred: charge 50% now, 50% later ──────────────────
+            $deposit           = round($total / 2, 2);
+            $balance           = round($total - $deposit, 2);
+            $balanceChargeDate = $checkin->copy()->subDays($chargesBefore)->toDateString();
+
+            // Create a placeholder Customer (name/email added in success())
+            $customer = Customer::create([]);
+
+            $paymentIntent = PaymentIntent::create([
+                'amount'                     => (int) round($deposit * 100),
+                'currency'                   => 'usd',
+                'customer'                   => $customer->id,
+                'setup_future_usage'         => 'off_session',
+                'automatic_payment_methods'  => ['enabled' => true],
+                'metadata'                   => [
+                    'checkin'              => $request->checkin,
+                    'checkout'             => $request->checkout,
+                    'guests'               => $guests,
+                    'nights'               => $nights,
+                    'subtotal'             => round($subtotal, 2),
+                    'cleaning_fee'         => $cleaningFee,
+                    'tax_amount'           => $taxAmount,
+                    'total'                => $total,
+                    'payment_type'         => 'deferred',
+                    'deposit'              => $deposit,
+                    'balance_due'          => $balance,
+                    'balance_charge_date'  => $balanceChargeDate,
+                    'stripe_customer_id'   => $customer->id,
+                ],
+            ]);
+
+            return response()->json([
+                'client_secret'       => $paymentIntent->client_secret,
+                'total'               => $deposit,
+                'full_total'          => $total,
+                'balance_due'         => $balance,
+                'payment_type'        => 'deferred',
+                'balance_charge_date' => $balanceChargeDate,
+            ]);
+        }
+
+        // ── Full payment ──────────────────────────────────────────────
         $paymentIntent = PaymentIntent::create([
-            'amount'   => (int) round($total * 100),
-            'currency' => 'usd',
+            'amount'                    => (int) round($total * 100),
+            'currency'                  => 'usd',
             'automatic_payment_methods' => ['enabled' => true],
-            'metadata' => [
+            'metadata'                  => [
                 'checkin'      => $request->checkin,
                 'checkout'     => $request->checkout,
                 'guests'       => $guests,
@@ -76,12 +124,14 @@ class BookingController extends Controller
                 'cleaning_fee' => $cleaningFee,
                 'tax_amount'   => $taxAmount,
                 'total'        => $total,
+                'payment_type' => 'full',
             ],
         ]);
 
         return response()->json([
             'client_secret' => $paymentIntent->client_secret,
             'total'         => $total,
+            'payment_type'  => 'full',
         ]);
     }
 
@@ -91,10 +141,14 @@ class BookingController extends Controller
         $status = $request->query('redirect_status', '');
         $name   = $request->query('name', 'Guest');
 
-        $checkin  = '';
-        $checkout = '';
-        $guests   = 1;
-        $total    = '';
+        $checkin           = '';
+        $checkout          = '';
+        $guests            = 1;
+        $total             = '';
+        $paymentType       = 'full';
+        $balanceChargeDate = null;
+        $balanceDue        = null;
+        $amountPaid        = null;
 
         if ($piId && $status === 'succeeded') {
             try {
@@ -110,36 +164,99 @@ class BookingController extends Controller
                 $checkout = $meta['checkout'] ?? '';
                 $guests   = (int) ($meta['guests']   ?? 1);
                 $nights   = (int) ($meta['nights']   ?? 0);
-                $total    = '$' . number_format($pi->amount / 100, 2);
+
+                $paymentType       = $meta['payment_type'] ?? 'full';
+                $stripeCustomerId  = $meta['stripe_customer_id'] ?? null;
+                $balanceDueMeta    = isset($meta['balance_due']) ? (float) $meta['balance_due'] : null;
+                $balanceChargeDate = $meta['balance_charge_date'] ?? null;
+                $fullTotal         = isset($meta['total']) ? (float) $meta['total'] : null;
 
                 // Retrieve billing details from latest charge
                 $bd    = $pi->latest_charge->billing_details ?? null;
                 $email = $bd->email ?? '';
                 $phone = $bd->phone ?? '';
 
-                // Persist booking record (idempotent — safe to call on page refresh)
-                Booking::firstOrCreate(
-                    ['payment_intent_id' => $piId],
-                    [
-                        'name'         => $name,
-                        'email'        => $email,
-                        'phone'        => $phone,
-                        'checkin'      => $checkin,
-                        'checkout'     => $checkout,
-                        'guests'       => $guests,
-                        'nights'       => $nights,
-                        'subtotal'     => (float) ($meta['subtotal']     ?? 0),
-                        'cleaning_fee' => (float) ($meta['cleaning_fee'] ?? 0),
-                        'tax_amount'   => (float) ($meta['tax_amount']   ?? 0),
-                        'total'        => round($pi->amount / 100, 2),
-                        'status'       => $pi->status,
-                    ]
-                );
+                $chargedAmount = round($pi->amount / 100, 2);
+                $amountPaid    = $chargedAmount;
+
+                if ($paymentType === 'deferred') {
+                    $total = '$' . number_format($chargedAmount, 2);
+
+                    // Update Stripe Customer with guest billing details
+                    if ($stripeCustomerId) {
+                        Customer::update($stripeCustomerId, array_filter([
+                            'name'  => $name,
+                            'email' => $email ?: null,
+                            'phone' => $phone ?: null,
+                        ]));
+                    }
+
+                    $paymentMethodId = $pi->payment_method ?? null;
+                    $balanceDue      = $balanceDueMeta;
+
+                    Booking::firstOrCreate(
+                        ['payment_intent_id' => $piId],
+                        [
+                            'name'                     => $name,
+                            'email'                    => $email,
+                            'phone'                    => $phone,
+                            'checkin'                  => $checkin,
+                            'checkout'                 => $checkout,
+                            'guests'                   => $guests,
+                            'nights'                   => $nights,
+                            'subtotal'                 => (float) ($meta['subtotal']     ?? 0),
+                            'cleaning_fee'             => (float) ($meta['cleaning_fee'] ?? 0),
+                            'tax_amount'               => (float) ($meta['tax_amount']   ?? 0),
+                            'total'                    => $fullTotal ?? $chargedAmount,
+                            'status'                   => 'deposit_paid',
+                            'payment_type'             => 'deferred',
+                            'stripe_customer_id'       => $stripeCustomerId,
+                            'stripe_payment_method_id' => $paymentMethodId,
+                            'amount_paid'              => $chargedAmount,
+                            'balance_due'              => $balanceDueMeta,
+                            'balance_charge_date'      => $balanceChargeDate,
+                            'balance_status'           => 'pending',
+                        ]
+                    );
+                } else {
+                    $total = '$' . number_format($chargedAmount, 2);
+
+                    Booking::firstOrCreate(
+                        ['payment_intent_id' => $piId],
+                        [
+                            'name'         => $name,
+                            'email'        => $email,
+                            'phone'        => $phone,
+                            'checkin'      => $checkin,
+                            'checkout'     => $checkout,
+                            'guests'       => $guests,
+                            'nights'       => $nights,
+                            'subtotal'     => (float) ($meta['subtotal']     ?? 0),
+                            'cleaning_fee' => (float) ($meta['cleaning_fee'] ?? 0),
+                            'tax_amount'   => (float) ($meta['tax_amount']   ?? 0),
+                            'total'        => $chargedAmount,
+                            'status'       => $pi->status,
+                            'payment_type' => 'full',
+                            'amount_paid'  => $chargedAmount,
+                        ]
+                    );
+                }
             } catch (\Exception $e) {
                 // non-fatal — still show the success page
             }
         }
 
-        return view('frontend.booking-success', compact('name', 'checkin', 'checkout', 'guests', 'total', 'status'));
+        return view('frontend.booking-success', compact(
+            'name',
+            'checkin',
+            'checkout',
+            'guests',
+            'total',
+            'status',
+            'paymentType',
+            'balanceChargeDate',
+            'balanceDue',
+            'amountPaid'
+        ));
     }
 }
