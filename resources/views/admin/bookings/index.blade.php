@@ -37,6 +37,7 @@
                             <thead>
                                 <tr>
                                     <th>#</th>
+                                    <th>Booking ID</th>
                                     <th>Guest Name</th>
                                     <th>Email</th>
                                     <th>Check-in</th>
@@ -54,6 +55,7 @@
                             <tbody>
                                 @foreach ($bookings as $booking)
                                     <tr>
+                                        <td class="text-muted fs-sm">{{ $loop->iteration }}</td>
                                         <td class="text-muted fs-sm">{{ $booking->id }}</td>
                                         <td class="fw-semibold">{{ $booking->name }}</td>
                                         <td class="fs-sm text-muted">{{ $booking->email ?: '—' }}</td>

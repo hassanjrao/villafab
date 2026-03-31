@@ -46,9 +46,9 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach($messages as $message)
+                            @foreach($messages as $ind => $message)
                                 <tr>
-                                    <td class="text-muted fs-sm">{{ $message->id }}</td>
+                                    <td class="text-muted fs-sm">{{ ++$ind }}</td>
                                     <td class="fw-semibold">{{ $message->fname }} {{ $message->lname }}</td>
                                     <td class="fs-sm text-muted">
                                         @if($message->email)
