@@ -29,9 +29,9 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-        $schedule->command(SendBalanceReminders::class)->everyMinute(); // For testing, change to dailyAt('08:00') in production
-        $schedule->command(ChargeBalances::class)->everyMinute(); // For testing, change to dailyAt('09:00') in production
-        $schedule->command(CancelFailedBookings::class)->everyMinute(); // For testing, change to dailyAt('10:00') in production
+        $schedule->command(SendBalanceReminders::class)->everySixHours(); // For testing, change to dailyAt('08:00') in production
+        $schedule->command(ChargeBalances::class)->everySixHours(); // For testing, change to dailyAt('09:00') in production
+        $schedule->command(CancelFailedBookings::class)->everySixHours(); // For testing, change to dailyAt('10:00') in production
     }
 
     /**
