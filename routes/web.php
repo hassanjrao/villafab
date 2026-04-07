@@ -6,6 +6,7 @@ use App\Http\Controllers\AdminContactMessageController;
 use App\Http\Controllers\AdminPricingController;
 use App\Http\Controllers\AvailabilityController;
 use App\Http\Controllers\BookingController;
+use App\Http\Controllers\UpdateCardController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FrontendController;
 use Illuminate\Support\Facades\Auth;
@@ -41,6 +42,10 @@ Route::get('/api/price-quote', [AvailabilityController::class, 'priceQuote'])->n
 // Stripe booking
 Route::post('/booking/payment-intent', [BookingController::class, 'createPaymentIntent'])->name('booking.payment-intent');
 Route::get('/booking/success',         [BookingController::class, 'success'])->name('booking.success');
+
+// Update payment card (token-authenticated, no login)
+Route::get('/booking/update-card/{token}',  [UpdateCardController::class, 'show'])->name('booking.update-card');
+Route::post('/booking/update-card/{token}', [UpdateCardController::class, 'update'])->name('booking.update-card.process');
 
 // Gallery sub-pages
 Route::get('/the-rooms', [FrontendController::class, 'theRooms'])->name('the-rooms');

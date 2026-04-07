@@ -25,6 +25,7 @@ class Booking extends Model
         'payment_type',
         'stripe_customer_id',
         'stripe_payment_method_id',
+        'card_update_token',
         'amount_paid',
         'balance_due',
         'balance_charge_date',

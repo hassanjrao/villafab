@@ -12,16 +12,18 @@ class BalanceFailedMail extends Mailable
     use Queueable, SerializesModels;
 
     public Booking $booking;
+    public array $cardDetails;
 
-    public function __construct(Booking $booking)
+    public function __construct(Booking $booking, array $cardDetails = [])
     {
-        $this->booking = $booking;
+        $this->booking     = $booking;
+        $this->cardDetails = $cardDetails;
     }
 
     public function build(): self
     {
         return $this
-            ->subject('Action Required: Balance Payment Failed – Villa Fabulosa')
+            ->subject('Action Required: Issue Processing Your Payment – Villa Fabulosa')
             ->view('emails.balance-failed');
     }
 }

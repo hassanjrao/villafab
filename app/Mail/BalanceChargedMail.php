@@ -12,16 +12,22 @@ class BalanceChargedMail extends Mailable
     use Queueable, SerializesModels;
 
     public Booking $booking;
+    public float $chargedAmount;
+    public float $previouslyPaid;
+    public array $cardDetails;
 
-    public function __construct(Booking $booking)
+    public function __construct(Booking $booking, float $chargedAmount, float $previouslyPaid, array $cardDetails = [])
     {
-        $this->booking = $booking;
+        $this->booking       = $booking;
+        $this->chargedAmount = $chargedAmount;
+        $this->previouslyPaid = $previouslyPaid;
+        $this->cardDetails   = $cardDetails;
     }
 
     public function build(): self
     {
         return $this
-            ->subject('Your Balance Payment Was Processed – Villa Fabulosa')
+            ->subject('Payment Received – Your Villa Fabulosa Reservation is Fully Confirmed')
             ->view('emails.balance-charged');
     }
 }

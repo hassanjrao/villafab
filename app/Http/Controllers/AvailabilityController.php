@@ -31,7 +31,7 @@ class AvailabilityController extends Controller
     public function bookedDates(): JsonResponse
     {
         try {
-            $ical = new ICal(env('GOOGLE_CAL_ICS_URL'), [
+            $ical = new ICal(config('services.google.calendar_ics_url'), [
                 'defaultSpan'      => 2,
                 'defaultTimeZone'  => 'America/Los_Angeles',
                 'skipRecurrence'   => false,

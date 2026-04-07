@@ -41,4 +41,13 @@ return [
         'secret'   => env('RECAPTCHA_SECRET_KEY'),
     ],
 
+    'booking' => [
+        'balance_charge_days_before'   => (int) env('BALANCE_CHARGE_DAYS_BEFORE', 60),
+        'balance_reminder_days_before' => (int) env('BALANCE_REMINDER_DAYS_BEFORE', 3),
+    ],
+
+    'google' => [
+        'calendar_ics_url' => env('GOOGLE_CAL_ICS_URL'),
+    ],
+
 ];

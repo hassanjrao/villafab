@@ -12,16 +12,18 @@ class BalanceFailedAdminMail extends Mailable
     use Queueable, SerializesModels;
 
     public Booking $booking;
+    public array $cardDetails;
 
-    public function __construct(Booking $booking)
+    public function __construct(Booking $booking, array $cardDetails = [])
     {
-        $this->booking = $booking;
+        $this->booking     = $booking;
+        $this->cardDetails = $cardDetails;
     }
 
     public function build(): self
     {
         return $this
-            ->subject('[Admin] Balance Charge Failed – Booking #' . $this->booking->id)
+            ->subject('Action Required: Issue Processing Payment – Booking #' . $this->booking->id)
             ->view('emails.balance-failed-admin');
     }
 }

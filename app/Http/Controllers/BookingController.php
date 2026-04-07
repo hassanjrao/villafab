@@ -12,6 +12,7 @@ use Carbon\Carbon;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Str;
 use Stripe\Customer;
 use Stripe\Stripe;
 use Stripe\PaymentIntent;
@@ -67,7 +68,7 @@ class BookingController extends Controller
 
         // ── Determine payment type ────────────────────────────────────
         // Split payment is only available when check-in is far enough out.
-        $chargesBefore  = (int) env('BALANCE_CHARGE_DAYS_BEFORE', 60);
+        $chargesBefore  = (int) config('services.booking.balance_charge_days_before', 60);
         $daysToCheckin  = (int) Carbon::today()->diffInDays($checkin);
         $splitEligible  = $daysToCheckin > $chargesBefore;
 
@@ -240,6 +241,7 @@ class BookingController extends Controller
                             'payment_type'             => 'deferred',
                             'stripe_customer_id'       => $stripeCustomerId,
                             'stripe_payment_method_id' => $paymentMethodId,
+                            'card_update_token'        => Str::random(48),
                             'amount_paid'              => $chargedAmount,
                             'balance_due'              => $balanceDueMeta,
                             'balance_charge_date'      => $balanceChargeDate,
