@@ -268,6 +268,61 @@
             color: #1da3dd;
         }
 
+        /* ── Payment option picker ── */
+        .bn-pay-options {
+            margin-top: 16px;
+            border-top: 1px solid #eee;
+            padding-top: 14px;
+        }
+
+        .bn-pay-options-title {
+            font-size: 0.82rem;
+            font-weight: 700;
+            color: #555;
+            text-transform: uppercase;
+            letter-spacing: .04em;
+            margin-bottom: 10px;
+        }
+
+        .bn-pay-option {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            padding: 12px 14px;
+            border: 1.5px solid #dde0e6;
+            border-radius: 10px;
+            margin-bottom: 8px;
+            cursor: pointer;
+            transition: border-color .15s, background .15s;
+        }
+
+        .bn-pay-option:hover {
+            border-color: #1da3dd;
+        }
+
+        .bn-pay-option.active {
+            border-color: #1da3dd;
+            background: #f0f9fd;
+        }
+
+        .bn-pay-option input[type="radio"] {
+            margin-top: 3px;
+            accent-color: #1da3dd;
+        }
+
+        .bn-pay-option-label {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #111;
+        }
+
+        .bn-pay-option-desc {
+            font-size: 0.8rem;
+            color: #777;
+            margin-top: 2px;
+            line-height: 1.5;
+        }
+
         /* ── Loading / error states ── */
         @keyframes bn-ring-spin {
             to {
@@ -709,16 +764,39 @@
                             <div id="bn-breakdown" style="display:none;">
                                 <div id="bn-breakdown-rows"></div>
                                 <div class="bn-total-row">
-                                    <span id="bn-total-label">Total of stay</span>
+                                    <span id="bn-total-label">Grand Total</span>
                                     <span id="bn-total" class="bn-total-amount"></span>
                                 </div>
-                            </div>
 
-                            {{-- Deferred payment notice (shown only for bookings > BALANCE_CHARGE_DAYS_BEFORE days out) --}}
-                            <div id="bn-deferred-notice" style="display:none;margin-top:14px;" class="bn-alert-warning">
-                                <i class="fa fa-calendar" style="color:#f39c12;margin-right:6px;"></i>
-                                <strong>Split Payment:</strong>
-                                <span id="bn-deferred-text"></span>
+                                {{-- Payment option picker (only visible when split is available) --}}
+                                <div id="bn-pay-options" class="bn-pay-options" style="display:none;">
+                                    <div class="bn-pay-options-title">How would you like to pay?</div>
+
+                                    <label class="bn-pay-option active" id="bn-opt-full-label">
+                                        <input type="radio" name="bn_pay_choice" id="bn-opt-full" value="full" checked>
+                                        <div>
+                                            <div class="bn-pay-option-label">Pay in full</div>
+                                            <div class="bn-pay-option-desc" id="bn-opt-full-desc">Pay the full amount now.</div>
+                                        </div>
+                                    </label>
+
+                                    <label class="bn-pay-option" id="bn-opt-split-label">
+                                        <input type="radio" name="bn_pay_choice" id="bn-opt-split" value="split">
+                                        <div>
+                                            <div class="bn-pay-option-label">Split payment</div>
+                                            <div class="bn-pay-option-desc" id="bn-opt-split-desc">Pay 50% now, the rest will be charged later.</div>
+                                        </div>
+                                    </label>
+
+                                    {{-- Due-today row (shown when split is chosen) --}}
+                                    <div id="bn-due-today" style="display:none;margin-top:8px;padding:10px 14px;background:#fff8e1;border:1px solid #ffe082;border-radius:8px;font-size:0.88rem;">
+                                        <div style="display:flex;justify-content:space-between;">
+                                            <span><strong>Due today (50%)</strong></span>
+                                            <span id="bn-due-today-amount" style="font-weight:700;color:#1da3dd;"></span>
+                                        </div>
+                                        <div id="bn-due-later-line" style="display:flex;justify-content:space-between;margin-top:4px;color:#777;font-size:0.82rem;"></div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
@@ -817,6 +895,9 @@
             /* deferred payment state (populated when PI is created) */
             var currentPaymentType = 'full';
             var currentPayBtnLabel = 'Complete Booking →';
+            var lastQuoteData = null;     /* cached price-quote response */
+            var lastPiData = null;        /* cached payment-intent response */
+            var userPayChoice = 'full';   /* user's selected payment option */
 
             /* ── Helpers ── */
             function nightsBetween(c1, c2) {
@@ -931,6 +1012,129 @@
                 btnText.textContent = on ? 'Processing…' : currentPayBtnLabel;
             }
 
+            function applyPayChoiceUI(payType, data) {
+                var dueTodayEl = document.getElementById('bn-due-today');
+                var fullLabel = document.getElementById('bn-opt-full-label');
+                var splitLabel = document.getElementById('bn-opt-split-label');
+
+                if (payType === 'deferred') {
+                    /* Split chosen */
+                    currentPayBtnLabel = 'Pay ' + fmt(data.total) + ' Deposit →';
+                    dueTodayEl.style.display = 'block';
+                    document.getElementById('bn-due-today-amount').textContent = fmt(data.total);
+                    var balDue = data.balance_due || 0;
+                    var chargeDateFmt = data.balance_charge_date ?
+                        new Date(data.balance_charge_date + 'T12:00:00').toLocaleDateString('en-US', {
+                            month: 'long', day: 'numeric', year: 'numeric'
+                        }) : '';
+                    document.getElementById('bn-due-later-line').innerHTML =
+                        '<span>Remaining ' + fmt(balDue) + '</span>' +
+                        '<span>charged ' + chargeDateFmt + '</span>';
+                    splitLabel.classList.add('active');
+                    fullLabel.classList.remove('active');
+                } else {
+                    /* Full chosen */
+                    var fullTotal = data.full_total || data.total;
+                    currentPayBtnLabel = 'Complete Booking →';
+                    dueTodayEl.style.display = 'none';
+                    fullLabel.classList.add('active');
+                    splitLabel.classList.remove('active');
+                }
+            }
+
+            /* Radio button change -> re-create payment intent with chosen type */
+            function onPayChoiceChange(choice) {
+                if (choice === userPayChoice) return;
+                userPayChoice = choice;
+
+                /* Unmount old Stripe element */
+                if (paymentElement) {
+                    paymentElement.unmount();
+                    paymentElement = null;
+                }
+                stripeElements = null;
+                document.getElementById('payment-element').innerHTML = '';
+                document.getElementById('bn-payment-loading').style.display = 'block';
+                document.getElementById('bn-pay-btn').disabled = true;
+                hideStripeError();
+
+                fetch('{{ route('booking.payment-intent') }}', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]')
+                            .getAttribute('content'),
+                    },
+                    body: JSON.stringify({
+                        checkin: checkin,
+                        checkout: checkout,
+                        guests: guests,
+                        payment_type: choice
+                    }),
+                })
+                .then(function(r) { return r.json(); })
+                .then(function(data) {
+                    if (data.error) {
+                        document.getElementById('bn-payment-loading').style.display = 'none';
+                        showStripeError(data.error);
+                        return;
+                    }
+
+                    lastPiData = data;
+                    currentPaymentType = data.payment_type || 'full';
+
+                    applyPayChoiceUI(currentPaymentType, data);
+                    document.getElementById('bn-pay-btn-text').textContent = currentPayBtnLabel;
+
+                    stripeElements = stripe.elements({
+                        clientSecret: data.client_secret,
+                        appearance: {
+                            theme: 'stripe',
+                            variables: {
+                                colorPrimary: '#1da3dd',
+                                colorBackground: '#ffffff',
+                                colorText: '#111111',
+                                colorDanger: '#e74c3c',
+                                fontFamily: 'Inter, system-ui, sans-serif',
+                                fontSizeBase: '15px',
+                                borderRadius: '8px',
+                                spacingUnit: '4px',
+                            },
+                            rules: {
+                                '.Input': { border: '1.5px solid #dde0e6', boxShadow: 'none' },
+                                '.Input:focus': { border: '1.5px solid #1da3dd', boxShadow: 'none' },
+                                '.Tab': { border: '1.5px solid #dde0e6' },
+                                '.Tab--selected': { border: '1.5px solid #1da3dd', boxShadow: '0 0 0 1px #1da3dd' },
+                            },
+                        },
+                    });
+
+                    paymentElement = stripeElements.create('payment', {
+                        layout: { type: 'tabs', defaultCollapsed: false },
+                    });
+                    paymentElement.mount('#payment-element');
+                    paymentElement.on('ready', function() {
+                        document.getElementById('bn-payment-loading').style.display = 'none';
+                        document.getElementById('bn-pay-btn').disabled = false;
+                    });
+                    paymentElement.on('change', function(e) {
+                        if (e.complete) hideStripeError();
+                    });
+                })
+                .catch(function() {
+                    document.getElementById('bn-payment-loading').style.display = 'none';
+                    showStripeError('Could not update payment. Please try again.');
+                });
+            }
+
+            /* Wire up radio buttons */
+            document.getElementById('bn-opt-full').addEventListener('change', function() {
+                if (this.checked) onPayChoiceChange('full');
+            });
+            document.getElementById('bn-opt-split').addEventListener('change', function() {
+                if (this.checked) onPayChoiceChange('split');
+            });
+
             function updateDateDisplay() {
                 var nights = nightsBetween(checkin, checkout);
                 document.getElementById('bn-date-display').textContent =
@@ -945,6 +1149,15 @@
 
             /* ── Main load / reload function ── */
             function loadQuoteAndStripe() {
+                /* Reset payment choice to "Pay in Full" */
+                userPayChoice = 'full';
+                document.getElementById('bn-opt-full').checked = true;
+                document.getElementById('bn-opt-split').checked = false;
+                document.getElementById('bn-opt-full-label').classList.add('active');
+                document.getElementById('bn-opt-split-label').classList.remove('active');
+                document.getElementById('bn-due-today').style.display = 'none';
+                document.getElementById('bn-pay-options').style.display = 'none';
+
                 /* Reset price breakdown UI */
                 document.getElementById('bn-loading').style.display = 'block';
                 document.getElementById('bn-breakdown').style.display = 'none';
@@ -1001,9 +1214,10 @@
                             fmt(q.tax_amount) + '</span></div>';
                         document.getElementById('bn-breakdown-rows').innerHTML = rows;
                         document.getElementById('bn-total').textContent = fmt(q.total);
-                        document.getElementById('bn-total-label').textContent = 'Total of stay';
+                        document.getElementById('bn-total-label').textContent = 'Grand Total';
                         document.getElementById('bn-breakdown').style.display = 'block';
-                        document.getElementById('bn-deferred-notice').style.display = 'none';
+
+                        lastQuoteData = q;
 
                         return fetch('{{ route('booking.payment-intent') }}', {
                             method: 'POST',
@@ -1015,7 +1229,8 @@
                             body: JSON.stringify({
                                 checkin: checkin,
                                 checkout: checkout,
-                                guests: guests
+                                guests: guests,
+                                payment_type: userPayChoice
                             }),
                         });
                     })
@@ -1032,28 +1247,38 @@
                             return;
                         }
 
-                        /* ── Deferred vs full payment UI ── */
+                        /* ── Payment option UI ── */
+                        lastPiData = data;
                         currentPaymentType = data.payment_type || 'full';
-                        if (currentPaymentType === 'deferred') {
-                            var chargeDateFmt = data.balance_charge_date ?
-                                new Date(data.balance_charge_date + 'T12:00:00').toLocaleDateString('en-US', {
-                                    month: 'long',
-                                    day: 'numeric',
-                                    year: 'numeric'
-                                }) :
-                                data.balance_charge_date;
-                            document.getElementById('bn-deferred-text').innerHTML =
-                                'You pay <strong>' + fmt(data.total) + '</strong> today. ' +
-                                'The remaining <strong>' + fmt(data.balance_due) + '</strong> ' +
-                                'will be automatically charged on <strong>' + chargeDateFmt + '</strong>.';
-                            document.getElementById('bn-deferred-notice').style.display = 'block';
-                            document.getElementById('bn-total-label').textContent = 'Due today (50%)';
-                            document.getElementById('bn-total').textContent = fmt(data.total);
-                            currentPayBtnLabel = 'Pay ' + fmt(data.total) + ' Deposit →';
+                        var splitEligible = !!data.split_eligible;
+
+                        if (splitEligible) {
+                            /* Show the choice UI */
+                            document.getElementById('bn-pay-options').style.display = 'block';
+
+                            var fullTotal = data.full_total || data.total;
+                            document.getElementById('bn-opt-full-desc').textContent =
+                                'Pay ' + fmt(fullTotal) + ' now.';
+
+                            if (data.balance_due) {
+                                var depositAmt = data.deposit || Math.round(fullTotal / 2 * 100) / 100;
+                                var chargeDateFmt = data.balance_charge_date ?
+                                    new Date(data.balance_charge_date + 'T12:00:00').toLocaleDateString('en-US', {
+                                        month: 'long',
+                                        day: 'numeric',
+                                        year: 'numeric'
+                                    }) :
+                                    data.balance_charge_date;
+                                document.getElementById('bn-opt-split-desc').textContent =
+                                    'Pay ' + fmt(depositAmt) + ' today. Remaining ' +
+                                    fmt(data.balance_due) + ' charged on ' + chargeDateFmt + '.';
+                            }
                         } else {
-                            document.getElementById('bn-deferred-notice').style.display = 'none';
-                            currentPayBtnLabel = 'Complete Booking →';
+                            document.getElementById('bn-pay-options').style.display = 'none';
                         }
+
+                        /* Apply the right button label */
+                        applyPayChoiceUI(currentPaymentType, data);
                         document.getElementById('bn-pay-btn-text').textContent = currentPayBtnLabel;
 
                         stripeElements = stripe.elements({

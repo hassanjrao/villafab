@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\BookingConfirmedAdminMail;
+use App\Mail\BookingConfirmedMail;
 use App\Models\Booking;
 use App\Models\MinimumStay;
 use App\Models\PricingSetting;
@@ -9,6 +11,7 @@ use App\Models\RatePeriod;
 use Carbon\Carbon;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 use Stripe\Customer;
 use Stripe\Stripe;
 use Stripe\PaymentIntent;
@@ -18,9 +21,10 @@ class BookingController extends Controller
     public function createPaymentIntent(Request $request): JsonResponse
     {
         $request->validate([
-            'checkin'  => 'required|date',
-            'checkout' => 'required|date|after:checkin',
-            'guests'   => 'required|integer|min:1',
+            'checkin'      => 'required|date',
+            'checkout'     => 'required|date|after:checkin',
+            'guests'       => 'required|integer|min:1',
+            'payment_type' => 'sometimes|in:full,split',
         ]);
 
         $checkin  = Carbon::parse($request->checkin);
@@ -62,9 +66,14 @@ class BookingController extends Controller
         $total       = round($taxBase + $taxAmount, 2);
 
         // ── Determine payment type ────────────────────────────────────
-        $chargesBefore = (int) env('BALANCE_CHARGE_DAYS_BEFORE', 60);
-        $daysToCheckin = (int) Carbon::today()->diffInDays($checkin);
-        $isDeferred    = $daysToCheckin > $chargesBefore;
+        // Split payment is only available when check-in is far enough out.
+        $chargesBefore  = (int) env('BALANCE_CHARGE_DAYS_BEFORE', 60);
+        $daysToCheckin  = (int) Carbon::today()->diffInDays($checkin);
+        $splitEligible  = $daysToCheckin > $chargesBefore;
+
+        // User chooses: 'split' (deferred 50/50) or 'full' (default).
+        $chosenType = $request->input('payment_type', 'full');
+        $isDeferred = $splitEligible && $chosenType === 'split';
 
         Stripe::setApiKey(config('services.stripe.secret'));
 
@@ -89,6 +98,7 @@ class BookingController extends Controller
                     'guests'               => $guests,
                     'nights'               => $nights,
                     'subtotal'             => round($subtotal, 2),
+                    'extra_guest_charges'  => round($extraGuestTotal, 2),
                     'cleaning_fee'         => $cleaningFee,
                     'tax_amount'           => $taxAmount,
                     'total'                => $total,
@@ -106,6 +116,7 @@ class BookingController extends Controller
                 'full_total'          => $total,
                 'balance_due'         => $balance,
                 'payment_type'        => 'deferred',
+                'split_eligible'      => true,
                 'balance_charge_date' => $balanceChargeDate,
             ]);
         }
@@ -116,23 +127,39 @@ class BookingController extends Controller
             'currency'                  => 'usd',
             'automatic_payment_methods' => ['enabled' => true],
             'metadata'                  => [
-                'checkin'      => $request->checkin,
-                'checkout'     => $request->checkout,
-                'guests'       => $guests,
-                'nights'       => $nights,
-                'subtotal'     => round($subtotal, 2),
-                'cleaning_fee' => $cleaningFee,
-                'tax_amount'   => $taxAmount,
-                'total'        => $total,
-                'payment_type' => 'full',
+                'checkin'              => $request->checkin,
+                'checkout'             => $request->checkout,
+                'guests'               => $guests,
+                'nights'               => $nights,
+                'subtotal'             => round($subtotal, 2),
+                'extra_guest_charges'  => round($extraGuestTotal, 2),
+                'cleaning_fee'         => $cleaningFee,
+                'tax_amount'           => $taxAmount,
+                'total'                => $total,
+                'payment_type'         => 'full',
             ],
         ]);
 
-        return response()->json([
-            'client_secret' => $paymentIntent->client_secret,
-            'total'         => $total,
-            'payment_type'  => 'full',
-        ]);
+        $response = [
+            'client_secret'  => $paymentIntent->client_secret,
+            'total'          => $total,
+            'payment_type'   => 'full',
+            'split_eligible' => $splitEligible,
+        ];
+
+        // Include split details so the frontend can display the option
+        if ($splitEligible) {
+            $deposit           = round($total / 2, 2);
+            $balance           = round($total - $deposit, 2);
+            $balanceChargeDate = $checkin->copy()->subDays($chargesBefore)->toDateString();
+
+            $response['full_total']          = $total;
+            $response['deposit']             = $deposit;
+            $response['balance_due']         = $balance;
+            $response['balance_charge_date'] = $balanceChargeDate;
+        }
+
+        return response()->json($response);
     }
 
     public function success(Request $request)
@@ -194,7 +221,7 @@ class BookingController extends Controller
                     $paymentMethodId = $pi->payment_method ?? null;
                     $balanceDue      = $balanceDueMeta;
 
-                    Booking::firstOrCreate(
+                    $booking = Booking::firstOrCreate(
                         ['payment_intent_id' => $piId],
                         [
                             'name'                     => $name,
@@ -205,6 +232,7 @@ class BookingController extends Controller
                             'guests'                   => $guests,
                             'nights'                   => $nights,
                             'subtotal'                 => (float) ($meta['subtotal']     ?? 0),
+                            'extra_guest_charges'      => (float) ($meta['extra_guest_charges'] ?? 0),
                             'cleaning_fee'             => (float) ($meta['cleaning_fee'] ?? 0),
                             'tax_amount'               => (float) ($meta['tax_amount']   ?? 0),
                             'total'                    => $fullTotal ?? $chargedAmount,
@@ -218,28 +246,39 @@ class BookingController extends Controller
                             'balance_status'           => 'pending',
                         ]
                     );
+
+                    if ($booking->wasRecentlyCreated) {
+                        Mail::to($booking->email)->send(new BookingConfirmedMail($booking));
+                        Mail::to(config('mail.from.address'))->send(new BookingConfirmedAdminMail($booking));
+                    }
                 } else {
                     $total = '$' . number_format($chargedAmount, 2);
 
-                    Booking::firstOrCreate(
+                    $booking = Booking::firstOrCreate(
                         ['payment_intent_id' => $piId],
                         [
-                            'name'         => $name,
-                            'email'        => $email,
-                            'phone'        => $phone,
-                            'checkin'      => $checkin,
-                            'checkout'     => $checkout,
-                            'guests'       => $guests,
-                            'nights'       => $nights,
-                            'subtotal'     => (float) ($meta['subtotal']     ?? 0),
-                            'cleaning_fee' => (float) ($meta['cleaning_fee'] ?? 0),
-                            'tax_amount'   => (float) ($meta['tax_amount']   ?? 0),
-                            'total'        => $chargedAmount,
-                            'status'       => $pi->status,
-                            'payment_type' => 'full',
-                            'amount_paid'  => $chargedAmount,
+                            'name'                => $name,
+                            'email'               => $email,
+                            'phone'               => $phone,
+                            'checkin'             => $checkin,
+                            'checkout'            => $checkout,
+                            'guests'              => $guests,
+                            'nights'              => $nights,
+                            'subtotal'            => (float) ($meta['subtotal']     ?? 0),
+                            'extra_guest_charges' => (float) ($meta['extra_guest_charges'] ?? 0),
+                            'cleaning_fee'        => (float) ($meta['cleaning_fee'] ?? 0),
+                            'tax_amount'          => (float) ($meta['tax_amount']   ?? 0),
+                            'total'               => $chargedAmount,
+                            'status'              => $pi->status,
+                            'payment_type'        => 'full',
+                            'amount_paid'         => $chargedAmount,
                         ]
                     );
+
+                    if ($booking->wasRecentlyCreated) {
+                        Mail::to($booking->email)->send(new BookingConfirmedMail($booking));
+                        Mail::to(config('mail.from.address'))->send(new BookingConfirmedAdminMail($booking));
+                    }
                 }
             } catch (\Exception $e) {
                 // non-fatal — still show the success page

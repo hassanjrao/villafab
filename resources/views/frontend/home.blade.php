@@ -1562,11 +1562,7 @@
                             <input type="tel" id="cf-phone" name="phone_number"
                                 class="cf-input @error('phone_number') is-invalid @enderror"
                                 value="{{ old('phone_number') }}" placeholder="+1 (555) 000-0000" autocomplete="tel"
-                                required inputmode="tel" pattern="[0-9+\-().\s]*"
-                                oninput="this.value=this.value.replace(/[^0-9+\-().\s]/g,'');">
-                            <div class="cf-hint">Digits, spaces, and + - ( ) only</div>
-                            <div class="cf-error" id="cf-phone-error" style="display:none;">Please enter a valid phone
-                                number (digits only).</div>
+                                required>
                             @error('phone_number')
                                 <div class="cf-error">{{ $message }}</div>
                             @enderror
@@ -1693,41 +1689,6 @@
 @endsection
 
 @section('scripts_extra')
-    <script>
-        /* ── Phone number client-side validation ── */
-        (function() {
-            var phoneInput = document.getElementById('cf-phone');
-            var phoneError = document.getElementById('cf-phone-error');
-            var form = document.getElementById('requestform');
-
-            if (!phoneInput || !form) return;
-
-            /* Live: strip any character that isn't a digit, +, -, (, ), space */
-            phoneInput.addEventListener('input', function() {
-                this.value = this.value.replace(/[^0-9+\-().\s]/g, '');
-                var hasDigit = /\d/.test(this.value);
-                if (this.value && !hasDigit) {
-                    phoneInput.classList.add('is-invalid');
-                    phoneError.style.display = 'block';
-                } else {
-                    phoneInput.classList.remove('is-invalid');
-                    phoneError.style.display = 'none';
-                }
-            });
-
-            /* On submit: must contain at least one digit */
-            form.addEventListener('submit', function(e) {
-                var val = phoneInput.value.trim();
-                var hasDigit = /\d/.test(val);
-                if (!val || !hasDigit) {
-                    e.preventDefault();
-                    phoneInput.classList.add('is-invalid');
-                    phoneError.style.display = 'block';
-                    phoneInput.focus();
-                }
-            }, true); /* capture phase so it runs before recaptcha handler */
-        })();
-    </script>
     @if (config('services.recaptcha.enabled') && config('services.recaptcha.site_key'))
         <script src="https://www.google.com/recaptcha/api.js" async defer></script>
         <script>
@@ -2052,9 +2013,9 @@
                         var ciParts = ci.split('-');
                         var coParts = co.split('-');
                         var ciD = new Date(parseInt(ciParts[0]), parseInt(ciParts[1]) - 1, parseInt(ciParts[
-                            2]));
+                        2]));
                         var coD = new Date(parseInt(coParts[0]), parseInt(coParts[1]) - 1, parseInt(coParts[
-                            2]));
+                        2]));
                         var nights = Math.round((coD - ciD) / 86400000);
                         var minNights = getMinStayForIso(ci);
 

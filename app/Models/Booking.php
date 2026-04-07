@@ -17,6 +17,7 @@ class Booking extends Model
         'guests',
         'nights',
         'subtotal',
+        'extra_guest_charges',
         'cleaning_fee',
         'tax_amount',
         'total',
@@ -30,6 +31,7 @@ class Booking extends Model
         'balance_status',
         'balance_reminder_sent_at',
         'balance_failure_notified_at',
+        'notes',
     ];
 
     protected $casts = [
@@ -38,6 +40,7 @@ class Booking extends Model
         'guests'                      => 'integer',
         'nights'                      => 'integer',
         'subtotal'                    => 'decimal:2',
+        'extra_guest_charges'         => 'decimal:2',
         'cleaning_fee'                => 'decimal:2',
         'tax_amount'                  => 'decimal:2',
         'total'                       => 'decimal:2',
