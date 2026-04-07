@@ -1562,7 +1562,10 @@
                             <input type="tel" id="cf-phone" name="phone_number"
                                 class="cf-input @error('phone_number') is-invalid @enderror"
                                 value="{{ old('phone_number') }}" placeholder="+1 (555) 000-0000" autocomplete="tel"
+                                inputmode="numeric" oninput="this.value=this.value.replace(/[^0-9+\-().\s]/g,'');"
                                 required>
+                            <div class="cf-error" id="cf-phone-error" style="display:none;">Please enter a valid phone
+                                number (digits only).</div>
                             @error('phone_number')
                                 <div class="cf-error">{{ $message }}</div>
                             @enderror
@@ -1689,6 +1692,51 @@
 @endsection
 
 @section('scripts_extra')
+    <script>
+        /* ── Phone number: block non-numeric input ── */
+        (function() {
+            var phoneInput = document.getElementById('cf-phone');
+            var phoneError = document.getElementById('cf-phone-error');
+            var form = document.getElementById('requestform');
+            if (!phoneInput || !form) return;
+
+            phoneInput.addEventListener('keydown', function(e) {
+                var allowed = ['Backspace', 'Delete', 'Tab', 'Escape', 'Enter', 'ArrowLeft', 'ArrowRight',
+                    'Home', 'End'
+                ];
+                /* Allow: allowed keys, Ctrl/Cmd combos, and valid phone chars */
+                if (allowed.indexOf(e.key) !== -1 || e.ctrlKey || e.metaKey) return;
+                if (/^[0-9+\-().\s]$/.test(e.key)) return;
+                e.preventDefault();
+            });
+
+            phoneInput.addEventListener('input', function() {
+                this.value = this.value.replace(/[^0-9+\-().\s]/g, '');
+                var valid = /\d/.test(this.value);
+                phoneInput.classList.toggle('is-invalid', this.value.length > 0 && !valid);
+                phoneError.style.display = (this.value.length > 0 && !valid) ? 'block' : 'none';
+            });
+
+            /* Also block paste of non-numeric text */
+            phoneInput.addEventListener('paste', function(e) {
+                e.preventDefault();
+                var pasted = (e.clipboardData || window.clipboardData).getData('text');
+                var cleaned = pasted.replace(/[^0-9+\-().\s]/g, '');
+                var pos = this.selectionStart;
+                this.value = this.value.slice(0, pos) + cleaned + this.value.slice(this.selectionEnd);
+            });
+
+            form.addEventListener('submit', function(e) {
+                var val = phoneInput.value.trim();
+                if (!val || !/\d/.test(val)) {
+                    e.preventDefault();
+                    phoneInput.classList.add('is-invalid');
+                    phoneError.style.display = 'block';
+                    phoneInput.focus();
+                }
+            }, true);
+        })();
+    </script>
     @if (config('services.recaptcha.enabled') && config('services.recaptcha.site_key'))
         <script src="https://www.google.com/recaptcha/api.js" async defer></script>
         <script>
@@ -2013,9 +2061,9 @@
                         var ciParts = ci.split('-');
                         var coParts = co.split('-');
                         var ciD = new Date(parseInt(ciParts[0]), parseInt(ciParts[1]) - 1, parseInt(ciParts[
-                        2]));
+                            2]));
                         var coD = new Date(parseInt(coParts[0]), parseInt(coParts[1]) - 1, parseInt(coParts[
-                        2]));
+                            2]));
                         var nights = Math.round((coD - ciD) / 86400000);
                         var minNights = getMinStayForIso(ci);
 
