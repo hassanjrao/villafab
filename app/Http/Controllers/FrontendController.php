@@ -282,7 +282,7 @@ class FrontendController extends Controller
             'fname'        => 'required|string|max:100',
             'lname'        => 'required|string|max:100',
             'email'        => 'required|email|max:200',
-            'phone_number' => 'required|string|max:20',
+            'phone_number' => ['required', 'string', 'max:20', 'regex:/^[0-9+\-().\s]+$/'],
             'message'      => 'required|string|max:2000',
             'reason'       => 'nullable|string|max:500',
             'g-recaptcha-response' => $recaptchaEnabled ? 'required|string' : 'nullable|string',
