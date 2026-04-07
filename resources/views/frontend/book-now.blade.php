@@ -486,22 +486,9 @@
 
         #bn-litepicker-container .litepicker .container__days .day-item.is-locked {
             pointer-events: none;
-            text-decoration: line-through;
-            color: #b23b3b;
-            background-color: #fde2e2;
+            color: #aaa;
+            background-color: #e9e9e9;
             border-radius: 6px;
-            position: relative;
-        }
-
-        #bn-litepicker-container .litepicker .container__days .day-item.is-locked::after {
-            content: '';
-            position: absolute;
-            left: 12%;
-            right: 12%;
-            top: 50%;
-            height: 2px;
-            background-color: rgba(178, 59, 59, 0.85);
-            transform: translateY(-50%) rotate(-15deg);
         }
 
         #bn-litepicker-container .litepicker .container__days .day-item.is-start-date,
@@ -847,14 +834,15 @@
                 });
             }
 
-            function getMinStayTextForIso(iso) {
-                if (!iso) {
-                    return '';
-                }
+            /* Returns the min-stay (in nights) for a given check-in ISO date */
+            function getMinStayForIso(iso) {
+                if (!iso) return 1;
                 var dow = window.VillaDateUtils.dayOfWeekFromIso(iso);
-                var min = parseInt(minStayByDow[dow] || 1, 10);
-                return 'Min stay \u2022 ' + min + ' night' + (min !== 1 ? 's' : '');
+                return parseInt(minStayByDow[dow] || 1, 10);
             }
+
+            /* Track the selected check-in for tooltip logic */
+            var bnSelectedCheckinIso = null;
 
             function bindMinStayHoverTooltip() {
                 var pickerRoot = document.querySelector('#bn-litepicker-container .litepicker');
@@ -885,20 +873,32 @@
                         return;
                     }
 
+                    /* Only show tooltip when user has selected check-in but not checkout */
+                    if (!bnSelectedCheckinIso) {
+                        hideTip();
+                        return;
+                    }
+
                     var ts = parseInt(cell.getAttribute('data-time') || '', 10);
                     if (!ts) {
                         hideTip();
                         return;
                     }
 
-                    var iso = window.VillaDateUtils.toIsoDateLocal(new Date(ts));
-                    var text = getMinStayTextForIso(iso);
-                    if (!text) {
+                    var hoveredIso = window.VillaDateUtils.toIsoDateLocal(new Date(ts));
+                    var ciParts = bnSelectedCheckinIso.split('-');
+                    var hvParts = hoveredIso.split('-');
+                    var ciDate = new Date(parseInt(ciParts[0]), parseInt(ciParts[1]) - 1, parseInt(ciParts[2]));
+                    var hvDate = new Date(parseInt(hvParts[0]), parseInt(hvParts[1]) - 1, parseInt(hvParts[2]));
+                    var nightsFromCheckin = Math.round((hvDate - ciDate) / 86400000);
+                    var minNights = getMinStayForIso(bnSelectedCheckinIso);
+
+                    if (nightsFromCheckin >= minNights || nightsFromCheckin <= 0) {
                         hideTip();
                         return;
                     }
 
-                    tip.textContent = text;
+                    tip.textContent = 'Min stay \u2022 ' + minNights + ' night' + (minNights !== 1 ? 's' : '');
                     tip.style.left = e.clientX + 'px';
                     tip.style.top = (e.clientY - 6) + 'px';
                     tip.style.display = 'block';
@@ -1205,10 +1205,38 @@
                     autoApply: true,
                 });
 
+                litepicker.on('preselect', function(d1, d2) {
+                    if (d1 && !d2) {
+                        bnSelectedCheckinIso = d1.format('YYYY-MM-DD');
+                    }
+                });
+
                 litepicker.on('selected', function(d1, d2) {
-                    pendingCheckin = d1.format('YYYY-MM-DD');
-                    pendingCheckout = d2.format('YYYY-MM-DD');
-                    document.getElementById('bn-dates-apply-btn').disabled = false;
+                    if (d1 && d2) {
+                        var ci = d1.format('YYYY-MM-DD');
+                        var co = d2.format('YYYY-MM-DD');
+                        var ciParts = ci.split('-');
+                        var coParts = co.split('-');
+                        var ciD = new Date(parseInt(ciParts[0]), parseInt(ciParts[1]) - 1, parseInt(
+                            ciParts[2]));
+                        var coD = new Date(parseInt(coParts[0]), parseInt(coParts[1]) - 1, parseInt(
+                            coParts[2]));
+                        var nights = Math.round((coD - ciD) / 86400000);
+                        var minNights = getMinStayForIso(ci);
+
+                        if (nights < minNights) {
+                            /* Invalid checkout — clear and keep panel open */
+                            litepicker.clearSelection();
+                            bnSelectedCheckinIso = null;
+                            document.getElementById('bn-dates-apply-btn').disabled = true;
+                            return;
+                        }
+
+                        bnSelectedCheckinIso = null;
+                        pendingCheckin = ci;
+                        pendingCheckout = co;
+                        document.getElementById('bn-dates-apply-btn').disabled = false;
+                    }
                 });
 
                 bindMinStayHoverTooltip();
