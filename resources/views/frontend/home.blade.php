@@ -260,6 +260,11 @@
             font-weight: 500;
         }
 
+        /* Keep navbar above the lightbox */
+        #mainNav {
+            z-index: 10002 !important;
+        }
+
         /* ── Lightbox ── */
         #photo-lightbox {
             display: none;
@@ -284,7 +289,7 @@
 
         #photo-lightbox .lb-close {
             position: fixed;
-            top: 20px;
+            top: 70px;
             right: 24px;
             background: none;
             border: none;
@@ -927,7 +932,8 @@
                         <h1 class="site_title_letter_space mb-3">Villa Fabulosa</h1>
                     </div>
                     <div class="col-lg-12">
-                        <h3 class="site_title_letter_space"><i>Voted by Expedia Group and VRBO as the Top vacation rental in
+                        <h3 class="site_title_letter_space text-center"><i>Voted by Expedia Group and VRBO as the Top
+                                vacation rental in
                                 California and one of the top Ten Vacation Rentals in the entire country, out of over two
                                 million homes!
                             </i>
@@ -1277,7 +1283,7 @@
                     </a>
 
                     {{-- Vrbo badge (right) --}}
-                    <a href="https://www.vrbo.com/3610312" target="_blank"
+                    <a href="https://vrbo.com/3610312?dateless=true" target="_blank"
                         class="d-flex align-items-center text-decoration-none ml-md-auto">
                         <img src="{{ asset('frontend/imgs/verbo.png') }}" alt="Vrbo" style="height:34px;width:auto;"
                             class="mr-3">
