@@ -68,10 +68,11 @@ class BookingController extends Controller
         $total       = round($taxBase + $taxAmount, 2);
 
         // ── Determine payment type ────────────────────────────────────
-        // Split payment is only available when check-in is far enough out.
-        $chargesBefore  = (int) config('services.booking.balance_charge_days_before', 60);
-        $daysToCheckin  = (int) Carbon::today()->diffInDays($checkin);
-        $splitEligible  = $daysToCheckin > $chargesBefore;
+        // Split payment is only available when check-in is far enough out
+        // that the balance charge date hasn't passed yet.
+        $chargesBefore     = (int) config('services.booking.balance_charge_days_before', 60);
+        $balanceChargeDate = $checkin->copy()->subDays($chargesBefore);
+        $splitEligible     = Carbon::today()->lt($balanceChargeDate);
 
         // User chooses: 'split' (deferred 50/50) or 'full' (default).
         $chosenType = $request->input('payment_type', 'full');
@@ -81,9 +82,9 @@ class BookingController extends Controller
 
         if ($isDeferred) {
             // ── Deferred: charge 50% now, 50% later ──────────────────
-            $deposit           = round($total / 2, 2);
-            $balance           = round($total - $deposit, 2);
-            $balanceChargeDate = $checkin->copy()->subDays($chargesBefore)->toDateString();
+            $deposit              = round($total / 2, 2);
+            $balance              = round($total - $deposit, 2);
+            $balanceChargeDateStr = $balanceChargeDate->toDateString();
 
             // Create a placeholder Customer (name/email added in success())
             $customer = Customer::create([]);
@@ -107,7 +108,7 @@ class BookingController extends Controller
                     'payment_type'         => 'deferred',
                     'deposit'              => $deposit,
                     'balance_due'          => $balance,
-                    'balance_charge_date'  => $balanceChargeDate,
+                    'balance_charge_date'  => $balanceChargeDateStr,
                     'stripe_customer_id'   => $customer->id,
                 ],
             ]);
@@ -119,7 +120,7 @@ class BookingController extends Controller
                 'balance_due'         => $balance,
                 'payment_type'        => 'deferred',
                 'split_eligible'      => true,
-                'balance_charge_date' => $balanceChargeDate,
+                'balance_charge_date' => $balanceChargeDateStr,
             ]);
         }
 
@@ -151,14 +152,13 @@ class BookingController extends Controller
 
         // Include split details so the frontend can display the option
         if ($splitEligible) {
-            $deposit           = round($total / 2, 2);
-            $balance           = round($total - $deposit, 2);
-            $balanceChargeDate = $checkin->copy()->subDays($chargesBefore)->toDateString();
+            $deposit = round($total / 2, 2);
+            $balance = round($total - $deposit, 2);
 
             $response['full_total']          = $total;
             $response['deposit']             = $deposit;
             $response['balance_due']         = $balance;
-            $response['balance_charge_date'] = $balanceChargeDate;
+            $response['balance_charge_date'] = $balanceChargeDate->toDateString();
         }
 
         return response()->json($response);
