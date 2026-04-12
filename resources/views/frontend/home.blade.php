@@ -703,6 +703,21 @@
             }
         }
 
+        /* ── Litepicker grid alignment fix ── */
+        .litepicker .month-item-weekdays-row {
+            display: grid !important;
+            grid-template-columns: repeat(7, 1fr) !important;
+        }
+
+        .litepicker .month-item-weekdays-row > div {
+            text-align: center !important;
+        }
+
+        .litepicker .container__days {
+            display: grid !important;
+            grid-template-columns: repeat(7, 1fr) !important;
+        }
+
         /* ── Litepicker theme overrides ── */
         .litepicker .container__days .day-item.is-locked {
             pointer-events: none;
@@ -768,6 +783,17 @@
             border-left: 6px solid transparent;
             border-right: 6px solid transparent;
             border-top: 6px solid #002b53;
+        }
+
+        @media (max-width: 767px) {
+            .litepicker .container__months {
+                flex-direction: column !important;
+                width: 100% !important;
+            }
+
+            .litepicker .container__months .month-item {
+                width: 100% !important;
+            }
         }
     </style>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/litepicker/dist/css/litepicker.css">
@@ -2027,12 +2053,13 @@
 
             /* ── Litepicker init ──────────────────────────────────────── */
             function initPicker(lockDays) {
+                var isMobile = window.innerWidth < 768;
                 picker = new Litepicker({
                     element: document.getElementById('checkin_date'),
                     elementEnd: document.getElementById('checkout_date'),
                     singleMode: false,
-                    numberOfMonths: 2,
-                    numberOfColumns: 2,
+                    numberOfMonths: isMobile ? 1 : 2,
+                    numberOfColumns: isMobile ? 1 : 2,
                     minDate: new Date(),
                     format: 'MMM D, YYYY',
                     lockDays: lockDays,
@@ -2099,6 +2126,9 @@
                 bindMinStayHoverTooltip();
             }
 
+            var cachedLockDays = [];
+            var lastPickerMobile = null;
+
             /* ── Fetch calendar locks + minimum stays → init picker ───── */
             Promise.all([
                     fetch('{{ route('api.booked-dates') }}').then(function(r) {
@@ -2129,11 +2159,32 @@
                             cur.setDate(cur.getDate() + 1);
                         }
                     });
+                    cachedLockDays = lockDays;
+                    lastPickerMobile = window.innerWidth < 768;
                     initPicker(lockDays);
                 })
                 .catch(function() {
+                    cachedLockDays = [];
+                    lastPickerMobile = window.innerWidth < 768;
                     initPicker([]);
                 });
+
+            /* Re-init picker when crossing the mobile/desktop breakpoint */
+            var resizeTimer = null;
+            window.addEventListener('resize', function() {
+                clearTimeout(resizeTimer);
+                resizeTimer = setTimeout(function() {
+                    var nowMobile = window.innerWidth < 768;
+                    if (lastPickerMobile !== null && nowMobile !== lastPickerMobile) {
+                        lastPickerMobile = nowMobile;
+                        if (picker) {
+                            picker.destroy();
+                            picker = null;
+                        }
+                        initPicker(cachedLockDays);
+                    }
+                }, 250);
+            });
 
             /* ── Guests change → re-fetch quote ───────────────────────── */
             document.getElementById('guests').addEventListener('change', debouncedFetch);

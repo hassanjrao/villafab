@@ -539,6 +539,20 @@
             width: 100% !important;
         }
 
+        #bn-litepicker-container .litepicker .month-item-weekdays-row {
+            display: grid !important;
+            grid-template-columns: repeat(7, 1fr) !important;
+        }
+
+        #bn-litepicker-container .litepicker .month-item-weekdays-row > div {
+            text-align: center !important;
+        }
+
+        #bn-litepicker-container .litepicker .container__days {
+            display: grid !important;
+            grid-template-columns: repeat(7, 1fr) !important;
+        }
+
         #bn-litepicker-container .litepicker .container__days .day-item.is-locked {
             pointer-events: none;
             color: #aaa;
@@ -595,6 +609,15 @@
             .stripe-row {
                 flex-direction: column;
                 gap: 0;
+            }
+
+            #bn-litepicker-container .litepicker .container__months {
+                flex-direction: column !important;
+                width: 100% !important;
+            }
+
+            #bn-litepicker-container .litepicker .container__months .month-item {
+                width: 100% !important;
             }
         }
     </style>
