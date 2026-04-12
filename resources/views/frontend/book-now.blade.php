@@ -105,6 +105,21 @@
             border-color: #1da3dd;
         }
 
+        .bn-input.is-invalid {
+            border-color: #e74c3c;
+        }
+
+        .bn-input.is-invalid:focus {
+            border-color: #e74c3c;
+            box-shadow: 0 0 0 3px rgba(231, 76, 60, .1);
+        }
+
+        .bn-field-error {
+            font-size: 0.78rem;
+            color: #e74c3c;
+            margin-top: 4px;
+            display: none;
+        }
 
         /* ── Stripe error ── */
         #bn-stripe-error {
@@ -674,12 +689,14 @@
                                     autocomplete="email">
                                 <small style="font-size:0.76rem;color:#aaa;margin-top:4px;">We'll send your receipt
                                     here</small>
+                                <div class="bn-field-error" id="bn-email-error">Please enter a valid email address.</div>
                             </div>
 
                             <div class="bn-field" style="margin-bottom:0;">
                                 <label class="bn-label" for="bn-phone">Phone Number</label>
                                 <input type="tel" id="bn-phone" class="bn-input" placeholder="+1 (555) 000-0000"
-                                    autocomplete="tel">
+                                    autocomplete="tel" inputmode="numeric">
+                                <div class="bn-field-error" id="bn-phone-error">Please enter a valid phone number.</div>
                             </div>
                         </div>
 
@@ -937,6 +954,78 @@
                     maximumFractionDigits: 2
                 });
             }
+
+            /* ── Field validation ── */
+            var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+            var phoneDigitMin = 7;
+
+            function isValidEmail(val) {
+                return emailRegex.test(val);
+            }
+
+            function isValidPhone(val) {
+                var digits = val.replace(/[^0-9]/g, '');
+                return digits.length >= phoneDigitMin;
+            }
+
+            function setFieldError(inputId, errorId, invalid) {
+                var input = document.getElementById(inputId);
+                var error = document.getElementById(errorId);
+                if (invalid) {
+                    input.classList.add('is-invalid');
+                    error.style.display = 'block';
+                } else {
+                    input.classList.remove('is-invalid');
+                    error.style.display = 'none';
+                }
+            }
+
+            /* Phone: block non-phone characters on keydown */
+            document.getElementById('bn-phone').addEventListener('keydown', function(e) {
+                var allowed = ['Backspace', 'Delete', 'Tab', 'Escape', 'Enter',
+                    'ArrowLeft', 'ArrowRight', 'Home', 'End'];
+                if (allowed.indexOf(e.key) !== -1 || e.ctrlKey || e.metaKey) return;
+                if (/^[0-9+\-().\s]$/.test(e.key)) return;
+                e.preventDefault();
+            });
+
+            /* Phone: sanitise on input and validate */
+            document.getElementById('bn-phone').addEventListener('input', function() {
+                this.value = this.value.replace(/[^0-9+\-().\s]/g, '');
+                if (this.value.length > 0) {
+                    setFieldError('bn-phone', 'bn-phone-error', !isValidPhone(this.value));
+                } else {
+                    setFieldError('bn-phone', 'bn-phone-error', false);
+                }
+            });
+
+            /* Phone: sanitise paste */
+            document.getElementById('bn-phone').addEventListener('paste', function(e) {
+                e.preventDefault();
+                var pasted = (e.clipboardData || window.clipboardData).getData('text');
+                var cleaned = pasted.replace(/[^0-9+\-().\s]/g, '');
+                var pos = this.selectionStart;
+                this.value = this.value.slice(0, pos) + cleaned + this.value.slice(this.selectionEnd);
+                if (this.value.length > 0) {
+                    setFieldError('bn-phone', 'bn-phone-error', !isValidPhone(this.value));
+                }
+            });
+
+            /* Email: validate on blur */
+            document.getElementById('bn-email').addEventListener('blur', function() {
+                var val = this.value.trim();
+                if (val.length > 0) {
+                    setFieldError('bn-email', 'bn-email-error', !isValidEmail(val));
+                }
+            });
+
+            /* Email: clear error as user types a valid address */
+            document.getElementById('bn-email').addEventListener('input', function() {
+                var val = this.value.trim();
+                if (isValidEmail(val)) {
+                    setFieldError('bn-email', 'bn-email-error', false);
+                }
+            });
 
             /* Returns the min-stay (in nights) for a given check-in ISO date */
             function getMinStayForIso(iso) {
@@ -1567,16 +1656,20 @@
                     document.getElementById('bn-first-name').focus();
                     return;
                 }
-                if (!email) {
-                    showStripeError('Please enter your email address.');
+                if (!email || !isValidEmail(email)) {
+                    setFieldError('bn-email', 'bn-email-error', true);
+                    showStripeError('Please enter a valid email address.');
                     document.getElementById('bn-email').focus();
                     return;
                 }
-                if (!phone) {
-                    showStripeError('Please enter your phone number.');
+                if (!phone || !isValidPhone(phone)) {
+                    setFieldError('bn-phone', 'bn-phone-error', true);
+                    showStripeError('Please enter a valid phone number (at least 7 digits).');
                     document.getElementById('bn-phone').focus();
                     return;
                 }
+                setFieldError('bn-email', 'bn-email-error', false);
+                setFieldError('bn-phone', 'bn-phone-error', false);
                 hideStripeError();
                 setLoading(true);
 
