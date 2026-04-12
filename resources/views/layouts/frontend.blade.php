@@ -61,8 +61,12 @@
             showConfirmButton: false,
             timer:            4500,
             timerProgressBar: true,
+            customClass: {
+                container: 'swal2-top-toast'
+            }
         });
     </script>
+    <style>.swal2-top-toast { z-index: 11000 !important; }</style>
     @endif
 
     @yield('scripts_extra')
