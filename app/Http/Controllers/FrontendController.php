@@ -360,6 +360,6 @@ class FrontendController extends Controller
         //     ]);
         // }
 
-        return back()->withToastSuccess('Thank you! Your message has been sent.');
+        return back()->withToast('success', 'Thank you! Your message has been sent.')->withPosition('top-right');
     }
 }
