@@ -292,6 +292,13 @@ class BookingController extends Controller
                 // non-fatal — still show the success page
             }
         }
+        else{
+            Log::error('BookingController@success: Error in booking confirmation',[
+                'error' => 'Payment intent ID or status is missing',
+                'line' => __LINE__,
+                'trace' => debug_backtrace(),
+            ]);
+        }
 
         return view('frontend.booking-success', compact(
             'name',
