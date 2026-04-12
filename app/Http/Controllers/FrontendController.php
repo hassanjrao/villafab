@@ -349,7 +349,8 @@ class FrontendController extends Controller
         // Send email notification to the property owner
         // try {
         // AlexLluch3@gmail.com
-            Mail::to('hassanjrao@gmail.com')->send(new ContactFormMail($validated));
+        $email = 'AlexLluch3@gmail.com';
+            Mail::to($email)->send(new ContactFormMail($validated));
         // } catch (\Exception $e) {
         //     Log::error('Error sending contact email: ', [
         //         'error' => $e->getMessage(),
