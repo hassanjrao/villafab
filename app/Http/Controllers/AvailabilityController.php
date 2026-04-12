@@ -9,6 +9,7 @@ use Carbon\Carbon;
 use ICal\ICal;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
 
 class AvailabilityController extends Controller
 {
@@ -33,7 +34,7 @@ class AvailabilityController extends Controller
         try {
             $ical = new ICal(config('services.google.calendar_ics_url'), [
                 'defaultSpan'      => 2,
-                'defaultTimeZone'  => 'America/Los_Angeles',
+                'defaultTimeZone'  => 'America/California',
                 'skipRecurrence'   => false,
             ]);
 
@@ -45,11 +46,25 @@ class AvailabilityController extends Controller
                     'color'   => '#e74c3c',
                     'display' => 'background',
                 ];
-            })->values();
+            });
+
+            // order by start date
+            $events = $events->sortBy(function($event) {
+                return $event['start'];
+            });
+
+            $events = $events->values();
 
             return response()->json($events);
         } catch (\Exception $e) {
-            return response()->json([], 200);
+            Log::error('AvailabilityController@bookedDates: Error in fetching booked dates',[
+                'error' => $e->getMessage(),
+                'line' => __LINE__,
+                'trace' => $e->getTraceAsString(),
+            ]);
+            return response()->json([
+                'error' => $e->getMessage(),
+            ], 422);
         }
     }
 

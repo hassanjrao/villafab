@@ -121,3 +121,22 @@ Route::prefix('admin')->name('admin.')->middleware(['auth'])->group(function () 
     Route::get('messages/{message}',          [AdminContactMessageController::class, 'show'])->name('messages.show');
 
 });
+
+
+
+use ICal\ICal;
+Route::get('/debug-calendar', function () {
+    $ical = new ICal(config('services.google.calendar_ics_url'), [
+        'defaultSpan'     => 2,
+        'defaultTimeZone' => 'America/Los_Angeles',
+        'skipRecurrence'  => false,
+    ]);
+
+    return collect($ical->events())->map(function ($event) use ($ical) {
+        return [
+            'summary' => $event->summary ?? 'No title',
+            'start'   => $ical->iCalDateToDateTime($event->dtstart)->format('Y-m-d'),
+            'end'     => $ical->iCalDateToDateTime($event->dtend)->format('Y-m-d'),
+        ];
+    });
+});
