@@ -11,6 +11,7 @@ use App\Models\RatePeriod;
 use Carbon\Carbon;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Str;
 use Stripe\Customer;
@@ -283,6 +284,11 @@ class BookingController extends Controller
                     }
                 }
             } catch (\Exception $e) {
+                Log::error('BookingController@success: Error in booking confirmation',[
+                    'error' => $e->getMessage(),
+                    'line' => $e->getLine(),
+                    'trace' => $e->getTraceAsString(),
+                ]);
                 // non-fatal — still show the success page
             }
         }
