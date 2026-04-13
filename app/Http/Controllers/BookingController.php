@@ -94,7 +94,7 @@ class BookingController extends Controller
                 'currency'                   => 'usd',
                 'customer'                   => $customer->id,
                 'setup_future_usage'         => 'off_session',
-                'automatic_payment_methods'  => ['enabled' => true],
+                'payment_method_types'       => ['card'],
                 'metadata'                   => [
                     'checkin'              => $request->checkin,
                     'checkout'             => $request->checkout,
@@ -128,7 +128,7 @@ class BookingController extends Controller
         $paymentIntent = PaymentIntent::create([
             'amount'                    => (int) round($total * 100),
             'currency'                  => 'usd',
-            'automatic_payment_methods' => ['enabled' => true],
+            'payment_method_types'      => ['card'],
             'metadata'                  => [
                 'checkin'              => $request->checkin,
                 'checkout'             => $request->checkout,
