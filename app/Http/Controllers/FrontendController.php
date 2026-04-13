@@ -347,18 +347,16 @@ class FrontendController extends Controller
         }
 
         // Send email notification to the property owner
-        // try {
-        // AlexLluch3@gmail.com
-        // $email = 'AlexLluch3@gmail.com';
-        $email = config('mail.from.address');
+        try {
+            $email = config('mail.from.address');
             Mail::to($email)->send(new ContactFormMail($validated));
-        // } catch (\Exception $e) {
-        //     Log::error('Error sending contact email: ', [
-        //         'error' => $e->getMessage(),
-        //         'line' => $e->getLine(),
-        //         'trace' => $e->getTraceAsString(),
-        //     ]);
-        // }
+        } catch (\Exception $e) {
+            Log::error('Error sending contact email: ', [
+                'error' => $e->getMessage(),
+                'line' => $e->getLine(),
+                'trace' => $e->getTraceAsString(),
+            ]);
+        }
 
         return back()->with('success', 'Thank you! Your message has been sent.');
     }
