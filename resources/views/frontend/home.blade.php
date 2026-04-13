@@ -1934,6 +1934,36 @@
 
                 pickerRoot.addEventListener('mouseleave', hideTip);
                 pickerRoot.addEventListener('mousedown', hideTip);
+
+                /* Block clicks on checkout dates that violate minimum stay.
+                   Intercept pointer/mouse/click in capture phase so Litepicker
+                   never processes the event and the calendar stays open. */
+                function isMinStayBlocked(e) {
+                    if (!selectedCheckinIso) return false;
+                    var cell = e.target.closest('.day-item');
+                    if (!cell || cell.classList.contains('is-locked')) return false;
+                    var ts = parseInt(cell.getAttribute('data-time') || '', 10);
+                    if (!ts) return false;
+                    var clickedIso = window.VillaDateUtils.toIsoDateLocal(new Date(ts));
+                    var ciParts = selectedCheckinIso.split('-');
+                    var clParts = clickedIso.split('-');
+                    var ciDate = new Date(parseInt(ciParts[0]), parseInt(ciParts[1]) - 1, parseInt(
+                        ciParts[2]));
+                    var clDate = new Date(parseInt(clParts[0]), parseInt(clParts[1]) - 1, parseInt(
+                        clParts[2]));
+                    var nightsFromCheckin = Math.round((clDate - ciDate) / 86400000);
+                    var minNights = getMinStayForIso(selectedCheckinIso);
+                    return nightsFromCheckin > 0 && nightsFromCheckin < minNights;
+                }
+                function blockMinStayEvent(e) {
+                    if (isMinStayBlocked(e)) {
+                        e.stopImmediatePropagation();
+                        e.preventDefault();
+                    }
+                }
+                pickerRoot.addEventListener('pointerdown', blockMinStayEvent, true);
+                pickerRoot.addEventListener('mousedown', blockMinStayEvent, true);
+                pickerRoot.addEventListener('click', blockMinStayEvent, true);
             }
 
             function showBreakdown(q) {
@@ -2095,16 +2125,12 @@
                         var minNights = getMinStayForIso(ci);
 
                         if (nights < minNights) {
-                            /* Invalid checkout — clear selection and show error */
+                            /* Invalid checkout — silently clear and re-open the calendar */
                             picker.clearSelection();
                             document.getElementById('checkin_date').value = '';
                             document.getElementById('checkout_date').value = '';
                             selectedCheckinIso = null;
-                            showError(
-                                'Minimum stay for this check-in is ' +
-                                minNights + ' night' + (minNights !== 1 ? 's' : '') +
-                                '. Please select a later check-out date.'
-                            );
+                            setTimeout(function() { picker.show(); }, 0);
                             return;
                         }
 

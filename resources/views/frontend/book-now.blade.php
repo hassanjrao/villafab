@@ -1099,6 +1099,28 @@
 
                 pickerRoot.addEventListener('mouseleave', hideTip);
                 pickerRoot.addEventListener('mousedown', hideTip);
+
+                /* Block clicks on checkout dates that violate minimum stay */
+                pickerRoot.addEventListener('click', function(e) {
+                    if (!bnSelectedCheckinIso) return;
+                    var cell = e.target.closest('.day-item');
+                    if (!cell || cell.classList.contains('is-locked')) return;
+                    var ts = parseInt(cell.getAttribute('data-time') || '', 10);
+                    if (!ts) return;
+                    var clickedIso = window.VillaDateUtils.toIsoDateLocal(new Date(ts));
+                    var ciParts = bnSelectedCheckinIso.split('-');
+                    var clParts = clickedIso.split('-');
+                    var ciDate = new Date(parseInt(ciParts[0]), parseInt(ciParts[1]) - 1, parseInt(
+                        ciParts[2]));
+                    var clDate = new Date(parseInt(clParts[0]), parseInt(clParts[1]) - 1, parseInt(
+                        clParts[2]));
+                    var nightsFromCheckin = Math.round((clDate - ciDate) / 86400000);
+                    var minNights = getMinStayForIso(bnSelectedCheckinIso);
+                    if (nightsFromCheckin > 0 && nightsFromCheckin < minNights) {
+                        e.stopImmediatePropagation();
+                        e.preventDefault();
+                    }
+                }, true);
             }
 
             function showStripeError(msg) {
