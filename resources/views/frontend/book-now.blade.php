@@ -919,6 +919,7 @@
             var paymentElement = null;
             var litepicker = null;
             var lockedDays = []; /* booked dates from Google Calendar */
+            var turnoverDays = []; /* check-in days of existing bookings (checkout OK, check-in not) */
             var minStayByDow = {
                 0: 1,
                 1: 1,
@@ -1502,16 +1503,21 @@
                     minStayByDow = Object.assign(minStayByDow, stays.by_dow || {});
 
                     var days = [];
+                    var turnovers = [];
                     events.forEach(function(e) {
                         var cur = new Date(e.start + 'T12:00:00');
                         var end = new Date(e.end + 'T12:00:00');
+                        if (cur < end) {
+                            turnovers.push(window.VillaDateUtils.toIsoDateLocal(cur));
+                            cur.setDate(cur.getDate() + 1);
+                        }
                         while (cur < end) {
-                            // Keep lock dates in local calendar date to avoid timezone shifts.
                             days.push(window.VillaDateUtils.toIsoDateLocal(cur));
                             cur.setDate(cur.getDate() + 1);
                         }
                     });
                     lockedDays = days;
+                    turnoverDays = turnovers;
                 })
                 .catch(function() {
                     lockedDays = [];
@@ -1581,10 +1587,28 @@
                         var coD = new Date(parseInt(coParts[0]), parseInt(coParts[1]) - 1, parseInt(
                             coParts[2]));
                         var nights = Math.round((coD - ciD) / 86400000);
+
+                        /* Turnover-day guard: stay nights must not overlap a
+                           booked check-in day (checkout on that day is fine). */
+                        var stayD = new Date(ciD.getTime());
+                        var blocked = false;
+                        while (stayD < coD) {
+                            if (turnoverDays.indexOf(window.VillaDateUtils.toIsoDateLocal(stayD)) !== -1) {
+                                blocked = true;
+                                break;
+                            }
+                            stayD.setDate(stayD.getDate() + 1);
+                        }
+                        if (blocked) {
+                            litepicker.clearSelection();
+                            bnSelectedCheckinIso = null;
+                            document.getElementById('bn-dates-apply-btn').disabled = true;
+                            return;
+                        }
+
                         var minNights = getMinStayForIso(ci);
 
                         if (nights < minNights) {
-                            /* Invalid checkout — clear and keep panel open */
                             litepicker.clearSelection();
                             bnSelectedCheckinIso = null;
                             document.getElementById('bn-dates-apply-btn').disabled = true;

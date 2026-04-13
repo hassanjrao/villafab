@@ -2122,10 +2122,30 @@
                         var coD = new Date(parseInt(coParts[0]), parseInt(coParts[1]) - 1, parseInt(coParts[
                             2]));
                         var nights = Math.round((coD - ciD) / 86400000);
+
+                        /* Turnover-day guard: stay nights must not overlap a
+                           booked check-in day (checkout on that day is fine). */
+                        var stayD = new Date(ciD.getTime());
+                        var blocked = false;
+                        while (stayD < coD) {
+                            if (cachedTurnoverDays.indexOf(window.VillaDateUtils.toIsoDateLocal(stayD)) !== -1) {
+                                blocked = true;
+                                break;
+                            }
+                            stayD.setDate(stayD.getDate() + 1);
+                        }
+                        if (blocked) {
+                            picker.clearSelection();
+                            document.getElementById('checkin_date').value = '';
+                            document.getElementById('checkout_date').value = '';
+                            selectedCheckinIso = null;
+                            setTimeout(function() { picker.show(); }, 0);
+                            return;
+                        }
+
                         var minNights = getMinStayForIso(ci);
 
                         if (nights < minNights) {
-                            /* Invalid checkout — silently clear and re-open the calendar */
                             picker.clearSelection();
                             document.getElementById('checkin_date').value = '';
                             document.getElementById('checkout_date').value = '';
@@ -2153,6 +2173,7 @@
             }
 
             var cachedLockDays = [];
+            var cachedTurnoverDays = [];
             var lastPickerMobile = null;
 
             /* ── Fetch calendar locks + minimum stays → init picker ───── */
@@ -2176,16 +2197,21 @@
                     minStayByDow = Object.assign(minStayByDow, stays.by_dow || {});
 
                     var lockDays = [];
+                    var turnoverDays = [];
                     events.forEach(function(e) {
                         var cur = new Date(e.start + 'T12:00:00');
                         var end = new Date(e.end + 'T12:00:00');
+                        if (cur < end) {
+                            turnoverDays.push(window.VillaDateUtils.toIsoDateLocal(cur));
+                            cur.setDate(cur.getDate() + 1);
+                        }
                         while (cur < end) {
-                            // Keep lock dates in local calendar date to avoid timezone shifts.
                             lockDays.push(window.VillaDateUtils.toIsoDateLocal(cur));
                             cur.setDate(cur.getDate() + 1);
                         }
                     });
                     cachedLockDays = lockDays;
+                    cachedTurnoverDays = turnoverDays;
                     lastPickerMobile = window.innerWidth < 768;
                     initPicker(lockDays);
                 })
