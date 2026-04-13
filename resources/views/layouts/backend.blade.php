@@ -169,6 +169,13 @@
                                 <span class="nav-main-link-name">Messages</span>
                             </a>
                         </li>
+                        <li class="nav-main-item">
+                            <a class="nav-main-link{{ request()->is('admin/calendar-feeds*') ? ' active' : '' }}"
+                                href="{{ route('admin.calendar-feeds.index') }}">
+                                <i class="nav-main-link-icon fa fa-rss"></i>
+                                <span class="nav-main-link-name">Calendar Feeds</span>
+                            </a>
+                        </li>
                     </ul>
                 </div>
                 <!-- END Side Navigation -->

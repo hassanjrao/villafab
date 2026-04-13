@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AdminBookingController;
+use App\Http\Controllers\AdminCalendarFeedController;
 use App\Http\Controllers\AdminDashboardController;
 use App\Http\Controllers\AdminContactMessageController;
 use App\Http\Controllers\AdminPricingController;
@@ -120,23 +121,37 @@ Route::prefix('admin')->name('admin.')->middleware(['auth'])->group(function () 
     Route::get('messages',                      [AdminContactMessageController::class, 'index'])->name('messages.index');
     Route::get('messages/{message}',          [AdminContactMessageController::class, 'show'])->name('messages.show');
 
+    Route::get('calendar-feeds',                        [AdminCalendarFeedController::class, 'index'])->name('calendar-feeds.index');
+    Route::post('calendar-feeds',                       [AdminCalendarFeedController::class, 'store'])->name('calendar-feeds.store');
+    Route::put('calendar-feeds/{calendarFeed}',         [AdminCalendarFeedController::class, 'update'])->name('calendar-feeds.update');
+    Route::delete('calendar-feeds/{calendarFeed}',      [AdminCalendarFeedController::class, 'destroy'])->name('calendar-feeds.destroy');
+
 });
 
 
 
+use App\Models\CalendarFeed;
 use ICal\ICal;
 Route::get('/debug-calendar', function () {
-    $ical = new ICal(config('services.google.calendar_ics_url'), [
-        'defaultSpan'     => 2,
-        'defaultTimeZone' => 'America/Los_Angeles',
-        'skipRecurrence'  => false,
-    ]);
+    $allEvents = collect();
 
-    return collect($ical->events())->map(function ($event) use ($ical) {
-        return [
-            'summary' => $event->summary ?? 'No title',
-            'start'   => $ical->iCalDateToDateTime($event->dtstart)->format('Y-m-d'),
-            'end'     => $ical->iCalDateToDateTime($event->dtend)->format('Y-m-d'),
-        ];
-    });
+    foreach (CalendarFeed::activeUrls() as $url) {
+        $ical = new ICal($url, [
+            'defaultSpan'     => 2,
+            'defaultTimeZone' => 'America/Los_Angeles',
+            'skipRecurrence'  => false,
+        ]);
+
+        $allEvents = $allEvents->merge(
+            collect($ical->events())->map(function ($event) use ($ical) {
+                return [
+                    'summary' => $event->summary ?? 'No title',
+                    'start'   => $ical->iCalDateToDateTime($event->dtstart)->format('Y-m-d'),
+                    'end'     => $ical->iCalDateToDateTime($event->dtend)->format('Y-m-d'),
+                ];
+            })
+        );
+    }
+
+    return $allEvents->sortBy('start')->values();
 });

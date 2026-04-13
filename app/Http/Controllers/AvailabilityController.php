@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\CalendarFeed;
 use App\Models\MinimumStay;
 use App\Models\PricingSetting;
 use App\Models\RatePeriod;
@@ -31,41 +32,69 @@ class AvailabilityController extends Controller
 
     public function bookedDates(): JsonResponse
     {
-        try {
-            $ical = new ICal(config('services.google.calendar_ics_url'), [
-                'defaultSpan'      => 2,
-                'defaultTimeZone'  => 'America/California',
-                'skipRecurrence'   => false,
-            ]);
+        $urls = CalendarFeed::activeUrls();
+        $allEvents = collect();
 
-            $events = collect($ical->events())->map(function ($event) use ($ical) {
-                return [
-                    'title'   => 'Booked',
-                    'start'   => $ical->iCalDateToDateTime($event->dtstart)->format('Y-m-d'),
-                    'end'     => $ical->iCalDateToDateTime($event->dtend)->format('Y-m-d'),
-                    'color'   => '#e74c3c',
-                    'display' => 'background',
-                ];
-            });
+        foreach ($urls as $url) {
+            try {
+                $ical = new ICal($url, [
+                    'defaultSpan'     => 2,
+                    'defaultTimeZone' => 'America/Los_Angeles',
+                    'skipRecurrence'  => false,
+                ]);
 
-            // order by start date
-            $events = $events->sortBy(function($event) {
-                return $event['start'];
-            });
+                $events = collect($ical->events())->map(function ($event) use ($ical) {
+                    return [
+                        'title'   => 'Booked',
+                        'start'   => $ical->iCalDateToDateTime($event->dtstart)->format('Y-m-d'),
+                        'end'     => $ical->iCalDateToDateTime($event->dtend)->format('Y-m-d'),
+                        'color'   => '#e74c3c',
+                        'display' => 'background',
+                    ];
+                });
 
-            $events = $events->values();
-
-            return response()->json($events);
-        } catch (\Exception $e) {
-            Log::error('AvailabilityController@bookedDates: Error in fetching booked dates',[
-                'error' => $e->getMessage(),
-                'line' => __LINE__,
-                'trace' => $e->getTraceAsString(),
-            ]);
-            return response()->json([
-                'error' => $e->getMessage(),
-            ], 422);
+                $allEvents = $allEvents->merge($events);
+            } catch (\Exception $e) {
+                Log::error('AvailabilityController@bookedDates: failed to fetch calendar', [
+                    'url'   => $url,
+                    'error' => $e->getMessage(),
+                ]);
+            }
         }
+
+        $merged = $this->mergeOverlappingRanges($allEvents);
+
+        return response()->json($merged->values());
+    }
+
+    /**
+     * Merge overlapping or adjacent date ranges so the front-end lock-days
+     * list stays compact and free of duplicates.
+     */
+    private function mergeOverlappingRanges($events)
+    {
+        if ($events->isEmpty()) {
+            return $events;
+        }
+
+        $sorted = $events->sortBy('start')->values();
+
+        $merged = collect();
+        $current = $sorted->first();
+
+        for ($i = 1; $i < $sorted->count(); $i++) {
+            $next = $sorted[$i];
+
+            if ($next['start'] <= $current['end']) {
+                $current['end'] = max($current['end'], $next['end']);
+            } else {
+                $merged->push($current);
+                $current = $next;
+            }
+        }
+        $merged->push($current);
+
+        return $merged;
     }
 
     public function priceQuote(Request $request): JsonResponse

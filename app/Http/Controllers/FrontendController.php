@@ -350,7 +350,7 @@ class FrontendController extends Controller
         // try {
         // AlexLluch3@gmail.com
         // $email = 'AlexLluch3@gmail.com';
-        $email = config('mail.from.address');
+        $email = config('mail.from.admin');
             Mail::to($email)->send(new ContactFormMail($validated));
         // } catch (\Exception $e) {
         //     Log::error('Error sending contact email: ', [
