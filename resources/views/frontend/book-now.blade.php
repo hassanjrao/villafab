@@ -698,6 +698,12 @@
                                     autocomplete="tel" inputmode="numeric">
                                 <div class="bn-field-error" id="bn-phone-error">Please enter a valid phone number.</div>
                             </div>
+
+                            <div class="bn-field" style="margin-top:16px;margin-bottom:0;">
+                                <label class="bn-label" for="bn-note">Note (Optional)</label>
+                                <textarea id="bn-note" class="bn-input" rows="3"
+                                    placeholder="Add any special requests or important details."></textarea>
+                            </div>
                         </div>
 
                         {{-- Payment card --}}
@@ -1696,6 +1702,7 @@
                 var lastName = document.getElementById('bn-last-name').value.trim();
                 var email = document.getElementById('bn-email').value.trim();
                 var phone = document.getElementById('bn-phone').value.trim();
+                var note = document.getElementById('bn-note').value.trim();
 
                 if (!firstName || !lastName) {
                     showStripeError('Please enter your first and last name.');
@@ -1723,7 +1730,8 @@
                     '?name=' + encodeURIComponent(firstName + ' ' + lastName) +
                     '&checkin=' + encodeURIComponent(checkin) +
                     '&checkout=' + encodeURIComponent(checkout) +
-                    '&guests=' + guests;
+                    '&guests=' + guests +
+                    '&note=' + encodeURIComponent(note);
 
                 stripe.confirmPayment({
                     elements: stripeElements,

@@ -178,7 +178,9 @@
                             </table>
                             @endif
 
-                            <p style="margin:18px 0 0;">We look forward to welcoming you to Villa Fabulosa!</p>
+                            <p style="margin:18px 0 12px;"><strong>Need Help?</strong></p>
+                            <p style="margin:0 0 16px;">If you have any questions or need assistance, feel free to contact us—we’re here to help. Please call {{ config('app.support_phone') }} or send an email to {{ config('mail.from.address') }}</p>
+                            <p style="margin:0 0 0;">We look forward to hosting you at Villa Fabulosa!</p>
                             <p style="margin:12px 0 0;">Warm regards,<br><strong>Villa Fabulosa Team</strong></p>
                         </td>
                     </tr>

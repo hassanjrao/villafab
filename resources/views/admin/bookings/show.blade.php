@@ -57,6 +57,10 @@
                                     <td>{{ $booking->phone ?: '—' }}</td>
                                 </tr>
                                 <tr>
+                                    <th class="text-muted fw-normal">Guest Note</th>
+                                    <td style="white-space:pre-wrap;">{{ $booking->guest_note ?: '—' }}</td>
+                                </tr>
+                                <tr>
                                     <th class="text-muted fw-normal">Status</th>
                                     <td>
                                         @if ($booking->status === 'succeeded')

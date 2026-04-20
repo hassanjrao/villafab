@@ -40,6 +40,7 @@
                                     <th>Booking ID</th>
                                     <th>Guest Name</th>
                                     <th>Email</th>
+                                    <th>Guest Note</th>
                                     <th>Check-in</th>
                                     <th>Check-out</th>
                                     <th class="text-center">Guests</th>
@@ -59,6 +60,9 @@
                                         <td class="text-muted fs-sm">{{ $booking->id }}</td>
                                         <td class="fw-semibold">{{ $booking->name }}</td>
                                         <td class="fs-sm text-muted">{{ $booking->email ?: '—' }}</td>
+                                        <td class="fs-sm text-muted">
+                                            {{ $booking->guest_note ? \Illuminate\Support\Str::limit($booking->guest_note, 60) : '—' }}
+                                        </td>
                                         <td>{{ $booking->checkin ? $booking->checkin->format('M j, Y') : '—' }}</td>
                                         <td>{{ $booking->checkout ? $booking->checkout->format('M j, Y') : '—' }}</td>
                                         <td class="text-center">{{ $booking->guests }}</td>

@@ -27,6 +27,12 @@ You have received a new message through the Villa Fabulosa website contact form.
 Reply to {{ $data['fname'] }}
 @endcomponent
 
-Thanks,
-Villa Fabulosa Website
+Need Help?
+
+If you have any questions or need assistance, feel free to contact us—we’re here to help. Please call {{ config('app.support_phone') }} or send an email to {{ config('mail.from.address') }}
+
+We look forward to hosting you at Villa Fabulosa!
+
+Warm regards,
+Villa Fabulosa Team
 @endcomponent

@@ -56,6 +56,8 @@ return [
 
     'asset_url' => env('ASSET_URL', null),
 
+    'support_phone' => env('APP_SUPPORT_PHONE', '1-619-796-2339'),
+
     /*
     |--------------------------------------------------------------------------
     | Application Timezone

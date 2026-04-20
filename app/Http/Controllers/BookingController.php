@@ -169,6 +169,8 @@ class BookingController extends Controller
         $piId   = $request->query('payment_intent', '');
         $status = $request->query('redirect_status', '');
         $name   = $request->query('name', 'Guest');
+        $guestNote = trim((string) $request->query('note', ''));
+        $guestNote = $guestNote !== '' ? $guestNote : null;
 
         $checkin           = '';
         $checkout          = '';
@@ -247,6 +249,7 @@ class BookingController extends Controller
                             'balance_due'              => $balanceDueMeta,
                             'balance_charge_date'      => $balanceChargeDate,
                             'balance_status'           => 'pending',
+                            'guest_note'               => $guestNote,
                         ]
                     );
 
@@ -275,6 +278,7 @@ class BookingController extends Controller
                             'status'              => $pi->status,
                             'payment_type'        => 'full',
                             'amount_paid'         => $chargedAmount,
+                            'guest_note'          => $guestNote,
                         ]
                     );
 

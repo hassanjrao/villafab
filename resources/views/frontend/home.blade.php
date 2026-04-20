@@ -1186,12 +1186,12 @@
 
                             {{-- Date row --}}
                             <div class="booking-date-row">
-                                <div class="booking-date-cell">
+                                <div class="booking-date-cell" data-date-target="checkin" role="button" tabindex="0">
                                     <span class="booking-field-label">Check-in</span>
                                     <input type="text" id="checkin_date" name="checkin_date"
                                         class="booking-date-input" placeholder="Add date" readonly>
                                 </div>
-                                <div class="booking-date-cell">
+                                <div class="booking-date-cell" data-date-target="checkout" role="button" tabindex="0">
                                     <span class="booking-field-label">Check-out</span>
                                     <input type="text" id="checkout_date" name="checkout_date"
                                         class="booking-date-input" placeholder="Add date" readonly>
@@ -1199,7 +1199,7 @@
                             </div>
 
                             {{-- Guests row (continues the segmented border) --}}
-                            <div class="booking-guests-box">
+                            <div class="booking-guests-box" id="booking-guests-box" role="button" tabindex="0">
                                 <span class="booking-field-label">Guests</span>
                                 <select id="guests" name="guests" class="booking-guests-select">
                                     @for ($i = 1; $i <= 24; $i++)
@@ -2081,6 +2081,63 @@
                 quoteTimer = setTimeout(fetchQuote, 60);
             }
 
+            function openDatePicker(targetId) {
+                var input = document.getElementById(targetId);
+                if (!input) {
+                    return;
+                }
+                if (picker) {
+                    picker.show();
+                }
+                input.focus();
+                input.click();
+            }
+
+            function bindBookingFieldClickTargets() {
+                var dateCells = document.querySelectorAll('.booking-date-cell[data-date-target]');
+                dateCells.forEach(function(cell) {
+                    var target = cell.getAttribute('data-date-target');
+                    var targetId = target === 'checkout' ? 'checkout_date' : 'checkin_date';
+
+                    cell.addEventListener('click', function(e) {
+                        if (e.target && e.target.closest('input')) {
+                            return;
+                        }
+                        openDatePicker(targetId);
+                    });
+
+                    cell.addEventListener('keydown', function(e) {
+                        if (e.key === 'Enter' || e.key === ' ') {
+                            e.preventDefault();
+                            openDatePicker(targetId);
+                        }
+                    });
+                });
+
+                var guestsBox = document.getElementById('booking-guests-box');
+                var guestsSelect = document.getElementById('guests');
+                if (guestsBox && guestsSelect) {
+                    function openGuests() {
+                        guestsSelect.focus();
+                        guestsSelect.click();
+                    }
+
+                    guestsBox.addEventListener('click', function(e) {
+                        if (e.target && e.target.closest('select')) {
+                            return;
+                        }
+                        openGuests();
+                    });
+
+                    guestsBox.addEventListener('keydown', function(e) {
+                        if (e.key === 'Enter' || e.key === ' ') {
+                            e.preventDefault();
+                            openGuests();
+                        }
+                    });
+                }
+            }
+
             /* ── Litepicker init ──────────────────────────────────────── */
             function initPicker(lockDays) {
                 var isMobile = window.innerWidth < 768;
@@ -2240,6 +2297,7 @@
 
             /* ── Guests change → re-fetch quote ───────────────────────── */
             document.getElementById('guests').addEventListener('change', debouncedFetch);
+            bindBookingFieldClickTargets();
 
             /* ── Initialise Book Now button as disabled ────────────────── */
             updateBookNowBtn('', '', 1);

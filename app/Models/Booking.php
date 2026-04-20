@@ -33,6 +33,7 @@ class Booking extends Model
         'balance_reminder_sent_at',
         'balance_failure_notified_at',
         'notes',
+        'guest_note',
     ];
 
     protected $casts = [
