@@ -31,5 +31,7 @@ class CancelFailedBookings extends Command
         }
 
         $this->info("Cancelled {$bookings->count()} booking(s).");
+
+        Log::info('Finished cancellation of failed bookings.');
     }
 }
