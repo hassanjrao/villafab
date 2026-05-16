@@ -164,6 +164,20 @@
                                 @endif
                             </table>
 
+                            {{-- Guest Note --}}
+                            @if($booking->guest_note)
+                            <table role="presentation" width="100%" cellpadding="0" cellspacing="0"
+                                style="border-collapse:collapse;margin:0 0 16px;">
+                                <tr>
+                                    <td style="padding:10px 0;font-size:16px;font-weight:700;border-bottom:2px solid #e5e7eb;">
+                                        Guest Note</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding:8px 0;white-space:pre-wrap;">{{ $booking->guest_note }}</td>
+                                </tr>
+                            </table>
+                            @endif
+
                             {{-- Additional Notes --}}
                             @if($booking->notes)
                             <table role="presentation" width="100%" cellpadding="0" cellspacing="0"
