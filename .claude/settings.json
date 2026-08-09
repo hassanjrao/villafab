@@ -39,7 +39,13 @@
       "Bash(curl -sL \"https://cdn.jsdelivr.net/npm/litepicker/dist/css/litepicker.css\" -o public/frontend/litepicker/litepicker.css -w \"css %{http_code} %{size_download}\\\\n\")",
       "Bash(curl -sL \"https://cdn.jsdelivr.net/npm/litepicker/dist/litepicker.js\" -o public/frontend/litepicker/litepicker.js -w \"js  %{http_code} %{size_download}\\\\n\")",
       "Bash(awk 'NR>2{printf \"  %7s bytes  %s\\\\n\", $5, $9}')",
-      "Bash(curl -s http://127.0.0.1:8899/ -o __TRACKED_VAR__/hh.html)"
+      "Bash(curl -s http://127.0.0.1:8899/ -o __TRACKED_VAR__/hh.html)",
+      "Bash(grep -nE '^\\\\s*\\\\$\\\\\\(|^\\\\s*jQuery\\\\\\(' resources/views/frontend/home.blade.php)",
+      "Bash(awk 'NR>=2100 && NR<=2186 && \\(/function [a-zA-Z]*\\\\\\(/ || /DOMContentLoaded/ || /\\\\.ready\\\\\\(/\\)' resources/views/frontend/home.blade.php)",
+      "Bash(awk 'NR<=1561 && /function [a-zA-Z_]+\\\\\\(/ {last=NR\": \"$0} END{print \"enclosing fn: \" last}' resources/views/frontend/book-now.blade.php)",
+      "Bash(rm -f public/frontend/pt-sans.css)",
+      "Bash(awk 'NR>=1520 && NR<=1545 && /function|addEventListener/' resources/views/frontend/book-now.blade.php)",
+      "Bash(curl -s http://127.0.0.1:8899/ -o __TRACKED_VAR__/f.html)"
     ]
   }
 }

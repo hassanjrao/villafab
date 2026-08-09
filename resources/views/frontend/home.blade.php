@@ -1201,7 +1201,11 @@
                             {{-- Guests row (continues the segmented border) --}}
                             <div class="booking-guests-box" id="booking-guests-box" role="button" tabindex="0">
                                 <span class="booking-field-label">Guests</span>
-                                <select id="guests" name="guests" class="booking-guests-select">
+                                {{-- The visible "Guests" text is a span inside a role="button"
+                                     wrapper, so it never associated with this select. An explicit
+                                     label keeps the control named for screen readers. --}}
+                                <select id="guests" name="guests" class="booking-guests-select"
+                                    aria-label="Number of guests">
                                     @for ($i = 1; $i <= 24; $i++)
                                         <option value="{{ $i }}">{{ $i }}
                                             guest{{ $i > 1 ? 's' : '' }}</option>
@@ -2177,6 +2181,19 @@
 
             /* ── Litepicker init ──────────────────────────────────────── */
             function initPicker(lockDays) {
+                /* litepicker.js is deferred, so it executes after this script
+                   is parsed but before DOMContentLoaded. The availability
+                   fetch below almost always resolves later than that, but
+                   "almost always" is not a guarantee for the booking flow --
+                   so if the library is not up yet, wait for the point where
+                   deferred scripts are guaranteed to have run. */
+                if (typeof Litepicker === 'undefined') {
+                    document.addEventListener('DOMContentLoaded', function () {
+                        initPicker(lockDays);
+                    }, { once: true });
+                    return;
+                }
+
                 var isMobile = window.innerWidth < 768;
                 picker = new Litepicker({
                     element: document.getElementById('checkin_date'),
