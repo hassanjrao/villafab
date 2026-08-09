@@ -31,7 +31,7 @@
                             class="fa fa-arrow-circle-left fa-4x"></i></a>
                     <a href="{{ url('/temecula') }}" class="site_arrow_link site_arrow_right"><i
                             class="fa fa-arrow-circle-right fa-4x"></i></a>
-                    <h2 class="mb-0">Nearby Wineries</h2>
+                    <h1 class="mb-0">Nearby Wineries</h1>
                 </div>
             </div>
         </div>
@@ -46,8 +46,8 @@
                 <div class="col-lg-12">
                     <ul class="site_title_btn_list list-inline mb-0">
                         <li class="list-inline-item">
-                            <h1 class="site_section_title pt-2 mb-0" style="position: relative; top: 5px;">Best Location in
-                                Wine Country</h1>
+                            <h2 class="site_section_title pt-2 mb-0" style="position: relative; top: 5px;">Best Location in
+                                Wine Country</h2>
                         </li>
                     </ul>
                     <hr>

@@ -1152,7 +1152,7 @@ img.zoom {
 
 }
 
-.site_subheader h2 {
+.site_subheader h1, .site_subheader h2 {
 
 	font-size: 30px;
 
@@ -2184,7 +2184,7 @@ body {
 
 }
 
-.site_title_bar h2, .site_subheader h2 {
+.site_title_bar h2, .site_subheader h1, .site_subheader h2 {
 
 	font-size: 24px;
 
@@ -2370,3 +2370,9 @@ hr {
 
 }
 
+
+/* Villa name in the info block. Demoted from h1 to h2 so each page has a
+   single, page-specific h1; this preserves the original h1 sizing. */
+.site_villa_name {
+	font-size: 2.5rem;
+}

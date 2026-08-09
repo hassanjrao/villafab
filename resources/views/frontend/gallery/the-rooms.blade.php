@@ -131,7 +131,7 @@
                             class="fa fa-arrow-circle-left fa-4x"></i></a>
                     <a href="{{ url('/game-rooms') }}" class="site_arrow_link site_arrow_right"><i
                             class="fa fa-arrow-circle-right fa-4x"></i></a>
-                    <h2 class="mb-0">The Rooms</h2>
+                    <h1 class="mb-0">The Rooms</h1>
                 </div>
             </div>
         </div>
@@ -143,7 +143,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="site_content_box">
-                        <h1 class="site_section_title">The Grand Room</h1>
+                        <h2 class="site_section_title">The Grand Room</h2>
                         <hr>
                         <ul class="site_content_list pl-4">
                             <li>Villa Fabulosa boasts 20-foot ceilings with huge windows, making this spectacular
@@ -209,7 +209,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="site_content_box">
-                        <h1 class="site_section_title">Dining Room</h1>
+                        <h2 class="site_section_title">Dining Room</h2>
                         <hr>
                         <ul class="site_content_list pl-4">
                             <li>Villa Fabulosa features a gorgeous and very elegant handcrafted dining table with
@@ -262,7 +262,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="site_content_box">
-                        <h1 class="site_section_title">The Kitchen</h1>
+                        <h2 class="site_section_title">The Kitchen</h2>
                         <hr>
                         <ul class="site_content_list pl-4">
                             <li>Villa Fabulosa's kitchen is fully equipped with a large refrigerator, double oven,
@@ -311,7 +311,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="site_content_box">
-                        <h1 class="site_section_title">Second Seating Area</h1>
+                        <h2 class="site_section_title">Second Seating Area</h2>
                         <hr>
                         <ul class="site_content_list pl-4">
                             <li>Villa Fabulosa features a second sitting area for guests to gather, watch TV or play
@@ -348,7 +348,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="site_content_box">
-                        <h1 class="site_section_title">The Bedrooms</h1>
+                        <h2 class="site_section_title">The Bedrooms</h2>
                         <hr>
                         <ul class="site_content_list pl-4">
                             <li>Villa Fabulosa features 7 Bedrooms including 2 King beds, 8 queen beds and 5 sofa
@@ -409,7 +409,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="site_content_box">
-                        <h1 class="site_section_title">The Bathrooms</h1>
+                        <h2 class="site_section_title">The Bathrooms</h2>
                         <hr>
                         <ul class="site_content_list pl-4">
                             <li>Villa Fabulosa features 5.5 bathrooms. Two of the bathrooms offer a dual shower

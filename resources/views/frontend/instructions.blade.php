@@ -28,7 +28,7 @@
                             class="fa fa-arrow-circle-left fa-4x"></i></a>
                     <a href="{{ url('/your-hosts') }}" class="site_arrow_link site_arrow_right"><i
                             class="fa fa-arrow-circle-right fa-4x"></i></a>
-                    <h2 class="mb-0">How to Use &amp; Enjoy Everything at Villa Fabulosa</h2>
+                    <h1 class="mb-0">How to Use &amp; Enjoy Everything at Villa Fabulosa</h1>
                 </div>
             </div>
         </div>
@@ -40,7 +40,7 @@
 
             <div class="row mb-4">
                 <div class="col-lg-12 text-center">
-                    <h1 class="site_section_title text-dark">Indoor Instructions</h1>
+                    <h2 class="site_section_title text-dark">Indoor Instructions</h2>
                     <hr>
                 </div>
             </div>
@@ -151,7 +151,7 @@
             <!-- Game Room Instructions -->
             <div class="row mb-4">
                 <div class="col-lg-12 text-center">
-                    <h1 class="site_section_title text-dark">Game Room Instructions</h1>
+                    <h2 class="site_section_title text-dark">Game Room Instructions</h2>
                     <hr>
                 </div>
             </div>
@@ -177,7 +177,7 @@
             <!-- Outdoor Instructions -->
             <div class="row mb-4">
                 <div class="col-lg-12 text-center">
-                    <h1 class="site_section_title text-dark">Outdoor Instructions</h1>
+                    <h2 class="site_section_title text-dark">Outdoor Instructions</h2>
                     <hr>
                 </div>
             </div>

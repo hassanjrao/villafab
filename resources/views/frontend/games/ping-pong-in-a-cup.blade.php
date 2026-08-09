@@ -8,7 +8,7 @@
     <div class="site_subheader">
         <div class="container">
             <div class="col-lg-12">
-                <h2 class="mb-0">Ping Pong in a Cup</h2>
+                <h1 class="mb-0">Ping Pong in a Cup</h1>
             </div>
         </div>
     </div>
@@ -20,7 +20,7 @@
                 <div class="col-lg-8 text-center">
                     <a href="{{ url('/team-bonding') }}" class="btn btn-outline-primary mb-3">&larr; Back to Team
                         Bonding</a>
-                    <h1>Ping Pong in a Cup</h1>
+                    <h2>Ping Pong in a Cup</h2>
                 </div>
             </div>
             <div class="site_videos_row row justify-content-center">

@@ -44,7 +44,17 @@
                 <h3 style="color: #1da3dd;">Villa Fabulosa</h3>
             </a>
         </div>
-        <p class="site_copyright mt-3 mb-0">&copy; Copyright 2023 by Villa Fabulosa. All Rights Reserved</p>
+
+        {{-- Name, address and phone. Must stay identical to the Google
+             Business Profile listing — local ranking depends on the match. --}}
+        @php $nap = config('seo.business'); @endphp
+        <address class="site_footer_nap mb-3" style="font-style: normal;">
+            <span>{{ $nap['street'] }}, {{ $nap['locality'] }}, {{ $nap['region'] }} {{ $nap['postal'] }}</span>
+            <span class="mx-2">&middot;</span>
+            <a href="tel:{{ $nap['phone'] }}" style="color: #1da3dd;">{{ $nap['phone'] }}</a>
+        </address>
+
+        <p class="site_copyright mt-3 mb-0">&copy; {{ date('Y') }} Villa Fabulosa. All Rights Reserved</p>
     </div>
 </footer>
 <!-- Footer End -->

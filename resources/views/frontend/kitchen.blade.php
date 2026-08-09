@@ -8,7 +8,7 @@
     <!-- Sub Header -->
     <div class="site_subheader">
         <div class="container"><div class="col-lg-12">
-            <h2 class="mb-0">Kitchen</h2>
+            <h1 class="mb-0">Kitchen</h1>
         </div></div>
     </div>
 

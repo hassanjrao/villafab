@@ -648,7 +648,7 @@
                 <i class="fa fa-arrow-left"></i> Back to Villa Fabulosa
             </a>
 
-            <div class="bn-page-title">Complete Your Booking</div>
+            <h1 class="bn-page-title">Complete Your Booking</h1>
             <div class="bn-page-sub">Enter your details and payment to confirm your reservation.</div>
 
             @if (!$checkin || !$checkout)

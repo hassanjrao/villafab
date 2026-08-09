@@ -1,11 +1,15 @@
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-113600300-1"></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'UA-113600300-1');
-</script>
+@php
+    // Route-level metadata from config/seo.php, overridable per page with
+    // @section('description'), @section('og_image') or @section('robots').
+    $seo = \App\Support\Seo::current();
+
+    $seoTitle       = trim($__env->yieldContent('title', $seo['title']));
+    $seoDescription = trim($__env->yieldContent('description', $seo['description']));
+    $seoRobots      = trim($__env->yieldContent('robots', $seo['robots']));
+    $seoImage       = \App\Support\Seo::absolute(trim($__env->yieldContent('og_image', $seo['image'])));
+    $seoCanonical   = \App\Support\Seo::canonical();
+@endphp
+
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-4YSNM6JHV9"></script>
 <script>
@@ -18,10 +22,34 @@
 <!-- Required meta tags -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="keywords" content="Villa Fabulosa Temecula Wine Country">
 <meta name="csrf-token" content="{{ csrf_token() }}">
-<title>@yield('title', 'Villa Fabulosa')</title>
-<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700" rel="stylesheet">
+
+<title>{{ $seoTitle }}</title>
+<meta name="description" content="{{ $seoDescription }}">
+<meta name="robots" content="{{ $seoRobots }}">
+<link rel="canonical" href="{{ $seoCanonical }}">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Villa Fabulosa">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="{{ $seoTitle }}">
+<meta property="og:description" content="{{ $seoDescription }}">
+<meta property="og:url" content="{{ $seoCanonical }}">
+<meta property="og:image" content="{{ $seoImage }}">
+<meta property="og:image:alt" content="{{ $seoTitle }}">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ $seoTitle }}">
+<meta name="twitter:description" content="{{ $seoDescription }}">
+<meta name="twitter:image" content="{{ $seoImage }}">
+
+@include('layouts.partials.schema')
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap" rel="stylesheet">
 
 <style>
     /* Offset main content for fixed-top navbar so subheaders and sections

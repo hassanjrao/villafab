@@ -7,7 +7,7 @@
 <!-- Sub Header -->
 <div class="site_subheader">
     <div class="container-fluid"><div class="col-lg-12"><div class="site_subheader_inner">
-        <h2 class="mb-0">Maps</h2>
+        <h1 class="mb-0">Maps</h1>
     </div></div></div>
 </div>
 
@@ -16,7 +16,7 @@
     <div class="container">
         <div class="row mb-4">
             <div class="col-lg-12 text-center">
-                <h1 class="site_section_title">Location &amp; Maps</h1>
+                <h2 class="site_section_title">Location &amp; Maps</h2>
                 <hr>
                 <p class="lead">Villa Fabulosa is located in the heart of Temecula Wine Country, right in the center of the Winery Loop.</p>
             </div>

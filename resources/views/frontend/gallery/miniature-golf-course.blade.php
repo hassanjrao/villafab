@@ -41,7 +41,7 @@
     <div class="container-fluid"><div class="col-lg-12"><div class="site_subheader_inner">
         <a href="{{ url('/the-pool') }}" class="site_arrow_link site_arrow_left"><i class="fa fa-arrow-circle-left fa-4x"></i></a>
         <a href="{{ url('/the-sports-area') }}" class="site_arrow_link site_arrow_right"><i class="fa fa-arrow-circle-right fa-4x"></i></a>
-        <h2 class="mb-0">Miniature Golf Course</h2>
+        <h1 class="mb-0">Miniature Golf Course</h1>
     </div></div></div>
 </div>
 
@@ -53,7 +53,7 @@
                 <div class="site_display_table">
                     <div class="site_display_table_cell">
                         <div class="site_content_box p-0">
-                            <h1 class="site_section_title">Miniature Golf Course</h1><hr>
+                            <h2 class="site_section_title">Miniature Golf Course</h2><hr>
                             <ul class="site_content_list pl-4">
                                 <li>Villa Fabulosa is the only Short Term Rental that we know of featuring a professional and very challenging 18-hole miniature golf course!</li>
                                 <li>Your entire family will have hours of fun playing miniature golf on such a beautiful setting with 360 views of Temecula Wine Country.</li>

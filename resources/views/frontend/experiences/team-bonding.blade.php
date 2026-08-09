@@ -13,7 +13,7 @@
                             class="fa fa-arrow-circle-left fa-4x"></i></a>
                     <a href="{{ url('/instructions') }}" class="site_arrow_link site_arrow_right"><i
                             class="fa fa-arrow-circle-right fa-4x"></i></a>
-                    <h2 class="mb-0">Team Bonding Experience</h2>
+                    <h1 class="mb-0">Team Bonding Experience</h1>
                 </div>
             </div>
         </div>

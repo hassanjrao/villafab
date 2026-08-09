@@ -19,7 +19,7 @@
             <div class="site_subheader_inner">
                 <a href="{{ url('/your-hosts') }}" class="site_arrow_link site_arrow_left"><i class="fa fa-arrow-circle-left fa-4x"></i></a>
                 <a href="{{ url('/the-rooms') }}" class="site_arrow_link site_arrow_right"><i class="fa fa-arrow-circle-right fa-4x"></i></a>
-                <h2 class="mb-0">About Us</h2>
+                <h1 class="mb-0">About Us</h1>
             </div>
         </div>
     </div>
@@ -40,14 +40,14 @@
                 <div class="site_display_table">
                     <div class="site_display_table_cell">
                         <div class="site_content_box">
-                            <h1 class="site_section_title">About Us</h1>
+                            <h2 class="site_section_title">About Us</h2>
                             <hr>
                             <ul class="site_content_list pl-4">
                                 <li>Villa Fabulosa is an enchanting haven of indulgence with unparalleled beauty, luxury, and elegance. Incredible outdoor kitchen with 2 Pizza Ovens and Teppanyaki Grill. Game Room with Video Arcades, shuffleboard, poker table, Ice Hockey, and more. Professional Pool Table, Pickleball/Basketball Court, Bocce Court, 18-hole miniature golf, Volleyball/Badminton court, play area for kids, and amazing views from every room. Be one of the first 3 reservations and receive a 20% discount.</li>
                             </ul>
                         </div>
                         <div class="site_content_box">
-                            <h1 class="site_section_title">The Space</h1>
+                            <h2 class="site_section_title">The Space</h2>
                             <hr>
                             <ul class="site_content_list pl-4">
                                 <li>Perched on a breathtaking hillside, this architectural masterpiece boasts panoramic views of hot air balloons and Temecula wine country, where over 45 nearby wineries await your exploration.</li>
@@ -63,7 +63,7 @@
                             </ul>
                         </div>
                         <div class="site_content_box">
-                            <h1 class="site_section_title">Guest Access</h1>
+                            <h2 class="site_section_title">Guest Access</h2>
                             <hr>
                             <ul class="site_content_list pl-4">
                                 <li>The entire house, pool area, outdoor kitchen, game room, and 18-hole miniature golf course.</li>

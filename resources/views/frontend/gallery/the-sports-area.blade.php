@@ -41,7 +41,7 @@
     <div class="container-fluid"><div class="col-lg-12"><div class="site_subheader_inner">
         <a href="{{ url('/miniature-golf-course') }}" class="site_arrow_link site_arrow_left"><i class="fa fa-arrow-circle-left fa-4x"></i></a>
         <a href="{{ url('/birds-eye') }}" class="site_arrow_link site_arrow_right"><i class="fa fa-arrow-circle-right fa-4x"></i></a>
-        <h2 class="mb-0">The Sports Area</h2>
+        <h1 class="mb-0">The Sports Area</h1>
     </div></div></div>
 </div>
 
@@ -51,7 +51,7 @@
         <div class="row"><div class="col-lg-12">
             <div class="site_display_table"><div class="site_display_table_cell">
                 <div class="site_content_box p-0">
-                    <h1 class="site_section_title">The Sports Area</h1><hr>
+                    <h2 class="site_section_title">The Sports Area</h2><hr>
                     <ul class="site_content_list pl-4">
                         <li>Villa Fabulosa offers a plethora of sports areas to satisfy the athletic abilities of everyone in the family. It features a pickleball and basketball court, a putting green, and a Bocce Ball Court. It also features a Volleyball and badminton court, along with popular lawn games such as Corn Hole and many more. Villa Fabulosa also provides other sports equipment such as soccer ball, football and so much more.</li>
                     </ul>

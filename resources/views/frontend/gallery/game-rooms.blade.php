@@ -48,7 +48,7 @@
     <div class="container-fluid"><div class="col-lg-12"><div class="site_subheader_inner">
         <a href="{{ url('/the-rooms') }}" class="site_arrow_link site_arrow_left"><i class="fa fa-arrow-circle-left fa-4x"></i></a>
         <a href="{{ url('/bridal-suite') }}" class="site_arrow_link site_arrow_right"><i class="fa fa-arrow-circle-right fa-4x"></i></a>
-        <h2 class="mb-0">Game Room</h2>
+        <h1 class="mb-0">Game Room</h1>
     </div></div></div>
 </div>
 
@@ -60,7 +60,7 @@
                 <div class="site_display_table">
                     <div class="site_display_table_cell">
                         <div class="site_content_box p-0">
-                            <h1 class="site_section_title">Game Room</h1><hr>
+                            <h2 class="site_section_title">Game Room</h2><hr>
                             <ul class="site_content_list pl-4">
                                 <li>Villa Fabulosa features a very large game room with some of the top Video Arcades including: Tekken 5, a super exciting martial art game, Target Force Gold, a super fun shooting game similar to Time Crisis, Donkey Kong Junior, Terminator 2-Judgement day, Ms. Pac-Man and Midway Mortal Kombat 2.</li>
                                 <li>Villa Fabulosa's game room also includes Ice Hockey, a Foosball, Shuffle Board and a Poker table. It includes two sofa beds with a 4K smart TV with Netflix and Hulu subscription.</li>

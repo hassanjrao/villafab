@@ -7,6 +7,7 @@ use App\Http\Controllers\AdminContactMessageController;
 use App\Http\Controllers\AdminPricingController;
 use App\Http\Controllers\AvailabilityController;
 use App\Http\Controllers\BookingController;
+use App\Http\Controllers\SitemapController;
 use App\Http\Controllers\UpdateCardController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FrontendController;
@@ -19,6 +20,9 @@ use Illuminate\Support\Facades\Auth;
 */
 
 // ─── Frontend Routes ──────────────────────────────────────────────────────────
+
+// Sitemap
+Route::get('/sitemap.xml', [SitemapController::class, 'index'])->name('sitemap');
 
 // Main pages
 Route::get('/', [FrontendController::class, 'home'])->name('home');

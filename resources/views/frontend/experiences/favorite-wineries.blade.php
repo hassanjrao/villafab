@@ -7,7 +7,7 @@
 <!-- Sub Header -->
 <div class="site_subheader">
     <div class="container-fluid"><div class="col-lg-12"><div class="site_subheader_inner">
-        <h2 class="mb-0">Favorite Wineries</h2>
+        <h1 class="mb-0">Favorite Wineries</h1>
     </div></div></div>
 </div>
 
@@ -16,7 +16,7 @@
     <div class="container">
         <div class="row mb-4">
             <div class="col-lg-12 text-center">
-                <h1 class="site_section_title">Our Favorite Wineries</h1>
+                <h2 class="site_section_title">Our Favorite Wineries</h2>
                 <hr>
                 <p class="lead">Explore our handpicked selection of the best wineries near Villa Fabulosa in Temecula Wine Country.</p>
             </div>

@@ -11,7 +11,7 @@
                 <div class="site_display_table">
                     <div class="site_display_table_cell">
                         <div class="site_content_box p-0">
-                            <h1 class="site_section_title">Events</h1>
+                            <h1 class="site_section_title">Private Events at Villa Fabulosa</h1>
                             <hr>
                             <ul class="site_content_list pl-4">
                                 <li>Villa Fabulosa's private backyard can be transformed from a sports court into a gorgeous venue for special events, with seating for up to 125 people. The several hundred outdoor lights around the property, and wonderful year-round breezes, turn Villa Fabulosa into a magical wonderland at night. And there's no need to hassle with renting tables, chairs and linens, as Villa Fabulosa will provide these for you at a much reduced rate!</li>

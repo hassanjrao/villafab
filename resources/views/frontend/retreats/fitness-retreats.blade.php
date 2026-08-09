@@ -17,7 +17,7 @@
     <div class="site_subheader">
         <div class="container-fluid"><div class="col-lg-12">
             <div class="site_subheader_inner">
-                <h2 class="mb-0">Fitness Retreats</h2>
+                <h1 class="mb-0">Fitness Retreats</h1>
             </div>
         </div></div>
     </div>
@@ -34,7 +34,7 @@
         <div class="container">
             <div class="row mb-3">
                 <div class="col-lg-12 text-center">
-                    <h1 class="site_title_letter_space mb-3">Villa Fabulosa</h1>
+                    <h2 class="site_title_letter_space site_villa_name mb-3">Villa Fabulosa</h2>
                     <h3 class="site_title_letter_space">An enchanting haven of indulgence with unparalleled beauty, luxury, and elegance.</h3>
                 </div>
             </div>

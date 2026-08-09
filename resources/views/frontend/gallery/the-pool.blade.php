@@ -41,7 +41,7 @@
     <div class="container-fluid"><div class="col-lg-12"><div class="site_subheader_inner">
         <a href="{{ url('/bridal-suite') }}" class="site_arrow_link site_arrow_left"><i class="fa fa-arrow-circle-left fa-4x"></i></a>
         <a href="{{ url('/miniature-golf-course') }}" class="site_arrow_link site_arrow_right"><i class="fa fa-arrow-circle-right fa-4x"></i></a>
-        <h2 class="mb-0">The Pool</h2>
+        <h1 class="mb-0">The Pool</h1>
     </div></div></div>
 </div>
 
@@ -53,7 +53,7 @@
                 <div class="site_display_table">
                     <div class="site_display_table_cell">
                         <div class="site_content_box p-0">
-                            <h1 class="site_section_title">The Pool</h1><hr>
+                            <h2 class="site_section_title">The Pool</h2><hr>
                             <ul class="site_content_list pl-4">
                                 <li>Villa Fabulosa features a beautiful and private pool with two Baja Shelves, four lounge chairs and an 8' x 12' spa.</li>
                             </ul>

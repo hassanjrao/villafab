@@ -4,6 +4,17 @@
 
 @section('content')
 
+<div class="container-fluid">
+    <!-- Sub Header -->
+    <div class="site_subheader">
+        <div class="container-fluid"><div class="col-lg-12">
+            <div class="site_subheader_inner">
+                <h1 class="mb-0">Villa Fabulosa Photo Gallery</h1>
+            </div>
+        </div></div>
+    </div>
+</div>
+
 <!-- Slider -->
 <div id="site_gallery_carousel" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner">

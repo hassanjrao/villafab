@@ -1,2 +1,11 @@
 User-agent: *
-Disallow:
+Allow: /
+
+# Private / transactional areas — no ranking value, keep out of the index.
+Disallow: /admin
+Disallow: /login
+Disallow: /booking/success
+Disallow: /booking/update-card/
+Disallow: /debug-calendar
+
+Sitemap: https://villafabulosa.com/sitemap.xml
