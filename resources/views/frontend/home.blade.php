@@ -799,7 +799,8 @@
             }
         }
     </style>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/litepicker/dist/css/litepicker.css">
+    <link rel="stylesheet" href="{{ \App\Support\Seo::versioned('frontend/litepicker/litepicker.css') }}" media="print" onload="this.media='all';this.onload=null;">
+    <noscript><link rel="stylesheet" href="{{ \App\Support\Seo::versioned('frontend/litepicker/litepicker.css') }}"></noscript>
 @endsection
 
 @section('content')
@@ -1016,11 +1017,7 @@
                 {{-- Video --}}
                 <div class="col-lg-6 mb-4">
                     <div class="embed-responsive embed-responsive-16by9 h-100">
-                        <iframe class="embed-responsive-item"
-                            src="https://www.youtube.com/embed/u5zfhEQfkpk?si=vdTOesRahNdQ_Zmy"
-                            title="YouTube video player" frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        @include('layouts.partials.video-facade', ['videoId' => 'u5zfhEQfkpk', 'title' => 'Tour Villa Fabulosa in Temecula Wine Country'])
                     </div>
                 </div>
             </div>
@@ -1769,7 +1766,42 @@
         })();
     </script>
     @if (config('services.recaptcha.enabled') && config('services.recaptcha.site_key'))
-        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+        {{-- reCAPTCHA pulls in about 1 MB across its script and two iframes,
+             and almost nobody who lands on the home page submits this form.
+             Load it on first contact with the form instead of on page load;
+             api.js renders any .g-recaptcha element present when it arrives,
+             so no explicit render call is needed. --}}
+        <script>
+            (function () {
+                var form = document.getElementById('requestform');
+                if (!form) return;
+
+                var loaded = false;
+
+                function loadRecaptcha() {
+                    if (loaded) return;
+                    loaded = true;
+
+                    var s = document.createElement('script');
+                    s.src = 'https://www.google.com/recaptcha/api.js';
+                    s.async = true;
+                    s.defer = true;
+                    document.head.appendChild(s);
+
+                    form.removeEventListener('focusin', loadRecaptcha);
+                    form.removeEventListener('pointerdown', loadRecaptcha);
+                }
+
+                form.addEventListener('focusin', loadRecaptcha);
+                form.addEventListener('pointerdown', loadRecaptcha);
+
+                // If the page came back with validation errors the widget is
+                // needed immediately -- the visitor is mid-submission.
+                @if ($errors->any())
+                    loadRecaptcha();
+                @endif
+            })();
+        </script>
         <script>
             (function() {
                 var form = document.getElementById('requestform');
@@ -1798,7 +1830,7 @@
             })();
         </script>
     @endif
-    <script src="https://cdn.jsdelivr.net/npm/litepicker/dist/litepicker.js"></script>
+    <script src="{{ \App\Support\Seo::versioned('frontend/litepicker/litepicker.js') }}" defer></script>
     <script>
         (function() {
             var picker = null;

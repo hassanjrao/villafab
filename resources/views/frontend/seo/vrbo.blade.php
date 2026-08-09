@@ -59,7 +59,7 @@
         <div class="site_video_wrapper mb-5">
             <div class="row">
                 <div class="col-lg-12">
-                    <iframe width="100%" height="400" src="https://www.youtube.com/embed/u5zfhEQfkpk?si=k10NMIhAtvL7cLZz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    @include('layouts.partials.video-facade', ['videoId' => 'u5zfhEQfkpk', 'title' => 'Tour Villa Fabulosa in Temecula Wine Country'])
                 </div>
             </div>
         </div>

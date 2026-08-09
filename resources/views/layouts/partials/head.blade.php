@@ -47,9 +47,13 @@
 
 @include('layouts.partials.schema')
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap" rel="stylesheet">
+{{-- PT Sans is self-hosted. Google Fonts cost two serial round trips on the
+     critical path -- the CSS from googleapis, which then revealed the woff2
+     URLs on gstatic. Serving both ourselves removes the external hops, and
+     preloading the files starts them without waiting for the CSS to parse. --}}
+<link rel="preload" as="font" type="font/woff2" href="{{ asset('frontend/fonts/pt-sans-400.woff2') }}" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="{{ asset('frontend/fonts/pt-sans-700.woff2') }}" crossorigin>
+<link rel="stylesheet" href="{{ \App\Support\Seo::versioned('frontend/pt-sans.css') }}">
 
 <style>
     /* Offset main content for fixed-top navbar so subheaders and sections
@@ -140,15 +144,15 @@
 </style>
 
 <!-- Bootstrap CSS -->
-<link rel="stylesheet" href="{{ asset('frontend/css/bootstrap.min.css') }}">
+<link rel="stylesheet" href="{{ \App\Support\Seo::versioned('frontend/css/bootstrap.min.css') }}">
 <link rel="stylesheet" href="{{ \App\Support\Seo::versioned('frontend/style.css') }}">
 
 {{-- Font Awesome supplies decorative icons only, so it is loaded off the
      critical path: the print media type makes it non-blocking, and onload
      switches it back to all. --}}
-<link rel="stylesheet" href="{{ asset('frontend/font-awesome/css/font-awesome.min.css') }}"
+<link rel="stylesheet" href="{{ \App\Support\Seo::versioned('frontend/font-awesome/css/font-awesome.min.css') }}"
       media="print" onload="this.media='all';this.onload=null;">
-<noscript><link rel="stylesheet" href="{{ asset('frontend/font-awesome/css/font-awesome.min.css') }}"></noscript>
+<noscript><link rel="stylesheet" href="{{ \App\Support\Seo::versioned('frontend/font-awesome/css/font-awesome.min.css') }}"></noscript>
 
 {{-- Only the three pages that actually open a Fancybox gallery need its CSS. --}}
 @if (request()->routeIs('kitchen', 'instructions', 'team-bonding'))

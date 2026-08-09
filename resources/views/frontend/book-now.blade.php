@@ -636,7 +636,7 @@
             }
         }
     </style>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/litepicker/dist/css/litepicker.css">
+    <link rel="stylesheet" href="{{ \App\Support\Seo::versioned('frontend/litepicker/litepicker.css') }}">
 @endsection
 
 @section('content')
@@ -909,7 +909,7 @@
 
 @section('scripts_extra')
     <script src="https://js.stripe.com/v3/"></script>
-    <script src="https://cdn.jsdelivr.net/npm/litepicker/dist/litepicker.js"></script>
+    <script src="{{ \App\Support\Seo::versioned('frontend/litepicker/litepicker.js') }}" defer></script>
     <script>
         (function() {
             var checkin = '{{ addslashes($checkin) }}';

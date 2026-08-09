@@ -29,7 +29,17 @@
       "Bash(python -c \"import fontTools, brotli; print\\('fonttools', fontTools.version, '+ brotli OK'\\)\")",
       "Bash(python C:/Users/lenovo/AppData/Local/Temp/claude/d--laravel-villafab-laravel/567d97a4-a3ed-4fc2-b793-782ee8f3ad58/scratchpad/fa_subset.py)",
       "Bash(python C:/Users/lenovo/AppData/Local/Temp/claude/d--laravel-villafab-laravel/567d97a4-a3ed-4fc2-b793-782ee8f3ad58/scratchpad/fa_css.py)",
-      "Bash(python C:/Users/lenovo/AppData/Local/Temp/claude/d--laravel-villafab-laravel/567d97a4-a3ed-4fc2-b793-782ee8f3ad58/scratchpad/fa_verify.py)"
+      "Bash(python C:/Users/lenovo/AppData/Local/Temp/claude/d--laravel-villafab-laravel/567d97a4-a3ed-4fc2-b793-782ee8f3ad58/scratchpad/fa_verify.py)",
+      "Bash(curl -s \"https://img.youtube.com/vi/u5zfhEQfkpk/maxresdefault.jpg\" -o /tmp/yt.jpg -w \"%{http_code} %{size_download}\\\\n\")",
+      "Bash(magick /tmp/yt.jpg -resize \"1280x720>\" -quality 82 -define webp:method=6 -strip public/frontend/imgs/villa-fabulosa-video-poster.webp)",
+      "Bash(magick /tmp/yt.jpg -resize \"640x360>\" -quality 80 -define webp:method=6 -strip public/frontend/imgs/villa-fabulosa-video-poster-sm.webp)",
+      "Bash(awk '{printf \"  %6s bytes  %s\\\\n\", $5, $9}')",
+      "Bash(php C:/Users/lenovo/AppData/Local/Temp/claude/d--laravel-villafab-laravel/567d97a4-a3ed-4fc2-b793-782ee8f3ad58/scratchpad/yt_facade.php)",
+      "Bash(python C:/Users/lenovo/AppData/Local/Temp/claude/d--laravel-villafab-laravel/567d97a4-a3ed-4fc2-b793-782ee8f3ad58/scratchpad/selfhost_fonts.py)",
+      "Bash(curl -sL \"https://cdn.jsdelivr.net/npm/litepicker/dist/css/litepicker.css\" -o public/frontend/litepicker/litepicker.css -w \"css %{http_code} %{size_download}\\\\n\")",
+      "Bash(curl -sL \"https://cdn.jsdelivr.net/npm/litepicker/dist/litepicker.js\" -o public/frontend/litepicker/litepicker.js -w \"js  %{http_code} %{size_download}\\\\n\")",
+      "Bash(awk 'NR>2{printf \"  %7s bytes  %s\\\\n\", $5, $9}')",
+      "Bash(curl -s http://127.0.0.1:8899/ -o __TRACKED_VAR__/hh.html)"
     ]
   }
 }

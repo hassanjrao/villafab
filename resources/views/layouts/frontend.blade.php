@@ -75,5 +75,7 @@
 
     @yield('scripts_extra')
 
+    @stack('video_facade_assets')
+
 </body>
 </html>

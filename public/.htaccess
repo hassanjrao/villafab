@@ -17,11 +17,11 @@
         Header set Cache-Control "public, max-age=31536000, immutable"
     </FilesMatch>
 
-    # CSS and JS keep their filenames across edits, so they get a modest
-    # cache instead. The ?v= filemtime query on our own bundles busts this
-    # immediately on deploy; the week is only a floor for third-party files.
+    # Every local stylesheet and script is now requested with a ?v=filemtime
+    # query, so a deploy changes the URL and busts the cache immediately.
+    # That makes a long lifetime safe here too.
     <FilesMatch "\.(css|js)$">
-        Header set Cache-Control "public, max-age=604800"
+        Header set Cache-Control "public, max-age=31536000"
     </FilesMatch>
 </IfModule>
 
