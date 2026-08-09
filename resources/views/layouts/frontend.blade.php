@@ -71,11 +71,40 @@
         });
     </script>
     <style>.swal2-top-toast { z-index: 11000 !important; }</style>
+
+    {{-- Enquiries are the main non-booking conversion. Fired server-side off
+         the flash message rather than on form submit, so it only counts
+         submissions that actually passed validation and were sent. --}}
+    <script>
+        window.villaTrack && villaTrack('generate_lead', {
+            form: 'contact',
+            page: @json(request()->path())
+        });
+    </script>
     @endif
 
     @yield('scripts_extra')
 
     @stack('video_facade_assets')
+
+    {{-- Site-wide intent signals. Delegated from document so they cover
+         links rendered after load, and kept out of the critical path. --}}
+    <script>
+        document.addEventListener('click', function (e) {
+            var a = e.target.closest && e.target.closest('a[href]');
+            if (!a || !window.villaTrack) return;
+
+            var href = a.getAttribute('href') || '';
+
+            if (href.indexOf('tel:') === 0) {
+                villaTrack('contact_phone', { method: 'phone', value_text: href.replace('tel:', '') });
+            } else if (href.indexOf('mailto:') === 0) {
+                villaTrack('contact_email', { method: 'email' });
+            } else if (a.pathname === '/book-now') {
+                villaTrack('begin_checkout', { source: @json(request()->path()) });
+            }
+        }, { passive: true });
+    </script>
 
 </body>
 </html>

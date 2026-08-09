@@ -10,14 +10,7 @@
     $seoCanonical   = \App\Support\Seo::canonical();
 @endphp
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-4YSNM6JHV9"></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'G-4YSNM6JHV9');
-</script>
+@include('layouts.partials.analytics')
 
 <!-- Required meta tags -->
 <meta charset="utf-8">

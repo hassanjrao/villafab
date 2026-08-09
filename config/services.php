@@ -35,6 +35,12 @@ return [
         'secret' => env('STRIPE_SECRET'),
     ],
 
+    'ga' => [
+        // Falls back to the id that was hard-coded in the layout, so nothing
+        // breaks if GA_MEASUREMENT_ID is not set in the environment.
+        'measurement_id' => env('GA_MEASUREMENT_ID', 'G-4YSNM6JHV9'),
+    ],
+
     'recaptcha' => [
         'enabled'  => env('RECAPTCHA_ENABLED', false),
         'site_key' => env('RECAPTCHA_SITE_KEY'),

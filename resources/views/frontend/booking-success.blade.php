@@ -94,4 +94,30 @@
             </p>
         </div>
     </div>
+
+    {{-- The direct booking itself. This is the number the whole SEO effort is
+         judged on, so it carries real revenue rather than a bare event.
+         transaction_id is the Stripe payment intent, which lets GA4
+         de-duplicate if the visitor refreshes the confirmation page. --}}
+    @if ($status === 'succeeded' && $amountPaid)
+        <script>
+            window.villaTrack && villaTrack('purchase', {
+                transaction_id: @json(request()->query('payment_intent', '')),
+                value: {{ round((float) $amountPaid, 2) }},
+                currency: 'USD',
+                items: [{
+                    item_id: 'villa-fabulosa-stay',
+                    item_name: 'Villa Fabulosa direct booking',
+                    item_category: 'Direct',
+                    quantity: 1,
+                    price: {{ round((float) $amountPaid, 2) }}
+                }],
+                nights: @json($checkin && $checkout
+                    ? \Carbon\Carbon::parse($checkin)->diffInDays(\Carbon\Carbon::parse($checkout))
+                    : null),
+                guests: {{ (int) $guests }},
+                payment_type: @json($paymentType)
+            });
+        </script>
+    @endif
 @endsection

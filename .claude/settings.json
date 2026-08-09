@@ -45,7 +45,11 @@
       "Bash(awk 'NR<=1561 && /function [a-zA-Z_]+\\\\\\(/ {last=NR\": \"$0} END{print \"enclosing fn: \" last}' resources/views/frontend/book-now.blade.php)",
       "Bash(rm -f public/frontend/pt-sans.css)",
       "Bash(awk 'NR>=1520 && NR<=1545 && /function|addEventListener/' resources/views/frontend/book-now.blade.php)",
-      "Bash(curl -s http://127.0.0.1:8899/ -o __TRACKED_VAR__/f.html)"
+      "Bash(curl -s http://127.0.0.1:8899/ -o __TRACKED_VAR__/f.html)",
+      "Bash(grep -n '$booking->\\\\|@php\\\\|compact\\(' resources/views/frontend/booking-success.blade.php)",
+      "Bash(curl -s -o /dev/null -w \"  HTTP %{http_code}\\\\n\" \"http://127.0.0.1:8899/booking/success\")",
+      "Bash(curl -s \"http://127.0.0.1:8899/booking/success\")",
+      "Bash(xargs echo \"  purchase event present:\")"
     ]
   }
 }
