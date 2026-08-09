@@ -75,6 +75,21 @@ class Seo
         return parse_url(config('app.url'), PHP_URL_HOST) ?: null;
     }
 
+    /**
+     * asset() with a filemtime cache-buster.
+     *
+     * Our CSS and JS keep the same filenames across edits, so browsers would
+     * otherwise hold a stale copy for as long as the Cache-Control max-age.
+     * Appending the file's mtime changes the URL the moment the file changes.
+     */
+    public static function versioned(string $path): string
+    {
+        $file = public_path($path);
+        $url  = asset($path);
+
+        return is_file($file) ? $url . '?v=' . filemtime($file) : $url;
+    }
+
     private static function routeName(): string
     {
         return Route::currentRouteName() ?? '';

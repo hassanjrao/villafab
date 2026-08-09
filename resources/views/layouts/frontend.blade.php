@@ -14,7 +14,11 @@
 
     @include('layouts.partials.scripts')
 
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    {{-- SweetAlert2 is 77 KB and only used to show a flash message, so it is
+         fetched only on the requests that actually have one. --}}
+    @if (session('success'))
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    @endif
     <script>
         (function () {
             var days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];

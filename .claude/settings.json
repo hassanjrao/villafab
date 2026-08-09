@@ -2,7 +2,14 @@
   "permissions": {
     "allow": [
       "PowerShell(Get-Process php -ErrorAction SilentlyContinue)",
-      "PowerShell(Stop-Process -Force -ErrorAction SilentlyContinue)"
+      "PowerShell(Stop-Process -Force -ErrorAction SilentlyContinue)",
+      "Bash(grep ^banner-1 __TRACKED_VAR__/imagemap.final.tsv)",
+      "Bash(curl -s -o /dev/null -w \"live banner-1.jpeg -> HTTP %{http_code}\\\\n\" https://villafabulosa.com/frontend/imgs/banner-1.jpeg)",
+      "Bash(magick photos-for-vrbo/villa-fabulosa-pool-01.webp -resize \"1200x630^\" -gravity center -extent 1200x630 -quality 86 og-villa-fabulosa.jpg)",
+      "Bash(php -r ' *)",
+      "Bash(curl -s \"https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=https://villafabulosa.com/&strategy=mobile&category=performance\" -o /tmp/psi_m.json -w \"http %{http_code}\\\\n\")",
+      "Bash(perl -pi -e \"s{asset\\\\\\('frontend/style\\\\.css'\\\\\\)}{\\\\\\\\\\\\\\\\App\\\\\\\\\\\\\\\\Support\\\\\\\\\\\\\\\\Seo::versioned\\('frontend/style.css'\\)}g\" resources/views/layouts/partials/head.blade.php)",
+      "Bash(perl -pi -e \"s{asset\\\\\\('frontend/js/script\\\\.js'\\\\\\)}{\\\\\\\\\\\\\\\\App\\\\\\\\\\\\\\\\Support\\\\\\\\\\\\\\\\Seo::versioned\\('frontend/js/script.js'\\)}g; s{asset\\\\\\('frontend/js/scrolling-nav\\\\.js'\\\\\\)}{\\\\\\\\\\\\\\\\App\\\\\\\\\\\\\\\\Support\\\\\\\\\\\\\\\\Seo::versioned\\('frontend/js/scrolling-nav.js'\\)}g\" resources/views/layouts/partials/scripts.blade.php)"
     ]
   }
 }

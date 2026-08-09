@@ -1,3 +1,37 @@
+# Static assets were being served with a 2-day cache for images, so repeat
+# visitors re-downloaded the whole gallery. These files are versioned by
+# filename, so they can be cached hard.
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType image/webp "access plus 1 year"
+    ExpiresByType image/jpeg "access plus 1 year"
+    ExpiresByType image/png  "access plus 1 year"
+    ExpiresByType image/svg+xml "access plus 1 year"
+    ExpiresByType image/x-icon "access plus 1 year"
+    ExpiresByType font/woff2 "access plus 1 year"
+</IfModule>
+
+<IfModule mod_headers.c>
+    # Images and fonts are safe to freeze: changing one changes its filename.
+    <FilesMatch "\.(webp|jpe?g|png|gif|svg|ico|woff2?|ttf|eot)$">
+        Header set Cache-Control "public, max-age=31536000, immutable"
+    </FilesMatch>
+
+    # CSS and JS keep their filenames across edits, so they get a modest
+    # cache instead. The ?v= filemtime query on our own bundles busts this
+    # immediately on deploy; the week is only a floor for third-party files.
+    <FilesMatch "\.(css|js)$">
+        Header set Cache-Control "public, max-age=604800"
+    </FilesMatch>
+</IfModule>
+
+# Compress text assets that are not already compressed.
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/plain text/css text/xml
+    AddOutputFilterByType DEFLATE application/javascript application/json
+    AddOutputFilterByType DEFLATE application/xml image/svg+xml
+</IfModule>
+
 <IfModule mod_rewrite.c>
     <IfModule mod_negotiation.c>
         Options -MultiViews -Indexes

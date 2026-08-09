@@ -22,7 +22,9 @@ return [
     'defaults' => [
         'title'       => 'Villa Fabulosa',
         'description' => 'Villa Fabulosa is a 7-bedroom luxury estate in Temecula Wine Country sleeping 24 guests, with a pool, mini golf course and panoramic vineyard views.',
-        'image'       => 'frontend/imgs/banner-1.jpeg',
+        // Dedicated 1200x630 share image. Kept as JPEG rather than WebP
+        // because some social scrapers still render WebP previews poorly.
+        'image'       => 'frontend/imgs/og-villa-fabulosa.jpg',
     ],
 
     // Used for LocalBusiness/NAP output and social profiles.

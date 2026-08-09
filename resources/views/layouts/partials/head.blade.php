@@ -141,9 +141,19 @@
 
 <!-- Bootstrap CSS -->
 <link rel="stylesheet" href="{{ asset('frontend/css/bootstrap.min.css') }}">
-<link rel="stylesheet" href="{{ asset('frontend/font-awesome/css/font-awesome.min.css') }}">
-<link rel="stylesheet" href="{{ asset('frontend/style.css') }}">
-<link rel="stylesheet" href="{{ asset('frontend/fancybox/jquery.fancybox.min.css') }}">
+<link rel="stylesheet" href="{{ \App\Support\Seo::versioned('frontend/style.css') }}">
+
+{{-- Font Awesome supplies decorative icons only, so it is loaded off the
+     critical path: the print media type makes it non-blocking, and onload
+     switches it back to all. --}}
+<link rel="stylesheet" href="{{ asset('frontend/font-awesome/css/font-awesome.min.css') }}"
+      media="print" onload="this.media='all';this.onload=null;">
+<noscript><link rel="stylesheet" href="{{ asset('frontend/font-awesome/css/font-awesome.min.css') }}"></noscript>
+
+{{-- Only the three pages that actually open a Fancybox gallery need its CSS. --}}
+@if (request()->routeIs('kitchen', 'instructions', 'team-bonding'))
+    <link rel="stylesheet" href="{{ asset('frontend/fancybox/jquery.fancybox.min.css') }}">
+@endif
 
 <!-- Favicons. Google renders these beside mobile search results, so a
      missing one shows as a generic globe in the SERP. -->
