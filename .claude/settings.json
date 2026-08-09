@@ -9,7 +9,18 @@
       "Bash(php -r ' *)",
       "Bash(curl -s \"https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=https://villafabulosa.com/&strategy=mobile&category=performance\" -o /tmp/psi_m.json -w \"http %{http_code}\\\\n\")",
       "Bash(perl -pi -e \"s{asset\\\\\\('frontend/style\\\\.css'\\\\\\)}{\\\\\\\\\\\\\\\\App\\\\\\\\\\\\\\\\Support\\\\\\\\\\\\\\\\Seo::versioned\\('frontend/style.css'\\)}g\" resources/views/layouts/partials/head.blade.php)",
-      "Bash(perl -pi -e \"s{asset\\\\\\('frontend/js/script\\\\.js'\\\\\\)}{\\\\\\\\\\\\\\\\App\\\\\\\\\\\\\\\\Support\\\\\\\\\\\\\\\\Seo::versioned\\('frontend/js/script.js'\\)}g; s{asset\\\\\\('frontend/js/scrolling-nav\\\\.js'\\\\\\)}{\\\\\\\\\\\\\\\\App\\\\\\\\\\\\\\\\Support\\\\\\\\\\\\\\\\Seo::versioned\\('frontend/js/scrolling-nav.js'\\)}g\" resources/views/layouts/partials/scripts.blade.php)"
+      "Bash(perl -pi -e \"s{asset\\\\\\('frontend/js/script\\\\.js'\\\\\\)}{\\\\\\\\\\\\\\\\App\\\\\\\\\\\\\\\\Support\\\\\\\\\\\\\\\\Seo::versioned\\('frontend/js/script.js'\\)}g; s{asset\\\\\\('frontend/js/scrolling-nav\\\\.js'\\\\\\)}{\\\\\\\\\\\\\\\\App\\\\\\\\\\\\\\\\Support\\\\\\\\\\\\\\\\Seo::versioned\\('frontend/js/scrolling-nav.js'\\)}g\" resources/views/layouts/partials/scripts.blade.php)",
+      "Bash(curl -s -o /dev/null -w \"  dns:%{time_namelookup}s  tcp:%{time_connect}s  tls:%{time_appconnect}s  TTFB:%{time_starttransfer}s  total:%{time_total}s\\\\n\" https://villafabulosa.com/)",
+      "Bash(curl -s -o /dev/null -w \"  TTFB:%{time_starttransfer}s  total:%{time_total}s\\\\n\" https://villafabulosa.com/)",
+      "Bash(curl -s -o /dev/null -w \"  TTFB:%{time_starttransfer}s  total:%{time_total}s  %{size_download}b\\\\n\" https://villafabulosa.com/frontend/imgs/photos-for-vrbo/villa-fabulosa-pool-01.webp)",
+      "Bash(curl -s -o /dev/null -w \" negotiated: HTTP/%{http_version}\\\\n\" https://villafabulosa.com/)",
+      "Bash(curl -s -I --http2 https://villafabulosa.com/)",
+      "Bash(curl -s -H \"Accept-Encoding: gzip, br\" -o /dev/null -D - https://villafabulosa.com/)",
+      "Bash(curl -s \"https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=https%3A%2F%2Fvillafabulosa.com%2F&strategy=desktop&category=performance\" -o /tmp/p.json -w \"http %{http_code}\\\\n\")",
+      "Bash(curl -s https://villafabulosa.com/ -o /tmp/home.html)",
+      "Bash(curl -s https://villafabulosa.com/ -o C:/Users/lenovo/AppData/Local/Temp/claude/d--laravel-villafab-laravel/567d97a4-a3ed-4fc2-b793-782ee8f3ad58/scratchpad/home.html)",
+      "Bash(php C:/Users/lenovo/AppData/Local/Temp/claude/d--laravel-villafab-laravel/567d97a4-a3ed-4fc2-b793-782ee8f3ad58/scratchpad/lazy_home.php)",
+      "Bash(magick public/frontend/imgs/villa-fabulosa-hosts.webp -resize \"720x720>\" -quality 86 -define webp:method=6 -strip public/frontend/imgs/villa-fabulosa-hosts.webp)"
     ]
   }
 }

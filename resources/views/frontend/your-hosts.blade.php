@@ -26,7 +26,9 @@
 
                     <div class="row mb-5">
                         <div class="col-lg-4">
-                            <img src="{{ asset('frontend/imgs/villa-fabulosa-hosts.webp') }}" class="img-fluid">
+                            <img src="{{ asset('frontend/imgs/villa-fabulosa-hosts.webp') }}" class="img-fluid"
+                                 width="528" height="720" fetchpriority="high"
+                                 alt="The hosts of Villa Fabulosa in Temecula Wine Country">
                         </div>
                         <div class="col-lg-8">
                             <p class="lead">My wife and I were recognized as the foremost authorities in wedding planning in the early 2000's. We are the authors of 30 of the bestselling wedding planners sold in North America. We have also written other books in many other categories. Combined we have sold over 5 million copies of our books.</p>
@@ -38,18 +40,18 @@
                         <div class="col-lg-12"><h4>Wedding Books</h4></div>
                     </div>
                     <div class="site_book_thumb_row row text-center mb-4">
-                        <div class="col-lg-4 mb-4"><a target="_blank" href="https://www.amazon.com/Ultimate-Wedding-Planner-Organizer/dp/1934386405/"><img src="{{ asset('frontend/imgs/book/wedding-book/ultimage-wedding-planner-and-organizer.webp') }}" class="img-fluid"></a></div>
-                        <div class="col-lg-4 mb-4"><a target="_blank" href="https://www.amazon.com/Ultimate-Wedding-Planning-Guide/dp/1936061244/"><img src="{{ asset('frontend/imgs/book/wedding-book/ultimage-wedding-planning-guice.webp') }}" class="img-fluid"></a></div>
-                        <div class="col-lg-4 mb-4"><a target="_blank" href="https://www.amazon.com/Ultimate-Wedding-Scrapbook-Alex-Lluch/dp/193438612X/"><img src="{{ asset('frontend/imgs/book/wedding-book/ultimage-wedding-scrapbook.webp') }}" class="img-fluid"></a></div>
-                        <div class="col-lg-4 mb-4"><a target="_blank" href="https://www.amazon.com/1001-Popular-Asked-Wedding-Questions/dp/193438688X/"><img src="{{ asset('frontend/imgs/book/wedding-book/1001-questions.webp') }}" class="img-fluid"></a></div>
-                        <div class="col-lg-4 mb-4"><a target="_blank" href="https://www.amazon.com/Ultimate-Wedding-Planner-Organizer/dp/1934386405/"><img src="{{ asset('frontend/imgs/book/wedding-book/our-wedding-journal.webp') }}" class="img-fluid"></a></div>
-                        <div class="col-lg-4 mb-4"><a target="_blank" href="https://www.amazon.com/Making-Wedding-Beautiful-Memorable-Unique/dp/1887169709/"><img src="{{ asset('frontend/imgs/book/wedding-book/making-your-wedding-memorable.webp') }}" class="img-fluid"></a></div>
-                        <div class="col-lg-4 mb-4"><a target="_blank" href="https://www.amazon.com/Bride-Groom-Challenge-Better-Winner/dp/1934386146/"><img src="{{ asset('frontend/imgs/book/wedding-book/bride-and-groom-challenge.webp') }}" class="img-fluid"></a></div>
-                        <div class="col-lg-4 mb-4"><a target="_blank" href="https://www.amazon.com/Ultimate-Book-Wedding-Lists-WedSpace-com/dp/1934386839/"><img src="{{ asset('frontend/imgs/book/wedding-book/ultimate-book-of-wedding-lists.webp') }}" class="img-fluid"></a></div>
-                        <div class="col-lg-4 mb-4"><a target="_blank" href="https://www.amazon.com/Ultimate-Grooms-Guide-Alex-Lluch/dp/1887169520/"><img src="{{ asset('frontend/imgs/book/wedding-book/ultimate-grooms-guide.webp') }}" class="img-fluid"></a></div>
-                        <div class="col-lg-4 mb-4"><a target="_blank" href="https://www.amazon.com/OMG-Wedding-Stories-Outrageous-Embarrassing/dp/1934386979/"><img src="{{ asset('frontend/imgs/book/wedding-book/omg-wedding-stories.webp') }}" class="img-fluid"></a></div>
-                        <div class="col-lg-4 mb-4"><a target="_blank" href="https://www.amazon.com/Bride-Groom-Story-Fill-Blank/dp/1934386499/"><img src="{{ asset('frontend/imgs/book/wedding-book/bride-and-groom-story.webp') }}" class="img-fluid"></a></div>
-                        <div class="col-lg-4 mb-4"><a target="_blank" href="https://www.amazon.com/Before-Wedding-Provocative-Questions-Prepare/dp/1934386367/"><img src="{{ asset('frontend/imgs/book/wedding-book/before-the-wedding.webp') }}" class="img-fluid"></a></div>
+                        <div class="col-lg-4 mb-4"><a target="_blank" href="https://www.amazon.com/Ultimate-Wedding-Planner-Organizer/dp/1934386405/"><img loading="lazy" decoding="async" src="{{ asset('frontend/imgs/book/wedding-book/ultimage-wedding-planner-and-organizer.webp') }}" class="img-fluid"></a></div>
+                        <div class="col-lg-4 mb-4"><a target="_blank" href="https://www.amazon.com/Ultimate-Wedding-Planning-Guide/dp/1936061244/"><img loading="lazy" decoding="async" src="{{ asset('frontend/imgs/book/wedding-book/ultimage-wedding-planning-guice.webp') }}" class="img-fluid"></a></div>
+                        <div class="col-lg-4 mb-4"><a target="_blank" href="https://www.amazon.com/Ultimate-Wedding-Scrapbook-Alex-Lluch/dp/193438612X/"><img loading="lazy" decoding="async" src="{{ asset('frontend/imgs/book/wedding-book/ultimage-wedding-scrapbook.webp') }}" class="img-fluid"></a></div>
+                        <div class="col-lg-4 mb-4"><a target="_blank" href="https://www.amazon.com/1001-Popular-Asked-Wedding-Questions/dp/193438688X/"><img loading="lazy" decoding="async" src="{{ asset('frontend/imgs/book/wedding-book/1001-questions.webp') }}" class="img-fluid"></a></div>
+                        <div class="col-lg-4 mb-4"><a target="_blank" href="https://www.amazon.com/Ultimate-Wedding-Planner-Organizer/dp/1934386405/"><img loading="lazy" decoding="async" src="{{ asset('frontend/imgs/book/wedding-book/our-wedding-journal.webp') }}" class="img-fluid"></a></div>
+                        <div class="col-lg-4 mb-4"><a target="_blank" href="https://www.amazon.com/Making-Wedding-Beautiful-Memorable-Unique/dp/1887169709/"><img loading="lazy" decoding="async" src="{{ asset('frontend/imgs/book/wedding-book/making-your-wedding-memorable.webp') }}" class="img-fluid"></a></div>
+                        <div class="col-lg-4 mb-4"><a target="_blank" href="https://www.amazon.com/Bride-Groom-Challenge-Better-Winner/dp/1934386146/"><img loading="lazy" decoding="async" src="{{ asset('frontend/imgs/book/wedding-book/bride-and-groom-challenge.webp') }}" class="img-fluid"></a></div>
+                        <div class="col-lg-4 mb-4"><a target="_blank" href="https://www.amazon.com/Ultimate-Book-Wedding-Lists-WedSpace-com/dp/1934386839/"><img loading="lazy" decoding="async" src="{{ asset('frontend/imgs/book/wedding-book/ultimate-book-of-wedding-lists.webp') }}" class="img-fluid"></a></div>
+                        <div class="col-lg-4 mb-4"><a target="_blank" href="https://www.amazon.com/Ultimate-Grooms-Guide-Alex-Lluch/dp/1887169520/"><img loading="lazy" decoding="async" src="{{ asset('frontend/imgs/book/wedding-book/ultimate-grooms-guide.webp') }}" class="img-fluid"></a></div>
+                        <div class="col-lg-4 mb-4"><a target="_blank" href="https://www.amazon.com/OMG-Wedding-Stories-Outrageous-Embarrassing/dp/1934386979/"><img loading="lazy" decoding="async" src="{{ asset('frontend/imgs/book/wedding-book/omg-wedding-stories.webp') }}" class="img-fluid"></a></div>
+                        <div class="col-lg-4 mb-4"><a target="_blank" href="https://www.amazon.com/Bride-Groom-Story-Fill-Blank/dp/1934386499/"><img loading="lazy" decoding="async" src="{{ asset('frontend/imgs/book/wedding-book/bride-and-groom-story.webp') }}" class="img-fluid"></a></div>
+                        <div class="col-lg-4 mb-4"><a target="_blank" href="https://www.amazon.com/Before-Wedding-Provocative-Questions-Prepare/dp/1934386367/"><img loading="lazy" decoding="async" src="{{ asset('frontend/imgs/book/wedding-book/before-the-wedding.webp') }}" class="img-fluid"></a></div>
                     </div>
 
                 </div>

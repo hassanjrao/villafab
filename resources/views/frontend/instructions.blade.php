@@ -67,7 +67,7 @@
                                 </a>
                                 <a href="https://www.youtube.com/watch?v=sApb0oPcF5c" target="_blank"
                                     style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
-                                    <img src="{{ asset('frontend/imgs/villa-fabulosa-winery.webp') }}" class="u_tube_icn" width="130"
+                                    <img loading="lazy" decoding="async" src="{{ asset('frontend/imgs/villa-fabulosa-winery.webp') }}" class="u_tube_icn" width="130"
                                         height="100">
                                 </a>
                             </div>
@@ -174,7 +174,7 @@
                         <div class="card-body">
                             <a data-fancybox data-width="740" data-height="460" href="https://youtu.be/Xuvah9BdF0A"
                                 target="_blank">
-                                <img src="{{ asset('frontend/imgs/ins-pics/villa-fabulosa-instructions-514.webp') }}" class="img-fluid">
+                                <img loading="lazy" decoding="async" src="{{ asset('frontend/imgs/ins-pics/villa-fabulosa-instructions-514.webp') }}" class="img-fluid">
                             </a>
                         </div>
                         <div class="card-header text-center">

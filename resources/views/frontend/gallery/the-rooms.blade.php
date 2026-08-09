@@ -281,7 +281,7 @@
                         class="gallery-video-wrapper d-block">
                         <img loading="lazy" decoding="async" data-full="{{ asset('frontend/imgs/villa-fabulosa-kitchen-07.webp') }}" src="{{ asset('frontend/imgs/villa-fabulosa-kitchen-07-thumb.webp') }}" alt="Kitchen Video"
                             class="img-fluid gallery-grid-image">
-                        <img src="{{ asset('frontend/imgs/villa-fabulosa-winery.webp') }}" alt="Play video"
+                        <img loading="lazy" decoding="async" src="{{ asset('frontend/imgs/villa-fabulosa-winery.webp') }}" alt="Play video"
                             class="gallery-video-icon">
                     </a>
                 </div>
@@ -453,7 +453,7 @@
     <div id="gallery-lightbox">
         <button class="glb-close" type="button" aria-label="Close">&times;</button>
         <button class="glb-prev" type="button" aria-label="Previous"><i class="fa fa-angle-left"></i></button>
-        <img id="glb-img" src="" alt="">
+        <img loading="lazy" decoding="async" id="glb-img" src="" alt="">
         <button class="glb-next" type="button" aria-label="Next"><i class="fa fa-angle-right"></i></button>
         <div class="glb-counter" id="glb-counter"></div>
     </div>

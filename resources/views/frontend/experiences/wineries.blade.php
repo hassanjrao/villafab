@@ -76,7 +76,7 @@
                                     alt="Card image cap">
                                 <a href="https://www.youtube.com/watch?v=uyQRRCBf_9o" target="_blank"
                                     style="position: absolute; top: 40%; left: 50%; transform: translate(-50%, -50%);">
-                                    <img src="{{ asset('frontend/imgs/villa-fabulosa-winery.webp') }}" style="height: 40px;">
+                                    <img loading="lazy" decoding="async" src="{{ asset('frontend/imgs/villa-fabulosa-winery.webp') }}" style="height: 40px;">
                                 </a>
                                 <div class="card-body">
                                     <h5 class="card-title">Wineries Nearby</h5>
@@ -88,12 +88,12 @@
                     <div class="col-lg-6">
                         <div class="site_wineries_media_list list-unstyled">
                             <div class="card" style="width: 100%;">
-                                <img class="card-img-top"
+                                <img loading="lazy" decoding="async" class="card-img-top"
                                     src="{{ asset('frontend/imgs/wineriesnear/youtube-2.webp') }}"
                                     alt="Card image cap">
                                 <a href="https://www.youtube.com/watch?v=_GeV-6rEgnI" target="_blank"
                                     style="position: absolute; top: 40%; left: 50%; transform: translate(-50%, -50%);">
-                                    <img src="{{ asset('frontend/imgs/villa-fabulosa-winery.webp') }}" style="height: 40px;">
+                                    <img loading="lazy" decoding="async" src="{{ asset('frontend/imgs/villa-fabulosa-winery.webp') }}" style="height: 40px;">
                                 </a>
                                 <div class="card-body">
                                     <h5 class="card-title">Other Things to Do</h5>
@@ -109,7 +109,7 @@
                             located right in the center of Wine Country with over 55 wineries nearby!</p>
                         <div class="site_wineries_media_list list-unstyled">
                             <div class="card" style="width: 100%;">
-                                <img class="card-img-top"
+                                <img loading="lazy" decoding="async" class="card-img-top"
                                     src="{{ asset('frontend/imgs/wineriesnear/temecula-winery-171.webp') }}"
                                     alt="Card image cap">
                                 <div class="card-body"></div>
@@ -146,7 +146,7 @@
                                         </li>
                                     </ul>
                                 </div>
-                                <a href="https://www.southcoastwinery.com/?chebs=gl-southcoastwinery" target="_blank"><img
+                                <a href="https://www.southcoastwinery.com/?chebs=gl-southcoastwinery" target="_blank"><img loading="lazy" decoding="async"
                                         src="{{ asset('frontend/imgs/wineriesnear/southcoastwinery-02.webp') }}" class="site_wineries_thumb"
                                         alt=""></a>
                             </div>
@@ -178,7 +178,7 @@
                                         </li>
                                     </ul>
                                 </div>
-                                <a href="http://www.bellavistawinery.com/" target="_blank"><img
+                                <a href="http://www.bellavistawinery.com/" target="_blank"><img loading="lazy" decoding="async"
                                         src="{{ asset('frontend/imgs/wineriesnear/bellavistawinery-48.webp') }}" class="site_wineries_thumb"
                                         alt=""></a>
                             </div>
@@ -211,7 +211,7 @@
                                         </li>
                                     </ul>
                                 </div>
-                                <a href="http://www.mauricecarriewinery.com/" target="_blank"><img
+                                <a href="http://www.mauricecarriewinery.com/" target="_blank"><img loading="lazy" decoding="async"
                                         src="{{ asset('frontend/imgs/wineriesnear/mauricecarriewinery-25.webp') }}" class="site_wineries_thumb"
                                         alt=""></a>
                             </div>
@@ -243,7 +243,7 @@
                                         </li>
                                     </ul>
                                 </div>
-                                <a href="http://www.pontevineyardinn.com/" target="_blank"><img
+                                <a href="http://www.pontevineyardinn.com/" target="_blank"><img loading="lazy" decoding="async"
                                         src="{{ asset('frontend/imgs/wineriesnear/pontevineyardinn-55.webp') }}"
                                         class="site_wineries_thumb" alt=""></a>
                             </div>
@@ -276,7 +276,7 @@
                                         </li>
                                     </ul>
                                 </div>
-                                <a href="http://www.carterestatewinery.com/" target="_blank"><img
+                                <a href="http://www.carterestatewinery.com/" target="_blank"><img loading="lazy" decoding="async"
                                         src="{{ asset('frontend/imgs/wineriesnear/carterestatewinery-51.webp') }}"
                                         class="site_wineries_thumb" alt=""></a>
                             </div>
@@ -309,7 +309,7 @@
                                         </li>
                                     </ul>
                                 </div>
-                                <a href="http://www.avensolewinery.com/" target="_blank"><img
+                                <a href="http://www.avensolewinery.com/" target="_blank"><img loading="lazy" decoding="async"
                                         src="{{ asset('frontend/imgs/wineriesnear/avensolewinery-10.webp') }}"
                                         class="site_wineries_thumb" alt=""></a>
                             </div>
@@ -341,7 +341,7 @@
                                         </li>
                                     </ul>
                                 </div>
-                                <a href="http://www.wienscellars.com/" target="_blank"><img
+                                <a href="http://www.wienscellars.com/" target="_blank"><img loading="lazy" decoding="async"
                                         src="{{ asset('frontend/imgs/wineriesnear/wienscellars-16.webp') }}"
                                         class="site_wineries_thumb" alt=""></a>
                             </div>
@@ -373,7 +373,7 @@
                                         </li>
                                     </ul>
                                 </div>
-                                <a href="https://www.lorimarwinery.com/" target="_blank"><img
+                                <a href="https://www.lorimarwinery.com/" target="_blank"><img loading="lazy" decoding="async"
                                         src="{{ asset('frontend/imgs/wineriesnear/lorimarwinery-12.webp') }}"
                                         class="site_wineries_thumb" alt=""></a>
                             </div>
@@ -405,7 +405,7 @@
                                         </li>
                                     </ul>
                                 </div>
-                                <a href="http://www.sccellars.com/" target="_blank"><img
+                                <a href="http://www.sccellars.com/" target="_blank"><img loading="lazy" decoding="async"
                                         src="{{ asset('frontend/imgs/wineriesnear/sccellars-61.webp') }}"
                                         class="site_wineries_thumb" alt=""></a>
                             </div>
@@ -437,7 +437,7 @@
                                         </li>
                                     </ul>
                                 </div>
-                                <a href="http://www.peltzerwinery.com/" target="_blank"><img
+                                <a href="http://www.peltzerwinery.com/" target="_blank"><img loading="lazy" decoding="async"
                                         src="{{ asset('frontend/imgs/wineriesnear/peltzerwinery-08.webp') }}" class="site_wineries_thumb"
                                         alt=""></a>
                             </div>
@@ -470,7 +470,7 @@
                                         </li>
                                     </ul>
                                 </div>
-                                <a href="https://www.mountpalomarwinery.com/" target="_blank"><img
+                                <a href="https://www.mountpalomarwinery.com/" target="_blank"><img loading="lazy" decoding="async"
                                         src="{{ asset('frontend/imgs/wineriesnear/mountpalomarwinery-04.webp') }}" class="site_wineries_thumb"
                                         alt=""></a>
                             </div>
@@ -503,7 +503,7 @@
                                         </li>
                                     </ul>
                                 </div>
-                                <a href="https://www.belvinowinery.com/" target="_blank"><img
+                                <a href="https://www.belvinowinery.com/" target="_blank"><img loading="lazy" decoding="async"
                                         src="{{ asset('frontend/imgs/wineriesnear/belvinowinery-18.webp') }}"
                                         class="site_wineries_thumb" alt=""></a>
                             </div>
@@ -535,7 +535,7 @@
                                         </li>
                                     </ul>
                                 </div>
-                                <a href="http://www.redbarnwine.com/" target="_blank"><img
+                                <a href="http://www.redbarnwine.com/" target="_blank"><img loading="lazy" decoding="async"
                                         src="{{ asset('frontend/imgs/wineriesnear/redbarnwine-47.webp') }}"
                                         class="site_wineries_thumb" alt=""></a>
                             </div>
@@ -568,7 +568,7 @@
                                         </li>
                                     </ul>
                                 </div>
-                                <a href="http://www.falknerwinery.com/index.php" target="_blank"><img
+                                <a href="http://www.falknerwinery.com/index.php" target="_blank"><img loading="lazy" decoding="async"
                                         src="{{ asset('frontend/imgs/wineriesnear/falknerwinery-20.webp') }}"
                                         class="site_wineries_thumb" alt=""></a>
                             </div>
@@ -601,7 +601,7 @@
                                         </li>
                                     </ul>
                                 </div>
-                                <a href="https://www.miramontewinery.com/" target="_blank"><img
+                                <a href="https://www.miramontewinery.com/" target="_blank"><img loading="lazy" decoding="async"
                                         src="{{ asset('frontend/imgs/wineriesnear/miramontewinery-03.webp') }}" class="site_wineries_thumb"
                                         alt=""></a>
                             </div>
@@ -634,7 +634,7 @@
                                         </li>
                                     </ul>
                                 </div>
-                                <a href="http://www.longshadowranchwinery.com/" target="_blank"><img
+                                <a href="http://www.longshadowranchwinery.com/" target="_blank"><img loading="lazy" decoding="async"
                                         src="{{ asset('frontend/imgs/wineriesnear/longshadowranchwinery-22.webp') }}"
                                         class="site_wineries_thumb" alt=""></a>
                             </div>
@@ -666,7 +666,7 @@
                                         </li>
                                     </ul>
                                 </div>
-                                <a href="https://www.somersetvineyard.com/" target="_blank"><img
+                                <a href="https://www.somersetvineyard.com/" target="_blank"><img loading="lazy" decoding="async"
                                         src="{{ asset('frontend/imgs/wineriesnear/somersetvineyard-11.webp') }}"
                                         class="site_wineries_thumb" alt=""></a>
                             </div>
@@ -698,7 +698,7 @@
                                         </li>
                                     </ul>
                                 </div>
-                                <a href="https://www.fazelicellars.com/" target="_blank"><img
+                                <a href="https://www.fazelicellars.com/" target="_blank"><img loading="lazy" decoding="async"
                                         src="{{ asset('frontend/imgs/wineriesnear/fazelicellars-36.webp') }}"
                                         class="site_wineries_thumb" alt=""></a>
                             </div>
@@ -730,7 +730,7 @@
                                         </li>
                                     </ul>
                                 </div>
-                                <a href="http://www.fazelicellars.com/" target="_blank"><img
+                                <a href="http://www.fazelicellars.com/" target="_blank"><img loading="lazy" decoding="async"
                                         src="{{ asset('frontend/imgs/wineriesnear/fazelicellars-21.webp') }}"
                                         class="site_wineries_thumb" alt=""></a>
                             </div>
@@ -764,7 +764,7 @@
                                         </li>
                                     </ul>
                                 </div>
-                                <a href="http://www.briarrosewinery.com/" target="_blank"><img
+                                <a href="http://www.briarrosewinery.com/" target="_blank"><img loading="lazy" decoding="async"
                                         src="{{ asset('frontend/imgs/wineriesnear/briarrosewinery-28.webp') }}"
                                         class="site_wineries_thumb" alt=""></a>
                             </div>
@@ -795,7 +795,7 @@
                                         </li>
                                     </ul>
                                 </div>
-                                <a href="http://www.1968cellars.com/" target="_blank"><img
+                                <a href="http://www.1968cellars.com/" target="_blank"><img loading="lazy" decoding="async"
                                         src="{{ asset('frontend/imgs/wineriesnear/1968cellars-56.webp') }}"
                                         class="site_wineries_thumb" alt=""></a>
                             </div>
@@ -827,7 +827,7 @@
                                         </li>
                                     </ul>
                                 </div>
-                                <a href="https://www.gershonbachus.com/" target="_blank"><img
+                                <a href="https://www.gershonbachus.com/" target="_blank"><img loading="lazy" decoding="async"
                                         src="{{ asset('frontend/imgs/wineriesnear/gershonbachus-15.webp') }}"
                                         class="site_wineries_thumb" alt=""></a>
                             </div>
@@ -859,7 +859,7 @@
                                         </li>
                                     </ul>
                                 </div>
-                                <a href="http://robertrenzonivineyards.com/" target="_blank"><img
+                                <a href="http://robertrenzonivineyards.com/" target="_blank"><img loading="lazy" decoding="async"
                                         src="{{ asset('frontend/imgs/wineriesnear/robertrenzonivineyards-33.webp') }}"
                                         class="site_wineries_thumb" alt=""></a>
                             </div>
@@ -891,7 +891,7 @@
                                         </li>
                                     </ul>
                                 </div>
-                                <a href="https://lumierewinery.com/" target="_blank"><img
+                                <a href="https://lumierewinery.com/" target="_blank"><img loading="lazy" decoding="async"
                                         src="{{ asset('frontend/imgs/wineriesnear/lumierewinery-27.webp') }}"
                                         class="site_wineries_thumb" alt=""></a>
                             </div>
@@ -923,7 +923,7 @@
                                         </li>
                                     </ul>
                                 </div>
-                                <a href="https://altisimawinery.com/" target="_blank"><img
+                                <a href="https://altisimawinery.com/" target="_blank"><img loading="lazy" decoding="async"
                                         src="{{ asset('frontend/imgs/wineriesnear/altisimawinery-31.webp') }}"
                                         class="site_wineries_thumb" alt=""></a>
                             </div>
@@ -957,7 +957,7 @@
                                         </li>
                                     </ul>
                                 </div>
-                                <a href="http://www.montedeoro.com/" target="_blank"><img
+                                <a href="http://www.montedeoro.com/" target="_blank"><img loading="lazy" decoding="async"
                                         src="{{ asset('frontend/imgs/wineriesnear/montedeoro-38.webp') }}"
                                         class="site_wineries_thumb" alt=""></a>
                             </div>
@@ -989,7 +989,7 @@
                                         </li>
                                     </ul>
                                 </div>
-                                <a href="https://www.europavillage.com/" target="_blank"><img
+                                <a href="https://www.europavillage.com/" target="_blank"><img loading="lazy" decoding="async"
                                         src="{{ asset('frontend/imgs/wineriesnear/europavillage-05.webp') }}" class="site_wineries_thumb"
                                         alt=""></a>
                             </div>
@@ -1022,7 +1022,7 @@
                                         </li>
                                     </ul>
                                 </div>
-                                <a href="http://www.innatchuronwinery.com/" target="_blank"><img
+                                <a href="http://www.innatchuronwinery.com/" target="_blank"><img loading="lazy" decoding="async"
                                         src="{{ asset('frontend/imgs/wineriesnear/innatchuronwinery-40.webp') }}"
                                         class="site_wineries_thumb" alt=""></a>
                             </div>
@@ -1054,7 +1054,7 @@
                                         </li>
                                     </ul>
                                 </div>
-                                <a href="http://bailywinery.com/" target="_blank"><img
+                                <a href="http://bailywinery.com/" target="_blank"><img loading="lazy" decoding="async"
                                         src="{{ asset('frontend/imgs/wineriesnear/bailywinery-23.webp') }}"
                                         class="site_wineries_thumb" alt=""></a>
                             </div>
@@ -1086,7 +1086,7 @@
                                         </li>
                                     </ul>
                                 </div>
-                                <a href="http://www.akashwinery.com/" target="_blank"><img
+                                <a href="http://www.akashwinery.com/" target="_blank"><img loading="lazy" decoding="async"
                                         src="{{ asset('frontend/imgs/wineriesnear/akashwinery-32.webp') }}"
                                         class="site_wineries_thumb" alt=""></a>
                             </div>
@@ -1118,7 +1118,7 @@
                                         </li>
                                     </ul>
                                 </div>
-                                <a href="https://www.europavillage.com/" target="_blank"><img
+                                <a href="https://www.europavillage.com/" target="_blank"><img loading="lazy" decoding="async"
                                         src="{{ asset('frontend/imgs/wineriesnear/europavillage-46.webp') }}"
                                         class="site_wineries_thumb" alt=""></a>
                             </div>
@@ -1150,7 +1150,7 @@
                                         </li>
                                     </ul>
                                 </div>
-                                <a href="http://www.vindemia.com/" target="_blank"><img
+                                <a href="http://www.vindemia.com/" target="_blank"><img loading="lazy" decoding="async"
                                         src="{{ asset('frontend/imgs/wineriesnear/vindemia-07.webp') }}" class="site_wineries_thumb"
                                         alt=""></a>
                             </div>
@@ -1182,7 +1182,7 @@
                                         </li>
                                     </ul>
                                 </div>
-                                <a href="http://www.wilsoncreekwinery.com/" target="_blank"><img
+                                <a href="http://www.wilsoncreekwinery.com/" target="_blank"><img loading="lazy" decoding="async"
                                         src="{{ asset('frontend/imgs/wineriesnear/wilsoncreekwinery-09.webp') }}" class="site_wineries_thumb"
                                         alt=""></a>
                             </div>
@@ -1214,7 +1214,7 @@
                                         </li>
                                     </ul>
                                 </div>
-                                <a href="https://www.callawaywinery.com/" target="_blank"><img
+                                <a href="https://www.callawaywinery.com/" target="_blank"><img loading="lazy" decoding="async"
                                         src="{{ asset('frontend/imgs/wineriesnear/callawaywinery-35.webp') }}"
                                         class="site_wineries_thumb" alt=""></a>
                             </div>
@@ -1246,7 +1246,7 @@
                                         </li>
                                     </ul>
                                 </div>
-                                <a href="https://oakmountainwinery.com/" target="_blank"><img
+                                <a href="https://oakmountainwinery.com/" target="_blank"><img loading="lazy" decoding="async"
                                         src="{{ asset('frontend/imgs/wineriesnear/oakmountainwinery-26.webp') }}"
                                         class="site_wineries_thumb" alt=""></a>
                             </div>
@@ -1279,7 +1279,7 @@
                                         </li>
                                     </ul>
                                 </div>
-                                <a href="http://www.palumbofamilyvineyards.com/" target="_blank"><img
+                                <a href="http://www.palumbofamilyvineyards.com/" target="_blank"><img loading="lazy" decoding="async"
                                         src="{{ asset('frontend/imgs/wineriesnear/oakmountainwinery-26.webp') }}"
                                         class="site_wineries_thumb" alt=""></a>
                             </div>
@@ -1311,7 +1311,7 @@
                                         </li>
                                     </ul>
                                 </div>
-                                <a href="http://www.oakmountainwinery.com/" target="_blank"><img
+                                <a href="http://www.oakmountainwinery.com/" target="_blank"><img loading="lazy" decoding="async"
                                         src="{{ asset('frontend/imgs/wineriesnear/oakmountainwinery-17.webp') }}"
                                         class="site_wineries_thumb" alt=""></a>
                             </div>
@@ -1344,7 +1344,7 @@
                                         </li>
                                     </ul>
                                 </div>
-                                <a href="http://www.thorntonwine.com/" target="_blank"><img
+                                <a href="http://www.thorntonwine.com/" target="_blank"><img loading="lazy" decoding="async"
                                         src="{{ asset('frontend/imgs/wineriesnear/thorntonwine-60.webp') }}"
                                         class="site_wineries_thumb" alt=""></a>
                             </div>
@@ -1377,7 +1377,7 @@
                                         </li>
                                     </ul>
                                 </div>
-                                <a href="http://www.callawaywinery.com/" target="_blank"><img
+                                <a href="http://www.callawaywinery.com/" target="_blank"><img loading="lazy" decoding="async"
                                         src="{{ asset('frontend/imgs/wineriesnear/callawaywinery-01.webp') }}"
                                         class="site_wineries_thumb" alt=""></a>
                             </div>
@@ -1409,7 +1409,7 @@
                                         </li>
                                     </ul>
                                 </div>
-                                <a href="http://vinhart.com/" target="_blank"><img
+                                <a href="http://vinhart.com/" target="_blank"><img loading="lazy" decoding="async"
                                         src="{{ asset('frontend/imgs/wineriesnear/vinhart-19.webp') }}"
                                         class="site_wineries_thumb" alt=""></a>
                             </div>
@@ -1441,7 +1441,7 @@
                                         </li>
                                     </ul>
                                 </div>
-                                <a href="http://lorenziestatewines.com/" target="_blank"><img
+                                <a href="http://lorenziestatewines.com/" target="_blank"><img loading="lazy" decoding="async"
                                         src="{{ asset('frontend/imgs/wineriesnear/europavillage-46.webp') }}"
                                         class="site_wineries_thumb" alt=""></a>
                             </div>
@@ -1475,7 +1475,7 @@
                                         </li>
                                     </ul>
                                 </div>
-                                <a href="http://www.leonesscellars.com/" target="_blank"><img
+                                <a href="http://www.leonesscellars.com/" target="_blank"><img loading="lazy" decoding="async"
                                         src="{{ asset('frontend/imgs/wineriesnear/leonesscellars-06.webp') }}"
                                         class="site_wineries_thumb" alt=""></a>
                             </div>
@@ -1508,7 +1508,7 @@
                                         </li>
                                     </ul>
                                 </div>
-                                <a href="https://www.danzadelsolwinery.com/" target="_blank"><img
+                                <a href="https://www.danzadelsolwinery.com/" target="_blank"><img loading="lazy" decoding="async"
                                         src="{{ asset('frontend/imgs/wineriesnear/wienscellars-16.webp') }}"
                                         class="site_wineries_thumb" alt=""></a>
                             </div>
@@ -1541,7 +1541,7 @@
                                         </li>
                                     </ul>
                                 </div>
-                                <a href="https://www.danzadelsolwinery.com/" target="_blank"><img
+                                <a href="https://www.danzadelsolwinery.com/" target="_blank"><img loading="lazy" decoding="async"
                                         src="{{ asset('frontend/imgs/wineriesnear/gershonbachus-15.webp') }}"
                                         class="site_wineries_thumb" alt=""></a>
                             </div>
@@ -1573,7 +1573,7 @@
                                         </li>
                                     </ul>
                                 </div>
-                                <a href="https://www.doffowines.com/" target="_blank"><img
+                                <a href="https://www.doffowines.com/" target="_blank"><img loading="lazy" decoding="async"
                                         src="{{ asset('frontend/imgs/wineriesnear/somersetvineyard-11.webp') }}"
                                         class="site_wineries_thumb" alt=""></a>
                             </div>
@@ -1606,7 +1606,7 @@
                                         </li>
                                     </ul>
                                 </div>
-                                <a href="https://www.chapinfamilyvineyards.com/" target="_blank"><img
+                                <a href="https://www.chapinfamilyvineyards.com/" target="_blank"><img loading="lazy" decoding="async"
                                         src="{{ asset('frontend/imgs/wineriesnear/fazelicellars-36.webp') }}"
                                         class="site_wineries_thumb" alt=""></a>
                             </div>
@@ -1638,7 +1638,7 @@
                                         </li>
                                     </ul>
                                 </div>
-                                <a href="https://vitaglianowines.com/" target="_blank"><img
+                                <a href="https://vitaglianowines.com/" target="_blank"><img loading="lazy" decoding="async"
                                         src="{{ asset('frontend/imgs/wineriesnear/altisimawinery-31.webp') }}"
                                         class="site_wineries_thumb" alt=""></a>
                             </div>
@@ -1670,7 +1670,7 @@
                                         </li>
                                     </ul>
                                 </div>
-                                <a href="https://www.footpathwinery.com/" target="_blank"><img
+                                <a href="https://www.footpathwinery.com/" target="_blank"><img loading="lazy" decoding="async"
                                         src="{{ asset('frontend/imgs/wineriesnear/callawaywinery-35.webp') }}"
                                         class="site_wineries_thumb" alt=""></a>
                             </div>
@@ -1702,7 +1702,7 @@
                                         </li>
                                     </ul>
                                 </div>
-                                <a href="http://frangipaniwinery.com/" target="_blank"><img
+                                <a href="http://frangipaniwinery.com/" target="_blank"><img loading="lazy" decoding="async"
                                         src="{{ asset('frontend/imgs/wineriesnear/wilsoncreekwinery-09.webp') }}"
                                         class="site_wineries_thumb" alt=""></a>
                             </div>
@@ -1734,7 +1734,7 @@
                                         </li>
                                     </ul>
                                 </div>
-                                <a href="https://cougarwinery.com/" target="_blank"><img
+                                <a href="https://cougarwinery.com/" target="_blank"><img loading="lazy" decoding="async"
                                         src="{{ asset('frontend/imgs/wineriesnear/pontevineyardinn-55.webp') }}"
                                         class="site_wineries_thumb" alt=""></a>
                             </div>
@@ -1766,7 +1766,7 @@
                                         </li>
                                     </ul>
                                 </div>
-                                <a href="http://frangipaniwinery.com/" target="_blank"><img
+                                <a href="http://frangipaniwinery.com/" target="_blank"><img loading="lazy" decoding="async"
                                         src="{{ asset('frontend/imgs/wineriesnear/frangipaniwinery-39.webp') }}"
                                         class="site_wineries_thumb" alt=""></a>
                             </div>
@@ -1798,7 +1798,7 @@
                                         </li>
                                     </ul>
                                 </div>
-                                <a href="https://www.cougarvineyards.com/" target="_blank"><img
+                                <a href="https://www.cougarvineyards.com/" target="_blank"><img loading="lazy" decoding="async"
                                         src="{{ asset('frontend/imgs/wineriesnear/cougarvineyards-13.webp') }}"
                                         class="site_wineries_thumb" alt=""></a>
                             </div>
@@ -1830,7 +1830,7 @@
                                         </li>
                                     </ul>
                                 </div>
-                                <a href="http://www.masiadelavinya.com/" target="_blank"><img
+                                <a href="http://www.masiadelavinya.com/" target="_blank"><img loading="lazy" decoding="async"
                                         src="{{ asset('frontend/imgs/wineriesnear/carterestatewinery-51.webp') }}"
                                         class="site_wineries_thumb" alt=""></a>
                             </div>
@@ -1862,7 +1862,7 @@
                                         </li>
                                     </ul>
                                 </div>
-                                <a href="https://www.masiadelavinya.com/" target="_blank"><img
+                                <a href="https://www.masiadelavinya.com/" target="_blank"><img loading="lazy" decoding="async"
                                         src="{{ asset('frontend/imgs/wineriesnear/montedeoro-38.webp') }}"
                                         class="site_wineries_thumb" alt=""></a>
                             </div>
@@ -1895,7 +1895,7 @@
                                         </li>
                                     </ul>
                                 </div>
-                                <a href="https://windyridgecellars.com/" target="_blank"><img
+                                <a href="https://windyridgecellars.com/" target="_blank"><img loading="lazy" decoding="async"
                                         src="{{ asset('frontend/imgs/wineriesnear/frangipaniwinery-39.webp') }}"
                                         class="site_wineries_thumb" alt=""></a>
                             </div>

@@ -113,7 +113,7 @@
 <div id="gallery-lightbox">
     <button class="glb-close" type="button" aria-label="Close">&times;</button>
     <button class="glb-prev" type="button" aria-label="Previous"><i class="fa fa-angle-left"></i></button>
-    <img id="glb-img" src="" alt="">
+    <img loading="lazy" decoding="async" id="glb-img" src="" alt="">
     <button class="glb-next" type="button" aria-label="Next"><i class="fa fa-angle-right"></i></button>
     <div class="glb-counter" id="glb-counter"></div>
 </div>

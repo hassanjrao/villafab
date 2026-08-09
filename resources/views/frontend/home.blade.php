@@ -943,7 +943,7 @@
     <div id="photo-lightbox">
         <button class="lb-close" onclick="closeLightbox()" aria-label="Close">&times;</button>
         <button class="lb-prev" onclick="lbNavigate(-1)" aria-label="Previous"><i class="fa fa-angle-left"></i></button>
-        <img id="lb-img" src="" alt="">
+        <img loading="lazy" decoding="async" id="lb-img" src="" alt="">
         <button class="lb-next" onclick="lbNavigate(1)" aria-label="Next"><i class="fa fa-angle-right"></i></button>
         <div class="lb-counter" id="lb-counter"></div>
     </div>
@@ -1029,7 +1029,7 @@
                 <div class="col-lg-4 mb-4">
                     <div class="site_service_box">
                         <a href="{{ url('/the-rooms') }}">
-                            <img style="height: 250px;"
+                            <img loading="lazy" decoding="async" style="height: 250px;"
                                 src="{{ asset('frontend/imgs/photos-for-vrbo/villa-fabulosa-living-room-12.webp') }}" class="img-fluid">
                         </a>
                         <h3 class="mt-2 mb-0" style="color: #1da3dd;">The Rooms</h3>
@@ -1048,7 +1048,7 @@
                 <div class="col-lg-4 mb-4">
                     <div class="site_service_box">
                         <a href="{{ url('/game-rooms') }}">
-                            <img style="height: 250px;"
+                            <img loading="lazy" decoding="async" style="height: 250px;"
                                 src="{{ asset('frontend/imgs/photos-for-vrbo/villa-fabulosa-game-room-05.webp') }}" class="img-fluid">
                         </a>
                         <h3 class="mt-2 mb-0" style="color: #1da3dd;">Game Room</h3>
@@ -1057,7 +1057,7 @@
                 <div class="col-lg-4 mb-4">
                     <div class="site_service_box">
                         <a href="{{ url('/miniature-golf-course') }}">
-                            <img style="height: 250px;"
+                            <img loading="lazy" decoding="async" style="height: 250px;"
                                 src="{{ asset('frontend/imgs/photos-for-vrbo/villa-fabulosa-aerial-view-04.webp') }}" class="img-fluid">
                         </a>
                         <h3 class="mt-2 mb-0" style="color: #1da3dd;">Miniature Golf</h3>
@@ -1066,7 +1066,7 @@
                 <div class="col-lg-4 mb-4">
                     <div class="site_service_box">
                         <a href="{{ url('/wineries') }}">
-                            <img style="height: 250px;" src="{{ asset('frontend/imgs/photos-for-vrbo/villa-fabulosa-villa.webp') }}"
+                            <img loading="lazy" decoding="async" style="height: 250px;" src="{{ asset('frontend/imgs/photos-for-vrbo/villa-fabulosa-villa.webp') }}"
                                 class="img-fluid">
                         </a>
                         <h3 class="mt-2 mb-0" style="color: #1da3dd;">Wineries</h3>
@@ -1075,7 +1075,7 @@
                 <div class="col-lg-4 mb-4">
                     <div class="site_service_box">
                         <a href="{{ url('/birds-eye') }}">
-                            <img style="height: 250px;" src="{{ asset('frontend/imgs/villa-fabulosa-aerial-view-108.webp') }}"
+                            <img loading="lazy" decoding="async" style="height: 250px;" src="{{ asset('frontend/imgs/villa-fabulosa-aerial-view-108.webp') }}"
                                 class="img-fluid">
                         </a>
                         <h3 class="mt-2 mb-0" style="color: #1da3dd;">Bird's Eye View</h3>
@@ -1291,7 +1291,7 @@
                     {{-- Airbnb badge (left) --}}
                     <a href="https://www.airbnb.com/h/villa-fabulosa" target="_blank"
                         class="d-flex align-items-center text-decoration-none mb-3 mb-md-0">
-                        <img src="{{ asset('frontend/imgs/villa-fabulosa-villa-2.webp') }}" alt="Airbnb"
+                        <img loading="lazy" decoding="async" src="{{ asset('frontend/imgs/villa-fabulosa-villa-2.webp') }}" alt="Airbnb"
                             style="height:74px;width:auto;" class="mr-3">
                         <div class="d-flex flex-column">
                             <span style="font-size:1rem;">
@@ -1313,7 +1313,7 @@
                     {{-- Vrbo badge (right) --}}
                     <a href="https://vrbo.com/3610312?dateless=true" target="_blank"
                         class="d-flex align-items-center text-decoration-none ml-md-auto">
-                        <img src="{{ asset('frontend/imgs/villa-fabulosa-villa-3.webp') }}" alt="Vrbo" style="height:34px;width:auto;"
+                        <img loading="lazy" decoding="async" src="{{ asset('frontend/imgs/villa-fabulosa-villa-3.webp') }}" alt="Vrbo" style="height:34px;width:auto;"
                             class="mr-3">
                         <div class="d-flex flex-column text-md-right">
                             <span class="text-muted" style="font-size:0.85rem;">
@@ -1333,7 +1333,7 @@
                 <hr class="mb-4" style="border-top:1px solid #ddd;max-width:260px;">
             </div>
             <div class="text-center">
-                <img src="{{ asset('frontend/imgs/villa-fabulosa-wine-room.webp') }}"
+                <img loading="lazy" decoding="async" src="{{ asset('frontend/imgs/villa-fabulosa-wine-room.webp') }}"
                     alt="Temecula Wine Country map showing Villa Fabulosa" class="img-fluid"
                     style="max-width:100%;height:auto;">
             </div>
@@ -1641,7 +1641,7 @@
             </div>
 
             <a href="https://www.villamagnifica.com/" target="_blank" class="cf-sister">
-                <img src="{{ asset('frontend/imgs/villa-fabulosa-villa-198.webp') }}"
+                <img loading="lazy" decoding="async" src="{{ asset('frontend/imgs/villa-fabulosa-villa-198.webp') }}"
                     alt="Villa Magnifica">
                 <div class="cf-sister-body">
                     <div class="cf-sister-eyebrow">Sister Property</div>

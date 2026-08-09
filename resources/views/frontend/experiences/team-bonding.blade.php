@@ -132,7 +132,7 @@
                             <div class="card">
                                 <a data-fancybox data-width="640" data-height="360"
                                     href="{{ asset('frontend/' . $game['href']) }}">
-                                    <img src="{{ asset('frontend/' . $game['img']) }}" class="card-img-top"
+                                    <img loading="lazy" decoding="async" src="{{ asset('frontend/' . $game['img']) }}" class="card-img-top"
                                         alt="{{ $game['title'] }}">
                                     <div class="card-body">
                                         <h5 class="card-title mb-0">{{ $game['title'] }}</h5>

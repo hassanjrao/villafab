@@ -21,7 +21,7 @@
                 <img src="{{ asset('frontend/imgs/villa-fabulosa-upstairs.webp') }}" class="img-fluid">
             </div>
             <div class="col-lg-6">
-                <img src="{{ asset('frontend/imgs/villa-fabulosa-floor-plan.webp') }}" class="img-fluid">
+                <img loading="lazy" decoding="async" src="{{ asset('frontend/imgs/villa-fabulosa-floor-plan.webp') }}" class="img-fluid">
             </div>
         </div>
     </div>
