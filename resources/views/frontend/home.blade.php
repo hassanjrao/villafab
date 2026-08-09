@@ -812,23 +812,27 @@
 
             {{-- Large main photo --}}
             <div class="hero-main" onclick="openPhotoTour()">
-                <img src="{{ asset('frontend/imgs/photos-for-vrbo/villa-fabulosa-pool-01.webp') }}"
-                    alt="Villa Fabulosa – front exterior with pool" fetchpriority="high" decoding="async">
+                <img src="{{ asset('frontend/imgs/photos-for-vrbo/villa-fabulosa-pool-01-hero1x.webp') }}" srcset="{{ asset('frontend/imgs/photos-for-vrbo/villa-fabulosa-pool-01-hero1x.webp') }} 800w, {{ asset('frontend/imgs/photos-for-vrbo/villa-fabulosa-pool-01-hero.webp') }} 1200w" sizes="(max-width: 767px) 100vw, 800px" width="800" height="533" alt="Villa Fabulosa – front exterior with pool" fetchpriority="high" decoding="async">
             </div>
 
             {{-- 2 × 2 right grid --}}
             <div class="hero-right">
                 <div class="hero-grid-item" onclick="openPhotoTour()">
-                    <img src="{{ asset('frontend/imgs/photos-for-vrbo/villa-fabulosa-aerial-view-13-thumb.webp') }}" alt="Aerial view at dusk">
+                    <img src="{{ asset('frontend/imgs/photos-for-vrbo/villa-fabulosa-aerial-view-13-hero1x.webp') }}" srcset="{{ asset('frontend/imgs/photos-for-vrbo/villa-fabulosa-aerial-view-13-hero1x.webp') }} 460w, {{ asset('frontend/imgs/photos-for-vrbo/villa-fabulosa-aerial-view-13-hero.webp') }} 900w" sizes="(max-width: 767px) 50vw, 460px" width="460" height="260" alt="Aerial view at dusk">
                 </div>
                 <div class="hero-grid-item" onclick="openPhotoTour()">
-                    <img src="{{ asset('frontend/imgs/photos-for-vrbo/villa-fabulosa-sports-field-03-thumb.webp') }}" alt="Sports court aerial view">
+                    <img src="{{ asset('frontend/imgs/photos-for-vrbo/villa-fabulosa-sports-field-03-hero1x.webp') }}" srcset="{{ asset('frontend/imgs/photos-for-vrbo/villa-fabulosa-sports-field-03-hero1x.webp') }} 460w, {{ asset('frontend/imgs/photos-for-vrbo/villa-fabulosa-sports-field-03-hero.webp') }} 900w" sizes="(max-width: 767px) 50vw, 460px" width="460" height="260" alt="Sports court aerial view">
                 </div>
                 <div class="hero-grid-item" onclick="openPhotoTour()">
-                    <img src="{{ asset('frontend/imgs/photos-for-vrbo/villa-fabulosa-living-room-06-thumb.webp') }}" alt="Living & media room">
+                    <img src="{{ asset('frontend/imgs/photos-for-vrbo/villa-fabulosa-living-room-06-hero1x.webp') }}"
+                        srcset="{{ asset('frontend/imgs/photos-for-vrbo/villa-fabulosa-living-room-06-hero1x.webp') }} 460w, {{ asset('frontend/imgs/photos-for-vrbo/villa-fabulosa-living-room-06-hero.webp') }} 900w"
+                        sizes="(max-width: 767px) 50vw, 460px" width="460" height="260"
+                        alt="Living & media room">
                 </div>
                 <div class="hero-grid-item" onclick="openPhotoTour()">
-                    <img src="{{ asset('frontend/imgs/photos-for-vrbo/villa-fabulosa-mini-golf-11-thumb.webp') }}"
+                    <img src="{{ asset('frontend/imgs/photos-for-vrbo/villa-fabulosa-mini-golf-11-hero1x.webp') }}"
+                        srcset="{{ asset('frontend/imgs/photos-for-vrbo/villa-fabulosa-mini-golf-11-hero1x.webp') }} 460w, {{ asset('frontend/imgs/photos-for-vrbo/villa-fabulosa-mini-golf-11-hero.webp') }} 900w"
+                        sizes="(max-width: 767px) 50vw, 460px" width="460" height="260"
                         alt="18-Hole Miniature Golf Course">
                     <div class="hero-label">18-Hole Miniature Golf Course</div>
                     <button class="show-all-photos-btn" onclick="event.stopPropagation(); openPhotoTour()">
@@ -1029,8 +1033,7 @@
                 <div class="col-lg-4 mb-4">
                     <div class="site_service_box">
                         <a href="{{ url('/the-rooms') }}">
-                            <img loading="lazy" decoding="async" style="height: 250px;"
-                                src="{{ asset('frontend/imgs/photos-for-vrbo/villa-fabulosa-living-room-12.webp') }}" class="img-fluid">
+                            <img loading="lazy" decoding="async" style="height: 250px;" src="{{ asset('frontend/imgs/photos-for-vrbo/villa-fabulosa-living-room-12-card1x.webp') }}" srcset="{{ asset('frontend/imgs/photos-for-vrbo/villa-fabulosa-living-room-12-card1x.webp') }} 350w, {{ asset('frontend/imgs/photos-for-vrbo/villa-fabulosa-living-room-12-card.webp') }} 700w" sizes="(max-width: 991px) 100vw, 350px" width="350" height="250" class="img-fluid" alt="Living room at Villa Fabulosa">
                         </a>
                         <h3 class="mt-2 mb-0" style="color: #1da3dd;">The Rooms</h3>
                     </div>
@@ -1038,9 +1041,7 @@
                 <div class="col-lg-4 mb-4">
                     <div class="site_service_box">
                         <a href="{{ url('/the-pool') }}">
-                            <img style="height: 250px;"
-                                src="{{ asset('frontend/imgs/photos-for-vrbo/villa-fabulosa-aerial-view-13-thumb.webp') }}"
-                                class="img-fluid">
+                            <img loading="lazy" decoding="async" style="height: 250px;" src="{{ asset('frontend/imgs/photos-for-vrbo/villa-fabulosa-aerial-view-13-card1x.webp') }}" srcset="{{ asset('frontend/imgs/photos-for-vrbo/villa-fabulosa-aerial-view-13-card1x.webp') }} 350w, {{ asset('frontend/imgs/photos-for-vrbo/villa-fabulosa-aerial-view-13-card.webp') }} 700w" sizes="(max-width: 991px) 100vw, 350px" width="350" height="250" class="img-fluid" alt="The pool at Villa Fabulosa">
                         </a>
                         <h3 class="mt-2 mb-0" style="color: #1da3dd;">The Pool</h3>
                     </div>
@@ -1048,8 +1049,7 @@
                 <div class="col-lg-4 mb-4">
                     <div class="site_service_box">
                         <a href="{{ url('/game-rooms') }}">
-                            <img loading="lazy" decoding="async" style="height: 250px;"
-                                src="{{ asset('frontend/imgs/photos-for-vrbo/villa-fabulosa-game-room-05.webp') }}" class="img-fluid">
+                            <img loading="lazy" decoding="async" style="height: 250px;" src="{{ asset('frontend/imgs/photos-for-vrbo/villa-fabulosa-game-room-05-card1x.webp') }}" srcset="{{ asset('frontend/imgs/photos-for-vrbo/villa-fabulosa-game-room-05-card1x.webp') }} 350w, {{ asset('frontend/imgs/photos-for-vrbo/villa-fabulosa-game-room-05-card.webp') }} 700w" sizes="(max-width: 991px) 100vw, 350px" width="350" height="250" class="img-fluid" alt="Game room at Villa Fabulosa">
                         </a>
                         <h3 class="mt-2 mb-0" style="color: #1da3dd;">Game Room</h3>
                     </div>
@@ -1057,8 +1057,7 @@
                 <div class="col-lg-4 mb-4">
                     <div class="site_service_box">
                         <a href="{{ url('/miniature-golf-course') }}">
-                            <img loading="lazy" decoding="async" style="height: 250px;"
-                                src="{{ asset('frontend/imgs/photos-for-vrbo/villa-fabulosa-aerial-view-04.webp') }}" class="img-fluid">
+                            <img loading="lazy" decoding="async" style="height: 250px;" src="{{ asset('frontend/imgs/photos-for-vrbo/villa-fabulosa-aerial-view-04-card1x.webp') }}" srcset="{{ asset('frontend/imgs/photos-for-vrbo/villa-fabulosa-aerial-view-04-card1x.webp') }} 350w, {{ asset('frontend/imgs/photos-for-vrbo/villa-fabulosa-aerial-view-04-card.webp') }} 700w" sizes="(max-width: 991px) 100vw, 350px" width="350" height="250" class="img-fluid" alt="Aerial view of Villa Fabulosa">
                         </a>
                         <h3 class="mt-2 mb-0" style="color: #1da3dd;">Miniature Golf</h3>
                     </div>
@@ -1066,8 +1065,7 @@
                 <div class="col-lg-4 mb-4">
                     <div class="site_service_box">
                         <a href="{{ url('/wineries') }}">
-                            <img loading="lazy" decoding="async" style="height: 250px;" src="{{ asset('frontend/imgs/photos-for-vrbo/villa-fabulosa-villa.webp') }}"
-                                class="img-fluid">
+                            <img loading="lazy" decoding="async" style="height: 250px;" src="{{ asset('frontend/imgs/photos-for-vrbo/villa-fabulosa-villa-card1x.webp') }}" srcset="{{ asset('frontend/imgs/photos-for-vrbo/villa-fabulosa-villa-card1x.webp') }} 350w, {{ asset('frontend/imgs/photos-for-vrbo/villa-fabulosa-villa-card.webp') }} 700w" sizes="(max-width: 991px) 100vw, 350px" width="350" height="250" class="img-fluid" alt="Villa Fabulosa estate">
                         </a>
                         <h3 class="mt-2 mb-0" style="color: #1da3dd;">Wineries</h3>
                     </div>
@@ -1075,8 +1073,7 @@
                 <div class="col-lg-4 mb-4">
                     <div class="site_service_box">
                         <a href="{{ url('/birds-eye') }}">
-                            <img loading="lazy" decoding="async" style="height: 250px;" src="{{ asset('frontend/imgs/villa-fabulosa-aerial-view-108.webp') }}"
-                                class="img-fluid">
+                            <img loading="lazy" decoding="async" style="height: 250px;" src="{{ asset('frontend/imgs/villa-fabulosa-aerial-view-108-card1x.webp') }}" srcset="{{ asset('frontend/imgs/villa-fabulosa-aerial-view-108-card1x.webp') }} 350w, {{ asset('frontend/imgs/villa-fabulosa-aerial-view-108-card.webp') }} 700w" sizes="(max-width: 991px) 100vw, 350px" width="350" height="250" class="img-fluid" alt="Aerial view of the grounds">
                         </a>
                         <h3 class="mt-2 mb-0" style="color: #1da3dd;">Bird's Eye View</h3>
                     </div>
@@ -1641,7 +1638,9 @@
             </div>
 
             <a href="https://www.villamagnifica.com/" target="_blank" class="cf-sister">
-                <img loading="lazy" decoding="async" src="{{ asset('frontend/imgs/villa-fabulosa-villa-198.webp') }}"
+                <img loading="lazy" decoding="async" src="{{ asset('frontend/imgs/villa-fabulosa-villa-198-card1x.webp') }}"
+                    srcset="{{ asset('frontend/imgs/villa-fabulosa-villa-198-card1x.webp') }} 300w, {{ asset('frontend/imgs/villa-fabulosa-villa-198-card.webp') }} 600w"
+                    sizes="(max-width: 991px) 100vw, 300px" width="300" height="200"
                     alt="Villa Magnifica">
                 <div class="cf-sister-body">
                     <div class="cf-sister-eyebrow">Sister Property</div>

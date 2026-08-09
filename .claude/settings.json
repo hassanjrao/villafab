@@ -20,7 +20,9 @@
       "Bash(curl -s https://villafabulosa.com/ -o /tmp/home.html)",
       "Bash(curl -s https://villafabulosa.com/ -o C:/Users/lenovo/AppData/Local/Temp/claude/d--laravel-villafab-laravel/567d97a4-a3ed-4fc2-b793-782ee8f3ad58/scratchpad/home.html)",
       "Bash(php C:/Users/lenovo/AppData/Local/Temp/claude/d--laravel-villafab-laravel/567d97a4-a3ed-4fc2-b793-782ee8f3ad58/scratchpad/lazy_home.php)",
-      "Bash(magick public/frontend/imgs/villa-fabulosa-hosts.webp -resize \"720x720>\" -quality 86 -define webp:method=6 -strip public/frontend/imgs/villa-fabulosa-hosts.webp)"
+      "Bash(magick public/frontend/imgs/villa-fabulosa-hosts.webp -resize \"720x720>\" -quality 86 -define webp:method=6 -strip public/frontend/imgs/villa-fabulosa-hosts.webp)",
+      "Bash(php C:/Users/lenovo/AppData/Local/Temp/claude/d--laravel-villafab-laravel/567d97a4-a3ed-4fc2-b793-782ee8f3ad58/scratchpad/srcset_home.php)",
+      "Bash(curl -s http://127.0.0.1:8899/ -o __TRACKED_VAR__/h2.html)"
     ]
   }
 }
