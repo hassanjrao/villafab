@@ -160,43 +160,43 @@
 
             <div class="row gallery-grid">
                 <div class="col-6 col-md-3 gallery-grid-item">
-                    <img src="{{ asset('frontend/imgs/05-LIVING-MLS.JPG') }}" alt="Grand Room"
+                    <img loading="lazy" decoding="async" data-full="{{ asset('frontend/imgs/villa-fabulosa-living-room-05.webp') }}" src="{{ asset('frontend/imgs/villa-fabulosa-living-room-05-thumb.webp') }}" alt="Grand Room"
                         class="img-fluid gallery-grid-image">
                 </div>
                 <div class="col-6 col-md-3 gallery-grid-item">
-                    <img src="{{ asset('frontend/imgs/6-LIVING-MLS.JPG') }}" alt="Grand Room"
+                    <img loading="lazy" decoding="async" data-full="{{ asset('frontend/imgs/villa-fabulosa-living-room-06.webp') }}" src="{{ asset('frontend/imgs/villa-fabulosa-living-room-06-thumb.webp') }}" alt="Grand Room"
                         class="img-fluid gallery-grid-image">
                 </div>
                 <div class="col-6 col-md-3 gallery-grid-item">
-                    <img src="{{ asset('frontend/imgs/07-LIVING-MLS.JPG') }}" alt="Grand Room"
+                    <img loading="lazy" decoding="async" data-full="{{ asset('frontend/imgs/villa-fabulosa-living-room-07.webp') }}" src="{{ asset('frontend/imgs/villa-fabulosa-living-room-07-thumb.webp') }}" alt="Grand Room"
                         class="img-fluid gallery-grid-image">
                 </div>
                 <div class="col-6 col-md-3 gallery-grid-item">
-                    <img src="{{ asset('frontend/imgs/56-LIVING-MLS.JPG') }}" alt="Grand Room"
+                    <img loading="lazy" decoding="async" data-full="{{ asset('frontend/imgs/villa-fabulosa-living-room-56.webp') }}" src="{{ asset('frontend/imgs/villa-fabulosa-living-room-56-thumb.webp') }}" alt="Grand Room"
                         class="img-fluid gallery-grid-image">
                 </div>
                 <div class="col-6 col-md-3 gallery-grid-item">
-                    <img src="{{ asset('frontend/imgs/57-LIVING-MLS.JPG') }}" alt="Grand Room"
+                    <img loading="lazy" decoding="async" data-full="{{ asset('frontend/imgs/villa-fabulosa-living-room-57.webp') }}" src="{{ asset('frontend/imgs/villa-fabulosa-living-room-57-thumb.webp') }}" alt="Grand Room"
                         class="img-fluid gallery-grid-image">
                 </div>
                 <div class="col-6 col-md-3 gallery-grid-item">
-                    <img src="{{ asset('frontend/imgs/58-LIVING-MLS.JPG') }}" alt="Grand Room"
+                    <img loading="lazy" decoding="async" data-full="{{ asset('frontend/imgs/villa-fabulosa-living-room-58.webp') }}" src="{{ asset('frontend/imgs/villa-fabulosa-living-room-58-thumb.webp') }}" alt="Grand Room"
                         class="img-fluid gallery-grid-image">
                 </div>
                 <div class="col-6 col-md-3 gallery-grid-item">
-                    <img src="{{ asset('frontend/imgs/59-LIVING-MLS.JPG') }}" alt="Grand Room"
+                    <img loading="lazy" decoding="async" data-full="{{ asset('frontend/imgs/villa-fabulosa-living-room-59.webp') }}" src="{{ asset('frontend/imgs/villa-fabulosa-living-room-59-thumb.webp') }}" alt="Grand Room"
                         class="img-fluid gallery-grid-image">
                 </div>
                 <div class="col-6 col-md-3 gallery-grid-item">
-                    <img src="{{ asset('frontend/imgs/60-LIVING-MLS.JPG') }}" alt="Grand Room"
+                    <img loading="lazy" decoding="async" data-full="{{ asset('frontend/imgs/villa-fabulosa-living-room-60.webp') }}" src="{{ asset('frontend/imgs/villa-fabulosa-living-room-60-thumb.webp') }}" alt="Grand Room"
                         class="img-fluid gallery-grid-image">
                 </div>
                 <div class="col-6 col-md-3 gallery-grid-item">
-                    <img src="{{ asset('frontend/imgs/77-LIVING-MLS.JPG') }}" alt="Grand Room"
+                    <img loading="lazy" decoding="async" data-full="{{ asset('frontend/imgs/villa-fabulosa-living-room-77.webp') }}" src="{{ asset('frontend/imgs/villa-fabulosa-living-room-77-thumb.webp') }}" alt="Grand Room"
                         class="img-fluid gallery-grid-image">
                 </div>
                 <div class="col-6 col-md-3 gallery-grid-item">
-                    <img src="{{ asset('frontend/imgs/IMG_1752-MLS.JPG') }}" alt="Grand Room"
+                    <img loading="lazy" decoding="async" data-full="{{ asset('frontend/imgs/villa-fabulosa-room-175.webp') }}" src="{{ asset('frontend/imgs/villa-fabulosa-room-175-thumb.webp') }}" alt="Grand Room"
                         class="img-fluid gallery-grid-image">
                 </div>
             </div>
@@ -221,35 +221,35 @@
 
             <div class="row gallery-grid">
                 <div class="col-6 col-md-3 gallery-grid-item">
-                    <img src="{{ asset('frontend/imgs/10-DINING-MLS.JPG') }}" alt="Dining Room"
+                    <img loading="lazy" decoding="async" data-full="{{ asset('frontend/imgs/villa-fabulosa-dining-room-10.webp') }}" src="{{ asset('frontend/imgs/villa-fabulosa-dining-room-10-thumb.webp') }}" alt="Dining Room"
                         class="img-fluid gallery-grid-image">
                 </div>
                 <div class="col-6 col-md-3 gallery-grid-item">
-                    <img src="{{ asset('frontend/imgs/10-DINING-Edit-MLS.JPG') }}" alt="Dining Room"
+                    <img loading="lazy" decoding="async" data-full="{{ asset('frontend/imgs/villa-fabulosa-dining-room-10-2.webp') }}" src="{{ asset('frontend/imgs/villa-fabulosa-dining-room-10-2-thumb.webp') }}" alt="Dining Room"
                         class="img-fluid gallery-grid-image">
                 </div>
                 <div class="col-6 col-md-3 gallery-grid-item">
-                    <img src="{{ asset('frontend/imgs/11-DINING-MLS.JPG') }}" alt="Dining Room"
+                    <img loading="lazy" decoding="async" data-full="{{ asset('frontend/imgs/villa-fabulosa-dining-room-11.webp') }}" src="{{ asset('frontend/imgs/villa-fabulosa-dining-room-11-thumb.webp') }}" alt="Dining Room"
                         class="img-fluid gallery-grid-image">
                 </div>
                 <div class="col-6 col-md-3 gallery-grid-item">
-                    <img src="{{ asset('frontend/imgs/12-LIVING-MLS.JPG') }}" alt="Dining Room"
+                    <img loading="lazy" decoding="async" data-full="{{ asset('frontend/imgs/villa-fabulosa-living-room-12.webp') }}" src="{{ asset('frontend/imgs/villa-fabulosa-living-room-12-thumb.webp') }}" alt="Dining Room"
                         class="img-fluid gallery-grid-image">
                 </div>
                 <div class="col-6 col-md-3 gallery-grid-item">
-                    <img src="{{ asset('frontend/imgs/13-DINING-Edit-MLS.JPG') }}" alt="Dining Room"
+                    <img loading="lazy" decoding="async" data-full="{{ asset('frontend/imgs/villa-fabulosa-dining-room-13.webp') }}" src="{{ asset('frontend/imgs/villa-fabulosa-dining-room-13-thumb.webp') }}" alt="Dining Room"
                         class="img-fluid gallery-grid-image">
                 </div>
                 <div class="col-6 col-md-3 gallery-grid-item">
-                    <img src="{{ asset('frontend/imgs/09-DINING-MLS.JPG') }}" alt="Dining Room"
+                    <img loading="lazy" decoding="async" data-full="{{ asset('frontend/imgs/villa-fabulosa-dining-room-09.webp') }}" src="{{ asset('frontend/imgs/villa-fabulosa-dining-room-09-thumb.webp') }}" alt="Dining Room"
                         class="img-fluid gallery-grid-image">
                 </div>
                 <div class="col-6 col-md-3 gallery-grid-item">
-                    <img src="{{ asset('frontend/imgs/IMG_1736-MLS.JPG') }}" alt="Dining Room"
+                    <img loading="lazy" decoding="async" data-full="{{ asset('frontend/imgs/villa-fabulosa-room-173.webp') }}" src="{{ asset('frontend/imgs/villa-fabulosa-room-173-thumb.webp') }}" alt="Dining Room"
                         class="img-fluid gallery-grid-image">
                 </div>
                 <div class="col-6 col-md-3 gallery-grid-item">
-                    <img src="{{ asset('frontend/imgs/IMG_1737-MLS.JPG') }}" alt="Dining Room"
+                    <img loading="lazy" decoding="async" data-full="{{ asset('frontend/imgs/villa-fabulosa-room-173-2.webp') }}" src="{{ asset('frontend/imgs/villa-fabulosa-room-173-2-thumb.webp') }}" alt="Dining Room"
                         class="img-fluid gallery-grid-image">
                 </div>
             </div>
@@ -279,26 +279,26 @@
                 <div class="col-6 col-md-3 gallery-grid-item">
                     <a href="https://www.youtube.com/watch?v=qoP5hVuMsnQ" target="_blank"
                         class="gallery-video-wrapper d-block">
-                        <img src="{{ asset('frontend/imgs/7-KITCHEN-MLS.JPG') }}" alt="Kitchen Video"
+                        <img loading="lazy" decoding="async" data-full="{{ asset('frontend/imgs/villa-fabulosa-kitchen-07.webp') }}" src="{{ asset('frontend/imgs/villa-fabulosa-kitchen-07-thumb.webp') }}" alt="Kitchen Video"
                             class="img-fluid gallery-grid-image">
-                        <img src="{{ asset('frontend/imgs/youtube.png') }}" alt="Play video"
+                        <img src="{{ asset('frontend/imgs/villa-fabulosa-winery.webp') }}" alt="Play video"
                             class="gallery-video-icon">
                     </a>
                 </div>
                 <div class="col-6 col-md-3 gallery-grid-item">
-                    <img src="{{ asset('frontend/imgs/8-KITCHEN-MLS.JPG') }}" alt="Kitchen"
+                    <img loading="lazy" decoding="async" data-full="{{ asset('frontend/imgs/villa-fabulosa-kitchen-08.webp') }}" src="{{ asset('frontend/imgs/villa-fabulosa-kitchen-08-thumb.webp') }}" alt="Kitchen"
                         class="img-fluid gallery-grid-image">
                 </div>
                 <div class="col-6 col-md-3 gallery-grid-item">
-                    <img src="{{ asset('frontend/imgs/66-KITCHEN-MLS.JPG') }}" alt="Kitchen"
+                    <img loading="lazy" decoding="async" data-full="{{ asset('frontend/imgs/villa-fabulosa-kitchen-66.webp') }}" src="{{ asset('frontend/imgs/villa-fabulosa-kitchen-66-thumb.webp') }}" alt="Kitchen"
                         class="img-fluid gallery-grid-image">
                 </div>
                 <div class="col-6 col-md-3 gallery-grid-item">
-                    <img src="{{ asset('frontend/imgs/67-KITCHEN-MLS.JPG') }}" alt="Kitchen"
+                    <img loading="lazy" decoding="async" data-full="{{ asset('frontend/imgs/villa-fabulosa-kitchen-67.webp') }}" src="{{ asset('frontend/imgs/villa-fabulosa-kitchen-67-thumb.webp') }}" alt="Kitchen"
                         class="img-fluid gallery-grid-image">
                 </div>
                 <div class="col-6 col-md-3 gallery-grid-item">
-                    <img src="{{ asset('frontend/imgs/68-KITCHEN-MLS.JPG') }}" alt="Kitchen"
+                    <img loading="lazy" decoding="async" data-full="{{ asset('frontend/imgs/villa-fabulosa-kitchen-68.webp') }}" src="{{ asset('frontend/imgs/villa-fabulosa-kitchen-68-thumb.webp') }}" alt="Kitchen"
                         class="img-fluid gallery-grid-image">
                 </div>
             </div>
@@ -323,19 +323,19 @@
 
             <div class="row gallery-grid">
                 <div class="col-6 col-md-3 gallery-grid-item">
-                    <img src="{{ asset('frontend/imgs/53-MEDIA-MLS.JPG') }}" alt="Second Seating Area"
+                    <img loading="lazy" decoding="async" data-full="{{ asset('frontend/imgs/villa-fabulosa-media-room-53.webp') }}" src="{{ asset('frontend/imgs/villa-fabulosa-media-room-53-thumb.webp') }}" alt="Second Seating Area"
                         class="img-fluid gallery-grid-image">
                 </div>
                 <div class="col-6 col-md-3 gallery-grid-item">
-                    <img src="{{ asset('frontend/imgs/13.30-MEDIA-MLS.JPG') }}" alt="Second Seating Area"
+                    <img loading="lazy" decoding="async" data-full="{{ asset('frontend/imgs/villa-fabulosa-media-room-13.webp') }}" src="{{ asset('frontend/imgs/villa-fabulosa-media-room-13-thumb.webp') }}" alt="Second Seating Area"
                         class="img-fluid gallery-grid-image">
                 </div>
                 <div class="col-6 col-md-3 gallery-grid-item">
-                    <img src="{{ asset('frontend/imgs/126-IMG_1708-MLS.JPG') }}" alt="Second Seating Area"
+                    <img loading="lazy" decoding="async" data-full="{{ asset('frontend/imgs/villa-fabulosa-room-126.webp') }}" src="{{ asset('frontend/imgs/villa-fabulosa-room-126-thumb.webp') }}" alt="Second Seating Area"
                         class="img-fluid gallery-grid-image">
                 </div>
                 <div class="col-6 col-md-3 gallery-grid-item">
-                    <img src="{{ asset('frontend/imgs/IMG_1715-MLS.JPG') }}" alt="Second Seating Area"
+                    <img loading="lazy" decoding="async" data-full="{{ asset('frontend/imgs/villa-fabulosa-room-171.webp') }}" src="{{ asset('frontend/imgs/villa-fabulosa-room-171-thumb.webp') }}" alt="Second Seating Area"
                         class="img-fluid gallery-grid-image">
                 </div>
             </div>
@@ -364,39 +364,39 @@
 
             <div class="row gallery-grid">
                 <div class="col-6 col-md-3 gallery-grid-item">
-                    <img src="{{ asset('frontend/imgs/69-BEDROOM-MLS.JPG') }}" alt="Bedroom"
+                    <img loading="lazy" decoding="async" data-full="{{ asset('frontend/imgs/villa-fabulosa-bedroom-69.webp') }}" src="{{ asset('frontend/imgs/villa-fabulosa-bedroom-69-thumb.webp') }}" alt="Bedroom"
                         class="img-fluid gallery-grid-image">
                 </div>
                 <div class="col-6 col-md-3 gallery-grid-item">
-                    <img src="{{ asset('frontend/imgs/70-BEDROOM-MLS.JPG') }}" alt="Bedroom"
+                    <img loading="lazy" decoding="async" data-full="{{ asset('frontend/imgs/villa-fabulosa-bedroom-70.webp') }}" src="{{ asset('frontend/imgs/villa-fabulosa-bedroom-70-thumb.webp') }}" alt="Bedroom"
                         class="img-fluid gallery-grid-image">
                 </div>
                 <div class="col-6 col-md-3 gallery-grid-item">
-                    <img src="{{ asset('frontend/imgs/73-BEDROOM-MLS.JPG') }}" alt="Bedroom"
+                    <img loading="lazy" decoding="async" data-full="{{ asset('frontend/imgs/villa-fabulosa-bedroom-73.webp') }}" src="{{ asset('frontend/imgs/villa-fabulosa-bedroom-73-thumb.webp') }}" alt="Bedroom"
                         class="img-fluid gallery-grid-image">
                 </div>
                 <div class="col-6 col-md-3 gallery-grid-item">
-                    <img src="{{ asset('frontend/imgs/74-BEDROOM-MLS.JPG') }}" alt="Bedroom"
+                    <img loading="lazy" decoding="async" data-full="{{ asset('frontend/imgs/villa-fabulosa-bedroom-74.webp') }}" src="{{ asset('frontend/imgs/villa-fabulosa-bedroom-74-thumb.webp') }}" alt="Bedroom"
                         class="img-fluid gallery-grid-image">
                 </div>
                 <div class="col-6 col-md-3 gallery-grid-item">
-                    <img src="{{ asset('frontend/imgs/80-BEDROOM-MLS.JPG') }}" alt="Bedroom"
+                    <img loading="lazy" decoding="async" data-full="{{ asset('frontend/imgs/villa-fabulosa-bedroom-80.webp') }}" src="{{ asset('frontend/imgs/villa-fabulosa-bedroom-80-thumb.webp') }}" alt="Bedroom"
                         class="img-fluid gallery-grid-image">
                 </div>
                 <div class="col-6 col-md-3 gallery-grid-item">
-                    <img src="{{ asset('frontend/imgs/81-BEDROOM-MLS.JPG') }}" alt="Bedroom"
+                    <img loading="lazy" decoding="async" data-full="{{ asset('frontend/imgs/villa-fabulosa-bedroom-81.webp') }}" src="{{ asset('frontend/imgs/villa-fabulosa-bedroom-81-thumb.webp') }}" alt="Bedroom"
                         class="img-fluid gallery-grid-image">
                 </div>
                 <div class="col-6 col-md-3 gallery-grid-item">
-                    <img src="{{ asset('frontend/imgs/89-MASTER-BED-MLS.JPG') }}" alt="Bedroom"
+                    <img loading="lazy" decoding="async" data-full="{{ asset('frontend/imgs/villa-fabulosa-master-suite-89.webp') }}" src="{{ asset('frontend/imgs/villa-fabulosa-master-suite-89-thumb.webp') }}" alt="Bedroom"
                         class="img-fluid gallery-grid-image">
                 </div>
                 <div class="col-6 col-md-3 gallery-grid-item">
-                    <img src="{{ asset('frontend/imgs/90-MASTER-BED-MLS.JPG') }}" alt="Bedroom"
+                    <img loading="lazy" decoding="async" data-full="{{ asset('frontend/imgs/villa-fabulosa-master-suite-90.webp') }}" src="{{ asset('frontend/imgs/villa-fabulosa-master-suite-90-thumb.webp') }}" alt="Bedroom"
                         class="img-fluid gallery-grid-image">
                 </div>
                 <div class="col-6 col-md-3 gallery-grid-item">
-                    <img src="{{ asset('frontend/imgs/91-MASTER-BED-MLS.JPG') }}" alt="Bedroom"
+                    <img loading="lazy" decoding="async" data-full="{{ asset('frontend/imgs/villa-fabulosa-master-suite-91.webp') }}" src="{{ asset('frontend/imgs/villa-fabulosa-master-suite-91-thumb.webp') }}" alt="Bedroom"
                         class="img-fluid gallery-grid-image">
                 </div>
             </div>
@@ -422,27 +422,27 @@
 
             <div class="row gallery-grid">
                 <div class="col-6 col-md-3 gallery-grid-item">
-                    <img src="{{ asset('frontend/imgs/55-BATHROOM-MLS.JPG') }}" alt="Bathroom"
+                    <img loading="lazy" decoding="async" data-full="{{ asset('frontend/imgs/villa-fabulosa-bathroom-55.webp') }}" src="{{ asset('frontend/imgs/villa-fabulosa-bathroom-55-thumb.webp') }}" alt="Bathroom"
                         class="img-fluid gallery-grid-image">
                 </div>
                 <div class="col-6 col-md-3 gallery-grid-item">
-                    <img src="{{ asset('frontend/imgs/71-BATHROOM-MLS.JPG') }}" alt="Bathroom"
+                    <img loading="lazy" decoding="async" data-full="{{ asset('frontend/imgs/villa-fabulosa-bathroom-71.webp') }}" src="{{ asset('frontend/imgs/villa-fabulosa-bathroom-71-thumb.webp') }}" alt="Bathroom"
                         class="img-fluid gallery-grid-image">
                 </div>
                 <div class="col-6 col-md-3 gallery-grid-item">
-                    <img src="{{ asset('frontend/imgs/76-BATHROOM-MLS.JPG') }}" alt="Bathroom"
+                    <img loading="lazy" decoding="async" data-full="{{ asset('frontend/imgs/villa-fabulosa-bathroom-76.webp') }}" src="{{ asset('frontend/imgs/villa-fabulosa-bathroom-76-thumb.webp') }}" alt="Bathroom"
                         class="img-fluid gallery-grid-image">
                 </div>
                 <div class="col-6 col-md-3 gallery-grid-item">
-                    <img src="{{ asset('frontend/imgs/82-BATHROOM-MLS.JPG') }}" alt="Bathroom"
+                    <img loading="lazy" decoding="async" data-full="{{ asset('frontend/imgs/villa-fabulosa-bathroom-82.webp') }}" src="{{ asset('frontend/imgs/villa-fabulosa-bathroom-82-thumb.webp') }}" alt="Bathroom"
                         class="img-fluid gallery-grid-image">
                 </div>
                 <div class="col-6 col-md-3 gallery-grid-item">
-                    <img src="{{ asset('frontend/imgs/92-MASTER-BATH-MLS.JPG') }}" alt="Bathroom"
+                    <img loading="lazy" decoding="async" data-full="{{ asset('frontend/imgs/villa-fabulosa-bathroom-92.webp') }}" src="{{ asset('frontend/imgs/villa-fabulosa-bathroom-92-thumb.webp') }}" alt="Bathroom"
                         class="img-fluid gallery-grid-image">
                 </div>
                 <div class="col-6 col-md-3 gallery-grid-item">
-                    <img src="{{ asset('frontend/imgs/93-MASTER-BATH-MLS.JPG') }}" alt="Bathroom"
+                    <img loading="lazy" decoding="async" data-full="{{ asset('frontend/imgs/villa-fabulosa-bathroom-93.webp') }}" src="{{ asset('frontend/imgs/villa-fabulosa-bathroom-93-thumb.webp') }}" alt="Bathroom"
                         class="img-fluid gallery-grid-image">
                 </div>
             </div>
@@ -475,7 +475,7 @@
 
             function openAt(index) {
                 currentIndex = index;
-                imgEl.src = images[index].src;
+                imgEl.src = images[index].getAttribute('data-full') || images[index].src;
                 counterEl.textContent = (index + 1) + ' / ' + images.length;
                 lightbox.classList.add('active');
                 document.body.style.overflow = 'hidden';
@@ -488,7 +488,7 @@
 
             function navigate(delta) {
                 currentIndex = (currentIndex + delta + images.length) % images.length;
-                imgEl.src = images[currentIndex].src;
+                imgEl.src = images[currentIndex].getAttribute('data-full') || images[currentIndex].src;
                 counterEl.textContent = (currentIndex + 1) + ' / ' + images.length;
             }
 

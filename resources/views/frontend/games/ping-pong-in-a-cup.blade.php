@@ -28,7 +28,7 @@
                     <div class="site_video_box">
                         <div class="card">
                             <video width="100%" height="auto" controls
-                                poster="{{ asset('frontend/imgs/team-bonding/ping-pong-in-a-cup.jpg') }}">
+                                poster="{{ asset('frontend/imgs/team-bonding/villa-fabulosa-ping-pong-in-a-cup.webp') }}">
                                 <source src="{{ asset('frontend/video/5-Ping-Pong-in-a-Cup.mp4') }}" type="video/mp4">
                             </video>
                         </div>

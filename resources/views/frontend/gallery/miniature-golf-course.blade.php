@@ -66,43 +66,43 @@
 
         <div class="row gallery-grid">
             <div class="col-6 col-md-3 gallery-grid-item">
-                <img src="{{ asset('frontend/imgs/111-AERIAL-Edit-MLS.JPG') }}" alt="Miniature Golf Course"
+                <img loading="lazy" decoding="async" data-full="{{ asset('frontend/imgs/villa-fabulosa-aerial-view-111.webp') }}" src="{{ asset('frontend/imgs/villa-fabulosa-aerial-view-111-thumb.webp') }}" alt="Miniature Golf Course"
                      class="img-fluid gallery-grid-image">
             </div>
             <div class="col-6 col-md-3 gallery-grid-item">
-                <img src="{{ asset('frontend/imgs/4-AERIAL-MLS.JPG') }}" alt="Miniature Golf Course"
+                <img loading="lazy" decoding="async" data-full="{{ asset('frontend/imgs/villa-fabulosa-aerial-view-04.webp') }}" src="{{ asset('frontend/imgs/villa-fabulosa-aerial-view-04-thumb.webp') }}" alt="Miniature Golf Course"
                      class="img-fluid gallery-grid-image">
             </div>
             <div class="col-6 col-md-3 gallery-grid-item">
-                <img src="{{ asset('frontend/imgs/IMG_2076_MqbYXMhs-0pIYXMhs.jpg') }}" alt="Miniature Golf Course"
+                <img loading="lazy" decoding="async" data-full="{{ asset('frontend/imgs/villa-fabulosa-mini-golf-207.webp') }}" src="{{ asset('frontend/imgs/villa-fabulosa-mini-golf-207-thumb.webp') }}" alt="Miniature Golf Course"
                      class="img-fluid gallery-grid-image">
             </div>
             <div class="col-6 col-md-3 gallery-grid-item">
-                <img src="{{ asset('frontend/imgs/IMG_2077_ezZXXMhs-EyGYXMhs.jpg') }}" alt="Miniature Golf Course"
+                <img loading="lazy" decoding="async" data-full="{{ asset('frontend/imgs/villa-fabulosa-mini-golf-207-2.webp') }}" src="{{ asset('frontend/imgs/villa-fabulosa-mini-golf-207-2-thumb.webp') }}" alt="Miniature Golf Course"
                      class="img-fluid gallery-grid-image">
             </div>
             <div class="col-6 col-md-3 gallery-grid-item">
-                <img src="{{ asset('frontend/imgs/IMG_2078_BCYXXMhs-stHYXMhs.jpg') }}" alt="Miniature Golf Course"
+                <img loading="lazy" decoding="async" data-full="{{ asset('frontend/imgs/villa-fabulosa-mini-golf-207-3.webp') }}" src="{{ asset('frontend/imgs/villa-fabulosa-mini-golf-207-3-thumb.webp') }}" alt="Miniature Golf Course"
                      class="img-fluid gallery-grid-image">
             </div>
             <div class="col-6 col-md-3 gallery-grid-item">
-                <img src="{{ asset('frontend/imgs/IMG_2081_ZQYXXMhs-fdJYXMhs.jpg') }}" alt="Miniature Golf Course"
+                <img loading="lazy" decoding="async" data-full="{{ asset('frontend/imgs/villa-fabulosa-mini-golf-208.webp') }}" src="{{ asset('frontend/imgs/villa-fabulosa-mini-golf-208-thumb.webp') }}" alt="Miniature Golf Course"
                      class="img-fluid gallery-grid-image">
             </div>
             <div class="col-6 col-md-3 gallery-grid-item">
-                <img src="{{ asset('frontend/imgs/IMG_2082_hPbYXMhs-0pIYXMhs.jpg') }}" alt="Miniature Golf Course"
+                <img loading="lazy" decoding="async" data-full="{{ asset('frontend/imgs/villa-fabulosa-mini-golf-208-2.webp') }}" src="{{ asset('frontend/imgs/villa-fabulosa-mini-golf-208-2-thumb.webp') }}" alt="Miniature Golf Course"
                      class="img-fluid gallery-grid-image">
             </div>
             <div class="col-6 col-md-3 gallery-grid-item">
-                <img src="{{ asset('frontend/imgs/IMG_2083_9QaYXMhs-fUJYXMhs.jpg') }}" alt="Miniature Golf Course"
+                <img loading="lazy" decoding="async" data-full="{{ asset('frontend/imgs/villa-fabulosa-mini-golf-208-3.webp') }}" src="{{ asset('frontend/imgs/villa-fabulosa-mini-golf-208-3-thumb.webp') }}" alt="Miniature Golf Course"
                      class="img-fluid gallery-grid-image">
             </div>
             <div class="col-6 col-md-3 gallery-grid-item">
-                <img src="{{ asset('frontend/imgs/IMG_2084_8VYXXMhs-qCHYXMhs.jpg') }}" alt="Miniature Golf Course"
+                <img loading="lazy" decoding="async" data-full="{{ asset('frontend/imgs/villa-fabulosa-mini-golf-208-4.webp') }}" src="{{ asset('frontend/imgs/villa-fabulosa-mini-golf-208-4-thumb.webp') }}" alt="Miniature Golf Course"
                      class="img-fluid gallery-grid-image">
             </div>
             <div class="col-6 col-md-3 gallery-grid-item">
-                <img src="{{ asset('frontend/imgs/IMG_2085_0AbYXMhs-CVIYXMhs.jpg') }}" alt="Miniature Golf Course"
+                <img loading="lazy" decoding="async" data-full="{{ asset('frontend/imgs/villa-fabulosa-mini-golf-208-5.webp') }}" src="{{ asset('frontend/imgs/villa-fabulosa-mini-golf-208-5-thumb.webp') }}" alt="Miniature Golf Course"
                      class="img-fluid gallery-grid-image">
             </div>
         </div>
@@ -135,7 +135,7 @@
 
         function openAt(index) {
             currentIndex = index;
-            imgEl.src = images[index].src;
+            imgEl.src = images[index].getAttribute('data-full') || images[index].src;
             counterEl.textContent = (index + 1) + ' / ' + images.length;
             lightbox.classList.add('active');
             document.body.style.overflow = 'hidden';
@@ -148,7 +148,7 @@
 
         function navigate(delta) {
             currentIndex = (currentIndex + delta + images.length) % images.length;
-            imgEl.src = images[currentIndex].src;
+            imgEl.src = images[currentIndex].getAttribute('data-full') || images[currentIndex].src;
             counterEl.textContent = (currentIndex + 1) + ' / ' + images.length;
         }
 

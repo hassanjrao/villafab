@@ -18,27 +18,27 @@
 <!-- Slider -->
 <div id="site_gallery_carousel" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner">
-        <div class="carousel-item active" style="background-image:url({{ asset('frontend/imgs/gallery/g1.jpg') }});"></div>
-        <div class="carousel-item" style="background-image:url({{ asset('frontend/imgs/gallery/g2.jpg') }});"></div>
-        <div class="carousel-item" style="background-image:url({{ asset('frontend/imgs/gallery/g3.jpg') }});"></div>
-        <div class="carousel-item" style="background-image:url({{ asset('frontend/imgs/gallery/g4.jpg') }});"></div>
-        <div class="carousel-item" style="background-image:url({{ asset('frontend/imgs/gallery/g6.jpg') }});"></div>
-        <div class="carousel-item" style="background-image:url({{ asset('frontend/imgs/gallery/g7.jpg') }});"></div>
-        <div class="carousel-item" style="background-image:url({{ asset('frontend/imgs/gallery/g8.jpg') }});"></div>
-        <div class="carousel-item" style="background-image:url({{ asset('frontend/imgs/gallery/g9.jpg') }});"></div>
-        <div class="carousel-item" style="background-image:url({{ asset('frontend/imgs/gallery/g10.jpg') }});"></div>
-        <div class="carousel-item" style="background-image:url({{ asset('frontend/imgs/gallery/g11.jpg') }});"></div>
-        <div class="carousel-item" style="background-image:url({{ asset('frontend/imgs/gallery/g12.jpg') }});"></div>
-        <div class="carousel-item" style="background-image:url({{ asset('frontend/imgs/gallery/g13.jpg') }});"></div>
-        <div class="carousel-item" style="background-image:url({{ asset('frontend/imgs/gallery/g14.jpg') }});"></div>
-        <div class="carousel-item" style="background-image:url({{ asset('frontend/imgs/gallery/g15.jpg') }});"></div>
-        <div class="carousel-item" style="background-image:url({{ asset('frontend/imgs/gallery/g16.jpg') }});"></div>
-        <div class="carousel-item" style="background-image:url({{ asset('frontend/imgs/gallery/g17.jpg') }});"></div>
-        <div class="carousel-item" style="background-image:url({{ asset('frontend/imgs/gallery/g18.jpg') }});"></div>
-        <div class="carousel-item" style="background-image:url({{ asset('frontend/imgs/gallery/g19.jpg') }});"></div>
-        <div class="carousel-item" style="background-image:url({{ asset('frontend/imgs/gallery/g20.jpg') }});"></div>
-        <div class="carousel-item" style="background-image:url({{ asset('frontend/imgs/gallery/g21.jpg') }});"></div>
-        <div class="carousel-item" style="background-image:url({{ asset('frontend/imgs/gallery/g22.jpg') }});"></div>
+        <div class="carousel-item active" style="background-image:url({{ asset('frontend/imgs/gallery/villa-fabulosa-gallery-01.webp') }});"></div>
+        <div class="carousel-item" style="background-image:url({{ asset('frontend/imgs/gallery/villa-fabulosa-gallery-02.webp') }});"></div>
+        <div class="carousel-item" style="background-image:url({{ asset('frontend/imgs/gallery/villa-fabulosa-gallery-03.webp') }});"></div>
+        <div class="carousel-item" style="background-image:url({{ asset('frontend/imgs/gallery/villa-fabulosa-gallery-04.webp') }});"></div>
+        <div class="carousel-item" style="background-image:url({{ asset('frontend/imgs/gallery/villa-fabulosa-gallery-06.webp') }});"></div>
+        <div class="carousel-item" style="background-image:url({{ asset('frontend/imgs/gallery/villa-fabulosa-gallery-07.webp') }});"></div>
+        <div class="carousel-item" style="background-image:url({{ asset('frontend/imgs/gallery/villa-fabulosa-gallery-08.webp') }});"></div>
+        <div class="carousel-item" style="background-image:url({{ asset('frontend/imgs/gallery/villa-fabulosa-gallery-09.webp') }});"></div>
+        <div class="carousel-item" style="background-image:url({{ asset('frontend/imgs/gallery/villa-fabulosa-gallery-10.webp') }});"></div>
+        <div class="carousel-item" style="background-image:url({{ asset('frontend/imgs/gallery/villa-fabulosa-gallery-11.webp') }});"></div>
+        <div class="carousel-item" style="background-image:url({{ asset('frontend/imgs/gallery/villa-fabulosa-gallery-12.webp') }});"></div>
+        <div class="carousel-item" style="background-image:url({{ asset('frontend/imgs/gallery/villa-fabulosa-gallery-13.webp') }});"></div>
+        <div class="carousel-item" style="background-image:url({{ asset('frontend/imgs/gallery/villa-fabulosa-gallery-14.webp') }});"></div>
+        <div class="carousel-item" style="background-image:url({{ asset('frontend/imgs/gallery/villa-fabulosa-gallery-15.webp') }});"></div>
+        <div class="carousel-item" style="background-image:url({{ asset('frontend/imgs/gallery/villa-fabulosa-gallery-16.webp') }});"></div>
+        <div class="carousel-item" style="background-image:url({{ asset('frontend/imgs/gallery/villa-fabulosa-gallery-17.webp') }});"></div>
+        <div class="carousel-item" style="background-image:url({{ asset('frontend/imgs/gallery/villa-fabulosa-gallery-18.webp') }});"></div>
+        <div class="carousel-item" style="background-image:url({{ asset('frontend/imgs/gallery/villa-fabulosa-gallery-19.webp') }});"></div>
+        <div class="carousel-item" style="background-image:url({{ asset('frontend/imgs/gallery/villa-fabulosa-gallery-20.webp') }});"></div>
+        <div class="carousel-item" style="background-image:url({{ asset('frontend/imgs/gallery/villa-fabulosa-gallery-21.webp') }});"></div>
+        <div class="carousel-item" style="background-image:url({{ asset('frontend/imgs/gallery/villa-fabulosa-gallery-22.webp') }});"></div>
     </div>
     <a class="carousel-control-prev" href="#site_gallery_carousel" role="button" data-slide="prev">
         <i class="fa fa-arrow-circle-left fa-4x"></i>

@@ -73,31 +73,31 @@
 
         <div class="row gallery-grid">
             <div class="col-6 col-md-3 gallery-grid-item">
-                <img src="{{ asset('frontend/imgs/5-ARCADE-MLS.JPG') }}" alt="Game Room"
+                <img loading="lazy" decoding="async" data-full="{{ asset('frontend/imgs/villa-fabulosa-game-room-05.webp') }}" src="{{ asset('frontend/imgs/villa-fabulosa-game-room-05-thumb.webp') }}" alt="Game Room"
                      class="img-fluid gallery-grid-image">
             </div>
             <div class="col-6 col-md-3 gallery-grid-item">
-                <img src="{{ asset('frontend/imgs/13.11-GAME-MLS.JPG') }}" alt="Game Room"
+                <img loading="lazy" decoding="async" data-full="{{ asset('frontend/imgs/villa-fabulosa-game-room-13.webp') }}" src="{{ asset('frontend/imgs/villa-fabulosa-game-room-13-thumb.webp') }}" alt="Game Room"
                      class="img-fluid gallery-grid-image">
             </div>
             <div class="col-6 col-md-3 gallery-grid-item">
-                <img src="{{ asset('frontend/imgs/46-ARCADE-MLS.JPG') }}" alt="Game Room"
+                <img loading="lazy" decoding="async" data-full="{{ asset('frontend/imgs/villa-fabulosa-game-room-46.webp') }}" src="{{ asset('frontend/imgs/villa-fabulosa-game-room-46-thumb.webp') }}" alt="Game Room"
                      class="img-fluid gallery-grid-image">
             </div>
             <div class="col-6 col-md-3 gallery-grid-item">
-                <img src="{{ asset('frontend/imgs/47-ARCADE-MLS.JPG') }}" alt="Game Room"
+                <img loading="lazy" decoding="async" data-full="{{ asset('frontend/imgs/villa-fabulosa-game-room-47.webp') }}" src="{{ asset('frontend/imgs/villa-fabulosa-game-room-47-thumb.webp') }}" alt="Game Room"
                      class="img-fluid gallery-grid-image">
             </div>
             <div class="col-6 col-md-3 gallery-grid-item">
-                <img src="{{ asset('frontend/imgs/48-ARCADE-MLS.JPG') }}" alt="Game Room"
+                <img loading="lazy" decoding="async" data-full="{{ asset('frontend/imgs/villa-fabulosa-game-room-48.webp') }}" src="{{ asset('frontend/imgs/villa-fabulosa-game-room-48-thumb.webp') }}" alt="Game Room"
                      class="img-fluid gallery-grid-image">
             </div>
             <div class="col-6 col-md-3 gallery-grid-item">
-                <img src="{{ asset('frontend/imgs/IMG_1722-MLS.JPG') }}" alt="Game Room"
+                <img loading="lazy" decoding="async" data-full="{{ asset('frontend/imgs/villa-fabulosa-game-room-172.webp') }}" src="{{ asset('frontend/imgs/villa-fabulosa-game-room-172-thumb.webp') }}" alt="Game Room"
                      class="img-fluid gallery-grid-image">
             </div>
             <div class="col-6 col-md-3 gallery-grid-item">
-                <img src="{{ asset('frontend/imgs/IMG_1723-MLS.JPG') }}" alt="Game Room"
+                <img loading="lazy" decoding="async" data-full="{{ asset('frontend/imgs/villa-fabulosa-game-room-172-2.webp') }}" src="{{ asset('frontend/imgs/villa-fabulosa-game-room-172-2-thumb.webp') }}" alt="Game Room"
                      class="img-fluid gallery-grid-image">
             </div>
         </div>
@@ -130,7 +130,7 @@
 
         function openAt(index) {
             currentIndex = index;
-            imgEl.src = images[index].src;
+            imgEl.src = images[index].getAttribute('data-full') || images[index].src;
             counterEl.textContent = (index + 1) + ' / ' + images.length;
             lightbox.classList.add('active');
             document.body.style.overflow = 'hidden';
@@ -143,7 +143,7 @@
 
         function navigate(delta) {
             currentIndex = (currentIndex + delta + images.length) % images.length;
-            imgEl.src = images[currentIndex].src;
+            imgEl.src = images[currentIndex].getAttribute('data-full') || images[currentIndex].src;
             counterEl.textContent = (currentIndex + 1) + ' / ' + images.length;
         }
 

@@ -28,7 +28,7 @@
                     <div class="site_video_box">
                         <div class="card">
                             <video width="100%" height="auto" controls
-                                poster="{{ asset('frontend/imgs/team-bonding/legs-tied.jpg') }}">
+                                poster="{{ asset('frontend/imgs/team-bonding/villa-fabulosa-legs-tied.webp') }}">
                                 <source src="{{ asset('frontend/video/10-Legs-Tied.mp4') }}" type="video/mp4">
                             </video>
                         </div>

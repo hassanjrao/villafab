@@ -3,6 +3,9 @@
 @section('title', 'Villa Fabulosa')
 
 @section('head_extra')
+    {{-- The hero photo is the LCP element; preloading it removes the round trip
+         the browser would otherwise spend discovering it in the markup. --}}
+    <link rel="preload" as="image" href="{{ asset('frontend/imgs/photos-for-vrbo/villa-fabulosa-pool-01.webp') }}" fetchpriority="high">
     <style>
         .pluslink,
         .pluslink:visited,
@@ -809,23 +812,23 @@
 
             {{-- Large main photo --}}
             <div class="hero-main" onclick="openPhotoTour()">
-                <img src="{{ asset('frontend/imgs/photos-for-vrbo/1-POOL-MLS.JPG') }}"
-                    alt="Villa Fabulosa – front exterior with pool">
+                <img src="{{ asset('frontend/imgs/photos-for-vrbo/villa-fabulosa-pool-01.webp') }}"
+                    alt="Villa Fabulosa – front exterior with pool" fetchpriority="high" decoding="async">
             </div>
 
             {{-- 2 × 2 right grid --}}
             <div class="hero-right">
                 <div class="hero-grid-item" onclick="openPhotoTour()">
-                    <img src="{{ asset('frontend/imgs/photos-for-vrbo/13.13-AERIAL-MLS.JPG') }}" alt="Aerial view at dusk">
+                    <img src="{{ asset('frontend/imgs/photos-for-vrbo/villa-fabulosa-aerial-view-13-thumb.webp') }}" alt="Aerial view at dusk">
                 </div>
                 <div class="hero-grid-item" onclick="openPhotoTour()">
-                    <img src="{{ asset('frontend/imgs/photos-for-vrbo/3-FIELD-MLS.JPG') }}" alt="Sports court aerial view">
+                    <img src="{{ asset('frontend/imgs/photos-for-vrbo/villa-fabulosa-sports-field-03-thumb.webp') }}" alt="Sports court aerial view">
                 </div>
                 <div class="hero-grid-item" onclick="openPhotoTour()">
-                    <img src="{{ asset('frontend/imgs/photos-for-vrbo/6-LIVING-MLS.JPG') }}" alt="Living & media room">
+                    <img src="{{ asset('frontend/imgs/photos-for-vrbo/villa-fabulosa-living-room-06-thumb.webp') }}" alt="Living & media room">
                 </div>
                 <div class="hero-grid-item" onclick="openPhotoTour()">
-                    <img src="{{ asset('frontend/imgs/photos-for-vrbo/Golf-Course-11.jpg') }}"
+                    <img src="{{ asset('frontend/imgs/photos-for-vrbo/villa-fabulosa-mini-golf-11-thumb.webp') }}"
                         alt="18-Hole Miniature Golf Course">
                     <div class="hero-label">18-Hole Miniature Golf Course</div>
                     <button class="show-all-photos-btn" onclick="event.stopPropagation(); openPhotoTour()">
@@ -869,10 +872,10 @@
                 <div class="modal-body p-0">
                     @php
                         $photoTour = [
-                            ['src' => 'photos-for-vrbo/1-POOL-MLS.JPG', 'label' => 'Living room 1'],
-                            ['src' => 'photos-for-vrbo/6-LIVING-MLS.JPG', 'label' => 'Living room 2'],
-                            ['src' => 'photos-for-vrbo/7-KITCHEN-MLS.JPG', 'label' => 'Full kitchen'],
-                            ['src' => 'photos-for-vrbo/13-DINING-Edit-MLS.JPG', 'label' => 'Dining area'],
+                            ['src' => 'photos-for-vrbo/villa-fabulosa-1-pool.webp', 'label' => 'Living room 1'],
+                            ['src' => 'photos-for-vrbo/villa-fabulosa-6-living.webp', 'label' => 'Living room 2'],
+                            ['src' => 'photos-for-vrbo/villa-fabulosa-7-kitchen.webp', 'label' => 'Full kitchen'],
+                            ['src' => 'photos-for-vrbo/villa-fabulosa-13-dining.webp', 'label' => 'Dining area'],
                             ['src' => 'photos-for-vrbo/' . rawurlencode('54 BEDROOM MLS.JPG'), 'label' => 'Bedroom 1'],
                             ['src' => 'photos-for-vrbo/' . rawurlencode('70 BEDROOM MLS.JPG'), 'label' => 'Bedroom 2'],
                             ['src' => 'photos-for-vrbo/' . rawurlencode('73 BEDROOM MLS.JPG'), 'label' => 'Bedroom 3'],
@@ -896,29 +899,32 @@
                                 'src' => 'photos-for-vrbo/' . rawurlencode('85 BATHROOM MLS.JPG'),
                                 'label' => 'Full bathroom 4',
                             ],
-                            ['src' => 'photos-for-vrbo/13.5KITCHENETTE-Edit-MLS.JPG', 'label' => 'Full bathroom 5'],
-                            ['src' => 'photos-for-vrbo/13.8-IMG_1734-MLS.JPG', 'label' => 'Half bathroom'],
-                            ['src' => 'photos-for-vrbo/' . rawurlencode('23 PATIO MLS.JPG'), 'label' => 'Backyard'],
-                            ['src' => 'photos-for-vrbo/2-POOL-MLS.JPG', 'label' => 'Pool'],
-                            ['src' => 'photos-for-vrbo/13.14-POOL-MLS.JPG', 'label' => 'Pool view'],
-                            ['src' => 'photos-for-vrbo/5-ARCADE-MLS.JPG', 'label' => 'Game room 1'],
-                            ['src' => 'photos-for-vrbo/13.11-GAME-MLS.JPG', 'label' => 'Game room 2'],
-                            ['src' => 'photos-for-vrbo/Golf-Course-11.jpg', 'label' => 'Miniature golf'],
-                            ['src' => 'photos-for-vrbo/4-AERIAL-MLS.JPG', 'label' => 'Aerial view'],
-                            ['src' => 'photos-for-vrbo/13.13-AERIAL-MLS.JPG', 'label' => 'Aerial – dusk'],
-                            ['src' => 'photos-for-vrbo/3-FIELD-MLS.JPG', 'label' => 'Sports court'],
-                            ['src' => 'photos-for-vrbo/Pergola.jpg', 'label' => 'Pergola'],
-                            ['src' => 'photos-for-vrbo/13-VIEW-MLS.JPG', 'label' => 'Wine country view'],
-                            ['src' => 'photos-for-vrbo/13.19-FOYER-MLS.JPG', 'label' => 'Foyer'],
-                            ['src' => 'photos-for-vrbo/8-KITCHEN-MLS.JPG', 'label' => 'Additional photos'],
+                            ['src' => 'photos-for-vrbo/villa-fabulosa-13-5kitchenette.webp', 'label' => 'Full bathroom 5'],
+                            ['src' => 'photos-for-vrbo/villa-fabulosa-13-8-img-1734.webp', 'label' => 'Half bathroom'],
+                            ['src' => 'photos-for-vrbo/villa-fabulosa-23-patio.webp', 'label' => 'Backyard'],
+                            ['src' => 'photos-for-vrbo/villa-fabulosa-2-pool.webp', 'label' => 'Pool'],
+                            ['src' => 'photos-for-vrbo/villa-fabulosa-13-14-pool.webp', 'label' => 'Pool view'],
+                            ['src' => 'photos-for-vrbo/villa-fabulosa-5-arcade.webp', 'label' => 'Game room 1'],
+                            ['src' => 'photos-for-vrbo/villa-fabulosa-13-11-game.webp', 'label' => 'Game room 2'],
+                            ['src' => 'photos-for-vrbo/villa-fabulosa-golf-course-11.webp', 'label' => 'Miniature golf'],
+                            ['src' => 'photos-for-vrbo/villa-fabulosa-4-aerial.webp', 'label' => 'Aerial view'],
+                            ['src' => 'photos-for-vrbo/villa-fabulosa-13-13-aerial.webp', 'label' => 'Aerial – dusk'],
+                            ['src' => 'photos-for-vrbo/villa-fabulosa-3-field.webp', 'label' => 'Sports court'],
+                            ['src' => 'photos-for-vrbo/villa-fabulosa-pergola.webp', 'label' => 'Pergola'],
+                            ['src' => 'photos-for-vrbo/villa-fabulosa-13-view.webp', 'label' => 'Wine country view'],
+                            ['src' => 'photos-for-vrbo/villa-fabulosa-13-19-foyer.webp', 'label' => 'Foyer'],
+                            ['src' => 'photos-for-vrbo/villa-fabulosa-8-kitchen.webp', 'label' => 'Additional photos'],
                         ];
                     @endphp
 
                     <div class="photo-tour-grid">
                         @foreach ($photoTour as $i => $photo)
                             <div class="photo-tour-item">
-                                <img src="{{ asset('frontend/imgs/' . $photo['src']) }}" alt="{{ $photo['label'] }}"
-                                    onclick="openLightbox({{ $i }})" loading="lazy">
+                                {{-- Tile loads the 640px thumbnail; openLightbox() pulls the
+                                     full-size file from the photoTour array. --}}
+                                <img src="{{ asset('frontend/imgs/' . str_replace('.webp', '-thumb.webp', $photo['src'])) }}"
+                                    alt="{{ $photo['label'] }} at Villa Fabulosa, Temecula Wine Country"
+                                    onclick="openLightbox({{ $i }})" loading="lazy" decoding="async">
                                 <div class="photo-label">{{ $photo['label'] }}</div>
                             </div>
                         @endforeach
@@ -1024,7 +1030,7 @@
                     <div class="site_service_box">
                         <a href="{{ url('/the-rooms') }}">
                             <img style="height: 250px;"
-                                src="{{ asset('frontend/imgs/photos-for-vrbo/12-LIVING-MLS.JPG') }}" class="img-fluid">
+                                src="{{ asset('frontend/imgs/photos-for-vrbo/villa-fabulosa-living-room-12.webp') }}" class="img-fluid">
                         </a>
                         <h3 class="mt-2 mb-0" style="color: #1da3dd;">The Rooms</h3>
                     </div>
@@ -1033,7 +1039,7 @@
                     <div class="site_service_box">
                         <a href="{{ url('/the-pool') }}">
                             <img style="height: 250px;"
-                                src="{{ asset('frontend/imgs/photos-for-vrbo/13.13-AERIAL-MLS.JPG') }}"
+                                src="{{ asset('frontend/imgs/photos-for-vrbo/villa-fabulosa-aerial-view-13-thumb.webp') }}"
                                 class="img-fluid">
                         </a>
                         <h3 class="mt-2 mb-0" style="color: #1da3dd;">The Pool</h3>
@@ -1043,7 +1049,7 @@
                     <div class="site_service_box">
                         <a href="{{ url('/game-rooms') }}">
                             <img style="height: 250px;"
-                                src="{{ asset('frontend/imgs/photos-for-vrbo/5-ARCADE-MLS.JPG') }}" class="img-fluid">
+                                src="{{ asset('frontend/imgs/photos-for-vrbo/villa-fabulosa-game-room-05.webp') }}" class="img-fluid">
                         </a>
                         <h3 class="mt-2 mb-0" style="color: #1da3dd;">Game Room</h3>
                     </div>
@@ -1052,7 +1058,7 @@
                     <div class="site_service_box">
                         <a href="{{ url('/miniature-golf-course') }}">
                             <img style="height: 250px;"
-                                src="{{ asset('frontend/imgs/photos-for-vrbo/4-AERIAL-MLS.JPG') }}" class="img-fluid">
+                                src="{{ asset('frontend/imgs/photos-for-vrbo/villa-fabulosa-aerial-view-04.webp') }}" class="img-fluid">
                         </a>
                         <h3 class="mt-2 mb-0" style="color: #1da3dd;">Miniature Golf</h3>
                     </div>
@@ -1060,7 +1066,7 @@
                 <div class="col-lg-4 mb-4">
                     <div class="site_service_box">
                         <a href="{{ url('/wineries') }}">
-                            <img style="height: 250px;" src="{{ asset('frontend/imgs/photos-for-vrbo/Pergola.jpg') }}"
+                            <img style="height: 250px;" src="{{ asset('frontend/imgs/photos-for-vrbo/villa-fabulosa-villa.webp') }}"
                                 class="img-fluid">
                         </a>
                         <h3 class="mt-2 mb-0" style="color: #1da3dd;">Wineries</h3>
@@ -1069,7 +1075,7 @@
                 <div class="col-lg-4 mb-4">
                     <div class="site_service_box">
                         <a href="{{ url('/birds-eye') }}">
-                            <img style="height: 250px;" src="{{ asset('frontend/imgs/108-AERIAL-Edit-MLS.JPG') }}"
+                            <img style="height: 250px;" src="{{ asset('frontend/imgs/villa-fabulosa-aerial-view-108.webp') }}"
                                 class="img-fluid">
                         </a>
                         <h3 class="mt-2 mb-0" style="color: #1da3dd;">Bird's Eye View</h3>
@@ -1285,7 +1291,7 @@
                     {{-- Airbnb badge (left) --}}
                     <a href="https://www.airbnb.com/h/villa-fabulosa" target="_blank"
                         class="d-flex align-items-center text-decoration-none mb-3 mb-md-0">
-                        <img src="{{ asset('frontend/imgs/airbnb.png') }}" alt="Airbnb"
+                        <img src="{{ asset('frontend/imgs/villa-fabulosa-villa-2.webp') }}" alt="Airbnb"
                             style="height:74px;width:auto;" class="mr-3">
                         <div class="d-flex flex-column">
                             <span style="font-size:1rem;">
@@ -1307,7 +1313,7 @@
                     {{-- Vrbo badge (right) --}}
                     <a href="https://vrbo.com/3610312?dateless=true" target="_blank"
                         class="d-flex align-items-center text-decoration-none ml-md-auto">
-                        <img src="{{ asset('frontend/imgs/verbo.png') }}" alt="Vrbo" style="height:34px;width:auto;"
+                        <img src="{{ asset('frontend/imgs/villa-fabulosa-villa-3.webp') }}" alt="Vrbo" style="height:34px;width:auto;"
                             class="mr-3">
                         <div class="d-flex flex-column text-md-right">
                             <span class="text-muted" style="font-size:0.85rem;">
@@ -1327,7 +1333,7 @@
                 <hr class="mb-4" style="border-top:1px solid #ddd;max-width:260px;">
             </div>
             <div class="text-center">
-                <img src="{{ asset('frontend/imgs/temecula-wine-country-villa-fabulosa.png') }}"
+                <img src="{{ asset('frontend/imgs/villa-fabulosa-wine-room.webp') }}"
                     alt="Temecula Wine Country map showing Villa Fabulosa" class="img-fluid"
                     style="max-width:100%;height:auto;">
             </div>
@@ -1635,7 +1641,7 @@
             </div>
 
             <a href="https://www.villamagnifica.com/" target="_blank" class="cf-sister">
-                <img src="{{ asset('frontend/imgs/processed-1985b06c-1830-4ea5-a2e8-f9f52acfcf49_9jhkqIFL.jpeg') }}"
+                <img src="{{ asset('frontend/imgs/villa-fabulosa-villa-198.webp') }}"
                     alt="Villa Magnifica">
                 <div class="cf-sister-body">
                     <div class="cf-sister-eyebrow">Sister Property</div>

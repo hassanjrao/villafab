@@ -28,7 +28,7 @@
                     <div class="site_video_box">
                         <div class="card">
                             <video width="100%" height="auto" controls
-                                poster="{{ asset('frontend/imgs/team-bonding/the-nuts-stacker.jpg') }}">
+                                poster="{{ asset('frontend/imgs/team-bonding/villa-fabulosa-the-nuts-stacker.webp') }}">
                                 <source src="{{ asset('frontend/video/8-The-Nuts-Stacker.mp4') }}" type="video/mp4">
                             </video>
                         </div>

@@ -65,27 +65,27 @@
 
         <div class="row gallery-grid">
             <div class="col-6 col-md-3 gallery-grid-item">
-                <img src="{{ asset('frontend/imgs/30-POOL-MLS.JPG') }}" alt="Pool"
+                <img loading="lazy" decoding="async" data-full="{{ asset('frontend/imgs/villa-fabulosa-pool-30.webp') }}" src="{{ asset('frontend/imgs/villa-fabulosa-pool-30-thumb.webp') }}" alt="Pool"
                      class="img-fluid gallery-grid-image">
             </div>
             <div class="col-6 col-md-3 gallery-grid-item">
-                <img src="{{ asset('frontend/imgs/13.14-POOL-MLS.JPG') }}" alt="Pool"
+                <img loading="lazy" decoding="async" data-full="{{ asset('frontend/imgs/villa-fabulosa-pool-13.webp') }}" src="{{ asset('frontend/imgs/villa-fabulosa-pool-13-thumb.webp') }}" alt="Pool"
                      class="img-fluid gallery-grid-image">
             </div>
             <div class="col-6 col-md-3 gallery-grid-item">
-                <img src="{{ asset('frontend/imgs/13.16-POOL-MLS.JPG') }}" alt="Pool"
+                <img loading="lazy" decoding="async" data-full="{{ asset('frontend/imgs/villa-fabulosa-pool-13-2.webp') }}" src="{{ asset('frontend/imgs/villa-fabulosa-pool-13-2-thumb.webp') }}" alt="Pool"
                      class="img-fluid gallery-grid-image">
             </div>
             <div class="col-6 col-md-3 gallery-grid-item">
-                <img src="{{ asset('frontend/imgs/31-POOL-MLS.JPG') }}" alt="Pool"
+                <img loading="lazy" decoding="async" data-full="{{ asset('frontend/imgs/villa-fabulosa-pool-31.webp') }}" src="{{ asset('frontend/imgs/villa-fabulosa-pool-31-thumb.webp') }}" alt="Pool"
                      class="img-fluid gallery-grid-image">
             </div>
             <div class="col-6 col-md-3 gallery-grid-item">
-                <img src="{{ asset('frontend/imgs/33-POOL-MLS.JPG') }}" alt="Pool"
+                <img loading="lazy" decoding="async" data-full="{{ asset('frontend/imgs/villa-fabulosa-pool-33.webp') }}" src="{{ asset('frontend/imgs/villa-fabulosa-pool-33-thumb.webp') }}" alt="Pool"
                      class="img-fluid gallery-grid-image">
             </div>
             <div class="col-6 col-md-3 gallery-grid-item">
-                <img src="{{ asset('frontend/imgs/34-POOL-MLS.JPG') }}" alt="Pool"
+                <img loading="lazy" decoding="async" data-full="{{ asset('frontend/imgs/villa-fabulosa-pool-34.webp') }}" src="{{ asset('frontend/imgs/villa-fabulosa-pool-34-thumb.webp') }}" alt="Pool"
                      class="img-fluid gallery-grid-image">
             </div>
         </div>
@@ -118,7 +118,7 @@
 
         function openAt(index) {
             currentIndex = index;
-            imgEl.src = images[index].src;
+            imgEl.src = images[index].getAttribute('data-full') || images[index].src;
             counterEl.textContent = (index + 1) + ' / ' + images.length;
             lightbox.classList.add('active');
             document.body.style.overflow = 'hidden';
@@ -131,7 +131,7 @@
 
         function navigate(delta) {
             currentIndex = (currentIndex + delta + images.length) % images.length;
-            imgEl.src = images[currentIndex].src;
+            imgEl.src = images[currentIndex].getAttribute('data-full') || images[currentIndex].src;
             counterEl.textContent = (currentIndex + 1) + ' / ' + images.length;
         }
 

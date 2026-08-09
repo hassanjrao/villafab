@@ -18,10 +18,10 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-6">
-                <img src="{{ asset('frontend/imgs/updtairs.png') }}" class="img-fluid">
+                <img src="{{ asset('frontend/imgs/villa-fabulosa-upstairs.webp') }}" class="img-fluid">
             </div>
             <div class="col-lg-6">
-                <img src="{{ asset('frontend/imgs/downstaris.png') }}" class="img-fluid">
+                <img src="{{ asset('frontend/imgs/villa-fabulosa-floor-plan.webp') }}" class="img-fluid">
             </div>
         </div>
     </div>

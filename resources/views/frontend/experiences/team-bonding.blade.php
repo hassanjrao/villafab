@@ -51,27 +51,27 @@
                     $games = [
                         [
                             'href' => 'video/9-Butt-Balloon.mp4',
-                            'img' => 'imgs/team-bonding/butt-balloon.jpg',
+                            'img' => 'imgs/team-bonding/villa-fabulosa-butt-balloon.webp',
                             'title' => 'Butt Balloon',
                         ],
                         [
                             'href' => 'video/1-Rope-Escape.mp4',
-                            'img' => 'imgs/team-bonding/rope-escape.jpg',
+                            'img' => 'imgs/team-bonding/villa-fabulosa-rope-escape.webp',
                             'title' => 'Untangle',
                         ],
                         [
                             'href' => 'video/5-Ping-Pong-in-a-Cup.mp4',
-                            'img' => 'imgs/team-bonding/ping-pong-in-a-cup.jpg',
+                            'img' => 'imgs/team-bonding/villa-fabulosa-ping-pong-in-a-cup.webp',
                             'title' => 'Ping Pong in a Cup',
                         ],
                         [
                             'href' => 'video/2-Balloon-Race.mp4',
-                            'img' => 'imgs/team-bonding/balloon-race.jpg',
+                            'img' => 'imgs/team-bonding/villa-fabulosa-balloon-race.webp',
                             'title' => 'Balloon Race',
                         ],
                         [
                             'href' => 'video/6-Pass-the-Ball.mp4',
-                            'img' => 'imgs/team-bonding/pass-the-ball.jpg',
+                            'img' => 'imgs/team-bonding/villa-fabulosa-pass-the-ball.webp',
                             'title' => 'Pass the Ball',
                         ],
                     ];
@@ -100,27 +100,27 @@
                     $games2 = [
                         [
                             'href' => 'video/3-Stuck-on-Paper.mp4',
-                            'img' => 'imgs/team-bonding/stuck-on-paper.jpg',
+                            'img' => 'imgs/team-bonding/villa-fabulosa-stuck-on-paper.webp',
                             'title' => 'Stuck on Paper',
                         ],
                         [
                             'href' => 'video/4-Pass-the-block.mp4',
-                            'img' => 'imgs/team-bonding/pass-the-block.jpg',
+                            'img' => 'imgs/team-bonding/villa-fabulosa-pass-the-block.webp',
                             'title' => 'Pass the Block',
                         ],
                         [
                             'href' => 'video/7-Mine-Fields.mp4',
-                            'img' => 'imgs/team-bonding/mine-fields.jpg',
+                            'img' => 'imgs/team-bonding/villa-fabulosa-sports-field.webp',
                             'title' => 'Mine Fields',
                         ],
                         [
                             'href' => 'video/8-The-Nuts-Stacker.mp4',
-                            'img' => 'imgs/team-bonding/the-nuts-stacker.jpg',
+                            'img' => 'imgs/team-bonding/villa-fabulosa-the-nuts-stacker.webp',
                             'title' => 'Nuts Stacker',
                         ],
                         [
                             'href' => 'video/10-Legs-Tied.mp4',
-                            'img' => 'imgs/team-bonding/legs-tied.jpg',
+                            'img' => 'imgs/team-bonding/villa-fabulosa-legs-tied.webp',
                             'title' => 'Legs Tied',
                         ],
                     ];

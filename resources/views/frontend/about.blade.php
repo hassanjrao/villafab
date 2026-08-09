@@ -32,7 +32,7 @@
             <div class="col-lg-6">
                 <div id="site_sc1" class="carousel slide" data-ride="carousel">
                     <div class="carousel-inner">
-                        <div class="carousel-item active" style="background-image:url({{ asset('frontend/imgs/about-us-image.png') }});"></div>
+                        <div class="carousel-item active" style="background-image:url({{ asset('frontend/imgs/villa-fabulosa-villa.webp') }});"></div>
                     </div>
                 </div>
             </div>

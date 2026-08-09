@@ -59,47 +59,47 @@
 
         <div class="row gallery-grid">
             <div class="col-6 col-md-3 gallery-grid-item">
-                <img src="{{ asset('frontend/imgs/106-AERIAL-Edit-MLS.JPG') }}" alt="Bird's Eye"
+                <img loading="lazy" decoding="async" data-full="{{ asset('frontend/imgs/villa-fabulosa-aerial-view-106.webp') }}" src="{{ asset('frontend/imgs/villa-fabulosa-aerial-view-106-thumb.webp') }}" alt="Bird's Eye"
                      class="img-fluid gallery-grid-image">
             </div>
             <div class="col-6 col-md-3 gallery-grid-item">
-                <img src="{{ asset('frontend/imgs/107-AERIAL-Edit-MLS.JPG') }}" alt="Bird's Eye"
+                <img loading="lazy" decoding="async" data-full="{{ asset('frontend/imgs/villa-fabulosa-aerial-view-107.webp') }}" src="{{ asset('frontend/imgs/villa-fabulosa-aerial-view-107-thumb.webp') }}" alt="Bird's Eye"
                      class="img-fluid gallery-grid-image">
             </div>
             <div class="col-6 col-md-3 gallery-grid-item">
-                <img src="{{ asset('frontend/imgs/108-AERIAL-Edit-MLS.JPG') }}" alt="Bird's Eye"
+                <img loading="lazy" decoding="async" data-full="{{ asset('frontend/imgs/villa-fabulosa-aerial-view-108.webp') }}" src="{{ asset('frontend/imgs/villa-fabulosa-aerial-view-108-thumb.webp') }}" alt="Bird's Eye"
                      class="img-fluid gallery-grid-image">
             </div>
             <div class="col-6 col-md-3 gallery-grid-item">
-                <img src="{{ asset('frontend/imgs/110-AERIAL-Edit-MLS.JPG') }}" alt="Bird's Eye"
+                <img loading="lazy" decoding="async" data-full="{{ asset('frontend/imgs/villa-fabulosa-aerial-view-110.webp') }}" src="{{ asset('frontend/imgs/villa-fabulosa-aerial-view-110-thumb.webp') }}" alt="Bird's Eye"
                      class="img-fluid gallery-grid-image">
             </div>
             <div class="col-6 col-md-3 gallery-grid-item">
-                <img src="{{ asset('frontend/imgs/111-AERIAL-Edit-MLS.JPG') }}" alt="Bird's Eye"
+                <img loading="lazy" decoding="async" data-full="{{ asset('frontend/imgs/villa-fabulosa-aerial-view-111.webp') }}" src="{{ asset('frontend/imgs/villa-fabulosa-aerial-view-111-thumb.webp') }}" alt="Bird's Eye"
                      class="img-fluid gallery-grid-image">
             </div>
             <div class="col-6 col-md-3 gallery-grid-item">
-                <img src="{{ asset('frontend/imgs/113-AERIAL-MLS.JPG') }}" alt="Bird's Eye"
+                <img loading="lazy" decoding="async" data-full="{{ asset('frontend/imgs/villa-fabulosa-aerial-view-113.webp') }}" src="{{ asset('frontend/imgs/villa-fabulosa-aerial-view-113-thumb.webp') }}" alt="Bird's Eye"
                      class="img-fluid gallery-grid-image">
             </div>
             <div class="col-6 col-md-3 gallery-grid-item">
-                <img src="{{ asset('frontend/imgs/114-AERIAL-MLS.JPG') }}" alt="Bird's Eye"
+                <img loading="lazy" decoding="async" data-full="{{ asset('frontend/imgs/villa-fabulosa-aerial-view-114.webp') }}" src="{{ asset('frontend/imgs/villa-fabulosa-aerial-view-114-thumb.webp') }}" alt="Bird's Eye"
                      class="img-fluid gallery-grid-image">
             </div>
             <div class="col-6 col-md-3 gallery-grid-item">
-                <img src="{{ asset('frontend/imgs/116-AERIAL-MLS.JPG') }}" alt="Bird's Eye"
+                <img loading="lazy" decoding="async" data-full="{{ asset('frontend/imgs/villa-fabulosa-aerial-view-116.webp') }}" src="{{ asset('frontend/imgs/villa-fabulosa-aerial-view-116-thumb.webp') }}" alt="Bird's Eye"
                      class="img-fluid gallery-grid-image">
             </div>
             <div class="col-6 col-md-3 gallery-grid-item">
-                <img src="{{ asset('frontend/imgs/117-AERIAL-MLS.JPG') }}" alt="Bird's Eye"
+                <img loading="lazy" decoding="async" data-full="{{ asset('frontend/imgs/villa-fabulosa-aerial-view-117.webp') }}" src="{{ asset('frontend/imgs/villa-fabulosa-aerial-view-117-thumb.webp') }}" alt="Bird's Eye"
                      class="img-fluid gallery-grid-image">
             </div>
             <div class="col-6 col-md-3 gallery-grid-item">
-                <img src="{{ asset('frontend/imgs/118-AERIAL-Edit-MLS.JPG') }}" alt="Bird's Eye"
+                <img loading="lazy" decoding="async" data-full="{{ asset('frontend/imgs/villa-fabulosa-aerial-view-118.webp') }}" src="{{ asset('frontend/imgs/villa-fabulosa-aerial-view-118-thumb.webp') }}" alt="Bird's Eye"
                      class="img-fluid gallery-grid-image">
             </div>
             <div class="col-6 col-md-3 gallery-grid-item">
-                <img src="{{ asset('frontend/imgs/120-AERIAL-Edit-MLS.JPG') }}" alt="Bird's Eye"
+                <img loading="lazy" decoding="async" data-full="{{ asset('frontend/imgs/villa-fabulosa-aerial-view-120.webp') }}" src="{{ asset('frontend/imgs/villa-fabulosa-aerial-view-120-thumb.webp') }}" alt="Bird's Eye"
                      class="img-fluid gallery-grid-image">
             </div>
         </div>
@@ -132,7 +132,7 @@
 
         function openAt(index) {
             currentIndex = index;
-            imgEl.src = images[index].src;
+            imgEl.src = images[index].getAttribute('data-full') || images[index].src;
             counterEl.textContent = (index + 1) + ' / ' + images.length;
             lightbox.classList.add('active');
             document.body.style.overflow = 'hidden';
@@ -145,7 +145,7 @@
 
         function navigate(delta) {
             currentIndex = (currentIndex + delta + images.length) % images.length;
-            imgEl.src = images[currentIndex].src;
+            imgEl.src = images[currentIndex].getAttribute('data-full') || images[currentIndex].src;
             counterEl.textContent = (currentIndex + 1) + ' / ' + images.length;
         }
 

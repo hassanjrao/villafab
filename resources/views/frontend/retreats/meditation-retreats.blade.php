@@ -25,7 +25,7 @@
     <!-- Slider -->
     <div id="site_gallery_carousel" class="site_header_carousel_fixed carousel slide" data-ride="carousel">
         <div class="carousel-inner">
-            <div class="carousel-item active" style="background-image:url({{ asset('frontend/imgs/banner-1.jpeg') }});"></div>
+            <div class="carousel-item active" style="background-image:url({{ asset('frontend/imgs/villa-fabulosa-corporate-retreats-01.webp') }});"></div>
         </div>
     </div>
 

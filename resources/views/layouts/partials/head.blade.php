@@ -145,8 +145,11 @@
 <link rel="stylesheet" href="{{ asset('frontend/style.css') }}">
 <link rel="stylesheet" href="{{ asset('frontend/fancybox/jquery.fancybox.min.css') }}">
 
-<!-- Favicons -->
-<link rel="icon" href="{{ asset('frontend/imgs/favicon.png') }}">
+<!-- Favicons. Google renders these beside mobile search results, so a
+     missing one shows as a generic globe in the SERP. -->
+<link rel="icon" href="{{ asset('favicon.ico') }}" sizes="any">
+<link rel="icon" type="image/png" sizes="180x180" href="{{ asset('frontend/imgs/favicon.png') }}">
+<link rel="apple-touch-icon" href="{{ asset('frontend/imgs/favicon.png') }}">
 
 {{-- Tawk.to live chat (commented out by default) --}}
 {{--

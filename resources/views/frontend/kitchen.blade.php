@@ -28,9 +28,13 @@
                 @php $kitchenImages = [1,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,34,35]; @endphp
                 @foreach($kitchenImages as $i)
                 <div class="col-lg-3 col-sm-6 mb-4">
-                    <a data-fancybox="gallery" href="{{ asset('frontend/imgs/kitchen-gallery/' . $i . '.jpg') }}">
+                    <a data-fancybox="gallery" href="{{ asset('frontend/imgs/kitchen-gallery/villa-fabulosa-kitchen-' . str_pad($i, 2, '0', STR_PAD_LEFT) . '.webp') }}">
                         <div class="site_kitchen_box">
-                            <img src="{{ asset('frontend/imgs/kitchen-gallery/' . $i . '.jpg') }}" class="zoom img-fluid" alt="Kitchen {{ $i }}">
+                            {{-- Tile shows the 640px thumbnail; the fancybox link above
+                                 still opens the full-size image. --}}
+                            <img src="{{ asset('frontend/imgs/kitchen-gallery/villa-fabulosa-kitchen-' . str_pad($i, 2, '0', STR_PAD_LEFT) . '-thumb.webp') }}"
+                                 class="zoom img-fluid" loading="lazy" decoding="async"
+                                 alt="Kitchen at Villa Fabulosa, Temecula Wine Country">
                         </div>
                     </a>
                 </div>

@@ -28,7 +28,7 @@
                     <div class="site_video_box">
                         <div class="card">
                             <video width="100%" height="auto" controls
-                                poster="{{ asset('frontend/imgs/team-bonding/stuck-on-paper.jpg') }}">
+                                poster="{{ asset('frontend/imgs/team-bonding/villa-fabulosa-stuck-on-paper.webp') }}">
                                 <source src="{{ asset('frontend/video/3-Stuck-on-Paper.mp4') }}" type="video/mp4">
                             </video>
                         </div>
