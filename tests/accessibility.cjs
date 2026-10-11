@@ -17,8 +17,15 @@ const path = require('path');
     const results = [];
     for (const route of routes) {
         const errors = [];
+        const resourceFailures = [];
         const listener = error => errors.push(error.message);
+        const failureListener = request => {
+            const url = new URL(request.url());
+            if (url.pathname === '/g/collect') return;
+            resourceFailures.push({ host: url.hostname, path: url.pathname, error: request.failure().errorText });
+        };
         page.on('pageerror', listener);
+        page.on('requestfailed', failureListener);
         const response = await page.goto(base + route, { waitUntil: 'domcontentloaded', timeout: 60000 });
         await page.waitForTimeout(1500);
         await page.addScriptTag({ path: require.resolve('axe-core/axe.min.js') });
@@ -30,9 +37,10 @@ const path = require('path');
                 passes: result.passes.length
             };
         });
-        results.push({ route, status: response.status(), errors, ...audit });
-        console.log(route, response.status(), audit.violations.length ? JSON.stringify(audit.violations) : 'PASS');
+        results.push({ route, status: response.status(), errors, resourceFailures, ...audit });
+        console.log(route, response.status(), audit.violations.length ? JSON.stringify(audit.violations) : errors.length ? 'SCRIPT ERRORS: ' + JSON.stringify(errors) : 'PASS');
         page.off('pageerror', listener);
+        page.off('requestfailed', failureListener);
     }
     fs.mkdirSync(path.join(__dirname, '../storage/app/accessibility'), { recursive: true });
     fs.writeFileSync(path.join(__dirname, '../storage/app/accessibility/' + (live ? 'live-' : '') + (mobile ? 'axe-mobile-report.json' : 'axe-report.json')), JSON.stringify({ generated: new Date().toISOString(), base, assetSource: live ? 'live server' : 'local checkout', viewport: mobile ? '375 x 812' : '1280 x 720', results }, null, 2));
