@@ -1,7 +1,7 @@
 <!-- Header Start -->
-<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light" id="mainNav">
+<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light" id="mainNav" aria-label="Main navigation">
     <div class="container-fluid">
-        <a class="navbar-brand" href="{{ url('/') }}" style="color: #1da3dd;"><h3 style="color: #1da3dd;">Villa Fabulosa</h3></a>
+        <a class="navbar-brand" href="{{ url('/') }}"><span class="h3">Villa Fabulosa</span></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>

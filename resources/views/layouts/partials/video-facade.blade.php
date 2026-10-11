@@ -38,8 +38,13 @@
                 frame.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
                 frame.allowFullscreen = true;
 
-                box.innerHTML = '';
-                box.appendChild(frame);
+                var player = document.createElement('div');
+                player.className = box.className;
+                player.style.cssText = box.style.cssText;
+                player.dataset.loaded = '1';
+                player.appendChild(frame);
+                box.replaceWith(player);
+                frame.focus();
             });
         </script>
     @endpush

@@ -9,9 +9,9 @@
         <div class="container-fluid">
             <div class="col-lg-12">
                 <div class="site_subheader_inner">
-                    <a href="{{ url('/temecula') }}" class="site_arrow_link site_arrow_left"><i
+                    <a href="{{ url('/temecula') }}" class="site_arrow_link site_arrow_left" aria-label="Previous page: Temecula"><i
                             class="fa fa-arrow-circle-left fa-4x"></i></a>
-                    <a href="{{ url('/instructions') }}" class="site_arrow_link site_arrow_right"><i
+                    <a href="{{ url('/instructions') }}" class="site_arrow_link site_arrow_right" aria-label="Next page: Instructions"><i
                             class="fa fa-arrow-circle-right fa-4x"></i></a>
                     <h1 class="mb-0">Team Bonding Experience</h1>
                 </div>
@@ -25,7 +25,7 @@
             <div class="row mb-4">
                 <div class="col-lg-12">
                     <div class="site_content_box text-center">
-                        <h3 class="site_section_subtitle">At Villa Fabulosa</h3>
+                        <h2 class="h3 site_section_subtitle">At Villa Fabulosa</h2>
                     </div>
                     <div>
                         <p class="lead">Villa Fabulosa is the perfect place to host a series of hilarious Team Bonding
@@ -84,9 +84,9 @@
                                 <a data-fancybox data-width="640" data-height="360"
                                     href="{{ asset('frontend/' . $game['href']) }}">
                                     <img src="{{ asset('frontend/' . $game['img']) }}" class="card-img-top"
-                                        alt="{{ $game['title'] }}">
+                                        alt="">
                                     <div class="card-body">
-                                        <h5 class="card-title mb-0">{{ $game['title'] }}</h5>
+                                        <h3 class="h5 card-title mb-0">{{ $game['title'] }}</h3>
                                     </div>
                                 </a>
                             </div>
@@ -133,9 +133,9 @@
                                 <a data-fancybox data-width="640" data-height="360"
                                     href="{{ asset('frontend/' . $game['href']) }}">
                                     <img loading="lazy" decoding="async" src="{{ asset('frontend/' . $game['img']) }}" class="card-img-top"
-                                        alt="{{ $game['title'] }}">
+                                        alt="">
                                     <div class="card-body">
-                                        <h5 class="card-title mb-0">{{ $game['title'] }}</h5>
+                                        <h3 class="h5 card-title mb-0">{{ $game['title'] }}</h3>
                                     </div>
                                 </a>
                             </div>

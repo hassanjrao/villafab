@@ -408,12 +408,12 @@
 
         .rating-divider {
             font-size: 2rem;
-            color: #999;
+            color: #595959;
         }
 
         .rating-total {
             font-size: 2rem;
-            color: #999;
+            color: #595959;
         }
 
         .btn-check-avail {
@@ -539,7 +539,7 @@
 
         .booking-widget-subtitle {
             font-size: 0.8rem;
-            color: #888;
+            color: #595959;
             margin-top: 2px;
         }
 
@@ -562,7 +562,7 @@
         }
 
         .booking-date-row:hover {
-            border-color: #1da3dd;
+            border-color: #076b96;
         }
 
         .booking-date-cell {
@@ -606,7 +606,7 @@
         }
 
         .booking-date-input::placeholder {
-            color: #aaa;
+            color: #595959;
             font-weight: 400;
         }
 
@@ -622,7 +622,7 @@
         }
 
         .booking-guests-box:hover {
-            border-color: #1da3dd;
+            border-color: #076b96;
         }
 
         .booking-guests-select {
@@ -659,7 +659,7 @@
         .booking-reserve-btn {
             display: block;
             width: 100%;
-            background: linear-gradient(135deg, #1da3dd 0%, #1485b8 100%);
+            background: linear-gradient(135deg, #076b96 0%, #1485b8 100%);
             color: #fff !important;
             border: none;
             border-radius: 9px;
@@ -683,7 +683,7 @@
         .booking-no-charge-note {
             text-align: center;
             font-size: 0.76rem;
-            color: #888;
+            color: #595959;
             margin-bottom: 6px;
         }
 
@@ -691,13 +691,13 @@
             display: block;
             text-align: center;
             font-size: 0.76rem;
-            color: #aaa;
+            color: #595959;
             text-decoration: underline;
             cursor: pointer;
         }
 
         .booking-clear-dates:hover {
-            color: #e74c3c;
+            color: #b42318;
         }
 
         @keyframes bk-spin {
@@ -724,14 +724,14 @@
         /* ── Litepicker theme overrides ── */
         .litepicker .container__days .day-item.is-locked {
             pointer-events: none;
-            color: #aaa;
+            color: #595959;
             background-color: #e9e9e9;
             border-radius: 50%;
         }
 
         .litepicker .container__days .day-item.is-start-date,
         .litepicker .container__days .day-item.is-end-date {
-            background-color: #1da3dd !important;
+            background-color: #076b96 !important;
             color: #fff !important;
             border-radius: 50%;
         }
@@ -748,16 +748,16 @@
 
         .litepicker .month-item-header .button-next-month svg,
         .litepicker .month-item-header .button-previous-month svg {
-            fill: #1da3dd;
+            fill: #076b96;
         }
 
         .litepicker .container__tooltip {
-            background: #1da3dd;
+            background: #076b96;
             color: #fff;
         }
 
         .litepicker .container__tooltip::before {
-            border-top-color: #1da3dd;
+            border-top-color: #076b96;
         }
 
         .booking-minstay-tooltip {
@@ -945,12 +945,12 @@
     {{-- ══════════════════════════════════════════
      LIGHTBOX (full-screen image viewer)
 ══════════════════════════════════════════ --}}
-    <div id="photo-lightbox">
+    <div id="photo-lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer">
         <button class="lb-close" onclick="closeLightbox()" aria-label="Close">&times;</button>
         <button class="lb-prev" onclick="lbNavigate(-1)" aria-label="Previous"><i class="fa fa-angle-left"></i></button>
         <img loading="lazy" decoding="async" id="lb-img" src="" alt="">
         <button class="lb-next" onclick="lbNavigate(1)" aria-label="Next"><i class="fa fa-angle-right"></i></button>
-        <div class="lb-counter" id="lb-counter"></div>
+        <div class="lb-counter" id="lb-counter" role="status"></div>
     </div>
     {{-- ══════════════════════════════════════════ --}}
 
@@ -965,12 +965,12 @@
                         <h1 class="site_title_letter_space mb-3">Villa Fabulosa</h1>
                     </div>
                     <div class="col-lg-12">
-                        <h3 class="site_title_letter_space text-center"><i>Voted by Expedia Group and VRBO as the Top
+                        <h2 class="h3 site_title_letter_space text-center"><i>Voted by Expedia Group and VRBO as the Top
                                 vacation rental in
                                 California and one of the top Ten Vacation Rentals in the entire country, out of over two
                                 million homes!
                             </i>
-                        </h3>
+                        </h2>
                         <h3 class="text-center text-white villinfo-ktla-text">
                             See the official announcement on KTLA
                         </h3>
@@ -1032,7 +1032,7 @@
                         <a href="{{ url('/the-rooms') }}">
                             <img loading="lazy" decoding="async" style="height: 250px;" src="{{ asset('frontend/imgs/photos-for-vrbo/villa-fabulosa-living-room-12-card1x.webp') }}" srcset="{{ asset('frontend/imgs/photos-for-vrbo/villa-fabulosa-living-room-12-card1x.webp') }} 350w, {{ asset('frontend/imgs/photos-for-vrbo/villa-fabulosa-living-room-12-card.webp') }} 700w" sizes="(max-width: 991px) 100vw, 350px" width="350" height="250" class="img-fluid" alt="Living room at Villa Fabulosa">
                         </a>
-                        <h3 class="mt-2 mb-0" style="color: #1da3dd;">The Rooms</h3>
+                        <h3 class="mt-2 mb-0" style="color: #076b96;">The Rooms</h3>
                     </div>
                 </div>
                 <div class="col-lg-4 mb-4">
@@ -1040,7 +1040,7 @@
                         <a href="{{ url('/the-pool') }}">
                             <img loading="lazy" decoding="async" style="height: 250px;" src="{{ asset('frontend/imgs/photos-for-vrbo/villa-fabulosa-aerial-view-13-card1x.webp') }}" srcset="{{ asset('frontend/imgs/photos-for-vrbo/villa-fabulosa-aerial-view-13-card1x.webp') }} 350w, {{ asset('frontend/imgs/photos-for-vrbo/villa-fabulosa-aerial-view-13-card.webp') }} 700w" sizes="(max-width: 991px) 100vw, 350px" width="350" height="250" class="img-fluid" alt="The pool at Villa Fabulosa">
                         </a>
-                        <h3 class="mt-2 mb-0" style="color: #1da3dd;">The Pool</h3>
+                        <h3 class="mt-2 mb-0" style="color: #076b96;">The Pool</h3>
                     </div>
                 </div>
                 <div class="col-lg-4 mb-4">
@@ -1048,7 +1048,7 @@
                         <a href="{{ url('/game-rooms') }}">
                             <img loading="lazy" decoding="async" style="height: 250px;" src="{{ asset('frontend/imgs/photos-for-vrbo/villa-fabulosa-game-room-05-card1x.webp') }}" srcset="{{ asset('frontend/imgs/photos-for-vrbo/villa-fabulosa-game-room-05-card1x.webp') }} 350w, {{ asset('frontend/imgs/photos-for-vrbo/villa-fabulosa-game-room-05-card.webp') }} 700w" sizes="(max-width: 991px) 100vw, 350px" width="350" height="250" class="img-fluid" alt="Game room at Villa Fabulosa">
                         </a>
-                        <h3 class="mt-2 mb-0" style="color: #1da3dd;">Game Room</h3>
+                        <h3 class="mt-2 mb-0" style="color: #076b96;">Game Room</h3>
                     </div>
                 </div>
                 <div class="col-lg-4 mb-4">
@@ -1056,7 +1056,7 @@
                         <a href="{{ url('/miniature-golf-course') }}">
                             <img loading="lazy" decoding="async" style="height: 250px;" src="{{ asset('frontend/imgs/photos-for-vrbo/villa-fabulosa-aerial-view-04-card1x.webp') }}" srcset="{{ asset('frontend/imgs/photos-for-vrbo/villa-fabulosa-aerial-view-04-card1x.webp') }} 350w, {{ asset('frontend/imgs/photos-for-vrbo/villa-fabulosa-aerial-view-04-card.webp') }} 700w" sizes="(max-width: 991px) 100vw, 350px" width="350" height="250" class="img-fluid" alt="Aerial view of Villa Fabulosa">
                         </a>
-                        <h3 class="mt-2 mb-0" style="color: #1da3dd;">Miniature Golf</h3>
+                        <h3 class="mt-2 mb-0" style="color: #076b96;">Miniature Golf</h3>
                     </div>
                 </div>
                 <div class="col-lg-4 mb-4">
@@ -1064,7 +1064,7 @@
                         <a href="{{ url('/wineries') }}">
                             <img loading="lazy" decoding="async" style="height: 250px;" src="{{ asset('frontend/imgs/photos-for-vrbo/villa-fabulosa-villa-card1x.webp') }}" srcset="{{ asset('frontend/imgs/photos-for-vrbo/villa-fabulosa-villa-card1x.webp') }} 350w, {{ asset('frontend/imgs/photos-for-vrbo/villa-fabulosa-villa-card.webp') }} 700w" sizes="(max-width: 991px) 100vw, 350px" width="350" height="250" class="img-fluid" alt="Villa Fabulosa estate">
                         </a>
-                        <h3 class="mt-2 mb-0" style="color: #1da3dd;">Wineries</h3>
+                        <h3 class="mt-2 mb-0" style="color: #076b96;">Wineries</h3>
                     </div>
                 </div>
                 <div class="col-lg-4 mb-4">
@@ -1072,7 +1072,7 @@
                         <a href="{{ url('/birds-eye') }}">
                             <img loading="lazy" decoding="async" style="height: 250px;" src="{{ asset('frontend/imgs/villa-fabulosa-aerial-view-108-card1x.webp') }}" srcset="{{ asset('frontend/imgs/villa-fabulosa-aerial-view-108-card1x.webp') }} 350w, {{ asset('frontend/imgs/villa-fabulosa-aerial-view-108-card.webp') }} 700w" sizes="(max-width: 991px) 100vw, 350px" width="350" height="250" class="img-fluid" alt="Aerial view of the grounds">
                         </a>
-                        <h3 class="mt-2 mb-0" style="color: #1da3dd;">Bird's Eye View</h3>
+                        <h3 class="mt-2 mb-0" style="color: #076b96;">Bird's Eye View</h3>
                     </div>
                 </div>
             </div>
@@ -1081,7 +1081,7 @@
     <!-- Services Boxes End -->
 
     {{-- Stats bar (blue strip) --}}
-    <section class="py-3" style="background-color:#00a9e0;color:#fff;">
+    <section class="py-3" style="background-color:#076b96;color:#fff;">
         <div class="container">
             <div class="row">
                 <div class="col-12 text-center">
@@ -1186,20 +1186,20 @@
 
                             {{-- Date row --}}
                             <div class="booking-date-row">
-                                <div class="booking-date-cell" data-date-target="checkin" role="button" tabindex="0">
+                                <div class="booking-date-cell" data-date-target="checkin">
                                     <span class="booking-field-label">Check-in</span>
                                     <input type="text" id="checkin_date" name="checkin_date"
-                                        class="booking-date-input" placeholder="Add date" readonly>
+                                        class="booking-date-input" aria-label="Check-in date" placeholder="Add date" readonly>
                                 </div>
-                                <div class="booking-date-cell" data-date-target="checkout" role="button" tabindex="0">
+                                <div class="booking-date-cell" data-date-target="checkout">
                                     <span class="booking-field-label">Check-out</span>
                                     <input type="text" id="checkout_date" name="checkout_date"
-                                        class="booking-date-input" placeholder="Add date" readonly>
+                                        class="booking-date-input" aria-label="Check-out date" placeholder="Add date" readonly>
                                 </div>
                             </div>
 
                             {{-- Guests row (continues the segmented border) --}}
-                            <div class="booking-guests-box" id="booking-guests-box" role="button" tabindex="0">
+                            <div class="booking-guests-box" id="booking-guests-box">
                                 <span class="booking-field-label">Guests</span>
                                 {{-- The visible "Guests" text is a span inside a role="button"
                                      wrapper, so it never associated with this select. An explicit
@@ -1213,27 +1213,36 @@
                                 </select>
                             </div>
 
+                            <fieldset class="accessible-dates mb-3">
+                                <legend class="h6">Enter dates directly</legend>
+                                <label for="accessible-checkin">Check-in</label>
+                                <input type="date" id="accessible-checkin" class="form-control mb-2">
+                                <label for="accessible-checkout">Check-out</label>
+                                <input type="date" id="accessible-checkout" class="form-control mb-2">
+                                <button type="button" class="btn btn-primary" id="accessible-dates-apply">Apply dates</button>
+                                <p id="accessible-dates-status" role="status"></p>
+                            </fieldset>
                             {{-- Minimum stay hint (shown once check-in is picked) --}}
-                            <div class="booking-nights-bar" id="booking-nights-bar" style="display:none;">
+                            <div class="booking-nights-bar" id="booking-nights-bar" role="status" style="display:none;">
                                 <i class="fa fa-moon-o"></i>
                                 <span id="booking-nights-text"></span>
                             </div>
 
                             {{-- Loading indicator --}}
-                            <div id="booking-quote-loading"
+                            <div id="booking-quote-loading" role="status"
                                 style="display:none;
                                  text-align:center;padding:12px 0;margin-bottom:12px;
-                                 color:#1da3dd;font-size:0.88rem;">
+                                 color:#076b96;font-size:0.88rem;">
                                 <span
                                     style="display:inline-block;width:16px;height:16px;
-                                             border:2px solid #c8e8f4;border-top-color:#1da3dd;
+                                             border:2px solid #c8e8f4;border-top-color:#076b96;
                                              border-radius:50%;animation:bk-spin .7s linear infinite;
                                              vertical-align:middle;margin-right:6px;"></span>
                                 Calculating price&hellip;
                             </div>
 
                             {{-- Min-stay error --}}
-                            <div id="booking-minstay-error"
+                            <div id="booking-minstay-error" role="alert"
                                 style="display:none;
                                  background:#fff3cd;border:1px solid #ffc107;border-radius:8px;
                                  padding:10px 14px;margin-bottom:12px;font-size:0.85rem;color:#856404;">
@@ -1251,7 +1260,7 @@
                                     style="border-top:1px solid #c8e8f4;margin-top:10px;padding-top:10px;
                                             display:flex;justify-content:space-between;align-items:center;">
                                     <strong style="font-size:1rem;">Total</strong>
-                                    <strong id="breakdown-total" style="font-size:1.15rem;color:#1da3dd;"></strong>
+                                    <strong id="breakdown-total" style="font-size:1.15rem;color:#076b96;"></strong>
                                 </div>
                             </div>
 
@@ -1262,7 +1271,7 @@
                             </a>
 
                             <p id="booking-no-dates-msg"
-                                style="display:none;color:#e74c3c;
+                                style="display:none;color:#b42318;
                                font-size:0.82rem;text-align:center;margin-top:6px;">
                                 Please select check-in and check-out dates first.
                             </p>
@@ -1281,7 +1290,7 @@
     {{-- Airbnb + Vrbo badges with wine country map --}}
     <section class="pt-5 pb-4" style="background-color:#f7f7f7;">
         <div class="container">
-            <h2 class="site_title_letter_space text-center mb-4" style="color: #1da3dd;">What our customers say</h2>
+            <h2 class="site_title_letter_space text-center mb-4" style="color: #076b96;">What our customers say</h2>
 
             {{-- Top badges bar --}}
             <div class="card border-0 shadow-sm mb-4">
@@ -1327,7 +1336,7 @@
 
             {{-- Map section --}}
             <div class="text-center mb-3">
-                <h3 class="mb-2" style="font-weight:600; color: #1da3dd;">Located in the heart of Wine Country</h3>
+                <h3 class="mb-2" style="font-weight:600; color: #076b96;">Located in the heart of Wine Country</h3>
                 <hr class="mb-4" style="border-top:1px solid #ddd;max-width:260px;">
             </div>
             <div class="text-center">
@@ -1366,7 +1375,7 @@
 
             .cf-sub {
                 text-align: center;
-                color: #777;
+                color: #595959;
                 font-size: 0.95rem;
                 margin-bottom: 36px;
                 line-height: 1.6;
@@ -1402,7 +1411,7 @@
             }
 
             .cf-label span {
-                color: #e74c3c;
+                color: #b42318;
                 margin-left: 2px;
             }
 
@@ -1422,24 +1431,24 @@
 
             .cf-input:focus,
             .cf-textarea:focus {
-                border-color: #1da3dd;
+                border-color: #076b96;
                 box-shadow: 0 0 0 3px rgba(29, 163, 221, .1);
             }
 
             .cf-input.is-invalid,
             .cf-textarea.is-invalid {
-                border-color: #e74c3c;
+                border-color: #b42318;
             }
 
             .cf-error {
                 font-size: 0.8rem;
-                color: #e74c3c;
+                color: #b42318;
                 margin-top: 4px;
             }
 
             .cf-hint {
                 font-size: 0.77rem;
-                color: #aaa;
+                color: #595959;
                 margin-top: 4px;
             }
 
@@ -1454,7 +1463,7 @@
                 justify-content: center;
                 gap: 8px;
                 width: 100%;
-                background: #1da3dd;
+                background: #076b96;
                 color: #fff;
                 border: none;
                 border-radius: 10px;
@@ -1468,7 +1477,7 @@
             }
 
             .cf-submit:hover {
-                background: #178fc0;
+                background: #075a80;
                 transform: translateY(-1px);
             }
 
@@ -1527,7 +1536,7 @@
                 font-size: 0.75rem;
                 text-transform: uppercase;
                 letter-spacing: .08em;
-                color: #1da3dd;
+                color: #076b96;
                 font-weight: 700;
                 margin-bottom: 8px;
             }
@@ -1549,7 +1558,7 @@
         <div class="container">
 
             <div class="cf-wrap">
-                <div class="cf-title">Contact Us</div>
+                <h2 class="cf-title">Contact Us</h2>
                 <div class="cf-sub">We'd love to hear from you. Send us a note with any questions about Villa Fabulosa.
                 </div>
 
@@ -1670,23 +1679,30 @@
                 return asset('frontend/imgs/' . $p['src']);
             }, $photoTour));
         var lbIndex = 0;
+        var lbOverflow;
+        var lbDescriptions = @json(array_column($photoTour, 'label'));
 
         function openLightbox(index) {
             lbIndex = index;
+            lbOverflow = document.body.style.overflow;
+            document.getElementById('lb-img').alt = lbDescriptions[index];
             document.getElementById('lb-img').src = lbPhotos[index];
             document.getElementById('lb-counter').textContent = (index + 1) + ' / ' + lbPhotos.length;
             document.getElementById('photo-lightbox').classList.add('active');
+            VillaAccessibility.openDialog(document.getElementById('photo-lightbox'));
             document.body.style.overflow = 'hidden';
         }
 
         function closeLightbox() {
             document.getElementById('photo-lightbox').classList.remove('active');
-            document.body.style.overflow = '';
+            document.body.style.overflow = lbOverflow;
+            VillaAccessibility.closeDialog();
         }
 
         function lbNavigate(dir) {
             lbIndex = (lbIndex + dir + lbPhotos.length) % lbPhotos.length;
             document.getElementById('lb-img').src = lbPhotos[lbIndex];
+            document.getElementById('lb-img').alt = lbDescriptions[lbIndex];
             document.getElementById('lb-counter').textContent = (lbIndex + 1) + ' / ' + lbPhotos.length;
         }
 
@@ -1839,6 +1855,7 @@
         (function() {
             var picker = null;
             var quoteTimer = null;
+            var quoteRequestId = 0;
             var minStayByDow = {
                 0: 1,
                 1: 1,
@@ -2041,6 +2058,7 @@
 
             function updateBookNowBtn(checkin, checkout, guests) {
                 var btn = document.getElementById('booking-book-now-btn');
+                btn.setAttribute('aria-disabled', checkin && checkout ? 'false' : 'true');
                 var noMsg = document.getElementById('booking-no-dates-msg');
                 if (checkin && checkout) {
                     var url = '{{ route('book-now') }}?checkin=' + checkin +
@@ -2062,6 +2080,7 @@
             }
 
             function hideAll() {
+                quoteRequestId++;
                 document.getElementById('booking-minstay-error').style.display = 'none';
                 document.getElementById('booking-price-breakdown').style.display = 'none';
                 document.getElementById('booking-nights-bar').style.display = 'none';
@@ -2070,6 +2089,7 @@
             }
 
             function showLoading() {
+                updateBookNowBtn('', '', document.getElementById('guests').value);
                 document.getElementById('booking-minstay-error').style.display = 'none';
                 document.getElementById('booking-price-breakdown').style.display = 'none';
                 document.getElementById('booking-quote-loading').style.display = 'block';
@@ -2080,6 +2100,7 @@
             }
 
             function fetchQuote() {
+                var requestId = ++quoteRequestId;
                 var checkin = parseDisplayDate(document.getElementById('checkin_date').value);
                 var checkout = parseDisplayDate(document.getElementById('checkout_date').value);
                 var guests = document.getElementById('guests').value;
@@ -2096,6 +2117,7 @@
                         return r.json();
                     })
                     .then(function(q) {
+                        if (requestId !== quoteRequestId) return;
                         hideLoading();
                         if (!q.valid) {
                             updateBookNowBtn('', '', guests);
@@ -2113,7 +2135,9 @@
                         }
                     })
                     .catch(function() {
+                        if (requestId !== quoteRequestId) return;
                         hideLoading();
+                        showError('Unable to check availability. Please try again.');
                     });
             }
 
@@ -2212,6 +2236,10 @@
                 });
 
                 /* Track check-in selection for tooltip + min-stay enforcement */
+                if (window.VillaAccessibility) {
+                    document.querySelectorAll('.litepicker').forEach(VillaAccessibility.labelCalendar);
+                    picker.on('render', function (root) { VillaAccessibility.labelCalendar(root); });
+                }
                 picker.on('preselect', function(date1, date2) {
                     if (date1 && !date2) {
                         /* User just picked check-in, now choosing checkout */
@@ -2286,6 +2314,27 @@
             var cachedLockDays = [];
             var cachedTurnoverDays = [];
             var lastPickerMobile = null;
+
+            var directCheckin = document.getElementById('accessible-checkin');
+            var directCheckout = document.getElementById('accessible-checkout');
+            directCheckin.min = window.VillaDateUtils.toIsoDateLocal(new Date());
+            directCheckout.min = directCheckin.min;
+            directCheckin.addEventListener('change', function () { directCheckout.min = directCheckin.value || directCheckin.min; });
+            document.getElementById('accessible-dates-apply').addEventListener('click', function () {
+                var status = document.getElementById('accessible-dates-status');
+                if (!directCheckin.value || !directCheckout.value || directCheckout.value <= directCheckin.value || directCheckin.value < directCheckin.min) {
+                    status.textContent = 'Choose a check-in date today or later and a check-out date after check-in.';
+                    return;
+                }
+                function display(iso) {
+                    return new Date(iso + 'T12:00:00').toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+                }
+                document.getElementById('checkin_date').value = display(directCheckin.value);
+                document.getElementById('checkout_date').value = display(directCheckout.value);
+                status.textContent = 'Dates applied. Checking availability and price.';
+                hideAll();
+                fetchQuote();
+            });
 
             /* ── Fetch calendar locks + minimum stays → init picker ───── */
             Promise.all([

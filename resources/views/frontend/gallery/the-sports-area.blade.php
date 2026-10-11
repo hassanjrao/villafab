@@ -39,8 +39,8 @@
 <!-- Sub Header -->
 <div class="site_subheader">
     <div class="container-fluid"><div class="col-lg-12"><div class="site_subheader_inner">
-        <a href="{{ url('/miniature-golf-course') }}" class="site_arrow_link site_arrow_left"><i class="fa fa-arrow-circle-left fa-4x"></i></a>
-        <a href="{{ url('/birds-eye') }}" class="site_arrow_link site_arrow_right"><i class="fa fa-arrow-circle-right fa-4x"></i></a>
+        <a href="{{ url('/miniature-golf-course') }}" class="site_arrow_link site_arrow_left" aria-label="Previous page: Miniature Golf Course"><i class="fa fa-arrow-circle-left fa-4x"></i></a>
+        <a href="{{ url('/birds-eye') }}" class="site_arrow_link site_arrow_right" aria-label="Next page: Birds Eye"><i class="fa fa-arrow-circle-right fa-4x"></i></a>
         <h1 class="mb-0">The Sports Area</h1>
     </div></div></div>
 </div>
@@ -112,61 +112,5 @@
 @endsection
 
 @section('scripts_extra')
-<script>
-    (function () {
-        var lightbox = document.getElementById('gallery-lightbox');
-        if (!lightbox) return;
-
-        var imgEl = document.getElementById('glb-img');
-        var counterEl = document.getElementById('glb-counter');
-        var images = Array.prototype.slice.call(document.querySelectorAll('.gallery-grid-image'));
-        if (!images.length) return;
-
-        var currentIndex = 0;
-
-        function openAt(index) {
-            currentIndex = index;
-            imgEl.src = images[index].getAttribute('data-full') || images[index].src;
-            counterEl.textContent = (index + 1) + ' / ' + images.length;
-            lightbox.classList.add('active');
-            document.body.style.overflow = 'hidden';
-        }
-
-        function closeLb() {
-            lightbox.classList.remove('active');
-            document.body.style.overflow = '';
-        }
-
-        function navigate(delta) {
-            currentIndex = (currentIndex + delta + images.length) % images.length;
-            imgEl.src = images[currentIndex].getAttribute('data-full') || images[currentIndex].src;
-            counterEl.textContent = (currentIndex + 1) + ' / ' + images.length;
-        }
-
-        images.forEach(function (img, idx) {
-            img.style.cursor = 'pointer';
-            img.addEventListener('click', function (e) {
-                e.preventDefault();
-                openAt(idx);
-            });
-        });
-
-        lightbox.querySelector('.glb-close').addEventListener('click', closeLb);
-        lightbox.querySelector('.glb-prev').addEventListener('click', function () { navigate(-1); });
-        lightbox.querySelector('.glb-next').addEventListener('click', function () { navigate(1); });
-
-        lightbox.addEventListener('click', function (e) {
-            if (e.target === lightbox) {
-                closeLb();
-            }
-        });
-
-        document.addEventListener('keydown', function (e) {
-            if (!lightbox.classList.contains('active')) return;
-            if (e.key === 'Escape') closeLb();
-            if (e.key === 'ArrowLeft') navigate(-1);
-            if (e.key === 'ArrowRight') navigate(1);
-        });
-    })();
-</script>
+<script src="{{ \App\Support\Seo::versioned('frontend/js/gallery-lightbox.js') }}" defer></script>
 @endsection

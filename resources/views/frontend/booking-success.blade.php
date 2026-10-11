@@ -69,7 +69,7 @@
                             <span style="color:#777;">
                                 {{ isset($paymentType) && $paymentType === 'deferred' ? 'Deposit paid today' : 'Total charged' }}
                             </span>
-                            <strong style="color:#1da3dd;">{{ $total }}</strong>
+                            <strong style="color:#076b96;">{{ $total }}</strong>
                         </div>
                     @endif
                     @if (isset($paymentType) && $paymentType === 'deferred' && $balanceDue)
@@ -84,13 +84,13 @@
             @endif
 
             <a href="{{ route('home') }}"
-                style="display:inline-block;background:#1da3dd;color:#fff;border-radius:10px;
+                style="display:inline-block;background:#076b96;color:#fff;border-radius:10px;
                   padding:13px 36px;font-size:0.95rem;font-weight:700;text-decoration:none;">
                 Back to Villa Fabulosa
             </a>
 
-            <p style="margin-top:18px;font-size:0.8rem;color:#aaa;">
-                Questions? <a href="{{ route('home') }}#contact" style="color:#1da3dd;">Contact us</a>
+            <p style="margin-top:18px;font-size:0.8rem;color:#595959;">
+                Questions? <a href="{{ route('home') }}#contact" style="color:#076b96;">Contact us</a>
             </p>
         </div>
     </div>

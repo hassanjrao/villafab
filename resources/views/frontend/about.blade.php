@@ -17,8 +17,8 @@
     <div class="container-fluid">
         <div class="col-lg-12">
             <div class="site_subheader_inner">
-                <a href="{{ url('/your-hosts') }}" class="site_arrow_link site_arrow_left"><i class="fa fa-arrow-circle-left fa-4x"></i></a>
-                <a href="{{ url('/the-rooms') }}" class="site_arrow_link site_arrow_right"><i class="fa fa-arrow-circle-right fa-4x"></i></a>
+                <a href="{{ url('/your-hosts') }}" class="site_arrow_link site_arrow_left" aria-label="Previous page: Your Hosts"><i class="fa fa-arrow-circle-left fa-4x"></i></a>
+                <a href="{{ url('/the-rooms') }}" class="site_arrow_link site_arrow_right" aria-label="Next page: The Rooms"><i class="fa fa-arrow-circle-right fa-4x"></i></a>
                 <h1 class="mb-0">About Us</h1>
             </div>
         </div>
@@ -30,7 +30,7 @@
     <div class="container-fluid px-0">
         <div class="row no-gutters">
             <div class="col-lg-6">
-                <div id="site_sc1" class="carousel slide" data-ride="carousel">
+                <div id="site_sc1" class="carousel slide" data-interval="false">
                     <div class="carousel-inner">
                         <div class="carousel-item active" style="background-image:url({{ asset('frontend/imgs/villa-fabulosa-villa.webp') }});"></div>
                     </div>

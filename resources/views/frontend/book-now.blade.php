@@ -27,7 +27,7 @@
         }
 
         .bn-back-link:hover {
-            color: #1da3dd;
+            color: #076b96;
             text-decoration: none;
         }
 
@@ -40,7 +40,7 @@
 
         .bn-page-sub {
             font-size: 0.9rem;
-            color: #888;
+            color: #595959;
             margin-bottom: 32px;
         }
 
@@ -102,21 +102,21 @@
         }
 
         .bn-input:focus {
-            border-color: #1da3dd;
+            border-color: #076b96;
         }
 
         .bn-input.is-invalid {
-            border-color: #e74c3c;
+            border-color: #b42318;
         }
 
         .bn-input.is-invalid:focus {
-            border-color: #e74c3c;
+            border-color: #b42318;
             box-shadow: 0 0 0 3px rgba(231, 76, 60, .1);
         }
 
         .bn-field-error {
             font-size: 0.78rem;
-            color: #e74c3c;
+            color: #b42318;
             margin-top: 4px;
             display: none;
         }
@@ -140,7 +140,7 @@
             justify-content: center;
             gap: 10px;
             width: 100%;
-            background: #1da3dd;
+            background: #076b96;
             color: #fff;
             border: none;
             border-radius: 10px;
@@ -153,7 +153,7 @@
         }
 
         .bn-pay-btn:hover:not(:disabled) {
-            background: #178fc0;
+            background: #075a80;
             transform: translateY(-1px);
         }
 
@@ -181,7 +181,7 @@
         .bn-secure-note {
             text-align: center;
             font-size: 0.77rem;
-            color: #aaa;
+            color: #595959;
             margin-top: 10px;
         }
 
@@ -201,7 +201,7 @@
         .bn-summary-icon {
             width: 56px;
             height: 56px;
-            background: #1da3dd;
+            background: #076b96;
             border-radius: 10px;
             display: flex;
             align-items: center;
@@ -223,7 +223,7 @@
 
         .bn-summary-prop-details {
             font-size: 0.8rem;
-            color: #777;
+            color: #595959;
         }
 
         .bn-summary-row {
@@ -242,7 +242,7 @@
 
         .bn-edit-link {
             font-size: 0.8rem;
-            color: #1da3dd;
+            color: #076b96;
             text-decoration: underline;
             white-space: nowrap;
             margin-left: 12px;
@@ -280,7 +280,7 @@
 
         .bn-total-amount {
             font-size: 1.25rem;
-            color: #1da3dd;
+            color: #076b96;
         }
 
         /* ── Payment option picker ── */
@@ -312,17 +312,17 @@
         }
 
         .bn-pay-option:hover {
-            border-color: #1da3dd;
+            border-color: #076b96;
         }
 
         .bn-pay-option.active {
-            border-color: #1da3dd;
+            border-color: #076b96;
             background: #f0f9fd;
         }
 
         .bn-pay-option input[type="radio"] {
             margin-top: 3px;
-            accent-color: #1da3dd;
+            accent-color: #076b96;
         }
 
         .bn-pay-option-label {
@@ -333,7 +333,7 @@
 
         .bn-pay-option-desc {
             font-size: 0.8rem;
-            color: #777;
+            color: #595959;
             margin-top: 2px;
             line-height: 1.5;
         }
@@ -348,7 +348,7 @@
         .bn-loading {
             text-align: center;
             padding: 28px 0;
-            color: #1da3dd;
+            color: #076b96;
             font-size: 0.9rem;
         }
 
@@ -357,7 +357,7 @@
             width: 20px;
             height: 20px;
             border: 3px solid #c8e8f4;
-            border-top-color: #1da3dd;
+            border-top-color: #076b96;
             border-radius: 50%;
             animation: bn-ring-spin .7s linear infinite;
             vertical-align: middle;
@@ -375,7 +375,7 @@
         }
 
         .bn-alert-warning a {
-            color: #1da3dd;
+            color: #076b96;
         }
 
         /* ── Guarantee ── */
@@ -416,13 +416,13 @@
         }
 
         .bn-terms-box a {
-            color: #1da3dd;
+            color: #076b96;
         }
 
         /* ── House rules collapsible ── */
         .bn-rules-toggle {
             font-size: 0.85rem;
-            color: #1da3dd;
+            color: #076b96;
             cursor: pointer;
             display: flex;
             align-items: center;
@@ -485,12 +485,12 @@
         }
 
         .bn-panel-btn-apply {
-            background: #1da3dd;
+            background: #076b96;
             color: #fff;
         }
 
         .bn-panel-btn-apply:hover:not(:disabled) {
-            background: #178fc0;
+            background: #075a80;
         }
 
         .bn-panel-btn-apply:disabled {
@@ -509,10 +509,10 @@
         .bn-guest-counter-btn {
             width: 34px;
             height: 34px;
-            border: 1.5px solid #1da3dd;
+            border: 1.5px solid #076b96;
             border-radius: 50%;
             background: #fff;
-            color: #1da3dd;
+            color: #076b96;
             font-size: 1.2rem;
             line-height: 1;
             cursor: pointer;
@@ -523,7 +523,7 @@
         }
 
         .bn-guest-counter-btn:hover {
-            background: #1da3dd;
+            background: #076b96;
             color: #fff;
         }
 
@@ -570,14 +570,14 @@
 
         #bn-litepicker-container .litepicker .container__days .day-item.is-locked {
             pointer-events: none;
-            color: #aaa;
+            color: #595959;
             background-color: #e9e9e9;
             border-radius: 6px;
         }
 
         #bn-litepicker-container .litepicker .container__days .day-item.is-start-date,
         #bn-litepicker-container .litepicker .container__days .day-item.is-end-date {
-            background-color: #1da3dd !important;
+            background-color: #076b96 !important;
             color: #fff !important;
             border-radius: 6px;
         }
@@ -666,7 +666,7 @@
                         {{-- Personal Info card --}}
                         <div class="bn-card">
                             <div class="bn-card-title">
-                                <i class="fa fa-user-circle" style="color:#1da3dd;margin-right:8px;"></i>
+                                <i class="fa fa-user-circle" style="color:#076b96;margin-right:8px;"></i>
                                 Personal Information
                             </div>
 
@@ -674,20 +674,22 @@
                                 <div class="bn-field">
                                     <label class="bn-label" for="bn-first-name">First Name</label>
                                     <input type="text" id="bn-first-name" class="bn-input" placeholder="First name"
-                                        autocomplete="given-name">
+                                        autocomplete="given-name" required>
+                                    <div class="bn-field-error" id="bn-first-name-error">Please enter your first name.</div>
                                 </div>
                                 <div class="bn-field">
                                     <label class="bn-label" for="bn-last-name">Last Name</label>
                                     <input type="text" id="bn-last-name" class="bn-input" placeholder="Last name"
-                                        autocomplete="family-name">
+                                        autocomplete="family-name" required>
+                                    <div class="bn-field-error" id="bn-last-name-error">Please enter your last name.</div>
                                 </div>
                             </div>
 
                             <div class="bn-field">
                                 <label class="bn-label" for="bn-email">Email Address</label>
                                 <input type="email" id="bn-email" class="bn-input" placeholder="you@example.com"
-                                    autocomplete="email">
-                                <small style="font-size:0.76rem;color:#aaa;margin-top:4px;">We'll send your receipt
+                                    autocomplete="email" required>
+                                <small style="font-size:0.76rem;color:#595959;margin-top:4px;">We'll send your receipt
                                     here</small>
                                 <div class="bn-field-error" id="bn-email-error">Please enter a valid email address.</div>
                             </div>
@@ -695,7 +697,7 @@
                             <div class="bn-field" style="margin-bottom:0;">
                                 <label class="bn-label" for="bn-phone">Phone Number</label>
                                 <input type="tel" id="bn-phone" class="bn-input" placeholder="+1 (555) 000-0000"
-                                    autocomplete="tel" inputmode="numeric">
+                                    autocomplete="tel" inputmode="tel" required>
                                 <div class="bn-field-error" id="bn-phone-error">Please enter a valid phone number.</div>
                             </div>
 
@@ -709,19 +711,19 @@
                         {{-- Payment card --}}
                         <div class="bn-card">
                             <div class="bn-card-title">
-                                <i class="fa fa-lock" style="color:#1da3dd;margin-right:8px;"></i>
+                                <i class="fa fa-lock" style="color:#076b96;margin-right:8px;"></i>
                                 Payment Method
                             </div>
 
                             {{-- Payment Element loading state --}}
-                            <div id="bn-payment-loading" class="bn-loading" style="padding:20px 0;">
+                            <div id="bn-payment-loading" class="bn-loading" role="status" style="padding:20px 0;">
                                 <span class="bn-loading-ring"></span> Loading payment form…
                             </div>
 
                             {{-- Stripe Payment Element (Card / other methods tabs) --}}
                             <div id="payment-element" style="margin-bottom:20px;"></div>
 
-                            <div id="bn-stripe-error"></div>
+                            <div id="bn-stripe-error" role="alert"></div>
 
                             <button id="bn-pay-btn" type="button" class="bn-pay-btn" disabled>
                                 <span class="bn-btn-spinner" id="bn-btn-spinner"></span>
@@ -754,14 +756,22 @@
 
                             <div class="bn-summary-row">
                                 <span>
-                                    <i class="fa fa-calendar" style="color:#1da3dd;margin-right:5px;"></i>
+                                    <i class="fa fa-calendar" style="color:#076b96;margin-right:5px;"></i>
                                     <span id="bn-date-display" style="font-weight:600;">Loading…</span>
                                 </span>
-                                <a href="#" id="bn-edit-dates-btn" class="bn-edit-link">Edit</a>
+                                <a href="#" id="bn-edit-dates-btn" class="bn-edit-link" role="button" aria-label="Edit booking dates" aria-controls="bn-date-edit-panel" aria-expanded="false">Edit</a>
                             </div>
 
                             {{-- Inline date edit panel --}}
                             <div id="bn-date-edit-panel" style="display:none;" class="bn-edit-panel">
+                                <fieldset class="accessible-dates mb-3">
+                                    <legend class="h6">Enter dates directly</legend>
+                                    <label for="bn-direct-checkin">Check-in</label>
+                                    <input type="date" id="bn-direct-checkin" class="form-control mb-2">
+                                    <label for="bn-direct-checkout">Check-out</label>
+                                    <input type="date" id="bn-direct-checkout" class="form-control mb-2">
+                                    <p id="bn-direct-date-status" role="status"></p>
+                                </fieldset>
                                 <input id="bn-litepicker-input" type="text" readonly style="display:none;">
                                 <div id="bn-litepicker-container"></div>
                                 <div class="bn-edit-panel-actions">
@@ -774,21 +784,21 @@
 
                             <div class="bn-summary-row">
                                 <span>
-                                    <i class="fa fa-users" style="color:#1da3dd;margin-right:5px;"></i>
+                                    <i class="fa fa-users" style="color:#076b96;margin-right:5px;"></i>
                                     <span id="bn-guests-display" style="font-weight:600;">{{ $guests }}
                                         guest{{ $guests > 1 ? 's' : '' }}</span>
                                 </span>
-                                <a href="#" id="bn-edit-guests-btn" class="bn-edit-link">Edit</a>
+                                <a href="#" id="bn-edit-guests-btn" class="bn-edit-link" role="button" aria-label="Edit number of guests" aria-controls="bn-guests-edit-panel" aria-expanded="false">Edit</a>
                             </div>
 
                             {{-- Inline guests edit panel --}}
                             <div id="bn-guests-edit-panel" style="display:none;" class="bn-edit-panel">
                                 <div class="bn-guest-counter">
-                                    <button type="button" id="bn-g-dec" class="bn-guest-counter-btn"
+                                    <button type="button" id="bn-g-dec" aria-label="Decrease guests" class="bn-guest-counter-btn"
                                         disabled>&minus;</button>
                                     <span class="bn-guest-counter-val" id="bn-g-val">{{ $guests }}</span>
-                                    <button type="button" id="bn-g-inc" class="bn-guest-counter-btn">+</button>
-                                    <span style="font-size:0.85rem;color:#777;margin-left:4px;">guests (max 24)</span>
+                                    <button type="button" id="bn-g-inc" aria-label="Increase guests" class="bn-guest-counter-btn">+</button>
+                                    <span style="font-size:0.85rem;color:#595959;margin-left:4px;">guests (max 24)</span>
                                 </div>
                                 <div class="bn-edit-panel-actions">
                                     <button type="button" id="bn-guests-cancel-btn"
@@ -803,10 +813,10 @@
                         <div class="bn-card">
                             <div class="bn-card-title">Price Breakdown</div>
 
-                            <div id="bn-loading" class="bn-loading">
+                            <div id="bn-loading" class="bn-loading" role="status">
                                 <span class="bn-loading-ring"></span> Calculating…
                             </div>
-                            <div id="bn-quote-error" style="display:none;" class="bn-alert-warning"></div>
+                            <div id="bn-quote-error" role="alert" style="display:none;" class="bn-alert-warning"></div>
                             <div id="bn-breakdown" style="display:none;">
                                 <div id="bn-breakdown-rows"></div>
                                 <div class="bn-total-row">
@@ -838,9 +848,9 @@
                                     <div id="bn-due-today" style="display:none;margin-top:8px;padding:10px 14px;background:#fff8e1;border:1px solid #ffe082;border-radius:8px;font-size:0.88rem;">
                                         <div style="display:flex;justify-content:space-between;">
                                             <span><strong>Due today (50%)</strong></span>
-                                            <span id="bn-due-today-amount" style="font-weight:700;color:#1da3dd;"></span>
+                                            <span id="bn-due-today-amount" style="font-weight:700;color:#076b96;"></span>
                                         </div>
-                                        <div id="bn-due-later-line" style="display:flex;justify-content:space-between;margin-top:4px;color:#777;font-size:0.82rem;"></div>
+                                        <div id="bn-due-later-line" style="display:flex;justify-content:space-between;margin-top:4px;color:#595959;font-size:0.82rem;"></div>
                                     </div>
                                 </div>
                             </div>
@@ -867,8 +877,8 @@
 
                         {{-- House Rules collapsible --}}
                         <div class="bn-card" style="margin-top:4px;">
-                            <button class="bn-rules-toggle" type="button" id="bn-rules-toggle">
-                                <i class="fa fa-chevron-down" id="bn-rules-chevron"></i> View House Rules
+                            <button class="bn-rules-toggle" type="button" id="bn-rules-toggle" aria-expanded="false" aria-controls="bn-rules-body">
+                                <i class="fa fa-chevron-down" id="bn-rules-chevron" aria-hidden="true"></i><span> View House Rules</span>
                             </button>
                             <div id="bn-rules-body" class="bn-rules-body" style="display:none;">
                                 <p><strong>Special Restrictions</strong></p>
@@ -886,12 +896,12 @@
     </div>
 
     {{-- Terms & Conditions Modal --}}
-    <div class="modal fade" id="tnc-modal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal fade" id="tnc-modal" aria-labelledby="tnc-title" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
             <div class="modal-content" style="border-radius:14px;overflow:hidden;">
-                <div class="modal-header" style="background:#1da3dd;color:#fff;border-bottom:none;">
-                    <h5 class="modal-title" style="font-weight:700;">Terms &amp; Conditions</h5>
-                    <button type="button" class="close" data-dismiss="modal" style="color:#fff;opacity:1;">
+                <div class="modal-header" style="background:#076b96;color:#fff;border-bottom:none;">
+                    <h2 id="tnc-title" class="modal-title h5" style="font-weight:700;">Terms &amp; Conditions</h2>
+                    <button type="button" class="close" aria-label="Close terms and conditions" data-dismiss="modal" style="color:#fff;opacity:1;">
                         <span>&times;</span>
                     </button>
                 </div>
@@ -1232,10 +1242,10 @@
                         appearance: {
                             theme: 'stripe',
                             variables: {
-                                colorPrimary: '#1da3dd',
+                                colorPrimary: '#076b96',
                                 colorBackground: '#ffffff',
                                 colorText: '#111111',
-                                colorDanger: '#e74c3c',
+                                colorDanger: '#b42318',
                                 fontFamily: 'Inter, system-ui, sans-serif',
                                 fontSizeBase: '15px',
                                 borderRadius: '8px',
@@ -1243,9 +1253,9 @@
                             },
                             rules: {
                                 '.Input': { border: '1.5px solid #dde0e6', boxShadow: 'none' },
-                                '.Input:focus': { border: '1.5px solid #1da3dd', boxShadow: 'none' },
+                                '.Input:focus': { border: '1.5px solid #076b96', boxShadow: 'none' },
                                 '.Tab': { border: '1.5px solid #dde0e6' },
-                                '.Tab--selected': { border: '1.5px solid #1da3dd', boxShadow: '0 0 0 1px #1da3dd' },
+                                '.Tab--selected': { border: '1.5px solid #076b96', boxShadow: '0 0 0 1px #076b96' },
                             },
                         },
                     });
@@ -1427,10 +1437,10 @@
                             appearance: {
                                 theme: 'stripe',
                                 variables: {
-                                    colorPrimary: '#1da3dd',
+                                    colorPrimary: '#076b96',
                                     colorBackground: '#ffffff',
                                     colorText: '#111111',
-                                    colorDanger: '#e74c3c',
+                                    colorDanger: '#b42318',
                                     fontFamily: 'Inter, system-ui, sans-serif',
                                     fontSizeBase: '15px',
                                     borderRadius: '8px',
@@ -1442,15 +1452,15 @@
                                         boxShadow: 'none'
                                     },
                                     '.Input:focus': {
-                                        border: '1.5px solid #1da3dd',
+                                        border: '1.5px solid #076b96',
                                         boxShadow: 'none'
                                     },
                                     '.Tab': {
                                         border: '1.5px solid #dde0e6'
                                     },
                                     '.Tab--selected': {
-                                        border: '1.5px solid #1da3dd',
-                                        boxShadow: '0 0 0 1px #1da3dd'
+                                        border: '1.5px solid #076b96',
+                                        boxShadow: '0 0 0 1px #076b96'
                                     },
                                 },
                             },
@@ -1547,6 +1557,9 @@
                 /* Reset pending */
                 pendingCheckin = checkin;
                 pendingCheckout = checkout;
+                directQuoteVersion++;
+                directCheckin.value = checkin;
+                directCheckout.value = checkout;
                 document.getElementById('bn-dates-apply-btn').disabled = true;
 
                 /* Destroy previous picker if any */
@@ -1576,6 +1589,8 @@
                     autoApply: true,
                 });
 
+                VillaAccessibility.labelCalendar(document.getElementById('bn-litepicker-container'));
+                litepicker.on('render', function (root) { VillaAccessibility.labelCalendar(root); });
                 litepicker.on('preselect', function(d1, d2) {
                     if (d1 && !d2) {
                         bnSelectedCheckinIso = d1.format('YYYY-MM-DD');
@@ -1583,9 +1598,12 @@
                 });
 
                 litepicker.on('selected', function(d1, d2) {
+                    directQuoteVersion++;
                     if (d1 && d2) {
                         var ci = d1.format('YYYY-MM-DD');
                         var co = d2.format('YYYY-MM-DD');
+                        directCheckin.value = ci;
+                        directCheckout.value = co;
                         var ciParts = ci.split('-');
                         var coParts = co.split('-');
                         var ciD = new Date(parseInt(ciParts[0]), parseInt(ciParts[1]) - 1, parseInt(
@@ -1640,7 +1658,43 @@
                 loadQuoteAndStripe();
             });
 
+            var directCheckin = document.getElementById('bn-direct-checkin');
+            var directCheckout = document.getElementById('bn-direct-checkout');
+            directCheckin.min = window.VillaDateUtils.toIsoDateLocal(new Date());
+            directCheckout.min = directCheckin.min;
+            var directQuoteVersion = 0;
+            function validateDirectDates() {
+                var version = ++directQuoteVersion;
+                var apply = document.getElementById('bn-dates-apply-btn');
+                var status = document.getElementById('bn-direct-date-status');
+                apply.disabled = true;
+                directCheckout.min = directCheckin.value || directCheckin.min;
+                if (!directCheckin.value || !directCheckout.value || directCheckout.value <= directCheckin.value || directCheckin.value < directCheckin.min) {
+                    status.textContent = 'Choose a check-out date after check-in. Check-in must be today or later.';
+                    return;
+                }
+                status.textContent = 'Checking availability.';
+                fetch('{{ route('api.price-quote') }}?checkin=' + directCheckin.value + '&checkout=' + directCheckout.value + '&guests=' + guests)
+                    .then(function (response) { return response.json(); })
+                    .then(function (quote) {
+                        if (version !== directQuoteVersion) return;
+                        if (!quote.valid) {
+                            status.textContent = quote.error || 'These dates are unavailable or do not meet the minimum stay.';
+                            return;
+                        }
+                        pendingCheckin = directCheckin.value;
+                        pendingCheckout = directCheckout.value;
+                        apply.disabled = false;
+                        status.textContent = 'Dates available. Choose Apply Dates to continue.';
+                    }).catch(function () {
+                        if (version === directQuoteVersion) status.textContent = 'Unable to check availability. Please try again.';
+                    });
+            }
+            directCheckin.addEventListener('change', validateDirectDates);
+            directCheckout.addEventListener('change', validateDirectDates);
+
             document.getElementById('bn-dates-cancel-btn').addEventListener('click', function() {
+                directQuoteVersion++;
                 document.getElementById('bn-date-edit-panel').style.display = 'none';
             });
 
@@ -1704,9 +1758,11 @@
                 var phone = document.getElementById('bn-phone').value.trim();
                 var note = document.getElementById('bn-note').value.trim();
 
+                setFieldError('bn-first-name', 'bn-first-name-error', !firstName);
+                setFieldError('bn-last-name', 'bn-last-name-error', !lastName);
                 if (!firstName || !lastName) {
                     showStripeError('Please enter your first and last name.');
-                    document.getElementById('bn-first-name').focus();
+                    document.getElementById(!firstName ? 'bn-first-name' : 'bn-last-name').focus();
                     return;
                 }
                 if (!email || !isValidEmail(email)) {
@@ -1761,6 +1817,7 @@
                 body.style.display = open ? 'none' : 'block';
                 chevron.className = open ? 'fa fa-chevron-down' : 'fa fa-chevron-up';
                 this.querySelector('span').textContent = open ? ' View House Rules' : ' Hide House Rules';
+                this.setAttribute('aria-expanded', String(!open));
             });
 
         })();

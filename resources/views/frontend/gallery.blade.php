@@ -16,7 +16,7 @@
 </div>
 
 <!-- Slider -->
-<div id="site_gallery_carousel" class="carousel slide" data-ride="carousel">
+<div id="site_gallery_carousel" class="carousel slide" data-interval="false">
     <div class="carousel-inner">
         <div class="carousel-item active" style="background-image:url({{ asset('frontend/imgs/gallery/villa-fabulosa-gallery-01.webp') }});"></div>
         <div class="carousel-item" style="background-image:url({{ asset('frontend/imgs/gallery/villa-fabulosa-gallery-02.webp') }});"></div>

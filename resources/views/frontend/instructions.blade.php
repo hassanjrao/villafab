@@ -33,9 +33,9 @@
         <div class="container-fluid">
             <div class="col-lg-12">
                 <div class="site_subheader_inner">
-                    <a href="{{ url('/team-bonding') }}" class="site_arrow_link site_arrow_left"><i
+                    <a href="{{ url('/team-bonding') }}" class="site_arrow_link site_arrow_left" aria-label="Previous page: Team Bonding"><i
                             class="fa fa-arrow-circle-left fa-4x"></i></a>
-                    <a href="{{ url('/your-hosts') }}" class="site_arrow_link site_arrow_right"><i
+                    <a href="{{ url('/your-hosts') }}" class="site_arrow_link site_arrow_right" aria-label="Next page: Your Hosts"><i
                             class="fa fa-arrow-circle-right fa-4x"></i></a>
                     <h1 class="mb-0">How to Use &amp; Enjoy Everything at Villa Fabulosa</h1>
                 </div>
@@ -58,17 +58,17 @@
             <div class="site_video_wrapper mb-5">
                 <div class="container">
                     <div class="row">
-                        <h4>Introductory Video</h4>
+                        <h3 class="h4">Introductory Video</h3>
                         <div class="col-lg-12" id="video_one">
                             <div class="Introductory_vdo" style="position: relative; width: 100%; height: 600px;">
                                 <a href="https://www.youtube.com/watch?v=sApb0oPcF5c" target="_blank">
                                     <img src="{{ asset('frontend/imgs/villa-fabulosa-instructions.webp') }}" width="100%"
-                                        height="100%" style="cursor: pointer;">
+                                        height="100%" style="cursor: pointer;" alt="Watch the Villa Fabulosa introductory instructions video">
                                 </a>
                                 <a href="https://www.youtube.com/watch?v=sApb0oPcF5c" target="_blank"
                                     style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
                                     <img loading="lazy" decoding="async" src="{{ asset('frontend/imgs/villa-fabulosa-winery.webp') }}" class="u_tube_icn" width="130"
-                                        height="100">
+                                        height="100" alt="Play introductory instructions video">
                                 </a>
                             </div>
                         </div>
@@ -153,7 +153,7 @@
                             <div class="card-header text-center">
                                 <a data-fancybox data-width="740" data-height="460" href="{{ $item['url'] }}"
                                     target="_blank">
-                                    <h5 class="card-title mb-0">{{ $item['title'] }}</h5>
+                                    <h3 class="h5 card-title mb-0">{{ $item['title'] }}</h3>
                                 </a>
                             </div>
                         </div>
@@ -174,13 +174,13 @@
                         <div class="card-body">
                             <a data-fancybox data-width="740" data-height="460" href="https://youtu.be/Xuvah9BdF0A"
                                 target="_blank">
-                                <img loading="lazy" decoding="async" src="{{ asset('frontend/imgs/ins-pics/villa-fabulosa-instructions-514.webp') }}" class="img-fluid">
+                                <img loading="lazy" decoding="async" src="{{ asset('frontend/imgs/ins-pics/villa-fabulosa-instructions-514.webp') }}" class="img-fluid" alt="Watch the video arcade instructions">
                             </a>
                         </div>
                         <div class="card-header text-center">
                             <a data-fancybox data-width="740" data-height="460" href="https://youtu.be/Xuvah9BdF0A"
                                 target="_blank">
-                                <h5 class="card-title mb-0">Video Arcades</h5>
+                                <h3 class="h5 card-title mb-0">Video Arcades</h3>
                             </a>
                         </div>
                     </div>
@@ -247,7 +247,7 @@
                             <div class="card-header text-center">
                                 <a data-fancybox data-width="740" data-height="460" href="{{ $item['url'] }}"
                                     target="_blank">
-                                    <h5 class="card-title mb-0">{{ $item['title'] }}</h5>
+                                    <h3 class="h5 card-title mb-0">{{ $item['title'] }}</h3>
                                 </a>
                             </div>
                         </div>

@@ -7,8 +7,8 @@
 <!-- Sub Header -->
 <div class="site_subheader">
     <div class="container-fluid"><div class="col-lg-12"><div class="site_subheader_inner">
-        <a href="{{ url('/wineries') }}" class="site_arrow_link site_arrow_left"><i class="fa fa-arrow-circle-left fa-4x"></i></a>
-        <a href="{{ url('/team-bonding') }}" class="site_arrow_link site_arrow_right"><i class="fa fa-arrow-circle-right fa-4x"></i></a>
+        <a href="{{ url('/wineries') }}" class="site_arrow_link site_arrow_left" aria-label="Previous page: Wineries"><i class="fa fa-arrow-circle-left fa-4x"></i></a>
+        <a href="{{ url('/team-bonding') }}" class="site_arrow_link site_arrow_right" aria-label="Next page: Team Bonding"><i class="fa fa-arrow-circle-right fa-4x"></i></a>
         <h1 class="mb-0">Temecula</h1>
     </div></div></div>
 </div>

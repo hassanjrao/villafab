@@ -56,11 +56,11 @@
     }
 
     #card-element.StripeElement--focus {
-        border-color: #1da3dd;
+        border-color: #076b96;
     }
 
     #card-element.StripeElement--invalid {
-        border-color: #e74c3c;
+        border-color: #b42318;
     }
 
     #card-errors {
@@ -141,14 +141,14 @@
                 {{ $booking->balance_charge_date ? $booking->balance_charge_date->format('F j, Y') : '-' }}
             </div>
 
-            <div id="card-errors"></div>
+            <div id="card-errors" role="alert"></div>
             <div id="card-element"></div>
 
             <button type="button" id="uc-submit" class="uc-btn">Update Card</button>
         </div>
 
         {{-- Success state --}}
-        <div class="uc-success" id="uc-success-section">
+        <div class="uc-success" id="uc-success-section" role="status">
             <svg viewBox="0 0 24 24" fill="none" stroke="#065f46" stroke-width="2" stroke-linecap="round"
                 stroke-linejoin="round">
                 <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
@@ -178,7 +178,7 @@
                     color: '#111',
                     '::placeholder': { color: '#aab7c4' },
                 },
-                invalid: { color: '#e74c3c' },
+                invalid: { color: '#b42318' },
             },
         });
         cardElement.mount('#card-element');

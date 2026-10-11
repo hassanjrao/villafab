@@ -5,10 +5,13 @@
     @yield('head_extra')
 </head>
 <body id="{{ $bodyId ?? 'page-top' }}" onload="{{ $bodyOnload ?? '' }}">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
 
     @include('layouts.partials.nav')
 
-    @yield('content')
+    <main id="main-content" tabindex="-1">
+        @yield('content')
+    </main>
 
     @include('layouts.partials.footer')
 

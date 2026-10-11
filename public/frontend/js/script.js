@@ -1,45 +1,4 @@
-$(document).ready(function () {
-
-    // $( ".site_datepiker").datepicker();
-    var myCarousel = $(".carousel");
-    $(".carousel-control-prev, .carousel-control-next").hover(
-        function () {
-            myCarousel.carousel('pause');
-        },
-        function () {
-            myCarousel.carousel('cycle');
-        }
-    );
-
-});
-
-$('.carousel').removeAttr('data-bs-ride');
-
-$('.carousel').carousel({ interval: 4000 });
-
-// Function to start the carousel
-function startCarousel(carousel) {
-    carousel.carousel('cycle');
-}
-
-// Function to stop the carousel
-function stopCarousel(carousel) {
-    carousel.carousel('pause');
-}
-
-// Attach hover event handlers to each carousel
-$('.carousel').hover(
-    function () {
-        startCarousel($(this));
-    },
-    function () {
-        stopCarousel($(this));
-    }
-);
-
-
-
-
+$(function () { $('.carousel').carousel({ interval: false }).carousel('pause'); });
 
 function submitContactForm() {
     var reg = /^[A-Z0-9._%+-]+@([A-Z0-9-]+\.)+[A-Z]{2,4}$/i;

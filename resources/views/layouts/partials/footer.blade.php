@@ -40,8 +40,8 @@
             <a href="{{ url('/expedia') }}" class="text-danger font-weight-bold">&nbsp;&nbsp;Expedia.com</a>
         </div>
         <div class="site_footer_logo mb-4">
-            <a href="#top" style="text-decoration: none;">
-                <h3 style="color: #1da3dd;">Villa Fabulosa</h3>
+            <a href="#page-top" style="text-decoration: none;" aria-label="Villa Fabulosa, back to top">
+                <span class="h3">Villa Fabulosa</span>
             </a>
         </div>
 

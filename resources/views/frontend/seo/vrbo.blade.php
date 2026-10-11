@@ -4,7 +4,7 @@
 
 @section('head_extra')
 <style>
-    .headinggg { background: #1dace7; padding: 5px; color: white; }
+    .headinggg { background: #076b96; padding: 5px; color: white; }
     @media screen and (max-width: 767px) {
         .site_header_carousel_fixed .carousel-item { height: calc(40vh - 80px); }
     }
@@ -15,11 +15,11 @@
 
 <div class="container-fluid">
     <div class="headinggg">
-        <h5 class="text-center mt-3">VRBO</h5>
+        <h1 class="h5 text-center mt-3">VRBO</h1>
     </div>
 
     <!-- Slider -->
-    <div id="site_gallery_carousel" class="site_header_carousel_fixed carousel slide" data-ride="carousel">
+    <div id="site_gallery_carousel" class="site_header_carousel_fixed carousel slide" data-interval="false">
         <div class="carousel-inner">
             <div class="carousel-item active" style="background-image:url({{ asset('frontend/imgs/villa-fabulosa-corporate-retreats-01.webp') }});"></div>
         </div>
@@ -30,8 +30,8 @@
         <div class="container">
             <div class="row mb-3">
                 <div class="col-lg-12 text-center">
-                    <h1 class="site_title_letter_space mb-3">Villa Fabulosa</h1>
-                    <h3 class="site_title_letter_space">An enchanting haven of indulgence with unparalleled beauty, luxury, and elegance.</h3>
+                    <h2 class="h1 site_title_letter_space mb-3">Villa Fabulosa</h2>
+                    <p class="h3 site_title_letter_space">An enchanting haven of indulgence with unparalleled beauty, luxury, and elegance.</p>
                 </div>
             </div>
             <div class="row text-center">
@@ -68,7 +68,7 @@
 
 <!-- Text Section -->
 <div class="container mb-5">
-    <h5>Luxurious Retreats Await: VRBO in Temecula Wine Country</h5>
+    <h2 class="h5">Luxurious Retreats Await: VRBO in Temecula Wine Country</h2>
     <ul>
                     <li>Welcome to your exclusive portal to luxury retreats in the heart of Temecula Wine Country! With VRBO in Temecula Wine Country, your ideal vacation destination is just a few clicks away.</li>
                     <li>Indulge in the ultimate escape as you explore our selection of exquisite accommodations. From charming cottages to sprawling estates, each VRBO in Temecula Wine Country is meticulously designed to exceed your expectations.</li>

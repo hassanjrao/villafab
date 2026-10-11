@@ -21,3 +21,4 @@
 <!-- Custom scripts -->
 <script src="{{ \App\Support\Seo::versioned('frontend/js/scrolling-nav.js') }}" defer></script>
 <script src="{{ \App\Support\Seo::versioned('frontend/js/script.js') }}" defer></script>
+<script src="{{ \App\Support\Seo::versioned('frontend/js/accessibility.js') }}" defer></script>
