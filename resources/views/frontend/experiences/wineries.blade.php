@@ -461,8 +461,8 @@
                                         <li><i class="fa fa-globe mr-2"></i> <a href="https://www.mountpalomarwinery.com/"
                                                 target="_blank">https://www.mountpalomarwinery.com/</a></li>
                                         <li><i class="fa fa-map-marker mr-2"></i> <a
-                                                href="33820 Rancho California Rd, Temecula, CA 92591, USA"
-                                                target="_blank">33820 Rancho California Rd, Temecula, CA 92591, USA</a>
+                                                href="https://www.google.com/maps/search/?api=1&amp;query=33820%20Rancho%20California%20Rd%2C%20Temecula%2C%20CA%2092591%2C%20USA"
+                                                target="_blank" rel="noopener noreferrer">33820 Rancho California Rd, Temecula, CA 92591, USA</a>
                                         </li>
                                         <li><i class="fa fa-phone mr-2"></i>+1 951-676-5047</li>
                                         <li>

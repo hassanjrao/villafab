@@ -53,7 +53,7 @@ const { pathToFileURL } = require('url');
                     const failures = lhr.categories.accessibility.auditRefs.map(ref => lhr.audits[ref.id]).filter(a => a && a.scoreDisplayMode === 'binary' && a.score === 0).map(a => ({ id: a.id, title: a.title, details: a.details }));
                     const report = `${profile}-${String(index + 1).padStart(3, '0')}.json`;
                     fs.writeFileSync(path.join(output, report), JSON.stringify(lhr, null, 2));
-                    const document = (run.artifacts?.DevtoolsLog || []).filter(entry => entry.method === 'Network.responseReceived' && entry.params.type === 'Document').pop();
+                    const document = (run.artifacts?.DevtoolsLog || []).filter(entry => entry.method === 'Network.responseReceived' && entry.params.type === 'Document' && entry.params.response.url === (lhr.finalDisplayedUrl || lhr.finalUrl)).pop();
                     result = { profile, route, url, finalUrl: lhr.finalDisplayedUrl || lhr.finalUrl, httpStatus: document?.params.response.status || null, score: Math.round(lhr.categories.accessibility.score * 100), lighthouseVersion: lhr.lighthouseVersion, failures, warnings: lhr.runWarnings, report };
                 } catch (error) {
                     result = { profile, route, url, score: null, error: error.message };

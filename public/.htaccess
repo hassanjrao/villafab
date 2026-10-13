@@ -39,6 +39,9 @@
 
     RewriteEngine On
 
+    # Bundled editor demonstrations are not public website pages.
+    RewriteRule ^js/plugins/ckeditor/samples(?:/|$) - [F,L,NC]
+
     # Handle Authorization Header
     RewriteCond %{HTTP:Authorization} .
     RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]

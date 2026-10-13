@@ -15,9 +15,9 @@
                 <i class="fa fa-check" style="font-size:2rem;color:#27ae60;"></i>
             </div>
 
-            <h2 style="font-size:1.6rem;font-weight:800;color:#111;margin-bottom:10px;">
+            <h1 style="font-size:1.6rem;font-weight:800;color:#111;margin-bottom:10px;">
                 Booking Confirmed!
-            </h2>
+            </h1>
 
             @if (isset($paymentType) && $paymentType === 'deferred')
                 <p style="font-size:1rem;color:#555;margin-bottom:20px;line-height:1.6;">

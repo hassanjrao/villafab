@@ -9,7 +9,7 @@
                     <!-- Sign In Block -->
                     <div class="block block-rounded mb-0">
                         <div class="block-header block-header-default">
-                            <h3 class="block-title">Sign In</h3>
+                            <h1 class="block-title">Sign In</h1>
                             <div class="block-options">
 
 
