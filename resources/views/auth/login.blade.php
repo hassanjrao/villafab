@@ -92,7 +92,7 @@
                     <!-- END Sign In Block -->
                 </div>
             </div>
-            <div class="fs-sm text-muted text-center">
+            <div class="fs-sm text-center" style="color:#555;">
                 <strong>{{ config('app.name') }}, All Rights Reserved </strong> &copy; <span data-toggle="year-copy"></span>
             </div>
             <br>

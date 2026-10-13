@@ -11,6 +11,48 @@
         labelCalendar: function (root) {
             root.querySelectorAll('.button-previous-month').forEach(function (button) { button.setAttribute('aria-label', 'Previous month'); });
             root.querySelectorAll('.button-next-month').forEach(function (button) { button.setAttribute('aria-label', 'Next month'); });
+            root.querySelectorAll('.day-item').forEach(function (day) {
+                var locked = day.classList.contains('is-locked');
+                day.setAttribute('role', 'button');
+                day.setAttribute('aria-label', new Date(Number(day.dataset.time)).toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' }));
+                day.setAttribute('aria-disabled', String(locked));
+                day.tabIndex = locked ? -1 : 0;
+            });
+            if (root.dataset.keyboardCalendar) return;
+            root.dataset.keyboardCalendar = 'true';
+            // Activate the existing calendar days; Litepicker handles its usual
+            // availability and range rules, then replaces the rendered cells.
+            root.addEventListener('keydown', function (event) {
+                if (event.key === 'Escape') {
+                    event.preventDefault();
+                    if (root.closest('#bn-litepicker-container')) {
+                        document.getElementById('bn-dates-cancel-btn').click();
+                    } else {
+                        if (root.onCalendarClose) root.onCalendarClose();
+                        if (root.keyboardOpener) root.keyboardOpener.focus();
+                    }
+                    return;
+                }
+                var day = event.target.closest('.day-item');
+                var monthButton = event.target.closest('.button-previous-month, .button-next-month');
+                if (!day && !monthButton) return;
+                if (event.key === 'Enter' || event.key === ' ') {
+                    event.preventDefault();
+                    if (day && day.classList.contains('is-locked')) return;
+                    var selector = day ? '.day-item[data-time="' + day.dataset.time + '"]' : (monthButton.classList.contains('button-previous-month') ? '.button-previous-month' : '.button-next-month');
+                    (day || monthButton).click();
+                    var replacement = Array.from(root.querySelectorAll(selector)).find(function (item) { return item.getClientRects().length && getComputedStyle(item).visibility !== 'hidden'; });
+                    if (replacement && root.getClientRects().length) replacement.focus();
+                    else if (root.keyboardOpener) root.keyboardOpener.focus();
+                } else if (day && ['ArrowLeft', 'ArrowRight', 'ArrowUp', 'ArrowDown'].indexOf(event.key) !== -1) {
+                    event.preventDefault();
+                    var offset = { ArrowLeft: -1, ArrowRight: 1, ArrowUp: -7, ArrowDown: 7 }[event.key];
+                    var date = new Date(Number(day.dataset.time));
+                    date.setDate(date.getDate() + offset);
+                    var next = root.querySelector('.day-item[data-time="' + date.getTime() + '"]:not(.is-locked)');
+                    if (next) next.focus();
+                }
+            });
         },
         openDialog: function (dialog) {
             returnFocus = document.activeElement;
@@ -80,7 +122,15 @@
     });
     document.querySelectorAll('.booking-date-input').forEach(function (input) {
         input.addEventListener('keydown', function (event) {
-            if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); input.click(); }
+            if (event.key === 'Enter' || event.key === ' ') {
+                event.preventDefault(); input.click();
+                document.querySelectorAll('.litepicker').forEach(function (calendar) {
+                    if (!calendar.getClientRects().length) return;
+                    calendar.keyboardOpener = input;
+                    var day = calendar.querySelector('.day-item.is-start-date:not(.is-locked), .day-item.is-today:not(.is-locked), .day-item:not(.is-locked)');
+                    if (day) day.focus();
+                });
+            }
         });
     });
     document.querySelectorAll('a[role="button"]').forEach(function (link) {

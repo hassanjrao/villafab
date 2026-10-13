@@ -27,8 +27,6 @@ main p a, main li a, .bn-alert-warning a { text-decoration: underline; }
 .site_arrow_link, .glb-close, .glb-prev, .glb-next, .lb-close, .lb-prev, .lb-next { min-width: 44px; min-height: 44px; }
 .cf-input, .cf-textarea, .bn-input { border-color: #767676 !important; }
 input::placeholder, textarea::placeholder { color: #595959 !important; opacity: 1; }
-.accessible-dates { border: 1px solid #767676; border-radius: 8px; padding: 12px; }
-.accessible-dates legend { width: auto; padding: 0 4px; }
 @media (max-width: 991.98px) {
     #navbarSupportedContent { max-height: calc(100vh - 72px); overflow-y: auto; }
 }

@@ -1213,15 +1213,6 @@
                                 </select>
                             </div>
 
-                            <fieldset class="accessible-dates mb-3">
-                                <legend class="h6">Enter dates directly</legend>
-                                <label for="accessible-checkin">Check-in</label>
-                                <input type="date" id="accessible-checkin" class="form-control mb-2">
-                                <label for="accessible-checkout">Check-out</label>
-                                <input type="date" id="accessible-checkout" class="form-control mb-2">
-                                <button type="button" class="btn btn-primary" id="accessible-dates-apply">Apply dates</button>
-                                <p id="accessible-dates-status" role="status"></p>
-                            </fieldset>
                             {{-- Minimum stay hint (shown once check-in is picked) --}}
                             <div class="booking-nights-bar" id="booking-nights-bar" role="status" style="display:none;">
                                 <i class="fa fa-moon-o"></i>
@@ -2172,6 +2163,9 @@
                     });
 
                     cell.addEventListener('keydown', function(e) {
+                        if (e.target && e.target.closest('input')) {
+                            return;
+                        }
                         if (e.key === 'Enter' || e.key === ' ') {
                             e.preventDefault();
                             openDatePicker(targetId);
@@ -2237,8 +2231,12 @@
 
                 /* Track check-in selection for tooltip + min-stay enforcement */
                 if (window.VillaAccessibility) {
-                    document.querySelectorAll('.litepicker').forEach(VillaAccessibility.labelCalendar);
-                    picker.on('render', function (root) { VillaAccessibility.labelCalendar(root); });
+                    function labelPicker(root) {
+                        VillaAccessibility.labelCalendar(root);
+                        root.onCalendarClose = function () { picker.hide(); };
+                    }
+                    document.querySelectorAll('.litepicker').forEach(labelPicker);
+                    picker.on('render', labelPicker);
                 }
                 picker.on('preselect', function(date1, date2) {
                     if (date1 && !date2) {
@@ -2314,27 +2312,6 @@
             var cachedLockDays = [];
             var cachedTurnoverDays = [];
             var lastPickerMobile = null;
-
-            var directCheckin = document.getElementById('accessible-checkin');
-            var directCheckout = document.getElementById('accessible-checkout');
-            directCheckin.min = window.VillaDateUtils.toIsoDateLocal(new Date());
-            directCheckout.min = directCheckin.min;
-            directCheckin.addEventListener('change', function () { directCheckout.min = directCheckin.value || directCheckin.min; });
-            document.getElementById('accessible-dates-apply').addEventListener('click', function () {
-                var status = document.getElementById('accessible-dates-status');
-                if (!directCheckin.value || !directCheckout.value || directCheckout.value <= directCheckin.value || directCheckin.value < directCheckin.min) {
-                    status.textContent = 'Choose a check-in date today or later and a check-out date after check-in.';
-                    return;
-                }
-                function display(iso) {
-                    return new Date(iso + 'T12:00:00').toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
-                }
-                document.getElementById('checkin_date').value = display(directCheckin.value);
-                document.getElementById('checkout_date').value = display(directCheckout.value);
-                status.textContent = 'Dates applied. Checking availability and price.';
-                hideAll();
-                fetchQuote();
-            });
 
             /* ── Fetch calendar locks + minimum stays → init picker ───── */
             Promise.all([

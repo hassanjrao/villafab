@@ -2,6 +2,12 @@
 
 The public Laravel frontend has been updated toward WCAG 2.2 AA and deployed to https://villafabulosa.com through the requested Git push/pull workflow. Automated results are evidence of the tested states, not proof of complete WCAG conformance or ADA compliance. AccessibilityChecker requires an account; the requested post-deployment scan instructions are below.
 
+## Booking controls — 13 October 2026
+
+Removed the added “Enter dates directly” fieldsets from the home booking widget and booking date editor at the owner's request. The original visual calendars remain, with date buttons supporting keyboard activation, arrow movement within the displayed months, Escape, and focus restoration. Existing minimum-stay, booked-date and server quote checks remain in place. No additional form fields were introduced.
+
+The current review covers every public content route, booking with selected dates, the booking result page and the public login page. Lighthouse accessibility scores are measured separately from AccessibilityChecker's proprietary score; neither score establishes full legal compliance. Use the account's authorized scan allowance for AccessibilityChecker, without bypassing its scan limits.
+
 ## Results — 11 October 2026
 
 | Check | Result |
@@ -36,7 +42,7 @@ The desktop scan still flags manual-review items: home-page color contrast, the 
 - Added visible focus outlines, reduced-motion support and stopped automatic carousel playback.
 - Corrected contrast, link underlines, heading structure, image descriptions and icon-only link names.
 - Made photo tiles keyboard operable. Photo viewers announce their image and position, contain focus, isolate the background and restore focus when closed. Nested photo viewers close independently of the parent photo tour.
-- Added native date fields alongside the visual calendar on the home and booking pages. Dates still pass through the existing server availability and price checks. Stale home-page quotes cannot enable booking for a superseded date selection.
+- Made the original visual calendars keyboard operable. The native date fields added on 11 October were removed on 13 October. Dates still pass through the existing server availability and price checks. Stale home-page quotes cannot enable booking for a superseded date selection.
 - Associated form errors with their fields and announced validation, payment and availability messages. Corrected required-field semantics and focus for missing booking names.
 - Added written descriptions of the upstairs and downstairs floor plans.
 - Kept mobile navigation scrollable when enlarged and improved small link/control targets.
@@ -67,7 +73,7 @@ To repeat against production, set `$env:ACCESSIBILITY_BASE_URL='https://villafab
 ## AccessibilityChecker after deployment
 
 1. Deploy the changed Blade views, `public/frontend/style.css`, and the JavaScript in `public/frontend/js`. Clear or rebuild Laravel's compiled views with `php artisan view:clear` or `php artisan view:cache`. Purge any CDN/page cache so the scanner receives the updated pages.
-2. Verify the deployed public URL is reachable without a login. Confirm the updated skip link, focus outlines and native date controls appear.
+2. Verify the deployed public URL is reachable without a login. Confirm the skip link, focus outlines and original calendar keyboard controls work. No additional date-entry fieldsets should appear.
 3. Open the [AccessibilityChecker link supplied for this task](https://www.accessibilitychecker.org/sign-up/?sign_action=checkout&redirect_to=https%3A%2F%2Fwww.accessibilitychecker.org%2Fmembership-account%2Fdomains%2F%23show-buy-subscription-popup). It opens an account-registration page. Use your existing account or complete registration yourself; no account or subscription was created during this task.
 4. Add `https://villafabulosa.com` as the domain and run the available WCAG 2.2 AA scan. Check the domain-wide/page coverage in the selected service plan. Follow any ownership-verification steps shown by the service.
 5. Include the home page, `/book-now` both with and without selected dates, all gallery pages, `/floorplan`, `/instructions`, `/your-hosts`, `/wineries`, `/team-bonding`, game pages and retreat pages. Supply the sitemap if the service supports it. A single home-page scan does not cover the site.

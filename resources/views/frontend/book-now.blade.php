@@ -764,14 +764,6 @@
 
                             {{-- Inline date edit panel --}}
                             <div id="bn-date-edit-panel" style="display:none;" class="bn-edit-panel">
-                                <fieldset class="accessible-dates mb-3">
-                                    <legend class="h6">Enter dates directly</legend>
-                                    <label for="bn-direct-checkin">Check-in</label>
-                                    <input type="date" id="bn-direct-checkin" class="form-control mb-2">
-                                    <label for="bn-direct-checkout">Check-out</label>
-                                    <input type="date" id="bn-direct-checkout" class="form-control mb-2">
-                                    <p id="bn-direct-date-status" role="status"></p>
-                                </fieldset>
                                 <input id="bn-litepicker-input" type="text" readonly style="display:none;">
                                 <div id="bn-litepicker-container"></div>
                                 <div class="bn-edit-panel-actions">
@@ -1557,9 +1549,6 @@
                 /* Reset pending */
                 pendingCheckin = checkin;
                 pendingCheckout = checkout;
-                directQuoteVersion++;
-                directCheckin.value = checkin;
-                directCheckout.value = checkout;
                 document.getElementById('bn-dates-apply-btn').disabled = true;
 
                 /* Destroy previous picker if any */
@@ -1598,12 +1587,9 @@
                 });
 
                 litepicker.on('selected', function(d1, d2) {
-                    directQuoteVersion++;
                     if (d1 && d2) {
                         var ci = d1.format('YYYY-MM-DD');
                         var co = d2.format('YYYY-MM-DD');
-                        directCheckin.value = ci;
-                        directCheckout.value = co;
                         var ciParts = ci.split('-');
                         var coParts = co.split('-');
                         var ciD = new Date(parseInt(ciParts[0]), parseInt(ciParts[1]) - 1, parseInt(
@@ -1658,43 +1644,7 @@
                 loadQuoteAndStripe();
             });
 
-            var directCheckin = document.getElementById('bn-direct-checkin');
-            var directCheckout = document.getElementById('bn-direct-checkout');
-            directCheckin.min = window.VillaDateUtils.toIsoDateLocal(new Date());
-            directCheckout.min = directCheckin.min;
-            var directQuoteVersion = 0;
-            function validateDirectDates() {
-                var version = ++directQuoteVersion;
-                var apply = document.getElementById('bn-dates-apply-btn');
-                var status = document.getElementById('bn-direct-date-status');
-                apply.disabled = true;
-                directCheckout.min = directCheckin.value || directCheckin.min;
-                if (!directCheckin.value || !directCheckout.value || directCheckout.value <= directCheckin.value || directCheckin.value < directCheckin.min) {
-                    status.textContent = 'Choose a check-out date after check-in. Check-in must be today or later.';
-                    return;
-                }
-                status.textContent = 'Checking availability.';
-                fetch('{{ route('api.price-quote') }}?checkin=' + directCheckin.value + '&checkout=' + directCheckout.value + '&guests=' + guests)
-                    .then(function (response) { return response.json(); })
-                    .then(function (quote) {
-                        if (version !== directQuoteVersion) return;
-                        if (!quote.valid) {
-                            status.textContent = quote.error || 'These dates are unavailable or do not meet the minimum stay.';
-                            return;
-                        }
-                        pendingCheckin = directCheckin.value;
-                        pendingCheckout = directCheckout.value;
-                        apply.disabled = false;
-                        status.textContent = 'Dates available. Choose Apply Dates to continue.';
-                    }).catch(function () {
-                        if (version === directQuoteVersion) status.textContent = 'Unable to check availability. Please try again.';
-                    });
-            }
-            directCheckin.addEventListener('change', validateDirectDates);
-            directCheckout.addEventListener('change', validateDirectDates);
-
             document.getElementById('bn-dates-cancel-btn').addEventListener('click', function() {
-                directQuoteVersion++;
                 document.getElementById('bn-date-edit-panel').style.display = 'none';
             });
 
