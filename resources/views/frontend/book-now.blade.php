@@ -764,7 +764,7 @@
 
                             {{-- Inline date edit panel --}}
                             <div id="bn-date-edit-panel" style="display:none;" class="bn-edit-panel">
-                                <input id="bn-litepicker-input" type="text" readonly style="display:none;">
+                                <input id="bn-litepicker-input" type="text" readonly aria-label="Selected booking dates" style="display:none;">
                                 <div id="bn-litepicker-container"></div>
                                 <div class="bn-edit-panel-actions">
                                     <button type="button" id="bn-dates-cancel-btn"

@@ -48,7 +48,7 @@
                                             @enderror
                                         </div>
                                         <div class="mb-4">
-                                            <label for="password">{{ __('Password') }}</label>
+                                            <label for="login-password">{{ __('Password') }}</label>
                                             <input type="password"
                                                 class="form-control form-control-alt form-control-lg @error('password') is-invalid @enderror"
                                                 id="login-password" name="password" required autocomplete="current-password"
