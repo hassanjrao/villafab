@@ -720,7 +720,7 @@
                                 <span class="bn-loading-ring"></span> Loading payment form…
                             </div>
 
-                            {{-- Stripe Payment Element (Card / other methods tabs) --}}
+                            {{-- Stripe Payment Element (Card / other payment methods) --}}
                             <div id="payment-element" style="margin-bottom:20px;"></div>
 
                             <div id="bn-stripe-error" role="alert"></div>
@@ -1253,7 +1253,7 @@
                     });
 
                     paymentElement = stripeElements.create('payment', {
-                        layout: { type: 'tabs', defaultCollapsed: false },
+                        layout: { type: 'accordion', defaultCollapsed: false, radios: 'never' },
                     });
                     paymentElement.mount('#payment-element');
                     paymentElement.on('ready', function() {
@@ -1460,8 +1460,9 @@
 
                         paymentElement = stripeElements.create('payment', {
                             layout: {
-                                type: 'tabs',
-                                defaultCollapsed: false
+                                type: 'accordion',
+                                defaultCollapsed: false,
+                                radios: 'never'
                             },
                         });
                         paymentElement.mount('#payment-element');
