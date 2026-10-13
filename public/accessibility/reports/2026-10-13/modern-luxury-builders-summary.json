@@ -1,0 +1,301 @@
+{
+  "site": "Modern Luxury Builders",
+  "auditDate": "2026-10-13",
+  "auditor": "Lighthouse accessibility",
+  "publicUrlCount": 13,
+  "auditCount": 26,
+  "minimumScore": 100,
+  "scope": "Public requested URLs and selected page states, desktop and mobile. Broad scans block payment-intent creation; the initialized Stripe iframe was audited separately. These scores do not establish full WCAG or ADA compliance.",
+  "results": [
+    {
+      "profile": "desktop",
+      "url": "https://modernluxurybuilders.com/",
+      "finalUrl": "https://modernluxurybuilders.com/",
+      "httpStatus": 200,
+      "score": 100,
+      "lighthouseVersion": "13.5.0",
+      "failures": [],
+      "warnings": [],
+      "sourceSummaryGeneratedAt": "2026-10-13T15:55:22.601Z"
+    },
+    {
+      "profile": "desktop",
+      "url": "https://modernluxurybuilders.com/contact.php",
+      "finalUrl": "https://modernluxurybuilders.com/index.php#contact",
+      "httpStatus": 200,
+      "score": 100,
+      "lighthouseVersion": "13.5.0",
+      "failures": [],
+      "warnings": [
+        "The page may not be loading as expected because your test URL (https://modernluxurybuilders.com/contact.php) was redirected to https://modernluxurybuilders.com/index.php. Try testing the second URL directly."
+      ],
+      "sourceSummaryGeneratedAt": "2026-10-13T15:50:07.426Z"
+    },
+    {
+      "profile": "desktop",
+      "url": "https://modernluxurybuilders.com/Custom_Home_Design_and_Construction_Services.php",
+      "finalUrl": "https://modernluxurybuilders.com/Custom_Home_Design_and_Construction_Services.php",
+      "httpStatus": 200,
+      "score": 100,
+      "lighthouseVersion": "13.5.0",
+      "failures": [],
+      "warnings": [],
+      "sourceSummaryGeneratedAt": "2026-10-13T15:50:07.426Z"
+    },
+    {
+      "profile": "desktop",
+      "url": "https://modernluxurybuilders.com/Exclusive_Home_Building_Contractors_in_California.php",
+      "finalUrl": "https://modernluxurybuilders.com/Exclusive_Home_Building_Contractors_in_California.php",
+      "httpStatus": 200,
+      "score": 100,
+      "lighthouseVersion": "13.5.0",
+      "failures": [],
+      "warnings": [],
+      "sourceSummaryGeneratedAt": "2026-10-13T15:50:07.426Z"
+    },
+    {
+      "profile": "desktop",
+      "url": "https://modernluxurybuilders.com/Expert_Luxury_HomeBuilders_and_Designers.php",
+      "finalUrl": "https://modernluxurybuilders.com/Expert_Luxury_HomeBuilders_and_Designers.php",
+      "httpStatus": 200,
+      "score": 100,
+      "lighthouseVersion": "13.5.0",
+      "failures": [],
+      "warnings": [],
+      "sourceSummaryGeneratedAt": "2026-10-13T15:50:07.426Z"
+    },
+    {
+      "profile": "desktop",
+      "url": "https://modernluxurybuilders.com/High_End_Residential_Architects_and_Builders.php",
+      "finalUrl": "https://modernluxurybuilders.com/High_End_Residential_Architects_and_Builders.php",
+      "httpStatus": 200,
+      "score": 100,
+      "lighthouseVersion": "13.5.0",
+      "failures": [],
+      "warnings": [],
+      "sourceSummaryGeneratedAt": "2026-10-13T15:50:07.426Z"
+    },
+    {
+      "profile": "desktop",
+      "url": "https://modernluxurybuilders.com/index.php",
+      "finalUrl": "https://modernluxurybuilders.com/index.php",
+      "httpStatus": 200,
+      "score": 100,
+      "lighthouseVersion": "13.5.0",
+      "failures": [],
+      "warnings": [],
+      "sourceSummaryGeneratedAt": "2026-10-13T15:50:07.426Z"
+    },
+    {
+      "profile": "desktop",
+      "url": "https://modernluxurybuilders.com/Innovative_Home_Design_and_Building_Solutions.php",
+      "finalUrl": "https://modernluxurybuilders.com/Innovative_Home_Design_and_Building_Solutions.php",
+      "httpStatus": 200,
+      "score": 100,
+      "lighthouseVersion": "13.5.0",
+      "failures": [],
+      "warnings": [],
+      "sourceSummaryGeneratedAt": "2026-10-13T15:50:07.426Z"
+    },
+    {
+      "profile": "desktop",
+      "url": "https://modernluxurybuilders.com/Luxury_Home_Designers_Southern_California.php",
+      "finalUrl": "https://modernluxurybuilders.com/Luxury_Home_Designers_Southern_California.php",
+      "httpStatus": 200,
+      "score": 100,
+      "lighthouseVersion": "13.5.0",
+      "failures": [],
+      "warnings": [],
+      "sourceSummaryGeneratedAt": "2026-10-13T15:50:07.426Z"
+    },
+    {
+      "profile": "desktop",
+      "url": "https://modernluxurybuilders.com/Modern_Luxury_Home_Building.php",
+      "finalUrl": "https://modernluxurybuilders.com/Modern_Luxury_Home_Building.php",
+      "httpStatus": 200,
+      "score": 100,
+      "lighthouseVersion": "13.5.0",
+      "failures": [],
+      "warnings": [],
+      "sourceSummaryGeneratedAt": "2026-10-13T15:50:07.426Z"
+    },
+    {
+      "profile": "desktop",
+      "url": "https://modernluxurybuilders.com/Modern_Luxury_Home_Renovations_and_Design.php",
+      "finalUrl": "https://modernluxurybuilders.com/Modern_Luxury_Home_Renovations_and_Design.php",
+      "httpStatus": 200,
+      "score": 100,
+      "lighthouseVersion": "13.5.0",
+      "failures": [],
+      "warnings": [],
+      "sourceSummaryGeneratedAt": "2026-10-13T15:50:07.426Z"
+    },
+    {
+      "profile": "desktop",
+      "url": "https://modernluxurybuilders.com/Premium_Home_Design_and_Construction_Experts.php",
+      "finalUrl": "https://modernluxurybuilders.com/Premium_Home_Design_and_Construction_Experts.php",
+      "httpStatus": 200,
+      "score": 100,
+      "lighthouseVersion": "13.5.0",
+      "failures": [],
+      "warnings": [],
+      "sourceSummaryGeneratedAt": "2026-10-13T15:50:07.426Z"
+    },
+    {
+      "profile": "desktop",
+      "url": "https://modernluxurybuilders.com/Southern_California_Luxury_Home_Contractors.php",
+      "finalUrl": "https://modernluxurybuilders.com/Southern_California_Luxury_Home_Contractors.php",
+      "httpStatus": 200,
+      "score": 100,
+      "lighthouseVersion": "13.5.0",
+      "failures": [],
+      "warnings": [],
+      "sourceSummaryGeneratedAt": "2026-10-13T15:50:07.426Z"
+    },
+    {
+      "profile": "mobile",
+      "url": "https://modernluxurybuilders.com/",
+      "finalUrl": "https://modernluxurybuilders.com/",
+      "httpStatus": 200,
+      "score": 100,
+      "lighthouseVersion": "13.5.0",
+      "failures": [],
+      "warnings": [],
+      "sourceSummaryGeneratedAt": "2026-10-13T15:50:07.426Z"
+    },
+    {
+      "profile": "mobile",
+      "url": "https://modernluxurybuilders.com/contact.php",
+      "finalUrl": "https://modernluxurybuilders.com/index.php#contact",
+      "httpStatus": 200,
+      "score": 100,
+      "lighthouseVersion": "13.5.0",
+      "failures": [],
+      "warnings": [
+        "The page may not be loading as expected because your test URL (https://modernluxurybuilders.com/contact.php) was redirected to https://modernluxurybuilders.com/index.php. Try testing the second URL directly."
+      ],
+      "sourceSummaryGeneratedAt": "2026-10-13T15:50:07.426Z"
+    },
+    {
+      "profile": "mobile",
+      "url": "https://modernluxurybuilders.com/Custom_Home_Design_and_Construction_Services.php",
+      "finalUrl": "https://modernluxurybuilders.com/Custom_Home_Design_and_Construction_Services.php",
+      "httpStatus": 200,
+      "score": 100,
+      "lighthouseVersion": "13.5.0",
+      "failures": [],
+      "warnings": [],
+      "sourceSummaryGeneratedAt": "2026-10-13T15:50:07.426Z"
+    },
+    {
+      "profile": "mobile",
+      "url": "https://modernluxurybuilders.com/Exclusive_Home_Building_Contractors_in_California.php",
+      "finalUrl": "https://modernluxurybuilders.com/Exclusive_Home_Building_Contractors_in_California.php",
+      "httpStatus": 200,
+      "score": 100,
+      "lighthouseVersion": "13.5.0",
+      "failures": [],
+      "warnings": [],
+      "sourceSummaryGeneratedAt": "2026-10-13T15:50:07.426Z"
+    },
+    {
+      "profile": "mobile",
+      "url": "https://modernluxurybuilders.com/Expert_Luxury_HomeBuilders_and_Designers.php",
+      "finalUrl": "https://modernluxurybuilders.com/Expert_Luxury_HomeBuilders_and_Designers.php",
+      "httpStatus": 200,
+      "score": 100,
+      "lighthouseVersion": "13.5.0",
+      "failures": [],
+      "warnings": [],
+      "sourceSummaryGeneratedAt": "2026-10-13T15:50:07.426Z"
+    },
+    {
+      "profile": "mobile",
+      "url": "https://modernluxurybuilders.com/High_End_Residential_Architects_and_Builders.php",
+      "finalUrl": "https://modernluxurybuilders.com/High_End_Residential_Architects_and_Builders.php",
+      "httpStatus": 200,
+      "score": 100,
+      "lighthouseVersion": "13.5.0",
+      "failures": [],
+      "warnings": [],
+      "sourceSummaryGeneratedAt": "2026-10-13T15:50:07.426Z"
+    },
+    {
+      "profile": "mobile",
+      "url": "https://modernluxurybuilders.com/index.php",
+      "finalUrl": "https://modernluxurybuilders.com/index.php",
+      "httpStatus": 200,
+      "score": 100,
+      "lighthouseVersion": "13.5.0",
+      "failures": [],
+      "warnings": [],
+      "sourceSummaryGeneratedAt": "2026-10-13T15:50:07.426Z"
+    },
+    {
+      "profile": "mobile",
+      "url": "https://modernluxurybuilders.com/Innovative_Home_Design_and_Building_Solutions.php",
+      "finalUrl": "https://modernluxurybuilders.com/Innovative_Home_Design_and_Building_Solutions.php",
+      "httpStatus": 200,
+      "score": 100,
+      "lighthouseVersion": "13.5.0",
+      "failures": [],
+      "warnings": [],
+      "sourceSummaryGeneratedAt": "2026-10-13T15:50:07.426Z"
+    },
+    {
+      "profile": "mobile",
+      "url": "https://modernluxurybuilders.com/Luxury_Home_Designers_Southern_California.php",
+      "finalUrl": "https://modernluxurybuilders.com/Luxury_Home_Designers_Southern_California.php",
+      "httpStatus": 200,
+      "score": 100,
+      "lighthouseVersion": "13.5.0",
+      "failures": [],
+      "warnings": [],
+      "sourceSummaryGeneratedAt": "2026-10-13T15:50:07.426Z"
+    },
+    {
+      "profile": "mobile",
+      "url": "https://modernluxurybuilders.com/Modern_Luxury_Home_Building.php",
+      "finalUrl": "https://modernluxurybuilders.com/Modern_Luxury_Home_Building.php",
+      "httpStatus": 200,
+      "score": 100,
+      "lighthouseVersion": "13.5.0",
+      "failures": [],
+      "warnings": [],
+      "sourceSummaryGeneratedAt": "2026-10-13T15:50:07.426Z"
+    },
+    {
+      "profile": "mobile",
+      "url": "https://modernluxurybuilders.com/Modern_Luxury_Home_Renovations_and_Design.php",
+      "finalUrl": "https://modernluxurybuilders.com/Modern_Luxury_Home_Renovations_and_Design.php",
+      "httpStatus": 200,
+      "score": 100,
+      "lighthouseVersion": "13.5.0",
+      "failures": [],
+      "warnings": [],
+      "sourceSummaryGeneratedAt": "2026-10-13T15:50:07.426Z"
+    },
+    {
+      "profile": "mobile",
+      "url": "https://modernluxurybuilders.com/Premium_Home_Design_and_Construction_Experts.php",
+      "finalUrl": "https://modernluxurybuilders.com/Premium_Home_Design_and_Construction_Experts.php",
+      "httpStatus": 200,
+      "score": 100,
+      "lighthouseVersion": "13.5.0",
+      "failures": [],
+      "warnings": [],
+      "sourceSummaryGeneratedAt": "2026-10-13T15:50:07.426Z"
+    },
+    {
+      "profile": "mobile",
+      "url": "https://modernluxurybuilders.com/Southern_California_Luxury_Home_Contractors.php",
+      "finalUrl": "https://modernluxurybuilders.com/Southern_California_Luxury_Home_Contractors.php",
+      "httpStatus": 200,
+      "score": 100,
+      "lighthouseVersion": "13.5.0",
+      "failures": [],
+      "warnings": [],
+      "sourceSummaryGeneratedAt": "2026-10-13T15:50:07.426Z"
+    }
+  ]
+}
