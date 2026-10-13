@@ -1,12 +1,36 @@
 # Accessibility changes and deployment checks
 
-The public Laravel frontend has been updated toward WCAG 2.2 AA and deployed to https://villafabulosa.com through the requested Git push/pull workflow. Automated results are evidence of the tested states, not proof of complete WCAG conformance or ADA compliance. AccessibilityChecker requires an account; the requested post-deployment scan instructions are below.
+The public Laravel frontend has been updated toward WCAG 2.2 AA and deployed to https://villafabulosa.com through the requested Git push/pull workflow. Automated results are evidence of the tested states, not proof of complete WCAG conformance or ADA compliance. The supplied AccessibilityChecker signup link opens an account flow; its separate public scanner supports individual pages. Post-deployment account scan instructions are below.
 
 ## Booking controls — 13 October 2026
 
 Removed the added “Enter dates directly” fieldsets from the home booking widget and booking date editor at the owner's request. The original visual calendars remain, with date buttons supporting keyboard activation, arrow movement within the displayed months, Escape, and focus restoration. Existing minimum-stay, booked-date and server quote checks remain in place. No additional form fields were introduced.
 
 The current review covers every public content route, booking with selected dates, the booking result page and the public login page. Lighthouse accessibility scores are measured separately from AccessibilityChecker's proprietary score; neither score establishes full legal compliance. Use the account's authorized scan allowance for AccessibilityChecker, without bypassing its scan limits.
+
+| Live check, 13 October | Result |
+| --- | --- |
+| Lighthouse 13.5.0 desktop | All 54 requested URLs/states scored 100/100, HTTP 200, no failed accessibility audits or load warnings |
+| Lighthouse 13.5.0 mobile | All 54 requested URLs/states scored 100/100, HTTP 200, no failed accessibility audits or load warnings |
+| Final desktop axe | All 53 URLs/states passed, no violations or browser errors |
+| Verified mobile axe | All 53 URLs/states passed after a booking-page network-failure recheck |
+| Live keyboard and interactive states | Seven behavior checks and four open-state axe audits passed |
+
+Application changes were deployed through Git push/pull at `616eeb8286000177173cb95d2859c202fa8bda96` and `f0e61bb7f762dbdf88ebbe888f6f7e65dfc5bab6`, with Blade views recompiled. The added native date controls are absent from production. The login/result main headings, login-footer contrast and malformed winery address link were corrected. Unused CKEditor samples are no longer served (the live host returns 404); functional editor preview assets remain HTTP 200.
+
+The mobile run initially recorded `ERR_CONNECTION_RESET` for Bootstrap on `/book-now`, causing two initialization errors. Its targeted axe repeat and three independent browser loads passed with Bootstrap present. The initial 53-state report and clean repeat are retained, with per-row sources recorded in `storage/app/accessibility/oct13-verified-axe-mobile-summary.json`. Final desktop evidence is `oct13-final-desktop-report.json`. Missing game-video requests and caption-review items remain unresolved; this is not a resource-completeness or media-accessibility certification.
+
+Full Lighthouse evidence is in `storage/app/accessibility/oct13-fabulosa-lighthouse/` and `oct13-fabulosa-lighthouse-mobile/`. After the Stripe configuration deployment, all three booking URLs were checked again on desktop/mobile in `oct13-fabulosa-booking-final/`, adding the owner's exact URL to the inventory. All six latest booking audits scored 100, returned HTTP 200 and had no failed accessibility audits or load warnings. The combined [per-page scores for all three sites](live-accessibility-scores.csv) and [public Fabulosa URL list](public-pages.txt) record the latest evidence for each state.
+
+## Stripe iframe finding — 13 October 2026
+
+The owner supplied an AccessibilityChecker score of 72/100 for `/book-now?checkin=2026-11-19&checkout=2026-11-22&guests=1`. Its one critical finding was `aria-required-children` at `.p-PaymentMethodSelector[role="tablist"]` inside a private Stripe iframe. Broad scans that block payment-intent creation do not render this initialized iframe and therefore cannot validate it.
+
+Both Payment Element initialization paths now use Stripe's [documented accordion layout](https://docs.stripe.com/payments/payment-element#layout) with `defaultCollapsed: false` and `radios: 'never'`. Application revision `c581b18b4dd0b05b56a33ccccd79ec9bf5ad5526` was pushed, pulled into production and compiled with `php artisan view:cache`. No additional form fields or payment methods were introduced.
+
+Direct checks of the actual initialized live Stripe iframe on the owner's exact URL passed at desktop and mobile sizes: zero automatically detected WCAG A/AA violations and no payment-method tab lists. Axe still recorded manual-review items for `aria-valid-attr-value` (six elements) and `bypass` (one element); zero violations does not resolve those items. The existing five site fields and 16 visible Stripe fields remained unchanged in count. Before the change this browser saw three valid tab children and did not reproduce the service's failure, so the initial problem may depend on timing or Stripe's dynamic method selection. The supported layout change removes the reported tab-list structure instead of altering third-party DOM or suppressing an audit rule.
+
+One unconfirmed initialization intent was reused for the checks and canceled afterward. No card details were entered and no payment was confirmed. Evidence is `storage/app/accessibility/stripe-frame-check/{before,after-desktop,after-mobile}.json` with screenshots. An updated AccessibilityChecker score has not been verified. One normal public-form submission of the exact booking URL stopped in the service's JavaScript with `rudderanalytics is not defined`, after its console reported that bot detection had skipped tracker initialization. There was no audit navigation or score, and no account/quota message. No identity spoofing, IP rotation or quota bypass was attempted. Evidence is `storage/app/accessibility/accessibilitychecker-2026-10-13/booking-exact-submit-once.json` with a screenshot. Rerun the exact URL in a normal browser using the service's authorized allowance.
 
 ## Results — 11 October 2026
 
@@ -81,11 +105,24 @@ To repeat against production, set `$env:ACCESSIBILITY_BASE_URL='https://villafab
 
 The [AccessibilityChecker homepage](https://www.accessibilitychecker.org/) also offers a public scan entry point. The account-registration link itself does not produce a scan result.
 
+## Lighthouse score reproduction
+
+The 13 October audit uses Lighthouse 13.5.0 with Node.js 22.19 or newer and Chrome. Install the auditor into the ignored tool directory; application packages and lockfiles remain unchanged:
+
+```powershell
+npm install --prefix storage/app/accessibility/lighthouse-tools --no-package-lock --no-save lighthouse@13.5.0
+node tests/lighthouse-accessibility.cjs storage/app/accessibility/fabulosa-lighthouse-config.json
+```
+
+The JSON configuration contains `base`, `routes`, `profiles` (`desktop` and/or `mobile`), `minimum` (90), and `output`. The current full inventory has 54 requested URLs/states: the 49 public frontend routes, two selected-date booking URLs, `/booking/success`, `/login`, and `/index.php`. Use `maxWaitForLoad` for a longer real load when rechecking a loading warning. The runner saves full Lighthouse JSON, a per-page CSV, and an HTML index. It runs the accessibility category without disabling any accessibility audit. Each run starts a fresh Chrome profile, caches assets between pages, and blocks payment-intent submissions and analytics collection. The initialized Stripe iframe is verified separately as described above.
+
+Unused CKEditor demonstration pages under `/js/plugins/ckeditor/samples/` are denied by Apache. Editor assets and functional preview helpers remain available. Demonstrations, JSON APIs, POST actions and authenticated admin routes are not public visitor pages. Token-dependent card updates and real payment confirmations require a controlled booking/payment test session.
+
 ## Work still needed before claiming full compliance
 
 - Restore and review the ten game videos referenced under `public/frontend/video`: those files are absent from this checkout and production. Accurate captions, transcripts and descriptions cannot be authored or verified without the source media. Review the linked YouTube instruction/tour videos for accurate captions and descriptions as well. Do not rely on an automated scan to establish media accessibility.
 - Have a person test with a screen reader and keyboard, including 200% text enlargement, 400% zoom/reflow, error recovery and the complete booking flow in Stripe test mode. Check image-description accuracy and the meaning conveyed by the floor-plan descriptions.
-- Verify the live Stripe and reCAPTCHA interfaces and the token-protected card-update flow. Protected card-update messaging was improved, but that flow was not scanned with a real booking token. Admin/authenticated pages were outside the public-page scan.
+- Manually verify the live Stripe and reCAPTCHA interfaces and the token-protected card-update flow. Protected card-update messaging was improved, but that flow was not scanned with a real booking token. Admin/authenticated pages were outside the public-page scan.
 - Review every `incomplete` item in the axe reports. Zero automatically detected violations does not resolve those items.
 
 The technical reference is the [W3C WCAG overview](https://www.w3.org/WAI/standards-guidelines/wcag/) and its linked success criteria.

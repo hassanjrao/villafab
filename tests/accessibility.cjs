@@ -13,7 +13,7 @@ const path = require('path');
     if (mobile) await page.setViewportSize({ width: 375, height: 812 });
     const allRoutes = Array.from(fs.readFileSync(path.join(__dirname, '../routes/web.php'), 'utf8').matchAll(/Route::get\('([^']+)', \[FrontendController::class/g), m => m[1]);
     const routeArgs = args.filter(arg => !arg.startsWith('--'));
-    const routes = args.includes('--all') ? allRoutes.concat('/book-now?checkin=2026-11-20&checkout=2026-11-24&guests=2', '/booking/success', '/login', '/index.php') : routeArgs.length ? routeArgs : ['/'];
+    const routes = args.includes('--all') ? allRoutes.concat('/book-now?checkin=2026-11-20&checkout=2026-11-24&guests=2', '/book-now?checkin=2026-11-19&checkout=2026-11-22&guests=1', '/booking/success', '/login', '/index.php') : routeArgs.length ? routeArgs : ['/'];
     const results = [];
     for (const route of routes) {
         const errors = [];

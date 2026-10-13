@@ -43,7 +43,7 @@ const { pathToFileURL } = require('url');
                         formFactor: profile,
                         screenEmulation: { mobile: !desktop, width: desktop ? 1280 : 375, height: desktop ? 900 : 812, deviceScaleFactor: 1, disabled: false },
                         throttlingMethod: 'provided',
-                        maxWaitForLoad: 45000,
+                        maxWaitForLoad: config.maxWaitForLoad || 45000,
                         pauseAfterLoadMs: 1200,
                         disableStorageReset: true,
                         blockedUrlPatterns: ['*/booking/payment-intent', '*/g/collect*'],
