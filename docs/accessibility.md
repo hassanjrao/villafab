@@ -2,6 +2,26 @@
 
 The public Laravel frontend has been updated toward WCAG 2.2 AA and deployed to https://villafabulosa.com through the requested Git push/pull workflow. Automated results are evidence of the tested states, not proof of complete WCAG conformance or ADA compliance. The supplied AccessibilityChecker signup link opens an account flow; its separate public scanner supports individual pages. Post-deployment account scan instructions are below.
 
+## Pa11y CI review — 13 October 2026
+
+The locally installed Pa11y CI 5.0.0 with Pa11y 10.0.0 ran both HTML_CodeSniffer and axe against all 54 requested live URLs on desktop and mobile, using `WCAG2AA`. Warnings and notices were included; no accessibility rule was disabled. The full first run is retained, with targeted genuine repeats for changed pages and failed loads. These reports contain issue counts rather than a numeric compliance score.
+
+HTML_CodeSniffer identified image-only winery links whose images had empty alternatives, a password label pointing to the wrong input ID, and the existing hidden calendar input without a name. The 55 linked winery images now carry their links' meaningful destination names, the password label targets `login-password`, and the existing calendar input has `aria-label="Selected booking dates"`. No new fields were added. Revision `8edfd383e87818b4e89a81b5b312f4e3d288cd53` was pushed, pulled into production and compiled with `php artisan view:cache`.
+
+The [separate public Pa11y JSON report](https://villafabulosa.com/accessibility/reports/2026-10-13/villa-fabulosa-pa11y.json) preserves every issue's severity, rule, message, selector and manual-review flag. It excludes HTML snippets, private filesystem paths and payment-test data. An axe item marked `needsFurtherReview` retains its original reported severity and is counted separately from a confirmed error. Warnings and notices remain for assessment; zero confirmed errors does not settle them. The broad scans block form submissions and payment-intent creation, so the initialized Stripe iframe remains covered by the separate direct test below.
+
+The latest merged observations cover 108 states, all HTTP 200 with no browser script errors and zero confirmed errors. The report retains 768 warnings, 11,572 notices and 24 axe manual-review items. Its source-run metadata distinguishes the original full scan, the 14-state targeted repeat and the one additional booking-page load repeat. The two initial mobile connection closures and subsequent 90-second navigation timeout are retained; genuine repeats passed rather than treating those missing audits as successes.
+
+Reproduce with Node.js compatible with the installed Pa11y CI version and Chrome:
+
+```powershell
+node tests/pa11y-accessibility.cjs tests/pa11y-configs/villa-fabulosa.json
+node tests/pa11y-accessibility.cjs tests/pa11y-configs/modern-luxury-builders.json
+node tests/pa11y-accessibility.cjs tests/pa11y-configs/villa-magnifica.json
+```
+
+The harness uses the installed `pa11y-ci` JavaScript API with its matching Puppeteer dependency. Set `PA11Y_CI_PATH` to the installed package directory when it differs from `C:/nvm4w/nodejs/node_modules/pa11y-ci`, or `CHROME_PATH` to select another Chrome executable. Reports are written to the ignored output directories specified in each configuration. `node tests/export-pa11y-results.cjs` regenerates the dated public export from the original completed runs and targeted rechecks, rather than running new tests.
+
 ## Booking controls — 13 October 2026
 
 Removed the added “Enter dates directly” fieldsets from the home booking widget and booking date editor at the owner's request. The original visual calendars remain, with date buttons supporting keyboard activation, arrow movement within the displayed months, Escape, and focus restoration. Existing minimum-stay, booked-date and server quote checks remain in place. No additional form fields were introduced.

@@ -2,6 +2,24 @@
 
 Villa Fabulosa's added date-entry fieldsets were removed from the home booking widget and booking date editor. The original calendars support keyboard selection, month navigation, arrows, Escape and focus restoration. Two previously added phone fields were also removed from Villa Magnifica's legacy forms. Original form fields and validation remain; no new form fields were introduced in this review.
 
+## Pa11y CI results
+
+The locally installed Pa11y CI 5.0.0 with Pa11y 10.0.0 ran HTML_CodeSniffer and axe using `WCAG2AA`, with all warnings and notices retained and no accessibility rule disabled. Each public requested URL has a desktop and mobile result. These are issue counts, not numeric Lighthouse or AccessibilityChecker scores.
+
+| Website | Latest tested states | Confirmed errors | Warning-level items | Axe manual-review items | Separate JSON report |
+| --- | --- | --- | --- | --- | --- |
+| Villa Fabulosa | 108 | 0 | 768 | 24 | [JSON](https://villafabulosa.com/accessibility/reports/2026-10-13/villa-fabulosa-pa11y.json) |
+| Modern Luxury Builders | 26 | 0 | 88 | 42 | [JSON](https://villafabulosa.com/accessibility/reports/2026-10-13/modern-luxury-builders-pa11y.json) |
+| Villa Magnifica | 182 | 0 | 872 | 252 | [JSON](https://villafabulosa.com/accessibility/reports/2026-10-13/villa-magnifica-pa11y.json) |
+
+Each latest state returned HTTP 200 with no browser script errors. Reports retain original issue severities, messages and selectors. All remaining error-level axe items were explicitly marked `needsFurtherReview`; they remain unverified manual findings, rather than confirmed violations or completed checks. Warning and notice families include fixed-position/reflow checks, image-description/decorative-image checks, overlay contrast and media requirements. No claim of full compliance follows from zero confirmed errors.
+
+Villa Fabulosa's 55 image-only winery links now have meaningful image alternatives, its password label points to the correct input, and its existing hidden calendar input is named. Modern's TikTok image has a descriptive alternative. Villa Magnifica's closed native media viewer is explicitly hidden despite Bootstrap's reset, and viewer interactions preserve the visible opener's focus. Versioned viewer assets are requested by all 87 HTML pages. Six separate live viewer checks passed across the root, `/2/` and canonical folders on desktop/mobile. All fixes preserve the existing form fields.
+
+The first complete Fabulosa run and all failed-load reports are retained. Changed Fabulosa pages and initial failed loads received genuine repeats, with one additional 120-second booking-page repeat. Modern received a complete post-fix run. Magnifica received a complete post-fix desktop/mobile run plus single-page 120-second repeats for four desktop timeouts. The JSON source-run fields identify which observation supplies each final state. Application fix revisions are Fabulosa `8edfd38`, Modern `40d09c1` and Magnifica `79b9a33`; documentation-only commits may follow them.
+
+Public JSON exports exclude raw HTML snippets, private paths and payment-test data. They retain 11,572 Fabulosa notices, 2,930 Modern notices and 14,864 Magnifica notices for assessment. Broad scans block form submissions and payment-intent creation; the initialized Stripe iframe remains covered by the earlier direct iframe test. Reproduction commands and the outstanding manual/media work are recorded in each site's accessibility document.
+
 The complete reviewed public inventory contains 158 requested URLs/states. Lighthouse 13.5.0 tests each URL on desktop and mobile, using the actual production pages and assets without disabling accessibility audit rules. These broad scans block payment-intent creation and therefore exclude Stripe's initialized payment iframe. The [per-page CSV](live-accessibility-scores.csv) records both scores, response statuses, final URLs after redirects and public HTTPS evidence links. Aliases and selected-date booking states are counted separately; these counts do not imply 158 distinct page designs.
 
 Download the [published CSV](https://villafabulosa.com/accessibility/reports/2026-10-13/live-accessibility-scores.csv). Its evidence links open the latest per-site summaries, hosted together on Villa Fabulosa. The summaries retain tested URLs, desktop/mobile profiles, scores, statuses, warnings and source-summary timestamps. Private local paths, unpublished raw-report filenames and payment-test details are excluded. Run `node tests/export-accessibility-results.cjs` with the original local audit artifacts present to regenerate this export; this does not run fresh audits.

@@ -1,0 +1,25 @@
+﻿{
+    "profiles":  [
+                     "desktop",
+                     "mobile"
+                 ],
+    "concurrency":  2,
+    "output":  "storage/app/accessibility/pa11y-reproduction/modern-luxury-builders",
+    "site":  "Modern Luxury Builders",
+    "urls":  [
+                 "https://modernluxurybuilders.com/",
+                 "https://modernluxurybuilders.com/contact.php",
+                 "https://modernluxurybuilders.com/Custom_Home_Design_and_Construction_Services.php",
+                 "https://modernluxurybuilders.com/Exclusive_Home_Building_Contractors_in_California.php",
+                 "https://modernluxurybuilders.com/Expert_Luxury_HomeBuilders_and_Designers.php",
+                 "https://modernluxurybuilders.com/High_End_Residential_Architects_and_Builders.php",
+                 "https://modernluxurybuilders.com/index.php",
+                 "https://modernluxurybuilders.com/Innovative_Home_Design_and_Building_Solutions.php",
+                 "https://modernluxurybuilders.com/Luxury_Home_Designers_Southern_California.php",
+                 "https://modernluxurybuilders.com/Modern_Luxury_Home_Building.php",
+                 "https://modernluxurybuilders.com/Modern_Luxury_Home_Renovations_and_Design.php",
+                 "https://modernluxurybuilders.com/Premium_Home_Design_and_Construction_Experts.php",
+                 "https://modernluxurybuilders.com/Southern_California_Luxury_Home_Contractors.php"
+             ],
+    "timeout":  90000
+}
