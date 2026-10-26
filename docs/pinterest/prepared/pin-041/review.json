@@ -1,0 +1,18 @@
+{
+  "id": "041",
+  "review_date": "2026-10-26",
+  "generation_method": "Built-in image_gen.imagegen",
+  "generation_output_path": "C:/Users/lenovo/.codex/generated_images/01a177b0-fa50-78f1-9a98-65695f240ca2/exec-19c48a9c-dd2a-4960-bc8b-f38a918fd341.png",
+  "saved_image": "docs/pinterest/prepared/pin-041/pin-041.png",
+  "dimensions": {
+    "width": 1024,
+    "height": 1536
+  },
+  "visual_review_status": "passed_with_limitations",
+  "text_checked": true,
+  "source_and_style_inspected": true,
+  "visual_review": "Brand/headline/location/CTA correct and legible. Double-height living room, cream sofas, blue cushions, feature-wall TV/fireplace, lit shelves and glass upper railing are recognizable from actual source. No people or invented amenity.",
+  "limitations": "Generated panel is not pixel-identical; furniture contours, artwork, shelving contents and reflections are redrawn within consistent source room layout.",
+  "status": "prepared",
+  "published": false
+}

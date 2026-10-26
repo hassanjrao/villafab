@@ -1,0 +1,18 @@
+{
+  "id": "039",
+  "review_date": "2026-10-26",
+  "generation_method": "Built-in image_gen.imagegen",
+  "generation_output_path": "C:/Users/lenovo/.codex/generated_images/01a177b0-fa50-78f1-9a98-65695f240ca2/exec-48d3e68a-91dc-41df-861d-06f3d985ac59.png",
+  "saved_image": "docs/pinterest/prepared/pin-039/pin-039.png",
+  "dimensions": {
+    "width": 1024,
+    "height": 1536
+  },
+  "visual_review_status": "passed_with_limitations",
+  "text_checked": true,
+  "source_and_style_inspected": true,
+  "visual_review": "Campaign brand/headline/footer/CTA complete and correctly spelled. Framed ivory/navy/gold graphic uses source blue sport court, basketball hoop/net, putting greens and distant hills. No people or new amenity.",
+  "limitations": "Generated image is not pixel-identical. Sunset colors are more saturated, court-line/flag detail and distant scenery are redrawn; small lettering on the sport court is indistinct rather than exact original text.",
+  "status": "prepared",
+  "published": false
+}

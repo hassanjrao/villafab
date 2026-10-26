@@ -1,0 +1,18 @@
+{
+  "id": "044",
+  "review_date": "2026-10-26",
+  "generation_method": "Built-in image_gen.imagegen",
+  "generation_output_path": "C:/Users/lenovo/.codex/generated_images/01a177b0-fa50-78f1-9a98-65695f240ca2/exec-080bb6d8-2dc1-45cb-992e-b15e8fe040e6.png",
+  "saved_image": "docs/pinterest/prepared/pin-044/pin-044.png",
+  "dimensions": {
+    "width": 1024,
+    "height": 1536
+  },
+  "visual_review_status": "passed_with_limitations",
+  "text_checked": true,
+  "source_and_style_inspected": true,
+  "visual_review": "Exact campaign words complete and readable. Framed editorial graphic uses actual white two-story estate, blue rectangular pool/shallow ledge, white water loungers and courtyard furniture. No people or new amenity.",
+  "limitations": "Generated panel is not pixel-identical. Sunset saturation, furniture edges, reflections and some building/light detail are redrawn within recognizable source layout.",
+  "status": "prepared",
+  "published": false
+}

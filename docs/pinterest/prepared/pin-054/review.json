@@ -1,0 +1,17 @@
+{
+  "id": "054",
+  "date": "2026-10-26",
+  "timezone": "Asia/Karachi",
+  "status": "visually_reviewed",
+  "method": "Built-in image_gen.imagegen",
+  "generated_source": "C:/Users/lenovo/.codex/generated_images/01a148f7-25d6-7463-8566-9bf6cc2b593d/exec-aa410b3b-eef4-4808-98da-cda86fc15b06.png",
+  "dimensions": {
+    "width": 1024,
+    "height": 1536,
+    "aspect_ratio": "2:3"
+  },
+  "text_accuracy": "All exact required words and CTA readable; headline wraps safely.",
+  "source_check": "Two white beds/blue covers, abstract colorful art, wood floor, black-framed sliding doors and courtyard view retained.",
+  "visible_differences": "Bedroom is recropped/reframed, bedding textures, artwork and reflections re-rendered subtly. No new major amenity or people observed.",
+  "publication": "Not published, scheduled or uploaded."
+}

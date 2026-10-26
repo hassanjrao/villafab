@@ -1,0 +1,94 @@
+{
+  "id": "009",
+  "image": "docs/pinterest/samples/pin-009-v2.png",
+  "headline": "Luxury Bedrooms & High-End Amenities",
+  "source": "public/frontend/imgs/photos-for-vrbo/villa-fabulosa-54-bedroom.webp",
+  "style_reference": "docs/pinterest/samples/pin-001.png",
+  "alt_text": "A bright Villa Fabulosa bedroom with a white bed, navy cover, blue abstract artwork, two windows with blinds, bedside lamps and a wall-mounted TV. The graphic reads Luxury Bedrooms & High-End Amenities, Temecula Wine Country and Explore VillaFabulosa.com.",
+  "dimensions": {
+    "width": 1024,
+    "height": 1536,
+    "ratio": "2:3"
+  },
+  "method": "Built-in image_gen: one original generation call plus one targeted headline edit; no code image editing.",
+  "prompt": "Use case: text-localization.\nAsset type: Pinterest portrait Pin 009 revision, keep exact 1024 x 1536 pixels, opaque background.\nEdit target: D:/laravel/villafab-laravel/docs/pinterest/samples/pin-009.png.\nPrimary request: Change ONLY the large navy serif headline in the top ivory section from \"Luxury Master Suites & High-End Amenities\" to the exact text \"Luxury Bedrooms & High-End Amenities\".\nSet the replacement headline clearly on three balanced lines: \"Luxury Bedrooms\" / \"& High-End\" / \"Amenities\". Keep the same navy serif type style, visual scale, spacing and top-area boundaries, with safe margins. Preserve ampersand and hyphen.\nInvariants: Keep the entire bedroom photograph, its layout, bed, TV, windows, artwork, furniture and colors unchanged; keep the exact ivory/navy/gold graphic layout, top \"VILLA FABULOSA\" branding and gold rule unchanged; keep the footer \"Temecula Wine Country\", gold rule and CTA \"Explore VillaFabulosa.com\" unchanged. Change no other text or pixels outside the headline region. Do not add or remove amenities or people.\nReason for wording adaptation: the actual photo supports a bedroom; multiple master suites are not confirmed. Do not include this explanation in the image.\nDeliver one completed PNG portrait.",
+  "generated_source": "C:/Users/lenovo/.codex/generated_images/01a172a9-ebf6-7fc0-9680-db8681549c66/exec-0697635c-3680-4023-a78d-5d5d4b2d6743.png",
+  "review": "Revised saved PNG inspected: exact new headline, unchanged brand/footer/CTA and matching bedroom composition. No new amenities or people observed. This targeted edit preserves the first generated bedroom design visually; minor texture rendering may differ. The original source-to-design perspective, lighting and texture differences remain as documented in history. Output remains 1024x1536. Bank headline 10 was factually adapted from Luxury Master Suites & High-End Amenities to Luxury Bedrooms & High-End Amenities because multiple master suites are unconfirmed. Original pin-009.png retained and not for publishing.",
+  "created_date": "2026-10-25",
+  "status": "published",
+  "headline_bank_number": 10,
+  "headline_adaptation_reason": "Multiple master suites are not confirmed; actual photo supports a bedroom. Use Luxury Bedrooms & High-End Amenities instead of original bank headline 10.",
+  "revision_history": [
+    {
+      "version": 1,
+      "image": "docs/pinterest/samples/pin-009.png",
+      "headline": "Luxury Master Suites & High-End Amenities",
+      "prompt": "Use case: ads-marketing.\nAsset type: Pinterest portrait Pin 009, 1024 x 1536 pixels, 2:3.\nPrimary request: Create a polished Villa Fabulosa travel Pin using the ACTUAL bedroom photo as the photographic scene and approved Pin 001 only as the graphic design reference.\nInput images: Image 1, D:/laravel/villafab-laravel/public/frontend/imgs/photos-for-vrbo/villa-fabulosa-54-bedroom.webp, is the actual property photo and factual scene to preserve. Image 2, D:/laravel/villafab-laravel/docs/pinterest/samples/pin-001.png, is ONLY the reference for ivory/navy/gold typography, spacing, brand and CTA treatment; do not use its pool-view photograph.\nScene: Preserve the original bright white bedroom: white upholstered bed with white bedding and navy textured folded cover, blue-and-white abstract paintings, two original bedside lamps and bedside furniture, two windows with horizontal gray blinds, warm wood floor, recessed lights, and wall-mounted TV at right. Faithfully use this specific view; crop to fit is permitted. Retain the actual room layout, architecture and furniture. Do not add an ensuite bathroom, balcony, fireplace, bathtub or any unshown feature.\nStyle and composition: Follow the approved warm ivory background, thin muted gold rules, navy editorial serif headline, generous margins, large rectangular photographic middle/lower area, and ivory footer with navy CTA panel outlined in gold. Keep bedroom photograph visually dominant and in natural photographic style. Do not paint typography over the bed. Clear, balanced 2:3 layout; exact headline can be three readable lines without crowding.\nText, verbatim: top brand \"VILLA FABULOSA\"; headline \"Luxury Master Suites & High-End Amenities\"; footer \"Temecula Wine Country\"; CTA \"Explore VillaFabulosa.com\". Preserve every word, ampersand and hyphen. All four texts must be legible with generous safe margins. Do not add other text.\nConstraints: Render one complete finished PNG portrait. Preserve actual room faithfully, including bedding, windows, artwork and proportions. No invented windows, larger room, extra beds, chandeliers, features, people, logos, rankings, pricing, claims or watermarks. Do not import the reference Pin's scene or headline. Background opaque ivory.",
+      "generated_source": "C:/Users/lenovo/.codex/generated_images/01a172a9-ebf6-7fc0-9680-db8681549c66/exec-be61807a-6bbc-4f5a-80fe-0bcd3eec6f5f.png",
+      "review": "Source and approved style inspected before generation; completed design inspected after. Headline, brand, footer and CTA are readable with safe margins. Actual bed, blinds, artwork, lamps, wood floor and TV retained; no people or unshown suite amenity added. Generative differences: portrait reframing and slight perspective/proportion changes, modified floor/bedding textures and vineyard image on TV, brighter lamp glow. This is a generated design, not a pixel-identical photograph. Actual output 1024x1536. Exact headline was assigned by root; root must confirm property-wide master-suite claim against existing property evidence and finalize caption/publishing.",
+      "status": "Retained original; superseded before publication"
+    },
+    {
+      "version": 2,
+      "image": "docs/pinterest/samples/pin-009-v2.png",
+      "headline": "Luxury Bedrooms & High-End Amenities",
+      "prompt": "Use case: text-localization.\nAsset type: Pinterest portrait Pin 009 revision, keep exact 1024 x 1536 pixels, opaque background.\nEdit target: D:/laravel/villafab-laravel/docs/pinterest/samples/pin-009.png.\nPrimary request: Change ONLY the large navy serif headline in the top ivory section from \"Luxury Master Suites & High-End Amenities\" to the exact text \"Luxury Bedrooms & High-End Amenities\".\nSet the replacement headline clearly on three balanced lines: \"Luxury Bedrooms\" / \"& High-End\" / \"Amenities\". Keep the same navy serif type style, visual scale, spacing and top-area boundaries, with safe margins. Preserve ampersand and hyphen.\nInvariants: Keep the entire bedroom photograph, its layout, bed, TV, windows, artwork, furniture and colors unchanged; keep the exact ivory/navy/gold graphic layout, top \"VILLA FABULOSA\" branding and gold rule unchanged; keep the footer \"Temecula Wine Country\", gold rule and CTA \"Explore VillaFabulosa.com\" unchanged. Change no other text or pixels outside the headline region. Do not add or remove amenities or people.\nReason for wording adaptation: the actual photo supports a bedroom; multiple master suites are not confirmed. Do not include this explanation in the image.\nDeliver one completed PNG portrait.",
+      "generated_source": "C:/Users/lenovo/.codex/generated_images/01a172a9-ebf6-7fc0-9680-db8681549c66/exec-0697635c-3680-4023-a78d-5d5d4b2d6743.png",
+      "review": "Revised saved PNG inspected: exact new headline, unchanged brand/footer/CTA and matching bedroom composition. No new amenities or people observed. This targeted edit preserves the first generated bedroom design visually; minor texture rendering may differ. The original source-to-design perspective, lighting and texture differences remain as documented in history. Output remains 1024x1536. Bank headline 10 was factually adapted from Luxury Master Suites & High-End Amenities to Luxury Bedrooms & High-End Amenities because multiple master suites are unconfirmed. Original pin-009.png retained and not for publishing.",
+      "status": "Published version; saved fields verified after full reload on 2026-10-25"
+    }
+  ],
+  "keyword": "luxury holiday rentals",
+  "target_location": "Temecula Wine Country",
+  "title": "Luxury Holiday Rentals in Temecula Wine Country | Villa Fabulosa",
+  "description": "Make time to unwind at Villa Fabulosa in Temecula Wine Country. Discover inviting bedrooms, comfortable gathering spaces and a private setting for your next holiday together. View the villa and check availability at VillaFabulosa.com. #TemeculaWineCountry #LuxuryHoliday #VillaStay",
+  "hashtags": [
+    "#TemeculaWineCountry",
+    "#LuxuryHoliday",
+    "#VillaStay"
+  ],
+  "board": "Top Vacation Rental in Temecula Wine Country",
+  "destination": "https://villafabulosa.com/?utm_source=pinterest&utm_medium=organic_social&utm_campaign=villa_fabulosa_75_pins&utm_content=pin_009",
+  "published_url": "https://www.pinterest.com/pin/743868063501277252/",
+  "posted_date": "2026-10-25",
+  "verified": true,
+  "manual_ai_disclosure": false,
+  "requested_manual_ai_disclosure": false,
+  "tag_update_status": "verified",
+  "topic_tags": [],
+  "verification_date": "2026-10-25",
+  "verification_fields": [
+    "title",
+    "description",
+    "destination",
+    "manual_ai_disclosure",
+    "board",
+    "alt_text",
+    "ad_only"
+  ],
+  "ad_only": false,
+  "public_ai_label_present": true,
+  "alt_text_verification": "Exact saved field checked after full reload",
+  "topic_edit_status": "Native topic selector unavailable in regular Pin builder and Edit Pin; description hashtags saved and verified",
+  "timezone": "Asia/Karachi",
+  "publication_verification": {
+    "status": "Published and verified after full reload",
+    "date": "2026-10-25",
+    "timezone": "Asia/Karachi",
+    "fields": [
+      "title",
+      "description",
+      "destination",
+      "manual_ai_disclosure",
+      "board",
+      "alt_text",
+      "ad_only"
+    ],
+    "hashtags": "All three description hashtags saved and verified",
+    "native_topics": "Unavailable in regular Pin builder and Edit Pin; no topic selected",
+    "manual_ai_disclosure": "Off",
+    "ad_only": "Off",
+    "public_ai_badge": "Present",
+    "root_visual_review": "Root visually reviewed and accepted final creative and documented generative differences"
+  }
+}

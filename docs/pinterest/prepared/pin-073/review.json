@@ -1,0 +1,17 @@
+{
+  "id": "073",
+  "date": "2026-10-26",
+  "timezone": "Asia/Karachi",
+  "status": "visually_reviewed",
+  "method": "Built-in image_gen.imagegen",
+  "generated_source": "C:/Users/lenovo/.codex/generated_images/01a148f7-25d6-7463-8566-9bf6cc2b593d/exec-75e68f38-4b50-4f69-ab55-90d4bd306999.png",
+  "dimensions": {
+    "width": 1024,
+    "height": 1536,
+    "aspect_ratio": "2:3"
+  },
+  "text_accuracy": "Exact brand, headline, footer and website CTA complete, readable and safely spaced.",
+  "source_check": "Source pool, submerged ledge chairs, wicker loungers, covered outdoor lounge, glass fence and hills retained.",
+  "visible_differences": "Magazine framing crops photo; sky is more vivid and small lighting/furniture/reflection details re-rendered. No added major amenity or foreground people observed.",
+  "publication": "Not published, scheduled or uploaded."
+}

@@ -1,0 +1,18 @@
+{
+  "id": "046",
+  "review_date": "2026-10-26",
+  "generation_method": "Built-in image_gen.imagegen",
+  "generation_output_path": "C:/Users/lenovo/.codex/generated_images/01a177b0-fa50-78f1-9a98-65695f240ca2/exec-2c7bcd3f-b514-4e34-a718-041d19f9b68a.png",
+  "saved_image": "docs/pinterest/prepared/pin-046/pin-046.png",
+  "dimensions": {
+    "width": 1024,
+    "height": 1536
+  },
+  "visual_review_status": "passed_with_limitations",
+  "text_checked": true,
+  "source_and_style_inspected": true,
+  "visual_review": "Brand/headline/footer/CTA complete, correctly spelled and legible. Actual game-room arrangement with arcade cabinets, air hockey, foosball, shuffleboard and seating remains recognizable; no people or new amenity.",
+  "limitations": "Generated panel is not pixel-identical. Arcade labels/screens and table markings are stylized, not reliable verbatim brand/game reproductions; small furniture details are redrawn.",
+  "status": "prepared",
+  "published": false
+}

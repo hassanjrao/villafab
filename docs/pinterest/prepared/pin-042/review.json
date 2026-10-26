@@ -1,0 +1,18 @@
+{
+  "id": "042",
+  "review_date": "2026-10-26",
+  "generation_method": "Built-in image_gen.imagegen",
+  "generation_output_path": "C:/Users/lenovo/.codex/generated_images/01a177b0-fa50-78f1-9a98-65695f240ca2/exec-094706e2-c0d2-4bf4-a75e-378d36d8a912.png",
+  "saved_image": "docs/pinterest/prepared/pin-042/pin-042.png",
+  "dimensions": {
+    "width": 1024,
+    "height": 1536
+  },
+  "visual_review_status": "passed_with_limitations",
+  "text_checked": true,
+  "source_and_style_inspected": true,
+  "visual_review": "Brand, complete headline, footer and CTA correctly spelled/readable. Source white covered outdoor lounge, wicker seating, blue-lit pool, loungers and hills are recognizable. No people or new amenity.",
+  "limitations": "Generated photo panel is not pixel-identical; dusk sky is brighter/more saturated, and small seat and landscape details are redrawn.",
+  "status": "prepared",
+  "published": false
+}

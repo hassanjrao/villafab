@@ -1,0 +1,21 @@
+{
+  "id": "019",
+  "reviewed_date": "2026-10-26",
+  "status": "visually_reviewed",
+  "generation_method": "Built-in image_gen.imagegen",
+  "generation_output_path": "C:/Users/lenovo/.codex/generated_images/01a177b0-dacb-7462-92e6-ab50ee05502c/exec-15dfa452-4481-4a1d-8e6d-266afb9ec61f.png",
+  "saved_image": "docs/pinterest/prepared/pin-019/pin-019.png",
+  "dimensions": {
+    "width": 1024,
+    "height": 1536
+  },
+  "source_photo_inspected": true,
+  "style_reference_inspected": true,
+  "headline_and_brand_and_cta_checked": true,
+  "no_generated_people": true,
+  "source_fidelity_review": "Exact campaign text legible. Covered patio, wicker sofas, fire table, pool and putting green preserve source setting. Sky saturation and flame intensity are stronger; crop and wicker details vary. No new amenity visible.",
+  "limitations": "AI-generated design based on the actual source photo; crop, color and fine surface details may vary. It is not a pixel-identical source photograph.",
+  "publication_status": "not_published",
+  "live_verification": false,
+  "prompt_file": "docs/pinterest/prepared/pin-019/prompt.txt"
+}

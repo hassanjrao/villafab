@@ -1,0 +1,18 @@
+{
+  "id": "048",
+  "review_date": "2026-10-26",
+  "generation_method": "Built-in image_gen.imagegen",
+  "generation_output_path": "C:/Users/lenovo/.codex/generated_images/01a177b0-fa50-78f1-9a98-65695f240ca2/exec-b4c2a3ed-6b5d-4b3b-8ce6-b1591d2d9115.png",
+  "saved_image": "docs/pinterest/prepared/pin-048/pin-048.png",
+  "dimensions": {
+    "width": 1024,
+    "height": 1536
+  },
+  "visual_review_status": "passed_with_limitations",
+  "text_checked": true,
+  "source_and_style_inspected": true,
+  "visual_review": "All campaign wording including lowercase 'yourself here!' and punctuation are correct and readable. Left-aligned headline/footer, large photo and navy CTA follow requested variant. Source wicker patio seating/fire table, white roof/column, pool and putting green remain recognizable; no people or invented amenity.",
+  "limitations": "Generated panel is not pixel-identical: sunset more saturated and furniture, fire and landscape detail redrawn.",
+  "status": "prepared",
+  "published": false
+}

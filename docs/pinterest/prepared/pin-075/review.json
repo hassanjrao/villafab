@@ -1,0 +1,17 @@
+{
+  "id": "075",
+  "date": "2026-10-26",
+  "timezone": "Asia/Karachi",
+  "status": "visually_reviewed",
+  "method": "Built-in image_gen.imagegen",
+  "generated_source": "C:/Users/lenovo/.codex/generated_images/01a148f7-25d6-7463-8566-9bf6cc2b593d/exec-f8e3d0cb-6055-409b-b081-25b07a3f475d.png",
+  "dimensions": {
+    "width": 1024,
+    "height": 1536,
+    "aspect_ratio": "2:3"
+  },
+  "text_accuracy": "Exact brand, full Explore VillaFabulosa.com for Your Next Stay headline, footer and CTA complete and readable.",
+  "source_check": "Actual bedroom's white bed/navy cover, gray blinds, blue abstract art, side tables, wood floor and wall TV retained.",
+  "visible_differences": "Portrait crop and small bedding/art/surface details are generatively re-rendered; television image remains a screen image, not a claim of vineyards on site. No new major amenity or people observed.",
+  "publication": "Not published, scheduled or uploaded."
+}

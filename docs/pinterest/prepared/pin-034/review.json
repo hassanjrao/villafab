@@ -1,0 +1,15 @@
+{
+  "id": "034",
+  "review_date": "2026-10-26",
+  "generation_method": "Built-in image_gen.imagegen",
+  "generation_output_path": "C:/Users/lenovo/.codex/generated_images/01a177b0-fa50-78f1-9a98-65695f240ca2/exec-65ff865c-c8c3-4b3d-af3c-74bf69dd3a0b.png",
+  "saved_image": "docs/pinterest/prepared/pin-034/pin-034.png",
+  "dimensions": { "width": 1024, "height": 1536 },
+  "visual_review_status": "passed_with_limitations",
+  "text_checked": true,
+  "source_and_style_inspected": true,
+  "visual_review": "Brand, headline, location footer and CTA are complete and correctly spelled. Warm ivory/navy/gold editorial frame and readable hierarchy. Source patio wicker seating, fire table, pool and putting green remain recognizable; no people or invented amenity.",
+  "limitations": "Generated panel is a reinterpretation of the source, not pixel-identical. Sky is more saturated and some furniture and fire details are redrawn. Overall estate layout and visible amenities remain consistent.",
+  "status": "prepared",
+  "published": false
+}

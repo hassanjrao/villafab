@@ -1,0 +1,18 @@
+{
+  "id": "043",
+  "review_date": "2026-10-26",
+  "generation_method": "Built-in image_gen.imagegen",
+  "generation_output_path": "C:/Users/lenovo/.codex/generated_images/01a177b0-fa50-78f1-9a98-65695f240ca2/exec-775f9321-8aa4-4fbc-a21a-d47f7193bfe2.png",
+  "saved_image": "docs/pinterest/prepared/pin-043/pin-043.png",
+  "dimensions": {
+    "width": 1024,
+    "height": 1536
+  },
+  "visual_review_status": "passed_with_limitations",
+  "text_checked": true,
+  "source_and_style_inspected": true,
+  "visual_review": "All campaign text correct, complete and readable. Old source banner omitted as requested. Actual individual miniature-golf lanes on gray gravel with dry grass, trees and hills remain recognizable; no people, new buildings or new amenity.",
+  "limitations": "Generated panel is not pixel-identical; small lane obstacles, ground textures and tree details are redrawn while keeping the miniature-golf setting and layout recognizable.",
+  "status": "prepared",
+  "published": false
+}

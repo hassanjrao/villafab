@@ -1,0 +1,80 @@
+{
+  "id": "011",
+  "image": "docs/pinterest/samples/pin-011.png",
+  "headline": "Stay in the Heart of SoCal Wine Country",
+  "headline_bank_number": 12,
+  "source": "public/frontend/imgs/photos-for-vrbo/villa-fabulosa-13-view.webp",
+  "style_reference": "docs/pinterest/samples/pin-001.png",
+  "alt_text": "Elevated dusk view of Villa Fabulosa's white courtyard, blue-lit pool, navy loungers, covered outdoor seating and dining area, with rolling hills beyond. Text reads “Stay in the Heart of SoCal Wine Country” and “Explore VillaFabulosa.com.”",
+  "dimensions": {
+    "width": 1024,
+    "height": 1536,
+    "aspect_ratio": "2:3"
+  },
+  "generation_method": "Built-in image_gen.imagegen; one call using actual property photo and approved Pin 001 style reference. Generated PNG copied unchanged into workspace.",
+  "prompt": "Use case: ads-marketing\nAsset type: finished Pinterest campaign Pin, vertical 1024 x 1536 pixels, 2:3 aspect ratio.\nPrimary request: Create one polished Villa Fabulosa marketing design using the actual elevated courtyard property photo as the only photographic subject, following the approved graphic's editorial identity.\nInput images: Image 1 (D:/laravel/villafab-laravel/public/frontend/imgs/photos-for-vrbo/villa-fabulosa-13-view.webp) is the photograph to preserve. Image 2 (D:/laravel/villafab-laravel/docs/pinterest/samples/pin-001.png) is a STYLE REFERENCE ONLY for warm ivory, dark navy, restrained gold, refined serif headline, letterspaced brand wordmark, footer and CTA; do not reuse its building photograph or its headline.\nScene and invariants: Preserve Image 1's elevated viewpoint over the white modern courtyard: the large right-hand white building and black-framed open window, rectangular blue-lit pool with shallow ledge seats, surrounding beige paving, navy loungers and green strips, far covered seating pergola, near right covered outdoor dining table, and rolling brown/green hills beneath the blue-purple sunset sky. Keep real architecture, furniture, landscaping, geography and amenity layout faithful. You may crop the landscape source as a photograph within the vertical design, but do not synthesize new parts of the estate. Do not turn the hills into vineyards or wineries. No people, new structures, balconies, pools, decor or extra features.\nLayout: warm ivory editorial headline area at top with VILLA FABULOSA in navy spaced capitals and a short thin gold rule; a large centered elegant navy serif headline with readable line breaks; use a broad rectangular photographic panel retaining the actual elevated view and distant hills. Ivory footer contains a thin gold rule, location line, then a navy CTA rectangle with a fine gold outline. Keep generous safe margins, the headline clearly legible, and the photo large enough to reveal its actual property details.\nText (verbatim, no other text):\nBrand: \"VILLA FABULOSA\"\nHeadline: \"Stay in the Heart of SoCal Wine Country\"\nFooter: \"Temecula Wine Country\"\nCTA: \"Explore VillaFabulosa.com\"\nText accuracy: Keep \"SoCal\" capitalized exactly. The headline must retain every word and all text must be spelled exactly. No invented badges, awards, ratings, price claims or booking guarantees.\nStyle: premium understated travel editorial; clean warm ivory, deep navy, muted gold. Preserve the source photo's natural dusk lighting, white concrete/stucco surfaces and purple sky without dramatic enhancement. No watermark, no generated people.\nOutput: one completed opaque PNG, vertical 1024 x 1536.",
+  "generated_source": "C:/Users/lenovo/.codex/generated_images/01a172aa-28e6-7010-8e88-e99c19979cfc/exec-780daee1-1b85-4852-8e45-560cf0d25fc6.png",
+  "review": {
+    "date": "2026-10-25",
+    "timezone": "Asia/Karachi",
+    "status": "Visually reviewed by asset agent and root; published and saved fields verified after full reload on 2026-10-25.",
+    "text_accuracy": "All required text appears correct and legible, including exact headline and SoCal capitalization.",
+    "scene_fidelity": "The source's elevated viewpoint, large right-side white building and black-framed window, pool and ledge loungers, outdoor dining, covered rear lounge, and distant hills are retained. No people, vineyards or wineries added.",
+    "visible_differences": "The photograph is recomposed/cropped to fit the vertical panel; the sky is more vivid pink-purple and some fine furniture/landscape details are generatively re-rendered. This is an AI-assisted marketing design, not a pixel-identical photograph.",
+    "publication": "Published by root; exact saved fields verified after full reload on 2026-10-25."
+  },
+  "keyword": "luxury villa holidays",
+  "target_location": "Orange County (travelers from; property in Temecula)",
+  "title": "Luxury Villa Holidays | Temecula Escape from Orange County | Villa Fabulosa",
+  "description": "Plan a Temecula Wine Country escape from Orange County at Villa Fabulosa. Take in the courtyard, blue-lit pool and surrounding hills from this private estate setting. Explore the villa and check availability for your next stay at VillaFabulosa.com. #TemeculaWineCountry #VillaHoliday #OrangeCountyGetaway",
+  "hashtags": [
+    "#TemeculaWineCountry",
+    "#VillaHoliday",
+    "#OrangeCountyGetaway"
+  ],
+  "board": "Top Vacation Rental in Temecula Wine Country",
+  "destination": "https://villafabulosa.com/?utm_source=pinterest&utm_medium=organic_social&utm_campaign=villa_fabulosa_75_pins&utm_content=pin_011",
+  "published_url": "https://www.pinterest.com/pin/743868063501277352/",
+  "posted_date": "2026-10-25",
+  "status": "published",
+  "verified": true,
+  "manual_ai_disclosure": false,
+  "requested_manual_ai_disclosure": false,
+  "tag_update_status": "verified",
+  "topic_tags": [],
+  "verification_date": "2026-10-25",
+  "verification_fields": [
+    "title",
+    "description",
+    "destination",
+    "manual_ai_disclosure",
+    "board",
+    "alt_text",
+    "ad_only"
+  ],
+  "ad_only": false,
+  "public_ai_label_present": true,
+  "alt_text_verification": "Exact saved field checked after full reload",
+  "topic_edit_status": "Native topic selector unavailable in regular Pin builder and Edit Pin; description hashtags saved and verified",
+  "timezone": "Asia/Karachi",
+  "publication_verification": {
+    "status": "Published and verified after full reload",
+    "date": "2026-10-25",
+    "timezone": "Asia/Karachi",
+    "fields": [
+      "title",
+      "description",
+      "destination",
+      "manual_ai_disclosure",
+      "board",
+      "alt_text",
+      "ad_only"
+    ],
+    "hashtags": "All three description hashtags saved and verified",
+    "native_topics": "Unavailable in regular Pin builder and Edit Pin; no topic selected",
+    "manual_ai_disclosure": "Off",
+    "ad_only": "Off",
+    "public_ai_badge": "Present",
+    "root_visual_review": "Root visually reviewed and accepted final creative and documented generative differences"
+  }
+}

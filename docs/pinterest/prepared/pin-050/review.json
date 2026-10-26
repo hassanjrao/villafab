@@ -1,0 +1,18 @@
+{
+  "id": "050",
+  "review_date": "2026-10-26",
+  "generation_method": "Built-in image_gen.imagegen",
+  "generation_output_path": "C:/Users/lenovo/.codex/generated_images/01a177b0-fa50-78f1-9a98-65695f240ca2/exec-c37225c9-0695-426c-8c40-af9a6bc504f3.png",
+  "saved_image": "docs/pinterest/prepared/pin-050/pin-050.png",
+  "dimensions": {
+    "width": 1024,
+    "height": 1536
+  },
+  "visual_review_status": "passed_with_limitations",
+  "text_checked": true,
+  "source_and_style_inspected": true,
+  "visual_review": "All campaign text complete, correct and readable. Left-aligned ivory/navy/gold design uses source long glass table, gray dining chairs, blue napkins, glassware, double-height room and black-framed sliding doors. No people or new amenity.",
+  "limitations": "Generated photo panel is not pixel-identical; small table-setting, glassware, artwork and reflection details are redrawn.",
+  "status": "prepared",
+  "published": false
+}

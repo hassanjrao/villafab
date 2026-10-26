@@ -1,0 +1,18 @@
+{
+  "id": "037",
+  "review_date": "2026-10-26",
+  "generation_method": "Built-in image_gen.imagegen",
+  "generation_output_path": "C:/Users/lenovo/.codex/generated_images/01a177b0-fa50-78f1-9a98-65695f240ca2/exec-8ad0aebd-7d04-40c2-8323-9c4fdcec2e83.png",
+  "saved_image": "docs/pinterest/prepared/pin-037/pin-037.png",
+  "dimensions": {
+    "width": 1024,
+    "height": 1536
+  },
+  "visual_review_status": "passed_with_limitations",
+  "text_checked": true,
+  "source_and_style_inspected": true,
+  "visual_review": "All campaign words correctly rendered and readable. Navy serif headline, ivory background and gold photo frame fit approved identity. Kitchen island, black stools, white cabinets, stainless appliances and blue ceiling lighting match source; no people or new amenity.",
+  "limitations": "Generated rendering is not pixel-identical: small shelf objects, cabinet/ceiling details and reflections are redrawn.",
+  "status": "prepared",
+  "published": false
+}

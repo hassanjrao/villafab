@@ -1,0 +1,18 @@
+{
+  "id": "049",
+  "review_date": "2026-10-26",
+  "generation_method": "Built-in image_gen.imagegen",
+  "generation_output_path": "C:/Users/lenovo/.codex/generated_images/01a177b0-fa50-78f1-9a98-65695f240ca2/exec-8c31dbd5-d2d1-4588-8d9f-689c23fb722d.png",
+  "saved_image": "docs/pinterest/prepared/pin-049/pin-049.png",
+  "dimensions": {
+    "width": 1024,
+    "height": 1536
+  },
+  "visual_review_status": "passed_with_limitations",
+  "text_checked": true,
+  "source_and_style_inspected": true,
+  "visual_review": "Complete correct brand/headline/footer/CTA, all readable. Source bedroom with white bed, navy cover, gray blinds, blue abstract artwork, wood floor and wall TV remains recognizable. No people or invented amenity; vineyard imagery is only on the existing TV display.",
+  "limitations": "Generated panel is not pixel-identical: nightstand drawer details, bed contours, artwork and TV content are redrawn; camera framing is slightly adjusted.",
+  "status": "prepared",
+  "published": false
+}

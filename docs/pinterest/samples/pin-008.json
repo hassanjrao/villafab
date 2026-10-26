@@ -1,0 +1,73 @@
+{
+  "id": "008",
+  "image": "docs/pinterest/samples/pin-008.png",
+  "headline": "Imagine yourself here!",
+  "source": "public/frontend/imgs/photos-for-vrbo/villa-fabulosa-23-patio.webp",
+  "style_reference": "docs/pinterest/samples/pin-001.png",
+  "alt_text": "Villa Fabulosa's covered patio at dusk, with wicker sofas, a fire table, the pool and putting green beyond. The graphic reads Imagine yourself here!, Temecula Wine Country and Explore VillaFabulosa.com.",
+  "dimensions": {
+    "width": 1024,
+    "height": 1536,
+    "ratio": "2:3"
+  },
+  "method": "Built-in image_gen, one generation call, generated design based on actual property photo; no code image editing.",
+  "prompt": "Use case: ads-marketing.\nAsset type: Pinterest portrait Pin 008, 1024 x 1536 pixels, 2:3.\nPrimary request: Create a polished Villa Fabulosa travel Pin using the ACTUAL patio photo as the photographic scene and the approved Pin 001 only as the graphic design reference.\nInput images: Image 1, D:/laravel/villafab-laravel/public/frontend/imgs/photos-for-vrbo/villa-fabulosa-23-patio.webp, is the actual property photo and factual scene to preserve. Image 2, D:/laravel/villafab-laravel/docs/pinterest/samples/pin-001.png, is ONLY the reference for ivory/navy/gold typography, spacing, brand and CTA treatment; do not use its pool-view photograph.\nScene: Preserve the original covered patio at purple twilight, white ceiling and central white column, wicker sofas with navy-gray cushions around the rectangular fire table, original pool edge and lounge chairs behind, putting green and distant hills. Faithfully use this specific view; cropping to fit is permitted. Retain the actual furniture, architecture and visible amenities; no new features or people.\nStyle and composition: Follow the approved warm ivory background, thin muted gold rules, navy editorial serif headline, generous margins, large rectangular photographic middle/lower area, and ivory footer with navy CTA panel outlined in gold. Keep the source photo visually dominant and in its natural photographic style. Do not paint typography across furniture. Clear, balanced 2:3 layout.\nText, verbatim: top brand \"VILLA FABULOSA\"; headline \"Imagine yourself here!\"; footer \"Temecula Wine Country\"; CTA \"Explore VillaFabulosa.com\". Set headline across two or three readable lines, preserving exact words and punctuation. All four texts must be legible with generous safe margins. Do not add other text.\nConstraints: Render one complete finished PNG portrait. Preserve source scene faithfully, including the number and relationships of sofas and fire table, pool and lawn. No invented water features, rooms, amenities, people, logos, rankings, pricing, claims or watermarks. Do not import the reference Pin's scene or headline. Background is opaque ivory.",
+  "generated_source": "C:/Users/lenovo/.codex/generated_images/01a172a9-ebf6-7fc0-9680-db8681549c66/exec-dc4fc109-fbba-49d3-83ba-5c30e0fdf8be.png",
+  "review": "Source and approved style inspected before generation; completed design inspected after. All exact text is readable with clear margins; no people or unshown amenity added. Patio furniture, fire table, pool and putting green correspond to source. Generative differences: portrait reframing removes right doorway edge; sky is more vivid with denser pink clouds, flame is taller, and furniture/table proportions and surface details differ slightly. This is a generated design, not a pixel-identical photograph. Actual output 1024x1536. Publishing and caption handled by root.",
+  "created_date": "2026-10-25",
+  "status": "published",
+  "keyword": "group vacation rentals",
+  "target_location": "Southern California",
+  "title": "Group Vacation Rentals in Southern California | Villa Fabulosa",
+  "description": "Bring your group together at Villa Fabulosa in Temecula Wine Country. Unwind on the covered patio beside the fire table, with the pool and outdoor spaces close by. Explore this Southern California estate and check availability at VillaFabulosa.com. #TemeculaWineCountry #GroupGetaway #OutdoorLiving",
+  "hashtags": [
+    "#TemeculaWineCountry",
+    "#GroupGetaway",
+    "#OutdoorLiving"
+  ],
+  "board": "Top Vacation Rental in Temecula Wine Country",
+  "destination": "https://villafabulosa.com/?utm_source=pinterest&utm_medium=organic_social&utm_campaign=villa_fabulosa_75_pins&utm_content=pin_008",
+  "published_url": "https://www.pinterest.com/pin/743868063501276970/",
+  "posted_date": "2026-10-25",
+  "verified": true,
+  "manual_ai_disclosure": false,
+  "requested_manual_ai_disclosure": false,
+  "tag_update_status": "verified",
+  "topic_tags": [],
+  "verification_date": "2026-10-25",
+  "verification_fields": [
+    "title",
+    "description",
+    "destination",
+    "manual_ai_disclosure",
+    "board",
+    "alt_text",
+    "ad_only"
+  ],
+  "ad_only": false,
+  "public_ai_label_present": true,
+  "alt_text_verification": "Exact saved field checked after full reload",
+  "topic_edit_status": "Native topic selector unavailable in regular Pin builder and Edit Pin; description hashtags saved and verified",
+  "timezone": "Asia/Karachi",
+  "publication_verification": {
+    "status": "Published and verified after full reload",
+    "date": "2026-10-25",
+    "timezone": "Asia/Karachi",
+    "fields": [
+      "title",
+      "description",
+      "destination",
+      "manual_ai_disclosure",
+      "board",
+      "alt_text",
+      "ad_only"
+    ],
+    "hashtags": "All three description hashtags saved and verified",
+    "native_topics": "Unavailable in regular Pin builder and Edit Pin; no topic selected",
+    "manual_ai_disclosure": "Off",
+    "ad_only": "Off",
+    "public_ai_badge": "Present",
+    "root_visual_review": "Root visually reviewed and accepted final creative and documented generative differences"
+  },
+  "headline_bank_number": 9
+}

@@ -1,0 +1,21 @@
+{
+  "id": "013",
+  "reviewed_date": "2026-10-26",
+  "status": "visually_reviewed",
+  "generation_method": "Built-in image_gen.imagegen",
+  "generation_output_path": "C:/Users/lenovo/.codex/generated_images/01a177b0-dacb-7462-92e6-ab50ee05502c/exec-7d7404d7-dc14-41f2-8c6d-98f5676b97c9.png",
+  "saved_image": "docs/pinterest/prepared/pin-013/pin-013.png",
+  "dimensions": {
+    "width": 1024,
+    "height": 1536
+  },
+  "source_photo_inspected": true,
+  "style_reference_inspected": true,
+  "headline_and_brand_and_cta_checked": true,
+  "no_generated_people": true,
+  "source_fidelity_review": "Exact campaign text legible. Source sport court, hoop, net, putting greens and surrounding hills retained. Sky is more saturated and fine court markings/lettering differ; no new amenity visible.",
+  "limitations": "AI-generated design based on the actual source photo; crop, color and fine surface details may vary. It is not a pixel-identical source photograph.",
+  "publication_status": "not_published",
+  "live_verification": false,
+  "prompt_file": "docs/pinterest/prepared/pin-013/prompt.txt"
+}

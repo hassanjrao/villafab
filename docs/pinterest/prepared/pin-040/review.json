@@ -1,0 +1,18 @@
+{
+  "id": "040",
+  "review_date": "2026-10-26",
+  "generation_method": "Built-in image_gen.imagegen",
+  "generation_output_path": "C:/Users/lenovo/.codex/generated_images/01a177b0-fa50-78f1-9a98-65695f240ca2/exec-815222ed-8a70-4b04-af76-119c85c12704.png",
+  "saved_image": "docs/pinterest/prepared/pin-040/pin-040.png",
+  "dimensions": {
+    "width": 1024,
+    "height": 1536
+  },
+  "visual_review_status": "passed_with_limitations",
+  "text_checked": true,
+  "source_and_style_inspected": true,
+  "visual_review": "Brand/headline/footer/CTA are correct, complete and readable. Source foyer composition with white walls, wood stairs, blue vase, blue rug, colorful art and black glass-panel door remains recognizable. No people or new amenity.",
+  "limitations": "Generated panel is not pixel-identical. Stair, artwork and light details are redrawn, with slightly adjusted perspective/crop.",
+  "status": "prepared",
+  "published": false
+}

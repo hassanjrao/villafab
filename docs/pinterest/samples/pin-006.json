@@ -1,0 +1,56 @@
+{
+  "id": "006",
+  "image": "docs/pinterest/samples/pin-006.png",
+  "headline": "The Ultimate Group Getaway",
+  "source": "public/frontend/imgs/photos-for-vrbo/villa-fabulosa-5-arcade.webp",
+  "style_reference": "docs/pinterest/samples/pin-001.png",
+  "alt_text": "Villa Fabulosa’s game room with arcade cabinets along the back wall, air hockey on the left, foosball in the center and shuffleboard on the right. Ivory and navy design reads “The Ultimate Group Getaway,” “Temecula Wine Country” and “Explore VillaFabulosa.com.”",
+  "dimensions": {
+    "width": 1024,
+    "height": 1536,
+    "aspect_ratio": "2:3"
+  },
+  "generation_method": "Built-in image_gen; one asset generation call",
+  "prompt": "Use case: ads-marketing.\nAsset type: a single finished vertical Pinterest marketing creative, 1024 x 1536 pixels, 2:3, for Villa Fabulosa.\nInput images: Image 1 is the actual Villa Fabulosa arcade/game-room photograph and is the photographic subject to preserve. Image 2 is an approved Pinterest design reference for typography, warm ivory/navy/gold colors, generous margins, brand header, footer and call-to-action styling only. Do not copy its pool photo.\nPrimary request: Compose an elegant, highly readable ivory/navy/gold editorial Pinterest pin around the actual arcade-room photograph. Use a warm ivory background, navy serif headline, slender gold divider, letter-spaced navy brand header, and a navy CTA rectangle outlined in gold. Keep all key text fully inside safe margins.\nText (verbatim): top brand \"VILLA FABULOSA\"; large prominent serif headline \"The Ultimate Group Getaway\"; footer \"Temecula Wine Country\"; CTA \"Explore VillaFabulosa.com\".\nComposition: brand header and headline above the photo, photo as a broad clean panel across the middle, footer location and CTA underneath. The headline should occupy three generous lines if useful and remain easy to read on a phone. Keep the source photo's actual wide room view recognizable rather than turning the photo itself into a portrait scene.\nPhoto invariants: preserve the exact actual game-room architecture, white walls, ceiling recessed lights and mini-split air conditioner, arcade machines in their actual arrangement along the back-left wall, air hockey table in left foreground, foosball table in the center, shuffleboard table in right foreground, rear seating and small table arrangement and television. Do not add any machines, games, furniture, architectural features, decorations or people. Retain real room lighting and the source's natural appearance. Do not invent a new property interior. Minor crop is permissible to fit the panel but maintain both air hockey and shuffleboard as well as the center foosball and arcade row.\nAvoid: no pool, no scenery from the style image, no people, no unsupported awards or price claims, no watermarks, no extra copy, no fake amenities, no AI label drawn onto artwork.\nDeliver one polished marketing image only with the exact text above.",
+  "prepared_date": "2026-10-20",
+  "timezone": "Asia/Karachi",
+  "status": "published",
+  "visual_review": "Inspected source, approved reference and generated final. All required text is legible and spelled correctly. Recognizable arcade row, air hockey left, center foosball, right shuffleboard, rear seating, television, mini-split and white room retained. The generated rendition slightly reframes the photo and stylizes small cabinet artwork and game-table details; it is not a pixel-identical photo. No people or added major amenity observed.",
+  "keyword": "exclusive villa rentals",
+  "target_location": "Orange County (travelers from; property in Temecula)",
+  "title": "Exclusive Villa Rentals | Temecula Getaway from Orange County | Villa Fabulosa",
+  "description": "Discover Villa Fabulosa, a private Temecula Wine Country estate for your next group getaway from Orange County. Enjoy the arcade room between outings and relaxed time together at the villa. Explore the property and check availability at VillaFabulosa.com. #TemeculaWineCountry #GroupGetaway #ArcadeRoom",
+  "hashtags": [
+    "#TemeculaWineCountry",
+    "#GroupGetaway",
+    "#ArcadeRoom"
+  ],
+  "board": "Top Vacation Rental in Temecula Wine Country",
+  "destination": "https://villafabulosa.com/?utm_source=pinterest&utm_medium=organic_social&utm_campaign=villa_fabulosa_75_pins&utm_content=pin_006",
+  "published_url": "https://www.pinterest.com/pin/743868063501187473/",
+  "posted_date": "2026-10-20",
+  "verified": true,
+  "manual_ai_disclosure": false,
+  "requested_manual_ai_disclosure": false,
+  "tag_update_status": "verified",
+  "topic_tags": [
+    "Family Vacations For Adults"
+  ],
+  "topic_edit_status": "Selected in the creation form; topic selector unavailable in Edit Pin, so saved-state topic readback could not be verified.",
+  "public_ai_label_present": true,
+  "verification_date": "2026-10-20",
+  "verification_fields": [
+    "title",
+    "description",
+    "destination",
+    "manual_ai_disclosure"
+  ],
+  "last_observed_description": "Discover Villa Fabulosa, a private Temecula Wine Country estate for your next group getaway from Orange County. Enjoy the arcade room between outings and relaxed time together at the villa. Explore the property and check availability at VillaFabulosa.com. #TemeculaWineCountry #GroupGetaway #ArcadeRoom",
+  "last_observed_description_context": "Exact saved title, full hashtag caption and destination read back after full page reload on 2026-10-20",
+  "alt_text_verification": "Entered and checked before publication; not verified after reload because the Edit Pin form did not expose alt text.",
+  "generated_people": false,
+  "root_visual_review": "All three final images were visually reviewed and approved for publication by the root publishing agent.",
+  "generated_source": "C:/Users/lenovo/.codex/generated_images/01a15843-b84b-7253-bff0-608442defc3d/exec-ca5e09f3-d8e3-464a-87f4-ca6df44bf21f.png",
+  "verification_details": "After publication, the individual Pin was fully reloaded and reopened in Edit Pin on 2026-10-20. Exact title, full description including all three hashtags, destination URL and manual AI disclosure Off were verified. The public AI-modified badge was visibly present. Native topics and alt text were checked during creation only, with no saved-state readback claim.",
+  "board_verification": "Selected in the creation form."
+}

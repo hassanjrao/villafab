@@ -1,0 +1,18 @@
+{
+  "id": "047",
+  "review_date": "2026-10-26",
+  "generation_method": "Built-in image_gen.imagegen",
+  "generation_output_path": "C:/Users/lenovo/.codex/generated_images/01a177b0-fa50-78f1-9a98-65695f240ca2/exec-eb953a1d-c818-4271-b015-5dc7737f03d4.png",
+  "saved_image": "docs/pinterest/prepared/pin-047/pin-047.png",
+  "dimensions": {
+    "width": 1024,
+    "height": 1536
+  },
+  "visual_review_status": "passed_with_limitations",
+  "text_checked": true,
+  "source_and_style_inspected": true,
+  "visual_review": "Complete correct campaign text and readable left-aligned serif layout. Source aerial estate, sport court, green courtyard, pool, covered lounge and surrounding hills remain consistent. No people or new amenity; no vineyard invented.",
+  "limitations": "Generated rendering is not pixel-identical. Small court lines, fence posts, landscaping, furniture and exterior details are redrawn; pool/spa headline relies on separately verified property amenity, not exact visibility of spa in this wide photograph.",
+  "status": "prepared",
+  "published": false
+}

@@ -1,0 +1,80 @@
+{
+  "id": "010",
+  "image": "docs/pinterest/samples/pin-010.png",
+  "headline": "Temecula Wine Country Luxury Escape",
+  "source": "public/frontend/imgs/photos-for-vrbo/villa-fabulosa-13-dining.webp",
+  "style_reference": "docs/pinterest/samples/pin-001.png",
+  "alt_text": "Villa Fabulosa's double-height dining room at dusk, with a long glass table set with plates, blue napkins and wine glasses, gray chairs and black-framed sliding doors opening toward a covered outdoor area. The graphic reads “Temecula Wine Country Luxury Escape” and “Explore VillaFabulosa.com.”",
+  "dimensions": {
+    "width": 1024,
+    "height": 1536,
+    "aspect_ratio": "2:3"
+  },
+  "generation_method": "Built-in image_gen imagegen; one call; actual property photograph plus approved Pin 001 as graphic style reference. Output copied unchanged into workspace; no code image edits.",
+  "prompt": "Use case: ads-marketing / compositing.\nAsset type: finished vertical Pinterest Pin 010 for Villa Fabulosa, 1024 x 1536 pixels (2:3), opaque.\nInput image 1 is the actual property photograph and sole photographic content: D:/laravel/villafab-laravel/public/frontend/imgs/photos-for-vrbo/villa-fabulosa-13-dining.webp. Input image 2 is only the owner-approved graphic style reference: D:/laravel/villafab-laravel/docs/pinterest/samples/pin-001.png. Do not use the pool or exterior photograph from input 2.\nPrimary request: Create a polished editorial dining-room Pin matching the warm ivory, deep navy and restrained gold design of image 2. Use the exact actual dining-room photograph from image 1 in a generous central photographic panel with restrained cropping to fit. Preserve the recognizable architecture, white double-height walls, high windows and small blue artwork, black-framed sliding glass doors, long glass dining table, gray chairs, place settings, blue napkins, wine glasses, existing bottles, outdoor covered area and dusk lighting. Do not invent a different room, furnishings, amenity or view. Favor faithful compositing over scene re-rendering.\nComposition: a warm ivory upper header and lower footer; small widely spaced navy brand line, a thin gold divider, large elegant navy serif headline with generous margins; clear source photo center panel; footer with thin gold divider, compact destination text and navy CTA rectangle outlined in muted gold. Match input 2's hierarchy, typography and premium restrained look, while accommodating this shorter headline. All wording must be large, legible, clean and exact.\nText, verbatim and only:\nBrand at top: \"VILLA FABULOSA\"\nMain headline: \"Temecula Wine Country Luxury Escape\"\nFooter location: \"Temecula Wine Country\"\nCTA: \"Explore VillaFabulosa.com\"\nHeadline may wrap across 3 or 4 balanced lines without changing any words. Keep all text inside safe margins, no cut-off letters.\nConstraints: no people; no invented amenity, new architectural feature, food, flowers or props; no rankings, price/savings promises, logos, watermarks, duplicate text, extra slogans or hashtags. Keep the original photograph's dusk/light balance and realistic materials. Only the source dining room should appear in the photograph; do not import the pool scene from the style reference. Render the complete 1024 x 1536 design, not a device mockup.",
+  "generated_source": "C:/Users/lenovo/.codex/generated_images/01a172aa-0960-7e13-b00a-8d4c263eed73/exec-db42bd45-6850-4295-9728-d149c8e3d01c.png",
+  "review": {
+    "date": "2026-10-25",
+    "status": "Visually reviewed by asset agent and root; published and saved fields verified after full reload on 2026-10-25.",
+    "text_check": "Brand, exact headline, location footer and CTA are legible and complete, with safe margins.",
+    "source_check": "Recognizable source dining room retained: glass dining table, gray chairs, plates/blue napkins/glasses, double-height white walls, high windows/small blue artwork, black-framed sliding doors and covered outdoor area.",
+    "visible_differences": "Generated portrait composition expands/reframes upper wall, windows and artwork; place settings, bottles, flowers, reflections and lighting are subtly re-rendered. Light is somewhat warmer and dusk blues richer. This is a generated design, not a pixel-identical reproduction.",
+    "amenity_check": "No people or new major amenity observed. Do not use the number of visible place settings as evidence of capacity, or imply food/wine service is included.",
+    "unchanged_copy_sha256": "0475A978FBE27BE33904653D51904234625B7F81B083C7F621133AD88F82935E"
+  },
+  "keyword": "large house to rent",
+  "target_location": "Riverside County",
+  "title": "Large House to Rent in Riverside County | Villa Fabulosa",
+  "description": "Looking for a large house to rent in Riverside County? Villa Fabulosa in Temecula offers space to share meals and spend time together, with indoor dining opening toward the outdoor living area. Explore the property and check availability at VillaFabulosa.com. #RiversideCounty #GroupVacation #TemeculaWineCountry",
+  "hashtags": [
+    "#RiversideCounty",
+    "#GroupVacation",
+    "#TemeculaWineCountry"
+  ],
+  "board": "Top Vacation Rental in Temecula Wine Country",
+  "destination": "https://villafabulosa.com/?utm_source=pinterest&utm_medium=organic_social&utm_campaign=villa_fabulosa_75_pins&utm_content=pin_010",
+  "published_url": "https://www.pinterest.com/pin/743868063501277328/",
+  "posted_date": "2026-10-25",
+  "status": "published",
+  "verified": true,
+  "manual_ai_disclosure": false,
+  "requested_manual_ai_disclosure": false,
+  "tag_update_status": "verified",
+  "topic_tags": [],
+  "verification_date": "2026-10-25",
+  "verification_fields": [
+    "title",
+    "description",
+    "destination",
+    "manual_ai_disclosure",
+    "board",
+    "alt_text",
+    "ad_only"
+  ],
+  "ad_only": false,
+  "public_ai_label_present": true,
+  "alt_text_verification": "Exact saved field checked after full reload",
+  "topic_edit_status": "Native topic selector unavailable in regular Pin builder and Edit Pin; description hashtags saved and verified",
+  "timezone": "Asia/Karachi",
+  "publication_verification": {
+    "status": "Published and verified after full reload",
+    "date": "2026-10-25",
+    "timezone": "Asia/Karachi",
+    "fields": [
+      "title",
+      "description",
+      "destination",
+      "manual_ai_disclosure",
+      "board",
+      "alt_text",
+      "ad_only"
+    ],
+    "hashtags": "All three description hashtags saved and verified",
+    "native_topics": "Unavailable in regular Pin builder and Edit Pin; no topic selected",
+    "manual_ai_disclosure": "Off",
+    "ad_only": "Off",
+    "public_ai_badge": "Present",
+    "root_visual_review": "Root visually reviewed and accepted final creative and documented generative differences"
+  },
+  "headline_bank_number": 11
+}

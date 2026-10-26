@@ -1,0 +1,18 @@
+{
+  "id": "035",
+  "review_date": "2026-10-26",
+  "generation_method": "Built-in image_gen.imagegen",
+  "generation_output_path": "C:/Users/lenovo/.codex/generated_images/01a177b0-fa50-78f1-9a98-65695f240ca2/exec-93d2333f-f7ea-48dc-a678-6d12ed0c28f1.png",
+  "saved_image": "docs/pinterest/prepared/pin-035/pin-035.png",
+  "dimensions": {
+    "width": 1024,
+    "height": 1536
+  },
+  "visual_review_status": "passed_with_limitations",
+  "text_checked": true,
+  "source_and_style_inspected": true,
+  "visual_review": "Complete correctly spelled brand/headline/footer/CTA; readable ivory/navy/gold framed layout. Recognizable glass dining table, gray chairs, blue napkins, wine glasses, black-framed sliding doors and covered patio remain consistent with source. No people or new amenity.",
+  "limitations": "Generated panel is not pixel-identical; small glassware, table-setting details and reflections are redrawn.",
+  "status": "prepared",
+  "published": false
+}

@@ -1,0 +1,22 @@
+{
+  "id": "058",
+  "reviewed_date": "2026-10-26",
+  "timezone": "Asia/Karachi",
+  "generation_method": "Built-in image_gen.imagegen",
+  "generation_output_path": "C:/Users/lenovo/.codex/generated_images/01a177b1-1959-7671-85f3-050fcd2ec1eb/exec-93718065-2fc7-4019-89de-321c47e5ed73.png",
+  "saved_image": "docs/pinterest/prepared/pin-058/pin-058.png",
+  "dimensions": {
+    "width": 1024,
+    "height": 1536
+  },
+  "visual_review_status": "passed",
+  "source_inspected": true,
+  "style_reference_inspected": true,
+  "text_review": "Brand, full headline, location and CTA visually checked; complete and readable.",
+  "visual_review": "Complete readable campaign text. Covered lounge, pool, spa edge and surrounding actual landscaping retain source composition; sky and light saturation are gently restyled.",
+  "limitations": "Generative recreation may subtly restyle small textures and details; not a pixel-identical source photograph.",
+  "contains_generated_people": false,
+  "code_image_edits": false,
+  "publication_status": "not_published",
+  "live_verified": false
+}

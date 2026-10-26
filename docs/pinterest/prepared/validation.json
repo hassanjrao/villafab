@@ -1,0 +1,917 @@
+{
+  "date": "2026-10-26",
+  "timezone": "Asia/Karachi",
+  "status": "passed",
+  "prepared_count": 64,
+  "existing_published_count": 11,
+  "campaign_count": 75,
+  "individual_folder_count": 64,
+  "unique_image_count": 64,
+  "source_families": 15,
+  "variants_per_source": 5,
+  "unique_keyword_location_pairs": 75,
+  "all_actual_dimensions": "1024x1536",
+  "generated_with": "Built-in image_gen.imagegen; one call per asset",
+  "assets_saved_unchanged": true,
+  "owner_review": "pending",
+  "published_or_scheduled_this_batch": false,
+  "notes": "Local asset/copy checks only. No new Pinterest saved fields were verified. Agent visual review is recorded in each review.json; generative crop/color/fine-detail changes remain documented.",
+  "checks": [
+    {
+      "id": "012",
+      "files": 5,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536,
+        "aspect_ratio": "2:3"
+      },
+      "sha256": "a8c8dce2d09c6ab98c84d303dcf4dda4c1c3c11416c98e635b0c5deae0a12f64",
+      "original_copy_matches": true,
+      "copy_valid": true,
+      "local_visual_review": true,
+      "live_verified": false
+    },
+    {
+      "id": "013",
+      "files": 5,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536,
+        "aspect_ratio": "2:3"
+      },
+      "sha256": "9134cf4d14c362cb834a567bee4453700c80bbbc04281c8b538607d35d9cc507",
+      "original_copy_matches": true,
+      "copy_valid": true,
+      "local_visual_review": true,
+      "live_verified": false
+    },
+    {
+      "id": "014",
+      "files": 5,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536,
+        "aspect_ratio": "2:3"
+      },
+      "sha256": "a291f04f6228b21fd7de2df276ff6b4bb6de52d3f5fcced72244fe60f41299fc",
+      "original_copy_matches": true,
+      "copy_valid": true,
+      "local_visual_review": true,
+      "live_verified": false
+    },
+    {
+      "id": "015",
+      "files": 5,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536,
+        "aspect_ratio": "2:3"
+      },
+      "sha256": "eceac9bd2bcd4fdbd9720c4a5c50ee45e5af41a813ff7d65ec8a04a66b8e82bd",
+      "original_copy_matches": true,
+      "copy_valid": true,
+      "local_visual_review": true,
+      "live_verified": false
+    },
+    {
+      "id": "016",
+      "files": 5,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536,
+        "aspect_ratio": "2:3"
+      },
+      "sha256": "ada488d231ead360f397651acc554ce8d33e0527452ca29d8b42b7880afcf437",
+      "original_copy_matches": true,
+      "copy_valid": true,
+      "local_visual_review": true,
+      "live_verified": false
+    },
+    {
+      "id": "017",
+      "files": 5,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536,
+        "aspect_ratio": "2:3"
+      },
+      "sha256": "d2a13edcb86137b1e23297d206ba1c4bf46e9e57ada80eef93b062f02ee0fcd0",
+      "original_copy_matches": true,
+      "copy_valid": true,
+      "local_visual_review": true,
+      "live_verified": false
+    },
+    {
+      "id": "018",
+      "files": 5,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536,
+        "aspect_ratio": "2:3"
+      },
+      "sha256": "67e3623058ae6ea3b41cb8a6581a0a82e8f8cdaf05c49dcd431f94f1107c3d42",
+      "original_copy_matches": true,
+      "copy_valid": true,
+      "local_visual_review": true,
+      "live_verified": false
+    },
+    {
+      "id": "019",
+      "files": 5,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536,
+        "aspect_ratio": "2:3"
+      },
+      "sha256": "bda7fc074a8aed1717ae1c0cf88577c5fd5a9466d86441bf9e8f7a217e7c5586",
+      "original_copy_matches": true,
+      "copy_valid": true,
+      "local_visual_review": true,
+      "live_verified": false
+    },
+    {
+      "id": "020",
+      "files": 5,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536,
+        "aspect_ratio": "2:3"
+      },
+      "sha256": "5499ec1ce6af6ff8ce671ec2edeab2930cc19e9faa89e897f04afb03f6527a21",
+      "original_copy_matches": true,
+      "copy_valid": true,
+      "local_visual_review": true,
+      "live_verified": false
+    },
+    {
+      "id": "021",
+      "files": 5,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536,
+        "aspect_ratio": "2:3"
+      },
+      "sha256": "2e976d231dece2a73332438aa5a4316a42d9684bc0bc7b28040d9705561403ff",
+      "original_copy_matches": true,
+      "copy_valid": true,
+      "local_visual_review": true,
+      "live_verified": false
+    },
+    {
+      "id": "022",
+      "files": 5,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536,
+        "aspect_ratio": "2:3"
+      },
+      "sha256": "d12f283ccb788b38f8b63bce205687b389455efd3fb0bf5bf5d441a7699a527e",
+      "original_copy_matches": true,
+      "copy_valid": true,
+      "local_visual_review": true,
+      "live_verified": false
+    },
+    {
+      "id": "023",
+      "files": 5,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536,
+        "aspect_ratio": "2:3"
+      },
+      "sha256": "dc9188373d890a9ac6beb1ea29140d8a5c80c19ed74a8de12975d2b2b5249414",
+      "original_copy_matches": true,
+      "copy_valid": true,
+      "local_visual_review": true,
+      "live_verified": false
+    },
+    {
+      "id": "024",
+      "files": 5,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536,
+        "aspect_ratio": "2:3"
+      },
+      "sha256": "88b100b114f8cae3a2d3ed52a83b9a76379004c201921823201a48ef3bcf59bc",
+      "original_copy_matches": true,
+      "copy_valid": true,
+      "local_visual_review": true,
+      "live_verified": false
+    },
+    {
+      "id": "025",
+      "files": 5,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536,
+        "aspect_ratio": "2:3"
+      },
+      "sha256": "58420385aecf80c957fa32b99265c101f6747e633ef64e124982d83422363f32",
+      "original_copy_matches": true,
+      "copy_valid": true,
+      "local_visual_review": true,
+      "live_verified": false
+    },
+    {
+      "id": "026",
+      "files": 5,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536,
+        "aspect_ratio": "2:3"
+      },
+      "sha256": "c57e05267b78961a84bc420311d9bd2bb9bfe0906719bb09e1b258f40cb8134b",
+      "original_copy_matches": true,
+      "copy_valid": true,
+      "local_visual_review": true,
+      "live_verified": false
+    },
+    {
+      "id": "027",
+      "files": 5,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536,
+        "aspect_ratio": "2:3"
+      },
+      "sha256": "03dd5c845526e5ec3c83d7a61f9298abd00adb180d59043c477b11c790ed6e66",
+      "original_copy_matches": true,
+      "copy_valid": true,
+      "local_visual_review": true,
+      "live_verified": false
+    },
+    {
+      "id": "028",
+      "files": 5,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536,
+        "aspect_ratio": "2:3"
+      },
+      "sha256": "77331ad6917a575e3dd77567b614db2befd0d86921d9ceab656dec5b7a96ed08",
+      "original_copy_matches": true,
+      "copy_valid": true,
+      "local_visual_review": true,
+      "live_verified": false
+    },
+    {
+      "id": "029",
+      "files": 5,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536,
+        "aspect_ratio": "2:3"
+      },
+      "sha256": "958a7abd8bea73ca326014ad90f571f07857adf794d32cade37893efe80e9098",
+      "original_copy_matches": true,
+      "copy_valid": true,
+      "local_visual_review": true,
+      "live_verified": false
+    },
+    {
+      "id": "030",
+      "files": 5,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536,
+        "aspect_ratio": "2:3"
+      },
+      "sha256": "b3725820e48f2e6a598af897c106ab3de08c6c026d7ead48bf2c3f025850c483",
+      "original_copy_matches": true,
+      "copy_valid": true,
+      "local_visual_review": true,
+      "live_verified": false
+    },
+    {
+      "id": "031",
+      "files": 5,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536,
+        "aspect_ratio": "2:3"
+      },
+      "sha256": "4ec8fef1c1d7bd85754be45b602e5714ed9b072c9c297ce65ec46713a6e1b16d",
+      "original_copy_matches": true,
+      "copy_valid": true,
+      "local_visual_review": true,
+      "live_verified": false
+    },
+    {
+      "id": "032",
+      "files": 5,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536,
+        "aspect_ratio": "2:3"
+      },
+      "sha256": "833549f0c28f038cedd64b07b6cea6cfdad5e665ea475a56574ed806b3341c9c",
+      "original_copy_matches": true,
+      "copy_valid": true,
+      "local_visual_review": true,
+      "live_verified": false
+    },
+    {
+      "id": "033",
+      "files": 5,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536,
+        "aspect_ratio": "2:3"
+      },
+      "sha256": "e284ae5d6dc8b044735f7c8d8f15ab80a0bc6570a0365315bc963cb3492ca944",
+      "original_copy_matches": true,
+      "copy_valid": true,
+      "local_visual_review": true,
+      "live_verified": false
+    },
+    {
+      "id": "034",
+      "files": 5,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536,
+        "aspect_ratio": "2:3"
+      },
+      "sha256": "1249e10a66267eb6e42b67b3da67ff1af09f41f5cc9aa5b04919591c9d189b68",
+      "original_copy_matches": true,
+      "copy_valid": true,
+      "local_visual_review": true,
+      "live_verified": false
+    },
+    {
+      "id": "035",
+      "files": 5,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536,
+        "aspect_ratio": "2:3"
+      },
+      "sha256": "de7dcd5ea710d1930d85e73094bca37bdc093f698cab228275c03135239e4180",
+      "original_copy_matches": true,
+      "copy_valid": true,
+      "local_visual_review": true,
+      "live_verified": false
+    },
+    {
+      "id": "036",
+      "files": 5,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536,
+        "aspect_ratio": "2:3"
+      },
+      "sha256": "f64e1d4de0c50100aab3c5cfab2a6f99e5e22f6d65e501c34cd59f0ef2443155",
+      "original_copy_matches": true,
+      "copy_valid": true,
+      "local_visual_review": true,
+      "live_verified": false
+    },
+    {
+      "id": "037",
+      "files": 5,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536,
+        "aspect_ratio": "2:3"
+      },
+      "sha256": "585dee1234ce162cf34b8941382a87812976306dc5cd0db36151e70e7bce5531",
+      "original_copy_matches": true,
+      "copy_valid": true,
+      "local_visual_review": true,
+      "live_verified": false
+    },
+    {
+      "id": "038",
+      "files": 5,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536,
+        "aspect_ratio": "2:3"
+      },
+      "sha256": "83a6294d5507f372092ee2b50e2a46bf21175dff041eab28bdbdb23b4dac4e47",
+      "original_copy_matches": true,
+      "copy_valid": true,
+      "local_visual_review": true,
+      "live_verified": false
+    },
+    {
+      "id": "039",
+      "files": 5,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536,
+        "aspect_ratio": "2:3"
+      },
+      "sha256": "e24b6bc81b7d802cc7c6a7bf4e341d7f19875bb5842a1b83dc13f2fbe23cdc6a",
+      "original_copy_matches": true,
+      "copy_valid": true,
+      "local_visual_review": true,
+      "live_verified": false
+    },
+    {
+      "id": "040",
+      "files": 5,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536,
+        "aspect_ratio": "2:3"
+      },
+      "sha256": "ee5f96814e7dabaa75c9fb48ef289a7a4e9d80f20b2751df15162689b3c00b5f",
+      "original_copy_matches": true,
+      "copy_valid": true,
+      "local_visual_review": true,
+      "live_verified": false
+    },
+    {
+      "id": "041",
+      "files": 5,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536,
+        "aspect_ratio": "2:3"
+      },
+      "sha256": "ca6202c361353ee3ed2edb9b13e71c4824a76308f506eb36ebf96a4dc81271e3",
+      "original_copy_matches": true,
+      "copy_valid": true,
+      "local_visual_review": true,
+      "live_verified": false
+    },
+    {
+      "id": "042",
+      "files": 5,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536,
+        "aspect_ratio": "2:3"
+      },
+      "sha256": "c786e621e921fe884f24c8f62022f69a6521901b51ed943d78b262eb627e33c7",
+      "original_copy_matches": true,
+      "copy_valid": true,
+      "local_visual_review": true,
+      "live_verified": false
+    },
+    {
+      "id": "043",
+      "files": 5,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536,
+        "aspect_ratio": "2:3"
+      },
+      "sha256": "c55ae02655d974636bed370b88af9c50f63d4d53fca1ce16f15b081da0584a20",
+      "original_copy_matches": true,
+      "copy_valid": true,
+      "local_visual_review": true,
+      "live_verified": false
+    },
+    {
+      "id": "044",
+      "files": 5,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536,
+        "aspect_ratio": "2:3"
+      },
+      "sha256": "f64be9637fdaa0d85505edf83b1ee41ce1068ee9762c75b41aca81007095f9c4",
+      "original_copy_matches": true,
+      "copy_valid": true,
+      "local_visual_review": true,
+      "live_verified": false
+    },
+    {
+      "id": "045",
+      "files": 5,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536,
+        "aspect_ratio": "2:3"
+      },
+      "sha256": "c82e264fd3e3f2f1e40fe72cce0ee58055271bd0c2c805d7aac51809e094623e",
+      "original_copy_matches": true,
+      "copy_valid": true,
+      "local_visual_review": true,
+      "live_verified": false
+    },
+    {
+      "id": "046",
+      "files": 5,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536,
+        "aspect_ratio": "2:3"
+      },
+      "sha256": "f1627dd6da1af8a2d0e143f9d494bab41becd1fed794c09b989df14494fc754e",
+      "original_copy_matches": true,
+      "copy_valid": true,
+      "local_visual_review": true,
+      "live_verified": false
+    },
+    {
+      "id": "047",
+      "files": 5,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536,
+        "aspect_ratio": "2:3"
+      },
+      "sha256": "d14c859c5a27c93fdd40c472185b27e81d47efbcdc4732800fc60346c34c1efe",
+      "original_copy_matches": true,
+      "copy_valid": true,
+      "local_visual_review": true,
+      "live_verified": false
+    },
+    {
+      "id": "048",
+      "files": 5,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536,
+        "aspect_ratio": "2:3"
+      },
+      "sha256": "f6b9ee2685cfc4c37bcf0bf53eaa95b06d4508ed99130454220ebb9d703c5fca",
+      "original_copy_matches": true,
+      "copy_valid": true,
+      "local_visual_review": true,
+      "live_verified": false
+    },
+    {
+      "id": "049",
+      "files": 5,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536,
+        "aspect_ratio": "2:3"
+      },
+      "sha256": "7a5f5eeb31bea9af29299a193d5a4c77b0de847635903e9abf289e09159ef7d8",
+      "original_copy_matches": true,
+      "copy_valid": true,
+      "local_visual_review": true,
+      "live_verified": false
+    },
+    {
+      "id": "050",
+      "files": 5,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536,
+        "aspect_ratio": "2:3"
+      },
+      "sha256": "4c23147b22b323839144eaf1b1afd67fb14e50ae589f7287438f386805d9845d",
+      "original_copy_matches": true,
+      "copy_valid": true,
+      "local_visual_review": true,
+      "live_verified": false
+    },
+    {
+      "id": "051",
+      "files": 5,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536,
+        "aspect_ratio": "2:3"
+      },
+      "sha256": "1c3ab599e44c4e725237171f13e8dd7d4a64f3c18a008bb436506a80fb6b190f",
+      "original_copy_matches": true,
+      "copy_valid": true,
+      "local_visual_review": true,
+      "live_verified": false
+    },
+    {
+      "id": "052",
+      "files": 5,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536,
+        "aspect_ratio": "2:3"
+      },
+      "sha256": "f207b9132d18ba5804a18e854f9b44e9da65dc95044c13086c5f52fe37a593d4",
+      "original_copy_matches": true,
+      "copy_valid": true,
+      "local_visual_review": true,
+      "live_verified": false
+    },
+    {
+      "id": "053",
+      "files": 5,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536,
+        "aspect_ratio": "2:3"
+      },
+      "sha256": "cc30a99235b5ec2a653aecf7d64f64e81d2d641bcb1aee98c106fc6a6f3993ac",
+      "original_copy_matches": true,
+      "copy_valid": true,
+      "local_visual_review": true,
+      "live_verified": false
+    },
+    {
+      "id": "054",
+      "files": 5,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536,
+        "aspect_ratio": "2:3"
+      },
+      "sha256": "293ba393ed6094ea8b6b59394ba992a5d72af84a19dead9af6568bbcc24044d6",
+      "original_copy_matches": true,
+      "copy_valid": true,
+      "local_visual_review": true,
+      "live_verified": false
+    },
+    {
+      "id": "055",
+      "files": 5,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536,
+        "aspect_ratio": "2:3"
+      },
+      "sha256": "e8b261d1008a84b15c5e9f794c3b397fe7813a7b724e5d0e00d2b7caed424c1b",
+      "original_copy_matches": true,
+      "copy_valid": true,
+      "local_visual_review": true,
+      "live_verified": false
+    },
+    {
+      "id": "056",
+      "files": 5,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536,
+        "aspect_ratio": "2:3"
+      },
+      "sha256": "78d46b8c4e3c96efc3f2821fae895de91bbafc39f03212bf4a4e28c6287a9a51",
+      "original_copy_matches": true,
+      "copy_valid": true,
+      "local_visual_review": true,
+      "live_verified": false
+    },
+    {
+      "id": "057",
+      "files": 5,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536,
+        "aspect_ratio": "2:3"
+      },
+      "sha256": "2c1fab6fcd5a129f782063609cf7cc39b0d4daa468cd3fe31abc9a2af1e6fa2c",
+      "original_copy_matches": true,
+      "copy_valid": true,
+      "local_visual_review": true,
+      "live_verified": false
+    },
+    {
+      "id": "058",
+      "files": 5,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536,
+        "aspect_ratio": "2:3"
+      },
+      "sha256": "29b1297c3115885f65f240b436173c19f2baa15d08ca1cf14c02740be26aec15",
+      "original_copy_matches": true,
+      "copy_valid": true,
+      "local_visual_review": true,
+      "live_verified": false
+    },
+    {
+      "id": "059",
+      "files": 5,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536,
+        "aspect_ratio": "2:3"
+      },
+      "sha256": "9bf7ac5d22d2e40f418a7a27141b630a596d3652d2ee76483cd8efe533e11443",
+      "original_copy_matches": true,
+      "copy_valid": true,
+      "local_visual_review": true,
+      "live_verified": false
+    },
+    {
+      "id": "060",
+      "files": 5,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536,
+        "aspect_ratio": "2:3"
+      },
+      "sha256": "291e54ec12d13966b5b6e6b9df5aeca89d0c24f78213aa466136db9503747902",
+      "original_copy_matches": true,
+      "copy_valid": true,
+      "local_visual_review": true,
+      "live_verified": false
+    },
+    {
+      "id": "061",
+      "files": 5,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536,
+        "aspect_ratio": "2:3"
+      },
+      "sha256": "77573644e84a348f92fb0b4ddd7c14f98f6e847e4f289696047543d39c2bb655",
+      "original_copy_matches": true,
+      "copy_valid": true,
+      "local_visual_review": true,
+      "live_verified": false
+    },
+    {
+      "id": "062",
+      "files": 5,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536,
+        "aspect_ratio": "2:3"
+      },
+      "sha256": "7b7e0fba789ea23545ac4dcae3c8c9395486fdc7fd9b3a6e9ad9719cb5cbd74b",
+      "original_copy_matches": true,
+      "copy_valid": true,
+      "local_visual_review": true,
+      "live_verified": false
+    },
+    {
+      "id": "063",
+      "files": 5,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536,
+        "aspect_ratio": "2:3"
+      },
+      "sha256": "3c8e522c8629fae6b01ee9b761a97f62f660fda0fe53d50016b9bcfa918321d5",
+      "original_copy_matches": true,
+      "copy_valid": true,
+      "local_visual_review": true,
+      "live_verified": false
+    },
+    {
+      "id": "064",
+      "files": 5,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536,
+        "aspect_ratio": "2:3"
+      },
+      "sha256": "db599830be505bf17312b46e7cf589e75b8c29f28487f5beb3b378fa04e2e8fa",
+      "original_copy_matches": true,
+      "copy_valid": true,
+      "local_visual_review": true,
+      "live_verified": false
+    },
+    {
+      "id": "065",
+      "files": 5,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536,
+        "aspect_ratio": "2:3"
+      },
+      "sha256": "6be1fc84332a7fa3e42f95a2e6c356aa047e07f43628497f10024f5c1cd4eec0",
+      "original_copy_matches": true,
+      "copy_valid": true,
+      "local_visual_review": true,
+      "live_verified": false
+    },
+    {
+      "id": "066",
+      "files": 5,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536,
+        "aspect_ratio": "2:3"
+      },
+      "sha256": "762953fde7071da7af86c85ad752c38429f81802b706f410fe36b99ded69e006",
+      "original_copy_matches": true,
+      "copy_valid": true,
+      "local_visual_review": true,
+      "live_verified": false
+    },
+    {
+      "id": "067",
+      "files": 5,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536,
+        "aspect_ratio": "2:3"
+      },
+      "sha256": "375a23b888a614d468e17966379b325062f2183be53b05be832ae2733d071723",
+      "original_copy_matches": true,
+      "copy_valid": true,
+      "local_visual_review": true,
+      "live_verified": false
+    },
+    {
+      "id": "068",
+      "files": 5,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536,
+        "aspect_ratio": "2:3"
+      },
+      "sha256": "4d951d019455bc6d6cc420a6a70bca553c308bfba27e3f54abfb17673718d51c",
+      "original_copy_matches": true,
+      "copy_valid": true,
+      "local_visual_review": true,
+      "live_verified": false
+    },
+    {
+      "id": "069",
+      "files": 5,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536,
+        "aspect_ratio": "2:3"
+      },
+      "sha256": "5b7cb4af494b85cf8e5e5d89bd2dbd881b9e703878074813b926450e47157e94",
+      "original_copy_matches": true,
+      "copy_valid": true,
+      "local_visual_review": true,
+      "live_verified": false
+    },
+    {
+      "id": "070",
+      "files": 5,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536,
+        "aspect_ratio": "2:3"
+      },
+      "sha256": "79b59e5c1f5104339bacf2f18ab02bcbdf70d3fac126d7069a6997c2654eafae",
+      "original_copy_matches": true,
+      "copy_valid": true,
+      "local_visual_review": true,
+      "live_verified": false
+    },
+    {
+      "id": "071",
+      "files": 5,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536,
+        "aspect_ratio": "2:3"
+      },
+      "sha256": "81dab1fae9daebd2c4e5a78f479ff44d185c3bf072033b1c99d659ec6d32bf51",
+      "original_copy_matches": true,
+      "copy_valid": true,
+      "local_visual_review": true,
+      "live_verified": false
+    },
+    {
+      "id": "072",
+      "files": 5,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536,
+        "aspect_ratio": "2:3"
+      },
+      "sha256": "3534f5ab6542a0408d829d6a02e6cd8aef420590c2729c78cea192947cd90653",
+      "original_copy_matches": true,
+      "copy_valid": true,
+      "local_visual_review": true,
+      "live_verified": false
+    },
+    {
+      "id": "073",
+      "files": 5,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536,
+        "aspect_ratio": "2:3"
+      },
+      "sha256": "3a290f609b10762ab0f04b23c7114553429585d4b2b10b9b4cacd3ac33c651c1",
+      "original_copy_matches": true,
+      "copy_valid": true,
+      "local_visual_review": true,
+      "live_verified": false
+    },
+    {
+      "id": "074",
+      "files": 5,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536,
+        "aspect_ratio": "2:3"
+      },
+      "sha256": "bf87fa070af8dd15364f8fe15a20aadedc570342f272b9b8c44d5513217d0334",
+      "original_copy_matches": true,
+      "copy_valid": true,
+      "local_visual_review": true,
+      "live_verified": false
+    },
+    {
+      "id": "075",
+      "files": 5,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536,
+        "aspect_ratio": "2:3"
+      },
+      "sha256": "ca0ba79c41e64ea861fff2de54ec152dbb0d7a8c3ecca55b462dbf4e24a8db61",
+      "original_copy_matches": true,
+      "copy_valid": true,
+      "local_visual_review": true,
+      "live_verified": false
+    }
+  ]
+}

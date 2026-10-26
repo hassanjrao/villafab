@@ -1,0 +1,630 @@
+{
+  "keywords": [
+    "luxury villa rental",
+    "luxury vacation home rentals",
+    "luxury villa vacation rentals",
+    "exclusive villa rentals",
+    "rent luxury houses",
+    "large vacation rental",
+    "luxury villa holidays",
+    "large family vacation rentals",
+    "large group vacation rentals",
+    "large house to rent",
+    "rent a mansion for a weekend",
+    "luxury holiday rentals",
+    "private villas to rent",
+    "group vacation rentals",
+    "large villa holidays"
+  ],
+  "locations": [
+    "Temecula Wine Country",
+    "Riverside County",
+    "Southern California",
+    "Los Angeles",
+    "Orange County"
+  ],
+  "source_families": [
+    {
+      "family": 1,
+      "filename": "villa-fabulosa-pool-01.webp",
+      "total_campaign_variants": 5
+    },
+    {
+      "family": 2,
+      "filename": "villa-fabulosa-6-living.webp",
+      "total_campaign_variants": 5
+    },
+    {
+      "family": 3,
+      "filename": "villa-fabulosa-pergola.webp",
+      "total_campaign_variants": 5
+    },
+    {
+      "family": 4,
+      "filename": "villa-fabulosa-golf-course-11.webp",
+      "total_campaign_variants": 5
+    },
+    {
+      "family": 5,
+      "filename": "villa-fabulosa-13-14-pool.webp",
+      "total_campaign_variants": 5
+    },
+    {
+      "family": 6,
+      "filename": "villa-fabulosa-5-arcade.webp",
+      "total_campaign_variants": 5
+    },
+    {
+      "family": 7,
+      "filename": "villa-fabulosa-13-13-aerial.webp",
+      "total_campaign_variants": 5
+    },
+    {
+      "family": 8,
+      "filename": "villa-fabulosa-23-patio.webp",
+      "total_campaign_variants": 5
+    },
+    {
+      "family": 9,
+      "filename": "villa-fabulosa-54-bedroom.webp",
+      "total_campaign_variants": 5
+    },
+    {
+      "family": 10,
+      "filename": "villa-fabulosa-13-dining.webp",
+      "total_campaign_variants": 5
+    },
+    {
+      "family": 11,
+      "filename": "villa-fabulosa-13-view.webp",
+      "total_campaign_variants": 5
+    },
+    {
+      "family": 12,
+      "filename": "villa-fabulosa-7-kitchen.webp",
+      "total_campaign_variants": 5
+    },
+    {
+      "family": 13,
+      "filename": "villa-fabulosa-70-bedroom.webp",
+      "total_campaign_variants": 5
+    },
+    {
+      "family": 14,
+      "filename": "villa-fabulosa-3-field.webp",
+      "total_campaign_variants": 5
+    },
+    {
+      "family": 15,
+      "filename": "villa-fabulosa-13-19-foyer.webp",
+      "total_campaign_variants": 5
+    }
+  ],
+  "campaign": [
+    {
+      "id": "001",
+      "keyword": "luxury villa rental",
+      "target_location": "Temecula Wine Country",
+      "source": "villa-fabulosa-pool-01.webp",
+      "status": "published"
+    },
+    {
+      "id": "002",
+      "keyword": "luxury vacation home rentals",
+      "target_location": "Temecula Wine Country",
+      "source": "villa-fabulosa-6-living.webp",
+      "status": "published"
+    },
+    {
+      "id": "003",
+      "keyword": "large family vacation rentals",
+      "target_location": "Riverside County",
+      "source": "villa-fabulosa-pergola.webp",
+      "status": "published"
+    },
+    {
+      "id": "004",
+      "keyword": "large group vacation rentals",
+      "target_location": "Southern California",
+      "source": "villa-fabulosa-golf-course-11.webp",
+      "status": "published"
+    },
+    {
+      "id": "005",
+      "keyword": "private villas to rent",
+      "target_location": "Los Angeles",
+      "source": "villa-fabulosa-13-14-pool.webp",
+      "status": "published"
+    },
+    {
+      "id": "006",
+      "keyword": "exclusive villa rentals",
+      "target_location": "Orange County",
+      "source": "villa-fabulosa-5-arcade.webp",
+      "status": "published"
+    },
+    {
+      "id": "007",
+      "keyword": "luxury villa vacation rentals",
+      "target_location": "Temecula Wine Country",
+      "source": "villa-fabulosa-13-13-aerial.webp",
+      "status": "published"
+    },
+    {
+      "id": "008",
+      "keyword": "group vacation rentals",
+      "target_location": "Southern California",
+      "source": "villa-fabulosa-23-patio.webp",
+      "status": "published"
+    },
+    {
+      "id": "009",
+      "keyword": "luxury holiday rentals",
+      "target_location": "Temecula Wine Country",
+      "source": "villa-fabulosa-54-bedroom.webp",
+      "status": "published"
+    },
+    {
+      "id": "010",
+      "keyword": "large house to rent",
+      "target_location": "Riverside County",
+      "source": "villa-fabulosa-13-dining.webp",
+      "status": "published"
+    },
+    {
+      "id": "011",
+      "keyword": "luxury villa holidays",
+      "target_location": "Orange County",
+      "source": "villa-fabulosa-13-view.webp",
+      "status": "published"
+    },
+    {
+      "id": "012",
+      "keyword": "luxury villa rental",
+      "target_location": "Riverside County",
+      "source": "villa-fabulosa-7-kitchen.webp",
+      "status": "prepared"
+    },
+    {
+      "id": "013",
+      "keyword": "luxury villa rental",
+      "target_location": "Southern California",
+      "source": "villa-fabulosa-3-field.webp",
+      "status": "prepared"
+    },
+    {
+      "id": "014",
+      "keyword": "luxury villa rental",
+      "target_location": "Los Angeles",
+      "source": "villa-fabulosa-70-bedroom.webp",
+      "status": "prepared"
+    },
+    {
+      "id": "015",
+      "keyword": "luxury villa rental",
+      "target_location": "Orange County",
+      "source": "villa-fabulosa-13-19-foyer.webp",
+      "status": "prepared"
+    },
+    {
+      "id": "016",
+      "keyword": "luxury vacation home rentals",
+      "target_location": "Riverside County",
+      "source": "villa-fabulosa-13-14-pool.webp",
+      "status": "prepared"
+    },
+    {
+      "id": "017",
+      "keyword": "luxury vacation home rentals",
+      "target_location": "Southern California",
+      "source": "villa-fabulosa-5-arcade.webp",
+      "status": "prepared"
+    },
+    {
+      "id": "018",
+      "keyword": "luxury vacation home rentals",
+      "target_location": "Los Angeles",
+      "source": "villa-fabulosa-13-13-aerial.webp",
+      "status": "prepared"
+    },
+    {
+      "id": "019",
+      "keyword": "luxury vacation home rentals",
+      "target_location": "Orange County",
+      "source": "villa-fabulosa-23-patio.webp",
+      "status": "prepared"
+    },
+    {
+      "id": "020",
+      "keyword": "luxury villa vacation rentals",
+      "target_location": "Riverside County",
+      "source": "villa-fabulosa-54-bedroom.webp",
+      "status": "prepared"
+    },
+    {
+      "id": "021",
+      "keyword": "luxury villa vacation rentals",
+      "target_location": "Southern California",
+      "source": "villa-fabulosa-13-dining.webp",
+      "status": "prepared"
+    },
+    {
+      "id": "022",
+      "keyword": "luxury villa vacation rentals",
+      "target_location": "Los Angeles",
+      "source": "villa-fabulosa-13-view.webp",
+      "status": "prepared"
+    },
+    {
+      "id": "023",
+      "keyword": "luxury villa vacation rentals",
+      "target_location": "Orange County",
+      "source": "villa-fabulosa-7-kitchen.webp",
+      "status": "prepared"
+    },
+    {
+      "id": "024",
+      "keyword": "exclusive villa rentals",
+      "target_location": "Temecula Wine Country",
+      "source": "villa-fabulosa-70-bedroom.webp",
+      "status": "prepared"
+    },
+    {
+      "id": "025",
+      "keyword": "exclusive villa rentals",
+      "target_location": "Riverside County",
+      "source": "villa-fabulosa-pool-01.webp",
+      "status": "prepared"
+    },
+    {
+      "id": "026",
+      "keyword": "exclusive villa rentals",
+      "target_location": "Southern California",
+      "source": "villa-fabulosa-13-19-foyer.webp",
+      "status": "prepared"
+    },
+    {
+      "id": "027",
+      "keyword": "exclusive villa rentals",
+      "target_location": "Los Angeles",
+      "source": "villa-fabulosa-pool-01.webp",
+      "status": "prepared"
+    },
+    {
+      "id": "028",
+      "keyword": "rent luxury houses",
+      "target_location": "Temecula Wine Country",
+      "source": "villa-fabulosa-6-living.webp",
+      "status": "prepared"
+    },
+    {
+      "id": "029",
+      "keyword": "rent luxury houses",
+      "target_location": "Riverside County",
+      "source": "villa-fabulosa-54-bedroom.webp",
+      "status": "prepared"
+    },
+    {
+      "id": "030",
+      "keyword": "rent luxury houses",
+      "target_location": "Southern California",
+      "source": "villa-fabulosa-golf-course-11.webp",
+      "status": "prepared"
+    },
+    {
+      "id": "031",
+      "keyword": "rent luxury houses",
+      "target_location": "Los Angeles",
+      "source": "villa-fabulosa-3-field.webp",
+      "status": "prepared"
+    },
+    {
+      "id": "032",
+      "keyword": "rent luxury houses",
+      "target_location": "Orange County",
+      "source": "villa-fabulosa-pergola.webp",
+      "status": "prepared"
+    },
+    {
+      "id": "033",
+      "keyword": "large vacation rental",
+      "target_location": "Temecula Wine Country",
+      "source": "villa-fabulosa-13-13-aerial.webp",
+      "status": "prepared"
+    },
+    {
+      "id": "034",
+      "keyword": "large vacation rental",
+      "target_location": "Riverside County",
+      "source": "villa-fabulosa-23-patio.webp",
+      "status": "prepared"
+    },
+    {
+      "id": "035",
+      "keyword": "large vacation rental",
+      "target_location": "Southern California",
+      "source": "villa-fabulosa-13-dining.webp",
+      "status": "prepared"
+    },
+    {
+      "id": "036",
+      "keyword": "large vacation rental",
+      "target_location": "Los Angeles",
+      "source": "villa-fabulosa-13-view.webp",
+      "status": "prepared"
+    },
+    {
+      "id": "037",
+      "keyword": "large vacation rental",
+      "target_location": "Orange County",
+      "source": "villa-fabulosa-7-kitchen.webp",
+      "status": "prepared"
+    },
+    {
+      "id": "038",
+      "keyword": "luxury villa holidays",
+      "target_location": "Temecula Wine Country",
+      "source": "villa-fabulosa-70-bedroom.webp",
+      "status": "prepared"
+    },
+    {
+      "id": "039",
+      "keyword": "luxury villa holidays",
+      "target_location": "Riverside County",
+      "source": "villa-fabulosa-3-field.webp",
+      "status": "prepared"
+    },
+    {
+      "id": "040",
+      "keyword": "luxury villa holidays",
+      "target_location": "Southern California",
+      "source": "villa-fabulosa-13-19-foyer.webp",
+      "status": "prepared"
+    },
+    {
+      "id": "041",
+      "keyword": "luxury villa holidays",
+      "target_location": "Los Angeles",
+      "source": "villa-fabulosa-6-living.webp",
+      "status": "prepared"
+    },
+    {
+      "id": "042",
+      "keyword": "large family vacation rentals",
+      "target_location": "Temecula Wine Country",
+      "source": "villa-fabulosa-pergola.webp",
+      "status": "prepared"
+    },
+    {
+      "id": "043",
+      "keyword": "large family vacation rentals",
+      "target_location": "Southern California",
+      "source": "villa-fabulosa-golf-course-11.webp",
+      "status": "prepared"
+    },
+    {
+      "id": "044",
+      "keyword": "large family vacation rentals",
+      "target_location": "Los Angeles",
+      "source": "villa-fabulosa-13-14-pool.webp",
+      "status": "prepared"
+    },
+    {
+      "id": "045",
+      "keyword": "large family vacation rentals",
+      "target_location": "Orange County",
+      "source": "villa-fabulosa-13-14-pool.webp",
+      "status": "prepared"
+    },
+    {
+      "id": "046",
+      "keyword": "large group vacation rentals",
+      "target_location": "Temecula Wine Country",
+      "source": "villa-fabulosa-5-arcade.webp",
+      "status": "prepared"
+    },
+    {
+      "id": "047",
+      "keyword": "large group vacation rentals",
+      "target_location": "Riverside County",
+      "source": "villa-fabulosa-13-13-aerial.webp",
+      "status": "prepared"
+    },
+    {
+      "id": "048",
+      "keyword": "large group vacation rentals",
+      "target_location": "Los Angeles",
+      "source": "villa-fabulosa-23-patio.webp",
+      "status": "prepared"
+    },
+    {
+      "id": "049",
+      "keyword": "large group vacation rentals",
+      "target_location": "Orange County",
+      "source": "villa-fabulosa-54-bedroom.webp",
+      "status": "prepared"
+    },
+    {
+      "id": "050",
+      "keyword": "large house to rent",
+      "target_location": "Temecula Wine Country",
+      "source": "villa-fabulosa-13-dining.webp",
+      "status": "prepared"
+    },
+    {
+      "id": "051",
+      "keyword": "large house to rent",
+      "target_location": "Southern California",
+      "source": "villa-fabulosa-13-view.webp",
+      "status": "prepared"
+    },
+    {
+      "id": "052",
+      "keyword": "large house to rent",
+      "target_location": "Los Angeles",
+      "source": "villa-fabulosa-7-kitchen.webp",
+      "status": "prepared"
+    },
+    {
+      "id": "053",
+      "keyword": "large house to rent",
+      "target_location": "Orange County",
+      "source": "villa-fabulosa-3-field.webp",
+      "status": "prepared"
+    },
+    {
+      "id": "054",
+      "keyword": "rent a mansion for a weekend",
+      "target_location": "Temecula Wine Country",
+      "source": "villa-fabulosa-70-bedroom.webp",
+      "status": "prepared"
+    },
+    {
+      "id": "055",
+      "keyword": "rent a mansion for a weekend",
+      "target_location": "Riverside County",
+      "source": "villa-fabulosa-13-19-foyer.webp",
+      "status": "prepared"
+    },
+    {
+      "id": "056",
+      "keyword": "rent a mansion for a weekend",
+      "target_location": "Southern California",
+      "source": "villa-fabulosa-pool-01.webp",
+      "status": "prepared"
+    },
+    {
+      "id": "057",
+      "keyword": "rent a mansion for a weekend",
+      "target_location": "Los Angeles",
+      "source": "villa-fabulosa-6-living.webp",
+      "status": "prepared"
+    },
+    {
+      "id": "058",
+      "keyword": "rent a mansion for a weekend",
+      "target_location": "Orange County",
+      "source": "villa-fabulosa-pergola.webp",
+      "status": "prepared"
+    },
+    {
+      "id": "059",
+      "keyword": "luxury holiday rentals",
+      "target_location": "Riverside County",
+      "source": "villa-fabulosa-golf-course-11.webp",
+      "status": "prepared"
+    },
+    {
+      "id": "060",
+      "keyword": "luxury holiday rentals",
+      "target_location": "Southern California",
+      "source": "villa-fabulosa-5-arcade.webp",
+      "status": "prepared"
+    },
+    {
+      "id": "061",
+      "keyword": "luxury holiday rentals",
+      "target_location": "Los Angeles",
+      "source": "villa-fabulosa-13-14-pool.webp",
+      "status": "prepared"
+    },
+    {
+      "id": "062",
+      "keyword": "luxury holiday rentals",
+      "target_location": "Orange County",
+      "source": "villa-fabulosa-5-arcade.webp",
+      "status": "prepared"
+    },
+    {
+      "id": "063",
+      "keyword": "private villas to rent",
+      "target_location": "Temecula Wine Country",
+      "source": "villa-fabulosa-13-13-aerial.webp",
+      "status": "prepared"
+    },
+    {
+      "id": "064",
+      "keyword": "private villas to rent",
+      "target_location": "Riverside County",
+      "source": "villa-fabulosa-23-patio.webp",
+      "status": "prepared"
+    },
+    {
+      "id": "065",
+      "keyword": "private villas to rent",
+      "target_location": "Southern California",
+      "source": "villa-fabulosa-13-view.webp",
+      "status": "prepared"
+    },
+    {
+      "id": "066",
+      "keyword": "private villas to rent",
+      "target_location": "Orange County",
+      "source": "villa-fabulosa-13-dining.webp",
+      "status": "prepared"
+    },
+    {
+      "id": "067",
+      "keyword": "group vacation rentals",
+      "target_location": "Temecula Wine Country",
+      "source": "villa-fabulosa-pool-01.webp",
+      "status": "prepared"
+    },
+    {
+      "id": "068",
+      "keyword": "group vacation rentals",
+      "target_location": "Riverside County",
+      "source": "villa-fabulosa-7-kitchen.webp",
+      "status": "prepared"
+    },
+    {
+      "id": "069",
+      "keyword": "group vacation rentals",
+      "target_location": "Los Angeles",
+      "source": "villa-fabulosa-70-bedroom.webp",
+      "status": "prepared"
+    },
+    {
+      "id": "070",
+      "keyword": "group vacation rentals",
+      "target_location": "Orange County",
+      "source": "villa-fabulosa-3-field.webp",
+      "status": "prepared"
+    },
+    {
+      "id": "071",
+      "keyword": "large villa holidays",
+      "target_location": "Temecula Wine Country",
+      "source": "villa-fabulosa-13-19-foyer.webp",
+      "status": "prepared"
+    },
+    {
+      "id": "072",
+      "keyword": "large villa holidays",
+      "target_location": "Riverside County",
+      "source": "villa-fabulosa-6-living.webp",
+      "status": "prepared"
+    },
+    {
+      "id": "073",
+      "keyword": "large villa holidays",
+      "target_location": "Southern California",
+      "source": "villa-fabulosa-pergola.webp",
+      "status": "prepared"
+    },
+    {
+      "id": "074",
+      "keyword": "large villa holidays",
+      "target_location": "Los Angeles",
+      "source": "villa-fabulosa-golf-course-11.webp",
+      "status": "prepared"
+    },
+    {
+      "id": "075",
+      "keyword": "large villa holidays",
+      "target_location": "Orange County",
+      "source": "villa-fabulosa-54-bedroom.webp",
+      "status": "prepared"
+    }
+  ]
+}

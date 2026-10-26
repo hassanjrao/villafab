@@ -1,0 +1,18 @@
+{
+  "id": "036",
+  "review_date": "2026-10-26",
+  "generation_method": "Built-in image_gen.imagegen",
+  "generation_output_path": "C:/Users/lenovo/.codex/generated_images/01a177b0-fa50-78f1-9a98-65695f240ca2/exec-14035303-90e6-4863-9dea-aeffa2b79c54.png",
+  "saved_image": "docs/pinterest/prepared/pin-036/pin-036.png",
+  "dimensions": {
+    "width": 1024,
+    "height": 1536
+  },
+  "visual_review_status": "passed_with_limitations",
+  "text_checked": true,
+  "source_and_style_inspected": true,
+  "visual_review": "Brand/headline/footer/CTA complete and correctly spelled. Headline pipe appears as a gold divider. Readable editorial frame; source elevated courtyard viewpoint, white estate, blue-lit pool, loungers, covered dining and distant hills remain consistent. No people or new amenity.",
+  "limitations": "Not pixel-identical to source: sunset is more saturated and furniture/window/reflection details are redrawn.",
+  "status": "prepared",
+  "published": false
+}

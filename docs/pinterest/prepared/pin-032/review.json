@@ -1,0 +1,17 @@
+{
+  "id": "032",
+  "generated_source": "C:/Users/lenovo/.codex/generated_images/01a148f7-25d6-7463-8566-9bf6cc2b593d/exec-eefbaee4-cee7-4779-b208-efc0d6f69690.png",
+  "text_accuracy": "Exact brand, headline, footer and CTA legible with safe margins.",
+  "source_check": "Recognizable pool, ledge chairs, wicker loungers, covered lounge/pergola, glass fence and hills retained.",
+  "visible_differences": "Portrait crop emphasizes the pool and pergola; sky is more vivid and small furniture/light details re-rendered. No new major amenity or people observed.",
+  "date": "2026-10-26",
+  "timezone": "Asia/Karachi",
+  "status": "visually_reviewed",
+  "method": "Built-in image_gen.imagegen",
+  "dimensions": {
+    "width": 1024,
+    "height": 1536,
+    "aspect_ratio": "2:3"
+  },
+  "publication": "Not published, scheduled or uploaded."
+}

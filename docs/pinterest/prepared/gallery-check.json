@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "cards": 64,
+  "search_filter": true,
+  "keyword_filter": true,
+  "combined_filters": true,
+  "copy_description": true,
+  "mobile_overflow": false,
+  "javascript_errors": []
+}

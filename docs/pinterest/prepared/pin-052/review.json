@@ -1,0 +1,17 @@
+{
+  "id": "052",
+  "date": "2026-10-26",
+  "timezone": "Asia/Karachi",
+  "status": "visually_reviewed",
+  "method": "Built-in image_gen.imagegen",
+  "generated_source": "C:/Users/lenovo/.codex/generated_images/01a148f7-25d6-7463-8566-9bf6cc2b593d/exec-9238691d-3201-4590-933c-af74ea435b21.png",
+  "dimensions": {
+    "width": 1024,
+    "height": 1536,
+    "aspect_ratio": "2:3"
+  },
+  "text_accuracy": "Exact brand, headline, footer and website CTA complete and legible.",
+  "source_check": "White kitchen cabinetry, gray island/black stools, stainless appliances, ceiling blue lights and marble-look surfaces preserved.",
+  "visible_differences": "Room is cropped/reframed; bottles, reflections and fine countertop textures are re-rendered. No new major amenity or people observed.",
+  "publication": "Not published, scheduled or uploaded."
+}

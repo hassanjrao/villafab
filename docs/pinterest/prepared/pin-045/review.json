@@ -1,0 +1,18 @@
+{
+  "id": "045",
+  "review_date": "2026-10-26",
+  "generation_method": "Built-in image_gen.imagegen",
+  "generation_output_path": "C:/Users/lenovo/.codex/generated_images/01a177b0-fa50-78f1-9a98-65695f240ca2/exec-3d38fbeb-9951-457e-812a-8c634060703f.png",
+  "saved_image": "docs/pinterest/prepared/pin-045/pin-045.png",
+  "dimensions": {
+    "width": 1024,
+    "height": 1536
+  },
+  "visual_review_status": "passed_with_limitations",
+  "text_checked": true,
+  "source_and_style_inspected": true,
+  "visual_review": "All campaign wording correct and readable. Left-aligned navy serif headline, brand/footer and wide photo produce requested asymmetric variant. Source pool, white ledge loungers, white two-story estate and surrounding courtyard remain recognizable; no people/new amenity.",
+  "limitations": "Generated panel is not pixel-identical; sunset color and small furniture/building/reflection details are redrawn.",
+  "status": "prepared",
+  "published": false
+}

@@ -1,0 +1,18 @@
+{
+  "id": "038",
+  "review_date": "2026-10-26",
+  "generation_method": "Built-in image_gen.imagegen",
+  "generation_output_path": "C:/Users/lenovo/.codex/generated_images/01a177b0-fa50-78f1-9a98-65695f240ca2/exec-b17bd930-f94d-4429-b6e0-d96d4dd6550d.png",
+  "saved_image": "docs/pinterest/prepared/pin-038/pin-038.png",
+  "dimensions": {
+    "width": 1024,
+    "height": 1536
+  },
+  "visual_review_status": "passed_with_limitations",
+  "text_checked": true,
+  "source_and_style_inspected": true,
+  "visual_review": "All brand/headline/footer/CTA text complete, correctly spelled and legible. Two-bed bedroom, blue covers, colorful paintings, wood floor, TV and glass doors to courtyard preserve source identity. No people or new amenity.",
+  "limitations": "Generated composition is not pixel-identical; bedding, artwork, lighting and exterior-view details are subtly redrawn.",
+  "status": "prepared",
+  "published": false
+}

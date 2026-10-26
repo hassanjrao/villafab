@@ -1,0 +1,21 @@
+{
+  "id": "027",
+  "reviewed_date": "2026-10-26",
+  "status": "visually_reviewed",
+  "generation_method": "Built-in image_gen.imagegen",
+  "generation_output_path": "C:/Users/lenovo/.codex/generated_images/01a177b0-dacb-7462-92e6-ab50ee05502c/exec-8a97616e-09eb-404e-92be-d96172fee09a.png",
+  "saved_image": "docs/pinterest/prepared/pin-027/pin-027.png",
+  "dimensions": {
+    "width": 1024,
+    "height": 1536
+  },
+  "source_photo_inspected": true,
+  "style_reference_inspected": true,
+  "headline_and_brand_and_cta_checked": true,
+  "no_generated_people": true,
+  "source_fidelity_review": "Exact campaign text legible with inset gold frame. Pool, courtyard buildings, ledge loungers and outdoor seating follow actual source. Sky is more saturated; fine furniture/surface details vary. Spa headline supported by property documentation rather than separately visible in this crop.",
+  "limitations": "AI-generated design based on the actual source photo; crop, color and fine surface details may vary. It is not a pixel-identical source photograph.",
+  "publication_status": "not_published",
+  "live_verification": false,
+  "prompt_file": "docs/pinterest/prepared/pin-027/prompt.txt"
+}

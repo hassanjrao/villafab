@@ -1,0 +1,17 @@
+{
+  "id": "074",
+  "date": "2026-10-26",
+  "timezone": "Asia/Karachi",
+  "status": "visually_reviewed",
+  "method": "Built-in image_gen.imagegen",
+  "generated_source": "C:/Users/lenovo/.codex/generated_images/01a148f7-25d6-7463-8566-9bf6cc2b593d/exec-bf696ef1-44b2-4bfb-a5a9-d63128a4ec04.png",
+  "dimensions": {
+    "width": 1024,
+    "height": 1536,
+    "aspect_ratio": "2:3"
+  },
+  "text_accuracy": "All exact headline, brand, location and website CTA complete, legible and inside margins.",
+  "source_check": "Individual miniature-golf lanes/obstacles on gray gravel and surrounding dry grass, trees and hills recognizable; old white banner omitted.",
+  "visible_differences": "Source recropped into magazine panel; landscape/gravel/obstacle textures re-rendered with slightly stronger contrast. No new major amenity or people observed.",
+  "publication": "Not published, scheduled or uploaded."
+}

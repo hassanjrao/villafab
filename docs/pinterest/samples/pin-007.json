@@ -1,0 +1,59 @@
+{
+  "id": "007",
+  "image": "docs/pinterest/samples/pin-007.png",
+  "headline": "Luxury Wine Country Estate with Pool & Spa",
+  "source": "public/frontend/imgs/photos-for-vrbo/villa-fabulosa-13-13-aerial.webp",
+  "alt_text": "Ivory, navy and gold Villa Fabulosa graphic reading “Luxury Wine Country Estate with Pool & Spa.” A daylight aerial photo shows a modern white two-storey villa, blue sports court, green playing lawns with net posts, a pool with white loungers, and covered outdoor pavilions within a black perimeter fence, with dry hills behind. The footer reads “Temecula Wine Country” and “Explore VillaFabulosa.com.”",
+  "dimensions": {
+    "width": 1024,
+    "height": 1536,
+    "aspect_ratio": "2:3"
+  },
+  "method": "Built-in image_gen tool; one generation call; opaque PNG copied into workspace without code image editing or resizing.",
+  "prompt": "Use case: compositing.\nAsset type: ONE polished editorial Pinterest campaign graphic, portrait 2:3, 1024 by 1536 pixels.\nPrimary request: Create a new Villa Fabulosa Pin using the actual daytime aerial photograph from image 1 as a faithful rectangular landscape insert. Match the warm ivory, navy and muted gold editorial typography and CTA treatment of image 2.\nInput images: Image 1 (villa-fabulosa-13-13-aerial.webp) is the actual property photograph and EDIT TARGET for the photo panel. Preserve its geometry and visual content. Image 2 (pin-001.png) is ONLY a style reference for fonts, design colors, spacing, brand and CTA. Never borrow its dusk sky, photo lighting, pool view or architectural details.\nComposition: At the top, warm ivory field with small centered widely tracked navy brand, thin gold rule and a large high-contrast navy serif headline on balanced lines. Place the full actual aerial landscape photograph in a full-width rectangular middle panel at its original wide aspect ratio, with no invented extension. Use an ivory lower field with gold rule, centered location subline, and dark navy rectangular CTA framed by thin gold, white sans-serif CTA text. Large legible type, generous breathing room and safe margins. Prefer larger ivory text bands over extending or altering the actual photograph.\nText (verbatim, exactly these four strings):\n\"VILLA FABULOSA\"\n\"Luxury Wine Country Estate with Pool & Spa\"\n\"Temecula Wine Country\"\n\"Explore VillaFabulosa.com\"\nPhoto invariants: Retain the source's actual modern white two-storey villa; all roofs, doors, windows and balcony arrangement; blue sports court with hoops on the left; narrow outlined sports lanes; broad green playing lawn with yellow net posts; table-tennis table; actual pool and spa arrangement with four white in-pool loungers; navy poolside loungers; covered outdoor bar/dining pavilion; separate white covered seating pavilion; black perimeter fence; red gravel perimeter; dry hillside terrain; distant mountains, neighboring structures, trees and clear blue daytime sky. Keep existing relative positions, counts, camera angle, perspective, original daylight and shadows. Do not redesign, simplify, relocate or duplicate any of these elements. Do not turn daylight to sunset or import the style reference's colors into the photograph.\nConstraints: Make the marketing layout around the actual source photo, rather than reimagining the property. No new features, new buildings, new landscaping, new spa shape, people or decorative props. No ranking, capacity, award, pricing or booking guarantee claims. No extra words, watermark, invented logo, montage, collage or variants. Generate exactly ONE finished opaque graphic.",
+  "status": "published",
+  "created_date": "2026-10-20",
+  "style_reference": "docs/pinterest/samples/pin-001.png",
+  "generated_source": "C:/Users/lenovo/.codex/generated_images/01a153cc-dba1-7713-a626-a7202e7f485f/exec-1d3c64ca-7bec-4e2c-8003-f411dd7032a4.png",
+  "review": "Inspected the actual aerial source photograph and approved pin-001 style reference before generation, then inspected the final saved PNG. All four requested text strings are correctly spelled, readable and within margins. The actual two-storey white villa, blue sports court, outlined lanes, large green lawn/net area, pool, loungers, outdoor pavilions, fence and dry hillside setting remain recognizable and in their source arrangement. No people or obvious invented amenities are visible. The generated panel is slightly reframed and fine details in the lawn, fencing, court markings and surrounding terrain are re-rendered rather than pixel-identical. The original daylight setting is retained. The spa wording is supported by first-party local pool-page copy, resources/views/frontend/gallery/the-pool.blade.php:58, which describes an 8-by-12-foot spa. This is a generated/composited rendition of the actual photo, not a pixel-identical pasted crop.",
+  "amenity_evidence": "resources/views/frontend/gallery/the-pool.blade.php:58",
+  "keyword": "luxury villa vacation rentals",
+  "target_location": "Temecula Wine Country / Riverside County",
+  "title": "Luxury Villa Vacation Rentals in Temecula Wine Country | Villa Fabulosa",
+  "description": "Explore luxury villa vacation rentals in Temecula Wine Country with a closer look at Villa Fabulosa. This private Riverside County estate brings a pool, spa and space to gather in one setting. View the property and check availability at VillaFabulosa.com. #TemeculaWineCountry #LuxuryVilla #PoolAndSpa",
+  "hashtags": [
+    "#TemeculaWineCountry",
+    "#LuxuryVilla",
+    "#PoolAndSpa"
+  ],
+  "board": "Top Vacation Rental in Temecula Wine Country",
+  "destination": "https://villafabulosa.com/?utm_source=pinterest&utm_medium=organic_social&utm_campaign=villa_fabulosa_75_pins&utm_content=pin_007",
+  "published_url": "https://www.pinterest.com/pin/743868063501187499/",
+  "posted_date": "2026-10-20",
+  "verified": true,
+  "manual_ai_disclosure": false,
+  "requested_manual_ai_disclosure": false,
+  "tag_update_status": "verified",
+  "topic_tags": [
+    "SPA Vacation"
+  ],
+  "topic_edit_status": "Selected in the creation form; topic selector unavailable in Edit Pin, so saved-state topic readback could not be verified.",
+  "public_ai_label_present": true,
+  "verification_date": "2026-10-20",
+  "verification_fields": [
+    "title",
+    "description",
+    "destination",
+    "manual_ai_disclosure"
+  ],
+  "last_observed_description": "Explore luxury villa vacation rentals in Temecula Wine Country with a closer look at Villa Fabulosa. This private Riverside County estate brings a pool, spa and space to gather in one setting. View the property and check availability at VillaFabulosa.com. #TemeculaWineCountry #LuxuryVilla #PoolAndSpa",
+  "last_observed_description_context": "Exact saved title, full hashtag caption and destination read back after full page reload on 2026-10-20",
+  "alt_text_verification": "Entered and checked before publication; not verified after reload because the Edit Pin form did not expose alt text.",
+  "timezone": "Asia/Karachi",
+  "generation_method": "Built-in image_gen tool; one generation call; opaque PNG copied into workspace without code image editing or resizing.",
+  "generated_people": false,
+  "root_visual_review": "All three final images were visually reviewed and approved for publication by the root publishing agent.",
+  "verification_details": "After publication, the individual Pin was fully reloaded and reopened in Edit Pin on 2026-10-20. Exact title, full description including all three hashtags, destination URL and manual AI disclosure Off were verified. The public AI-modified badge was visibly present. Native topics and alt text were checked during creation only, with no saved-state readback claim.",
+  "board_verification": "Selected in the creation form.",
+  "headline_bank_note": "Original headline 8: Luxury Wine Country Estate with Pool & Spa."
+}

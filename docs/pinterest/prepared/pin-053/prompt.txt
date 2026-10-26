@@ -1,0 +1,13 @@
+Use case: ads-marketing / compositing.
+Asset type: one finished vertical Pinterest Pin 053 for Villa Fabulosa, opaque PNG, 1024 x 1536 pixels, 2:3.
+Input image 1: actual property photograph, D:/laravel/villafab-laravel/public/frontend/imgs/photos-for-vrbo/villa-fabulosa-3-field.webp; sole photographic subject. Input image 2: D:/laravel/villafab-laravel/docs/pinterest/samples/pin-001.png; STYLE ONLY for approved warm ivory, deep navy, muted gold editorial identity. Do not import the photograph or headline from image 2.
+Primary request: Produce one distinct, polished campaign graphic using image 1 faithfully in a photographic panel. Preserve its actual architecture, furniture, pool/court/room layout, scenery, lighting and materials. Use restrained cropping, not invented extensions. Source scene: Outdoor blue multi-use sport court with basketball hoops and net beside putting greens, with distant hills at dusk.
+Layout variant 4 of five for this source family: Asymmetric editorial: navy brand line and left-aligned serif headline on ivory above a wide photographic panel, short gold divider, left-aligned location and balanced navy CTA footer. Keep text separate from the photo.
+Typography: large elegant readable navy serif headline, letterspaced navy brand, restrained fine gold rules and generous safe margins. Photo remains large and recognizable.
+Text (verbatim and only):
+Brand: "VILLA FABULOSA"
+Headline: "Scenic Views & Private Estate Luxury"
+Footer location: "Temecula Wine Country"
+CTA: "Explore VillaFabulosa.com"
+Balance line breaks without changing any word. Keep all text complete and readable. If the source photograph contains an old white caption/banner, omit that old graphic caption from the photographic panel while preserving the property; print only the requested campaign wording.
+Constraints: no people; no new amenity, architecture, props, food, vineyard or winery; no event permission, ranking, price, rate, fee or savings claim; no badges, watermark, hashtags or duplicate text. Use the original real property's image, not a newly imagined estate. Do not enhance the time of day or invent scenery. Complete standalone graphic, not a mockup.
