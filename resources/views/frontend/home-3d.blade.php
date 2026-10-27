@@ -1493,6 +1493,651 @@
             }
         }
     </style>
+    <style>
+        /* ══ Modern sections below the hero ═════════════════════════════
+           Shared tokens: navy and gold from the hero, warm sand for
+           alternating bands. Gold text on light backgrounds uses the dark
+           variant so it keeps AA contrast. */
+        :root {
+            --vf-navy: #0b1430;
+            --vf-ink: #1b2133;
+            --vf-text: #3a4256;
+            --vf-muted: #5b6478;
+            --vf-gold: #e9a94e;
+            --vf-gold-light: #f0c27a;
+            --vf-gold-dark: #8a5a12;
+            --vf-sand: #f6f1e8;
+            --vf-line: #e9e2d5;
+            --vf-blue: #076b96;
+            --vf-radius: 20px;
+            --vf-shadow: 0 24px 50px rgba(11, 20, 48, 0.12);
+        }
+
+        .vf-section {
+            padding: clamp(56px, 8vw, 110px) 0;
+            background: #fff;
+            color: var(--vf-text);
+        }
+
+        .vf-section--sand {
+            background: var(--vf-sand);
+        }
+
+        .vf-heading {
+            max-width: 720px;
+            margin: 0 auto 44px;
+            text-align: center;
+        }
+
+        .vf-eyebrow {
+            margin: 0 0 10px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--vf-gold-dark);
+        }
+
+        .vf-h2 {
+            margin: 0 0 16px;
+            font-size: clamp(2rem, 3.4vw, 2.9rem);
+            font-weight: 700;
+            line-height: 1.12;
+            letter-spacing: -0.01em;
+            color: var(--vf-ink);
+        }
+
+        .vf-h3 {
+            margin: 0 0 12px;
+            font-size: clamp(1.5rem, 2.4vw, 2rem);
+            font-weight: 700;
+            color: var(--vf-ink);
+        }
+
+        .vf-lead {
+            font-size: 1.15rem;
+            line-height: 1.7;
+            color: var(--vf-text);
+        }
+
+        .vf-link {
+            font-weight: 700;
+            color: var(--vf-blue);
+        }
+
+        .vf-link::after {
+            content: " \2192";
+        }
+
+        .vf-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 48px;
+            padding: 0 24px;
+            border-radius: 999px;
+            font-weight: 700;
+            font-size: 1rem;
+            text-decoration: none;
+            border: 1.5px solid transparent;
+            cursor: pointer;
+            transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease;
+        }
+
+        .vf-btn:hover,
+        .vf-btn:focus-visible {
+            text-decoration: none;
+            transform: translateY(-2px);
+        }
+
+        .vf-btn--light {
+            background: #fff;
+            color: var(--vf-navy);
+        }
+
+        .vf-btn--light:hover,
+        .vf-btn--light:focus-visible {
+            color: var(--vf-navy);
+            background: var(--vf-gold-light);
+        }
+
+        .vf-btn--outline {
+            background: transparent;
+            color: var(--vf-navy);
+            border-color: var(--vf-navy);
+        }
+
+        .vf-btn--outline:hover,
+        .vf-btn--outline:focus-visible {
+            background: var(--vf-navy);
+            color: #fff;
+        }
+
+        .vf-btn:focus-visible,
+        .vf-space:focus-visible,
+        .vf-review:focus-visible,
+        .vf-link:focus-visible {
+            outline: 3px solid var(--vf-gold);
+            outline-offset: 3px;
+        }
+
+        .vf-stars {
+            display: inline-flex;
+            gap: 2px;
+            color: var(--vf-gold);
+            vertical-align: middle;
+        }
+
+        /* Photo tour strip, now a framed mosaic */
+        .photo-strip-heading {
+            padding: clamp(56px, 7vw, 90px) 15px 28px;
+        }
+
+        .photo-strip-heading h2 {
+            font-size: clamp(2rem, 3.4vw, 2.9rem);
+            font-weight: 700;
+            letter-spacing: -0.01em;
+            color: var(--vf-ink);
+        }
+
+        #heroGallery {
+            max-width: 1200px;
+            margin: 0 auto;
+            border-radius: var(--vf-radius);
+            box-shadow: var(--vf-shadow);
+        }
+
+        @media (max-width: 1230px) {
+            #heroGallery {
+                margin: 0 15px;
+                width: auto;
+                max-width: none;
+            }
+        }
+
+        /* Award */
+        .vf-award {
+            padding: clamp(48px, 6vw, 80px) 0 0;
+            background: #fff;
+        }
+
+        .vf-award__card {
+            display: grid;
+            grid-template-columns: auto 1fr auto;
+            gap: 28px;
+            align-items: center;
+            padding: 34px 40px;
+            border-radius: 24px;
+            background: linear-gradient(120deg, #0b1430 0%, #17275c 55%, #0b1430 100%);
+            color: #fff;
+            box-shadow: var(--vf-shadow);
+        }
+
+        .vf-award__icon {
+            color: var(--vf-gold-light);
+        }
+
+        .vf-award .vf-eyebrow {
+            color: var(--vf-gold-light);
+        }
+
+        .vf-award__title {
+            margin: 0 0 8px;
+            font-size: clamp(1.6rem, 2.6vw, 2.1rem);
+            font-weight: 700;
+            color: #fff;
+        }
+
+        .vf-award__text p:last-child {
+            margin: 0;
+            color: rgba(255, 255, 255, 0.85);
+            line-height: 1.6;
+        }
+
+        /* About + video */
+        .vf-about__grid {
+            display: grid;
+            grid-template-columns: 1.05fr 1fr;
+            gap: clamp(32px, 5vw, 64px);
+            align-items: center;
+        }
+
+        .vf-about__video {
+            border-radius: var(--vf-radius);
+            overflow: hidden;
+            box-shadow: var(--vf-shadow);
+        }
+
+        /* Spaces */
+        .vf-spaces {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+            perspective: 1200px;
+        }
+
+        .vf-space {
+            position: relative;
+            display: block;
+            aspect-ratio: 4 / 3.3;
+            border-radius: var(--vf-radius);
+            overflow: hidden;
+            color: #fff;
+            text-decoration: none;
+            box-shadow: 0 16px 36px rgba(11, 20, 48, 0.16);
+            transform-style: preserve-3d;
+            transition: transform 0.35s cubic-bezier(.2, .8, .2, 1), box-shadow 0.35s ease;
+            will-change: transform;
+        }
+
+        .vf-space:hover {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .vf-space img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .vf-space:hover img {
+            transform: scale(1.06);
+        }
+
+        .vf-space::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(0deg, rgba(8, 12, 32, 0.82) 0%, rgba(8, 12, 32, 0.15) 50%, rgba(8, 12, 32, 0) 70%);
+        }
+
+        .vf-space__body {
+            position: absolute;
+            left: 22px;
+            right: 70px;
+            bottom: 20px;
+            z-index: 1;
+            transform: translateZ(30px);
+        }
+
+        .vf-space__title {
+            display: block;
+            font-size: 1.4rem;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        .vf-space__sub {
+            display: block;
+            margin-top: 2px;
+            font-size: 0.95rem;
+            color: rgba(255, 255, 255, 0.85);
+        }
+
+        .vf-space__arrow {
+            position: absolute;
+            right: 18px;
+            bottom: 20px;
+            z-index: 1;
+            display: grid;
+            place-items: center;
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.18);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            backdrop-filter: blur(6px);
+            -webkit-backdrop-filter: blur(6px);
+            font-size: 1.1rem;
+            transition: background 0.25s ease, color 0.25s ease;
+        }
+
+        .vf-space:hover .vf-space__arrow,
+        .vf-space:focus-visible .vf-space__arrow {
+            background: var(--vf-gold);
+            border-color: var(--vf-gold);
+            color: #1d1306;
+        }
+
+        .vf-space.is-tilting {
+            box-shadow: 0 30px 56px rgba(11, 20, 48, 0.28);
+            transition: transform 0.08s linear, box-shadow 0.35s ease;
+        }
+
+        /* Stats */
+        .vf-stats {
+            padding: clamp(48px, 6vw, 80px) 0;
+            background: radial-gradient(120% 140% at 50% 0%, #1b2c66 0%, var(--vf-navy) 60%);
+            color: #fff;
+            text-align: center;
+        }
+
+        .vf-stats__title {
+            max-width: 820px;
+            margin: 0 auto 36px;
+            font-size: clamp(1.4rem, 2.4vw, 1.9rem);
+            font-weight: 700;
+            line-height: 1.3;
+            color: #fff;
+        }
+
+        .vf-stats__list {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0;
+            list-style: none;
+        }
+
+        .vf-stats__list li {
+            padding: 22px 12px;
+            border-radius: 18px;
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.14);
+        }
+
+        .vf-stats__num {
+            display: block;
+            font-size: clamp(2.2rem, 4vw, 3rem);
+            font-weight: 700;
+            line-height: 1;
+            color: var(--vf-gold-light);
+        }
+
+        .vf-stats__label {
+            display: block;
+            margin-top: 8px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.85);
+        }
+
+        /* Amenities + booking */
+        .vf-book__grid {
+            display: grid;
+            grid-template-columns: 1.15fr 0.85fr;
+            gap: clamp(32px, 5vw, 64px);
+            align-items: start;
+        }
+
+        .vf-book__widget {
+            position: sticky;
+            top: 96px;
+        }
+
+        .vf-rating {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 6px 14px;
+            margin: 8px 0 28px;
+        }
+
+        .vf-rating__score {
+            font-size: 3rem;
+            font-weight: 700;
+            line-height: 1;
+            color: var(--vf-ink);
+        }
+
+        .vf-rating__meta {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            font-size: 0.95rem;
+            color: var(--vf-muted);
+        }
+
+        .vf-rating__note {
+            flex-basis: 100%;
+            font-weight: 700;
+            color: var(--vf-ink);
+        }
+
+        .vf-badge {
+            display: inline-block;
+            padding: 2px 10px;
+            border-radius: 999px;
+            background: #fdecc8;
+            color: #5b3a06;
+            font-size: 0.82rem;
+            font-weight: 700;
+        }
+
+        .vf-amenities {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 18px;
+        }
+
+        .vf-amenities__card {
+            padding: 24px 24px 20px;
+            border-radius: var(--vf-radius);
+            background: var(--vf-sand);
+            border: 1px solid var(--vf-line);
+        }
+
+        .vf-amenities__card h3 {
+            margin: 0 0 14px;
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--vf-ink);
+        }
+
+        .vf-checks {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .vf-checks li {
+            position: relative;
+            padding: 0 0 10px 30px;
+            line-height: 1.45;
+            color: var(--vf-text);
+        }
+
+        .vf-checks li::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 1px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath d='M2.5 6.3l2.2 2.2 4.8-5' fill='none' stroke='%238a5a12' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center / 12px no-repeat;
+            border: 1px solid #ecd9b4;
+        }
+
+        .vf-book .booking-widget-card {
+            border-radius: 24px;
+            border: 1px solid var(--vf-line);
+            box-shadow: 0 30px 60px rgba(11, 20, 48, 0.14);
+            transition: box-shadow 0.4s ease;
+        }
+
+        .vf-book .booking-reserve-btn {
+            background: linear-gradient(180deg, #ffd796, #e9a94e);
+            color: #1d1306 !important;
+            border-radius: 999px;
+            box-shadow: 0 10px 24px rgba(233, 169, 78, 0.35);
+        }
+
+        .vf-book .booking-reserve-btn:hover {
+            color: #1d1306 !important;
+        }
+
+        /* Flash when a "book" button brings the visitor here. */
+        .vf-book .booking-widget-card.is-highlighted {
+            animation: vf-book-flash 1.8s ease-out;
+        }
+
+        @keyframes vf-book-flash {
+            0% { box-shadow: 0 0 0 0 rgba(233, 169, 78, 0.8), 0 30px 60px rgba(11, 20, 48, 0.14); }
+            40% { box-shadow: 0 0 0 14px rgba(233, 169, 78, 0.25), 0 30px 60px rgba(11, 20, 48, 0.14); }
+            100% { box-shadow: 0 0 0 0 rgba(233, 169, 78, 0), 0 30px 60px rgba(11, 20, 48, 0.14); }
+        }
+
+        /* Reviews + location */
+        .vf-reviews__grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 22px;
+            max-width: 980px;
+            margin: 0 auto;
+        }
+
+        .vf-review {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 12px;
+            padding: 30px;
+            border-radius: var(--vf-radius);
+            background: #fff;
+            border: 1px solid var(--vf-line);
+            box-shadow: 0 14px 32px rgba(11, 20, 48, 0.07);
+            color: var(--vf-text);
+            text-decoration: none;
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .vf-review:hover {
+            color: var(--vf-text);
+            text-decoration: none;
+            transform: translateY(-4px);
+            box-shadow: var(--vf-shadow);
+        }
+
+        .vf-review__score {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 1.1rem;
+            color: var(--vf-ink);
+        }
+
+        .vf-review__score strong {
+            font-size: 1.6rem;
+        }
+
+        .vf-review__text {
+            color: var(--vf-muted);
+        }
+
+        .vf-location {
+            display: grid;
+            grid-template-columns: 0.8fr 1.2fr;
+            gap: clamp(28px, 5vw, 60px);
+            align-items: center;
+            margin-top: clamp(56px, 7vw, 90px);
+        }
+
+        .vf-location__map img {
+            display: block;
+            width: 100%;
+            height: auto;
+            border-radius: var(--vf-radius);
+            box-shadow: var(--vf-shadow);
+        }
+
+        /* Contact form polish (its base styles live with the form). */
+        #contact {
+            background: #fff !important;
+        }
+
+        #contact .cf-wrap {
+            border-radius: 24px;
+            border: 1px solid var(--vf-line);
+            box-shadow: var(--vf-shadow);
+        }
+
+        #contact .cf-title {
+            font-size: clamp(2rem, 3.4vw, 2.6rem);
+            font-weight: 700;
+            color: var(--vf-ink);
+        }
+
+        #contact .cf-input,
+        #contact .cf-textarea {
+            border-radius: 12px;
+        }
+
+        #contact .cf-submit {
+            background: var(--vf-navy);
+            border-radius: 999px;
+        }
+
+        #contact .cf-submit:hover {
+            background: #17275c;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .vf-space,
+            .vf-space img,
+            .vf-review,
+            .vf-btn {
+                transition: none;
+            }
+
+            .vf-book .booking-widget-card.is-highlighted {
+                animation: none;
+                box-shadow: 0 0 0 4px var(--vf-gold), 0 30px 60px rgba(11, 20, 48, 0.14);
+            }
+        }
+
+        @media (max-width: 991.98px) {
+            .vf-about__grid,
+            .vf-location {
+                grid-template-columns: 1fr;
+            }
+
+            .vf-spaces {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            /* Booking first on narrow screens: it is what visitors came for. */
+            .vf-book__grid {
+                grid-template-columns: 1fr;
+            }
+
+            .vf-book__widget {
+                position: static;
+                order: -1;
+            }
+
+            .vf-award__card {
+                grid-template-columns: 1fr;
+                text-align: center;
+                justify-items: center;
+                padding: 30px 24px;
+            }
+        }
+
+        @media (max-width: 767.98px) {
+            .vf-spaces,
+            .vf-amenities,
+            .vf-reviews__grid {
+                grid-template-columns: 1fr;
+            }
+
+            .vf-stats__list {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .vf-space {
+                aspect-ratio: 16 / 11;
+            }
+        }
+    </style>
     <link rel="stylesheet" href="{{ \App\Support\Seo::versioned('frontend/litepicker/litepicker.css') }}" media="print" onload="this.media='all';this.onload=null;">
     <noscript><link rel="stylesheet" href="{{ \App\Support\Seo::versioned('frontend/litepicker/litepicker.css') }}"></noscript>
 @endsection
@@ -1764,218 +2409,192 @@
     {{-- ══════════════════════════════════════════ --}}
 
 
-    <!-- Villa Info Start - entire section links to KTLA announcement -->
-    <a href="http://www.youtube.com/watch?v=xwmYm-XCr_o&t=206s" target="_blank" rel="noopener"
-        class="d-block text-decoration-none villinfo-link" style="color: inherit; cursor: pointer; text-decoration: none;">
-        <div id="villinfo" class="site_villa_info_wrapper mb-4 mt-4">
-            <div class="container">
-                <div class="row mb-3">
-                    <div class="col-lg-12 text-center">
-                        <p class="h1 site_title_letter_space mb-3">Villa Fabulosa</p>
-                    </div>
-                    <div class="col-lg-12">
-                        <h2 class="h3 site_title_letter_space text-center"><i>Voted by Expedia Group and VRBO as the Top
-                                vacation rental in
-                                California and one of the top Ten Vacation Rentals in the entire country, out of over two
-                                million homes!
-                            </i>
-                        </h2>
-                        <h3 class="text-center text-white villinfo-ktla-text">
-                            See the official announcement on KTLA
-                        </h3>
-                    </div>
+    {{-- ══════════════════════════════════════════
+     AWARD
+══════════════════════════════════════════ --}}
+    <section class="vf-award" aria-labelledby="vfAwardTitle" data-reveal>
+        <div class="container">
+            <div class="vf-award__card">
+                <svg class="vf-award__icon" viewBox="0 0 64 64" width="60" height="60" aria-hidden="true" focusable="false">
+                    <path fill="currentColor" d="M20 8h24v6h8v6c0 7-5 12-11.5 12.8C38.7 37 35.6 40 32 40.7V48h8v6H24v-6h8v-7.3c-3.6-.7-6.7-3.7-8.5-7.9C17 32 12 27 12 20v-6h8zm-4 10v2c0 4 2.6 7.2 6.2 8.3-.8-2.6-1.2-5.5-1.2-8.3zm32 0h-5c0 2.8-.4 5.7-1.2 8.3 3.6-1.1 6.2-4.3 6.2-8.3z"/>
+                </svg>
+                <div class="vf-award__text">
+                    <p class="vf-eyebrow">Award-winning stay</p>
+                    <h2 class="vf-award__title" id="vfAwardTitle">The top vacation rental in California</h2>
+                    <p>Voted by Expedia Group and Vrbo as the top vacation rental in California, and one of the top ten in the entire country, out of over two million homes.</p>
                 </div>
+                <a class="vf-btn vf-btn--light" href="http://www.youtube.com/watch?v=xwmYm-XCr_o&t=206s" target="_blank" rel="noopener">
+                    <span aria-hidden="true">&#9654;</span>&nbsp; See the announcement on KTLA
+                </a>
             </div>
         </div>
-    </a>
-    <!-- Villa Info End -->
+    </section>
 
-    {{-- Villa description + video --}}
-    <section class="py-4" data-reveal>
+    {{-- ══════════════════════════════════════════
+     ABOUT + VIDEO
+══════════════════════════════════════════ --}}
+    <section class="vf-section vf-about" aria-labelledby="vfAboutTitle" data-reveal>
         <div class="container">
-            <div class="row align-items-stretch">
-                {{-- Text box --}}
-                <div class="col-lg-6 mb-4">
-                    <div class="card h-100 shadow-sm">
-                        <div class="card-body">
-                            <p class="mb-3">
-                                Villa Fabulosa is the ultimate gathering place for family and friends&mdash;a luxurious
-                                5‑acre estate perched in the heart of Temecula Wine Country, offering breathtaking
-                                360‑degree views. Perfectly located among more than 55 top‑rated wineries (many with
-                                excellent restaurants), Villa Fabulosa places you right in the center of it all.
-                            </p>
-                            <div class="collapse" id="villaDescriptionMore">
-                                <p>
-                                    On the property, you will find a private oasis with a beautiful pool and 14‑person
-                                    spa, a fully equipped outdoor kitchen, an 18‑hole miniature golf course, a game room
-                                    packed with arcades, and a full sports court for basketball, pickleball, volleyball,
-                                    badminton, and more. Whether you are lounging by the pool or enjoying a friendly
-                                    competition on the court, Villa Fabulosa delivers a true resort‑style experience
-                                    that is hard to beat.
-                                </p>
-                            </div>
-                            <button class="btn btn-primary btn-sm mt-2" type="button" data-toggle="collapse"
-                                data-target="#villaDescriptionMore" aria-expanded="false"
-                                aria-controls="villaDescriptionMore" onclick="toggleVillaDescription(this)">
-                                Show More
-                            </button>
-                        </div>
+            <div class="vf-about__grid">
+                <div class="vf-about__text">
+                    <p class="vf-eyebrow">The estate</p>
+                    <h2 class="vf-h2" id="vfAboutTitle">The ultimate gathering place for family and friends</h2>
+                    <p class="vf-lead">
+                        A luxurious 5&#8209;acre estate perched in the heart of Temecula Wine Country, offering
+                        breathtaking 360&#8209;degree views. Perfectly located among more than 55 top&#8209;rated wineries
+                        (many with excellent restaurants), Villa Fabulosa places you right in the center of it all.
+                    </p>
+                    <div class="collapse" id="villaDescriptionMore">
+                        <p>
+                            On the property, you will find a private oasis with a beautiful pool and 14&#8209;person
+                            spa, a fully equipped outdoor kitchen, an 18&#8209;hole miniature golf course, a game room
+                            packed with arcades, and a full sports court for basketball, pickleball, volleyball,
+                            badminton, and more. Whether you are lounging by the pool or enjoying a friendly
+                            competition on the court, Villa Fabulosa delivers a true resort&#8209;style experience
+                            that is hard to beat.
+                        </p>
                     </div>
+                    <button class="vf-btn vf-btn--outline" type="button" data-toggle="collapse"
+                        data-target="#villaDescriptionMore" aria-expanded="false"
+                        aria-controls="villaDescriptionMore" onclick="toggleVillaDescription(this)">Show More</button>
                 </div>
-
-                {{-- Video --}}
-                <div class="col-lg-6 mb-4">
-                    <div class="embed-responsive embed-responsive-16by9 h-100">
-                        @include('layouts.partials.video-facade', ['videoId' => 'u5zfhEQfkpk', 'title' => 'Tour Villa Fabulosa in Temecula Wine Country'])
-                    </div>
+                {{-- No embed-responsive wrapper: the facade sets its own 16:9
+                     ratio, and the wrapper's padding box would add a second one. --}}
+                <div class="vf-about__video">
+                    @include('layouts.partials.video-facade', ['videoId' => 'u5zfhEQfkpk', 'title' => 'Tour Villa Fabulosa in Temecula Wine Country'])
                 </div>
             </div>
         </div>
     </section>
 
-    <div class="site_services_box_wrapper pb-5" data-reveal>
+    {{-- ══════════════════════════════════════════
+     SPACES
+══════════════════════════════════════════ --}}
+    <section class="vf-section vf-section--sand" aria-labelledby="vfSpacesTitle">
         <div class="container">
-            <div class="row text-center">
-                <div class="col-lg-4 mb-4">
-                    <div class="site_service_box">
-                        <a href="{{ url('/the-rooms') }}">
-                            <img loading="lazy" decoding="async" style="height: 250px;" src="{{ asset('frontend/imgs/photos-for-vrbo/villa-fabulosa-living-room-12-card1x.webp') }}" srcset="{{ asset('frontend/imgs/photos-for-vrbo/villa-fabulosa-living-room-12-card1x.webp') }} 350w, {{ asset('frontend/imgs/photos-for-vrbo/villa-fabulosa-living-room-12-card.webp') }} 700w" sizes="(max-width: 991px) 100vw, 350px" width="350" height="250" class="img-fluid" alt="Living room at Villa Fabulosa">
-                        </a>
-                        <h3 class="mt-2 mb-0" style="color: #076b96;">The Rooms</h3>
-                    </div>
-                </div>
-                <div class="col-lg-4 mb-4">
-                    <div class="site_service_box">
-                        <a href="{{ url('/the-pool') }}">
-                            <img loading="lazy" decoding="async" style="height: 250px;" src="{{ asset('frontend/imgs/photos-for-vrbo/villa-fabulosa-aerial-view-13-card1x.webp') }}" srcset="{{ asset('frontend/imgs/photos-for-vrbo/villa-fabulosa-aerial-view-13-card1x.webp') }} 350w, {{ asset('frontend/imgs/photos-for-vrbo/villa-fabulosa-aerial-view-13-card.webp') }} 700w" sizes="(max-width: 991px) 100vw, 350px" width="350" height="250" class="img-fluid" alt="The pool at Villa Fabulosa">
-                        </a>
-                        <h3 class="mt-2 mb-0" style="color: #076b96;">The Pool</h3>
-                    </div>
-                </div>
-                <div class="col-lg-4 mb-4">
-                    <div class="site_service_box">
-                        <a href="{{ url('/game-rooms') }}">
-                            <img loading="lazy" decoding="async" style="height: 250px;" src="{{ asset('frontend/imgs/photos-for-vrbo/villa-fabulosa-game-room-05-card1x.webp') }}" srcset="{{ asset('frontend/imgs/photos-for-vrbo/villa-fabulosa-game-room-05-card1x.webp') }} 350w, {{ asset('frontend/imgs/photos-for-vrbo/villa-fabulosa-game-room-05-card.webp') }} 700w" sizes="(max-width: 991px) 100vw, 350px" width="350" height="250" class="img-fluid" alt="Game room at Villa Fabulosa">
-                        </a>
-                        <h3 class="mt-2 mb-0" style="color: #076b96;">Game Room</h3>
-                    </div>
-                </div>
-                <div class="col-lg-4 mb-4">
-                    <div class="site_service_box">
-                        <a href="{{ url('/miniature-golf-course') }}">
-                            <img loading="lazy" decoding="async" style="height: 250px;" src="{{ asset('frontend/imgs/photos-for-vrbo/villa-fabulosa-aerial-view-04-card1x.webp') }}" srcset="{{ asset('frontend/imgs/photos-for-vrbo/villa-fabulosa-aerial-view-04-card1x.webp') }} 350w, {{ asset('frontend/imgs/photos-for-vrbo/villa-fabulosa-aerial-view-04-card.webp') }} 700w" sizes="(max-width: 991px) 100vw, 350px" width="350" height="250" class="img-fluid" alt="Aerial view of Villa Fabulosa">
-                        </a>
-                        <h3 class="mt-2 mb-0" style="color: #076b96;">Miniature Golf</h3>
-                    </div>
-                </div>
-                <div class="col-lg-4 mb-4">
-                    <div class="site_service_box">
-                        <a href="{{ url('/wineries') }}">
-                            <img loading="lazy" decoding="async" style="height: 250px;" src="{{ asset('frontend/imgs/photos-for-vrbo/villa-fabulosa-villa-card1x.webp') }}" srcset="{{ asset('frontend/imgs/photos-for-vrbo/villa-fabulosa-villa-card1x.webp') }} 350w, {{ asset('frontend/imgs/photos-for-vrbo/villa-fabulosa-villa-card.webp') }} 700w" sizes="(max-width: 991px) 100vw, 350px" width="350" height="250" class="img-fluid" alt="Villa Fabulosa estate">
-                        </a>
-                        <h3 class="mt-2 mb-0" style="color: #076b96;">Wineries</h3>
-                    </div>
-                </div>
-                <div class="col-lg-4 mb-4">
-                    <div class="site_service_box">
-                        <a href="{{ url('/birds-eye') }}">
-                            <img loading="lazy" decoding="async" style="height: 250px;" src="{{ asset('frontend/imgs/villa-fabulosa-aerial-view-108-card1x.webp') }}" srcset="{{ asset('frontend/imgs/villa-fabulosa-aerial-view-108-card1x.webp') }} 350w, {{ asset('frontend/imgs/villa-fabulosa-aerial-view-108-card.webp') }} 700w" sizes="(max-width: 991px) 100vw, 350px" width="350" height="250" class="img-fluid" alt="Aerial view of the grounds">
-                        </a>
-                        <h3 class="mt-2 mb-0" style="color: #076b96;">Bird's Eye View</h3>
-                    </div>
-                </div>
+            <div class="vf-heading" data-reveal>
+                <p class="vf-eyebrow">Explore</p>
+                <h2 class="vf-h2" id="vfSpacesTitle">Every corner made for groups</h2>
             </div>
-        </div>
-    </div>
-    <!-- Services Boxes End -->
-
-    {{-- Stats bar (blue strip) --}}
-    <section class="py-3" style="background-color:#076b96;color:#fff;" data-reveal>
-        <div class="container">
-            <div class="row">
-                <div class="col-12 text-center">
-                    <h3 class="mb-2" style="font-weight:600;">
-                        The most luxurious, elegant, and modern vacation rental in Temecula Wine Country
-                    </h3>
-                </div>
-            </div>
-            <div class="row text-center" style="font-weight:600;font-size:1.05rem;">
-                <div class="col-6 col-md-3 mb-2 mb-md-0">
-                    24 Guests
-                </div>
-                <div class="col-6 col-md-3 mb-2 mb-md-0">
-                    7 Bedrooms
-                </div>
-                <div class="col-6 col-md-3">
-                    12 Beds
-                </div>
-                <div class="col-6 col-md-3">
-                    5.5 Baths
-                </div>
+            <div class="vf-spaces" data-reveal>
+                <a class="vf-space" href="{{ url('/the-rooms') }}">
+                    <img loading="lazy" decoding="async" src="{{ asset('frontend/imgs/photos-for-vrbo/villa-fabulosa-living-room-12-card1x.webp') }}" srcset="{{ asset('frontend/imgs/photos-for-vrbo/villa-fabulosa-living-room-12-card1x.webp') }} 350w, {{ asset('frontend/imgs/photos-for-vrbo/villa-fabulosa-living-room-12-card.webp') }} 700w" sizes="(max-width: 767px) 100vw, (max-width: 1199px) 50vw, 380px" width="350" height="250" alt="Living room at Villa Fabulosa">
+                    <span class="vf-space__body">
+                        <span class="vf-space__title">The Rooms</span>
+                        <span class="vf-space__sub">7 bedrooms, 12 beds</span>
+                    </span>
+                    <span class="vf-space__arrow" aria-hidden="true">&rarr;</span>
+                </a>
+                <a class="vf-space" href="{{ url('/the-pool') }}">
+                    <img loading="lazy" decoding="async" src="{{ asset('frontend/imgs/photos-for-vrbo/villa-fabulosa-aerial-view-13-card1x.webp') }}" srcset="{{ asset('frontend/imgs/photos-for-vrbo/villa-fabulosa-aerial-view-13-card1x.webp') }} 350w, {{ asset('frontend/imgs/photos-for-vrbo/villa-fabulosa-aerial-view-13-card.webp') }} 700w" sizes="(max-width: 767px) 100vw, (max-width: 1199px) 50vw, 380px" width="350" height="250" alt="The pool at Villa Fabulosa">
+                    <span class="vf-space__body">
+                        <span class="vf-space__title">The Pool</span>
+                        <span class="vf-space__sub">Pool &amp; 14-person spa</span>
+                    </span>
+                    <span class="vf-space__arrow" aria-hidden="true">&rarr;</span>
+                </a>
+                <a class="vf-space" href="{{ url('/game-rooms') }}">
+                    <img loading="lazy" decoding="async" src="{{ asset('frontend/imgs/photos-for-vrbo/villa-fabulosa-game-room-05-card1x.webp') }}" srcset="{{ asset('frontend/imgs/photos-for-vrbo/villa-fabulosa-game-room-05-card1x.webp') }} 350w, {{ asset('frontend/imgs/photos-for-vrbo/villa-fabulosa-game-room-05-card.webp') }} 700w" sizes="(max-width: 767px) 100vw, (max-width: 1199px) 50vw, 380px" width="350" height="250" alt="Game room at Villa Fabulosa">
+                    <span class="vf-space__body">
+                        <span class="vf-space__title">Game Room</span>
+                        <span class="vf-space__sub">Arcade, pool table &amp; air hockey</span>
+                    </span>
+                    <span class="vf-space__arrow" aria-hidden="true">&rarr;</span>
+                </a>
+                <a class="vf-space" href="{{ url('/miniature-golf-course') }}">
+                    <img loading="lazy" decoding="async" src="{{ asset('frontend/imgs/photos-for-vrbo/villa-fabulosa-aerial-view-04-card1x.webp') }}" srcset="{{ asset('frontend/imgs/photos-for-vrbo/villa-fabulosa-aerial-view-04-card1x.webp') }} 350w, {{ asset('frontend/imgs/photos-for-vrbo/villa-fabulosa-aerial-view-04-card.webp') }} 700w" sizes="(max-width: 767px) 100vw, (max-width: 1199px) 50vw, 380px" width="350" height="250" alt="Aerial view of the miniature golf course">
+                    <span class="vf-space__body">
+                        <span class="vf-space__title">Miniature Golf</span>
+                        <span class="vf-space__sub">18 professional holes</span>
+                    </span>
+                    <span class="vf-space__arrow" aria-hidden="true">&rarr;</span>
+                </a>
+                <a class="vf-space" href="{{ url('/wineries') }}">
+                    <img loading="lazy" decoding="async" src="{{ asset('frontend/imgs/photos-for-vrbo/villa-fabulosa-villa-card1x.webp') }}" srcset="{{ asset('frontend/imgs/photos-for-vrbo/villa-fabulosa-villa-card1x.webp') }} 350w, {{ asset('frontend/imgs/photos-for-vrbo/villa-fabulosa-villa-card.webp') }} 700w" sizes="(max-width: 767px) 100vw, (max-width: 1199px) 50vw, 380px" width="350" height="250" alt="Villa Fabulosa estate">
+                    <span class="vf-space__body">
+                        <span class="vf-space__title">Wineries</span>
+                        <span class="vf-space__sub">55+ top-rated wineries nearby</span>
+                    </span>
+                    <span class="vf-space__arrow" aria-hidden="true">&rarr;</span>
+                </a>
+                <a class="vf-space" href="{{ url('/birds-eye') }}">
+                    <img loading="lazy" decoding="async" src="{{ asset('frontend/imgs/villa-fabulosa-aerial-view-108-card1x.webp') }}" srcset="{{ asset('frontend/imgs/villa-fabulosa-aerial-view-108-card1x.webp') }} 350w, {{ asset('frontend/imgs/villa-fabulosa-aerial-view-108-card.webp') }} 700w" sizes="(max-width: 767px) 100vw, (max-width: 1199px) 50vw, 380px" width="350" height="250" alt="Aerial view of the grounds">
+                    <span class="vf-space__body">
+                        <span class="vf-space__title">Bird&#39;s Eye View</span>
+                        <span class="vf-space__sub">The whole 5-acre estate</span>
+                    </span>
+                    <span class="vf-space__arrow" aria-hidden="true">&rarr;</span>
+                </a>
             </div>
         </div>
     </section>
 
-    {{-- Space & Layout + Rating / Availability --}}
-    <section class="py-5">
+    {{-- ══════════════════════════════════════════
+     STATS
+══════════════════════════════════════════ --}}
+    <section class="vf-stats" aria-labelledby="vfStatsTitle" data-reveal>
         <div class="container">
-            <div class="row">
-                {{-- Left column: space & layout lists --}}
-                <div class="col-lg-7 mb-4 mb-lg-0">
-                    <h4 class="mb-3" style="font-weight:700;">Space &amp; Layout</h4>
-                    <ol style="padding-left:1.2rem;">
-                        <li>Brand new, Ibiza-style home</li>
-                        <li>Super modern and elegant decor</li>
-                        <li>Amazing 360 degree views</li>
-                        <li>Bridal Suite for getting ready for the special event</li>
-                        <li>A chef's kitchen with two dishwashers and ice makers</li>
-                        <li>Every cooking gadget imaginable</li>
-                        <li>Impressive fireplace with a 22-foot ceiling</li>
-                        <li>Two Tesla chargers</li>
-                        <li>ADA-accessible bathroom</li>
-                    </ol>
+            <h2 class="vf-stats__title" id="vfStatsTitle">The most luxurious, elegant, and modern vacation rental in Temecula Wine Country</h2>
+            <ul class="vf-stats__list">
+                <li><span class="vf-stats__num">24</span><span class="vf-stats__label">Guests</span></li>
+                <li><span class="vf-stats__num">7</span><span class="vf-stats__label">Bedrooms</span></li>
+                <li><span class="vf-stats__num">12</span><span class="vf-stats__label">Beds</span></li>
+                <li><span class="vf-stats__num">5.5</span><span class="vf-stats__label">Baths</span></li>
+            </ul>
+        </div>
+    </section>
 
-                    <h4 class="mt-4 mb-3" style="font-weight:700;">Entertainment Paradise</h4>
-                    <ol style="padding-left:1.2rem;">
-                        <li>Professional 18-hole mini-golf</li>
-                        <li>Pickleball, basketball, and bocce courts</li>
-                        <li>Full arcade, poker table, shuffleboard, and air hockey</li>
-                        <li>Professional pool table</li>
-                        <li>Outdoor kitchen featuring pizza ovens, a teppanyaki grill, and BBQ station</li>
-                        <li>Designer pool with dual Baja shelves</li>
-                        <li>Two dining tables with seating for 16 guests</li>
-                        <li>An intimate, private setting</li>
-                        <li>In the center of wine country</li>
-                    </ol>
+    {{-- ══════════════════════════════════════════
+     AMENITIES + BOOKING
+     On wide screens the booking card stays in view while the amenity
+     lists scroll past it; on phones it comes first.
+══════════════════════════════════════════ --}}
+    <section class="vf-section vf-book" aria-labelledby="vfBookTitle">
+        <div class="container">
+            <div class="vf-book__grid">
+                <div class="vf-book__info">
+                    <p class="vf-eyebrow">Your stay</p>
+                    <h2 class="vf-h2" id="vfBookTitle">Everything a group getaway needs</h2>
+                    <div class="vf-rating">
+                        <span class="vf-rating__score">5.0</span>
+                        <span class="vf-rating__meta">
+                            <span class="vf-stars" aria-hidden="true"><svg viewBox="0 0 20 20" width="18" height="18" aria-hidden="true" focusable="false"><path fill="currentColor" d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L10 14.9l-5.2 2.7 1-5.8L1.5 7.7l5.9-.9z"/></svg><svg viewBox="0 0 20 20" width="18" height="18" aria-hidden="true" focusable="false"><path fill="currentColor" d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L10 14.9l-5.2 2.7 1-5.8L1.5 7.7l5.9-.9z"/></svg><svg viewBox="0 0 20 20" width="18" height="18" aria-hidden="true" focusable="false"><path fill="currentColor" d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L10 14.9l-5.2 2.7 1-5.8L1.5 7.7l5.9-.9z"/></svg><svg viewBox="0 0 20 20" width="18" height="18" aria-hidden="true" focusable="false"><path fill="currentColor" d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L10 14.9l-5.2 2.7 1-5.8L1.5 7.7l5.9-.9z"/></svg><svg viewBox="0 0 20 20" width="18" height="18" aria-hidden="true" focusable="false"><path fill="currentColor" d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L10 14.9l-5.2 2.7 1-5.8L1.5 7.7l5.9-.9z"/></svg></span>
+                            <span>31 reviews &middot; <span class="vf-badge">Guest favorite</span></span>
+                        </span>
+                        <span class="vf-rating__note">One of the most loved homes on Airbnb, according to guests</span>
+                    </div>
+                    <div class="vf-amenities">
+                        <div class="vf-amenities__card">
+                            <h3>Space &amp; Layout</h3>
+                            <ul class="vf-checks">
+                                <li>Brand new, Ibiza-style home</li>
+                                <li>Super modern and elegant decor</li>
+                                <li>Amazing 360 degree views</li>
+                                <li>Bridal Suite for getting ready for the special event</li>
+                                <li>A chef&#39;s kitchen with two dishwashers and ice makers</li>
+                                <li>Every cooking gadget imaginable</li>
+                                <li>Impressive fireplace with a 22-foot ceiling</li>
+                                <li>Two Tesla chargers</li>
+                                <li>ADA-accessible bathroom</li>
+                            </ul>
+                        </div>
+                        <div class="vf-amenities__card">
+                            <h3>Entertainment Paradise</h3>
+                            <ul class="vf-checks">
+                                <li>Professional 18-hole mini-golf</li>
+                                <li>Pickleball, basketball, and bocce courts</li>
+                                <li>Full arcade, poker table, shuffleboard, and air hockey</li>
+                                <li>Professional pool table</li>
+                                <li>Outdoor kitchen featuring pizza ovens, a teppanyaki grill, and BBQ station</li>
+                                <li>Designer pool with dual Baja shelves</li>
+                                <li>Two dining tables with seating for 16 guests</li>
+                                <li>An intimate, private setting</li>
+                                <li>In the center of wine country</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-
-                {{-- Right column: rating + availability card --}}
-                <div class="col-lg-5">
-                    <div class="mb-3 d-flex align-items-start">
-                        <div class="mr-3">
-                            <span class="badge badge-warning" style="background:#fbdc7d;color:#000;font-weight:600;">
-                                Guest favorite
-                            </span>
-                        </div>
-                        <div>
-                            <strong>One of the most loved homes on Airbnb, according to guests</strong>
-                        </div>
-                    </div>
-
-                    <div class="d-flex align-items-center mb-4">
-                        <div style="font-size:2.8rem;font-weight:700;line-height:1;">5.0</div>
-                        <div class="ml-2">
-                            <div style="color:#f5a623;">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                            </div>
-                            <div style="font-size:0.95rem;">31 Reviews</div>
-                        </div>
-                    </div>
-
+                <div class="vf-book__widget">
                     <div class="booking-widget-card" id="book">
 
                         {{-- Header --}}
@@ -2087,62 +2706,39 @@
         </div>
     </section>
 
-    {{-- Airbnb + Vrbo badges with wine country map --}}
-    <section class="pt-5 pb-4" style="background-color:#f7f7f7;" data-reveal>
+    {{-- ══════════════════════════════════════════
+     REVIEWS + LOCATION
+══════════════════════════════════════════ --}}
+    <section class="vf-section vf-section--sand vf-reviews" aria-labelledby="vfReviewsTitle">
         <div class="container">
-            <h2 class="site_title_letter_space text-center mb-4" style="color: #076b96;">What our customers say</h2>
+            <div class="vf-heading" data-reveal>
+                <p class="vf-eyebrow">Loved by guests</p>
+                <h2 class="vf-h2" id="vfReviewsTitle">What our customers say</h2>
+            </div>
+            <div class="vf-reviews__grid" data-reveal>
+                <a class="vf-review" href="https://www.airbnb.com/h/villa-fabulosa" target="_blank" rel="noopener">
+                    <img loading="lazy" decoding="async" src="{{ asset('frontend/imgs/villa-fabulosa-villa-2.webp') }}" alt="Airbnb" style="height:56px;width:auto;">
+                    <span class="vf-review__score"><strong>5.0</strong> <span class="vf-stars" aria-hidden="true"><svg viewBox="0 0 20 20" width="18" height="18" aria-hidden="true" focusable="false"><path fill="currentColor" d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L10 14.9l-5.2 2.7 1-5.8L1.5 7.7l5.9-.9z"/></svg><svg viewBox="0 0 20 20" width="18" height="18" aria-hidden="true" focusable="false"><path fill="currentColor" d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L10 14.9l-5.2 2.7 1-5.8L1.5 7.7l5.9-.9z"/></svg><svg viewBox="0 0 20 20" width="18" height="18" aria-hidden="true" focusable="false"><path fill="currentColor" d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L10 14.9l-5.2 2.7 1-5.8L1.5 7.7l5.9-.9z"/></svg><svg viewBox="0 0 20 20" width="18" height="18" aria-hidden="true" focusable="false"><path fill="currentColor" d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L10 14.9l-5.2 2.7 1-5.8L1.5 7.7l5.9-.9z"/></svg><svg viewBox="0 0 20 20" width="18" height="18" aria-hidden="true" focusable="false"><path fill="currentColor" d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L10 14.9l-5.2 2.7 1-5.8L1.5 7.7l5.9-.9z"/></svg></span></span>
+                    <span class="vf-review__text">One of the most loved homes on Airbnb, according to guests</span>
+                </a>
+                <a class="vf-review" href="https://vrbo.com/3610312?dateless=true" target="_blank" rel="noopener">
+                    <img loading="lazy" decoding="async" src="{{ asset('frontend/imgs/villa-fabulosa-villa-3.webp') }}" alt="Vrbo" style="height:34px;width:auto;">
+                    <span class="vf-review__score"><strong>10/10</strong> Loved by Guests</span>
+                    <span class="vf-review__text">Top 10% of guest reviews in this area</span>
+                </a>
+            </div>
 
-            {{-- Top badges bar --}}
-            <div class="card border-0 shadow-sm mb-4">
-                <div class="card-body d-flex flex-wrap align-items-center justify-content-between">
-                    {{-- Airbnb badge (left) --}}
-                    <a href="https://www.airbnb.com/h/villa-fabulosa" target="_blank"
-                        class="d-flex align-items-center text-decoration-none mb-3 mb-md-0">
-                        <img loading="lazy" decoding="async" src="{{ asset('frontend/imgs/villa-fabulosa-villa-2.webp') }}" alt="Airbnb"
-                            style="height:74px;width:auto;" class="mr-3">
-                        <div class="d-flex flex-column">
-                            <span style="font-size:1rem;">
-                                <strong>5.0</strong>
-                                <span style="color:#f5a623;margin-left:4px;">
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                </span>
-                            </span>
-                            <span class="text-muted" style="font-size:0.85rem;">
-                                One of the most loved homes on Airbnb, according to guests
-                            </span>
-                        </div>
-                    </a>
-
-                    {{-- Vrbo badge (right) --}}
-                    <a href="https://vrbo.com/3610312?dateless=true" target="_blank"
-                        class="d-flex align-items-center text-decoration-none ml-md-auto">
-                        <img loading="lazy" decoding="async" src="{{ asset('frontend/imgs/villa-fabulosa-villa-3.webp') }}" alt="Vrbo" style="height:34px;width:auto;"
-                            class="mr-3">
-                        <div class="d-flex flex-column text-md-right">
-                            <span class="text-muted" style="font-size:0.85rem;">
-                                10/10 Loved by Guests
-                            </span>
-                            <span class="text-muted" style="font-size:0.85rem;">
-                                Top 10% of guest reviews in this area
-                            </span>
-                        </div>
-                    </a>
+            <div class="vf-location" data-reveal>
+                <div class="vf-location__text">
+                    <p class="vf-eyebrow">Location</p>
+                    <h3 class="vf-h3">Located in the heart of Wine Country</h3>
+                    <p>More than 55 top&#8209;rated wineries, many with excellent restaurants, surround the estate.</p>
+                    <a class="vf-link" href="{{ url('/wineries') }}">Explore nearby wineries</a>
                 </div>
-            </div>
-
-            {{-- Map section --}}
-            <div class="text-center mb-3">
-                <h3 class="mb-2" style="font-weight:600; color: #076b96;">Located in the heart of Wine Country</h3>
-                <hr class="mb-4" style="border-top:1px solid #ddd;max-width:260px;">
-            </div>
-            <div class="text-center">
-                <img loading="lazy" decoding="async" src="{{ asset('frontend/imgs/villa-fabulosa-wine-room.webp') }}"
-                    alt="Temecula Wine Country map showing Villa Fabulosa" class="img-fluid"
-                    style="max-width:100%;height:auto;">
+                <div class="vf-location__map">
+                    <img loading="lazy" decoding="async" src="{{ asset('frontend/imgs/villa-fabulosa-wine-room.webp') }}"
+                        alt="Temecula Wine Country map showing Villa Fabulosa">
+                </div>
             </div>
         </div>
     </section>
@@ -2672,7 +3268,7 @@
             if (reduceMotion) return;
 
             if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
-                document.querySelectorAll('.site_service_box').forEach(function (box) {
+                document.querySelectorAll('.vf-space').forEach(function (box) {
                     box.addEventListener('pointermove', function (e) {
                         var r = box.getBoundingClientRect();
                         var x = (e.clientX - r.left) / r.width - 0.5;

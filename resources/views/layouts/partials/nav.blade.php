@@ -2,6 +2,9 @@
 <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light" id="mainNav" aria-label="Main navigation">
     <div class="container-fluid">
         <a class="navbar-brand" href="{{ url('/') }}"><span class="h3">Villa Fabulosa</span></a>
+        @if (request()->routeIs('home-3d-preview', 'home-3d-walk-preview'))
+            @include('layouts.partials.nav-book-cta')
+        @endif
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
