@@ -1,0 +1,11 @@
+const fs = require('fs');
+const path = require('path');
+const [id, url, topic] = process.argv.slice(2);
+if (!['005','006','007'].includes(id) || !/^https:\/\/www\.pinterest\.com\/pin\/[0-9]+\/$/.test(url)) throw Error('Unexpected pin ID or URL');
+const file = path.resolve(__dirname, '../docs/pinterest/batch-2026-10-20.json');
+const data = JSON.parse(fs.readFileSync(file, 'utf8'));
+const post = data.posts.find(p => p.id === id);
+if (!post || (post.published_url && post.published_url !== url)) throw Error('Conflicting publication record');
+Object.assign(post, {published_url: url, posted_date: '2026-10-20', status: 'published', topic_tags: topic ? [topic] : [], topic_edit_status: 'Selected in creation form; saved-state topic readback not yet checked'});
+fs.writeFileSync(file, JSON.stringify(data, null, 2) + '\n', 'utf8');
+console.log(JSON.stringify({id, url, status: post.status}));

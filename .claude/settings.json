@@ -49,7 +49,14 @@
       "Bash(grep -n '$booking->\\\\|@php\\\\|compact\\(' resources/views/frontend/booking-success.blade.php)",
       "Bash(curl -s -o /dev/null -w \"  HTTP %{http_code}\\\\n\" \"http://127.0.0.1:8899/booking/success\")",
       "Bash(curl -s \"http://127.0.0.1:8899/booking/success\")",
-      "Bash(xargs echo \"  purchase event present:\")"
+      "Bash(xargs echo \"  purchase event present:\")",
+      "Bash(cd d:/laravel/villafab-laravel && ls -la .claude/ 2>/dev/null && echo \"--- skills ---\" && ls -R .claude/skills 2>/dev/null || echo \"no skills dir yet\"; echo \"--- user-level skills ---\"; ls ~/.claude/skills 2>/dev/null | head)",
+      "Read(//c/Users/lenovo/.claude/**)",
+      "Bash(mkdir -p ~/.claude/skills/optimize-site)",
+      "Read(//c/Users/lenovo/.claude/skills/**)",
+      "Edit(~/.claude/skills/optimize-site/**)",
+      "Read(//c/Users/lenovo/.claude/skills/optimize-site/**)",
+      "Bash(python -c ' *)"
     ]
   }
 }

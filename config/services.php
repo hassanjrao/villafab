@@ -41,6 +41,10 @@ return [
         'measurement_id' => env('GA_MEASUREMENT_ID', 'G-4YSNM6JHV9'),
     ],
 
+    'pinterest' => [
+        'domain_verify' => env('PINTEREST_DOMAIN_VERIFY'),
+    ],
+
     'recaptcha' => [
         'enabled'  => env('RECAPTCHA_ENABLED', false),
         'site_key' => env('RECAPTCHA_SITE_KEY'),

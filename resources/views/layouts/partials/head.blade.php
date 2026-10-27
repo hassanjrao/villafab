@@ -8,6 +8,7 @@
     $seoRobots      = trim($__env->yieldContent('robots', $seo['robots']));
     $seoImage       = \App\Support\Seo::absolute(trim($__env->yieldContent('og_image', $seo['image'])));
     $seoCanonical   = \App\Support\Seo::canonical();
+    $pinterestDomainVerify = trim((string) config('services.pinterest.domain_verify', ''));
 @endphp
 
 @include('layouts.partials.analytics')
@@ -16,6 +17,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="csrf-token" content="{{ csrf_token() }}">
+@if ($pinterestDomainVerify !== '')
+<meta name="p:domain_verify" content="{{ $pinterestDomainVerify }}">
+@endif
 
 <title>{{ $seoTitle }}</title>
 <meta name="description" content="{{ $seoDescription }}">
