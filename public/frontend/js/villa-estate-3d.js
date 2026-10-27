@@ -81,7 +81,9 @@ function createWorld(stage, options) {
     renderer.outputColorSpace = THREE.SRGBColorSpace;
     renderer.toneMapping = THREE.ACESFilmicToneMapping;
     renderer.shadowMap.enabled = true;
-    renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+    // Plain PCF: soft shadows cost a much longer shader compile on
+    // integrated GPUs for little visible gain at this scale.
+    renderer.shadowMap.type = THREE.PCFShadowMap;
     const canvas = renderer.domElement;
     canvas.className = options.canvasClass || 'estate-hero__canvas';
     canvas.setAttribute('aria-hidden', 'true');
@@ -526,12 +528,19 @@ function createWorld(stage, options) {
         M.flame.color.setHSL(0.08, 1, 0.45 + t * 0.15);
     }
 
-    return { renderer, scene, camera, canvas, applyLighting, waterUniforms };
+    // Compile every shader before the first frame without blocking the main
+    // thread (parallel where the driver supports it), so scrolling never
+    // freezes while the model warms up. Resolves once it is safe to render.
+    function warmUp() {
+        return renderer.compileAsync(scene, camera).catch(() => {});
+    }
+
+    return { renderer, scene, camera, canvas, applyLighting, waterUniforms, warmUp };
 }
 
 export function mountEstate(stage, options = {}) {
     const reducedMotion = !!options.reducedMotion;
-    const { renderer, scene, camera, canvas, applyLighting, waterUniforms } = createWorld(stage, options);
+    const { renderer, scene, camera, canvas, applyLighting, waterUniforms, warmUp } = createWorld(stage, options);
     let duskT = options.mode === 'day' ? 0 : 1, duskGoal = duskT;
     applyLighting(duskT);
 
@@ -664,15 +673,21 @@ export function mountEstate(stage, options = {}) {
         updatePins(width, height);
         raf = requestAnimationFrame(frame);
     }
-    const kick = () => { if (!raf && running && visible && !document.hidden) { last = performance.now(); raf = requestAnimationFrame(frame); } };
+    let ready = false;
+    const kick = () => { if (ready && !raf && running && visible && !document.hidden) { last = performance.now(); raf = requestAnimationFrame(frame); } };
     const io = new IntersectionObserver(entries => { visible = entries[0].isIntersecting; kick(); });
     io.observe(stage);
     document.addEventListener('visibilitychange', kick);
     canvas.addEventListener('webglcontextlost', e => { e.preventDefault(); running = false; options.onLost && options.onLost(); });
 
     placeCamera();
-    renderer.render(scene, camera);
-    kick();
+    warmUp().then(() => {
+        if (!running) return;
+        ready = true;
+        renderer.render(scene, camera);
+        options.onReady && options.onReady();
+        kick();
+    });
 
     return {
         focus(id) {
@@ -724,7 +739,7 @@ const WALK = {
 
 export function mountEstateWalk(stage, options = {}) {
     const reducedMotion = !!options.reducedMotion;
-    const { renderer, scene, camera, applyLighting, waterUniforms } = createWorld(stage, options);
+    const { renderer, scene, camera, applyLighting, waterUniforms, warmUp } = createWorld(stage, options);
     const keys = (options.chapters || Object.keys(WALK)).map(id => WALK[id] || WALK.arrive);
     const last = keys.length - 1;
     const curve = (pick) => new THREE.CatmullRomCurve3(keys.map(k => new THREE.Vector3(...pick(k))), false, 'centripetal');
@@ -783,7 +798,8 @@ export function mountEstateWalk(stage, options = {}) {
         renderer.render(scene, camera);
         raf = requestAnimationFrame(frame);
     }
-    const kick = () => { if (!raf && running && visible && !document.hidden) { lastNow = performance.now(); raf = requestAnimationFrame(frame); } };
+    let ready = false;
+    const kick = () => { if (ready && !raf && running && visible && !document.hidden) { lastNow = performance.now(); raf = requestAnimationFrame(frame); } };
     const io = new IntersectionObserver(entries => { visible = entries[0].isIntersecting; kick(); });
     io.observe(stage);
     document.addEventListener('visibilitychange', kick);
@@ -791,8 +807,15 @@ export function mountEstateWalk(stage, options = {}) {
 
     target = current = Math.min(Math.max(options.progress || 0, 0), last);
     place(0);
-    renderer.render(scene, camera);
-    kick();
+    warmUp().then(() => {
+        if (!running) return;
+        ready = true;
+        current = target;
+        place(0);
+        renderer.render(scene, camera);
+        options.onReady && options.onReady();
+        kick();
+    });
 
     return {
         // k is the chapter position: 0 = first chapter, 1.5 = halfway between the second and third.

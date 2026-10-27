@@ -783,6 +783,11 @@
                     progress: measure(),
                     reducedMotion: reduceMotion,
                     canvasClass: 'estate-walk__canvas',
+                    onReady: function () {
+                        walk.classList.add('is-3d');
+                        note.hidden = false;
+                        update();
+                    },
                     onLost: function () {
                         walk.classList.remove('is-3d');
                         note.hidden = true;
@@ -790,9 +795,6 @@
                         update();
                     }
                 });
-                walk.classList.add('is-3d');
-                note.hidden = false;
-                update();
             }).catch(function (err) {
                 // The photo crossfade already covers every chapter.
                 if (window.console) console.warn('3D walkthrough unavailable:', err);

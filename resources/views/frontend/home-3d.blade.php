@@ -2638,6 +2638,11 @@
                         reducedMotion: reduceMotion,
                         labels: labels,
                         onPick: openSpot,
+                        onReady: function () {
+                            hero.classList.add('is-3d');
+                            tools.hidden = false;
+                            hint.hidden = false;
+                        },
                         onLost: function () {
                             hero.classList.remove('is-3d');
                             tools.hidden = true;
@@ -2645,9 +2650,6 @@
                             api = null;
                         }
                     });
-                    hero.classList.add('is-3d');
-                    tools.hidden = false;
-                    hint.hidden = false;
                     if (current) api.focus(current);
                 }).catch(function (err) {
                     // The poster and spot cards still work; nothing else to do.
