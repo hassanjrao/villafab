@@ -1499,6 +1499,9 @@
 
 @section('content')
 
+    @if (($estateMode ?? 'explore') === 'walk')
+        @include('frontend.partials.estate-walk')
+    @else
     {{-- ══════════════════════════════════════════
      3D ESTATE HERO
      The poster photo is the LCP element and the whole experience without
@@ -1605,6 +1608,7 @@
             </div>
         </div>
     </section>
+    @endif
 
     {{-- ══════════════════════════════════════════
      PHOTO TOUR STRIP  (the former Airbnb-style hero)

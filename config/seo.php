@@ -194,6 +194,7 @@ return [
         // sitemap. Phase 4 consolidates them into one "where to book" page.
         // Redesign preview shown to the client; it duplicates the home page.
         'home-3d-preview' => ['robots' => 'noindex,nofollow'],
+        'home-3d-walk-preview' => ['robots' => 'noindex,nofollow'],
 
         'airbnb'       => ['robots' => 'noindex,follow'],
         'vrbo'         => ['robots' => 'noindex,follow'],

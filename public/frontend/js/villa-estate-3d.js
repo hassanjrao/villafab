@@ -69,8 +69,10 @@ function terrainHeight(x, z) {
 
 const easeInOut = t => (t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2);
 
-export function mountEstate(stage, options = {}) {
-    const reducedMotion = !!options.reducedMotion;
+// Builds the renderer, scene and lights shared by both experiences: the
+// orbit-and-hotspots hero (mountEstate) and the scroll walkthrough
+// (mountEstateWalk). applyLighting(t) blends day (0) to dusk (1).
+function createWorld(stage, options) {
     const isSmall = Math.min(window.innerWidth, window.innerHeight) < 700;
 
     // ── Renderer ───────────────────────────────────────────────────────────
@@ -81,7 +83,7 @@ export function mountEstate(stage, options = {}) {
     renderer.shadowMap.enabled = true;
     renderer.shadowMap.type = THREE.PCFSoftShadowMap;
     const canvas = renderer.domElement;
-    canvas.className = 'estate-hero__canvas';
+    canvas.className = options.canvasClass || 'estate-hero__canvas';
     canvas.setAttribute('aria-hidden', 'true');
     stage.appendChild(canvas);
 
@@ -423,9 +425,10 @@ export function mountEstate(stage, options = {}) {
     instancedBoxes(M.black, posts, { cast: false });
 
     // ── Surroundings: vines, solar array, mini golf, trees, neighbours ────
-    const stakes = [];
-    for (let x = -74; x < -48; x += 1.8) for (let z = -30; z < 24; z += 2.4) stakes.push({ x, y: PLATEAU_Y + 0.6, z, sx: 0.07, sy: 1.2, sz: 0.07 });
-    instancedBoxes(M.wood, stakes, { cast: false });
+    // Vine rows on the slope beside the drive.
+    const vines = [];
+    for (let x = -74; x < -48; x += 2.2) vines.push({ x, y: PLATEAU_Y + 0.35, z: -4, sx: 0.55, sy: 0.7, sz: 52 });
+    instancedBoxes(M.cypress, vines, { cast: false });
     const solar = [];
     for (let i = 0; i < 4; i++) solar.push({ x: 43 + i * 4.5, y: PLATEAU_Y + 1.1, z: 6, sx: 3.2, sy: 0.12, sz: 26, rz: 0.42 });
     instancedBoxes(M.solar, solar);
@@ -498,7 +501,6 @@ export function mountEstate(stage, options = {}) {
     // ── Day / dusk ─────────────────────────────────────────────────────────
     const cA = new THREE.Color(), cB = new THREE.Color();
     const mixHex = (a, b, t, out) => out.copy(cA.set(a)).lerp(cB.set(b), t);
-    let duskT = options.mode === 'day' ? 0 : 1, duskGoal = duskT;
     function applyLighting(t) {
         const D = PALETTES.day, N = PALETTES.dusk, L = (a, b) => a + (b - a) * t;
         mixHex(D.skyTop, N.skyTop, t, skyUniforms.uTop.value);
@@ -523,6 +525,14 @@ export function mountEstate(stage, options = {}) {
         warmLights.forEach(l => { l.intensity = t * 140; });
         M.flame.color.setHSL(0.08, 1, 0.45 + t * 0.15);
     }
+
+    return { renderer, scene, camera, canvas, applyLighting, waterUniforms };
+}
+
+export function mountEstate(stage, options = {}) {
+    const reducedMotion = !!options.reducedMotion;
+    const { renderer, scene, camera, canvas, applyLighting, waterUniforms } = createWorld(stage, options);
+    let duskT = options.mode === 'day' ? 0 : 1, duskGoal = duskT;
     applyLighting(duskT);
 
     // ── Camera rig: orbit, drag, fly-to ───────────────────────────────────
@@ -686,6 +696,113 @@ export function mountEstate(stage, options = {}) {
             ro.disconnect(); io.disconnect();
             renderer.dispose();
             canvas.remove(); pinLayer.remove();
+        },
+    };
+}
+
+// ── Scroll walkthrough ────────────────────────────────────────────────────
+// One camera stop per tour chapter. pos/look are world points, dusk is the
+// lighting at that stop (the tour moves from late afternoon into dusk as
+// visitors reach the pool), fov widens for eye-level shots. The interior
+// stops sit at the patio doors: the page crossfades to the real interior
+// photos there, since the model has no rooms inside.
+const WALK = {
+    arrive:   { pos: [-96, 36, 98],   look: [2, 0, -6],     dusk: 0.38, fov: 38 },
+    drive:    { pos: [-44, 4.2, 38],  look: [-36, 1.5, -6], dusk: 0.45, fov: 50 },
+    court:    { pos: [-38, 6.5, 13],  look: [-20, 0, -3],   dusk: 0.55, fov: 48 },
+    lawn:     { pos: [-13, 3.2, 31],  look: [-3, 0.5, 6],   dusk: 0.7,  fov: 52 },
+    pool:     { pos: [2, 3.6, 11],    look: [11, 0, -6],    dusk: 0.92, fov: 52 },
+    pavilion: { pos: [15, 2.3, 7],    look: [24, 1.4, -3],  dusk: 1,    fov: 54 },
+    kitchen:  { pos: [10, 2.2, -5],   look: [15, 1.6, -19], dusk: 1,    fov: 54 },
+    living:   { pos: [4, 2, -8],      look: [1.5, 2, -16],  dusk: 1,    fov: 50 },
+    dining:   { pos: [3, 2, -9.4],    look: [0, 2, -16],    dusk: 1,    fov: 50 },
+    bedrooms: { pos: [1, 5.6, -9.2],  look: [-3, 5.4, -16], dusk: 1,    fov: 50 },
+    game:     { pos: [-7.5, 2, -8.6], look: [-9, 2, -16],   dusk: 1,    fov: 50 },
+    golf:     { pos: [46, 24, 102],   look: [65, 0, 64],    dusk: 1,    fov: 44 },
+    finale:   { pos: [-84, 40, 104],  look: [2, 0, -6],     dusk: 1,    fov: 38 },
+};
+
+export function mountEstateWalk(stage, options = {}) {
+    const reducedMotion = !!options.reducedMotion;
+    const { renderer, scene, camera, applyLighting, waterUniforms } = createWorld(stage, options);
+    const keys = (options.chapters || Object.keys(WALK)).map(id => WALK[id] || WALK.arrive);
+    const last = keys.length - 1;
+    const curve = (pick) => new THREE.CatmullRomCurve3(keys.map(k => new THREE.Vector3(...pick(k))), false, 'centripetal');
+    const posCurve = curve(k => k.pos), lookCurve = curve(k => k.look);
+    const smootherstep = x => x * x * x * (x * (x * 6 - 15) + 10);
+
+    let target = 0, current = 0, dusk = -1, time = 0;
+    let width = 0, height = 0, running = true, visible = true, raf = 0, lastNow = performance.now();
+    const look = new THREE.Vector3();
+
+    // Keep the subject clear of the chapter card: right of centre on wide
+    // screens (card on the left), above centre on narrow ones (card below).
+    function resize() {
+        width = stage.clientWidth; height = stage.clientHeight;
+        if (!width || !height) return;
+        renderer.setSize(width, height, false);
+        camera.aspect = width / height;
+        const fx = width >= 992 ? 0.62 : 0.5, fy = width >= 992 ? 0.5 : 0.3;
+        const fw = width * (1 + 2 * Math.abs(fx - 0.5)), fh = height * (1 + 2 * Math.abs(fy - 0.5));
+        camera.setViewOffset(fw, fh, fx < 0.5 ? fw - width : 0, fy < 0.5 ? fh - height : 0, width, height);
+    }
+    const ro = new ResizeObserver(resize);
+    ro.observe(stage);
+    resize();
+
+    function place(dt) {
+        const k = Math.min(Math.max(current, 0), last);
+        const seg = Math.min(Math.floor(k), Math.max(last - 1, 0));
+        const f = k - seg;
+        // Dwell at each stop while its card is readable, travel in between.
+        const e = reducedMotion ? (f < 0.5 ? 0 : 1) : smootherstep(Math.min(Math.max((f - 0.2) / 0.6, 0), 1));
+        const t = last ? (seg + e) / last : 0;
+        const a = keys[seg], b = keys[Math.min(seg + 1, last)];
+        posCurve.getPoint(t, camera.position);
+        lookCurve.getPoint(t, look);
+        // A gentle stride while moving at eye level.
+        const speed = Math.min(Math.abs(target - current) * 4, 1);
+        if (!reducedMotion && camera.position.y < 8) camera.position.y += Math.sin(time * 8) * 0.06 * speed;
+        camera.fov = a.fov + (b.fov - a.fov) * e;
+        camera.updateProjectionMatrix();
+        camera.lookAt(look);
+        const d = a.dusk + (b.dusk - a.dusk) * e;
+        if (Math.abs(d - dusk) > 0.002) { dusk = d; applyLighting(d); }
+    }
+
+    function frame(now) {
+        raf = 0;
+        if (!running || !visible || document.hidden) return;
+        const dt = Math.min((now - lastNow) / 1000, 0.05);
+        lastNow = now;
+        time += dt;
+        waterUniforms.uTime.value += dt;
+        current += (target - current) * (reducedMotion ? 1 : 1 - Math.exp(-dt * 3.2));
+        if (Math.abs(target - current) < 0.0005) current = target;
+        place(dt);
+        renderer.render(scene, camera);
+        raf = requestAnimationFrame(frame);
+    }
+    const kick = () => { if (!raf && running && visible && !document.hidden) { lastNow = performance.now(); raf = requestAnimationFrame(frame); } };
+    const io = new IntersectionObserver(entries => { visible = entries[0].isIntersecting; kick(); });
+    io.observe(stage);
+    document.addEventListener('visibilitychange', kick);
+    renderer.domElement.addEventListener('webglcontextlost', e => { e.preventDefault(); running = false; options.onLost && options.onLost(); });
+
+    target = current = Math.min(Math.max(options.progress || 0, 0), last);
+    place(0);
+    renderer.render(scene, camera);
+    kick();
+
+    return {
+        // k is the chapter position: 0 = first chapter, 1.5 = halfway between the second and third.
+        setProgress(k) { target = Math.min(Math.max(k, 0), last); kick(); },
+        destroy() {
+            running = false;
+            cancelAnimationFrame(raf);
+            ro.disconnect(); io.disconnect();
+            renderer.dispose();
+            renderer.domElement.remove();
         },
     };
 }

@@ -23,6 +23,11 @@ class FrontendController extends Controller
         return view('frontend.home-3d');
     }
 
+    public function homePreview3dWalk()
+    {
+        return view('frontend.home-3d', ['estateMode' => 'walk']);
+    }
+
     public function about()
     {
         return view('frontend.about');
