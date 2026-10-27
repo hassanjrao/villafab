@@ -192,6 +192,9 @@ return [
         // These target other companies' brand names and cannot rank. They are
         // kept live for existing links but excluded from the index and the
         // sitemap. Phase 4 consolidates them into one "where to book" page.
+        // Redesign preview shown to the client; it duplicates the home page.
+        'home-3d-preview' => ['robots' => 'noindex,nofollow'],
+
         'airbnb'       => ['robots' => 'noindex,follow'],
         'vrbo'         => ['robots' => 'noindex,follow'],
         'trip-advisor' => ['robots' => 'noindex,follow'],

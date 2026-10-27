@@ -18,6 +18,11 @@ class FrontendController extends Controller
         return view('frontend.home');
     }
 
+    public function homePreview3d()
+    {
+        return view('frontend.home-3d');
+    }
+
     public function about()
     {
         return view('frontend.about');

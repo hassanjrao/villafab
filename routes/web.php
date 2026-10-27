@@ -26,6 +26,9 @@ Route::get('/sitemap.xml', [SitemapController::class, 'index'])->name('sitemap')
 
 // Main pages
 Route::get('/', [FrontendController::class, 'home'])->name('home');
+// Redesigned home page with the interactive 3D estate, for client review
+// before it replaces the live home page. Noindexed in config/seo.php.
+Route::get('/preview/home-3d', [FrontendController::class, 'homePreview3d'])->name('home-3d-preview');
 Route::get('/about', [FrontendController::class, 'about'])->name('about');
 Route::get('/instructions', [FrontendController::class, 'instructions'])->name('instructions');
 Route::get('/your-hosts', [FrontendController::class, 'yourHosts'])->name('your-hosts');
