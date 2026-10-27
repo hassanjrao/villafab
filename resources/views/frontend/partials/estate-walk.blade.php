@@ -120,16 +120,24 @@
     .estate-walk__chapters {
         position: relative;
         z-index: 5;
+        pointer-events: none;
         margin-top: calc(-100vh + var(--nav));
         margin-top: calc(-100svh + var(--nav));
     }
 
+    /* The chapter layer scrolls over the pinned stage. Only the cards take
+       the pointer, so the stop rail underneath stays clickable. */
     .walk-chapter {
         height: calc(100vh - var(--nav));
         height: calc(100svh - var(--nav));
         display: flex;
         align-items: center;
         padding: 0 clamp(20px, 5vw, 80px);
+        pointer-events: none;
+    }
+
+    .walk-chapter > * {
+        pointer-events: auto;
     }
 
     .walk-chapter--finale {
@@ -354,8 +362,8 @@
         align-items: center;
         justify-content: flex-end;
         gap: 10px;
-        min-height: 28px;
-        padding: 0 4px;
+        min-height: 30px;
+        padding: 0 4px 0 12px;
         border: 0;
         background: none;
         color: #fff;
@@ -365,10 +373,16 @@
     }
 
     .walk-rail__label {
+        padding: 4px 10px;
+        border-radius: 999px;
+        background: rgba(11, 20, 48, 0.72);
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+        white-space: nowrap;
         opacity: 0;
         transform: translateX(6px);
         transition: opacity 0.2s ease, transform 0.2s ease;
-        text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+        pointer-events: none;
     }
 
     .walk-rail button:hover .walk-rail__label,
@@ -384,6 +398,12 @@
         border-radius: 50%;
         border: 2px solid rgba(255, 255, 255, 0.8);
         transition: background 0.2s ease, transform 0.2s ease;
+    }
+
+    .walk-rail button:hover .walk-rail__dot,
+    .walk-rail button:focus-visible .walk-rail__dot {
+        background: #fff;
+        transform: scale(1.3);
     }
 
     .walk-rail button[aria-current="step"] .walk-rail__dot {
