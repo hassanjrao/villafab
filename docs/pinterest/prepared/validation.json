@@ -1,8 +1,8 @@
 {
-  "date": "2026-10-26",
+  "date": "2026-11-08",
   "timezone": "Asia/Karachi",
   "status": "passed",
-  "prepared_count": 64,
+  "prepared_count": 30,
   "existing_published_count": 11,
   "campaign_count": 75,
   "individual_folder_count": 64,
@@ -13,9 +13,8 @@
   "all_actual_dimensions": "1024x1536",
   "generated_with": "Built-in image_gen.imagegen; one call per asset",
   "assets_saved_unchanged": true,
-  "owner_review": "pending",
-  "published_or_scheduled_this_batch": false,
-  "notes": "Local asset/copy checks only. No new Pinterest saved fields were verified. Agent visual review is recorded in each review.json; generative crop/color/fine-detail changes remain documented.",
+  "owner_review": "Standing calendar and rolling scheduling authorization remains active; future queue refills are authorized.",
+  "notes": "Original artwork, prompts and visual-review history remain unchanged. Original 13 Pins were moved without changing URLs. Current totals: 35 published, 10 saved future schedules, 30 planned backlog; 32 schedules have been saved historically. Future posted dates/public URLs and unmeasured metrics remain blank. Scheduled alt/AI/person/Ad-only were checked pre-submission only, without saved-state readback.",
   "checks": [
     {
       "id": "012",
@@ -29,7 +28,26 @@
       "original_copy_matches": true,
       "copy_valid": true,
       "local_visual_review": true,
-      "live_verified": false
+      "live_verified": true,
+      "status": "published",
+      "published_url": "https://www.pinterest.com/pin/743868063501315548/",
+      "posted_date": "2026-10-27",
+      "verification_date": "2026-10-27",
+      "verification_fields": [
+        "title",
+        "description",
+        "destination",
+        "manual_ai_disclosure",
+        "board",
+        "alt_text",
+        "ad_only"
+      ],
+      "planned_board": "Group Vacation Home & Family Reunion Ideas",
+      "planned_publication_local": null,
+      "scheduled_date": null,
+      "saved_schedule_verified": false,
+      "scheduled_pin_id": null,
+      "schedule_verification_scope": null
     },
     {
       "id": "013",
@@ -43,7 +61,26 @@
       "original_copy_matches": true,
       "copy_valid": true,
       "local_visual_review": true,
-      "live_verified": false
+      "live_verified": true,
+      "status": "published",
+      "published_url": "https://www.pinterest.com/pin/743868063501315592/",
+      "posted_date": "2026-10-27",
+      "verification_date": "2026-10-27",
+      "verification_fields": [
+        "title",
+        "description",
+        "destination",
+        "manual_ai_disclosure",
+        "board",
+        "alt_text",
+        "ad_only"
+      ],
+      "planned_board": "Temecula Wine Country Vacation Rental",
+      "planned_publication_local": null,
+      "scheduled_date": null,
+      "saved_schedule_verified": false,
+      "scheduled_pin_id": null,
+      "schedule_verification_scope": null
     },
     {
       "id": "014",
@@ -57,7 +94,16 @@
       "original_copy_matches": true,
       "copy_valid": true,
       "local_visual_review": true,
-      "live_verified": false
+      "live_verified": true,
+      "status": "published",
+      "planned_board": "Villa Fabulosa | Luxury Estate & Resort Amenities",
+      "planned_publication_local": "2026-10-28T10:00:00+05:00",
+      "scheduled_date": null,
+      "saved_schedule_verified": false,
+      "scheduled_pin_id": null,
+      "schedule_verification_scope": null,
+      "published_url": "https://www.pinterest.com/pin/743868063501327808/",
+      "posted_date": "2026-10-28"
     },
     {
       "id": "015",
@@ -71,7 +117,16 @@
       "original_copy_matches": true,
       "copy_valid": true,
       "local_visual_review": true,
-      "live_verified": false
+      "live_verified": false,
+      "status": "prepared",
+      "planned_board": "Villa Fabulosa | Luxury Estate & Resort Amenities",
+      "planned_publication_local": "2026-11-18T20:00:00+05:00",
+      "scheduled_date": null,
+      "saved_schedule_verified": false,
+      "scheduled_pin_id": null,
+      "schedule_verification_scope": null,
+      "published_url": null,
+      "posted_date": null
     },
     {
       "id": "016",
@@ -85,7 +140,16 @@
       "original_copy_matches": true,
       "copy_valid": true,
       "local_visual_review": true,
-      "live_verified": false
+      "live_verified": false,
+      "status": "prepared",
+      "planned_board": "Resort-Style Pool & Outdoor Living",
+      "planned_publication_local": "2026-11-16T15:00:00+05:00",
+      "scheduled_date": null,
+      "saved_schedule_verified": false,
+      "scheduled_pin_id": null,
+      "schedule_verification_scope": null,
+      "published_url": null,
+      "posted_date": null
     },
     {
       "id": "017",
@@ -99,7 +163,38 @@
       "original_copy_matches": true,
       "copy_valid": true,
       "local_visual_review": true,
-      "live_verified": false
+      "live_verified": false,
+      "status": "scheduled",
+      "planned_board": "Group Vacation Home & Family Reunion Ideas",
+      "planned_publication_local": "2026-11-10T15:00:00+05:00",
+      "scheduled_date": "2026-11-10T15:00:00+05:00",
+      "saved_schedule_verified": true,
+      "scheduled_pin_id": "4016172564975488512",
+      "schedule_verification_scope": {
+        "reloaded_saved_fields": [
+          "title",
+          "description",
+          "destination",
+          "board",
+          "date",
+          "time"
+        ],
+        "pre_submission_only": [
+          "alt_text",
+          "manualAI",
+          "person",
+          "adOnly"
+        ],
+        "unavailable_in_saved_ui": [
+          "alt_text",
+          "manualAI",
+          "person",
+          "adOnly"
+        ],
+        "image": "original asset uploaded and queue preview visually present; saved image not replaceable"
+      },
+      "published_url": null,
+      "posted_date": null
     },
     {
       "id": "018",
@@ -113,7 +208,16 @@
       "original_copy_matches": true,
       "copy_valid": true,
       "local_visual_review": true,
-      "live_verified": false
+      "live_verified": false,
+      "status": "prepared",
+      "planned_board": "Temecula Wine Country Vacation Rental",
+      "planned_publication_local": "2026-11-20T20:00:00+05:00",
+      "scheduled_date": null,
+      "saved_schedule_verified": false,
+      "scheduled_pin_id": null,
+      "schedule_verification_scope": null,
+      "published_url": null,
+      "posted_date": null
     },
     {
       "id": "019",
@@ -127,7 +231,38 @@
       "original_copy_matches": true,
       "copy_valid": true,
       "local_visual_review": true,
-      "live_verified": false
+      "live_verified": false,
+      "status": "scheduled",
+      "planned_board": "Resort-Style Pool & Outdoor Living",
+      "planned_publication_local": "2026-11-09T20:00:00+05:00",
+      "scheduled_date": "2026-11-09T20:00:00+05:00",
+      "saved_schedule_verified": true,
+      "scheduled_pin_id": "4016170566943280640",
+      "schedule_verification_scope": {
+        "reloaded_saved_fields": [
+          "title",
+          "description",
+          "destination",
+          "board",
+          "date",
+          "time"
+        ],
+        "pre_submission_only": [
+          "alt_text",
+          "manualAI",
+          "person",
+          "adOnly"
+        ],
+        "unavailable_in_saved_ui": [
+          "alt_text",
+          "manualAI",
+          "person",
+          "adOnly"
+        ],
+        "image": "original asset uploaded and queue preview visually present; saved image not replaceable"
+      },
+      "published_url": null,
+      "posted_date": null
     },
     {
       "id": "020",
@@ -141,7 +276,16 @@
       "original_copy_matches": true,
       "copy_valid": true,
       "local_visual_review": true,
-      "live_verified": false
+      "live_verified": false,
+      "status": "prepared",
+      "planned_board": "Villa Fabulosa | Luxury Estate & Resort Amenities",
+      "planned_publication_local": "2026-11-19T20:00:00+05:00",
+      "scheduled_date": null,
+      "saved_schedule_verified": false,
+      "scheduled_pin_id": null,
+      "schedule_verification_scope": null,
+      "published_url": null,
+      "posted_date": null
     },
     {
       "id": "021",
@@ -155,7 +299,16 @@
       "original_copy_matches": true,
       "copy_valid": true,
       "local_visual_review": true,
-      "live_verified": false
+      "live_verified": false,
+      "status": "prepared",
+      "planned_board": "Corporate Retreats & Private Getaways",
+      "planned_publication_local": "2026-11-17T10:00:00+05:00",
+      "scheduled_date": null,
+      "saved_schedule_verified": false,
+      "scheduled_pin_id": null,
+      "schedule_verification_scope": null,
+      "published_url": null,
+      "posted_date": null
     },
     {
       "id": "022",
@@ -169,7 +322,16 @@
       "original_copy_matches": true,
       "copy_valid": true,
       "local_visual_review": true,
-      "live_verified": false
+      "live_verified": false,
+      "status": "prepared",
+      "planned_board": "Temecula Wine Country Vacation Rental",
+      "planned_publication_local": "2026-11-13T10:00:00+05:00",
+      "scheduled_date": null,
+      "saved_schedule_verified": false,
+      "scheduled_pin_id": null,
+      "schedule_verification_scope": null,
+      "published_url": null,
+      "posted_date": null
     },
     {
       "id": "023",
@@ -183,7 +345,38 @@
       "original_copy_matches": true,
       "copy_valid": true,
       "local_visual_review": true,
-      "live_verified": false
+      "live_verified": false,
+      "status": "scheduled",
+      "planned_board": "Group Vacation Home & Family Reunion Ideas",
+      "planned_publication_local": "2026-11-11T10:00:00+05:00",
+      "scheduled_date": "2026-11-11T10:00:00+05:00",
+      "saved_schedule_verified": true,
+      "scheduled_pin_id": "4016174714976075392",
+      "schedule_verification_scope": {
+        "reloaded_saved_fields": [
+          "title",
+          "description",
+          "destination",
+          "board",
+          "date",
+          "time"
+        ],
+        "pre_submission_only": [
+          "alt_text",
+          "manualAI",
+          "person",
+          "adOnly"
+        ],
+        "unavailable_in_saved_ui": [
+          "alt_text",
+          "manualAI",
+          "person",
+          "adOnly"
+        ],
+        "image": "original asset uploaded and queue preview visually present; saved image not replaceable"
+      },
+      "published_url": null,
+      "posted_date": null
     },
     {
       "id": "024",
@@ -197,7 +390,16 @@
       "original_copy_matches": true,
       "copy_valid": true,
       "local_visual_review": true,
-      "live_verified": false
+      "live_verified": false,
+      "status": "prepared",
+      "planned_board": "Villa Fabulosa | Luxury Estate & Resort Amenities",
+      "planned_publication_local": "2026-11-12T10:00:00+05:00",
+      "scheduled_date": null,
+      "saved_schedule_verified": false,
+      "scheduled_pin_id": null,
+      "schedule_verification_scope": null,
+      "published_url": null,
+      "posted_date": null
     },
     {
       "id": "025",
@@ -211,7 +413,16 @@
       "original_copy_matches": true,
       "copy_valid": true,
       "local_visual_review": true,
-      "live_verified": false
+      "live_verified": false,
+      "status": "prepared",
+      "planned_board": "Resort-Style Pool & Outdoor Living",
+      "planned_publication_local": "2026-11-21T15:00:00+05:00",
+      "scheduled_date": null,
+      "saved_schedule_verified": false,
+      "scheduled_pin_id": null,
+      "schedule_verification_scope": null,
+      "published_url": null,
+      "posted_date": null
     },
     {
       "id": "026",
@@ -225,7 +436,16 @@
       "original_copy_matches": true,
       "copy_valid": true,
       "local_visual_review": true,
-      "live_verified": false
+      "live_verified": false,
+      "status": "prepared",
+      "planned_board": "Villa Fabulosa | Luxury Estate & Resort Amenities",
+      "planned_publication_local": "2026-11-13T20:00:00+05:00",
+      "scheduled_date": null,
+      "saved_schedule_verified": false,
+      "scheduled_pin_id": null,
+      "schedule_verification_scope": null,
+      "published_url": null,
+      "posted_date": null
     },
     {
       "id": "027",
@@ -239,7 +459,16 @@
       "original_copy_matches": true,
       "copy_valid": true,
       "local_visual_review": true,
-      "live_verified": false
+      "live_verified": false,
+      "status": "prepared",
+      "planned_board": "Resort-Style Pool & Outdoor Living",
+      "planned_publication_local": "2026-11-19T15:00:00+05:00",
+      "scheduled_date": null,
+      "saved_schedule_verified": false,
+      "scheduled_pin_id": null,
+      "schedule_verification_scope": null,
+      "published_url": null,
+      "posted_date": null
     },
     {
       "id": "028",
@@ -253,7 +482,16 @@
       "original_copy_matches": true,
       "copy_valid": true,
       "local_visual_review": true,
-      "live_verified": false
+      "live_verified": false,
+      "status": "prepared",
+      "planned_board": "Corporate Retreats & Private Getaways",
+      "planned_publication_local": "2026-11-18T10:00:00+05:00",
+      "scheduled_date": null,
+      "saved_schedule_verified": false,
+      "scheduled_pin_id": null,
+      "schedule_verification_scope": null,
+      "published_url": null,
+      "posted_date": null
     },
     {
       "id": "029",
@@ -267,7 +505,16 @@
       "original_copy_matches": true,
       "copy_valid": true,
       "local_visual_review": true,
-      "live_verified": false
+      "live_verified": false,
+      "status": "prepared",
+      "planned_board": "Villa Fabulosa | Luxury Estate & Resort Amenities",
+      "planned_publication_local": "2026-11-14T20:00:00+05:00",
+      "scheduled_date": null,
+      "saved_schedule_verified": false,
+      "scheduled_pin_id": null,
+      "schedule_verification_scope": null,
+      "published_url": null,
+      "posted_date": null
     },
     {
       "id": "030",
@@ -281,7 +528,16 @@
       "original_copy_matches": true,
       "copy_valid": true,
       "local_visual_review": true,
-      "live_verified": false
+      "live_verified": true,
+      "status": "published",
+      "planned_board": "Group Vacation Home & Family Reunion Ideas",
+      "planned_publication_local": "2026-11-05T20:00:00+05:00",
+      "scheduled_date": null,
+      "saved_schedule_verified": false,
+      "scheduled_pin_id": null,
+      "schedule_verification_scope": null,
+      "published_url": "https://www.pinterest.com/pin/743868063501470492/",
+      "posted_date": "2026-11-05"
     },
     {
       "id": "031",
@@ -295,7 +551,38 @@
       "original_copy_matches": true,
       "copy_valid": true,
       "local_visual_review": true,
-      "live_verified": false
+      "live_verified": false,
+      "status": "scheduled",
+      "planned_board": "Temecula Wine Country Vacation Rental",
+      "planned_publication_local": "2026-11-10T10:00:00+05:00",
+      "scheduled_date": "2026-11-10T10:00:00+05:00",
+      "saved_schedule_verified": true,
+      "scheduled_pin_id": "4016171542170624128",
+      "schedule_verification_scope": {
+        "reloaded_saved_fields": [
+          "title",
+          "description",
+          "destination",
+          "board",
+          "date",
+          "time"
+        ],
+        "pre_submission_only": [
+          "alt_text",
+          "manualAI",
+          "person",
+          "adOnly"
+        ],
+        "unavailable_in_saved_ui": [
+          "alt_text",
+          "manualAI",
+          "person",
+          "adOnly"
+        ],
+        "image": "original asset uploaded and queue preview visually present; saved image not replaceable"
+      },
+      "published_url": null,
+      "posted_date": null
     },
     {
       "id": "032",
@@ -309,7 +596,16 @@
       "original_copy_matches": true,
       "copy_valid": true,
       "local_visual_review": true,
-      "live_verified": false
+      "live_verified": false,
+      "status": "prepared",
+      "planned_board": "Corporate Retreats & Private Getaways",
+      "planned_publication_local": "2026-11-20T15:00:00+05:00",
+      "scheduled_date": null,
+      "saved_schedule_verified": false,
+      "scheduled_pin_id": null,
+      "schedule_verification_scope": null,
+      "published_url": null,
+      "posted_date": null
     },
     {
       "id": "033",
@@ -323,7 +619,16 @@
       "original_copy_matches": true,
       "copy_valid": true,
       "local_visual_review": true,
-      "live_verified": false
+      "live_verified": false,
+      "status": "prepared",
+      "planned_board": "Temecula Wine Country Vacation Rental",
+      "planned_publication_local": "2026-11-16T20:00:00+05:00",
+      "scheduled_date": null,
+      "saved_schedule_verified": false,
+      "scheduled_pin_id": null,
+      "schedule_verification_scope": null,
+      "published_url": null,
+      "posted_date": null
     },
     {
       "id": "034",
@@ -337,7 +642,16 @@
       "original_copy_matches": true,
       "copy_valid": true,
       "local_visual_review": true,
-      "live_verified": false
+      "live_verified": true,
+      "status": "published",
+      "planned_board": "Resort-Style Pool & Outdoor Living",
+      "planned_publication_local": "2026-10-31T10:00:00+05:00",
+      "scheduled_date": null,
+      "saved_schedule_verified": false,
+      "scheduled_pin_id": null,
+      "schedule_verification_scope": null,
+      "published_url": "https://www.pinterest.com/pin/743868063501379603/",
+      "posted_date": "2026-10-31"
     },
     {
       "id": "035",
@@ -351,7 +665,16 @@
       "original_copy_matches": true,
       "copy_valid": true,
       "local_visual_review": true,
-      "live_verified": false
+      "live_verified": false,
+      "status": "prepared",
+      "planned_board": "Corporate Retreats & Private Getaways",
+      "planned_publication_local": "2026-11-12T20:00:00+05:00",
+      "scheduled_date": null,
+      "saved_schedule_verified": false,
+      "scheduled_pin_id": null,
+      "schedule_verification_scope": null,
+      "published_url": null,
+      "posted_date": null
     },
     {
       "id": "036",
@@ -365,7 +688,16 @@
       "original_copy_matches": true,
       "copy_valid": true,
       "local_visual_review": true,
-      "live_verified": false
+      "live_verified": true,
+      "status": "published",
+      "planned_board": "Temecula Wine Country Vacation Rental",
+      "planned_publication_local": "2026-10-30T15:00:00+05:00",
+      "scheduled_date": null,
+      "saved_schedule_verified": false,
+      "scheduled_pin_id": null,
+      "schedule_verification_scope": null,
+      "published_url": "https://www.pinterest.com/pin/743868063501365788/",
+      "posted_date": "2026-10-30"
     },
     {
       "id": "037",
@@ -379,7 +711,16 @@
       "original_copy_matches": true,
       "copy_valid": true,
       "local_visual_review": true,
-      "live_verified": false
+      "live_verified": false,
+      "status": "prepared",
+      "planned_board": "Group Vacation Home & Family Reunion Ideas",
+      "planned_publication_local": "2026-11-13T15:00:00+05:00",
+      "scheduled_date": null,
+      "saved_schedule_verified": false,
+      "scheduled_pin_id": null,
+      "schedule_verification_scope": null,
+      "published_url": null,
+      "posted_date": null
     },
     {
       "id": "038",
@@ -393,7 +734,16 @@
       "original_copy_matches": true,
       "copy_valid": true,
       "local_visual_review": true,
-      "live_verified": false
+      "live_verified": true,
+      "status": "published",
+      "planned_board": "Villa Fabulosa | Luxury Estate & Resort Amenities",
+      "planned_publication_local": "2026-10-31T20:00:00+05:00",
+      "scheduled_date": null,
+      "saved_schedule_verified": false,
+      "scheduled_pin_id": null,
+      "schedule_verification_scope": null,
+      "published_url": "https://www.pinterest.com/pin/743868063501385204/",
+      "posted_date": "2026-10-31"
     },
     {
       "id": "039",
@@ -407,7 +757,16 @@
       "original_copy_matches": true,
       "copy_valid": true,
       "local_visual_review": true,
-      "live_verified": false
+      "live_verified": true,
+      "status": "published",
+      "planned_board": "Temecula Wine Country Vacation Rental",
+      "planned_publication_local": "2026-11-04T15:00:00+05:00",
+      "scheduled_date": null,
+      "saved_schedule_verified": false,
+      "scheduled_pin_id": null,
+      "schedule_verification_scope": null,
+      "published_url": "https://www.pinterest.com/pin/743868063501448176/",
+      "posted_date": "2026-11-04"
     },
     {
       "id": "040",
@@ -421,7 +780,38 @@
       "original_copy_matches": true,
       "copy_valid": true,
       "local_visual_review": true,
-      "live_verified": false
+      "live_verified": false,
+      "status": "scheduled",
+      "planned_board": "Villa Fabulosa | Luxury Estate & Resort Amenities",
+      "planned_publication_local": "2026-11-09T10:00:00+05:00",
+      "scheduled_date": "2026-11-09T10:00:00+05:00",
+      "saved_schedule_verified": true,
+      "scheduled_pin_id": "4016168326682230272",
+      "schedule_verification_scope": {
+        "reloaded_saved_fields": [
+          "title",
+          "description",
+          "destination",
+          "board",
+          "date",
+          "time"
+        ],
+        "pre_submission_only": [
+          "alt_text",
+          "manualAI",
+          "person",
+          "adOnly"
+        ],
+        "unavailable_in_saved_ui": [
+          "alt_text",
+          "manualAI",
+          "person",
+          "adOnly"
+        ],
+        "image": "original asset uploaded and queue preview visually present; saved image not replaceable"
+      },
+      "published_url": null,
+      "posted_date": null
     },
     {
       "id": "041",
@@ -435,7 +825,16 @@
       "original_copy_matches": true,
       "copy_valid": true,
       "local_visual_review": true,
-      "live_verified": false
+      "live_verified": true,
+      "status": "published",
+      "planned_board": "Corporate Retreats & Private Getaways",
+      "planned_publication_local": "2026-11-05T15:00:00+05:00",
+      "scheduled_date": null,
+      "saved_schedule_verified": false,
+      "scheduled_pin_id": null,
+      "schedule_verification_scope": null,
+      "published_url": "https://www.pinterest.com/pin/743868063501466435/",
+      "posted_date": "2026-11-05"
     },
     {
       "id": "042",
@@ -449,7 +848,16 @@
       "original_copy_matches": true,
       "copy_valid": true,
       "local_visual_review": true,
-      "live_verified": false
+      "live_verified": false,
+      "status": "prepared",
+      "planned_board": "Corporate Retreats & Private Getaways",
+      "planned_publication_local": "2026-11-19T10:00:00+05:00",
+      "scheduled_date": null,
+      "saved_schedule_verified": false,
+      "scheduled_pin_id": null,
+      "schedule_verification_scope": null,
+      "published_url": null,
+      "posted_date": null
     },
     {
       "id": "043",
@@ -463,7 +871,16 @@
       "original_copy_matches": true,
       "copy_valid": true,
       "local_visual_review": true,
-      "live_verified": false
+      "live_verified": true,
+      "status": "published",
+      "planned_board": "Group Vacation Home & Family Reunion Ideas",
+      "planned_publication_local": "2026-10-29T10:00:00+05:00",
+      "scheduled_date": null,
+      "saved_schedule_verified": false,
+      "scheduled_pin_id": null,
+      "schedule_verification_scope": null,
+      "published_url": "https://www.pinterest.com/pin/743868063501345987/",
+      "posted_date": "2026-10-29"
     },
     {
       "id": "044",
@@ -477,7 +894,16 @@
       "original_copy_matches": true,
       "copy_valid": true,
       "local_visual_review": true,
-      "live_verified": false
+      "live_verified": false,
+      "status": "prepared",
+      "planned_board": "Resort-Style Pool & Outdoor Living",
+      "planned_publication_local": "2026-11-15T20:00:00+05:00",
+      "scheduled_date": null,
+      "saved_schedule_verified": false,
+      "scheduled_pin_id": null,
+      "schedule_verification_scope": null,
+      "published_url": null,
+      "posted_date": null
     },
     {
       "id": "045",
@@ -491,7 +917,16 @@
       "original_copy_matches": true,
       "copy_valid": true,
       "local_visual_review": true,
-      "live_verified": false
+      "live_verified": true,
+      "status": "published",
+      "planned_board": "Resort-Style Pool & Outdoor Living",
+      "planned_publication_local": "2026-11-05T10:00:00+05:00",
+      "scheduled_date": null,
+      "saved_schedule_verified": false,
+      "scheduled_pin_id": null,
+      "schedule_verification_scope": null,
+      "published_url": "https://www.pinterest.com/pin/743868063501463898/",
+      "posted_date": "2026-11-05"
     },
     {
       "id": "046",
@@ -505,7 +940,16 @@
       "original_copy_matches": true,
       "copy_valid": true,
       "local_visual_review": true,
-      "live_verified": false
+      "live_verified": false,
+      "status": "prepared",
+      "planned_board": "Group Vacation Home & Family Reunion Ideas",
+      "planned_publication_local": "2026-11-20T10:00:00+05:00",
+      "scheduled_date": null,
+      "saved_schedule_verified": false,
+      "scheduled_pin_id": null,
+      "schedule_verification_scope": null,
+      "published_url": null,
+      "posted_date": null
     },
     {
       "id": "047",
@@ -519,7 +963,16 @@
       "original_copy_matches": true,
       "copy_valid": true,
       "local_visual_review": true,
-      "live_verified": false
+      "live_verified": false,
+      "status": "prepared",
+      "planned_board": "Temecula Wine Country Vacation Rental",
+      "planned_publication_local": "2026-11-15T10:00:00+05:00",
+      "scheduled_date": null,
+      "saved_schedule_verified": false,
+      "scheduled_pin_id": null,
+      "schedule_verification_scope": null,
+      "published_url": null,
+      "posted_date": null
     },
     {
       "id": "048",
@@ -533,7 +986,16 @@
       "original_copy_matches": true,
       "copy_valid": true,
       "local_visual_review": true,
-      "live_verified": false
+      "live_verified": true,
+      "status": "published",
+      "planned_board": "Resort-Style Pool & Outdoor Living",
+      "planned_publication_local": "2026-11-06T10:00:00+05:00",
+      "scheduled_date": null,
+      "saved_schedule_verified": false,
+      "scheduled_pin_id": null,
+      "schedule_verification_scope": null,
+      "published_url": "https://www.pinterest.com/pin/743868063501481231/",
+      "posted_date": "2026-11-06"
     },
     {
       "id": "049",
@@ -547,7 +1009,16 @@
       "original_copy_matches": true,
       "copy_valid": true,
       "local_visual_review": true,
-      "live_verified": false
+      "live_verified": true,
+      "status": "published",
+      "planned_board": "Villa Fabulosa | Luxury Estate & Resort Amenities",
+      "planned_publication_local": "2026-10-30T20:00:00+05:00",
+      "scheduled_date": null,
+      "saved_schedule_verified": false,
+      "scheduled_pin_id": null,
+      "schedule_verification_scope": null,
+      "published_url": "https://www.pinterest.com/pin/743868063501369532/",
+      "posted_date": "2026-10-30"
     },
     {
       "id": "050",
@@ -561,7 +1032,38 @@
       "original_copy_matches": true,
       "copy_valid": true,
       "local_visual_review": true,
-      "live_verified": false
+      "live_verified": false,
+      "status": "scheduled",
+      "planned_board": "Corporate Retreats & Private Getaways",
+      "planned_publication_local": "2026-11-09T15:00:00+05:00",
+      "scheduled_date": "2026-11-09T15:00:00+05:00",
+      "saved_schedule_verified": true,
+      "scheduled_pin_id": "4016169484209558016",
+      "schedule_verification_scope": {
+        "reloaded_saved_fields": [
+          "title",
+          "description",
+          "destination",
+          "board",
+          "date",
+          "time"
+        ],
+        "pre_submission_only": [
+          "alt_text",
+          "manualAI",
+          "person",
+          "adOnly"
+        ],
+        "unavailable_in_saved_ui": [
+          "alt_text",
+          "manualAI",
+          "person",
+          "adOnly"
+        ],
+        "image": "original asset uploaded and queue preview visually present; saved image not replaceable"
+      },
+      "published_url": null,
+      "posted_date": null
     },
     {
       "id": "051",
@@ -575,7 +1077,16 @@
       "original_copy_matches": true,
       "copy_valid": true,
       "local_visual_review": true,
-      "live_verified": false
+      "live_verified": true,
+      "status": "published",
+      "planned_board": "Temecula Wine Country Vacation Rental",
+      "planned_publication_local": "2026-10-28T20:00:00+05:00",
+      "scheduled_date": null,
+      "saved_schedule_verified": false,
+      "scheduled_pin_id": null,
+      "schedule_verification_scope": null,
+      "published_url": "https://www.pinterest.com/pin/743868063501334246/",
+      "posted_date": "2026-10-28"
     },
     {
       "id": "052",
@@ -589,7 +1100,16 @@
       "original_copy_matches": true,
       "copy_valid": true,
       "local_visual_review": true,
-      "live_verified": false
+      "live_verified": true,
+      "status": "published",
+      "planned_board": "Group Vacation Home & Family Reunion Ideas",
+      "planned_publication_local": "2026-10-31T15:00:00+05:00",
+      "scheduled_date": null,
+      "saved_schedule_verified": false,
+      "scheduled_pin_id": null,
+      "schedule_verification_scope": null,
+      "published_url": "https://www.pinterest.com/pin/743868063501382153/",
+      "posted_date": "2026-10-31"
     },
     {
       "id": "053",
@@ -603,7 +1123,16 @@
       "original_copy_matches": true,
       "copy_valid": true,
       "local_visual_review": true,
-      "live_verified": false
+      "live_verified": true,
+      "status": "published",
+      "planned_board": "Temecula Wine Country Vacation Rental",
+      "planned_publication_local": "2026-11-07T10:00:00+05:00",
+      "scheduled_date": null,
+      "saved_schedule_verified": false,
+      "scheduled_pin_id": null,
+      "schedule_verification_scope": null,
+      "published_url": "https://www.pinterest.com/pin/743868063501500404/",
+      "posted_date": "2026-11-07"
     },
     {
       "id": "054",
@@ -617,7 +1146,16 @@
       "original_copy_matches": true,
       "copy_valid": true,
       "local_visual_review": true,
-      "live_verified": false
+      "live_verified": false,
+      "status": "prepared",
+      "planned_board": "Villa Fabulosa | Luxury Estate & Resort Amenities",
+      "planned_publication_local": "2026-11-21T10:00:00+05:00",
+      "scheduled_date": null,
+      "saved_schedule_verified": false,
+      "scheduled_pin_id": null,
+      "schedule_verification_scope": null,
+      "published_url": null,
+      "posted_date": null
     },
     {
       "id": "055",
@@ -631,7 +1169,38 @@
       "original_copy_matches": true,
       "copy_valid": true,
       "local_visual_review": true,
-      "live_verified": false
+      "live_verified": false,
+      "status": "scheduled",
+      "planned_board": "Villa Fabulosa | Luxury Estate & Resort Amenities",
+      "planned_publication_local": "2026-11-10T20:00:00+05:00",
+      "scheduled_date": "2026-11-10T20:00:00+05:00",
+      "saved_schedule_verified": true,
+      "scheduled_pin_id": "4016173637810873088",
+      "schedule_verification_scope": {
+        "reloaded_saved_fields": [
+          "title",
+          "description",
+          "destination",
+          "board",
+          "date",
+          "time"
+        ],
+        "pre_submission_only": [
+          "alt_text",
+          "manualAI",
+          "person",
+          "adOnly"
+        ],
+        "unavailable_in_saved_ui": [
+          "alt_text",
+          "manualAI",
+          "person",
+          "adOnly"
+        ],
+        "image": "original asset uploaded and queue preview visually present; saved image not replaceable"
+      },
+      "published_url": null,
+      "posted_date": null
     },
     {
       "id": "056",
@@ -645,7 +1214,16 @@
       "original_copy_matches": true,
       "copy_valid": true,
       "local_visual_review": true,
-      "live_verified": false
+      "live_verified": false,
+      "status": "prepared",
+      "planned_board": "Resort-Style Pool & Outdoor Living",
+      "planned_publication_local": "2026-11-11T20:00:00+05:00",
+      "scheduled_date": null,
+      "saved_schedule_verified": false,
+      "scheduled_pin_id": null,
+      "schedule_verification_scope": null,
+      "published_url": null,
+      "posted_date": null
     },
     {
       "id": "057",
@@ -659,7 +1237,16 @@
       "original_copy_matches": true,
       "copy_valid": true,
       "local_visual_review": true,
-      "live_verified": false
+      "live_verified": true,
+      "status": "published",
+      "planned_board": "Corporate Retreats & Private Getaways",
+      "planned_publication_local": "2026-11-04T10:00:00+05:00",
+      "scheduled_date": null,
+      "saved_schedule_verified": false,
+      "scheduled_pin_id": null,
+      "schedule_verification_scope": null,
+      "published_url": "https://www.pinterest.com/pin/743868063501445254/",
+      "posted_date": "2026-11-04"
     },
     {
       "id": "058",
@@ -673,7 +1260,16 @@
       "original_copy_matches": true,
       "copy_valid": true,
       "local_visual_review": true,
-      "live_verified": false
+      "live_verified": false,
+      "status": "prepared",
+      "planned_board": "Corporate Retreats & Private Getaways",
+      "planned_publication_local": "2026-11-15T15:00:00+05:00",
+      "scheduled_date": null,
+      "saved_schedule_verified": false,
+      "scheduled_pin_id": null,
+      "schedule_verification_scope": null,
+      "published_url": null,
+      "posted_date": null
     },
     {
       "id": "059",
@@ -687,7 +1283,16 @@
       "original_copy_matches": true,
       "copy_valid": true,
       "local_visual_review": true,
-      "live_verified": false
+      "live_verified": true,
+      "status": "published",
+      "planned_board": "Group Vacation Home & Family Reunion Ideas",
+      "planned_publication_local": "2026-11-06T20:00:00+05:00",
+      "scheduled_date": null,
+      "saved_schedule_verified": false,
+      "scheduled_pin_id": null,
+      "schedule_verification_scope": null,
+      "published_url": "https://www.pinterest.com/pin/743868063501488352/",
+      "posted_date": "2026-11-06"
     },
     {
       "id": "060",
@@ -701,7 +1306,16 @@
       "original_copy_matches": true,
       "copy_valid": true,
       "local_visual_review": true,
-      "live_verified": false
+      "live_verified": false,
+      "status": "prepared",
+      "planned_board": "Group Vacation Home & Family Reunion Ideas",
+      "planned_publication_local": "2026-11-14T10:00:00+05:00",
+      "scheduled_date": null,
+      "saved_schedule_verified": false,
+      "scheduled_pin_id": null,
+      "schedule_verification_scope": null,
+      "published_url": null,
+      "posted_date": null
     },
     {
       "id": "061",
@@ -715,7 +1329,16 @@
       "original_copy_matches": true,
       "copy_valid": true,
       "local_visual_review": true,
-      "live_verified": false
+      "live_verified": false,
+      "status": "prepared",
+      "planned_board": "Resort-Style Pool & Outdoor Living",
+      "planned_publication_local": "2026-11-12T15:00:00+05:00",
+      "scheduled_date": null,
+      "saved_schedule_verified": false,
+      "scheduled_pin_id": null,
+      "schedule_verification_scope": null,
+      "published_url": null,
+      "posted_date": null
     },
     {
       "id": "062",
@@ -729,7 +1352,16 @@
       "original_copy_matches": true,
       "copy_valid": true,
       "local_visual_review": true,
-      "live_verified": false
+      "live_verified": false,
+      "status": "prepared",
+      "planned_board": "Group Vacation Home & Family Reunion Ideas",
+      "planned_publication_local": "2026-11-17T15:00:00+05:00",
+      "scheduled_date": null,
+      "saved_schedule_verified": false,
+      "scheduled_pin_id": null,
+      "schedule_verification_scope": null,
+      "published_url": null,
+      "posted_date": null
     },
     {
       "id": "063",
@@ -743,7 +1375,16 @@
       "original_copy_matches": true,
       "copy_valid": true,
       "local_visual_review": true,
-      "live_verified": false
+      "live_verified": false,
+      "status": "prepared",
+      "planned_board": "Temecula Wine Country Vacation Rental",
+      "planned_publication_local": "2026-11-14T15:00:00+05:00",
+      "scheduled_date": null,
+      "saved_schedule_verified": false,
+      "scheduled_pin_id": null,
+      "schedule_verification_scope": null,
+      "published_url": null,
+      "posted_date": null
     },
     {
       "id": "064",
@@ -757,7 +1398,16 @@
       "original_copy_matches": true,
       "copy_valid": true,
       "local_visual_review": true,
-      "live_verified": false
+      "live_verified": true,
+      "status": "published",
+      "planned_board": "Resort-Style Pool & Outdoor Living",
+      "planned_publication_local": "2026-10-28T15:00:00+05:00",
+      "scheduled_date": null,
+      "saved_schedule_verified": false,
+      "scheduled_pin_id": null,
+      "schedule_verification_scope": null,
+      "published_url": "https://www.pinterest.com/pin/743868063501330490/",
+      "posted_date": "2026-10-28"
     },
     {
       "id": "065",
@@ -771,7 +1421,16 @@
       "original_copy_matches": true,
       "copy_valid": true,
       "local_visual_review": true,
-      "live_verified": false
+      "live_verified": false,
+      "status": "prepared",
+      "planned_board": "Temecula Wine Country Vacation Rental",
+      "planned_publication_local": "2026-11-18T15:00:00+05:00",
+      "scheduled_date": null,
+      "saved_schedule_verified": false,
+      "scheduled_pin_id": null,
+      "schedule_verification_scope": null,
+      "published_url": null,
+      "posted_date": null
     },
     {
       "id": "066",
@@ -785,7 +1444,16 @@
       "original_copy_matches": true,
       "copy_valid": true,
       "local_visual_review": true,
-      "live_verified": false
+      "live_verified": true,
+      "status": "published",
+      "planned_board": "Corporate Retreats & Private Getaways",
+      "planned_publication_local": "2026-10-29T20:00:00+05:00",
+      "scheduled_date": null,
+      "saved_schedule_verified": false,
+      "scheduled_pin_id": null,
+      "schedule_verification_scope": null,
+      "published_url": "https://www.pinterest.com/pin/743868063501352684/",
+      "posted_date": "2026-10-29"
     },
     {
       "id": "067",
@@ -799,7 +1467,38 @@
       "original_copy_matches": true,
       "copy_valid": true,
       "local_visual_review": true,
-      "live_verified": false
+      "live_verified": false,
+      "status": "scheduled",
+      "planned_board": "Resort-Style Pool & Outdoor Living",
+      "planned_publication_local": "2026-11-08T15:00:00+05:00",
+      "scheduled_date": "2026-11-08T15:00:00+05:00",
+      "saved_schedule_verified": true,
+      "scheduled_pin_id": "4016166349152001856",
+      "schedule_verification_scope": {
+        "reloaded_saved_fields": [
+          "title",
+          "description",
+          "destination",
+          "board",
+          "date",
+          "time"
+        ],
+        "pre_submission_only": [
+          "alt_text",
+          "manualAI",
+          "person",
+          "adOnly"
+        ],
+        "unavailable_in_saved_ui": [
+          "alt_text",
+          "manualAI",
+          "person",
+          "adOnly"
+        ],
+        "image": "original asset uploaded and queue preview visually present; saved image not replaceable"
+      },
+      "published_url": null,
+      "posted_date": null
     },
     {
       "id": "068",
@@ -813,7 +1512,16 @@
       "original_copy_matches": true,
       "copy_valid": true,
       "local_visual_review": true,
-      "live_verified": false
+      "live_verified": true,
+      "status": "published",
+      "planned_board": "Group Vacation Home & Family Reunion Ideas",
+      "planned_publication_local": "2026-10-30T10:00:00+05:00",
+      "scheduled_date": null,
+      "saved_schedule_verified": false,
+      "scheduled_pin_id": null,
+      "schedule_verification_scope": null,
+      "published_url": "https://www.pinterest.com/pin/743868063501363171/",
+      "posted_date": "2026-10-30"
     },
     {
       "id": "069",
@@ -827,7 +1535,16 @@
       "original_copy_matches": true,
       "copy_valid": true,
       "local_visual_review": true,
-      "live_verified": false
+      "live_verified": true,
+      "status": "published",
+      "planned_board": "Villa Fabulosa | Luxury Estate & Resort Amenities",
+      "planned_publication_local": "2026-10-29T15:00:00+05:00",
+      "scheduled_date": null,
+      "saved_schedule_verified": false,
+      "scheduled_pin_id": null,
+      "schedule_verification_scope": null,
+      "published_url": "https://www.pinterest.com/pin/743868063501348944/",
+      "posted_date": "2026-10-29"
     },
     {
       "id": "070",
@@ -841,7 +1558,16 @@
       "original_copy_matches": true,
       "copy_valid": true,
       "local_visual_review": true,
-      "live_verified": false
+      "live_verified": true,
+      "status": "published",
+      "planned_board": "Temecula Wine Country Vacation Rental",
+      "planned_publication_local": "2026-11-06T15:00:00+05:00",
+      "scheduled_date": null,
+      "saved_schedule_verified": false,
+      "scheduled_pin_id": null,
+      "schedule_verification_scope": null,
+      "published_url": "https://www.pinterest.com/pin/743868063501483706/",
+      "posted_date": "2026-11-06"
     },
     {
       "id": "071",
@@ -855,7 +1581,16 @@
       "original_copy_matches": true,
       "copy_valid": true,
       "local_visual_review": true,
-      "live_verified": false
+      "live_verified": false,
+      "status": "prepared",
+      "planned_board": "Villa Fabulosa | Luxury Estate & Resort Amenities",
+      "planned_publication_local": "2026-11-17T20:00:00+05:00",
+      "scheduled_date": null,
+      "saved_schedule_verified": false,
+      "scheduled_pin_id": null,
+      "schedule_verification_scope": null,
+      "published_url": null,
+      "posted_date": null
     },
     {
       "id": "072",
@@ -869,7 +1604,38 @@
       "original_copy_matches": true,
       "copy_valid": true,
       "local_visual_review": true,
-      "live_verified": false
+      "live_verified": false,
+      "status": "scheduled",
+      "planned_board": "Corporate Retreats & Private Getaways",
+      "planned_publication_local": "2026-11-11T15:00:00+05:00",
+      "scheduled_date": "2026-11-11T15:00:00+05:00",
+      "saved_schedule_verified": true,
+      "scheduled_pin_id": "4016175753686465600",
+      "schedule_verification_scope": {
+        "reloaded_saved_fields": [
+          "title",
+          "description",
+          "destination",
+          "board",
+          "date",
+          "time"
+        ],
+        "pre_submission_only": [
+          "alt_text",
+          "manualAI",
+          "person",
+          "adOnly"
+        ],
+        "unavailable_in_saved_ui": [
+          "alt_text",
+          "manualAI",
+          "person",
+          "adOnly"
+        ],
+        "image": "original asset uploaded and queue preview visually present; saved image not replaceable"
+      },
+      "published_url": null,
+      "posted_date": null
     },
     {
       "id": "073",
@@ -883,7 +1649,38 @@
       "original_copy_matches": true,
       "copy_valid": true,
       "local_visual_review": true,
-      "live_verified": false
+      "live_verified": false,
+      "status": "scheduled",
+      "planned_board": "Corporate Retreats & Private Getaways",
+      "planned_publication_local": "2026-11-08T20:00:00+05:00",
+      "scheduled_date": "2026-11-08T20:00:00+05:00",
+      "saved_schedule_verified": true,
+      "scheduled_pin_id": "4016167335013692352",
+      "schedule_verification_scope": {
+        "reloaded_saved_fields": [
+          "title",
+          "description",
+          "destination",
+          "board",
+          "date",
+          "time"
+        ],
+        "pre_submission_only": [
+          "alt_text",
+          "manualAI",
+          "person",
+          "adOnly"
+        ],
+        "unavailable_in_saved_ui": [
+          "alt_text",
+          "manualAI",
+          "person",
+          "adOnly"
+        ],
+        "image": "original asset uploaded and queue preview visually present; saved image not replaceable"
+      },
+      "published_url": null,
+      "posted_date": null
     },
     {
       "id": "074",
@@ -897,7 +1694,16 @@
       "original_copy_matches": true,
       "copy_valid": true,
       "local_visual_review": true,
-      "live_verified": false
+      "live_verified": false,
+      "status": "prepared",
+      "planned_board": "Group Vacation Home & Family Reunion Ideas",
+      "planned_publication_local": "2026-11-16T10:00:00+05:00",
+      "scheduled_date": null,
+      "saved_schedule_verified": false,
+      "scheduled_pin_id": null,
+      "schedule_verification_scope": null,
+      "published_url": null,
+      "posted_date": null
     },
     {
       "id": "075",
@@ -911,7 +1717,42 @@
       "original_copy_matches": true,
       "copy_valid": true,
       "local_visual_review": true,
-      "live_verified": false
+      "live_verified": true,
+      "status": "published",
+      "planned_board": "Villa Fabulosa | Luxury Estate & Resort Amenities",
+      "planned_publication_local": "2026-11-04T20:00:00+05:00",
+      "scheduled_date": null,
+      "saved_schedule_verified": false,
+      "scheduled_pin_id": null,
+      "schedule_verification_scope": null,
+      "published_url": "https://www.pinterest.com/pin/743868063501451900/",
+      "posted_date": "2026-11-04"
     }
+  ],
+  "asset_preparation_date": "2026-10-26",
+  "last_publication_verification_date": "2026-11-08",
+  "prepared_asset_pack_count": 64,
+  "campaign_published_count": 35,
+  "subsequently_published_from_pack_count": 24,
+  "published_or_scheduled_during_preparation_batch": false,
+  "published_on_2026_10_27": [
+    "012",
+    "013"
+  ],
+  "published_or_scheduled_this_batch": false,
+  "published_or_scheduled_this_batch_scope": "Historical 26 October 2026 asset preparation only. Later publication and scheduling are recorded separately.",
+  "last_setup_verification_date": "2026-11-08",
+  "scheduled_count": 10,
+  "unpublished_count": 40,
+  "domain_claimed": true,
+  "public_boards_created_verified": 5,
+  "published_board_moves_verified": 13,
+  "subsequent_native_schedule_count": 32,
+  "current_native_schedule_count": 10,
+  "planned_calendar_backlog_count": 30,
+  "board_schedule_plan_file": "docs/pinterest/board-schedule-plan-2026-10-27.json",
+  "published_on_2026_10_28": [
+    "014",
+    "064"
   ]
 }

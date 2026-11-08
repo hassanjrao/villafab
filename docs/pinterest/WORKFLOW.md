@@ -1,6 +1,6 @@
 # Villa Fabulosa Pinterest workflow
 
-Last updated: 2026-10-26. Dates in this campaign use Asia/Karachi unless a platform timestamp explicitly identifies another timezone.
+Last updated: 2026-11-08. Dates in this campaign use Asia/Karachi unless a platform timestamp explicitly identifies another timezone.
 
 Use this guide for future work. Use [POSTING-LOG.md](POSTING-LOG.md) for what actually happened, the [published Pin records](samples/), the [prepared queue](prepared/README.md), and the Google Sheet linked from [tracker-sheet.md](tracker-sheet.md) for the working register. A private [Google Doc combines the rules and posting log](https://docs.google.com/document/d/1B-CN1gnRRRtuwjpHpgpw_hlzG7vL3c6LucCg4sGoaUU). Local asset review establishes preparation; publication and saved platform fields require separate live verification.
 
@@ -8,7 +8,8 @@ Use this guide for future work. Use [POSTING-LOG.md](POSTING-LOG.md) for what ac
 
 - The owner selected **75 total campaign Pins**, using all **15 green keywords × 5 target locations**. This replaces the conflicting 60-Pin totals in the original brief.
 - The original sample was reviewed and approved before publication. Pins 001–004 were published and their description hashtags verified by 2026-10-19. Pins 005–007 were published and reload-verified on 2026-10-20. On 2026-10-25, the owner authorized **four more Pins**, IDs 008–011; all four are published and reload-verified, for **eleven public Pins total**.
-- On 2026-10-26, the owner authorized creating **all 64 remaining Pins, 012–075**, in individual local folders, with posting later. These are **prepared locally and ready for owner review**. This instruction authorizes no Pinterest upload, publication or scheduling. The next prepared Pin to publish is **012**; the next unused creative ID is **076**, outside the completed 75-Pin campaign.
+- On 2026-10-26, the owner authorized creating **all 64 remaining Pins, 012–075**, in individual local folders, with posting later. All were prepared and visually reviewed locally; that preparation instruction alone authorized no Pinterest upload, publication or scheduling.
+- On 2026-10-27, the owner first authorized publishing 012–013, which completed that two-Pin batch. The owner then said **“do it”** to the full setup/scheduling plan: claim the domain, create the five public boards, redistribute existing campaign Pins and schedule the remaining 62 at three per day. Continue that authorized work as native queue capacity opens; a new approval is not needed for each remaining planned Pin. Do not publish the backlog immediately. The next unused creative ID remains **076**, outside this 75-Pin campaign.
 - When the owner explicitly asks to publish a batch, finish that authorized batch without asking again for the same permission. Ask only when necessary information or access prevents a concrete action, or when a proposed action exceeds the requested scope.
 - Preserve each public Pin's URL when correcting its copy. Edit the existing Pin instead of making a duplicate.
 - Do not include passwords, login codes, cookies, authentication tokens, or other credentials in documentation, prompts, screenshots, spreadsheet cells, or source control.
@@ -27,11 +28,11 @@ Use the isolated session for subsequent platform work when it is authenticated. 
 
 The 2026-10-25 batch used a dedicated persistent Playwright profile stored outside the repository, authenticated by the owner's manual sign-in. No existing Chrome profile or cookies were copied. Keep browser authentication state outside source control and recheck the account identity each session.
 
-Villa Fabulosa's **Business account was confirmed in Business Hub on 2026-10-19**. Its website claim was still pending. Recheck the account identity before future publishing.
+Villa Fabulosa's **Business account** and **villafabulosa.com claim** were verified on 2026-10-27. The live canonical and www page checks each exposed exactly one matching verification meta tag; Pinterest showed the domain connected and an Unclaim control after a fresh settings navigation. See [domain-claim-setup-2026-10-27.md](domain-claim-setup-2026-10-27.md). Recheck the account identity before future platform work.
 
 ## 3. Campaign plan and location accuracy
 
-The full 75-Pin asset set is prepared: **11 published Pins and 64 unpublished local Pins**. The [matrix](prepared/matrix.json) covers all 15 approved keywords across five locations exactly once, and 15 actual source-photo families with five creative variants each. The existing eleven assets anchor their source families' first variants. The five design treatments are classic editorial, photo-forward, framed, asymmetric editorial and magazine editorial; the magazine layout places the photograph above the headline. This completes the fifth-variant decision left open by the original 60-Pin brief. No generated lifestyle people were added.
+The full 75-Pin asset set exists: **35 published, 10 scheduled and 30 prepared for later scheduling** (checkpoint 2026-11-08). The [matrix](prepared/matrix.json) covers all 15 approved keywords across five locations exactly once, and 15 actual source-photo families with five creative variants each. The original eleven assets anchored their source families' first variants. The five treatments are classic editorial, photo-forward, framed, asymmetric editorial and magazine editorial. No generated lifestyle people were added.
 
 | Target location | Required wording rule |
 | --- | --- |
@@ -41,7 +42,7 @@ The full 75-Pin asset set is prepared: **11 published Pins and 64 unpublished lo
 | Los Angeles | Address travelers **from Los Angeles**; do not imply the estate is located in Los Angeles. |
 | Orange County | Address travelers **from Orange County**; do not imply the estate is located in Orange County. |
 
-The only board used in the first batches is **Top Vacation Rental in Temecula Wine Country**. The original five-board plan remains future work:
+The first batches originally used Top Vacation Rental in Temecula Wine Country. On 2026-10-27 the following five exact public boards were created and verified, and all 13 published campaign Pins were moved to their assigned boards with public URLs preserved:
 
 1. Villa Fabulosa | Luxury Estate & Resort Amenities
 2. Temecula Wine Country Vacation Rental
@@ -49,7 +50,7 @@ The only board used in the first batches is **Top Vacation Rental in Temecula Wi
 4. Resort-Style Pool & Outdoor Living
 5. Corporate Retreats & Private Getaways
 
-If the owner authorizes that setup, distribute the complete 75-Pin plan at 15 Pins per planned board. Do not create boards during a small publishing batch merely to make the original checklist appear complete.
+The complete 75-Pin allocation is **15 per board**, grouping three actual source-photo families with five variants each. Use the exact board URL, current state and mapping in [board-schedule-plan-2026-10-27.json](board-schedule-plan-2026-10-27.json). Older unrelated boards and non-campaign Pins were preserved.
 
 ## 4. Images and text on the graphic
 
@@ -57,7 +58,7 @@ If the owner authorizes that setup, distribute the complete 75-Pin plan at 15 Pi
 - Continue the approved warm ivory, navy and gold editorial design, with readable serif headlines, generous margins and a clear `Explore VillaFabulosa.com` call to action.
 - Inspect every source photo and the approved style reference before generation. Use the built-in image generation tool for the generated designs, then inspect the final saved image. Preserve the full prompt and source/style-reference paths in the Pin's Markdown record.
 - Ask the generation tool to preserve architecture, pool shape, furniture, scenery and amenities. Compare its output with the original: instructions alone do not prove photographic fidelity. Record visible differences honestly. Do not advertise invented property features.
-- The campaign format is vertical **2:3**. The brief requests **1000 × 1500**; both the published assets 001–011 and prepared assets 012–075 are actually **1024 × 1536**. Record actual dimensions and do not silently claim an exact export size that was not produced.
+- The campaign format is vertical **2:3**. The brief requests **1000 × 1500**; all published and prepared campaign assets, 001–075, are actually **1024 × 1536**. Record actual dimensions and do not silently claim an exact export size that was not produced.
 - The full campaign's published and prepared creatives contain **no AI-generated people**. The original brief's lifestyle-people concept was not used in the five-treatment production mix.
 - Avoid unsupported superiority, savings, fee or rate guarantees, including `#1`, `Best Rates Guaranteed`, or `Skip Platform Fees`, unless current evidence supports the exact claim. Do not imply that a reunion or retreat use automatically permits events.
 
@@ -68,7 +69,7 @@ Rotate the original headline bank in order, avoiding consecutive repeats. With 7
 3. Perfect Venue for Family Reunions & Retreats
 4. Private Estate Designed for Multi-Family Stays
 
-Original headline 5, `#1 Vacation Rental in California`, was skipped in the first published batches because its ranking is unsupported. Pins 005–007 used original headlines 6–8. Pins 008–011 used original headlines 9–12, with headline 10 factually adapted to **Luxury Bedrooms & High-End Amenities** because plural master suites are unconfirmed. Pin 009's posted asset is `pin-009-v2.png`; its original image is retained as unposted history. Prepared Pin 012 continues at entry 13, adapted to **Private Estate in Temecula Wine Country** without a travel-time claim. The remaining queue rotates the bank with factual replacements documented in [CAMPAIGN-REFERENCE.md](CAMPAIGN-REFERENCE.md) and each Pin's metadata. Pin 075 ends at adapted entry 16. Check each claim against the photo and property information. Do not reuse the sample's photograph when only its visual style is intended as a reference.
+Original headline 5, `#1 Vacation Rental in California`, was skipped in the first published batches because its ranking is unsupported. Pins 005–007 used headlines 6–8; 008–011 used 9–12, adapting 10 to **Luxury Bedrooms & High-End Amenities** because plural master suites are unconfirmed. Pin 009's posted image is `pin-009-v2.png`; its original remains unposted. Published Pin 012 uses adapted entry 13, **Private Estate in Temecula Wine Country**, without a travel-time claim; 013 uses entry 14, **Scenic Views & Private Estate Luxury**. Remaining assignments and factual replacements are recorded in [CAMPAIGN-REFERENCE.md](CAMPAIGN-REFERENCE.md) and each Pin's metadata. Check claims against the actual photo and property information; use the sample as a style reference without borrowing its scene.
 
 ### Local preparation and owner review
 
@@ -76,7 +77,7 @@ Each folder `prepared/pin-012/` through `prepared/pin-075/` contains its `pin-NN
 
 Use the [visual index](prepared/index.html) to review the designs, [README](prepared/README.md) for navigation, [queue CSV](prepared/queue.csv) for copy, and [manifest](prepared/manifest.json), [matrix](prepared/matrix.json) and [validation report](prepared/validation.json) for local checks. Visual reviews record legibility and source fidelity, including visible generative differences. Local validation checks file completeness, dimensions, unique IDs/UTMs and campaign coverage; it does not establish saved Pinterest state.
 
-Keep each new record `prepared`, with public URL, posting date, scheduling date, saved manual AI setting, public AI badge and performance measurements blank. Preserve `live_verified: false`. The owner will review these assets before selecting a future publishing batch. That later instruction determines publication scope; preparing all 64 does not authorize posting them.
+The folders 012–075 remain the original asset archive: 24 are published (012–014, 064, 051, 043, 069, 066, 068, 036, 049, 034, 052, 038 and 057, 039, 075, 045, 041, 030, 048, 070, 059, 053), ten records are scheduled and 30 remain prepared. Scheduled records keep public URL, posted date, public badge and metrics blank, with `live_verified: false`; actual schedule IDs, owner-only previews, saved times and verification scope are recorded separately. Planned dates are never evidence of a saved schedule. Original prompt/review records and all PNGs remain unchanged.
 
 ## 5. Title, description, hashtags, topics and alt text
 
@@ -95,7 +96,7 @@ Pinterest permits hashtags in descriptions and provides up to 10 native related-
 
 If Edit Pin does not expose a native topic selector for an older Pin, add the authorized description hashtags and record the topic field as unavailable in that editor. Do not report that native topics were added when only the description changed.
 
-The regular organic builder and Edit Pin exposed no native topic selector for Pins 008–011 on 2026-10-25. Their three description hashtags were saved and verified; no native related topics were selected.
+The regular organic builder and Edit Pin exposed no native topic selector for Pins 008–011 on 2026-10-25 or 012–013 on 2026-10-27. Their three description hashtags were saved and verified; no native related topics were selected.
 
 Tracking format:
 
@@ -107,9 +108,9 @@ Increment the Pin ID once, keep the ID identical in filenames, the Sheet and `ut
 
 ## 6. AI disclosure preference and platform labels
 
-The owner's latest instruction is to continue with generated designs and leave the **manual AI disclosure toggle Off**. For prepared Pins 012–075 this is a requested future setting only: no saved platform toggle or public badge state exists yet. When publishing, check and record the saved manual toggle state for each Pin. Do not claim a generated design is a pixel-identical original photograph, or that it contains no AI work.
+The owner's latest instruction is to continue generated designs and leave the **manual AI disclosure toggle Off**. For ten scheduled Pins, manual AI Off, generated-person Off, Ad-only Off and exact alt text were checked before submission; the saved scheduled UI exposes none of those fields, so saved-state verification remains unavailable. For the 30 prepared Pins, Off remains a requested future setting only. Recheck saved fields when exposed after publication, and record public AI badges independently. Do not claim a generated design is a pixel-identical photograph.
 
-The manual toggle was verified Off after full reload for Pins 001–004 on 2026-10-19, Pins 005–007 on 2026-10-20 and Pins 008–011 on 2026-10-25. Each Pin visibly displayed Pinterest's AI-modified badge at its own latest recorded check.
+Manual AI Off was verified after full reload for 001–004 on 2026-10-19, 005–007 on 2026-10-20, 008–011 on 2026-10-25, 012–013 on 2026-10-27, 014/064 on 2026-10-28 051, 043, 069, 066, 068, 036, 049, 034, 052, 038 on 2026-11-03 and 057, 039, 075, 045, 041, 030, 048, 070, 059, 053 on 2026-11-08. Public AI badges were Present for the older 13 at their recorded checks. No badge was observed for the twenty-two automatically published Pins at their checks; this does not guarantee permanent absence. Future scheduled/prepared Pins have no public badge observation.
 
 Pinterest can apply an **AI modified** badge automatically, independently of the manual toggle, using metadata and detection systems. Manual Off therefore does not guarantee that a public badge disappears. Record the visible badge state separately; never strip provenance metadata or attempt detection evasion. Pinterest directs owners to support if they want to appeal a label. [Pinterest: Gen AI labels](https://help.pinterest.com/en/article/gen-ai-labels)
 
@@ -117,11 +118,11 @@ If future creative includes generated people, document that fact and review the 
 
 ## 7. Publish and verify one Pin at a time
 
-Use the regular organic **Create Pin** builder. On 2026-10-25, the legacy `/pin-creation-tool/` redirected to **Create Pin for Idea ad** at `/idea-pin-builder/`; the observed navigation's **Create Pin** option opened the regular `/pin-builder/`. Recheck the live interface rather than assuming an old URL still opens the correct flow. Keep **Ad-only Off** and select immediate publication for a batch requested now; this workflow does not authorize launching ads.
+Use the regular organic **Create Pin** builder. On 2026-10-25, the legacy `/pin-creation-tool/` redirected to **Create Pin for Idea ad** at `/idea-pin-builder/`; the observed navigation's **Create Pin** option opened the regular `/pin-builder/`. Recheck the live interface rather than assuming an old URL still opens the correct flow. Keep **Ad-only Off**. For the standing campaign schedule select **Publish at a later date**. Use immediate publication only when separately requested. No ads are authorized.
 
 Before publishing:
 
-- [ ] Correct account, existing public board, next prepared ID and authorized batch count; start with 012 unless a later owner instruction specifies otherwise.
+- [ ] Correct account, exact assigned public board, unused queue capacity, next ID in the authoritative schedule order and standing authorized scope. Next backlog ID is **056** (rebased slot 2026-11-11T20:00:00+05:00); inspect the live queue before any retry.
 - [ ] Source photo and final image visually checked; spelling, margins and actual dimensions recorded.
 - [ ] Title, complete description with hashtags, unique tracking destination and alt text prepared.
 - [ ] Relevant native topics added where available; no unrelated tags chosen.
@@ -158,20 +159,28 @@ Keep the Description column aligned with the last known saved caption. Store req
 
 Leave unmeasured metrics blank. Use `Not verified`, `Unavailable in edit form`, or a precise observed status rather than inventing values or treating blanks as zero. Recheck the Sheet after writing it; a local CSV alone does not fulfill a request for a Google Sheet.
 
-For the 64 prepared Pins, record local preparation/review status and proposed posting copy in the prepared queue. Leave Pin links, posting dates and live verification empty until publication is confirmed. Existing eleven published rows and their verification dates remain authoritative; local preparation does not reverify them.
+**Cloud tracker synced in place on 2026-11-08** (same files, same links; see [setup-cloud-sync-2026-11-08.json](setup-cloud-sync-2026-11-08.json)): the `Prepared Queue` retains the original 64 asset records: 24 Published, ten Scheduled and 30 Prepared. Scheduled/prepared public links, posting dates, saved manual AI and public badges remain blank. The `Schedule` tab separates the original 62 planned slots from 32 historical saved schedules (22 now Published and ten future Scheduled); columns D:E hold the current rebased planned instants and the added AA:AB keep the pre-rebase originals. It records owner-only previews separately from actual public URLs. `Boards` holds exact URLs, descriptions, public verification and current counts. `Pins` and `Performance` hold 35 public records. Performance measurements stay blank. After each later checkpoint, update these tabs in place, read them back and record a new dated cloud receipt.
 
 Update [POSTING-LOG.md](POSTING-LOG.md) with completed actions and unresolved tasks. Keep exact posting copy in the Pin files and Sheet so a later edit can be audited. Share the public links and tracker link when reporting completion.
 
-## 9. Future scheduling and setup
+## 9. Scheduling and completed setup
 
-The planning cadence is **three Pins per day for 25 days** for 75 total, subject to the owner's next batch instruction. It has not been scheduled as a complete campaign. The 2026-10-25 publication batch, 008–011, is complete. The 2026-10-26 preparation batch, 012–075, is ready for owner review and has not been uploaded, published or scheduled.
+**Setup and scheduling completed on 2026-10-27–28:** Villa Fabulosa remains a Business account. The live website verification tag and Pinterest claim were verified for **villafabulosa.com**. All five exact public boards were created with saved descriptions and public privacy; all 13 existing campaign Pins were moved and reload-verified with their original public URLs, posting dates and copy preserved. At that checkpoint the campaign had **15 published, 10 scheduled and 50 prepared for later scheduling**. Scheduled IDs, in order: **051, 043, 069, 066, 068, 036, 049, 034, 052, 038**. The ten saved owner-only previews confirm title, full description, UTM, board, date and time. Alt text, manual AI Off, generated-person Off and Ad-only Off were checked before submission; those fields are unavailable in the saved scheduled UI and are not marked saved-verified. See the [board/schedule plan and verified states](board-schedule-plan-2026-10-27.json) and [domain receipt](domain-claim-setup-2026-10-27.md).
 
-At the 2026-10-19 help-page check, Pinterest's native business scheduler permitted dates up to 30 days ahead and up to 10 future Pins at a time. Recheck these limits before future scheduling; no scheduling was performed during offline preparation. Do not report that all 75 have been scheduled through one native queue. [Pinterest: schedule Pins](https://help.pinterest.com/en/business/article/schedule-pins)
+Pinterest's native scheduler permits at most **10 future Pins** and dates up to **30 days ahead**, as checked on 2026-10-27. The first ten saved slots ran **28–31 October 2026** and all published. All remaining 62 were originally planned for **28 October–17 November 2026**, at **10:00, 15:00 and 20:00 Asia/Karachi (UTC+05:00)**, with two on the final day.
 
-Domain claiming is pending. Local application support exists in `config/services.php` through `services.pinterest.domain_verify` / `PINTEREST_DOMAIN_VERIFY`, and the shared `resources/views/layouts/partials/head.blade.php` conditionally emits the verification meta tag. Obtain the real token from the correct Pinterest account, configure/deploy it through the authorized website workflow, inspect the live page head, then complete and verify the claim in Pinterest. Prepared code is not a claimed domain.
+**Continuation on 2026-11-03:** the queue read 0 future Pins; the ten queued Pins were reconciled public with full saved-field readback. Because the slots for 057–048 had passed, the 50 unsubmitted entries were shifted exactly **+3 days** (daily groupings unchanged; calendar now ends **20 November**); originals are kept as `original_planned_publication_local/utc`. A bounded batch then scheduled **057, 039, 075, 045, 041, 030, 048, 070, 059, 053** for **4–7 November**, each saved-verified. State then: 25 published, 10 scheduled, 40 planned, 22 historical submissions; next backlog ID 067. Check the live queue and public Pins before retrying or advancing. If backlog slots pass again, shift the whole unsubmitted backlog by whole days (keeping daily groupings and at most three per day) rather than publishing overdue Pins.
 
-Before future platform work, confirm the correct business account is still active and review the prepared assets and matrix with the owner. Domain claiming and the planned new-board setup remain separate unfinished work. Business status was last verified during the published batches; all 75 campaign assets now exist, while 64 still await owner review and a publishing instruction.
+**Continuation on 2026-11-08:** the queue again read 0; 057, 039, 075, 045, 041, 030, 048, 070, 059, 053 were reconciled public with full saved-field readback and image checks. 067, 073 and 040 had passed, so the 40 unsubmitted entries were shifted **+1 day** (calendar now ends **21 November**). 067/073 keep a day of their own because 053 from their original day had already published. A bounded batch scheduled **067, 073, 040, 050, 019, 031, 017, 055, 023, 072** for **8–11 November**, each saved-verified. State: **35 published, 10 scheduled, 30 planned**, 32 historical submissions. Next backlog ID is **056**, planned for **2026-11-11T20:00:00+05:00**; the earliest opening follows 067's 8 November 15:00 slot.
+
+**Builder load stall (2026-11-08):** the first `scheduleOpenDraft` for 067 timed out waiting for the upload input because `/pin-builder/` rendered only its header. Nothing was uploaded. The in-memory guard then correctly blocked a second draft. After confirming the plan state (`planned_not_submitted`) and an empty queue, a clean controller `close` and driver relaunch cleared the guard, and the retry worked. Never clear guards this way after an upload or submission attempt; inspect the queue and profile first.
+
+Helper notes from 2026-11-03: `scheduleVerifyPublic <ID> url=<observed public URL>` is the generic read-only public verifier (it never saves the editor or writes the plan); record results with a reviewed, dated step. `scheduleVerifySaved` now compares the queue card's date numerically because Pinterest shows unpadded days such as `11/4`. [Pinterest scheduler limits](https://help.pinterest.com/en/business/article/schedule-pins)
+
+For every new scheduled Pin, use regular organic `/pin-builder/`, select **Publish at a later date**, choose the assigned board, fill the date and select the time from its native menu. Typing the time with `.fill()` reverted it to noon during this setup; exact pre-submit readback caught that before submission. Fill title/link first and type the full description last with native input and blur. Compare the full form before submission. After the native confirmation, inspect the queue and reload the owner-only scheduled preview. Record only exposed saved fields; the preview is not a public Pin URL and its planned publication date is not an actual posting date.
+
+Use [CLAUDE-HANDOFF.md](CLAUDE-HANDOFF.md) for the exact continuation state, helper limits and next action. Browser automation must have one writer; inspect uncertain submissions before retrying. Do not rerun the original plan builder because it would overwrite saved evidence. No automated refill service has been installed; a future work session must reconcile the live queue and continue the authorized rolling schedule.
 
 ## Source and review notes
 
-The owner-supplied strategy, subsequent owner decisions and actual saved Pin records determine this campaign's scope. Current Pinterest UI and official help determine platform capabilities. The official help pages above were checked on 2026-10-19; recheck time-sensitive limits and controls before a later batch.
+The owner-supplied strategy, subsequent owner decisions and actual saved Pin records determine this campaign's scope. Current Pinterest UI and official help determine platform capabilities. The scheduler and domain-claim help pages were checked again on 2026-10-27; other historical help references retain their earlier check dates. Recheck time-sensitive limits and controls before a later batch.

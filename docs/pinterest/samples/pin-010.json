@@ -31,7 +31,7 @@
     "#GroupVacation",
     "#TemeculaWineCountry"
   ],
-  "board": "Top Vacation Rental in Temecula Wine Country",
+  "board": "Corporate Retreats & Private Getaways",
   "destination": "https://villafabulosa.com/?utm_source=pinterest&utm_medium=organic_social&utm_campaign=villa_fabulosa_75_pins&utm_content=pin_010",
   "published_url": "https://www.pinterest.com/pin/743868063501277328/",
   "posted_date": "2026-10-25",
@@ -76,5 +76,22 @@
     "public_ai_badge": "Present",
     "root_visual_review": "Root visually reviewed and accepted final creative and documented generative differences"
   },
-  "headline_bank_number": 11
+  "headline_bank_number": 11,
+  "planned_board_id": "board_5",
+  "planned_board": "Corporate Retreats & Private Getaways",
+  "planned_board_url": "https://www.pinterest.com/VillaFabulosa/corporate-retreats-private-getaways/",
+  "board_assignment_reason": "Source-photo family 10 matches board 5; each board receives three source families with five variations each.",
+  "board_url": "https://www.pinterest.com/VillaFabulosa/corporate-retreats-private-getaways/",
+  "board_verified_date": "2026-10-27",
+  "board_operation_status": "moved_and_reload_verified",
+  "board_at_original_publication": "Top Vacation Rental in Temecula Wine Country",
+  "board_move_verification_source": "docs/pinterest/board-schedule-plan-2026-10-27.json",
+  "board_move_saved_fields": {
+    "title": "Large House to Rent in Riverside County | Villa Fabulosa",
+    "description": "Looking for a large house to rent in Riverside County? Villa Fabulosa in Temecula offers space to share meals and spend time together, with indoor dining opening toward the outdoor living area. Explore the property and check availability at VillaFabulosa.com. #RiversideCounty #GroupVacation #TemeculaWineCountry",
+    "destination": "https://villafabulosa.com/?utm_source=pinterest&utm_medium=organic_social&utm_campaign=villa_fabulosa_75_pins&utm_content=pin_010",
+    "manualAI": false,
+    "alt_text": "Villa Fabulosa's double-height dining room at dusk, with a long glass table set with plates, blue napkins and wine glasses, gray chairs and black-framed sliding doors opening toward a covered outdoor area. The graphic reads “Temecula Wine Country Luxury Escape” and “Explore VillaFabulosa.com.”",
+    "ad_only": false
+  }
 }

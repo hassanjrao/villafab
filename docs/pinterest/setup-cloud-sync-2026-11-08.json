@@ -1,0 +1,83 @@
+{
+  "date": "2026-11-08",
+  "timezone": "Asia/Karachi",
+  "verified_at_utc": "2026-11-08 08:13:36 UTC",
+  "status": "synced_and_readback_verified",
+  "connectors": "Google Sheets and Google Docs editor connectors (claude.ai); Google Drive used only for read-only permission readback",
+  "authoritative_sources": [
+    "docs/pinterest/setup-2026-11-08.json",
+    "docs/pinterest/board-schedule-plan-2026-10-27.json",
+    "docs/pinterest/batch-2026-11-03.json",
+    "docs/pinterest/batch-2026-11-08.json",
+    "docs/pinterest/prepared/pin-NNN/metadata.json",
+    "docs/pinterest/WORKFLOW.md",
+    "docs/pinterest/POSTING-LOG.md"
+  ],
+  "previous_cloud_receipt": "docs/pinterest/setup-cloud-sync-2026-10-28.json",
+  "pre_sync_state": "Sheet tabs/filters and Doc revision matched the 28 October receipt (Doc revisionId unchanged since 28 October); no outside edits were found.",
+  "campaign_counts": {
+    "published": 35,
+    "future_scheduled": 10,
+    "prepared_not_scheduled": 30,
+    "historical_saved_schedules": 32
+  },
+  "spreadsheet": {
+    "id": "14MKMtjdMdPHqVvackdM6Gcn34C0YWOY4fBVUTh9VtTE",
+    "url": "https://docs.google.com/spreadsheets/d/14MKMtjdMdPHqVvackdM6Gcn34C0YWOY4fBVUTh9VtTE/edit",
+    "edited_in_place": true,
+    "tabs": {
+      "Pins": { "sheet_id": 1772117377, "range": "A1:V36", "records": 35, "new_rows": "17-36 (051, 043, 069, 066, 068, 036, 049, 034, 052, 038, 057, 039, 075, 045, 041, 030, 048, 070, 059, 053)" },
+      "Performance": { "sheet_id": 173001004, "range": "A1:J36", "records": 35, "measurements_blank": true },
+      "Prepared Queue": { "sheet_id": 1436571161, "range": "A1:Z65", "records": 64, "published": 24, "scheduled": 10, "prepared": 30 },
+      "Boards": { "sheet_id": 1304598349, "range": "A1:L6", "records": 5, "counts_published_scheduled_backlog": { "board_1": [6, 2, 7], "board_2": [8, 1, 6], "board_3": [8, 2, 5], "board_4": [7, 2, 6], "board_5": [6, 3, 6] } },
+      "Schedule": { "sheet_id": 1904913508, "range": "A1:AB63", "records": 62, "published": 22, "scheduled": 10, "planned": 30, "added_columns": "AA 'Original planned local (before rebases)', AB 'Original planned UTC (before rebases)'; D:E now hold the rebased planned instants" }
+    },
+    "write_method": "Typed updateCells/repeatCell batches (string values kept as text, native dates as serials, explicit link metadata). New Pins/Performance copy columns were filled by INDEX/MATCH from the identical Prepared Queue copy (pre-verified equal to the batch records) and then frozen to plain values; no formulas remain.",
+    "readback": {
+      "cells_compared": 3894,
+      "mismatches": 0,
+      "schedule_and_queue_cells_preserved": 2748,
+      "schedule_and_queue_cells_changed": 704,
+      "status_counts": { "Prepared_Queue": { "Published": 24, "Scheduled": 10, "Prepared": 30 }, "Schedule": { "Published": 22, "Scheduled": 10, "Planned": 30 } },
+      "formatting": "New rows copy the peer row format (white body, wrap, dd mmm yyyy dates, 220 px Pins / 21 px Performance row heights); hyperlink metadata present on public Pin and UTM links; basic filters extended to Pins A1:V36, Performance A1:J36, Schedule A1:AB63; AA:AB copy the Evidence column header/body style.",
+      "original_rows": "Pins/Performance rows 1-16 untouched; Boards columns A-G and K-L untouched."
+    },
+    "sharing": "Owner plus anyone/reader (readback 2026-11-08); no sharing changes"
+  },
+  "document": {
+    "id": "1B-CN1gnRRRtuwjpHpgpw_hlzG7vL3c6LucCg4sGoaUU",
+    "url": "https://docs.google.com/document/d/1B-CN1gnRRRtuwjpHpgpw_hlzG7vL3c6LucCg4sGoaUU",
+    "tab_id": "t.0",
+    "revision_before": "AHj4eMQe-WWQ_uR3C9VVSmi4l9OnyrJ3jL4VPZWw1Eip-8L8eU5WcGF2cJpigHoV9KsLcSoTxx8Zp_qj6hagLo1T4GwO-bTACetDu4ZezyUU",
+    "revision_after": "AHj4eMQsmbRtp85N1MfRCikDUVpXuAq0noQzRNV1dn6e51DteE85ZuQYSC5t-ZIg9ksux65Gio47kx-Sqf_cuDML1PpPVDsQ8Ps95WDb43P-",
+    "edited_in_place": true,
+    "write_method": "Four revision-guarded batches: 22 scoped paragraph replacements and 3 insertions (7 new NORMAL_TEXT paragraphs), 60 table rows inserted, then 280 cells filled with 20 Open Pin links and Courier New code spans.",
+    "readback": {
+      "paragraphs_before": 176,
+      "paragraphs_unchanged_verbatim": 154,
+      "paragraphs_intentionally_changed": 22,
+      "new_paragraphs": 7,
+      "inserted_text_fragments_verified": 29,
+      "stale_phrases_remaining": 0,
+      "tables": 5,
+      "table_cells_before": 250,
+      "table_cells_after": 530,
+      "existing_table_rows_preserved_exactly": true,
+      "new_table_cells_verified_text_and_style": 280,
+      "posting_log_tables_rows": 36,
+      "named_headings_incl_title_subtitle": 24,
+      "hyperlink_runs_before": 30,
+      "hyperlink_runs_after": 50
+    },
+    "visual_check_scope": "Native structure/style metadata only; no Google-rendered page view. No rendered page-fit claim.",
+    "sharing": "Owner-only (readback 2026-11-08); no sharing changes"
+  },
+  "next_backlog": {
+    "id": "056",
+    "planned_publication_local": "2026-11-11T20:00:00+05:00",
+    "planned_publication_utc": "2026-11-11T15:00:00.000Z"
+  },
+  "pinterest_changes": "None. This was a cloud documentation sync only; no Pinterest login, upload, schedule or edit.",
+  "performance_data_collected": false,
+  "credentials_recorded": false
+}

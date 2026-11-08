@@ -1,0 +1,79 @@
+{
+  "date": "2026-10-28",
+  "status": "passed",
+  "counts": {
+    "campaign_total": 75,
+    "published": 15,
+    "native_scheduled": 10,
+    "historical_saved_schedules": 12,
+    "prepared_planned_backlog": 50,
+    "unpublished_total": 60,
+    "original_prepared_asset_pack": 64
+  },
+  "next_to_schedule": "057",
+  "next_to_publish": "051",
+  "all_artwork_source_prompt_review_hashes_unchanged": true,
+  "old_batch_files_unchanged": true,
+  "public_urls_preserved": true,
+  "scheduling_plan_source": "docs/pinterest/board-schedule-plan-2026-10-27.json",
+  "state": "local_sync_verified",
+  "original_prepared_pack_statuses": {
+    "published": 4,
+    "prepared": 50,
+    "scheduled": 10
+  },
+  "campaign_statuses": {
+    "published": 15,
+    "native_future_scheduled": 10,
+    "prepared_planned_backlog": 50
+  },
+  "historical_verified_scheduling_submissions": 12,
+  "next_planned_local": "2026-11-01T10:00:00+05:00",
+  "verification_scope": "Future queue saved title/description/destination/board/date/time verified;alt/manualAI/person/Ad-only pre-submission only, saved state unavailable. Published014/064 full saved public fields verified in Oct28batch.",
+  "hash_checks": {
+    "method": "SHA-256 compared before and after sync",
+    "all75_artwork_unchanged": true,
+    "all_actual_source_photos_unchanged": true,
+    "prepared_prompt_files_unchanged": 64,
+    "prepared_review_files_unchanged": 64,
+    "all_historical_sample_PNGs_unchanged": true,
+    "old_publication_batch_files_unchanged": true,
+    "prepared_PNG_hash_record": "prepared/validation.json#checks"
+  },
+  "local_record_checks": {
+    "manifest_matches_all64_metadata": true,
+    "future_posted_dates_and_public_urls_blank": true,
+    "scheduled_saved_AI_unverified_not_false_claimed": true,
+    "all_performance_unmeasured_blank": true,
+    "historical_original13_public_URLs_preserved": true,
+    "README_table_board_pipes_escaped": true
+  },
+  "gallery_checks": {
+    "date": "2026-10-28",
+    "status": "passed",
+    "cards": 64,
+    "published_cards": 4,
+    "scheduled_cards": 10,
+    "prepared_cards": 50,
+    "campaign_published_count": 15,
+    "search_filter": true,
+    "keyword_filter": true,
+    "combined_filters": true,
+    "copy_description": true,
+    "no_fake_public_links": true,
+    "mobile_overflow": false,
+    "javascript_errors": []
+  },
+  "changed_file_groups": [
+    "prepared/pin-012 through pin-075 metadata.json and posting.md",
+    "samples/pin-001 through pin-011 Markdown current-board notes; existing005-011JSON current-board fields",
+    "prepared manifest.json,matrix.json,queue.csv,README.md,index.html,validation.json,gallery-check.json"
+  ],
+  "authoritative_evidence": [
+    "setup-2026-10-28.json",
+    "board-schedule-plan-2026-10-27.json",
+    "batch-2026-10-28.json"
+  ],
+  "cloud_sync_owned_by": "tracker agent",
+  "git_commit_or_push_performed": false
+}

@@ -4,20 +4,49 @@ Native Google Sheet: https://docs.google.com/spreadsheets/d/14MKMtjdMdPHqVvackdM
 
 Companion rules and posting log (native Google Doc): https://docs.google.com/document/d/1B-CN1gnRRRtuwjpHpgpw_hlzG7vL3c6LucCg4sGoaUU
 
+> **Synced in place to the 8 November 2026 checkpoint (Asia/Karachi).** The Sheet now shows **35 published, 10 future Scheduled and 30 Prepared**, with 32 historical saved schedules, matching [setup-2026-11-08.json](setup-2026-11-08.json), [batch-2026-11-03.json](batch-2026-11-03.json) and [batch-2026-11-08.json](batch-2026-11-08.json). Same file and link; see [setup-cloud-sync-2026-11-08.json](setup-cloud-sync-2026-11-08.json).
+
 - Created: 2026-10-19 (Asia/Karachi).
-- Last updated: 2026-10-26 (Asia/Karachi).
+- Last updated: 2026-11-08 (Asia/Karachi).
 - Location: My Drive / ChatGPT.
 - Spreadsheet ID: `14MKMtjdMdPHqVvackdM6Gcn34C0YWOY4fBVUTh9VtTE`.
 - Current permissions readback: owner user plus `anyone / reader`. This authoring work made no sharing changes; the existing permission state was preserved. The companion Doc remains owner-only.
-- State: eleven published Pins plus 64 prepared local Pins, 012–075, ready for owner review. The 2026-10-26 work uploaded no Pins, published none and scheduled none. Existing publication records and verification dates remain unchanged: 001–004 checked 2026-10-19, 005–007 checked 2026-10-20 and 008–011 checked 2026-10-25. Local asset checks do not establish saved Pinterest fields.
+- Last verified cloud state (2026-11-08): **35 published, 10 future Scheduled (067, 073, 040, 050, 019, 031, 017, 055, 023, 072; 8–11 November) and 30 Prepared**, with 32 historical saved schedules. Next backlog ID **056**, planned **2026-11-11T20:00:00+05:00** after the 3 November (+3 days) and 8 November (+1 day) rebases. Next unused creative ID **076**. See [setup-cloud-sync-2026-11-08.json](setup-cloud-sync-2026-11-08.json).
+- Previous verified cloud state (2026-10-28): **15 published, 10 future Scheduled and 50 Prepared**. The original remaining-62 calendar has twelve historical saved schedules: 014 and 064 auto-published on 2026-10-28 and were publicly reconciled; ten remain future Scheduled. Domain claim, five public boards and thirteen URL-preserving moves are verified. Next backlog ID **057**, planned **2026-11-01T10:00:00+05:00**. Next unused creative ID **076**. See [setup-cloud-sync-2026-10-28.json](setup-cloud-sync-2026-10-28.json).
 
 ## Tabs
 
-- `Pins` (`sheetId: 1772117377`), `A1:V12`: eleven published pins with links, full saved descriptions, posting dates, board, keyword, theme, target location, website UTM link, saved hashtags, native Pinterest topic information, alt text, creative and source paths, method, dimensions, separate manual AI disclosure and Pinterest AI badge fields, publication status, last verification date, and notes. All eleven descriptions include three saved hashtags. Every recorded manual AI disclosure is Off and every recorded public AI badge is Present, on each row's own verification date. New-row notes also confirm Ad-only Off and saved alt-text verification.
-- `Performance` (`sheetId: 173001004`), `A1:J12`: the same eleven pins, ready for dated impressions, saves, outbound clicks, attributed enquiries, attributed bookings, and notes. Metrics and measurement dates are blank because they have not been measured.
-- `Prepared Queue` (`sheetId: 1436571161`), `A1:Z65`: 64 unpublished records, each marked `Prepared`, with complete title, caption, three hashtags, alt text, keyword/location/headline, unique proposed UTM, image/source/prompt/review/folder/metadata paths, native preparation date, actual dimensions, method, recommended board and review notes. The requested future manual AI preference is `Off` in its own column. Saved manual AI, public badge, public Pin URL and posting date remain blank. These are prepared local assets, not uploaded Pinterest drafts or live Pins.
+- `Pins` (sheetId 1772117377), `A1:V36`: 35 public records. The older thirteen retain original copy, URLs, posted dates, prior full-verification dates and analytics; only board and dated move notes changed. Rows 15–16 append 014 and 064 from the actual 2026-10-28 public readbacks; rows 17–36 append the twenty Pins reconciled on 2026-11-03 and 2026-11-08 (posted date = native scheduled date; badge Not observed at the dated check).
+- `Performance` (sheetId 173001004), `A1:J36`: 35 public records; every unmeasured date/metric remains blank. All earlier rows are unchanged.
+- `Prepared Queue` (sheetId 1436571161), `A1:Z65`: original 64 asset records, now 24 Published, ten Scheduled and 30 Prepared. Preparation dates, PNG paths, prompts, reviews, copy and factual notes remain. Future scheduled/prepared public fields stay blank.
+- `Boards` (sheetId 1304598349), `A1:L6`: five exact public board URLs, saved descriptions, verification dates, fifteen-Pin targets and separate public/future/backlog counts (8 November: 6/2/7, 8/1/6, 8/2/5, 7/2/6, 6/3/6).
+- `Schedule` (sheetId 1904913508), `A1:AB63`: the original remaining-62 calendar, now 22 Published, ten Scheduled and 30 Planned. D:E hold the current rebased planned instants; AA:AB (added 2026-11-08) keep the pre-rebase originals. Planned local/UTC slots are separate from saved schedule times, IDs, owner-only historical previews and actual public URLs/dates. Future schedule verification exposes title, full description, UTM, board, date and time; alt/manual AI/person/Ad-only remain pre-submission-only checks.
 
 ## Verification
+
+### 2026-11-08 checkpoint sync
+
+Synced in place with the Google Sheets editor connector after confirming the tabs, filters and values still matched the 28 October receipt. Every target cell was derived from the local plan, batch records and per-Pin metadata and diffed against the live values; only changed cells were written. Schedule and Boards text values, including dates and 19-digit schedule IDs, were written as typed strings. Pins/Performance dates were written as native `dd mmm yyyy` serials, and public Pin/UTM links carry explicit link metadata. The twenty new Pins rows copy row 16's formatting and 220 px height. Their copy columns were looked up from the identical Prepared Queue text (pre-verified equal to the batch records) and then frozen to plain values; no formulas remain.
+
+The full readback compared **3,894 cells with 0 mismatches**. In Schedule and Prepared Queue, **2,748 cells were preserved and 704 changed**. Status counts read back as Prepared Queue 24/10/30 and Schedule 22/10/30; Pins and Performance hold 35 records each, with measurements blank. Filters now cover `Pins!A1:V36`, `Performance!A1:J36` and `Schedule!A1:AB63`. Final Drive permission readback shows owner plus `anyone / reader`, unchanged. No Google-rendered page-fit claim is made. See [setup-cloud-sync-2026-11-08.json](setup-cloud-sync-2026-11-08.json).
+
+### 2026-10-28 setup and rolling-schedule sync
+
+Bounded native CellData readback matched all **3,912 cells** in the five final populated rectangles. Of the previous 2,138 cells, **1,964 were preserved exactly** and **174 changed** for actual board, state and dated notes/publication fields. The original thirteen Performance rows were preserved, and all measurement fields remain blank. Exactly two new public rows were added; scheduled preview URLs were never placed in public-link columns.
+
+Both new tabs use the existing Arial/light-gray-header style, wrapped text, frozen headers/ID columns, bounded filters and sized populated columns/rows. Native formatting metadata confirms header/body wrapping and frozen settings. Google-rendered visual verification was unavailable; no rendered page-fit claim is made. Sharing readback remains owner plus anyone/reader; no permissions were changed.
+
+The companion Doc was updated and verified in place. Full evidence and verification limitations are in [setup-cloud-sync-2026-10-28.json](setup-cloud-sync-2026-10-28.json). Older receipts below describe their historical publication batches.
+
+### 2026-10-27 publication receipt
+
+- On 2026-10-27, all **64 appended cells** in `Pins!A13:V14` and `Performance!A13:J14`, plus **52 updated cells** in `Prepared Queue!A2:Z3`, exactly matched [batch-2026-10-27.json](batch-2026-10-27.json). The **2,022 other cells** were preserved, including the entire older eleven-Pin register/analytics area, queue header and all other 62 queue records. Final populated rectangles total **2,138 cells**.
+- The two saved captions include all three hashtags. Pin 013's first sentence ends with the corrected full stop. Exact title, caption, UTM, alt text, board, manual AI Off and Ad-only Off were verified after full Pinterest reloads; both public images matched the uploaded original PNGs and both automatic AI badges were present. No native topic selector was offered, so no related topics were selected.
+- Both new records have native posting and verification dates **27 Oct 2026**, formatted `dd mmm yyyy`; their preparation date stays **26 Oct 2026**. All ten hyperlink cells in the written blocks were verified, including the two newly saved public links in the queue. No measurement dates, analytics or outcomes were filled.
+- Native response confirms filters through `Pins!A1:V14`, `Performance!A1:J14` and `Prepared Queue!A1:Z65`. Peer formatting, date formats, existing widths and frozen panes were preserved; new public links have explicit link metadata. A rendered Google Sheet view was unavailable, so visual validation used native cell metadata without claiming rendered fit.
+- Final 2026-10-27 permissions remain Sheet owner plus `anyone / reader`, companion Doc owner only. No sharing action was performed.
+
+### 2026-10-26 preparation receipt
 
 - The 2026-10-26 connector readback exactly matched all **1,690 cells** in `Prepared Queue!A1:Z65` to the final manifest, including 64 complete captions and UTF-8 alt text. All **384 existing cells** in `Pins!A1:V12` and `Performance!A1:J12` retained identical values, formats, hyperlinks, validation and chip state.
 - All 64 prepared UTM hyperlinks were checked through native hyperlink metadata. Their public Pin links and posted dates are blank; saved manual AI and public AI badge fields are blank. Requested manual AI is recorded separately as `Off`. No performance data or live verification was invented.
@@ -49,7 +78,7 @@ Companion rules and posting log (native Google Doc): https://docs.google.com/doc
 
 ## Updating
 
-Use `batch-2026-10-19.json`, `batch-2026-10-20.json`, `batch-2026-10-25.json` and verified Pinterest readback as the publication source of truth. Use `prepared/manifest.json` and each `prepared/pin-NNN/metadata.json` as the unpublished queue source. Prepared hashtag captions are not proof that a Pin exists or an edit has saved. Next prepared Pin to publish is 012; all IDs through 075 are allocated, so the next unused creative ID is 076.
+Use the dated publication batches through `batch-2026-10-27.json` and verified Pinterest readback as the live source of truth. Use `prepared/manifest.json` and each `prepared/pin-NNN/metadata.json` for archive/queue state. Prepared captions are not proof that a Pin exists or an edit has saved. Next prepared Pin to publish is 014; all IDs through 075 are allocated, so the next unused creative ID is 076.
 
 After a later authorized publication and full reload check, add the verified live record to `Pins` and its analytics placeholder to `Performance`, update that queue record's status/public URL/posted date, and preserve the exact submitted copy and verification scope. Do not mark a prepared record published from local file checks alone. Hashtags and native topic selections remain separate fields; leave unmeasured metrics blank.
 

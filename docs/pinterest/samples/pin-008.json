@@ -25,7 +25,7 @@
     "#GroupGetaway",
     "#OutdoorLiving"
   ],
-  "board": "Top Vacation Rental in Temecula Wine Country",
+  "board": "Resort-Style Pool & Outdoor Living",
   "destination": "https://villafabulosa.com/?utm_source=pinterest&utm_medium=organic_social&utm_campaign=villa_fabulosa_75_pins&utm_content=pin_008",
   "published_url": "https://www.pinterest.com/pin/743868063501276970/",
   "posted_date": "2026-10-25",
@@ -69,5 +69,22 @@
     "public_ai_badge": "Present",
     "root_visual_review": "Root visually reviewed and accepted final creative and documented generative differences"
   },
-  "headline_bank_number": 9
+  "headline_bank_number": 9,
+  "planned_board_id": "board_4",
+  "planned_board": "Resort-Style Pool & Outdoor Living",
+  "planned_board_url": "https://www.pinterest.com/VillaFabulosa/resort-style-pool-outdoor-living/",
+  "board_assignment_reason": "Source-photo family 8 matches board 4; each board receives three source families with five variations each.",
+  "board_url": "https://www.pinterest.com/VillaFabulosa/resort-style-pool-outdoor-living/",
+  "board_verified_date": "2026-10-27",
+  "board_operation_status": "moved_and_reload_verified",
+  "board_at_original_publication": "Top Vacation Rental in Temecula Wine Country",
+  "board_move_verification_source": "docs/pinterest/board-schedule-plan-2026-10-27.json",
+  "board_move_saved_fields": {
+    "title": "Group Vacation Rentals in Southern California | Villa Fabulosa",
+    "description": "Bring your group together at Villa Fabulosa in Temecula Wine Country. Unwind on the covered patio beside the fire table, with the pool and outdoor spaces close by. Explore this Southern California estate and check availability at VillaFabulosa.com. #TemeculaWineCountry #GroupGetaway #OutdoorLiving",
+    "destination": "https://villafabulosa.com/?utm_source=pinterest&utm_medium=organic_social&utm_campaign=villa_fabulosa_75_pins&utm_content=pin_008",
+    "manualAI": false,
+    "alt_text": "Villa Fabulosa's covered patio at dusk, with wicker sofas, a fire table, the pool and putting green beyond. The graphic reads Imagine yourself here!, Temecula Wine Country and Explore VillaFabulosa.com.",
+    "ad_only": false
+  }
 }

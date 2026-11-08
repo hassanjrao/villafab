@@ -1,6 +1,6 @@
 # Pin 047
 
-Status: Prepared locally; not published or scheduled. Prepared 26 October 2026 (Asia/Karachi).
+Status: Prepared locally; calendar slot planned but not submitted to Pinterest because the native queue is full.
 
 Image: [pin-047.png](pin-047.png)
 
@@ -24,7 +24,7 @@ Aerial view of the actual white estate, courtyard, pool, outdoor spaces and surr
 
 - Keyword: large group vacation rentals (A15)
 - Target: Riverside County. Property in Temecula, Riverside County, Southern California.
-- Recommended existing board: Top Vacation Rental in Temecula Wine Country
+- Planned board: Temecula Wine Country Vacation Rental
 - Overlay headline: Luxury Wine Country Estate with Pool & Spa
 - Source: public/frontend/imgs/photos-for-vrbo/villa-fabulosa-13-13-aerial.webp
 - Creative variation: 4; source family 7
@@ -33,3 +33,11 @@ Aerial view of the actual white estate, courtyard, pool, outdoor spaces and surr
 - Published URL, posted date and performance: blank until actually posted/measured.
 
 Full generation prompt: [prompt.txt](prompt.txt). Asset review: [review.json](review.json). Exact structured fields: [metadata.json](metadata.json).
+
+## Current board and calendar - 8 November 2026
+
+Planned board: [Temecula Wine Country Vacation Rental](https://www.pinterest.com/VillaFabulosa/temecula-wine-country-vacation-rental/).
+
+Planned calendar slot: **2026-11-15T10:00:00+05:00 (Asia/Karachi)**; UTC: 2026-11-15T05:00:00.000Z. Original slot 2026-11-11T10:00:00+05:00. Shifted +3 days on 2026-11-03 and +1 day on 2026-11-08 with the whole unsubmitted backlog, because its earliest slots had passed before native capacity reopened; daily groupings unchanged. This is a plan only; no native schedule, posted date or public URL exists for this Pin. Refill the rolling queue when capacity opens.
+
+Current platform evidence: [board and scheduling record](../../board-schedule-plan-2026-10-27.json). All artwork, prompt and review.json files remain unchanged. review.json is the original 26 October creative-review snapshot; current publication/schedule state is in metadata.json.

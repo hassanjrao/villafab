@@ -38,12 +38,12 @@
       "published_url": "https://www.pinterest.com/pin/743868063501315548/",
       "posted_date": "2026-10-27",
       "scheduled_date": null,
-      "live_verified": false,
+      "live_verified": true,
       "manual_ai_disclosure_requested": false,
-      "manual_ai_disclosure_saved": null,
+      "manual_ai_disclosure_saved": false,
       "public_ai_label_present": true,
       "topic_tags": [],
-      "topic_status": "Choose relevant native topics only if offered when posting.",
+      "topic_status": "Native topic selector unavailable in regular Pin builder and Edit Pin; description hashtags saved and verified",
       "generation_method": "Built-in image_gen.imagegen; original output saved without code image edits.",
       "dimensions": {
         "width": 1024,
@@ -80,7 +80,10 @@
       "ad_only": false,
       "tag_update_status": "verified",
       "alt_text_verification": "Exact saved field checked after full reload",
-      "topic_edit_status": "Native topic selector unavailable in regular Pin builder and Edit Pin; description hashtags saved and verified"
+      "topic_edit_status": "Native topic selector unavailable in regular Pin builder and Edit Pin; description hashtags saved and verified",
+      "last_observed_description": "Looking for a luxury villa rental in Temecula, Riverside County? Meet Villa Fabulosa, a private estate for your next shared escape. Gather around the kitchen island and enjoy space to prepare and share meals. See the estate and check availability at VillaFabulosa.com. #RiversideCounty #VacationHome #TemeculaWineCountry",
+      "last_observed_description_context": "Exact saved field read after full Pinterest reload on2026-10-27 (Asia/Karachi).",
+      "image_verification": "Uploaded the recorded original PNG in the dedicated draft; public image visually checked after publication."
     },
     {
       "id": "013",
@@ -113,12 +116,12 @@
       "published_url": "https://www.pinterest.com/pin/743868063501315592/",
       "posted_date": "2026-10-27",
       "scheduled_date": null,
-      "live_verified": false,
+      "live_verified": true,
       "manual_ai_disclosure_requested": false,
-      "manual_ai_disclosure_saved": null,
+      "manual_ai_disclosure_saved": false,
       "public_ai_label_present": true,
       "topic_tags": [],
-      "topic_status": "Choose relevant native topics only if offered when posting.",
+      "topic_status": "Native topic selector unavailable in regular Pin builder and Edit Pin; description hashtags saved and verified",
       "generation_method": "Built-in image_gen.imagegen; original output saved without code image edits.",
       "dimensions": {
         "width": 1024,
@@ -155,7 +158,18 @@
       "ad_only": false,
       "tag_update_status": "verified",
       "alt_text_verification": "Exact saved field checked after full reload",
-      "topic_edit_status": "Native topic selector unavailable in regular Pin builder and Edit Pin; description hashtags saved and verified"
+      "topic_edit_status": "Native topic selector unavailable in regular Pin builder and Edit Pin; description hashtags saved and verified",
+      "last_observed_description": "Picture your next luxury villa rental in Southern California. Consider Villa Fabulosa for a stay with family or friends. Explore the outdoor recreation spaces, with a blue sport court beside the putting greens. Explore the property and available dates at VillaFabulosa.com. #SouthernCalifornia #GroupGetaway #TemeculaWineCountry",
+      "last_observed_description_context": "Exact saved field read after full Pinterest reload on2026-10-27 (Asia/Karachi).",
+      "image_verification": "Uploaded the recorded original PNG in the dedicated draft; public image visually checked after publication."
     }
-  ]
+  ],
+  "authenticated_account": "Villa Fabulosa",
+  "authenticated_account_profile": "@VillaFabulosa",
+  "creator_url": "https://www.pinterest.com/pin-builder/",
+  "publication_complete": true,
+  "verified": true,
+  "verification_date": "2026-10-27",
+  "next_to_publish": "014",
+  "browser_access": "Existing dedicated persistent profile outside repository, originally authenticated manually by owner; restored without copying Chrome cookies or profiles."
 }

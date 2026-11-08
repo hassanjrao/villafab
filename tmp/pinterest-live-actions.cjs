@@ -16,6 +16,29 @@ module.exports = async function(session, command) {
     return {batchDate:batch.date,authorizedIds:batch.posts.map(p=>p.id)};
   }
   page.setDefaultTimeout(12000);
+  if(command.action.startsWith('schedule')) {
+    delete require.cache[require.resolve('./pinterest-schedule-actions.cjs')];
+    return await require('./pinterest-schedule-actions.cjs')(session,command);
+  }
+  if(command.action.startsWith('board')||command.action==='claimReadback') {
+    delete require.cache[require.resolve('./pinterest-setup-actions.cjs')];
+    return await require('./pinterest-setup-actions.cjs')(session,command);
+  }
+  if(command.action==='setupNavigate') {
+    const allowed=['https://www.pinterest.com/settings/','https://www.pinterest.com/settings/claim/','https://www.pinterest.com/VillaFabulosa/_saved/','https://www.pinterest.com/business/hub/'];
+    if(!allowed.includes(command.url))throw Error('Unknown setup destination');
+    await page.goto(command.url,{waitUntil:'domcontentloaded'});return {url:page.url(),text:(await page.locator('body').innerText()).slice(0,7000)};
+  }
+  if(command.action==='prepareDomainClaim') {
+    if(page.url()!=='https://www.pinterest.com/settings/claim/')throw Error('Open claimed-websites settings first');
+    const dialog=page.getByRole('dialog',{name:'Choose a website verification method',exact:true});
+    await dialog.waitFor({state:'visible'});
+    await dialog.locator('#domain-verification-input').fill('https://villafabulosa.com');
+    await dialog.locator('#metatag').check();
+    const text=await dialog.innerText();
+    if(!text.includes('923d3954a887ef396dc38b526682156f'))throw Error('Unexpected account token');
+    return {url:await dialog.locator('#domain-verification-input').inputValue(),method:'HTML meta tag',prepared:true,submitted:false};
+  }
   if (command.action === 'close') { session.closed = true; return { closed: true }; }
   const url = page.url();
   if (!/^https:\/\/(?:www\.)?pinterest\.com\//.test(url)) return { url, needsManualSignIn: true };

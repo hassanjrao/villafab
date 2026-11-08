@@ -1,6 +1,6 @@
 # Pin 026
 
-Status: Prepared locally; not published or scheduled. Prepared 26 October 2026 (Asia/Karachi).
+Status: Prepared locally; calendar slot planned but not submitted to Pinterest because the native queue is full.
 
 Image: [pin-026.png](pin-026.png)
 
@@ -24,7 +24,7 @@ White foyer with wood stairs, black glass-panel front door, blue vase, blue rug 
 
 - Keyword: exclusive villa rentals (A9)
 - Target: Southern California. Property in Temecula, Riverside County, Southern California.
-- Recommended existing board: Top Vacation Rental in Temecula Wine Country
+- Planned board: Villa Fabulosa | Luxury Estate & Resort Amenities
 - Overlay headline: The Ultimate Group Getaway
 - Source: public/frontend/imgs/photos-for-vrbo/villa-fabulosa-13-19-foyer.webp
 - Creative variation: 2; source family 15
@@ -33,3 +33,11 @@ White foyer with wood stairs, black glass-panel front door, blue vase, blue rug 
 - Published URL, posted date and performance: blank until actually posted/measured.
 
 Full generation prompt: [prompt.txt](prompt.txt). Asset review: [review.json](review.json). Exact structured fields: [metadata.json](metadata.json).
+
+## Current board and calendar - 8 November 2026
+
+Planned board: [Villa Fabulosa | Luxury Estate & Resort Amenities](https://www.pinterest.com/VillaFabulosa/villa-fabulosa-luxury-estate-resort-amenities/).
+
+Planned calendar slot: **2026-11-13T20:00:00+05:00 (Asia/Karachi)**; UTC: 2026-11-13T15:00:00.000Z. Original slot 2026-11-09T20:00:00+05:00. Shifted +3 days on 2026-11-03 and +1 day on 2026-11-08 with the whole unsubmitted backlog, because its earliest slots had passed before native capacity reopened; daily groupings unchanged. This is a plan only; no native schedule, posted date or public URL exists for this Pin. Refill the rolling queue when capacity opens.
+
+Current platform evidence: [board and scheduling record](../../board-schedule-plan-2026-10-27.json). All artwork, prompt and review.json files remain unchanged. review.json is the original 26 October creative-review snapshot; current publication/schedule state is in metadata.json.

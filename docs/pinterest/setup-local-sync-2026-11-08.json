@@ -1,0 +1,31 @@
+{
+  "date": "2026-11-08",
+  "status": "passed",
+  "counts": {
+    "campaign_total": 75,
+    "published": 35,
+    "native_scheduled": 10,
+    "historical_saved_schedules": 32,
+    "prepared_planned_backlog": 30,
+    "unpublished_total": 40,
+    "original_prepared_asset_pack": 64
+  },
+  "next_to_schedule": "056",
+  "next_to_publish": "067",
+  "all_artwork_source_prompt_review_hashes_unchanged": true,
+  "old_batch_files_unchanged": true,
+  "public_urls_preserved": true,
+  "scheduling_plan_source": "docs/pinterest/board-schedule-plan-2026-10-27.json",
+  "state": "local_sync_verified",
+  "source_script": "tmp/sync-pinterest-local-nov08.cjs",
+  "updated": [
+    "prepared/pin-NNN/metadata.json and posting.md (64)",
+    "prepared/manifest.json, matrix.json, validation.json, queue.csv, README.md, index.html",
+    "board-schedule-plan-2026-10-27.md (current checkpoint section only)",
+    "WORKFLOW.md, POSTING-LOG.md, CAMPAIGN-REFERENCE.md",
+    "tracker-sheet.md and rules-doc.md (cloud-pending notes)",
+    "CLAUDE-HANDOFF.md and handoff-user-prompt.txt"
+  ],
+  "rebased_backlog_original_instants_preserved": true,
+  "hash_checks": "SHA-256 of all 75 artwork PNGs, source photos, 64 prompt and 64 review files, sample PNGs and earlier batch files compared before/after: unchanged."
+}

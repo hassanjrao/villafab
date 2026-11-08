@@ -1,0 +1,721 @@
+{
+  "date": "2026-11-03",
+  "verified_at": "2026-11-03T09:32:55.311Z",
+  "timezone": "Asia/Karachi",
+  "account": "VillaFabulosa",
+  "state": "native_queue_full_backlog_planned",
+  "previous_checkpoint": "setup-2026-10-28.json",
+  "domain": {
+    "domain": "villafabulosa.com",
+    "status": "claimed_reload_verified",
+    "verified_date": "2026-10-27",
+    "public_tag_verified": true,
+    "source": "domain-claim-setup-2026-10-27.md"
+  },
+  "counts": {
+    "campaign_total": 75,
+    "published": 25,
+    "scheduled": 10,
+    "prepared_planned_backlog": 40,
+    "historical_verified_scheduling_submissions": 22,
+    "public_boards": 5,
+    "existing_pin_moves_reload_verified": 13
+  },
+  "boards": [
+    {
+      "id": "board_1",
+      "name": "Villa Fabulosa | Luxury Estate & Resort Amenities",
+      "url": "https://www.pinterest.com/VillaFabulosa/villa-fabulosa-luxury-estate-resort-amenities/",
+      "public": true,
+      "target": 15,
+      "published": 5,
+      "scheduled": 1,
+      "planned_backlog": 9
+    },
+    {
+      "id": "board_2",
+      "name": "Temecula Wine Country Vacation Rental",
+      "url": "https://www.pinterest.com/VillaFabulosa/temecula-wine-country-vacation-rental/",
+      "public": true,
+      "target": 15,
+      "published": 5,
+      "scheduled": 3,
+      "planned_backlog": 7
+    },
+    {
+      "id": "board_3",
+      "name": "Group Vacation Home & Family Reunion Ideas",
+      "url": "https://www.pinterest.com/VillaFabulosa/group-vacation-home-family-reunion-ideas/",
+      "public": true,
+      "target": 15,
+      "published": 6,
+      "scheduled": 2,
+      "planned_backlog": 7
+    },
+    {
+      "id": "board_4",
+      "name": "Resort-Style Pool & Outdoor Living",
+      "url": "https://www.pinterest.com/VillaFabulosa/resort-style-pool-outdoor-living/",
+      "public": true,
+      "target": 15,
+      "published": 5,
+      "scheduled": 2,
+      "planned_backlog": 8
+    },
+    {
+      "id": "board_5",
+      "name": "Corporate Retreats & Private Getaways",
+      "url": "https://www.pinterest.com/VillaFabulosa/corporate-retreats-private-getaways/",
+      "public": true,
+      "target": 15,
+      "published": 4,
+      "scheduled": 2,
+      "planned_backlog": 9
+    }
+  ],
+  "reconciliation": {
+    "live_queue_before_refill": {
+      "future_pins": 0,
+      "read_at_local": "2026-11-03T14:19+05:00",
+      "timezone": "Asia/Karachi"
+    },
+    "method": "Read-only scheduleVerifyPublic: full public Pin reload, Edit Pin readback, Cancel without saving; public graphic visually compared with the prepared PNG."
+  },
+  "newly_reconciled_public": [
+    {
+      "id": "051",
+      "public_pin_url": "https://www.pinterest.com/pin/743868063501334246/",
+      "posted_date": "2026-10-28",
+      "posted_date_basis": "Native scheduled date (2026-10-28T20:00:00+05:00). The Pin had left the native queue and was first observed public on 2026-11-03; the exact actual publication timestamp is not exposed.",
+      "public_ai_badge": "not_observed",
+      "verified": true
+    },
+    {
+      "id": "043",
+      "public_pin_url": "https://www.pinterest.com/pin/743868063501345987/",
+      "posted_date": "2026-10-29",
+      "posted_date_basis": "Native scheduled date (2026-10-29T10:00:00+05:00). The Pin had left the native queue and was first observed public on 2026-11-03; the exact actual publication timestamp is not exposed.",
+      "public_ai_badge": "not_observed",
+      "verified": true
+    },
+    {
+      "id": "069",
+      "public_pin_url": "https://www.pinterest.com/pin/743868063501348944/",
+      "posted_date": "2026-10-29",
+      "posted_date_basis": "Native scheduled date (2026-10-29T15:00:00+05:00). The Pin had left the native queue and was first observed public on 2026-11-03; the exact actual publication timestamp is not exposed.",
+      "public_ai_badge": "not_observed",
+      "verified": true
+    },
+    {
+      "id": "066",
+      "public_pin_url": "https://www.pinterest.com/pin/743868063501352684/",
+      "posted_date": "2026-10-29",
+      "posted_date_basis": "Native scheduled date (2026-10-29T20:00:00+05:00). The Pin had left the native queue and was first observed public on 2026-11-03; the exact actual publication timestamp is not exposed.",
+      "public_ai_badge": "not_observed",
+      "verified": true
+    },
+    {
+      "id": "068",
+      "public_pin_url": "https://www.pinterest.com/pin/743868063501363171/",
+      "posted_date": "2026-10-30",
+      "posted_date_basis": "Native scheduled date (2026-10-30T10:00:00+05:00). The Pin had left the native queue and was first observed public on 2026-11-03; the exact actual publication timestamp is not exposed.",
+      "public_ai_badge": "not_observed",
+      "verified": true
+    },
+    {
+      "id": "036",
+      "public_pin_url": "https://www.pinterest.com/pin/743868063501365788/",
+      "posted_date": "2026-10-30",
+      "posted_date_basis": "Native scheduled date (2026-10-30T15:00:00+05:00). The Pin had left the native queue and was first observed public on 2026-11-03; the exact actual publication timestamp is not exposed.",
+      "public_ai_badge": "not_observed",
+      "verified": true
+    },
+    {
+      "id": "049",
+      "public_pin_url": "https://www.pinterest.com/pin/743868063501369532/",
+      "posted_date": "2026-10-30",
+      "posted_date_basis": "Native scheduled date (2026-10-30T20:00:00+05:00). The Pin had left the native queue and was first observed public on 2026-11-03; the exact actual publication timestamp is not exposed.",
+      "public_ai_badge": "not_observed",
+      "verified": true
+    },
+    {
+      "id": "034",
+      "public_pin_url": "https://www.pinterest.com/pin/743868063501379603/",
+      "posted_date": "2026-10-31",
+      "posted_date_basis": "Native scheduled date (2026-10-31T10:00:00+05:00). The Pin had left the native queue and was first observed public on 2026-11-03; the exact actual publication timestamp is not exposed.",
+      "public_ai_badge": "not_observed",
+      "verified": true
+    },
+    {
+      "id": "052",
+      "public_pin_url": "https://www.pinterest.com/pin/743868063501382153/",
+      "posted_date": "2026-10-31",
+      "posted_date_basis": "Native scheduled date (2026-10-31T15:00:00+05:00). The Pin had left the native queue and was first observed public on 2026-11-03; the exact actual publication timestamp is not exposed.",
+      "public_ai_badge": "not_observed",
+      "verified": true
+    },
+    {
+      "id": "038",
+      "public_pin_url": "https://www.pinterest.com/pin/743868063501385204/",
+      "posted_date": "2026-10-31",
+      "posted_date_basis": "Native scheduled date (2026-10-31T20:00:00+05:00). The Pin had left the native queue and was first observed public on 2026-11-03; the exact actual publication timestamp is not exposed.",
+      "public_ai_badge": "not_observed",
+      "verified": true
+    }
+  ],
+  "backlog_rebase": {
+    "date": "2026-11-03",
+    "shift": "+3 days",
+    "affected": 50,
+    "first": {
+      "id": "057",
+      "from": "2026-11-01T10:00:00+05:00",
+      "to": "2026-11-04T10:00:00+05:00"
+    },
+    "last": {
+      "id": "025",
+      "from": "2026-11-17T15:00:00+05:00",
+      "to": "2026-11-20T15:00:00+05:00"
+    },
+    "reason": "Ten queued Pins had published; native queue read 0 future Pins at 14:2x Asia/Karachi, after the planned slots for 057, 039, 075, 045, 041, 030 and 048 had passed. A whole-day shift preserves the validated per-day mix."
+  },
+  "scheduled": [
+    {
+      "id": "057",
+      "native_scheduled_pin_id": "4001902374268985152",
+      "owner_only_preview_url": "https://www.pinterest.com/VillaFabulosa/scheduled-pin/4001902374268985152/",
+      "public_pin_url": null,
+      "actual_posted_date": null,
+      "title": "Rent A Mansion For A Weekend | Temecula Getaway from Los Angeles | Villa Fabulosa",
+      "board": "Corporate Retreats & Private Getaways",
+      "original_planned_local": "2026-11-01T10:00:00+05:00",
+      "scheduled_local": "2026-11-04T10:00:00+05:00",
+      "scheduled_utc": "2026-11-04T05:00:00.000Z",
+      "saved_schedule_verified": true,
+      "saved_fields": {
+        "title": "Rent A Mansion For A Weekend | Temecula Getaway from Los Angeles | Villa Fabulosa",
+        "description": "Hoping to rent a mansion for a weekend for a getaway from Los Angeles? Discover Villa Fabulosa in Temecula Wine Country. Reconnect in the double-height living room between days out in wine country. Check available dates and stay requirements at VillaFabulosa.com. #LosAngelesGetaway #GroupGetaway #TemeculaWineCountry",
+        "destination": "https://villafabulosa.com/?utm_source=pinterest&utm_medium=organic_social&utm_campaign=villa_fabulosa_75_pins&utm_content=pin_057",
+        "board": "Corporate Retreats & Private Getaways",
+        "date": "11/04/2026",
+        "time": "10:00 AM",
+        "timezone": "Asia/Karachi"
+      },
+      "verification_scope": {
+        "reloaded_saved_fields": [
+          "title",
+          "description",
+          "destination",
+          "board",
+          "date",
+          "time"
+        ],
+        "pre_submission_only": [
+          "alt_text",
+          "manualAI",
+          "person",
+          "adOnly"
+        ],
+        "unavailable_in_saved_ui": [
+          "alt_text",
+          "manualAI",
+          "person",
+          "adOnly"
+        ],
+        "image": "original asset uploaded and queue preview visually present; saved image not replaceable"
+      }
+    },
+    {
+      "id": "039",
+      "native_scheduled_pin_id": "4001904417465030976",
+      "owner_only_preview_url": "https://www.pinterest.com/VillaFabulosa/scheduled-pin/4001904417465030976/",
+      "public_pin_url": null,
+      "actual_posted_date": null,
+      "title": "Luxury Villa Holidays in Riverside County | Villa Fabulosa",
+      "board": "Temecula Wine Country Vacation Rental",
+      "original_planned_local": "2026-11-01T15:00:00+05:00",
+      "scheduled_local": "2026-11-04T15:00:00+05:00",
+      "scheduled_utc": "2026-11-04T10:00:00.000Z",
+      "saved_schedule_verified": true,
+      "saved_fields": {
+        "title": "Luxury Villa Holidays in Riverside County | Villa Fabulosa",
+        "description": "Dreaming of luxury villa holidays in Temecula, Riverside County? Get to know Villa Fabulosa and make room for time together. Explore the outdoor recreation spaces, with a blue sport court beside the putting greens. Find property details and check dates at VillaFabulosa.com. #RiversideCounty #GroupGetaway #TemeculaWineCountry",
+        "destination": "https://villafabulosa.com/?utm_source=pinterest&utm_medium=organic_social&utm_campaign=villa_fabulosa_75_pins&utm_content=pin_039",
+        "board": "Temecula Wine Country Vacation Rental",
+        "date": "11/04/2026",
+        "time": "03:00 PM",
+        "timezone": "Asia/Karachi"
+      },
+      "verification_scope": {
+        "reloaded_saved_fields": [
+          "title",
+          "description",
+          "destination",
+          "board",
+          "date",
+          "time"
+        ],
+        "pre_submission_only": [
+          "alt_text",
+          "manualAI",
+          "person",
+          "adOnly"
+        ],
+        "unavailable_in_saved_ui": [
+          "alt_text",
+          "manualAI",
+          "person",
+          "adOnly"
+        ],
+        "image": "original asset uploaded and queue preview visually present; saved image not replaceable"
+      }
+    },
+    {
+      "id": "075",
+      "native_scheduled_pin_id": "4001905439801465152",
+      "owner_only_preview_url": "https://www.pinterest.com/VillaFabulosa/scheduled-pin/4001905439801465152/",
+      "public_pin_url": null,
+      "actual_posted_date": null,
+      "title": "Large Villa Holidays | Temecula Getaway from Orange County | Villa Fabulosa",
+      "board": "Villa Fabulosa | Luxury Estate & Resort Amenities",
+      "original_planned_local": "2026-11-01T20:00:00+05:00",
+      "scheduled_local": "2026-11-04T20:00:00+05:00",
+      "scheduled_utc": "2026-11-04T15:00:00.000Z",
+      "saved_schedule_verified": true,
+      "saved_fields": {
+        "title": "Large Villa Holidays | Temecula Getaway from Orange County | Villa Fabulosa",
+        "description": "Planning large villa holidays for a getaway from Orange County? Discover Villa Fabulosa in Temecula Wine Country. Recharge in a comfortable bedroom after a day spent exploring wine country. Find property details and check dates at VillaFabulosa.com. #OrangeCountyGetaway #VillaStay #TemeculaWineCountry",
+        "destination": "https://villafabulosa.com/?utm_source=pinterest&utm_medium=organic_social&utm_campaign=villa_fabulosa_75_pins&utm_content=pin_075",
+        "board": "Villa Fabulosa | Luxury Estate & Resort Amenities",
+        "date": "11/04/2026",
+        "time": "08:00 PM",
+        "timezone": "Asia/Karachi"
+      },
+      "verification_scope": {
+        "reloaded_saved_fields": [
+          "title",
+          "description",
+          "destination",
+          "board",
+          "date",
+          "time"
+        ],
+        "pre_submission_only": [
+          "alt_text",
+          "manualAI",
+          "person",
+          "adOnly"
+        ],
+        "unavailable_in_saved_ui": [
+          "alt_text",
+          "manualAI",
+          "person",
+          "adOnly"
+        ],
+        "image": "original asset uploaded and queue preview visually present; saved image not replaceable"
+      }
+    },
+    {
+      "id": "045",
+      "native_scheduled_pin_id": "4001906457775754432",
+      "owner_only_preview_url": "https://www.pinterest.com/VillaFabulosa/scheduled-pin/4001906457775754432/",
+      "public_pin_url": null,
+      "actual_posted_date": null,
+      "title": "Large Family Vacation Rentals | Temecula Getaway from Orange County | Villa Fabulosa",
+      "board": "Resort-Style Pool & Outdoor Living",
+      "original_planned_local": "2026-11-02T10:00:00+05:00",
+      "scheduled_local": "2026-11-05T10:00:00+05:00",
+      "scheduled_utc": "2026-11-05T05:00:00.000Z",
+      "saved_schedule_verified": true,
+      "saved_fields": {
+        "title": "Large Family Vacation Rentals | Temecula Getaway from Orange County | Villa Fabulosa",
+        "description": "Comparing large family vacation rentals for a getaway from Orange County? Discover Villa Fabulosa in Temecula Wine Country. Recharge by the private pool, with loungers and courtyard space for an easy afternoon. Explore the property and available dates at VillaFabulosa.com. #OrangeCountyGetaway #PoolsideEscape #TemeculaWineCountry",
+        "destination": "https://villafabulosa.com/?utm_source=pinterest&utm_medium=organic_social&utm_campaign=villa_fabulosa_75_pins&utm_content=pin_045",
+        "board": "Resort-Style Pool & Outdoor Living",
+        "date": "11/05/2026",
+        "time": "10:00 AM",
+        "timezone": "Asia/Karachi"
+      },
+      "verification_scope": {
+        "reloaded_saved_fields": [
+          "title",
+          "description",
+          "destination",
+          "board",
+          "date",
+          "time"
+        ],
+        "pre_submission_only": [
+          "alt_text",
+          "manualAI",
+          "person",
+          "adOnly"
+        ],
+        "unavailable_in_saved_ui": [
+          "alt_text",
+          "manualAI",
+          "person",
+          "adOnly"
+        ],
+        "image": "original asset uploaded and queue preview visually present; saved image not replaceable"
+      }
+    },
+    {
+      "id": "041",
+      "native_scheduled_pin_id": "4001907657379991168",
+      "owner_only_preview_url": "https://www.pinterest.com/VillaFabulosa/scheduled-pin/4001907657379991168/",
+      "public_pin_url": null,
+      "actual_posted_date": null,
+      "title": "Luxury Villa Holidays | Temecula Getaway from Los Angeles | Villa Fabulosa",
+      "board": "Corporate Retreats & Private Getaways",
+      "original_planned_local": "2026-11-02T15:00:00+05:00",
+      "scheduled_local": "2026-11-05T15:00:00+05:00",
+      "scheduled_utc": "2026-11-05T10:00:00.000Z",
+      "saved_schedule_verified": true,
+      "saved_fields": {
+        "title": "Luxury Villa Holidays | Temecula Getaway from Los Angeles | Villa Fabulosa",
+        "description": "Considering luxury villa holidays for your next escape for a getaway from Los Angeles? Consider Villa Fabulosa, a private estate in Temecula Wine Country. Reconnect in the double-height living room between days out in wine country. Explore the property and available dates at VillaFabulosa.com. #LosAngelesGetaway #GroupGetaway #TemeculaWineCountry",
+        "destination": "https://villafabulosa.com/?utm_source=pinterest&utm_medium=organic_social&utm_campaign=villa_fabulosa_75_pins&utm_content=pin_041",
+        "board": "Corporate Retreats & Private Getaways",
+        "date": "11/05/2026",
+        "time": "03:00 PM",
+        "timezone": "Asia/Karachi"
+      },
+      "verification_scope": {
+        "reloaded_saved_fields": [
+          "title",
+          "description",
+          "destination",
+          "board",
+          "date",
+          "time"
+        ],
+        "pre_submission_only": [
+          "alt_text",
+          "manualAI",
+          "person",
+          "adOnly"
+        ],
+        "unavailable_in_saved_ui": [
+          "alt_text",
+          "manualAI",
+          "person",
+          "adOnly"
+        ],
+        "image": "original asset uploaded and queue preview visually present; saved image not replaceable"
+      }
+    },
+    {
+      "id": "030",
+      "native_scheduled_pin_id": "4001909011838538944",
+      "owner_only_preview_url": "https://www.pinterest.com/VillaFabulosa/scheduled-pin/4001909011838538944/",
+      "public_pin_url": null,
+      "actual_posted_date": null,
+      "title": "Rent Luxury Houses in Southern California | Villa Fabulosa",
+      "board": "Group Vacation Home & Family Reunion Ideas",
+      "original_planned_local": "2026-11-02T20:00:00+05:00",
+      "scheduled_local": "2026-11-05T20:00:00+05:00",
+      "scheduled_utc": "2026-11-05T15:00:00.000Z",
+      "saved_schedule_verified": true,
+      "saved_fields": {
+        "title": "Rent Luxury Houses in Southern California | Villa Fabulosa",
+        "description": "Looking to rent luxury houses in Southern California? Discover the private estate setting at Villa Fabulosa. Make time for a friendly round on the estate's miniature golf course. Plan your next stay at VillaFabulosa.com. #SouthernCalifornia #MiniGolf #TemeculaWineCountry",
+        "destination": "https://villafabulosa.com/?utm_source=pinterest&utm_medium=organic_social&utm_campaign=villa_fabulosa_75_pins&utm_content=pin_030",
+        "board": "Group Vacation Home & Family Reunion Ideas",
+        "date": "11/05/2026",
+        "time": "08:00 PM",
+        "timezone": "Asia/Karachi"
+      },
+      "verification_scope": {
+        "reloaded_saved_fields": [
+          "title",
+          "description",
+          "destination",
+          "board",
+          "date",
+          "time"
+        ],
+        "pre_submission_only": [
+          "alt_text",
+          "manualAI",
+          "person",
+          "adOnly"
+        ],
+        "unavailable_in_saved_ui": [
+          "alt_text",
+          "manualAI",
+          "person",
+          "adOnly"
+        ],
+        "image": "original asset uploaded and queue preview visually present; saved image not replaceable"
+      }
+    },
+    {
+      "id": "048",
+      "native_scheduled_pin_id": "4001910244123945536",
+      "owner_only_preview_url": "https://www.pinterest.com/VillaFabulosa/scheduled-pin/4001910244123945536/",
+      "public_pin_url": null,
+      "actual_posted_date": null,
+      "title": "Large Group Vacation Rentals | Temecula Getaway from Los Angeles | Villa Fabulosa",
+      "board": "Resort-Style Pool & Outdoor Living",
+      "original_planned_local": "2026-11-03T10:00:00+05:00",
+      "scheduled_local": "2026-11-06T10:00:00+05:00",
+      "scheduled_utc": "2026-11-06T05:00:00.000Z",
+      "saved_schedule_verified": true,
+      "saved_fields": {
+        "title": "Large Group Vacation Rentals | Temecula Getaway from Los Angeles | Villa Fabulosa",
+        "description": "Looking for large group vacation rentals for a getaway from Los Angeles? Discover Villa Fabulosa in Temecula Wine Country. Unwind on the covered patio with wicker seating and a fire table. See the estate and check availability at VillaFabulosa.com. #LosAngelesGetaway #OutdoorLiving #TemeculaWineCountry",
+        "destination": "https://villafabulosa.com/?utm_source=pinterest&utm_medium=organic_social&utm_campaign=villa_fabulosa_75_pins&utm_content=pin_048",
+        "board": "Resort-Style Pool & Outdoor Living",
+        "date": "11/06/2026",
+        "time": "10:00 AM",
+        "timezone": "Asia/Karachi"
+      },
+      "verification_scope": {
+        "reloaded_saved_fields": [
+          "title",
+          "description",
+          "destination",
+          "board",
+          "date",
+          "time"
+        ],
+        "pre_submission_only": [
+          "alt_text",
+          "manualAI",
+          "person",
+          "adOnly"
+        ],
+        "unavailable_in_saved_ui": [
+          "alt_text",
+          "manualAI",
+          "person",
+          "adOnly"
+        ],
+        "image": "original asset uploaded and queue preview visually present; saved image not replaceable"
+      }
+    },
+    {
+      "id": "070",
+      "native_scheduled_pin_id": "4001911527245425216",
+      "owner_only_preview_url": "https://www.pinterest.com/VillaFabulosa/scheduled-pin/4001911527245425216/",
+      "public_pin_url": null,
+      "actual_posted_date": null,
+      "title": "Group Vacation Rentals | Temecula Getaway from Orange County | Villa Fabulosa",
+      "board": "Temecula Wine Country Vacation Rental",
+      "original_planned_local": "2026-11-03T15:00:00+05:00",
+      "scheduled_local": "2026-11-06T15:00:00+05:00",
+      "scheduled_utc": "2026-11-06T10:00:00.000Z",
+      "saved_schedule_verified": true,
+      "saved_fields": {
+        "title": "Group Vacation Rentals | Temecula Getaway from Orange County | Villa Fabulosa",
+        "description": "Searching for group vacation rentals for a getaway from Orange County? Plan a stay at Villa Fabulosa in Temecula Wine Country. Make time for the sport court and putting greens during your shared escape. Plan your next stay at VillaFabulosa.com. #OrangeCountyGetaway #GroupGetaway #TemeculaWineCountry",
+        "destination": "https://villafabulosa.com/?utm_source=pinterest&utm_medium=organic_social&utm_campaign=villa_fabulosa_75_pins&utm_content=pin_070",
+        "board": "Temecula Wine Country Vacation Rental",
+        "date": "11/06/2026",
+        "time": "03:00 PM",
+        "timezone": "Asia/Karachi"
+      },
+      "verification_scope": {
+        "reloaded_saved_fields": [
+          "title",
+          "description",
+          "destination",
+          "board",
+          "date",
+          "time"
+        ],
+        "pre_submission_only": [
+          "alt_text",
+          "manualAI",
+          "person",
+          "adOnly"
+        ],
+        "unavailable_in_saved_ui": [
+          "alt_text",
+          "manualAI",
+          "person",
+          "adOnly"
+        ],
+        "image": "original asset uploaded and queue preview visually present; saved image not replaceable"
+      }
+    },
+    {
+      "id": "059",
+      "native_scheduled_pin_id": "4001912865563908416",
+      "owner_only_preview_url": "https://www.pinterest.com/VillaFabulosa/scheduled-pin/4001912865563908416/",
+      "public_pin_url": null,
+      "actual_posted_date": null,
+      "title": "Luxury Holiday Rentals in Riverside County | Villa Fabulosa",
+      "board": "Group Vacation Home & Family Reunion Ideas",
+      "original_planned_local": "2026-11-03T20:00:00+05:00",
+      "scheduled_local": "2026-11-06T20:00:00+05:00",
+      "scheduled_utc": "2026-11-06T15:00:00.000Z",
+      "saved_schedule_verified": true,
+      "saved_fields": {
+        "title": "Luxury Holiday Rentals in Riverside County | Villa Fabulosa",
+        "description": "Searching for luxury holiday rentals in Temecula, Riverside County? Get to know Villa Fabulosa and make room for time together. Add a little friendly competition with miniature golf during your estate stay. Find property details and check dates at VillaFabulosa.com. #RiversideCounty #MiniGolf #TemeculaWineCountry",
+        "destination": "https://villafabulosa.com/?utm_source=pinterest&utm_medium=organic_social&utm_campaign=villa_fabulosa_75_pins&utm_content=pin_059",
+        "board": "Group Vacation Home & Family Reunion Ideas",
+        "date": "11/06/2026",
+        "time": "08:00 PM",
+        "timezone": "Asia/Karachi"
+      },
+      "verification_scope": {
+        "reloaded_saved_fields": [
+          "title",
+          "description",
+          "destination",
+          "board",
+          "date",
+          "time"
+        ],
+        "pre_submission_only": [
+          "alt_text",
+          "manualAI",
+          "person",
+          "adOnly"
+        ],
+        "unavailable_in_saved_ui": [
+          "alt_text",
+          "manualAI",
+          "person",
+          "adOnly"
+        ],
+        "image": "original asset uploaded and queue preview visually present; saved image not replaceable"
+      }
+    },
+    {
+      "id": "053",
+      "native_scheduled_pin_id": "4001914123252053760",
+      "owner_only_preview_url": "https://www.pinterest.com/VillaFabulosa/scheduled-pin/4001914123252053760/",
+      "public_pin_url": null,
+      "actual_posted_date": null,
+      "title": "Large House To Rent | Temecula Getaway from Orange County | Villa Fabulosa",
+      "board": "Temecula Wine Country Vacation Rental",
+      "original_planned_local": "2026-11-04T10:00:00+05:00",
+      "scheduled_local": "2026-11-07T10:00:00+05:00",
+      "scheduled_utc": "2026-11-07T05:00:00.000Z",
+      "saved_schedule_verified": true,
+      "saved_fields": {
+        "title": "Large House To Rent | Temecula Getaway from Orange County | Villa Fabulosa",
+        "description": "Searching for a large house to rent for a getaway from Orange County? Consider Villa Fabulosa, a private estate in Temecula Wine Country. Explore the outdoor recreation spaces, with a blue sport court beside the putting greens. Explore the property and available dates at VillaFabulosa.com. #OrangeCountyGetaway #GroupGetaway #TemeculaWineCountry",
+        "destination": "https://villafabulosa.com/?utm_source=pinterest&utm_medium=organic_social&utm_campaign=villa_fabulosa_75_pins&utm_content=pin_053",
+        "board": "Temecula Wine Country Vacation Rental",
+        "date": "11/07/2026",
+        "time": "10:00 AM",
+        "timezone": "Asia/Karachi"
+      },
+      "verification_scope": {
+        "reloaded_saved_fields": [
+          "title",
+          "description",
+          "destination",
+          "board",
+          "date",
+          "time"
+        ],
+        "pre_submission_only": [
+          "alt_text",
+          "manualAI",
+          "person",
+          "adOnly"
+        ],
+        "unavailable_in_saved_ui": [
+          "alt_text",
+          "manualAI",
+          "person",
+          "adOnly"
+        ],
+        "image": "original asset uploaded and queue preview visually present; saved image not replaceable"
+      }
+    }
+  ],
+  "next_planned": {
+    "id": "067",
+    "local": "2026-11-07T15:00:00+05:00",
+    "utc": "2026-11-07T10:00:00.000Z",
+    "board": "Resort-Style Pool & Outdoor Living",
+    "condition": "Reconcile live queue and public Pins; schedule only when capacity opens and this slot is still future."
+  },
+  "earliest_expected_opening": {
+    "after_id": "057",
+    "local": "2026-11-04T10:00:00+05:00",
+    "utc": "2026-11-04T05:00:00.000Z"
+  },
+  "native_limit": {
+    "future_pins": 10,
+    "days_ahead": 30,
+    "source": "https://help.pinterest.com/en/business/article/schedule-pins"
+  },
+  "final_queue_readback": {
+    "request_id": "1793698360473-k0a6mt6qq",
+    "readOnly": true,
+    "url": "https://www.pinterest.com/VillaFabulosa/scheduled-pins/",
+    "timezone": "Asia/Karachi",
+    "text": "Skip to content\nPinterest\nV\nVilla Fabulosa's profile\n7\nScheduled Pins\n10 Pins ‧ Only visible to you\nScheduled for\nWed, 11/4\n10:00 AM\nRent A Mansion For A Weekend | Temecula Getaway from Los Angeles | Villa Fabulosa\nCorporate Retreats & Private Getaways\nScheduled for\nWed, 11/4\n03:00 PM\nLuxury Villa Holidays in Riverside County | Villa Fabulosa\nTemecula Wine Country Vacation Rental\nScheduled for\nWed, 11/4\n08:00 PM\nLarge Villa Holidays | Temecula Getaway from Orange County | Villa Fabulosa\nVilla Fabulosa | Luxury Estate & Resort Amenities\nScheduled for\nThu, 11/5\n10:00 AM\nLarge Family Vacation Rentals | Temecula Getaway from Orange County | Villa Fabulosa\nResort-Style Pool & Outdoor Living\nScheduled for\nThu, 11/5\n03:00 PM\nLuxury Villa Holidays | Temecula Getaway from Los Angeles | Villa Fabulosa\nCorporate Retreats & Private Getaways\nScheduled for\nThu, 11/5\n08:00 PM\nRent Luxury Houses in Southern California | Villa Fabulosa\nGroup Vacation Home & Family Reunion Ideas\nScheduled for\nFri, 11/6\n10:00 AM\nLarge Group Vacation Rentals | Temecula Getaway from Los Angeles | Villa Fabulosa\nResort-Style Pool & Outdoor Living\nScheduled for\nFri, 11/6\n03:00 PM\nGroup Vacation Rentals | Temecula Getaway from Orange County | Villa Fabulosa\nTemecula Wine Country Vacation Rental\nScheduled for\nFri, 11/6\n08:00 PM\nLuxury Holiday Rentals in Riverside County | Villa Fabulosa\nGroup Vacation Home & Family Reunion Ideas\nScheduled for\nSat, 11/7\n10:00 AM\nLarge House To Rent | Temecula Getaway from Orange County | Villa Fabulosa\nTemecula Wine Country Vacation Rental",
+    "cards": [
+      {
+        "href": "https://www.pinterest.com/VillaFabulosa/scheduled-pin/4001902374268985152/",
+        "text": "Scheduled for\nWed, 11/4\n10:00 AM\nRent A Mansion For A Weekend | Temecula Getaway from Los Angeles | Villa Fabulosa\nCorporate Retreats & Private Getaways"
+      },
+      {
+        "href": "https://www.pinterest.com/VillaFabulosa/scheduled-pin/4001904417465030976/",
+        "text": "Scheduled for\nWed, 11/4\n03:00 PM\nLuxury Villa Holidays in Riverside County | Villa Fabulosa\nTemecula Wine Country Vacation Rental"
+      },
+      {
+        "href": "https://www.pinterest.com/VillaFabulosa/scheduled-pin/4001905439801465152/",
+        "text": "Scheduled for\nWed, 11/4\n08:00 PM\nLarge Villa Holidays | Temecula Getaway from Orange County | Villa Fabulosa\nVilla Fabulosa | Luxury Estate & Resort Amenities"
+      },
+      {
+        "href": "https://www.pinterest.com/VillaFabulosa/scheduled-pin/4001906457775754432/",
+        "text": "Scheduled for\nThu, 11/5\n10:00 AM\nLarge Family Vacation Rentals | Temecula Getaway from Orange County | Villa Fabulosa\nResort-Style Pool & Outdoor Living"
+      },
+      {
+        "href": "https://www.pinterest.com/VillaFabulosa/scheduled-pin/4001907657379991168/",
+        "text": "Scheduled for\nThu, 11/5\n03:00 PM\nLuxury Villa Holidays | Temecula Getaway from Los Angeles | Villa Fabulosa\nCorporate Retreats & Private Getaways"
+      },
+      {
+        "href": "https://www.pinterest.com/VillaFabulosa/scheduled-pin/4001909011838538944/",
+        "text": "Scheduled for\nThu, 11/5\n08:00 PM\nRent Luxury Houses in Southern California | Villa Fabulosa\nGroup Vacation Home & Family Reunion Ideas"
+      },
+      {
+        "href": "https://www.pinterest.com/VillaFabulosa/scheduled-pin/4001910244123945536/",
+        "text": "Scheduled for\nFri, 11/6\n10:00 AM\nLarge Group Vacation Rentals | Temecula Getaway from Los Angeles | Villa Fabulosa\nResort-Style Pool & Outdoor Living"
+      },
+      {
+        "href": "https://www.pinterest.com/VillaFabulosa/scheduled-pin/4001911527245425216/",
+        "text": "Scheduled for\nFri, 11/6\n03:00 PM\nGroup Vacation Rentals | Temecula Getaway from Orange County | Villa Fabulosa\nTemecula Wine Country Vacation Rental"
+      },
+      {
+        "href": "https://www.pinterest.com/VillaFabulosa/scheduled-pin/4001912865563908416/",
+        "text": "Scheduled for\nFri, 11/6\n08:00 PM\nLuxury Holiday Rentals in Riverside County | Villa Fabulosa\nGroup Vacation Home & Family Reunion Ideas"
+      },
+      {
+        "href": "https://www.pinterest.com/VillaFabulosa/scheduled-pin/4001914123252053760/",
+        "text": "Scheduled for\nSat, 11/7\n10:00 AM\nLarge House To Rent | Temecula Getaway from Orange County | Villa Fabulosa\nTemecula Wine Country Vacation Rental"
+      }
+    ]
+  },
+  "background_refill_installed": false,
+  "helper_changes": [
+    "tmp/pinterest-schedule-finalize.cjs: added read-only scheduleVerifyPublic (explicit observed URL, no plan writes, Edit Pin closed with Cancel).",
+    "tmp/pinterest-schedule-finalize.cjs: scheduleVerifySaved now matches the queue card date numerically (Pinterest shows unpadded days such as 11/4)."
+  ],
+  "cloud_sync_status": "pending_editor_connector_unavailable",
+  "local_sync_status": "local_sync_verified",
+  "browser": {
+    "driver_closed_cleanly": true,
+    "dedicated_profile_retained_outside_repository": true,
+    "active_scheduling_ids": []
+  },
+  "local_sync_receipt": "setup-local-sync-2026-11-03.json",
+  "cloud_sync_note": "Only the Google Drive connector was available in the 2026-11-03 session; no Google Sheets or Docs editor connector. The Sheet and Doc were not modified or recreated and still show the 28 October checkpoint (setup-cloud-sync-2026-10-28.json). Update them in place once an editor connector is enabled.",
+  "git": {
+    "commit_or_push_performed": false,
+    "branch": "main",
+    "observed_head": "1fc573066ed827a9ee2c9dc683d5b754e6f4bc0a",
+    "remote_head_queried": false,
+    "worktree": "Uncommitted campaign changes and helpers remain local alongside unrelated dirty files, including .claude/settings.local.json, which were not touched."
+  }
+}

@@ -26,7 +26,7 @@
     "#LuxuryVilla",
     "#PoolAndSpa"
   ],
-  "board": "Top Vacation Rental in Temecula Wine Country",
+  "board": "Temecula Wine Country Vacation Rental",
   "destination": "https://villafabulosa.com/?utm_source=pinterest&utm_medium=organic_social&utm_campaign=villa_fabulosa_75_pins&utm_content=pin_007",
   "published_url": "https://www.pinterest.com/pin/743868063501187499/",
   "posted_date": "2026-10-20",
@@ -55,5 +55,22 @@
   "root_visual_review": "All three final images were visually reviewed and approved for publication by the root publishing agent.",
   "verification_details": "After publication, the individual Pin was fully reloaded and reopened in Edit Pin on 2026-10-20. Exact title, full description including all three hashtags, destination URL and manual AI disclosure Off were verified. The public AI-modified badge was visibly present. Native topics and alt text were checked during creation only, with no saved-state readback claim.",
   "board_verification": "Selected in the creation form.",
-  "headline_bank_note": "Original headline 8: Luxury Wine Country Estate with Pool & Spa."
+  "headline_bank_note": "Original headline 8: Luxury Wine Country Estate with Pool & Spa.",
+  "planned_board_id": "board_2",
+  "planned_board": "Temecula Wine Country Vacation Rental",
+  "planned_board_url": "https://www.pinterest.com/VillaFabulosa/temecula-wine-country-vacation-rental/",
+  "board_assignment_reason": "Source-photo family 7 matches board 2; each board receives three source families with five variations each.",
+  "board_url": "https://www.pinterest.com/VillaFabulosa/temecula-wine-country-vacation-rental/",
+  "board_verified_date": "2026-10-27",
+  "board_operation_status": "moved_and_reload_verified",
+  "board_at_original_publication": "Top Vacation Rental in Temecula Wine Country",
+  "board_move_verification_source": "docs/pinterest/board-schedule-plan-2026-10-27.json",
+  "board_move_saved_fields": {
+    "title": "Luxury Villa Vacation Rentals in Temecula Wine Country | Villa Fabulosa",
+    "description": "Explore luxury villa vacation rentals in Temecula Wine Country with a closer look at Villa Fabulosa. This private Riverside County estate brings a pool, spa and space to gather in one setting. View the property and check availability at VillaFabulosa.com. #TemeculaWineCountry #LuxuryVilla #PoolAndSpa",
+    "destination": "https://villafabulosa.com/?utm_source=pinterest&utm_medium=organic_social&utm_campaign=villa_fabulosa_75_pins&utm_content=pin_007",
+    "manualAI": false,
+    "alt_text": null,
+    "ad_only": null
+  }
 }

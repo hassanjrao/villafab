@@ -47,7 +47,7 @@
     "#LuxuryHoliday",
     "#VillaStay"
   ],
-  "board": "Top Vacation Rental in Temecula Wine Country",
+  "board": "Villa Fabulosa | Luxury Estate & Resort Amenities",
   "destination": "https://villafabulosa.com/?utm_source=pinterest&utm_medium=organic_social&utm_campaign=villa_fabulosa_75_pins&utm_content=pin_009",
   "published_url": "https://www.pinterest.com/pin/743868063501277252/",
   "posted_date": "2026-10-25",
@@ -90,5 +90,22 @@
     "ad_only": "Off",
     "public_ai_badge": "Present",
     "root_visual_review": "Root visually reviewed and accepted final creative and documented generative differences"
+  },
+  "planned_board_id": "board_1",
+  "planned_board": "Villa Fabulosa | Luxury Estate & Resort Amenities",
+  "planned_board_url": "https://www.pinterest.com/VillaFabulosa/villa-fabulosa-luxury-estate-resort-amenities/",
+  "board_assignment_reason": "Source-photo family 9 matches board 1; each board receives three source families with five variations each.",
+  "board_url": "https://www.pinterest.com/VillaFabulosa/villa-fabulosa-luxury-estate-resort-amenities/",
+  "board_verified_date": "2026-10-27",
+  "board_operation_status": "moved_and_reload_verified",
+  "board_at_original_publication": "Top Vacation Rental in Temecula Wine Country",
+  "board_move_verification_source": "docs/pinterest/board-schedule-plan-2026-10-27.json",
+  "board_move_saved_fields": {
+    "title": "Luxury Holiday Rentals in Temecula Wine Country | Villa Fabulosa",
+    "description": "Make time to unwind at Villa Fabulosa in Temecula Wine Country. Discover inviting bedrooms, comfortable gathering spaces and a private setting for your next holiday together. View the villa and check availability at VillaFabulosa.com. #TemeculaWineCountry #LuxuryHoliday #VillaStay",
+    "destination": "https://villafabulosa.com/?utm_source=pinterest&utm_medium=organic_social&utm_campaign=villa_fabulosa_75_pins&utm_content=pin_009",
+    "manualAI": false,
+    "alt_text": "A bright Villa Fabulosa bedroom with a white bed, navy cover, blue abstract artwork, two windows with blinds, bedside lamps and a wall-mounted TV. The graphic reads Luxury Bedrooms & High-End Amenities, Temecula Wine Country and Explore VillaFabulosa.com.",
+    "ad_only": false
   }
 }

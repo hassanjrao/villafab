@@ -1,10 +1,16 @@
 {
+  "date": "2026-10-28",
   "status": "passed",
   "cards": 64,
+  "published_cards": 4,
+  "scheduled_cards": 10,
+  "prepared_cards": 50,
+  "campaign_published_count": 15,
   "search_filter": true,
   "keyword_filter": true,
   "combined_filters": true,
   "copy_description": true,
+  "no_fake_public_links": true,
   "mobile_overflow": false,
   "javascript_errors": []
 }

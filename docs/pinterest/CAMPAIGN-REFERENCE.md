@@ -1,10 +1,10 @@
 # Villa Fabulosa Pinterest campaign reference
 
-Last updated: 2026-10-26 (Asia/Karachi). The full keyword selection was verified on 2026-10-20, with four selected keywords rechecked on 2026-10-25. This reference records approved source keywords, headline usage, factual adaptations and local preparation; it does not replace the posting log or authorize publication.
+Last updated: 2026-11-08 (Asia/Karachi). The full keyword selection was verified on 2026-10-20, with four selected keywords rechecked on 2026-10-25. This reference records approved source keywords, headline usage, factual adaptations and local preparation; it does not replace the posting log or authorize publication.
 
 Rechecked 2026-10-25: the four keyword cells selected for that authorized publication batch remained green: A20 `group vacation rentals`, A18 `luxury holiday rentals`, A16 `large house to rent`, and A13 `luxury villa holidays`. These were used by published and verified IDs 008–011, respectively; use the posting log and verified batch records for exact saved copy and public URLs.
 
-On 2026-10-26, the owner authorized creating all remaining Pins in individual folders for posting later. **Pins 012–075 are prepared locally and ready for owner review; eleven Pins remain published.** No new Pins were uploaded, published or scheduled. The next prepared Pin to publish is **012**; the next unused creative ID is **076**, outside this 75-Pin campaign.
+On 2026-10-26, the owner authorized creating all remaining Pins locally for posting later. On 2026-10-27, 012–013 were published and verified, then the owner authorized completing setup and the remaining schedule. Current state (2026-11-08): **35 published, 10 scheduled and 30 prepared for later scheduling**. The domain is claimed, five public boards exist and all 13 published campaign Pins were moved with their URLs preserved. Next backlog Pin to schedule: **056** (rebased slot 2026-11-11 20:00 Asia/Karachi), subject to live capacity. Next unused creative ID: **076**, outside this 75-Pin campaign.
 
 ## Keyword source and selection
 
@@ -55,17 +55,24 @@ The 2026-10-25 four-Pin batch was published and reload-verified. The posting log
 | 010 | large house to rent | 11. Temecula Wine Country Luxury Escape | Published Riverside County / dining-room theme. |
 | 011 | luxury villa holidays | 12. Stay in the Heart of SoCal Wine Country | Published Temecula escape for travelers from Orange County. |
 
+The 2026-10-27 two-Pin batch was published from the original prepared PNGs and reload-verified. Exact saved copy and URLs are in [batch-2026-10-27.json](batch-2026-10-27.json).
+
+| Pin | Selected keyword | Selected headline | Usage note |
+| --- | --- | --- | --- |
+| 012 | luxury villa rental | 13, adapted: Private Estate in Temecula Wine Country | Published Riverside County / kitchen theme; no travel-time claim. |
+| 013 | luxury villa rental | 14. Scenic Views & Private Estate Luxury | Published Southern California / outdoor sport-court theme. |
+
 Original headline 5 was skipped in the published batches because its `#1` ranking is unsupported. The original ranking wording was never used. Later prepared assets use the safe replacement documented below. Source-photo and amenity checks remain required for each selected headline.
 
 ## Complete asset matrix and prepared queue
 
-The [matrix](prepared/matrix.json) preserves the eleven existing keyword/location assignments and fills the remaining combinations exactly once: **15 selected keywords × five target locations = 75 assets**. It also records **15 actual source-photo families × five creative variants**, with the existing eleven published assets anchoring their source families' first variants. There are **11 published records and 64 unpublished prepared records**, not 75 publications.
+The [matrix](prepared/matrix.json) preserves the original eleven keyword/location assignments and fills the remaining combinations exactly once: **15 selected keywords × five target locations = 75 assets**. It also records **15 actual source-photo families × five creative variants**. There are now **15 published, 10 scheduled and 50 prepared for later scheduling**; preparing the remaining set used the original eleven as source-family first-variant anchors.
 
 The selected five treatments are classic editorial, photo-forward, framed, asymmetric editorial and magazine editorial. The magazine layout places the source photograph above a spacious headline block, completing the fifth-variant decision left open by the older 60-Pin brief. All retain the approved ivory, navy and gold identity. No generated lifestyle people were added.
 
 Each folder `prepared/pin-012/` through `prepared/pin-075/` contains a **1024 × 1536** PNG, `posting.md`, `metadata.json`, full `prompt.txt` and `review.json`. The [manifest](prepared/manifest.json) holds exact assignments; the [visual index](prepared/index.html), [README](prepared/README.md), [queue CSV](prepared/queue.csv) and [validation report](prepared/validation.json) support review and later posting. Prompts identify the inspected actual photo and style reference; reviews describe legibility, source fidelity and visible generative differences.
 
-Prepared copy includes a title, full description with three hashtags, accessibility alt text, recommended existing board and unique UTM. Public URL, posted/scheduled dates, saved manual AI state, public AI badge and performance measurements remain blank; `live_verified` remains false. Manual disclosure Off records the owner's future preference only. Local visual and file checks do not verify a saved Pinterest field. Owner review and a later batch instruction precede publication.
+Prepared copy includes a title, full three-hashtag description, alt text, assigned board and unique UTM. Pins 012–014, 064, 051, 043, 069, 066, 068, 036, 049, 034, 052, 038, 057, 039, 075, 045, 041, 030, 048, 070, 059, 053 carry verified publication fields. Thirty-two records retain historical schedule IDs, owner-only previews and saved local/UTC schedule times; twenty-two are now Published, ten remain future Scheduled, and 30 retain planned-only dates (rebased +3 days on 2026-11-03 and +1 day on 2026-11-08). All 40 currently unpublished records have blank public URLs, actual posted dates, public badges and metrics, with `live_verified: false`. For future scheduled Pins, alt text and AI/Ad-only controls were checked before submission only; the saved preview does not expose them. Local asset checks do not establish saved platform state.
 
 ## Original 20-headline bank
 
@@ -85,8 +92,8 @@ Source: the owner-supplied “Complete Pinterest Strategy & Task Guidelines” b
 | 10 | Luxury Master Suites & High-End Amenities | Adapted for Pin 009 to `Luxury Bedrooms & High-End Amenities`; multiple master suites are unconfirmed. Use revised `pin-009-v2.png`. |
 | 11 | Temecula Wine Country Luxury Escape | Used by Pin 010. |
 | 12 | Stay in the Heart of SoCal Wine Country | Used by Pin 011. |
-| 13 | Private Estate Minutes from Temecula Wineries | Prepared Pin 012 continues here using `Private Estate in Temecula Wine Country`; no unverified travel time. |
-| 14 | Scenic Views & Private Estate Luxury | Use a source photo that supports the view. |
+| 13 | Private Estate Minutes from Temecula Wineries | Published Pin 012 uses `Private Estate in Temecula Wine Country`; no unverified travel time. |
+| 14 | Scenic Views & Private Estate Luxury | Used by published Pin 013; source supports the view. |
 | 15 | Exclusive Southern California Vacation Home | Keep the actual property location accurate. |
 | 16 | Book Direct at VillaFabulosa.com & Save | Use only with evidence supporting the savings claim. |
 | 17 | Skip Platform Fees \| Book Direct | Use only with evidence supporting the exact fee claim. |
@@ -124,4 +131,4 @@ Villa Fabulosa is the Temecula property. Use location variants as follows:
 
 Keep copy natural when using a plural search phrase to describe this single estate. Do not imply a portfolio of properties or add amenities, proximity claims, rankings, savings, fee exemptions or guarantees merely to match a keyword/headline.
 
-The campaign's 75 assets now exist: **11 published and 64 prepared locally for owner review**. Only a specifically authorized later batch may be published or scheduled. Domain claiming, planned new boards and a campaign schedule remain unfinished platform work.
+The campaign's 75 assets exist: **35 published, 10 scheduled and 30 prepared for later scheduling** (2026-11-08). Domain claim, the five public boards and all 13 published-Pin board moves are verified. Standing owner authorization covers rolling scheduling of the remaining 30 as capacity opens; next backlog ID is **056**, next unused creative ID **076**. Use the [authoritative board/schedule plan](board-schedule-plan-2026-10-27.json), [workflow](WORKFLOW.md) and [Claude handoff](CLAUDE-HANDOFF.md). Only ten future Pins are saved in Pinterest; planned calendar entries are not saved schedules.
